@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "-v"
+  ],
+  "cwd": "/private/tmp/coco-context-loading-6bhlglo9/workspace-forest/case-2",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_double (test_app.CliTests) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.018s\n\nOK\n"
+}

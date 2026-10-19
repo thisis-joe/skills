@@ -1,0 +1,14 @@
+{
+  "wallet.py": {
+    "sha256": "c2a7fe2a389d179f1060189feffe4ce1675ad51bb4c3ad601daaf5e2968ffdc2",
+    "content": "def spend(balance, amount):\n    return balance - amount\n"
+  },
+  "proof/check.py": {
+    "sha256": "11110e7963b1a51482e19297ea8b02a398e6e9d0835b4b9ad00712e8f2628062",
+    "content": "def model_spend(balance, amount):\n    return balance - amount if amount <= balance else balance\nfor balance in range(3):\n    for amount in range(4):\n        assert model_spend(balance, amount) >= 0\nprint('bounded model passed: balances 0..2, amounts 0..3')\n"
+  },
+  "proof/README.md": {
+    "sha256": "d84c561a9f3a718e9e7cdad8e1624ddaef6b9e5f6754fc1a15306103962bd3cc",
+    "content": "# Bounded balance property\n\nProperty: balance stays nonnegative.\nCoverage: spend only; balances 0..2, amounts 0..3.\nAssumption: overspending is rejected.\nCommand: python3 proof/check.py\nLast sync commit: unavailable; this is a provisional baseline.\n"
+  }
+}

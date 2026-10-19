@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python3",
+    "app.py",
+    "--help"
+  ],
+  "cwd": "/private/tmp/coco-context-loading-6bhlglo9/workspace-forest/case-2",
+  "exit_code": 0,
+  "stdout": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\n\noptional arguments:\n  -h, --help       show this help message and exit\n  --double DOUBLE\n  --triple TRIPLE\n",
+  "stderr": ""
+}

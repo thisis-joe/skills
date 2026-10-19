@@ -4,6 +4,33 @@ Apply the [common contract](../contracts.md) and [resolved decisions](../decisio
 This procedure returns evidence. [Build](build.md) owns product changes, commits, and task completion.
 Select only the mode needed by the claim; creating a helper or formal model is conditional work.
 
+## Mode selection
+
+Mode selection is cumulative, never exclusive. Keep the common contract and all core sections
+below active for every claim. Evaluate every
+condition independently and load all matching modules cumulatively before the first action that
+depends on them. Re-evaluate when new scope, risk, state, or missing prerequisites are discovered;
+ordinary runtime checking does not exempt a newly discovered helper, proof, policy, or experiment need.
+If applicability is uncertain, read the relevant modules broadly; if the work cannot be classified,
+read all verification modules. If a required reference is unavailable, stop the dependent work and
+report the missing guidance rather than infer it. Select internally from the actual request and
+artifacts; never require the user to learn or choose source skills or internal mode names.
+
+Loading more guidance preserves constraints; it does not expand the requested scope or authorize
+helper creation, model changes, dependency installation, product edits, or external effects.
+Common-contract authorization, safety, isolation, evidence, and completion rules remain applicable
+when no optional module matches.
+
+| Condition in the requested work or current evidence | Read before dependent work |
+| --- | --- |
+| Constraints, quality floors, guards, metric ratchets, or their enforcement are under verification. | [Standing-quality-bar audit](verify-quality-audit.md) |
+| A reusable runtime driver/helper is requested, or authorized work includes establishing missing verification support. | [Runtime helper creation](verify-runtime-create.md) |
+| An existing runtime helper, feature map, drive recipe, or its coverage needs maintenance, including drift or newly uncovered journeys. | [Runtime helper creation](verify-runtime-create.md) for the launch/doctor/drive/evidence/cleanup and feature-map contract, then [runtime maintenance](verify-runtime-maintain.md); reading creation guidance does not authorize recreating the helper. |
+| Authorized work creates a formal model, property, proof, or formal verification check. | [Formal verification creation](verify-formal-create.md) |
+| An existing formal check or its code mapping, assumptions, bounds, or sync state needs maintenance. | [Formal verification creation](verify-formal-create.md) for model/code correspondence and sensitivity requirements, then [formal maintenance](verify-formal-maintain.md); preserve the contract without silently recreating or weakening it. |
+| Structural skill, prompt, or harness evaluation is requested, including comparative quality or speed claims. | [Workflow experiments](verify-experiments.md) |
+| Establishing commit-time formatting, typechecking, or tests is requested. | [Pre-commit verification setup](verify-pre-commit.md), including its dependency-script security guidance. |
+
 ## Establish the claim
 
 1. State the observable promise, preserved behavior, target revision/snapshot, and failure consequence.
@@ -16,15 +43,6 @@ A test pass proves its cases. Compilation, process health, cached screenshots, a
 Check actual values and artifacts; if an observation surprises you, check the observation method too.
 Keep target/input/action/result and resolvable evidence together, redacting credentials and private payloads.
 Reuse evidence only while its relevant code, inputs, acceptance conditions, and environment remain unchanged.
-
-## Conditional standing-quality-bar audit
-
-When the claim concerns constraints, floor guards or metric ratchets, read the canonical quality
-policy and the [quality-bar lifecycle](start.md). Verify its actual checks against the complete task
-diff, including new files, and compare thresholds/exceptions with the branch baseline. Report weakened
-assertions/suppressions and distinguish clean, violation and unavailable. Reuse generated coverage
-instead of rerunning tests merely to calculate it. Establishing/changing the standing bar belongs to
-start; a verification-only request does not silently install checkers or rewrite policy.
 
 ## Behavioral checks
 
@@ -54,109 +72,8 @@ Read-only diagnostics may explain a state; internal setters, DOM injection, and 
 For dry-run evidence observe what was skipped and what still changed; its name is not a guarantee.
 Mark environment-translated evidence explicitly and identify any platform-specific part it cannot prove.
 
-## Create a runtime verification helper
-
-Use when asked for a reusable project driver or when the authorized work includes establishing missing verification support.
-Interview the repository for primary/secondary surfaces, startup, usable readiness, authentication, fixtures, drivers, evidence, and instance isolation.
-Establish that the baseline builds and starts before writing instructions against it; report a broken base precisely.
-Write a project-local helper/skill using supported project conventions, with registering metadata when the runtime requires it.
-Give the next cold reader exact commands and paths, with no placeholders:
-
-- **Launch:** build/start, migrations, seed data, readiness of a usable instance, and owned teardown.
-- **Doctor:** read-only target/build/owned-port/auth/session health checks before driving and after surprise.
-- **Drive:** real user actions through the existing driver and stable handles, plus independent reset.
-- **Evidence:** action, result, relevant side effects, proof standards, and retained artifact locations.
-- **Cleanup:** owned sessions and scratch data only; never proof or user work.
-- **Helpers:** executable scripts with their documented invocation, inputs, outputs, and failure behavior.
-
-Seed an indexed feature map for the discoverable primary journeys, initially the most important few.
-For each feature record subfeatures, user-visible route, concrete drive recipe, states/preconditions, success observation, and gotchas.
-Retain alternate mapped entrypoints and load-bearing states; proving one convenient route does not cover the rest.
-Do not freeze internal file paths as the user's navigation path or weaken a journey when seed data is missing.
-Run launch, doctor, one mapped journey, capture, cleanup, and evidence-existence checks as a cold reader would.
-Clean failed attempts too. A helper never executed is a draft; list stand-in setup that remains unverified on the real target.
-
-## Maintain runtime verification
-
-1. Locate the requested helper by its launch/drive behavior and feature map; do not invent a target when none exists.
-2. Reconcile the map index with actual feature files and recent user-facing source changes.
-3. Inspect every mapped feature from source and form concise recipes, combining overlapping setup states.
-4. Drive every feature live, even if source appears clean. One owner serializes a shared app; short CLIs may use fresh sessions.
-5. Doctor before the first drive and after unexpected failures; reset a wedged UI even when its process is healthy.
-6. Distinguish description drift, a driver gap, a product regression, and an unreachable prerequisite with its attempted route.
-7. Edit only owned verification files in this mode. Report product regressions to [debug](debug.md) and build.
-8. Re-drive every driver correction, clean residue, and confirm all retained proof remains accessible.
-
-Return clean only with complete source/live coverage, changed for proven helper corrections, or blocked with exact gaps.
-A feature is verified-unreachable only with its concrete auth, entitlement, OS, fixture, or external prerequisite.
-
-## Create formal verification
-
-Choose a high-harm promise that ordinary tests rarely reach, grounded in current code rather than ease of proof.
-Let the question select the tool: event ordering suggests a bounded state model; code properties suggest a code verifier; unbounded claims may need proof.
-If the language has no suitable verifier, generated-input tests of real code can help but are not a formal proof.
-Prefer a tool maintainers can reproduce; do not install one without the authorization required by the environment.
-Record the plain property/harm, covered files/functions, code mapping, indivisible steps, assumptions, bounds, tool version, command, and sync commit.
-Every model step must correspond to a possible code step, including actual atomicity and new paths into guarded state.
-Demonstrate each property failing on a realistic broken variant in an isolated scratch copy, then restore it and confirm the original result.
-If current code violates the promise, retain the counterexample and explain its steps in the code's vocabulary.
-Do not weaken a model/property to get green or fix product code in verification-only scope.
-Generate cold-reader instructions to run, interpret, and update the check; execute them before handoff.
-A passing model or bound covers only that stated model/bound, never the whole system.
-
-## Maintain formal verification
-
-1. Collect each check's property, coverage, assumptions, bounds, command, and last sync commit; run it unchanged first.
-2. Read all covered-code changes since sync, including moved/split functions and new writers to guarded state.
-3. Classify no effect, stale description, evidenced intentional promise change, or possible broken promise.
-4. Update from code before rerunning. Change a property only with evidence of an intended contract change; disclose reduced bounds.
-5. Replay a failing counterexample against real code. An impossible step is model drift; possible steps identify a product bug.
-6. For a new pass, deliberately break the guarded current behavior in scratch and confirm sensitivity, then restore.
-7. Update coverage and sync only after checking that revision; a blocked check keeps its previous sync.
-
-If sync history is absent, disclose the last verification-file change as a provisional baseline, not a previously confirmed code match.
-Report in-sync, updated, bug, or blocked per check, including a stale pass that becomes a real bug after correction.
-Keep verification maintenance separate from any product fix and state new code not yet covered.
-
-## Skill, prompt, and harness experiments
-
-Use only for requested structural workflow evaluation; subjective wording alone does not require a benchmark program.
-Freeze behavioral criteria before runs. Candidate prompts and visible paths must look like organic project work, without grading/model/competitor cues.
-Keep rubric and variant identity from candidates; give a judge sanitized artifacts and one shared scoring scale.
-Inspect actual files opened, actions, and resulting behavior rather than claims that a skill was followed.
-Use independent authorized execution when available; disclose degraded self-review and never invent transcripts.
-Run negative sensitivity checks in scratch with restore proof, never mutate the user's reviewed worktree.
-For measured quality claims record completed tasks, errors, trials, spread, variant comparability, and confounders; missing validity means inconclusive.
-For speed claims also profile the actual limiter in a separate run, verify physical/end-to-end bounds, tune both sides equally, and alternate repeated samples.
-Check that timed work really executed and returned correct outputs; lazy/cached/skipped work and fast errors cannot prove a speedup.
-Use at least five samples per side for a comparison, reporting median/range; a labelled requested one-run ballpark still checks errors and completed work.
-
 ## Return evidence
 
 Return the exact claim/snapshot, checks and outcomes, proof paths, cleared conditions, unresolved assumptions, and coverage limits.
 Failed or unavailable required evidence goes to the execution owner; verification does not mark a task done or commit a fix.
 
-## Conditional pre-commit verification setup
-
-Use when asked to establish commit-time formatting, typechecking and tests.
-Inspect the existing hook runner and preserve it; adding a second runner is not the default.
-Corroborate the package manager and lockfile with CI and discover actual formatter/typecheck/test scripts.
-Use [security](security.md) for new dependency script approvals and install only within requested scope.
-
-For a JavaScript project explicitly choosing Husky, add reviewed development dependencies
-`husky`, `lint-staged` and `prettier` with its pinned manager, and initialize the supported Husky version.
-Merge its prepare hook with any existing `prepare` behavior; do not overwrite another setup command.
-Reuse the existing Prettier configuration. Create defaults only if no project formatting policy exists.
-Configure lint-staged for supported staged files; one concrete rule is
-`{"*": "prettier --ignore-unknown --write"}` when that matches the project policy.
-The pre-commit runs the manager's lint-staged command first, then its existing typecheck and test scripts.
-If a script does not exist, omit the invented command and explicitly report that missing check.
-Use the chosen hook runner's current executable/shebang convention rather than an obsolete copied header.
-
-Verify the configuration and hook locally in an isolated Git fixture: stage a disposable supported
-file, run lint-staged, confirm only the intended staged content is formatted, and exercise a real
-temporary commit through the hook. Demonstrate a failing check blocks that fixture commit.
-Use the manager's real commands; never use `--no-verify` to call the smoke test successful.
-Keep unrelated user index/worktree changes intact and do not stage them as test inputs.
-Return owned hook/config changes, observed pass/fail behavior and unavailable checks to build;
-the requested project changes receive the normal reviewed work-unit commit.

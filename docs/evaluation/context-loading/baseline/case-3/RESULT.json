@@ -1,0 +1,109 @@
+{
+  "case": "case-3",
+  "outcome": "prepared",
+  "commands": [
+    {
+      "command": [
+        "cat",
+        "NOTES.md"
+      ],
+      "exit": 0,
+      "evidence": [
+        "evidence/notes.stdout.txt",
+        "evidence/notes.stderr.txt",
+        "evidence/notes.exit.txt"
+      ]
+    },
+    {
+      "command": [
+        "rg",
+        "--files",
+        "-g",
+        "!evidence/**"
+      ],
+      "exit": 0,
+      "evidence": [
+        "evidence/inventory.stdout.txt",
+        "evidence/inventory.stderr.txt",
+        "evidence/inventory.exit.txt"
+      ]
+    },
+    {
+      "command": [
+        "python3",
+        "evidence/check_spec.py"
+      ],
+      "exit": 1,
+      "stdout": "{\n  \"check_type\": \"static document completeness, not workflow execution\",\n  \"checks\": {\n    \"notes_preserved\": true,\n    \"authority_and_open_decisions\": false,\n    \"stable_stages\": true,\n    \"retry_and_recovery\": true,\n    \"server_credential_boundary\": true,\n    \"activation_and_runtime_limits\": true\n  }\n}\n",
+      "stderr": "",
+      "evidence": [
+        "evidence/check_spec.stdout.txt",
+        "evidence/check_spec.stderr.txt",
+        "evidence/check_spec.exit.txt"
+      ]
+    },
+    {
+      "command": [
+        "python3",
+        "evidence/check_spec.py"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"check_type\": \"static document completeness, not workflow execution\",\n  \"checks\": {\n    \"notes_preserved\": true,\n    \"authority_and_open_decisions\": true,\n    \"stable_stages\": true,\n    \"retry_and_recovery\": true,\n    \"server_credential_boundary\": true,\n    \"activation_and_runtime_limits\": true\n  }\n}\n",
+      "stderr": "",
+      "evidence": [
+        "evidence/check_spec.corrected.stdout.txt",
+        "evidence/check_spec.corrected.stderr.txt",
+        "evidence/check_spec.corrected.exit.txt"
+      ]
+    }
+  ],
+  "evidence_paths": [
+    "evidence/check_spec.corrected.exit.txt",
+    "evidence/check_spec.corrected.stderr.txt",
+    "evidence/check_spec.corrected.stdout.txt",
+    "evidence/check_spec.exit.txt",
+    "evidence/check_spec.initial.py",
+    "evidence/check_spec.py",
+    "evidence/check_spec.stderr.txt",
+    "evidence/check_spec.stdout.txt",
+    "evidence/inventory.exit.txt",
+    "evidence/inventory.stderr.txt",
+    "evidence/inventory.stdout.txt",
+    "evidence/notes.exit.txt",
+    "evidence/notes.stderr.txt",
+    "evidence/notes.stdout.txt",
+    "evidence/snapshot.json"
+  ],
+  "modified_files": [
+    "WORKFLOW.md",
+    "RESULT.json",
+    "evidence/check_spec.corrected.exit.txt",
+    "evidence/check_spec.corrected.stderr.txt",
+    "evidence/check_spec.corrected.stdout.txt",
+    "evidence/check_spec.exit.txt",
+    "evidence/check_spec.initial.py",
+    "evidence/check_spec.py",
+    "evidence/check_spec.stderr.txt",
+    "evidence/check_spec.stdout.txt",
+    "evidence/inventory.exit.txt",
+    "evidence/inventory.stderr.txt",
+    "evidence/inventory.stdout.txt",
+    "evidence/notes.exit.txt",
+    "evidence/notes.stderr.txt",
+    "evidence/notes.stdout.txt",
+    "evidence/snapshot.json"
+  ],
+  "missing_prerequisites": [
+    "Source/channel/thread and trusted verdict identities",
+    "Repository/default branch and launch/check commands",
+    "Tracker, control and authenticated webhook adapters with readback/compensation",
+    "Owner, permitted destinations, budgets, secrets and retention configuration",
+    "Explicit authorization for operational external effects"
+  ],
+  "limits": [
+    "Specification only; no workflow, schedule, installation, service, message or network request was executed.",
+    "Static completeness assertions inspect document structure and boundaries, not workflow runtime behavior.",
+    "Operational choices remain open and disabled until configured and authorized.",
+    "The initial static checker failed because its literal phrase search did not normalize Markdown line wrapping. The checker was corrected, rerun, and both observations retained; no workflow content was weakened."
+  ]
+}

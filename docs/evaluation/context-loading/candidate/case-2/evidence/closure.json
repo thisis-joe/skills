@@ -1,0 +1,6 @@
+{
+  "product_snapshot_unchanged": true,
+  "retained_evidence_exists": true,
+  "owned_processes_remaining": 0,
+  "cleanup": "Each subprocess was awaited; no background processes or fixtures created."
+}

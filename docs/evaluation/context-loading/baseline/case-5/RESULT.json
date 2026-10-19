@@ -1,0 +1,130 @@
+{
+  "case": "case-5",
+  "outcome": "bug",
+  "claims": [
+    {
+      "claim": "unchanged baseline model passes",
+      "status": "passed",
+      "limit": "Stale assumption absent in real code; not proof of code safety"
+    },
+    {
+      "claim": "current bounded model preserves nonnegative balance",
+      "status": "failed",
+      "counterexamples": 6,
+      "cases_checked": 12
+    },
+    {
+      "claim": "all model counterexamples are possible in real code",
+      "status": "passed",
+      "evidence": "evidence/counterexample-replay.stdout.txt"
+    },
+    {
+      "claim": "wallet.py unchanged",
+      "status": "passed",
+      "sha256": "c2a7fe2a389d179f1060189feffe4ce1675ad51bb4c3ad601daaf5e2968ffdc2"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "proof/check.py"
+      ],
+      "exit": 0,
+      "stdout": "bounded model passed: balances 0..2, amounts 0..3\n",
+      "stderr": "",
+      "unchanged_check_sha256": "11110e7963b1a51482e19297ea8b02a398e6e9d0835b4b9ad00712e8f2628062"
+    },
+    {
+      "command": [
+        "cat",
+        "wallet.py",
+        "proof/check.py"
+      ],
+      "exit": 0,
+      "evidence": [
+        "evidence/drift-inspection.stdout.txt",
+        "evidence/drift-inspection.stderr.txt",
+        "evidence/drift-inspection.exit.txt"
+      ]
+    },
+    {
+      "command": [
+        "python3",
+        "proof/check.py"
+      ],
+      "exit": 1,
+      "evidence": [
+        "evidence/updated-model.stdout.txt",
+        "evidence/updated-model.stderr.txt",
+        "evidence/updated-model.exit.txt"
+      ]
+    },
+    {
+      "command": [
+        "python3",
+        "proof/replay.py"
+      ],
+      "exit": 1,
+      "stdout": "{\n  \"public_boundary\": \"wallet.spend(balance, amount)\",\n  \"replays\": [\n    {\n      \"balance\": 0,\n      \"amount\": 1,\n      \"model_after\": -1,\n      \"actual_after\": -1,\n      \"model_matches_code\": true,\n      \"property_holds\": false\n    },\n    {\n      \"balance\": 0,\n      \"amount\": 2,\n      \"model_after\": -2,\n      \"actual_after\": -2,\n      \"model_matches_code\": true,\n      \"property_holds\": false\n    },\n    {\n      \"balance\": 0,\n      \"amount\": 3,\n      \"model_after\": -3,\n      \"actual_after\": -3,\n      \"model_matches_code\": true,\n      \"property_holds\": false\n    },\n    {\n      \"balance\": 1,\n      \"amount\": 2,\n      \"model_after\": -1,\n      \"actual_after\": -1,\n      \"model_matches_code\": true,\n      \"property_holds\": false\n    },\n    {\n      \"balance\": 1,\n      \"amount\": 3,\n      \"model_after\": -2,\n      \"actual_after\": -2,\n      \"model_matches_code\": true,\n      \"property_holds\": false\n    },\n    {\n      \"balance\": 2,\n      \"amount\": 3,\n      \"model_after\": -1,\n      \"actual_after\": -1,\n      \"model_matches_code\": true,\n      \"property_holds\": false\n    }\n  ],\n  \"positive_observer\": {\n    \"balance\": 2,\n    \"amount\": 1,\n    \"expected_after\": 1,\n    \"actual_after\": 1,\n    \"matches\": true\n  },\n  \"all_counterexamples_reproduced\": true\n}\n",
+      "stderr": "",
+      "evidence": [
+        "evidence/counterexample-replay.stdout.txt",
+        "evidence/counterexample-replay.stderr.txt",
+        "evidence/counterexample-replay.exit.txt"
+      ]
+    }
+  ],
+  "evidence_paths": [
+    "evidence/README.before.md",
+    "evidence/baseline-command.json",
+    "evidence/baseline-snapshot.json",
+    "evidence/baseline.exit.txt",
+    "evidence/baseline.stderr.txt",
+    "evidence/baseline.stdout.txt",
+    "evidence/check.before.py",
+    "evidence/counterexample-replay.exit.txt",
+    "evidence/counterexample-replay.stderr.txt",
+    "evidence/counterexample-replay.stdout.txt",
+    "evidence/drift-inspection.exit.txt",
+    "evidence/drift-inspection.stderr.txt",
+    "evidence/drift-inspection.stdout.txt",
+    "evidence/updated-model.exit.txt",
+    "evidence/updated-model.stderr.txt",
+    "evidence/updated-model.stdout.txt"
+  ],
+  "modified_files": [
+    "proof/check.py",
+    "proof/README.md",
+    "proof/counterexamples.json",
+    "proof/replay.py",
+    "RESULT.json",
+    "evidence/README.before.md",
+    "evidence/baseline-command.json",
+    "evidence/baseline-snapshot.json",
+    "evidence/baseline.exit.txt",
+    "evidence/baseline.stderr.txt",
+    "evidence/baseline.stdout.txt",
+    "evidence/check.before.py",
+    "evidence/counterexample-replay.exit.txt",
+    "evidence/counterexample-replay.stderr.txt",
+    "evidence/counterexample-replay.stdout.txt",
+    "evidence/drift-inspection.exit.txt",
+    "evidence/drift-inspection.stderr.txt",
+    "evidence/drift-inspection.stdout.txt",
+    "evidence/updated-model.exit.txt",
+    "evidence/updated-model.stderr.txt",
+    "evidence/updated-model.stdout.txt"
+  ],
+  "missing_prerequisites": [
+    "No historical sync commit supplied; previous baseline remains provisional.",
+    "A product fix is outside verification-only scope."
+  ],
+  "limits": [
+    "The property and bounds were preserved: one step, balances 0..2, amounts 0..3.",
+    "The model is bounded exhaustive enumeration, not an unbounded proof or deployed-system verification.",
+    "The stale rejection branch was removed to reflect actual code; this exposes six real product violations.",
+    "No passing sync was advanced; the concrete wallet hash identifies only the inspected/replayed snapshot.",
+    "No product fix was attempted."
+  ]
+}

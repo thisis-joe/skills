@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python3",
+    "-c",
+    "from pathlib import Path; import hashlib,json; n=Path('NOTES.md'); p=Path('WORKFLOW.md'); s=p.read_text(); terms=['specification only','immutable','thread-only','exactly one','compensation','server','secret facility','durable queue','payload_digest','readback','zero external writes','No runtime or external success']; checks={t:t in s for t in terms}; print(json.dumps({'checks':checks,'notes_sha256':hashlib.sha256(n.read_bytes()).hexdigest(),'workflow_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'scope':'static documentation checks only'},indent=2)); raise SystemExit(0 if all(checks.values()) else 1)"
+  ],
+  "cwd": "/private/tmp/coco-context-loading-6bhlglo9/workspace-forest/case-3",
+  "exit_code": 0,
+  "stdout": "{\n  \"checks\": {\n    \"specification only\": true,\n    \"immutable\": true,\n    \"thread-only\": true,\n    \"exactly one\": true,\n    \"compensation\": true,\n    \"server\": true,\n    \"secret facility\": true,\n    \"durable queue\": true,\n    \"payload_digest\": true,\n    \"readback\": true,\n    \"zero external writes\": true,\n    \"No runtime or external success\": true\n  },\n  \"notes_sha256\": \"7bf9b03d0bca70a8a96882337022166aab901ae0679bacec60c042c5dba18c71\",\n  \"workflow_sha256\": \"264fea01f0c7ccc5ec8b6a1bae6d61b567123b1273f9fb5be5c2831971e3a3ff\",\n  \"scope\": \"static documentation checks only\"\n}\n",
+  "stderr": ""
+}

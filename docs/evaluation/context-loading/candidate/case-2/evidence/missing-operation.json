@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python3",
+    "app.py"
+  ],
+  "cwd": "/private/tmp/coco-context-loading-6bhlglo9/workspace-forest/case-2",
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: one of the arguments --double --triple is required\n",
+  "expected_exit": 2,
+  "expected_stdout": "",
+  "expected_contains": [
+    "required"
+  ],
+  "status": "passed"
+}

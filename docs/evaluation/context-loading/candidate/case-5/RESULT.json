@@ -1,0 +1,57 @@
+{
+  "case": "case-5",
+  "outcome": "bug",
+  "finding": "The unchanged stale model passed by assuming overspending rejection. Current wallet.spend subtracts unconditionally. Corrected same-bound nonnegative verification fails on six real counterexamples; balance 0, amount 1 returns -1 on direct replay.",
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "proof/check.py"
+      ],
+      "phase": "unchanged baseline",
+      "exit_code": 0,
+      "evidence": "evidence/baseline-check.json"
+    },
+    {
+      "argv": [
+        "python3",
+        "proof/check.py"
+      ],
+      "exit_code": 1,
+      "evidence": "evidence/maintained-check.json"
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "-c",
+        "from wallet import spend; import json; result=spend(0,1); print(json.dumps({\"balance\":0,\"amount\":1,\"actual\":result}), flush=True); assert result >= 0, \"nonnegative balance violated\""
+      ],
+      "exit_code": 1,
+      "evidence": "evidence/counterexample-replay.json"
+    }
+  ],
+  "evidence_paths": [
+    "evidence/original-snapshot.json",
+    "evidence/baseline-check.json",
+    "evidence/maintained-check.json",
+    "evidence/counterexample-replay.json",
+    "evidence/closure.json"
+  ],
+  "modified_files": [
+    "proof/check.py",
+    "proof/README.md",
+    "RESULT.json",
+    "evidence/original-snapshot.json",
+    "evidence/baseline-check.json",
+    "evidence/maintained-check.json",
+    "evidence/counterexample-replay.json",
+    "evidence/closure.json"
+  ],
+  "missing_prerequisites": [],
+  "limits": [
+    "Single-call exhaustive enumeration of integer balances 0..2 and amounts 0..3; no unbounded theorem, repeated-call, concurrency, deployed-system or external caller proof.",
+    "No sync commit/history is available; the original verification files remain a disclosed provisional baseline.",
+    "Current property is false. No passing claim, new passing sensitivity claim, weakened property, reduced bounds or wallet.py fix was made."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "source_thread": "local-example/thread-7",
+  "verdict_marker": "ready",
+  "trusted_identity": null,
+  "tracker_compensation": false,
+  "control_adapter": null
+}
+def value():
+    return 7

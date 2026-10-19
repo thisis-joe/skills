@@ -1,0 +1,376 @@
+[
+  {
+    "case": "case-1",
+    "outcome": "passed",
+    "report": "case-1/RESULT.json",
+    "commands": [
+      {
+        "argv": [
+          "python3",
+          "app.py",
+          "--double",
+          "3"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "python3",
+          "app.py",
+          "--double",
+          "-4"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "python3",
+          "-m",
+          "unittest",
+          "-v"
+        ],
+        "exit_code": 0
+      }
+    ],
+    "evidence_paths": [
+      "case-1/evidence/command-1.json",
+      "case-1/evidence/command-2.json",
+      "case-1/evidence/command-3.json"
+    ],
+    "modified_files": [
+      "case-1/evidence/command-1.json",
+      "case-1/evidence/command-2.json",
+      "case-1/evidence/command-3.json",
+      "case-1/RESULT.json"
+    ],
+    "missing_prerequisites": [],
+    "limits": [
+      "Verified the two requested CLI inputs and the one existing unit test on this local snapshot; no claim about all integer inputs or other CLI operations.",
+      "Product code was not modified."
+    ]
+  },
+  {
+    "case": "case-2",
+    "outcome": "changed",
+    "report": "case-2/RESULT.json",
+    "commands": [
+      {
+        "argv": [
+          "python3",
+          "-m",
+          "unittest",
+          "-v"
+        ],
+        "exit_code": 0,
+        "evidence": "evidence/baseline-checks.json"
+      },
+      {
+        "argv": [
+          "python3",
+          "app.py",
+          "--help"
+        ],
+        "exit_code": 0,
+        "evidence": "evidence/doctor.json"
+      },
+      {
+        "argv": [
+          "python3",
+          "app.py",
+          "--help"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "evidence": "evidence/help.json"
+      },
+      {
+        "argv": [
+          "python3",
+          "app.py",
+          "--double",
+          "3"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "evidence": "evidence/double-positive.json"
+      },
+      {
+        "argv": [
+          "python3",
+          "app.py",
+          "--double",
+          "-4"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "evidence": "evidence/double-negative.json"
+      },
+      {
+        "argv": [
+          "python3",
+          "app.py",
+          "--double",
+          "0"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "evidence": "evidence/double-zero.json"
+      },
+      {
+        "argv": [
+          "python3",
+          "app.py",
+          "--triple",
+          "3"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "evidence": "evidence/triple-positive.json"
+      },
+      {
+        "argv": [
+          "python3",
+          "app.py",
+          "--triple",
+          "-4"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "evidence": "evidence/triple-negative.json"
+      },
+      {
+        "argv": [
+          "python3",
+          "app.py",
+          "--triple",
+          "0"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "evidence": "evidence/triple-zero.json"
+      },
+      {
+        "argv": [
+          "python3",
+          "app.py"
+        ],
+        "exit_code": 2,
+        "status": "passed",
+        "evidence": "evidence/missing-operation.json"
+      },
+      {
+        "argv": [
+          "python3",
+          "app.py",
+          "--double",
+          "3",
+          "--triple",
+          "3"
+        ],
+        "exit_code": 2,
+        "status": "passed",
+        "evidence": "evidence/conflicting-operations.json"
+      },
+      {
+        "argv": [
+          "python3",
+          "app.py",
+          "--triple",
+          "nope"
+        ],
+        "exit_code": 2,
+        "status": "passed",
+        "evidence": "evidence/invalid-integer.json"
+      },
+      {
+        "argv": [
+          "python3",
+          "app.py",
+          "--double"
+        ],
+        "exit_code": 2,
+        "status": "passed",
+        "evidence": "evidence/missing-value.json"
+      },
+      {
+        "argv": [
+          "python3",
+          "app.py",
+          "--double",
+          "3",
+          "--unknown"
+        ],
+        "exit_code": 2,
+        "status": "passed",
+        "evidence": "evidence/unknown-option.json"
+      }
+    ],
+    "evidence_paths": [
+      "case-2/evidence/snapshot.json",
+      "case-2/evidence/baseline-checks.json",
+      "case-2/evidence/doctor.json",
+      "case-2/evidence/help.json",
+      "case-2/evidence/double-positive.json",
+      "case-2/evidence/double-negative.json",
+      "case-2/evidence/double-zero.json",
+      "case-2/evidence/triple-positive.json",
+      "case-2/evidence/triple-negative.json",
+      "case-2/evidence/triple-zero.json",
+      "case-2/evidence/missing-operation.json",
+      "case-2/evidence/conflicting-operations.json",
+      "case-2/evidence/invalid-integer.json",
+      "case-2/evidence/missing-value.json",
+      "case-2/evidence/unknown-option.json",
+      "case-2/evidence/closure.json"
+    ],
+    "modified_files": [
+      "case-2/VERIFY.md",
+      "case-2/RESULT.json",
+      "case-2/evidence/baseline-checks.json",
+      "case-2/evidence/closure.json",
+      "case-2/evidence/conflicting-operations.json",
+      "case-2/evidence/doctor.json",
+      "case-2/evidence/double-negative.json",
+      "case-2/evidence/double-positive.json",
+      "case-2/evidence/double-zero.json",
+      "case-2/evidence/help.json",
+      "case-2/evidence/invalid-integer.json",
+      "case-2/evidence/missing-operation.json",
+      "case-2/evidence/missing-value.json",
+      "case-2/evidence/snapshot.json",
+      "case-2/evidence/triple-negative.json",
+      "case-2/evidence/triple-positive.json",
+      "case-2/evidence/triple-zero.json",
+      "case-2/evidence/unknown-option.json"
+    ],
+    "missing_prerequisites": [],
+    "limits": [
+      "All discovered user-facing features exercised through the shipped CLI on the recorded local snapshot.",
+      "Finite representative integer cases and parser error states only; not exhaustive inputs, parser spellings, Python versions, or platforms.",
+      "app.py and test_app.py are unchanged; no product regression observed."
+    ]
+  },
+  {
+    "case": "case-3",
+    "outcome": "specification-written",
+    "report": "case-3/RESULT.json",
+    "commands": [
+      {
+        "argv": [
+          "python3",
+          "-c",
+          "from pathlib import Path; import hashlib,json; n=Path('NOTES.md'); p=Path('WORKFLOW.md'); s=p.read_text(); terms=['specification only','immutable','thread-only','exactly one','compensation','server','secret facility','durable queue','payload_digest','readback','zero external writes','No runtime or external success']; checks={t:t in s for t in terms}; print(json.dumps({'checks':checks,'notes_sha256':hashlib.sha256(n.read_bytes()).hexdigest(),'workflow_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'scope':'static documentation checks only'},indent=2)); raise SystemExit(0 if all(checks.values()) else 1)"
+        ],
+        "exit_code": 0
+      }
+    ],
+    "evidence_paths": [
+      "case-3/evidence/static-check.json"
+    ],
+    "modified_files": [
+      "case-3/WORKFLOW.md",
+      "case-3/evidence/static-check.json",
+      "case-3/RESULT.json"
+    ],
+    "missing_prerequisites": [
+      "Source channel/root policy and trusted triage identity/marker are undecided.",
+      "Repository/default branch, tracker/control/webhook adapters, destination and server secret facility are not supplied.",
+      "Owner, feature maps, retention, concrete numeric budgets and adapter contract tests remain activation prerequisites."
+    ],
+    "limits": [
+      "Only a specification and static documentation checks were executed. No workflow, delivery, retry, crash, compensation or external-write behavior was run or proven.",
+      "No activation, schedule, package installation, external service call or message was performed."
+    ]
+  },
+  {
+    "case": "case-4",
+    "outcome": "blocked",
+    "report": "case-4/RESULT.json",
+    "commands": [
+      {
+        "argv": [
+          "python3",
+          "-c",
+          "from pathlib import Path; import ast,hashlib,json; p=Path('product.py'); data=json.loads(Path('intake.json').read_text()); ast.parse(p.read_text()); gaps=[]; gaps += ['configured trusted verdict identity is missing'] if not data.get('trusted_identity') else []; gaps += ['tracker compensation capability is unavailable'] if data.get('tracker_compensation') is not True else []; gaps += ['control adapter is missing'] if not data.get('control_adapter') else []; result={'source_thread':data.get('source_thread'),'verdict_marker':data.get('verdict_marker'),'decision':'blocked' if gaps else 'requires full configured-intake preflight','missing_prerequisites':gaps,'safe_actions':['local input validation','read-only source inspection','case-local evidence/report writes'],'not_run':['report reproduction','bounded fix','product execution','external replies/tickets/PRs'],'product_syntax':'parsed without execution','product_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'intake_sha256':hashlib.sha256(Path('intake.json').read_bytes()).hexdigest(),'reason':'A ready string is not a trusted marker from the configured identity in the original thread.'}; print(json.dumps(result,indent=2)); raise SystemExit(2 if gaps else 0)"
+        ],
+        "exit_code": 2,
+        "interpretation": "Expected fail-closed prerequisite gate; no reproduction or fix executed."
+      }
+    ],
+    "evidence_paths": [
+      "case-4/evidence/intake-gate.json"
+    ],
+    "modified_files": [
+      "case-4/evidence/intake-gate.json",
+      "case-4/RESULT.json"
+    ],
+    "missing_prerequisites": [
+      "configured trusted verdict identity is missing",
+      "tracker compensation capability is unavailable",
+      "control adapter is missing",
+      "No authenticated original-parent/current ownership readback or full configured intake contract is supplied."
+    ],
+    "limits": [
+      "The local JSON gate is not an adapter integration test and cannot establish the remote parent, current owner or event authenticity.",
+      "product.py remained unchanged and was parsed without executing it.",
+      "No external writes, product fixes, report reproduction, draft PR, schedule or installation were performed."
+    ]
+  },
+  {
+    "case": "case-5",
+    "outcome": "bug",
+    "report": "case-5/RESULT.json",
+    "commands": [
+      {
+        "argv": [
+          "python3",
+          "proof/check.py"
+        ],
+        "phase": "unchanged baseline",
+        "exit_code": 0,
+        "evidence": "evidence/baseline-check.json"
+      },
+      {
+        "argv": [
+          "python3",
+          "proof/check.py"
+        ],
+        "exit_code": 1,
+        "evidence": "evidence/maintained-check.json"
+      },
+      {
+        "argv": [
+          "python3",
+          "-B",
+          "-c",
+          "from wallet import spend; import json; result=spend(0,1); print(json.dumps({\"balance\":0,\"amount\":1,\"actual\":result}), flush=True); assert result >= 0, \"nonnegative balance violated\""
+        ],
+        "exit_code": 1,
+        "evidence": "evidence/counterexample-replay.json"
+      }
+    ],
+    "evidence_paths": [
+      "case-5/evidence/original-snapshot.json",
+      "case-5/evidence/baseline-check.json",
+      "case-5/evidence/maintained-check.json",
+      "case-5/evidence/counterexample-replay.json",
+      "case-5/evidence/closure.json"
+    ],
+    "modified_files": [
+      "case-5/proof/check.py",
+      "case-5/proof/README.md",
+      "case-5/RESULT.json",
+      "case-5/evidence/original-snapshot.json",
+      "case-5/evidence/baseline-check.json",
+      "case-5/evidence/maintained-check.json",
+      "case-5/evidence/counterexample-replay.json",
+      "case-5/evidence/closure.json"
+    ],
+    "missing_prerequisites": [],
+    "limits": [
+      "Single-call exhaustive enumeration of integer balances 0..2 and amounts 0..3; no unbounded theorem, repeated-call, concurrency, deployed-system or external caller proof.",
+      "No sync commit/history is available; the original verification files remain a disclosed provisional baseline.",
+      "Current property is false. No passing claim, new passing sensitivity claim, weakened property, reduced bounds or wallet.py fix was made."
+    ]
+  }
+]

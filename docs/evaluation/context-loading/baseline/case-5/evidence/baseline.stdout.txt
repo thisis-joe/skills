@@ -1,0 +1,1 @@
+bounded model passed: balances 0..2, amounts 0..3

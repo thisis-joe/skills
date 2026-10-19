@@ -1,0 +1,30 @@
+{
+  "workspace-river": {
+    "case-1/app.py": true,
+    "case-1/test_app.py": true,
+    "case-1/README.md": true,
+    "case-2/app.py": true,
+    "case-2/test_app.py": true,
+    "case-2/README.md": true,
+    "case-3/NOTES.md": true,
+    "case-4/intake.json": true,
+    "case-4/product.py": true,
+    "case-5/wallet.py": true,
+    "tasks.json": true,
+    "read_skill.py": true
+  },
+  "workspace-forest": {
+    "case-1/app.py": true,
+    "case-1/test_app.py": true,
+    "case-1/README.md": true,
+    "case-2/app.py": true,
+    "case-2/test_app.py": true,
+    "case-2/README.md": true,
+    "case-3/NOTES.md": true,
+    "case-4/intake.json": true,
+    "case-4/product.py": true,
+    "case-5/wallet.py": true,
+    "tasks.json": true,
+    "read_skill.py": true
+  }
+}

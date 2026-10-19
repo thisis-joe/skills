@@ -1,0 +1,552 @@
+{
+  "case": "case-2",
+  "outcome": "changed",
+  "claims": [
+    {
+      "claim": "all source-mapped user-facing features exercised live",
+      "status": "passed",
+      "evidence": "evidence/cli/report.json"
+    },
+    {
+      "claim": "product files preserved",
+      "status": "passed",
+      "comparison": {
+        "app.py": true,
+        "test_app.py": true
+      }
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "app.py",
+        "--help"
+      ],
+      "exit": 0,
+      "stdout": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\n\noptional arguments:\n  -h, --help       show this help message and exit\n  --double DOUBLE\n  --triple TRIPLE\n",
+      "stderr": "",
+      "evidence_stem": "evidence/baseline-01"
+    },
+    {
+      "command": [
+        "python3",
+        "app.py",
+        "--double",
+        "3"
+      ],
+      "exit": 0,
+      "stdout": "6\n",
+      "stderr": "",
+      "evidence_stem": "evidence/baseline-02"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "-v"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_double (test_app.CliTests) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.018s\n\nOK\n",
+      "evidence_stem": "evidence/baseline-03"
+    },
+    {
+      "command": [
+        "python3",
+        "verify_cli.py"
+      ],
+      "exit": 0,
+      "stdout": "help-long: passed\nhelp-short: passed\ndouble-positive: passed\ndouble-negative: passed\ndouble-zero: passed\ntriple-positive: passed\ntriple-negative: passed\ntriple-zero: passed\nrequired-mode: passed\nexclusive-modes: passed\ndouble-invalid-integer: passed\ntriple-invalid-integer: passed\ndouble-missing-value: passed\ntriple-missing-value: passed\nunknown-option: passed\n",
+      "stderr": "",
+      "evidence": [
+        "evidence/harness.stdout.txt",
+        "evidence/harness.stderr.txt",
+        "evidence/harness.exit.txt"
+      ]
+    },
+    {
+      "feature": "help-long",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "app.py",
+        "--help"
+      ],
+      "exit": 0,
+      "stdout": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\n\noptional arguments:\n  -h, --help       show this help message and exit\n  --double DOUBLE\n  --triple TRIPLE\n",
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_stdout": null,
+      "checks": {
+        "exit": true,
+        "stdout": true,
+        "stdout_fragments": true,
+        "stderr_fragments": true,
+        "success_stderr_empty": true
+      },
+      "status": "passed",
+      "evidence": [
+        "evidence/cli/help-long.stdout.txt",
+        "evidence/cli/help-long.stderr.txt",
+        "evidence/cli/help-long.exit.txt"
+      ]
+    },
+    {
+      "feature": "help-short",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "app.py",
+        "-h"
+      ],
+      "exit": 0,
+      "stdout": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\n\noptional arguments:\n  -h, --help       show this help message and exit\n  --double DOUBLE\n  --triple TRIPLE\n",
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_stdout": null,
+      "checks": {
+        "exit": true,
+        "stdout": true,
+        "stdout_fragments": true,
+        "stderr_fragments": true,
+        "success_stderr_empty": true
+      },
+      "status": "passed",
+      "evidence": [
+        "evidence/cli/help-short.stdout.txt",
+        "evidence/cli/help-short.stderr.txt",
+        "evidence/cli/help-short.exit.txt"
+      ]
+    },
+    {
+      "feature": "double-positive",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "app.py",
+        "--double",
+        "3"
+      ],
+      "exit": 0,
+      "stdout": "6\n",
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_stdout": "6\n",
+      "checks": {
+        "exit": true,
+        "stdout": true,
+        "stdout_fragments": true,
+        "stderr_fragments": true,
+        "success_stderr_empty": true
+      },
+      "status": "passed",
+      "evidence": [
+        "evidence/cli/double-positive.stdout.txt",
+        "evidence/cli/double-positive.stderr.txt",
+        "evidence/cli/double-positive.exit.txt"
+      ]
+    },
+    {
+      "feature": "double-negative",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "app.py",
+        "--double",
+        "-4"
+      ],
+      "exit": 0,
+      "stdout": "-8\n",
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_stdout": "-8\n",
+      "checks": {
+        "exit": true,
+        "stdout": true,
+        "stdout_fragments": true,
+        "stderr_fragments": true,
+        "success_stderr_empty": true
+      },
+      "status": "passed",
+      "evidence": [
+        "evidence/cli/double-negative.stdout.txt",
+        "evidence/cli/double-negative.stderr.txt",
+        "evidence/cli/double-negative.exit.txt"
+      ]
+    },
+    {
+      "feature": "double-zero",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "app.py",
+        "--double",
+        "0"
+      ],
+      "exit": 0,
+      "stdout": "0\n",
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_stdout": "0\n",
+      "checks": {
+        "exit": true,
+        "stdout": true,
+        "stdout_fragments": true,
+        "stderr_fragments": true,
+        "success_stderr_empty": true
+      },
+      "status": "passed",
+      "evidence": [
+        "evidence/cli/double-zero.stdout.txt",
+        "evidence/cli/double-zero.stderr.txt",
+        "evidence/cli/double-zero.exit.txt"
+      ]
+    },
+    {
+      "feature": "triple-positive",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "app.py",
+        "--triple",
+        "3"
+      ],
+      "exit": 0,
+      "stdout": "9\n",
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_stdout": "9\n",
+      "checks": {
+        "exit": true,
+        "stdout": true,
+        "stdout_fragments": true,
+        "stderr_fragments": true,
+        "success_stderr_empty": true
+      },
+      "status": "passed",
+      "evidence": [
+        "evidence/cli/triple-positive.stdout.txt",
+        "evidence/cli/triple-positive.stderr.txt",
+        "evidence/cli/triple-positive.exit.txt"
+      ]
+    },
+    {
+      "feature": "triple-negative",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "app.py",
+        "--triple",
+        "-4"
+      ],
+      "exit": 0,
+      "stdout": "-12\n",
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_stdout": "-12\n",
+      "checks": {
+        "exit": true,
+        "stdout": true,
+        "stdout_fragments": true,
+        "stderr_fragments": true,
+        "success_stderr_empty": true
+      },
+      "status": "passed",
+      "evidence": [
+        "evidence/cli/triple-negative.stdout.txt",
+        "evidence/cli/triple-negative.stderr.txt",
+        "evidence/cli/triple-negative.exit.txt"
+      ]
+    },
+    {
+      "feature": "triple-zero",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "app.py",
+        "--triple",
+        "0"
+      ],
+      "exit": 0,
+      "stdout": "0\n",
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_stdout": "0\n",
+      "checks": {
+        "exit": true,
+        "stdout": true,
+        "stdout_fragments": true,
+        "stderr_fragments": true,
+        "success_stderr_empty": true
+      },
+      "status": "passed",
+      "evidence": [
+        "evidence/cli/triple-zero.stdout.txt",
+        "evidence/cli/triple-zero.stderr.txt",
+        "evidence/cli/triple-zero.exit.txt"
+      ]
+    },
+    {
+      "feature": "required-mode",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "app.py"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: one of the arguments --double --triple is required\n",
+      "expected_exit": 2,
+      "expected_stdout": "",
+      "checks": {
+        "exit": true,
+        "stdout": true,
+        "stdout_fragments": true,
+        "stderr_fragments": true,
+        "success_stderr_empty": true
+      },
+      "status": "passed",
+      "evidence": [
+        "evidence/cli/required-mode.stdout.txt",
+        "evidence/cli/required-mode.stderr.txt",
+        "evidence/cli/required-mode.exit.txt"
+      ]
+    },
+    {
+      "feature": "exclusive-modes",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "app.py",
+        "--double",
+        "3",
+        "--triple",
+        "3"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: argument --triple: not allowed with argument --double\n",
+      "expected_exit": 2,
+      "expected_stdout": "",
+      "checks": {
+        "exit": true,
+        "stdout": true,
+        "stdout_fragments": true,
+        "stderr_fragments": true,
+        "success_stderr_empty": true
+      },
+      "status": "passed",
+      "evidence": [
+        "evidence/cli/exclusive-modes.stdout.txt",
+        "evidence/cli/exclusive-modes.stderr.txt",
+        "evidence/cli/exclusive-modes.exit.txt"
+      ]
+    },
+    {
+      "feature": "double-invalid-integer",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "app.py",
+        "--double",
+        "x"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: argument --double: invalid int value: 'x'\n",
+      "expected_exit": 2,
+      "expected_stdout": "",
+      "checks": {
+        "exit": true,
+        "stdout": true,
+        "stdout_fragments": true,
+        "stderr_fragments": true,
+        "success_stderr_empty": true
+      },
+      "status": "passed",
+      "evidence": [
+        "evidence/cli/double-invalid-integer.stdout.txt",
+        "evidence/cli/double-invalid-integer.stderr.txt",
+        "evidence/cli/double-invalid-integer.exit.txt"
+      ]
+    },
+    {
+      "feature": "triple-invalid-integer",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "app.py",
+        "--triple",
+        "x"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: argument --triple: invalid int value: 'x'\n",
+      "expected_exit": 2,
+      "expected_stdout": "",
+      "checks": {
+        "exit": true,
+        "stdout": true,
+        "stdout_fragments": true,
+        "stderr_fragments": true,
+        "success_stderr_empty": true
+      },
+      "status": "passed",
+      "evidence": [
+        "evidence/cli/triple-invalid-integer.stdout.txt",
+        "evidence/cli/triple-invalid-integer.stderr.txt",
+        "evidence/cli/triple-invalid-integer.exit.txt"
+      ]
+    },
+    {
+      "feature": "double-missing-value",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "app.py",
+        "--double"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: argument --double: expected one argument\n",
+      "expected_exit": 2,
+      "expected_stdout": "",
+      "checks": {
+        "exit": true,
+        "stdout": true,
+        "stdout_fragments": true,
+        "stderr_fragments": true,
+        "success_stderr_empty": true
+      },
+      "status": "passed",
+      "evidence": [
+        "evidence/cli/double-missing-value.stdout.txt",
+        "evidence/cli/double-missing-value.stderr.txt",
+        "evidence/cli/double-missing-value.exit.txt"
+      ]
+    },
+    {
+      "feature": "triple-missing-value",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "app.py",
+        "--triple"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: argument --triple: expected one argument\n",
+      "expected_exit": 2,
+      "expected_stdout": "",
+      "checks": {
+        "exit": true,
+        "stdout": true,
+        "stdout_fragments": true,
+        "stderr_fragments": true,
+        "success_stderr_empty": true
+      },
+      "status": "passed",
+      "evidence": [
+        "evidence/cli/triple-missing-value.stdout.txt",
+        "evidence/cli/triple-missing-value.stderr.txt",
+        "evidence/cli/triple-missing-value.exit.txt"
+      ]
+    },
+    {
+      "feature": "unknown-option",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "app.py",
+        "--double",
+        "3",
+        "--unknown"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: unrecognized arguments: --unknown\n",
+      "expected_exit": 2,
+      "expected_stdout": "",
+      "checks": {
+        "exit": true,
+        "stdout": true,
+        "stdout_fragments": true,
+        "stderr_fragments": true,
+        "success_stderr_empty": true
+      },
+      "status": "passed",
+      "evidence": [
+        "evidence/cli/unknown-option.stdout.txt",
+        "evidence/cli/unknown-option.stderr.txt",
+        "evidence/cli/unknown-option.exit.txt"
+      ]
+    }
+  ],
+  "evidence_paths": [
+    "evidence/snapshot.json",
+    "evidence/baseline-commands.json",
+    "evidence/cli/report.json",
+    "evidence/harness.stdout.txt",
+    "evidence/harness.stderr.txt",
+    "evidence/harness.exit.txt"
+  ],
+  "modified_files": [
+    "VERIFY.md",
+    "verify_cli.py",
+    "RESULT.json",
+    "evidence/baseline-01.exit.txt",
+    "evidence/baseline-01.stderr.txt",
+    "evidence/baseline-01.stdout.txt",
+    "evidence/baseline-02.exit.txt",
+    "evidence/baseline-02.stderr.txt",
+    "evidence/baseline-02.stdout.txt",
+    "evidence/baseline-03.exit.txt",
+    "evidence/baseline-03.stderr.txt",
+    "evidence/baseline-03.stdout.txt",
+    "evidence/baseline-commands.json",
+    "evidence/cli/double-invalid-integer.exit.txt",
+    "evidence/cli/double-invalid-integer.stderr.txt",
+    "evidence/cli/double-invalid-integer.stdout.txt",
+    "evidence/cli/double-missing-value.exit.txt",
+    "evidence/cli/double-missing-value.stderr.txt",
+    "evidence/cli/double-missing-value.stdout.txt",
+    "evidence/cli/double-negative.exit.txt",
+    "evidence/cli/double-negative.stderr.txt",
+    "evidence/cli/double-negative.stdout.txt",
+    "evidence/cli/double-positive.exit.txt",
+    "evidence/cli/double-positive.stderr.txt",
+    "evidence/cli/double-positive.stdout.txt",
+    "evidence/cli/double-zero.exit.txt",
+    "evidence/cli/double-zero.stderr.txt",
+    "evidence/cli/double-zero.stdout.txt",
+    "evidence/cli/exclusive-modes.exit.txt",
+    "evidence/cli/exclusive-modes.stderr.txt",
+    "evidence/cli/exclusive-modes.stdout.txt",
+    "evidence/cli/help-long.exit.txt",
+    "evidence/cli/help-long.stderr.txt",
+    "evidence/cli/help-long.stdout.txt",
+    "evidence/cli/help-short.exit.txt",
+    "evidence/cli/help-short.stderr.txt",
+    "evidence/cli/help-short.stdout.txt",
+    "evidence/cli/report.json",
+    "evidence/cli/required-mode.exit.txt",
+    "evidence/cli/required-mode.stderr.txt",
+    "evidence/cli/required-mode.stdout.txt",
+    "evidence/cli/triple-invalid-integer.exit.txt",
+    "evidence/cli/triple-invalid-integer.stderr.txt",
+    "evidence/cli/triple-invalid-integer.stdout.txt",
+    "evidence/cli/triple-missing-value.exit.txt",
+    "evidence/cli/triple-missing-value.stderr.txt",
+    "evidence/cli/triple-missing-value.stdout.txt",
+    "evidence/cli/triple-negative.exit.txt",
+    "evidence/cli/triple-negative.stderr.txt",
+    "evidence/cli/triple-negative.stdout.txt",
+    "evidence/cli/triple-positive.exit.txt",
+    "evidence/cli/triple-positive.stderr.txt",
+    "evidence/cli/triple-positive.stdout.txt",
+    "evidence/cli/triple-zero.exit.txt",
+    "evidence/cli/triple-zero.stderr.txt",
+    "evidence/cli/triple-zero.stdout.txt",
+    "evidence/cli/unknown-option.exit.txt",
+    "evidence/cli/unknown-option.stderr.txt",
+    "evidence/cli/unknown-option.stdout.txt",
+    "evidence/harness.exit.txt",
+    "evidence/harness.stderr.txt",
+    "evidence/harness.stdout.txt",
+    "evidence/snapshot.json"
+  ],
+  "missing_prerequisites": [],
+  "limits": [
+    "The verification map now covers double, triple, both help entrypoints, and discovered CLI error states.",
+    "Inputs are representative; this is not an exhaustive argument-space or arbitrary-integer proof.",
+    "No UI, network, auth, deployment or persistent application state exists in the inspected source.",
+    "Snapshot identity is a file hash, not a supplied VCS revision."
+  ]
+}

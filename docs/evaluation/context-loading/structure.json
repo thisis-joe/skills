@@ -1,0 +1,76 @@
+{
+  "baseline_commit": "1f0f37012ae37f65697872fa97276860a3a7e82f",
+  "unit": "Unicode characters, including mode selection and module guard text",
+  "excludes": [
+    "entrypoints",
+    "common contract",
+    "integration decisions",
+    "skill catalog",
+    "model/tool framing"
+  ],
+  "scenarios": {
+    "ci_preparation": {
+      "before_characters": 14730,
+      "after_characters": 7512,
+      "reduction_characters": 7218,
+      "files": [
+        "skills/_coco-shared/advanced/automate.md",
+        "skills/_coco-shared/advanced/automate-ci.md"
+      ]
+    },
+    "runtime_helper_creation": {
+      "before_characters": 13478,
+      "after_characters": 8891,
+      "reduction_characters": 4587,
+      "files": [
+        "skills/_coco-shared/advanced/verify.md",
+        "skills/_coco-shared/advanced/verify-runtime-create.md"
+      ]
+    },
+    "runtime_helper_maintenance": {
+      "before_characters": 13478,
+      "after_characters": 10285,
+      "reduction_characters": 3193,
+      "files": [
+        "skills/_coco-shared/advanced/verify.md",
+        "skills/_coco-shared/advanced/verify-runtime-create.md",
+        "skills/_coco-shared/advanced/verify-runtime-maintain.md"
+      ]
+    },
+    "verify_all_modules_fallback": {
+      "before_characters": 13478,
+      "after_characters": 17840,
+      "files": [
+        "skills/_coco-shared/advanced/verify.md",
+        "skills/_coco-shared/advanced/verify-experiments.md",
+        "skills/_coco-shared/advanced/verify-formal-create.md",
+        "skills/_coco-shared/advanced/verify-formal-maintain.md",
+        "skills/_coco-shared/advanced/verify-pre-commit.md",
+        "skills/_coco-shared/advanced/verify-quality-audit.md",
+        "skills/_coco-shared/advanced/verify-runtime-create.md",
+        "skills/_coco-shared/advanced/verify-runtime-maintain.md"
+      ]
+    },
+    "automate_all_modules_fallback": {
+      "before_characters": 14730,
+      "after_characters": 19369,
+      "files": [
+        "skills/_coco-shared/advanced/automate.md",
+        "skills/_coco-shared/advanced/automate-ci.md",
+        "skills/_coco-shared/advanced/automate-intake-fix.md",
+        "skills/_coco-shared/advanced/automate-intake-setup.md",
+        "skills/_coco-shared/advanced/automate-intake-triage.md",
+        "skills/_coco-shared/advanced/automate-specification.md",
+        "skills/_coco-shared/advanced/automate-sustained.md",
+        "skills/_coco-shared/advanced/automate-webhook.md",
+        "skills/_coco-shared/advanced/automate-wizard.md"
+      ]
+    }
+  },
+  "preserved_checks": {
+    "original_source_facts_except_locations": true,
+    "common_contract": true,
+    "source_manifest": true,
+    "all_26_frontmatters_and_ui": true
+  }
+}

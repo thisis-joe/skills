@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python3",
+    "-c",
+    "from pathlib import Path; import ast,hashlib,json; p=Path('product.py'); data=json.loads(Path('intake.json').read_text()); ast.parse(p.read_text()); gaps=[]; gaps += ['configured trusted verdict identity is missing'] if not data.get('trusted_identity') else []; gaps += ['tracker compensation capability is unavailable'] if data.get('tracker_compensation') is not True else []; gaps += ['control adapter is missing'] if not data.get('control_adapter') else []; result={'source_thread':data.get('source_thread'),'verdict_marker':data.get('verdict_marker'),'decision':'blocked' if gaps else 'requires full configured-intake preflight','missing_prerequisites':gaps,'safe_actions':['local input validation','read-only source inspection','case-local evidence/report writes'],'not_run':['report reproduction','bounded fix','product execution','external replies/tickets/PRs'],'product_syntax':'parsed without execution','product_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'intake_sha256':hashlib.sha256(Path('intake.json').read_bytes()).hexdigest(),'reason':'A ready string is not a trusted marker from the configured identity in the original thread.'}; print(json.dumps(result,indent=2)); raise SystemExit(2 if gaps else 0)"
+  ],
+  "cwd": "/private/tmp/coco-context-loading-6bhlglo9/workspace-forest/case-4",
+  "exit_code": 2,
+  "stdout": "{\n  \"source_thread\": \"local-example/thread-7\",\n  \"verdict_marker\": \"ready\",\n  \"decision\": \"blocked\",\n  \"missing_prerequisites\": [\n    \"configured trusted verdict identity is missing\",\n    \"tracker compensation capability is unavailable\",\n    \"control adapter is missing\"\n  ],\n  \"safe_actions\": [\n    \"local input validation\",\n    \"read-only source inspection\",\n    \"case-local evidence/report writes\"\n  ],\n  \"not_run\": [\n    \"report reproduction\",\n    \"bounded fix\",\n    \"product execution\",\n    \"external replies/tickets/PRs\"\n  ],\n  \"product_syntax\": \"parsed without execution\",\n  \"product_sha256\": \"37a5ddd282078173f597d9f32edb8e659e5a1b1ea0606d25da31c4c07876bad6\",\n  \"intake_sha256\": \"589a3b06ce1dae986611f5a18c9779f5d217eb48f40227482a11afd54b8f8b1f\",\n  \"reason\": \"A ready string is not a trusted marker from the configured identity in the original thread.\"\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python3",
+    "proof/check.py"
+  ],
+  "exit": 0,
+  "stdout": "bounded model passed: balances 0..2, amounts 0..3\n",
+  "stderr": "",
+  "unchanged_check_sha256": "11110e7963b1a51482e19297ea8b02a398e6e9d0835b4b9ad00712e8f2628062"
+}

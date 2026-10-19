@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "app.py",
+    "--double",
+    "-4"
+  ],
+  "cwd": "/private/tmp/coco-context-loading-6bhlglo9/workspace-forest/case-1",
+  "exit_code": 0,
+  "stdout": "-8\n",
+  "stderr": ""
+}

@@ -10,6 +10,7 @@ Matt Pocock, Addy Osmani, Lauren Tan(pstack)의 스킬 트리를 목적별 스�
 
 - `skills/coco-*/SKILL.md`: 사용 상황, 입력, 판단 절차, 출력, 종료 조건을 가진 설치 가능한 목적별 진입점.
 - `skills/_coco-shared/`: 공통 계약, 선택표, 전문 조건부 절차. 이 폴더에는 `SKILL.md`가 없고 독립적으로 선택되지 않는다.
+- `skills/_coco-shared/advanced/verify.md`, `automate.md`: 필수 공통 절차와 누적 선택표. 전문 모드 15개는 같은 디렉터리의 별도 문서로 원문을 보존하고, 각 문서는 적용 전에 해당 공통 절차로 돌아가게 연결한다. 이름·발견 조건과 공통 계약은 유지하며 불확실하면 더 넓게 읽는다. [분할 이유와 검증 기준](context-loading.md)을 따른다.
 - `sources/`: 커밋·체크섬으로 고정한 원문과 원본별 기능 대응표. 원문 파일은 `.source` 접미사로 비활성화하고 설치하지 않는다.
 - `scripts/`: 원문·참조·패키지를 검증하는 도구, 충돌을 감지하는 설치 도구, 미커밋 변경과 새 파일을 포함하는 읽기 전용 리뷰 범위 수집 도구.
 - `tests/`, `docs/evaluation/`: 실제 Git·설치 시나리오와 독립적인 에이전트 동작 평가.

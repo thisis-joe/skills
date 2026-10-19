@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python3",
+    "app.py",
+    "--triple",
+    "nope"
+  ],
+  "cwd": "/private/tmp/coco-context-loading-6bhlglo9/workspace-forest/case-2",
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: argument --triple: invalid int value: 'nope'\n",
+  "expected_exit": 2,
+  "expected_stdout": "",
+  "expected_contains": [
+    "invalid int value"
+  ],
+  "status": "passed"
+}

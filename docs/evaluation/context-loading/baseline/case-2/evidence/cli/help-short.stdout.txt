@@ -1,0 +1,6 @@
+usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --double DOUBLE
+  --triple TRIPLE

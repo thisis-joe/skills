@@ -2,6 +2,8 @@
 
 고정 버전의 모든 스킬·명령을 빠짐없이 기록합니다. `merged`는 공통 절차에 흡수, `adapted`는 팀/도구/권한에 맞춘 수정, `reference`는 필요할 때 적용하는 전문·실험 모드입니다. 원본 파일은 실행하지 않는 `.source` 자료입니다.
 
+`coco-verify`와 `coco-automate`의 전문 모드는 [검증 선택표](../skills/_coco-shared/advanced/verify.md#mode-selection)와 [자동화 선택표](../skills/_coco-shared/advanced/automate.md#mode-selection)에서 연결합니다. 원본 운영 본문은 그대로 분리했으며 정확한 새 구현 위치는 `sources/coverage.json`의 `implemented_references`에 기록합니다. 원본의 `essential_rules`·채택 이유·체크섬은 바꾸지 않습니다. [구조와 보존 검증](context-loading.md)을 함께 확인합니다.
+
 팀 요청으로 추가한 [coco-whattosay](../skills/coco-whattosay/SKILL.md)는 선택된 스킬에 맞는 요청문을 추천하는 신규 절차입니다. 원본에서 유래한 동작이 아니므로 아래 원본 대응과 `sources/coverage.json`의 131개 항목은 추가·변경하지 않습니다. 선택과 실행의 경계는 [결정 기록](../skills/_coco-shared/decisions.md)에 남깁니다.
 
 | 출처 | 원본 | 통합 절차 | 처리 |

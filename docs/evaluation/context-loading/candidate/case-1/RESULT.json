@@ -1,0 +1,71 @@
+{
+  "case": "case-1",
+  "outcome": "passed",
+  "claims": [
+    {
+      "claim": "--double 3 returns 6",
+      "status": "passed",
+      "evidence": "evidence/command-1.json"
+    },
+    {
+      "claim": "--double -4 returns -8",
+      "status": "passed",
+      "evidence": "evidence/command-2.json"
+    },
+    {
+      "claim": "Existing unit checks pass",
+      "status": "passed",
+      "evidence": "evidence/command-3.json"
+    }
+  ],
+  "snapshot_sha256": {
+    "app.py": "7ea18480b723397aa1e243ea4d3b4991673b7aeedb4950c0aac94326b6308555",
+    "test_app.py": "927ac4a3b173cc10fc624c756cafabefe4082885ed2006e9e911e88703cf85d7",
+    "README.md": "222fb4c4a4d9c7b9aaf9a0a27c3bc454393861a63c494eb63f6a0d843d92a296"
+  },
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "app.py",
+        "--double",
+        "3"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "app.py",
+        "--double",
+        "-4"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "evidence_paths": [
+    "evidence/command-1.json",
+    "evidence/command-2.json",
+    "evidence/command-3.json"
+  ],
+  "modified_files": [
+    "evidence/command-1.json",
+    "evidence/command-2.json",
+    "evidence/command-3.json",
+    "RESULT.json"
+  ],
+  "missing_prerequisites": [],
+  "limits": [
+    "Verified the two requested CLI inputs and the one existing unit test on this local snapshot; no claim about all integer inputs or other CLI operations.",
+    "Product code was not modified."
+  ]
+}

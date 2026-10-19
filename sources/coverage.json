@@ -470,7 +470,8 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-automate/SKILL.md",
-        "skills/_coco-shared/advanced/automate.md#conditional-human-operated-setup-wizard"
+        "skills/_coco-shared/advanced/automate.md",
+        "skills/_coco-shared/advanced/automate-wizard.md#conditional-human-operated-setup-wizard"
       ]
     },
     {
@@ -492,7 +493,8 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-automate/SKILL.md",
-        "skills/_coco-shared/advanced/automate.md"
+        "skills/_coco-shared/advanced/automate.md",
+        "skills/_coco-shared/advanced/automate-sustained.md"
       ]
     },
     {
@@ -533,7 +535,8 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-automate/SKILL.md",
-        "skills/_coco-shared/advanced/automate.md#conditional-workflow-specification-only"
+        "skills/_coco-shared/advanced/automate.md",
+        "skills/_coco-shared/advanced/automate-specification.md#conditional-workflow-specification-only"
       ]
     },
     {
@@ -709,7 +712,8 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-verify/SKILL.md",
-        "skills/_coco-shared/advanced/verify.md#conditional-pre-commit-verification-setup"
+        "skills/_coco-shared/advanced/verify.md",
+        "skills/_coco-shared/advanced/verify-pre-commit.md#conditional-pre-commit-verification-setup"
       ]
     },
     {
@@ -923,7 +927,8 @@
       "implemented_references": [
         "skills/coco-start/SKILL.md",
         "skills/_coco-shared/advanced/start.md#establish-a-standing-bar",
-        "skills/_coco-shared/advanced/verify.md#conditional-standing-quality-bar-audit"
+        "skills/_coco-shared/advanced/verify.md",
+        "skills/_coco-shared/advanced/verify-quality-audit.md#conditional-standing-quality-bar-audit"
       ]
     },
     {
@@ -1107,7 +1112,8 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-automate/SKILL.md",
-        "skills/_coco-shared/advanced/automate.md"
+        "skills/_coco-shared/advanced/automate.md",
+        "skills/_coco-shared/advanced/automate-ci.md"
       ]
     },
     {
@@ -1184,7 +1190,8 @@
       "implemented_references": [
         "skills/coco-start/SKILL.md",
         "skills/_coco-shared/advanced/start.md#establish-a-standing-bar",
-        "skills/_coco-shared/advanced/verify.md#conditional-standing-quality-bar-audit"
+        "skills/_coco-shared/advanced/verify.md",
+        "skills/_coco-shared/advanced/verify-quality-audit.md#conditional-standing-quality-bar-audit"
       ]
     },
     {
@@ -1691,7 +1698,11 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-debug/SKILL.md",
-        "skills/_coco-shared/advanced/debug.md"
+        "skills/_coco-shared/advanced/debug.md",
+        "skills/_coco-shared/advanced/automate.md",
+        "skills/_coco-shared/advanced/automate-intake-setup.md",
+        "skills/_coco-shared/advanced/automate-intake-triage.md",
+        "skills/_coco-shared/advanced/automate-intake-fix.md"
       ]
     },
     {
@@ -1721,7 +1732,8 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-automate/SKILL.md",
-        "skills/_coco-shared/advanced/automate.md"
+        "skills/_coco-shared/advanced/automate.md",
+        "skills/_coco-shared/advanced/automate-intake-setup.md"
       ]
     },
     {
@@ -1748,7 +1760,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-triage/SKILL.md",
-        "skills/_coco-shared/advanced/triage.md"
+        "skills/_coco-shared/advanced/triage.md",
+        "skills/_coco-shared/advanced/automate.md",
+        "skills/_coco-shared/advanced/automate-intake-setup.md",
+        "skills/_coco-shared/advanced/automate-intake-triage.md"
       ]
     },
     {
@@ -1927,7 +1942,8 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-verify/SKILL.md",
-        "skills/_coco-shared/advanced/verify.md"
+        "skills/_coco-shared/advanced/verify.md",
+        "skills/_coco-shared/advanced/verify-formal-create.md"
       ]
     },
     {
@@ -1949,7 +1965,8 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-verify/SKILL.md",
-        "skills/_coco-shared/advanced/verify.md"
+        "skills/_coco-shared/advanced/verify.md",
+        "skills/_coco-shared/advanced/verify-runtime-create.md"
       ]
     },
     {
@@ -2078,7 +2095,9 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-verify/SKILL.md",
-        "skills/_coco-shared/advanced/verify.md"
+        "skills/_coco-shared/advanced/verify.md",
+        "skills/_coco-shared/advanced/verify-formal-maintain.md",
+        "skills/_coco-shared/advanced/verify-formal-create.md"
       ]
     },
     {
@@ -2101,7 +2120,9 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-verify/SKILL.md",
-        "skills/_coco-shared/advanced/verify.md"
+        "skills/_coco-shared/advanced/verify.md",
+        "skills/_coco-shared/advanced/verify-runtime-maintain.md",
+        "skills/_coco-shared/advanced/verify-runtime-create.md"
       ]
     },
     {
@@ -2119,7 +2140,8 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-automate/SKILL.md",
-        "skills/_coco-shared/advanced/automate.md"
+        "skills/_coco-shared/advanced/automate.md",
+        "skills/_coco-shared/advanced/automate-webhook.md"
       ]
     },
     {

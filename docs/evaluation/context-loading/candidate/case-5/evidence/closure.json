@@ -1,0 +1,20 @@
+{
+  "wallet_sha256": "c2a7fe2a389d179f1060189feffe4ce1675ad51bb4c3ad601daaf5e2968ffdc2",
+  "wallet_unchanged": true,
+  "property_preserved": "nonnegative after one spend",
+  "bounds_preserved": {
+    "initial_balance": [
+      0,
+      2
+    ],
+    "amount": [
+      0,
+      3
+    ],
+    "calls": 1
+  },
+  "checked_pairs": 12,
+  "code_model_mismatches": 0,
+  "real_counterexamples": 6,
+  "retained_evidence_exists": true
+}
