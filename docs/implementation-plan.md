@@ -7,14 +7,14 @@
 
 ## Tasks
 
-- [ ] 1. Pin all upstream sources, retain inert originals and licenses, inventory every skill/command, and record rule conflicts. Source audits must cover all inventory rows.
-- [ ] 2. Establish common input/output, routing, evidence, review-scope, commit/resume, and authorization contracts. Record baseline behavior before authoring integrated skills.
-- [ ] 3. Create each LET'S entrypoint and its needed conditional reference; validate each before moving on. Fold duplicate procedures into one owner; preserve specialized capabilities through explicit modes.
-- [ ] 4. Test then implement read-only Git review-scope collection: committed, staged, unstaged, deleted and untracked; literal task paths; unavailable refs; no mutation.
-- [ ] 5. Test then implement package validation and installation: source checksums and coverage, references after copying, foreign file conflicts, idempotence, symlinks, and dry-run.
-- [ ] 6. Evaluate representative integrated workflows in fresh contexts: lightweight, clarified feature, failure, dirty work, interrupted commit, unavailable browser, migration, formal verification, specialized reference retrieval. Record limitations honestly.
-- [ ] 7. Produce Korean usage/selection documentation; install the suite into the user's Codex skill directory, preserving pre-existing skills and verifying installed bytes.
-- [ ] 8. Run full validation and tests; obtain fresh whole-branch review, fix material findings, commit by work unit, and audit every requirement against current files and installed state.
+- [x] 1. Pin all upstream sources, retain inert originals and licenses, inventory every skill/command, and record rule conflicts. Source audits must cover all inventory rows.
+- [x] 2. Establish common input/output, routing, evidence, review-scope, commit/resume, and authorization contracts. Record baseline behavior before authoring integrated skills.
+- [x] 3. Create each LET'S entrypoint and its needed conditional reference; validate each before moving on. Fold duplicate procedures into one owner; preserve specialized capabilities through explicit modes.
+- [x] 4. Test then implement read-only Git review-scope collection: committed, staged, unstaged, deleted and untracked; literal task paths; unavailable refs; no mutation.
+- [x] 5. Test then implement package validation and installation: source checksums and coverage, references after copying, foreign file conflicts, idempotence, symlinks, and dry-run.
+- [x] 6. Evaluate representative integrated workflows in fresh contexts: lightweight, clarified feature, failure, dirty work, interrupted commit, unavailable browser, migration, formal verification, specialized reference retrieval. Record limitations honestly. See [evaluation](evaluation/README.md); moved-target limits are retained, with a frozen recovery rerun.
+- [x] 7. Produce Korean usage/selection documentation; install the suite into the user's Codex skill directory, preserving pre-existing skills and verifying installed bytes. [Installation readback](evaluation/installation.json): 22 skills/72 files, unchanged second install, 50 unrelated entries preserved.
+- [x] 8. Run full validation and tests; obtain fresh whole-branch review, fix material findings, commit by work unit, and audit every requirement against current files and installed state. [Review resolutions](evaluation/review-resolution.md), [completion audit](evaluation/completion-audit.md); 23 tests and 22 format checks passed.
 
 ## Interfaces
 
