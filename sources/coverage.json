@@ -470,7 +470,7 @@
       "author": "matt",
       "implemented_references": [
         "skills/lets-automate/SKILL.md",
-        "skills/_lets-shared/advanced/automate.md"
+        "skills/_lets-shared/advanced/automate.md#conditional-human-operated-setup-wizard"
       ]
     },
     {
@@ -533,7 +533,7 @@
       "author": "matt",
       "implemented_references": [
         "skills/lets-automate/SKILL.md",
-        "skills/_lets-shared/advanced/automate.md"
+        "skills/_lets-shared/advanced/automate.md#conditional-workflow-specification-only"
       ]
     },
     {
@@ -644,7 +644,7 @@
       "author": "matt",
       "implemented_references": [
         "skills/lets-security/SKILL.md",
-        "skills/_lets-shared/advanced/security.md"
+        "skills/_lets-shared/advanced/security.md#conditional-git-command-guard-setup"
       ]
     },
     {
@@ -664,7 +664,7 @@
       "author": "matt",
       "implemented_references": [
         "skills/lets-migrate/SKILL.md",
-        "skills/_lets-shared/advanced/migrate.md"
+        "skills/_lets-shared/advanced/migrate.md#conditional-typescript-fixture-migration"
       ]
     },
     {
@@ -709,7 +709,7 @@
       "author": "matt",
       "implemented_references": [
         "skills/lets-verify/SKILL.md",
-        "skills/_lets-shared/advanced/verify.md"
+        "skills/_lets-shared/advanced/verify.md#conditional-pre-commit-verification-setup"
       ]
     },
     {
@@ -922,8 +922,8 @@
       "author": "addy",
       "implemented_references": [
         "skills/lets-start/SKILL.md",
-        "skills/_lets-shared/advanced/start.md",
-        "skills/_lets-shared/advanced/verify.md"
+        "skills/_lets-shared/advanced/start.md#establish-a-standing-bar",
+        "skills/_lets-shared/advanced/verify.md#conditional-standing-quality-bar-audit"
       ]
     },
     {
@@ -1183,8 +1183,8 @@
       "author": "addy",
       "implemented_references": [
         "skills/lets-start/SKILL.md",
-        "skills/_lets-shared/advanced/start.md",
-        "skills/_lets-shared/advanced/verify.md"
+        "skills/_lets-shared/advanced/start.md#establish-a-standing-bar",
+        "skills/_lets-shared/advanced/verify.md#conditional-standing-quality-bar-audit"
       ]
     },
     {
@@ -2283,7 +2283,7 @@
       "author": "pstack",
       "implemented_references": [
         "skills/lets-start/SKILL.md",
-        "skills/_lets-shared/advanced/start.md"
+        "skills/_lets-shared/advanced/start.md#former-pstack-playbook-coverage"
       ]
     },
     {
