@@ -1,4 +1,4 @@
-"""Install COCO without overwriting foreign or locally modified skill files."""
+"""Install COCO for Codex or Claude Code while preserving user-owned files."""
 import argparse
 import json
 import os
@@ -7,6 +7,13 @@ import shutil
 import tempfile
 from package_utils import (PackageError, install_manifest, payload, sha,
                            validate_package, validate_installed)
+
+
+def default_destination(runtime):
+    if runtime == 'claude':
+        config_dir = os.environ.get('CLAUDE_CONFIG_DIR')
+        return (Path(config_dir).expanduser() if config_dir else Path.home() / '.claude') / 'skills'
+    return Path.home() / '.codex/skills'
 
 
 def preflight(dest, desired):
@@ -94,11 +101,17 @@ def install(root, dest, dry_run=False):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
-    parser.add_argument('--dest', type=Path, default=Path.home() / '.codex/skills')
+    parser.add_argument('--runtime', choices=('codex', 'claude'), default='codex',
+                        help='Runtime for the default destination (default: codex)')
+    parser.add_argument('--dest', type=Path,
+                        help='Override destination, e.g. /project/.claude/skills; '
+                             'otherwise ~/.codex/skills or $CLAUDE_CONFIG_DIR/skills '
+                             '(~/.claude/skills when unset)')
     parser.add_argument('--dry-run', action='store_true')
     args = parser.parse_args()
     try:
-        print(json.dumps(install(args.root, args.dest, args.dry_run), ensure_ascii=False, indent=2))
+        dest = args.dest.expanduser() if args.dest is not None else default_destination(args.runtime)
+        print(json.dumps(install(args.root, dest, args.dry_run), ensure_ascii=False, indent=2))
     except (PackageError, KeyError, TypeError, OSError, ValueError) as exc:
         parser.exit(2, str(exc) + '\n')
 

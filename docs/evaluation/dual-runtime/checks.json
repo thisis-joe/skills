@@ -1,0 +1,43 @@
+{
+  "implementation_commit": "9290beba31c951d1972425a22bf5d544cc81c475",
+  "base_commit": "1b796d42f20373914dc64883ab6996b844c68a5e",
+  "files": {
+    "CLAUDE.md": "b3253e79296ca92dea9635100dc0dd237fbe18d6d31799a3ccb9e7be94e661a4",
+    "README.md": "ae3d638dfa8a02652893b3d69f24a212fc1d9e57efe63e472f3936ff2c9ea624",
+    "scripts/install.py": "9051dc50210f4d237760907cf7933eab74f4ab199098e9e251d56370645fcafd",
+    "skills/_coco-shared/contracts.md": "5cf124c5aa14e1146fb5041b24842900bf1cc3da80e83aa46953b70b3b765150",
+    "skills/_coco-shared/decisions.md": "3000d009221af990243510dad344797a338e743f326a40d2c157363a4c80c082",
+    "skills/_coco-shared/runtimes.md": "fde6a425a081500de11ba74024dcb4150fb9c30ce024b90b9413a839a2b40606",
+    "skills/coco-push/SKILL.md": "b956ac24d7126d4afdc2c6fad9a5e005e37adfe4df1f4a3ac757c10b6ae86064",
+    "skills/coco-tellmeskill/SKILL.md": "27eede3d596ca8cdb50b0fa338a7172ea0ccb88639c4c2e36766b99d0f1c0321",
+    "skills/coco-tellmeskill/references/explanation-format.md": "e97da7c4dca9b2c7ea37e60a3510ff5be28025a894bc39bb4a24d3872b3d93ee",
+    "skills/coco-updateskill/SKILL.md": "847ca6156e63d12d7a12c2519b8bacc3408da53a59ede377c0c98538c05f5af3",
+    "skills/coco-updateskill/references/team-update.md": "5bff3d57091ee8ee581ab0e11e6751a3912f88924db69841c2dddb8819c8e2b8",
+    "skills/coco-whattosay/SKILL.md": "04ebd39ee57568c3e6a91fdf0c2815acb9b327f75f10ee71a96bee80d7b59c1d",
+    "tests/test_package.py": "1203793f70c626ef82da38b8a8770e3237cd77a1780b2291335aa7fdf56b67a8"
+  },
+  "checks": [
+    {
+      "command": "python3 scripts/validate.py",
+      "exit_code": 0,
+      "result": "26 skills, source checksums, coverage and references validated"
+    },
+    {
+      "command": "python3 -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 48,
+      "result": "OK"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "No whitespace errors in task changes"
+    }
+  ],
+  "red_phase": {
+    "command": "python3 -m unittest discover -s tests -p test_package.py -v",
+    "exit_code": 1,
+    "failures": 5,
+    "reason": "--runtime was unrecognized before implementation"
+  }
+}

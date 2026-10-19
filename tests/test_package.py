@@ -1,13 +1,17 @@
 import hashlib
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'scripts'))
+from install import default_destination
 
 
 class PackageTests(unittest.TestCase):
@@ -33,9 +37,9 @@ class PackageTests(unittest.TestCase):
         p.parent.mkdir(parents=True, exist_ok=True)
         p.write_text(value)
 
-    def run_tool(self, name, *args, expect=0):
+    def run_tool(self, name, *args, expect=0, env=None):
         command = [sys.executable, str(ROOT / 'scripts' / name), '--root', str(self.root), *args]
-        result = subprocess.run(command, capture_output=True, text=True)
+        result = subprocess.run(command, capture_output=True, text=True, env=env)
         self.assertEqual(result.returncode, expect, result.stdout + result.stderr)
         return result
 
@@ -51,6 +55,72 @@ class PackageTests(unittest.TestCase):
 
     def test_dry_run_does_not_create_destination(self):
         self.install('--dry-run')
+        self.assertFalse(self.dest.exists())
+
+    def claude_env(self):
+        return {**os.environ, 'CLAUDE_CONFIG_DIR': str(Path(self.temp.name) / 'claude')}
+
+    def test_runtime_defaults_keep_codex_and_claude_separate(self):
+        task_home = Path(self.temp.name) / 'home'
+        with patch('install.Path.home', return_value=task_home), patch.dict(
+                os.environ, {'CLAUDE_CONFIG_DIR': ''}):
+            self.assertEqual(default_destination('codex'), task_home / '.codex/skills')
+            self.assertEqual(default_destination('claude'), task_home / '.claude/skills')
+        with patch('install.Path.home', return_value=task_home), patch.dict(
+                os.environ, self.claude_env()):
+            self.assertEqual(default_destination('codex'), task_home / '.codex/skills')
+
+    def test_claude_runtime_installs_into_its_configured_skills_directory(self):
+        env = self.claude_env()
+        dest = Path(env['CLAUDE_CONFIG_DIR']) / 'skills'
+        result = self.run_tool('install.py', '--runtime', 'claude', env=env)
+        self.assertEqual(json.loads(result.stdout)['destination'], str(dest))
+        self.assertEqual((dest / 'coco-example/SKILL.md').read_bytes(),
+                         (self.root / 'skills/coco-example/SKILL.md').read_bytes())
+        self.assertTrue((dest / '_coco-shared/contracts.md').is_file())
+        self.run_tool('validate.py', '--installed', str(dest))
+        second = self.run_tool('install.py', '--runtime', 'claude', env=env)
+        self.assertEqual(json.loads(second.stdout)['status'], 'unchanged')
+
+    def test_claude_dry_run_does_not_create_config_directory(self):
+        env = self.claude_env()
+        result = self.run_tool('install.py', '--runtime', 'claude', '--dry-run', env=env)
+        self.assertEqual(json.loads(result.stdout)['status'], 'dry-run')
+        self.assertFalse(Path(env['CLAUDE_CONFIG_DIR']).exists())
+
+    def test_claude_explicit_project_destination_overrides_user_config(self):
+        env = self.claude_env()
+        dest = Path(self.temp.name) / 'project/.claude/skills'
+        self.run_tool('install.py', '--runtime', 'claude', '--dest', str(dest), env=env)
+        self.assertTrue((dest / 'coco-example/SKILL.md').is_file())
+        self.assertFalse(Path(env['CLAUDE_CONFIG_DIR']).exists())
+        self.run_tool('validate.py', '--installed', str(dest))
+
+    def test_codex_and_claude_destinations_can_be_installed_independently(self):
+        self.install('--runtime', 'codex')
+        before = (self.dest / '.coco-install.json').read_bytes()
+        env = self.claude_env()
+        self.run_tool('install.py', '--runtime', 'claude', env=env)
+        self.assertEqual((self.dest / '.coco-install.json').read_bytes(), before)
+        self.run_tool('validate.py', '--installed', str(self.dest))
+
+    def test_claude_runtime_preserves_foreign_and_modified_skills(self):
+        env = self.claude_env()
+        dest = Path(env['CLAUDE_CONFIG_DIR']) / 'skills'
+        other = dest / 'unrelated/SKILL.md'
+        other.parent.mkdir(parents=True)
+        other.write_text('user-owned unrelated skill')
+        self.run_tool('install.py', '--runtime', 'claude', env=env)
+        managed = dest / 'coco-example/SKILL.md'
+        managed.write_text('personal change')
+        self.write('skills/_coco-shared/contracts.md', 'new version\n')
+        self.run_tool('install.py', '--runtime', 'claude', env=env, expect=2)
+        self.assertEqual(managed.read_text(), 'personal change')
+        self.assertEqual(other.read_text(), 'user-owned unrelated skill')
+        self.assertEqual((dest / '_coco-shared/contracts.md').read_text(), '# Common contract\n')
+
+    def test_unknown_runtime_is_rejected_before_writing(self):
+        self.install('--runtime', 'unsupported', expect=2)
         self.assertFalse(self.dest.exists())
 
     def test_installation_is_idempotent(self):

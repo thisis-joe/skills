@@ -16,7 +16,7 @@ Use this format for COCO, system, plugin, and every other target. Simple and det
 
 **Output:** Deliverables or judgments the user receives.
 
-**Example:** One correct invocation with a concrete request.
+**Example:** One correct invocation with a concrete request in the current runtime's syntax (`$name` in Codex, `/name` in Claude Code), preserving the exact catalog identifier and namespace.
 
 **Cautions:** Actual dependencies, support conditions, execution/authority boundaries, and unverified information.
 

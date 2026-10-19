@@ -25,4 +25,4 @@ Report the base remote/branch and fetched commit; actual work summary and reason
 
 `coco-push` owns integration commits, necessary branch/linked-ticket alignment, and pushing that branch. Jira alignment is limited to Summary and Description. New features and unrelated fixes remain separate `coco-build` work; do not mark product work complete or change Jira status, assignee, or other fields. Deleting the original remote branch, creating or merging a PR, and deployment are outside this request.
 
-Examples: `$coco-push` or `$coco-push Update the current branch from origin/develop, resolve conflicts, verify, and push`.
+Examples: `$coco-push` in Codex or `/coco-push` in Claude Code. Append `Update the current branch from origin/develop, resolve conflicts, verify, and push` to provide an explicit request.

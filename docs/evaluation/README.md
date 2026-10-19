@@ -2,6 +2,10 @@
 
 현재 이름은 `coco-`입니다. 아래 보존 평가의 이전 이름·경로·해시는 당시 기록이며 원문 그대로 유지합니다. 접두사 변경 후의 형식·참조·실제 설치 확인은 [이름 변경 기록](coco-rename.json)을 확인합니다.
 
+The [dual-runtime evaluation](dual-runtime/README.md) records additive Codex and
+Claude Code support, actual installation in both personal destinations, preserved
+unrelated files, regression checks, and native-client verification limits.
+
 추가한 `coco-tellmeskill`의 전체 목록·단계별 선택·공통 8항목 설명에 대한 제한된 적용은 [별도 기록](tellmeskill/README.md)에 보존합니다. 현재 패키지는 안내·동기화/푸시·팀 맞춤 유지보수·요청문 추천 스킬을 포함한 26개입니다.
 
 `coco-push`의 [로컬 Git 적용 5사례](push/README.md)에서는 실제 충돌·동시 푸시 거절 후 재통합·기준 선택 대기·사용자 변경 보존·필수 검사 실패 시 미게시를 확인했습니다. 실제 서비스의 보호 정책이나 모든 충돌 해결을 인증한 것은 아닙니다.
