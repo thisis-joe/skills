@@ -63,7 +63,7 @@
 | addy | [skills/documentation-and-adrs](../sources/addy/skills/documentation-and-adrs/SKILL.md.source) | [coco-document](../skills/coco-document/SKILL.md) | merged |
 | addy | [skills/doubt-driven-development](../sources/addy/skills/doubt-driven-development/SKILL.md.source) | [coco-review](../skills/coco-review/SKILL.md) | adapted |
 | addy | [skills/frontend-ui-engineering](../sources/addy/skills/frontend-ui-engineering/SKILL.md.source) | [coco-frontend](../skills/coco-frontend/SKILL.md) | merged |
-| addy | [skills/git-workflow-and-versioning](../sources/addy/skills/git-workflow-and-versioning/SKILL.md.source) | [coco-ship](../skills/coco-ship/SKILL.md) | adapted |
+| addy | [skills/git-workflow-and-versioning](../sources/addy/skills/git-workflow-and-versioning/SKILL.md.source) | [coco-ship](../skills/coco-ship/SKILL.md), [coco-build](../skills/coco-build/SKILL.md) | adapted |
 | addy | [skills/idea-refine](../sources/addy/skills/idea-refine/SKILL.md.source) | [coco-clarify](../skills/coco-clarify/SKILL.md) | reference |
 | addy | [skills/incremental-implementation](../sources/addy/skills/incremental-implementation/SKILL.md.source) | [coco-build](../skills/coco-build/SKILL.md) | merged |
 | addy | [skills/interview-me](../sources/addy/skills/interview-me/SKILL.md.source) | [coco-clarify](../skills/coco-clarify/SKILL.md) | adapted |
