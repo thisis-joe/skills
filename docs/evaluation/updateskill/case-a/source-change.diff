@@ -1,0 +1,107 @@
+diff --git a/README.md b/README.md
+index 80fa490..828b973 100644
+--- a/README.md
++++ b/README.md
+@@ -2,6 +2,6 @@
+ 
+ This is a synthetic, local package for one bounded application.
+ 
+-Legacy team skill check example: `pytest -q`.
++For this maintained package, run `python3 scripts/validate.py` and `python3 -m unittest discover -s tests -v`, as required by AGENTS.md and CI. See the shared contract for conditional check selection and caller-impact review.
+ 
+ Installation uses `python3 scripts/install.py --dest <explicit-local-folder>`. Do not infer a global destination.
+diff --git a/skills/_coco-shared/contracts.md b/skills/_coco-shared/contracts.md
+index 62e0ba2..f3798c0 100644
+--- a/skills/_coco-shared/contracts.md
++++ b/skills/_coco-shared/contracts.md
+@@ -2,7 +2,11 @@
+ 
+ ## Checks
+ 
+-For every project, run `pytest -q` before completion. Record the result.
++Discover the current project's required checks from its repository instructions and CI. For this maintained COCO package, those facts require `python3 scripts/validate.py` and `python3 -m unittest discover -s tests -v`. Run them before completion and record each command, inspected snapshot, exit result and evidence pointer. In another project, use that project's discovered checks; these COCO commands are conditional on this package.
++
++## Shared procedure impact
++
++Before committing a shared procedure change, inspect both registered entrypoints and their linked references. Record which callers change and which behavior is preserved. This team rule is owned here; entrypoints refer to it rather than defining separate copies. An inspected diff and passing focused checks do not imply remote publication or unrelated product work is complete.
+ 
+ ## Ownership
+ 
+diff --git a/skills/_coco-shared/decisions.md b/skills/_coco-shared/decisions.md
+index 94d4b6f..e6762db 100644
+--- a/skills/_coco-shared/decisions.md
++++ b/skills/_coco-shared/decisions.md
+@@ -1,3 +1,4 @@
+ # Fixture rule decisions
+ 
+-- D001: Adopt synthetic upstream unconditional `pytest -q` check in [common checks](contracts.md#checks). Original essential rule is retained in source coverage.
++- D001, revised for the current maintained package: Replace the synthetic upstream unconditional `pytest -q` requirement with [repository-specific check discovery](contracts.md#checks). AGENTS.md and .github/workflows/checks.yml both require the current validator and unittest commands. The former unconditional command is no longer adopted; original source bytes, checksum and essential_rules remain historical facts in coverage. This applies to shared check selection used by build and review, with the COCO command examples conditional on this maintained package.
++- D002, new team convention: [Shared procedure impact](contracts.md#shared-procedure-impact) requires inspecting both registered callers and linked references before a shared-rule commit. This has no claimed upstream source. Build/review identity, invocation policy, dependencies, permission scope and user files remain unchanged.
+diff --git a/skills/coco-build/SKILL.md b/skills/coco-build/SKILL.md
+index b1bb76e..f786746 100644
+--- a/skills/coco-build/SKILL.md
++++ b/skills/coco-build/SKILL.md
+@@ -6,6 +6,6 @@ license: MIT
+ 
+ # coco-build
+ 
+-Follow the [common contract](../_coco-shared/contracts.md) for check selection and file ownership. Keep the requested task scope and report evidence for the inspected version.
++Follow the [common contract](../_coco-shared/contracts.md) for check selection, shared procedure impact and file ownership. Keep the requested task scope and report evidence for the inspected version.
+ 
+ Read [team checks](references/team-checks.md) before completing the requested implementing agreed changes.
+diff --git a/skills/coco-build/references/team-checks.md b/skills/coco-build/references/team-checks.md
+index a1fdf71..5b17c85 100644
+--- a/skills/coco-build/references/team-checks.md
++++ b/skills/coco-build/references/team-checks.md
+@@ -1,3 +1,3 @@
+ # Team checks
+ 
+-Use the [common checks](../../_coco-shared/contracts.md#checks). The legacy package example is `pytest -q`. Preserve the caller's scope and permissions.
++Use the [common checks](../../_coco-shared/contracts.md#checks) and [shared procedure impact](../../_coco-shared/contracts.md#shared-procedure-impact). Current commands are discovered from the project, and the common contract owns the maintained package example. Preserve the caller's scope and permissions.
+diff --git a/skills/coco-review/SKILL.md b/skills/coco-review/SKILL.md
+index 61e31da..384ad2f 100644
+--- a/skills/coco-review/SKILL.md
++++ b/skills/coco-review/SKILL.md
+@@ -6,6 +6,6 @@ license: MIT
+ 
+ # coco-review
+ 
+-Follow the [common contract](../_coco-shared/contracts.md) for check selection and file ownership. Keep the requested task scope and report evidence for the inspected version.
++Follow the [common contract](../_coco-shared/contracts.md) for check selection, shared procedure impact and file ownership. Keep the requested task scope and report evidence for the inspected version.
+ 
+ Read [team checks](references/team-checks.md) before completing the requested reviewing changes.
+diff --git a/skills/coco-review/references/team-checks.md b/skills/coco-review/references/team-checks.md
+index a1fdf71..5b17c85 100644
+--- a/skills/coco-review/references/team-checks.md
++++ b/skills/coco-review/references/team-checks.md
+@@ -1,3 +1,3 @@
+ # Team checks
+ 
+-Use the [common checks](../../_coco-shared/contracts.md#checks). The legacy package example is `pytest -q`. Preserve the caller's scope and permissions.
++Use the [common checks](../../_coco-shared/contracts.md#checks) and [shared procedure impact](../../_coco-shared/contracts.md#shared-procedure-impact). Current commands are discovered from the project, and the common contract owns the maintained package example. Preserve the caller's scope and permissions.
+diff --git a/sources/coverage.json b/sources/coverage.json
+index d6b4037..080e329 100644
+--- a/sources/coverage.json
++++ b/sources/coverage.json
+@@ -5,14 +5,18 @@
+       "author": "synthetic-fixture",
+       "path": "build/SKILL.md",
+       "family": "build",
+-      "disposition": "merged",
++      "disposition": "adapted",
+       "essential_rules": [
+         "Run pytest -q for every project before completion."
+       ],
+-      "adaptation": "Adopted unconditional pytest check for the team in decision D001.",
++      "adaptation": "D001 revised: unconditional upstream pytest command replaced by repository-specific check discovery because current AGENTS.md/CI require validate.py and unittest. Original essential_rules remain source facts. Shared caller-impact review is a new team rule D002, with no upstream attribution.",
+       "implemented_references": [
+         "skills/_coco-shared/contracts.md#checks",
+-        "skills/coco-build/SKILL.md"
++        "skills/_coco-shared/decisions.md",
++        "skills/coco-build/SKILL.md",
++        "skills/coco-review/SKILL.md",
++        "skills/coco-build/references/team-checks.md",
++        "skills/coco-review/references/team-checks.md"
+       ]
+     }
+   ]

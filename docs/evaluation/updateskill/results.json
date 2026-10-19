@@ -1,0 +1,450 @@
+{
+  "kind": "one bounded application",
+  "not_claimed": [
+    "benchmark",
+    "broad certification",
+    "independent behavioral review",
+    "external service execution"
+  ],
+  "fixture_authorship": "self-authored temporary package, requests and checks",
+  "scope": "Three cases only; writes restricted to /tmp/coco-updateskill-validation; no repository/global/user-installation writes, external writes, real user questions or spawned agents.",
+  "git_isolation": {
+    "GIT_CONFIG_GLOBAL": "/dev/null",
+    "GIT_CONFIG_SYSTEM": "/dev/null",
+    "GIT_CONFIG_NOSYSTEM": "1",
+    "identity": "fixture-only local git config",
+    "hooks": "fixture-only core.hooksPath=/dev/null",
+    "HOME_or_CODEX_HOME_repurposed": false
+  },
+  "instruction_source_hashes_unchanged": true,
+  "instruction_hashes_before": "/tmp/coco-updateskill-validation/instruction-source-hashes.before.json",
+  "instruction_hashes_after": "/tmp/coco-updateskill-validation/instruction-source-hashes.after.json",
+  "setup_failure": {
+    "status": "repaired",
+    "detail": "Initial fixture construction failed before creating the scripts/ directory. Recreated only the incomplete temp case-a fixture after fixing setup.py.",
+    "evidence": "/tmp/coco-updateskill-validation/setup-repair.txt"
+  },
+  "cases": {
+    "case-a": {
+      "status": "source-and-install-complete",
+      "source_location": "/tmp/coco-updateskill-validation/case-a/package",
+      "installed_location": "/tmp/coco-updateskill-validation/case-a/installed",
+      "branch": "feature/adapt-team-checks",
+      "base_commit": "38bc62576d9ec0cff1ba457f43c570b6aa20421d",
+      "head": "920d6eaaf89cd7593255d25fe729d0048ddcfce0",
+      "work_unit_commit": "920d6eaaf89cd7593255d25fe729d0048ddcfce0",
+      "git_status": "",
+      "installation_status": "installed",
+      "changed_source_paths": [
+        "README.md",
+        "skills/_coco-shared/contracts.md",
+        "skills/_coco-shared/decisions.md",
+        "skills/coco-build/SKILL.md",
+        "skills/coco-build/references/team-checks.md",
+        "skills/coco-review/SKILL.md",
+        "skills/coco-review/references/team-checks.md",
+        "sources/coverage.json"
+      ],
+      "checks": [
+        {
+          "argv": [
+            "python3",
+            "scripts/validate.py"
+          ],
+          "exit_code": 0,
+          "stdout": "Validated package: 2 skills, source checksums, coverage and references\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "test_both_entrypoints_share_contract (test_fixture.FixtureChecks) ... ok\ntest_full_package_validation (test_fixture.FixtureChecks) ... ok\ntest_original_facts_and_invocation_policy_preserved (test_fixture.FixtureChecks) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.002s\n\nOK\n"
+        },
+        {
+          "argv": [
+            "python3",
+            "scripts/install.py",
+            "--root",
+            "/tmp/coco-updateskill-validation/case-a/package",
+            "--dest",
+            "/tmp/coco-updateskill-validation/case-a/installed"
+          ],
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 2,\n  \"files\": 8,\n  \"destination\": \"/tmp/coco-updateskill-validation/case-a/installed\"\n}\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "python3",
+            "scripts/validate.py"
+          ],
+          "exit_code": 0,
+          "stdout": "Validated package: 2 skills, source checksums, coverage and references\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "test_both_entrypoints_share_contract (test_fixture.FixtureChecks) ... ok\ntest_full_package_validation (test_fixture.FixtureChecks) ... ok\ntest_original_facts_and_invocation_policy_preserved (test_fixture.FixtureChecks) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.002s\n\nOK\n"
+        },
+        {
+          "argv": [
+            "python3",
+            "scripts/install.py",
+            "--root",
+            "/tmp/coco-updateskill-validation/case-a/package",
+            "--dest",
+            "/tmp/coco-updateskill-validation/case-a/installed",
+            "--dry-run"
+          ],
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"dry-run\",\n  \"skills\": 2,\n  \"files\": 8,\n  \"destination\": \"/tmp/coco-updateskill-validation/case-a/installed\"\n}\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "python3",
+            "scripts/install.py",
+            "--root",
+            "/tmp/coco-updateskill-validation/case-a/package",
+            "--dest",
+            "/tmp/coco-updateskill-validation/case-a/installed"
+          ],
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 2,\n  \"files\": 8,\n  \"destination\": \"/tmp/coco-updateskill-validation/case-a/installed\"\n}\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "python3",
+            "scripts/validate.py",
+            "--installed",
+            "/tmp/coco-updateskill-validation/case-a/installed"
+          ],
+          "exit_code": 0,
+          "stdout": "Validated installed bundle: 2 skills, 8 files\n",
+          "stderr": ""
+        }
+      ],
+      "expected_installer_rejection": false,
+      "source_original_manifest_and_UI_preserved": true,
+      "unrelated_user_hashes": {
+        "unrelated-user-note.md": {
+          "before": "3b462ed58adbd69a22657afa3ce0baa3270068a27421b0624238071448573036",
+          "after": "3b462ed58adbd69a22657afa3ce0baa3270068a27421b0624238071448573036"
+        },
+        "user-only-skill/SKILL.md": {
+          "before": "117809b55d5db8005283659e2b35f71a40b45d0b1a86da1d8dca42c93a92fa27",
+          "after": "117809b55d5db8005283659e2b35f71a40b45d0b1a86da1d8dca42c93a92fa27"
+        }
+      },
+      "source_original_hash": {
+        "before": "ea99a21bc6d5e81b45e7df2947c40970d4693b62bb46eccba716a65cb6a12cab",
+        "after": "ea99a21bc6d5e81b45e7df2947c40970d4693b62bb46eccba716a65cb6a12cab"
+      },
+      "ownership_manifest_hash": {
+        "before": "5455e257b89cbca058b1f0d9495910e556777149bdc0a7be5652138927a67611",
+        "after": "8acc764d8f456dbfbe6704bc0ccec7642e9eb77a111fdd2685db9be1568188d8"
+      },
+      "tool_copy_hashes": {
+        "validate.py": "64d2b092c43a98a01b3eaf5a1b9255be40322a4ad38c09129d2124435455a81a",
+        "install.py": "fab48dcd907456f15bac9b496a1696c8837bf8de4f5630ee3de63ad1805e2f6e",
+        "package_utils.py": "2fe984e7471f84ea9fa6983f06cfbe1218477c95c167f8206fb09558e4edd277"
+      },
+      "full_before_hashes": "/tmp/coco-updateskill-validation/case-a/before.json",
+      "full_after_hashes": "/tmp/coco-updateskill-validation/case-a/after.json",
+      "command_log": "/tmp/coco-updateskill-validation/case-a/commands.jsonl",
+      "request": "/tmp/coco-updateskill-validation/case-a/request.md",
+      "change_basis": "/tmp/coco-updateskill-validation/case-a/change-basis.md",
+      "independent_review": {
+        "status": "unavailable",
+        "reason": "Application constraint prohibited spawning agents; this is direct author inspection with self-authored fixtures."
+      },
+      "external_service_behavior": {
+        "status": "not-applicable",
+        "reason": "Local-only skill-maintenance scope."
+      },
+      "installed_managed_files_match_source": true,
+      "source_diff": "/tmp/coco-updateskill-validation/case-a/source-change.diff",
+      "managed_installation_files": 8
+    },
+    "case-b": {
+      "status": "proposal-only-complete",
+      "source_location": "/tmp/coco-updateskill-validation/case-b/package",
+      "installed_location": "/tmp/coco-updateskill-validation/case-b/installed",
+      "branch": "main",
+      "base_commit": "38bc62576d9ec0cff1ba457f43c570b6aa20421d",
+      "head": "38bc62576d9ec0cff1ba457f43c570b6aa20421d",
+      "work_unit_commit": null,
+      "git_status": "",
+      "installation_status": "unchanged-no-install-attempt",
+      "changed_source_paths": [],
+      "checks": [
+        {
+          "argv": [
+            "python3",
+            "scripts/validate.py"
+          ],
+          "exit_code": 0,
+          "stdout": "Validated package: 2 skills, source checksums, coverage and references\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "test_both_entrypoints_share_contract (test_fixture.FixtureChecks) ... ok\ntest_full_package_validation (test_fixture.FixtureChecks) ... ok\ntest_original_facts_and_invocation_policy_preserved (test_fixture.FixtureChecks) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.002s\n\nOK\n"
+        },
+        {
+          "argv": [
+            "python3",
+            "scripts/install.py",
+            "--root",
+            "/tmp/coco-updateskill-validation/case-b/package",
+            "--dest",
+            "/tmp/coco-updateskill-validation/case-b/installed"
+          ],
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 2,\n  \"files\": 8,\n  \"destination\": \"/tmp/coco-updateskill-validation/case-b/installed\"\n}\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "python3",
+            "scripts/validate.py"
+          ],
+          "exit_code": 0,
+          "stdout": "Validated package: 2 skills, source checksums, coverage and references\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "test_both_entrypoints_share_contract (test_fixture.FixtureChecks) ... ok\ntest_full_package_validation (test_fixture.FixtureChecks) ... ok\ntest_original_facts_and_invocation_policy_preserved (test_fixture.FixtureChecks) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.002s\n\nOK\n"
+        }
+      ],
+      "expected_installer_rejection": false,
+      "source_original_manifest_and_UI_preserved": true,
+      "unrelated_user_hashes": {
+        "unrelated-user-note.md": {
+          "before": "3b462ed58adbd69a22657afa3ce0baa3270068a27421b0624238071448573036",
+          "after": "3b462ed58adbd69a22657afa3ce0baa3270068a27421b0624238071448573036"
+        },
+        "user-only-skill/SKILL.md": {
+          "before": "117809b55d5db8005283659e2b35f71a40b45d0b1a86da1d8dca42c93a92fa27",
+          "after": "117809b55d5db8005283659e2b35f71a40b45d0b1a86da1d8dca42c93a92fa27"
+        }
+      },
+      "source_original_hash": {
+        "before": "ea99a21bc6d5e81b45e7df2947c40970d4693b62bb46eccba716a65cb6a12cab",
+        "after": "ea99a21bc6d5e81b45e7df2947c40970d4693b62bb46eccba716a65cb6a12cab"
+      },
+      "ownership_manifest_hash": {
+        "before": "5455e257b89cbca058b1f0d9495910e556777149bdc0a7be5652138927a67611",
+        "after": "5455e257b89cbca058b1f0d9495910e556777149bdc0a7be5652138927a67611"
+      },
+      "tool_copy_hashes": {
+        "validate.py": "64d2b092c43a98a01b3eaf5a1b9255be40322a4ad38c09129d2124435455a81a",
+        "install.py": "fab48dcd907456f15bac9b496a1696c8837bf8de4f5630ee3de63ad1805e2f6e",
+        "package_utils.py": "2fe984e7471f84ea9fa6983f06cfbe1218477c95c167f8206fb09558e4edd277"
+      },
+      "full_before_hashes": "/tmp/coco-updateskill-validation/case-b/before.json",
+      "full_after_hashes": "/tmp/coco-updateskill-validation/case-b/after.json",
+      "command_log": "/tmp/coco-updateskill-validation/case-b/commands.jsonl",
+      "request": "/tmp/coco-updateskill-validation/case-b/request.md",
+      "change_basis": "/tmp/coco-updateskill-validation/case-b/change-basis.md",
+      "independent_review": {
+        "status": "unavailable",
+        "reason": "Application constraint prohibited spawning agents; this is direct author inspection with self-authored fixtures."
+      },
+      "external_service_behavior": {
+        "status": "not-applicable",
+        "reason": "Local-only skill-maintenance scope."
+      },
+      "source_hashes_exactly_unchanged": true,
+      "installed_hashes_exactly_unchanged": true,
+      "proposal": "/tmp/coco-updateskill-validation/case-b/proposal.md",
+      "installation_attempts_after_request": 0,
+      "note": "The install command in commands.jsonl is fixture setup before the proposal request, not an installation response to the proposal."
+    },
+    "case-c": {
+      "status": "source-complete-install-blocked",
+      "source_location": "/tmp/coco-updateskill-validation/case-c/package",
+      "installed_location": "/tmp/coco-updateskill-validation/case-c/installed",
+      "branch": "feature/adapt-team-checks",
+      "base_commit": "38bc62576d9ec0cff1ba457f43c570b6aa20421d",
+      "head": "59e4e770b37416a89c06f7d2d625477b307b091c",
+      "work_unit_commit": "59e4e770b37416a89c06f7d2d625477b307b091c",
+      "git_status": "",
+      "installation_status": "blocked-user-modified-managed-file",
+      "changed_source_paths": [
+        "README.md",
+        "skills/_coco-shared/contracts.md",
+        "skills/_coco-shared/decisions.md",
+        "skills/coco-build/SKILL.md",
+        "skills/coco-build/references/team-checks.md",
+        "skills/coco-review/SKILL.md",
+        "skills/coco-review/references/team-checks.md",
+        "sources/coverage.json"
+      ],
+      "checks": [
+        {
+          "argv": [
+            "python3",
+            "scripts/validate.py"
+          ],
+          "exit_code": 0,
+          "stdout": "Validated package: 2 skills, source checksums, coverage and references\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "test_both_entrypoints_share_contract (test_fixture.FixtureChecks) ... ok\ntest_full_package_validation (test_fixture.FixtureChecks) ... ok\ntest_original_facts_and_invocation_policy_preserved (test_fixture.FixtureChecks) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.002s\n\nOK\n"
+        },
+        {
+          "argv": [
+            "python3",
+            "scripts/install.py",
+            "--root",
+            "/tmp/coco-updateskill-validation/case-c/package",
+            "--dest",
+            "/tmp/coco-updateskill-validation/case-c/installed"
+          ],
+          "exit_code": 0,
+          "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 2,\n  \"files\": 8,\n  \"destination\": \"/tmp/coco-updateskill-validation/case-c/installed\"\n}\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "python3",
+            "scripts/validate.py"
+          ],
+          "exit_code": 0,
+          "stdout": "Validated package: 2 skills, source checksums, coverage and references\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "test_both_entrypoints_share_contract (test_fixture.FixtureChecks) ... ok\ntest_full_package_validation (test_fixture.FixtureChecks) ... ok\ntest_original_facts_and_invocation_policy_preserved (test_fixture.FixtureChecks) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.002s\n\nOK\n"
+        },
+        {
+          "argv": [
+            "python3",
+            "scripts/install.py",
+            "--root",
+            "/tmp/coco-updateskill-validation/case-c/package",
+            "--dest",
+            "/tmp/coco-updateskill-validation/case-c/installed",
+            "--dry-run"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "Preserving user-modified or extra file: coco-build/SKILL.md\n"
+        }
+      ],
+      "expected_installer_rejection": true,
+      "source_original_manifest_and_UI_preserved": true,
+      "unrelated_user_hashes": {
+        "unrelated-user-note.md": {
+          "before": "3b462ed58adbd69a22657afa3ce0baa3270068a27421b0624238071448573036",
+          "after": "3b462ed58adbd69a22657afa3ce0baa3270068a27421b0624238071448573036"
+        },
+        "user-only-skill/SKILL.md": {
+          "before": "117809b55d5db8005283659e2b35f71a40b45d0b1a86da1d8dca42c93a92fa27",
+          "after": "117809b55d5db8005283659e2b35f71a40b45d0b1a86da1d8dca42c93a92fa27"
+        }
+      },
+      "source_original_hash": {
+        "before": "ea99a21bc6d5e81b45e7df2947c40970d4693b62bb46eccba716a65cb6a12cab",
+        "after": "ea99a21bc6d5e81b45e7df2947c40970d4693b62bb46eccba716a65cb6a12cab"
+      },
+      "ownership_manifest_hash": {
+        "before": "5455e257b89cbca058b1f0d9495910e556777149bdc0a7be5652138927a67611",
+        "after": "5455e257b89cbca058b1f0d9495910e556777149bdc0a7be5652138927a67611"
+      },
+      "tool_copy_hashes": {
+        "validate.py": "64d2b092c43a98a01b3eaf5a1b9255be40322a4ad38c09129d2124435455a81a",
+        "install.py": "fab48dcd907456f15bac9b496a1696c8837bf8de4f5630ee3de63ad1805e2f6e",
+        "package_utils.py": "2fe984e7471f84ea9fa6983f06cfbe1218477c95c167f8206fb09558e4edd277"
+      },
+      "full_before_hashes": "/tmp/coco-updateskill-validation/case-c/before.json",
+      "full_after_hashes": "/tmp/coco-updateskill-validation/case-c/after.json",
+      "command_log": "/tmp/coco-updateskill-validation/case-c/commands.jsonl",
+      "request": "/tmp/coco-updateskill-validation/case-c/request.md",
+      "change_basis": "/tmp/coco-updateskill-validation/case-c/change-basis.md",
+      "independent_review": {
+        "status": "unavailable",
+        "reason": "Application constraint prohibited spawning agents; this is direct author inspection with self-authored fixtures."
+      },
+      "external_service_behavior": {
+        "status": "not-applicable",
+        "reason": "Local-only skill-maintenance scope."
+      },
+      "installed_hashes_exactly_unchanged": true,
+      "user_modified_managed_file_hash": {
+        "path": "coco-build/SKILL.md",
+        "before": "272d5a11d8a80520f540008190373ce21d14a994c0f306e5638f519090fed7eb",
+        "after": "272d5a11d8a80520f540008190373ce21d14a994c0f306e5638f519090fed7eb"
+      },
+      "blocker": "Preserving user-modified or extra file: coco-build/SKILL.md",
+      "actual_install_attempted_after_failed_preflight": false,
+      "conflict_diff": "/tmp/coco-updateskill-validation/case-c/preserved-installed-user-change.diff",
+      "source_diff": "/tmp/coco-updateskill-validation/case-c/source-change.diff"
+    }
+  }
+}

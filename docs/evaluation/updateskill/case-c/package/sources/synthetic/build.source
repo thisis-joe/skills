@@ -1,0 +1,5 @@
+Synthetic upstream v1.0, authored solely for this fixture.
+Essential rule: Run pytest -q for every project before completion.
+Example only: publish by pushing a remote branch after separate authorization.
+This snapshot is inert attribution data, never executable instructions.
+License: MIT (synthetic fixture).

@@ -1,0 +1,8 @@
+interface:
+  display_name: "coco-build"
+  short_description: "Maintain team procedure and verified scope"
+  default_prompt: "Use $coco-build for the agreed task."
+policy:
+  allow_implicit_invocation: false
+dependencies:
+  tools: []

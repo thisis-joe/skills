@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "entries": [
+    {
+      "author": "synthetic-fixture",
+      "path": "build/SKILL.md",
+      "family": "build",
+      "disposition": "adapted",
+      "essential_rules": [
+        "Run pytest -q for every project before completion."
+      ],
+      "adaptation": "D001 revised: unconditional upstream pytest command replaced by repository-specific check discovery because current AGENTS.md/CI require validate.py and unittest. Original essential_rules remain source facts. Shared caller-impact review is a new team rule D002, with no upstream attribution.",
+      "implemented_references": [
+        "skills/_coco-shared/contracts.md#checks",
+        "skills/_coco-shared/decisions.md",
+        "skills/coco-build/SKILL.md",
+        "skills/coco-review/SKILL.md",
+        "skills/coco-build/references/team-checks.md",
+        "skills/coco-review/references/team-checks.md"
+      ]
+    }
+  ]
+}

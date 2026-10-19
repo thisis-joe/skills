@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "author": "synthetic-fixture",
+      "path": "build/SKILL.md",
+      "local": "sources/synthetic/build.source",
+      "sha256": "ea99a21bc6d5e81b45e7df2947c40970d4693b62bb46eccba716a65cb6a12cab",
+      "version": "v1.0",
+      "license": "MIT"
+    }
+  ]
+}

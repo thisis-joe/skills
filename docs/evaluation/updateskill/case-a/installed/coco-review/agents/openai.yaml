@@ -1,0 +1,8 @@
+interface:
+  display_name: "coco-review"
+  short_description: "Maintain team procedure and verified scope"
+  default_prompt: "Use $coco-review for the agreed task."
+policy:
+  allow_implicit_invocation: false
+dependencies:
+  tools: []
