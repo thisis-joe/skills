@@ -17,6 +17,10 @@ def collect(repo, base, paths=()):
             raise ValueError('git command failed: ' + os.fsdecode(result.stderr).strip())
         return result.stdout
 
+    # Git diff uses root-relative names while ls-files uses the supplied cwd.
+    # Anchor both layers and file hashing to the same actual repository root.
+    repo = Path(os.fsdecode(git('rev-parse', '--show-toplevel')).strip()).resolve()
+
     scopes = []
     for path in paths:
         parsed = PurePosixPath(path)

@@ -101,6 +101,26 @@ class ReviewScopeTests(unittest.TestCase):
         self.assertFalse(result['has_changes'])
         self.assertEqual(result['files'], [])
 
+    def test_nested_repository_argument_uses_root_paths_and_real_content(self):
+        self.write('feature/tracked.txt', 'baseline\n')
+        self.git('add', 'feature/tracked.txt')
+        self.git('commit', '-qm', 'nested baseline')
+        self.base = self.git('rev-parse', 'HEAD').strip()
+        self.write('feature/tracked.txt', 'one\n')
+        self.write('feature/new.txt', 'untracked\n')
+
+        def nested_scope():
+            result = subprocess.run([sys.executable, str(SCRIPT), '--repo', str(self.repo / 'feature'),
+                                     '--base', self.base], capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            return json.loads(result.stdout)
+
+        first = nested_scope()
+        self.assertEqual(first['repository'], str(self.repo.resolve()))
+        self.assertEqual({f['path'] for f in first['files']}, {'feature/tracked.txt', 'feature/new.txt'})
+        self.write('feature/tracked.txt', 'two\n')
+        self.assertNotEqual(first['snapshot'], nested_scope()['snapshot'])
+
 
 if __name__ == '__main__':
     unittest.main()
