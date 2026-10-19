@@ -1,0 +1,4 @@
+interface:
+  display_name: "let's-research"
+  short_description: "Purpose-led research with source-backed checks and evidence"
+  default_prompt: "Use $lets-research for the current request and provide its required result."

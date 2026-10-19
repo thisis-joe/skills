@@ -1,0 +1,4 @@
+interface:
+  display_name: "let's-start"
+  short_description: "Purpose-led start with source-backed checks and evidence"
+  default_prompt: "Use $lets-start for the current request and provide its required result."

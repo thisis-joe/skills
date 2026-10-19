@@ -1,0 +1,4 @@
+interface:
+  display_name: "let's-frontend"
+  short_description: "Purpose-led frontend with source-backed checks and evidence"
+  default_prompt: "Use $lets-frontend for the current request and provide its required result."

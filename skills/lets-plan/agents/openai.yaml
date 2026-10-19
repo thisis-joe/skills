@@ -1,0 +1,4 @@
+interface:
+  display_name: "let's-plan"
+  short_description: "Purpose-led plan with source-backed checks and evidence"
+  default_prompt: "Use $lets-plan for the current request and provide its required result."

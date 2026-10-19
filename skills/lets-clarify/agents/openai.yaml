@@ -1,0 +1,4 @@
+interface:
+  display_name: "let's-clarify"
+  short_description: "Purpose-led clarify with source-backed checks and evidence"
+  default_prompt: "Use $lets-clarify for the current request and provide its required result."

@@ -1,6 +1,6 @@
-# MALJ Implementation Plan
+# LET'S Implementation Plan
 
-**Goal:** Deliver and install a coherent, source-traceable merge of all three skill trees under MALJ.
+**Goal:** Deliver and install a coherent, source-traceable merge of all three skill trees under LET'S.
 **Spec:** [design.md](design.md)
 **Execution:** User explicitly requested autonomous completion; execute without another design approval. Use independent agents for source audit and behavioral validation, not permission expansion.
 **Stack:** Markdown, JSON, Python 3 standard library; no runtime dependencies.
@@ -9,7 +9,7 @@
 
 - [ ] 1. Pin all upstream sources, retain inert originals and licenses, inventory every skill/command, and record rule conflicts. Source audits must cover all inventory rows.
 - [ ] 2. Establish common input/output, routing, evidence, review-scope, commit/resume, and authorization contracts. Record baseline behavior before authoring integrated skills.
-- [ ] 3. Create each MALJ entrypoint and its needed conditional reference; validate each before moving on. Fold duplicate procedures into one owner; preserve specialized capabilities through explicit modes.
+- [ ] 3. Create each LET'S entrypoint and its needed conditional reference; validate each before moving on. Fold duplicate procedures into one owner; preserve specialized capabilities through explicit modes.
 - [ ] 4. Test then implement read-only Git review-scope collection: committed, staged, unstaged, deleted and untracked; literal task paths; unavailable refs; no mutation.
 - [ ] 5. Test then implement package validation and installation: source checksums and coverage, references after copying, foreign file conflicts, idempotence, symlinks, and dry-run.
 - [ ] 6. Evaluate representative integrated workflows in fresh contexts: lightweight, clarified feature, failure, dirty work, interrupted commit, unavailable browser, migration, formal verification, specialized reference retrieval. Record limitations honestly.
@@ -20,7 +20,7 @@
 
 - `sources/manifest.json`: author/repository/commit plus every retained path, local path and SHA-256.
 - `sources/coverage.json`: one row per upstream SKILL.md/command: author, original path, integrated family, disposition, essential rules, adaptation reason and implemented references.
-- `skills/_malj-shared/contracts.md`: work input, review scope, evidence and completion invariants shared by all entrypoints.
+- `skills/_lets-shared/contracts.md`: work input, review scope, evidence and completion invariants shared by all entrypoints.
 - `python3 scripts/review_scope.py --repo REPO --base REF [--path PATH ...]`: JSON metadata including untracked paths; never stage, reset, clean or commit.
 - `python3 scripts/validate.py [--root ROOT]`: nonzero on invalid package, provenance gaps or unresolved installed references.
 - `python3 scripts/install.py [--dest DIR] [--dry-run]`: default `~/.codex/skills`; identical installation is idempotent, conflicting user files fail before writes.

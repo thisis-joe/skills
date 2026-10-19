@@ -1,0 +1,4 @@
+interface:
+  display_name: "let's-document"
+  short_description: "Purpose-led document with source-backed checks and evidence"
+  default_prompt: "Use $lets-document for the current request and provide its required result."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "let's-automate"
+  short_description: "Purpose-led automate with source-backed checks and evidence"
+  default_prompt: "Use $lets-automate for the current request and provide its required result."

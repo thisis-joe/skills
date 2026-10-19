@@ -1,0 +1,4 @@
+interface:
+  display_name: "let's-retro"
+  short_description: "Purpose-led retro with source-backed checks and evidence"
+  default_prompt: "Use $lets-retro for the current request and provide its required result."
