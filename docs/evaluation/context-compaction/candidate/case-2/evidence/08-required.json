@@ -1,0 +1,16 @@
+{
+  "name": "required",
+  "command": [
+    "python3",
+    "app.py"
+  ],
+  "expected_exit": 2,
+  "expected_stdout": "",
+  "expected_markers": [
+    "one of the arguments --double --triple is required"
+  ],
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: one of the arguments --double --triple is required\n",
+  "status": "passed"
+}

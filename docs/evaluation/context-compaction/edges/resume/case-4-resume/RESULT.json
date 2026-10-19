@@ -1,0 +1,136 @@
+{
+  "task_id": "resume-stand-in",
+  "outcome": "changed",
+  "scope": "Fresh-context local CLI verification-helper maintenance only; no product task completion or commits.",
+  "actual_state_found": {
+    "head": "78923f0272d116aa877d02d0e74b0a142263e40e",
+    "branch": "fixture/resume",
+    "preexisting_uncommitted_paths": [
+      "app.py",
+      "USER_NOTES.md"
+    ],
+    "actual_app_sha256": "e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b",
+    "claimed_prior_app_sha256": "fc12390d43e91276f3274872c7680531d9c89648a668f9b06de36cae449a0cfd",
+    "handoff_and_task_claims_are_stale": true,
+    "drift": "Actual app has --multiply A B, while prior helper/map/proof cover only double; double zero was described but not driven."
+  },
+  "guidance": {
+    "read_fresh_via_logged_reader": [
+      "coco-verify/SKILL.md",
+      "_coco-shared/contracts.md",
+      "_coco-shared/advanced/verify.md",
+      "_coco-shared/advanced/verify-runtime-create.md",
+      "_coco-shared/advanced/verify-runtime-maintain.md"
+    ],
+    "mode": "Existing runtime-helper maintenance"
+  },
+  "changes": {
+    "owned_files": [
+      "VERIFY.md",
+      "verify_cli.py",
+      "features/index.json",
+      "features/double.md",
+      "features/multiply.md",
+      "features/operation-selection.md"
+    ],
+    "helper": "Added 16 real public-boundary checks with independent expectations, stronger read-only doctor, raw command/output/exit capture and non-overwriting evidence retention.",
+    "feature_map": [
+      "double",
+      "multiply",
+      "operation-selection"
+    ],
+    "sha256": {
+      "VERIFY.md": "95f26ba764f6435db5f6f664f479dd3ddde22319bd939860448cfe9a97999e07",
+      "verify_cli.py": "a6881ac09289d7381381a575c2f0665a51b94e1d80f5bf229601f6edf0111f42",
+      "features/index.json": "ea73afd5515ee04c3dad86077952decaf1f1d516ff9d34a7dcdb402a07310d77",
+      "features/double.md": "79c40bee15b9bd30d9dc91363d578bfb9c6d61d4694d3c9c20c8a8ae6ae345aa",
+      "features/multiply.md": "f0d922b6a54d3e16afe834ff41ecb874d20610243dee4d0f34b20d393ae35da9",
+      "features/operation-selection.md": "7e836d2756a1ff043b20f4a55f1c99101a190cf4dfb6eaabc046428851ca91b0"
+    }
+  },
+  "claim_to_evidence": [
+    {
+      "claim": "Actual current CLI starts and advertises both operations",
+      "outcome": "passed",
+      "evidence": "evidence/doctor-20261019T141619.007403Z.json"
+    },
+    {
+      "claim": "Every mapped feature has concrete live checks",
+      "outcome": "passed",
+      "checks": 16,
+      "evidence": "evidence/drive-20261019T141619.384783Z.json"
+    },
+    {
+      "claim": "Existing product test suite passes unchanged",
+      "outcome": "passed",
+      "command": "python3 -m unittest -v",
+      "tests": 1,
+      "evidence": "evidence/resume-validation.json"
+    },
+    {
+      "claim": "Invalid helper usage fails",
+      "outcome": "passed",
+      "observed_exit": 1,
+      "evidence": "evidence/resume-validation.json"
+    },
+    {
+      "claim": "Protected product, tests, notes, prior evidence, handoff and product task state remain byte-identical",
+      "outcome": "passed",
+      "sha256": {
+        "app.py": "e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b",
+        "test_app.py": "43e4b979a3fef8184f285c8f106f59af090529db4686d7f840aec65e7806af86",
+        "USER_NOTES.md": "f0022ca0ffe7e3d13c36856a34901c50580a779a17a877b041cdf0377f4bbc91",
+        "HANDOFF.json": "e3233770f1ddf37f594931a55b3f12838fdf470e44559f4b6235f91ac326cd09",
+        "TASK_STATE.json": "518c4939846ced96d28505fb3b06e3be8a2e3d2257e65a774e968cde20f00f81",
+        "evidence/previous-double.json": "6d5d6d11deff7a27475dfc327d8a6bf7f6bb9ccbea00ccf492d77f07173275f1"
+      },
+      "evidence": "evidence/resume-final-audit.json"
+    },
+    {
+      "claim": "Feature index matches documents and live-check coverage; proof survives owned cleanup",
+      "outcome": "passed",
+      "evidence": "evidence/resume-final-audit.json"
+    },
+    {
+      "claim": "Git diff whitespace checks",
+      "outcome": "passed",
+      "evidence": "evidence/resume-final-audit.json"
+    },
+    {
+      "claim": "Long-running instance teardown, auth, external services and persistent product state",
+      "outcome": "not-applicable",
+      "reason": "Short-lived stateless local integer CLI has no server/auth/service/fixture dependency."
+    }
+  ],
+  "raw_command_records": [
+    "evidence/resume-baseline.json",
+    "evidence/resume-validation.json",
+    "evidence/resume-final-audit.json",
+    "evidence/doctor-20261019T141619.007403Z.json",
+    "evidence/drive-20261019T141619.384783Z.json"
+  ],
+  "preservation": {
+    "all_protected_bytes_unchanged": true,
+    "head_unchanged": true,
+    "no_commit": true,
+    "handoff_unchanged": true,
+    "task_state_unchanged": true,
+    "prior_evidence_retained": true,
+    "owned_cleanup": {
+      "owned_processes": [],
+      "removed_generated_bytecode": []
+    }
+  },
+  "blockers": [],
+  "remaining_gaps": [
+    "HANDOFF.json and TASK_STATE.json still carry their earlier claimed completion/snapshot because this request requires preserving them; these claims are not current verification evidence.",
+    "README.md still documents only --double. It is outside the declared owned verification files and is preserved for the product owner.",
+    "The original product unittest suite has only one double-positive check. New behavior is exercised by the owned runtime helper without editing product tests."
+  ],
+  "limits": [
+    "Evidence covers the exact current app SHA and recorded concrete inputs on the local Python runtime, not every possible integer or malformed input.",
+    "No formal proof, network, installs, scheduler, remote operation or fabricated success evidence was used.",
+    "A passing maintenance helper does not mark the product task complete; subsequent app/helper/acceptance/environment changes require fresh evidence."
+  ],
+  "minimum_next_verification": "If product source changes, rerun launch, doctor, drive and the existing unittest suite against that new snapshot; the product owner may separately reconcile its README and authoritative task status."
+}

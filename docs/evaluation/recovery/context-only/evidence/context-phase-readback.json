@@ -1,0 +1,19 @@
+{
+  "phase": "context",
+  "task_state_sha256": "5156b3f51d4ae746285645fa468076a2a304a79625e3929d5ba61ccbe48c3cd5",
+  "state": {
+    "T1": {
+      "status": "open",
+      "commit": null,
+      "blockers": []
+    },
+    "T2": {
+      "status": "pending",
+      "blockers": [
+        "T1"
+      ],
+      "title": "Document examples"
+    }
+  },
+  "completion_state_written": false
+}

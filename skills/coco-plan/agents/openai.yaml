@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-plan"
+  short_description: "Purpose-led plan with source-backed checks and evidence"
+  default_prompt: "Use $coco-plan for the current request and provide its required result."

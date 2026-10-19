@@ -1,0 +1,544 @@
+{
+  "passed": true,
+  "preflight": {
+    "passed": true,
+    "observation": {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope/app.py",
+        "--help"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+      "arguments": [
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout": "usage: app.py [-h] (--double DOUBLE | --multiply MULTIPLY MULTIPLY)\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --double DOUBLE\n  --multiply MULTIPLY MULTIPLY\n",
+      "stderr": ""
+    },
+    "observed_public_options": [
+      "--double",
+      "--help",
+      "--multiply"
+    ],
+    "expected_public_options": [
+      "--double",
+      "--help",
+      "--multiply"
+    ],
+    "mapped_features": [
+      "help",
+      "double",
+      "multiply",
+      "argument-validation"
+    ],
+    "feature_files": [
+      "argument-validation",
+      "double",
+      "help",
+      "multiply"
+    ],
+    "checks": {
+      "help_usable": true,
+      "public_options_mapped": true,
+      "index_matches_driver": true,
+      "index_matches_feature_files": true
+    }
+  },
+  "checks": [
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope/app.py",
+        "--help"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+      "arguments": [
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout": "usage: app.py [-h] (--double DOUBLE | --multiply MULTIPLY MULTIPLY)\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --double DOUBLE\n  --multiply MULTIPLY MULTIPLY\n",
+      "stderr": "",
+      "feature": "help",
+      "state": "long-option",
+      "expected_returncode": 0,
+      "expected_stdout": null,
+      "expected_fragments": [
+        "usage:",
+        "--double",
+        "--multiply"
+      ],
+      "fragment_stream": "stdout",
+      "passed": true
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope/app.py",
+        "-h"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+      "arguments": [
+        "-h"
+      ],
+      "returncode": 0,
+      "stdout": "usage: app.py [-h] (--double DOUBLE | --multiply MULTIPLY MULTIPLY)\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --double DOUBLE\n  --multiply MULTIPLY MULTIPLY\n",
+      "stderr": "",
+      "feature": "help",
+      "state": "short-option",
+      "expected_returncode": 0,
+      "expected_stdout": null,
+      "expected_fragments": [
+        "usage:",
+        "--double",
+        "--multiply"
+      ],
+      "fragment_stream": "stdout",
+      "passed": true
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope/app.py",
+        "--double",
+        "3"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+      "arguments": [
+        "--double",
+        "3"
+      ],
+      "returncode": 0,
+      "stdout": "6\n",
+      "stderr": "",
+      "feature": "double",
+      "state": "positive",
+      "expected_returncode": 0,
+      "expected_stdout": "6\n",
+      "expected_fragments": [],
+      "fragment_stream": "stdout",
+      "passed": true
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope/app.py",
+        "--double",
+        "-4"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+      "arguments": [
+        "--double",
+        "-4"
+      ],
+      "returncode": 0,
+      "stdout": "-8\n",
+      "stderr": "",
+      "feature": "double",
+      "state": "negative",
+      "expected_returncode": 0,
+      "expected_stdout": "-8\n",
+      "expected_fragments": [],
+      "fragment_stream": "stdout",
+      "passed": true
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope/app.py",
+        "--double",
+        "0"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+      "arguments": [
+        "--double",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "0\n",
+      "stderr": "",
+      "feature": "double",
+      "state": "zero",
+      "expected_returncode": 0,
+      "expected_stdout": "0\n",
+      "expected_fragments": [],
+      "fragment_stream": "stdout",
+      "passed": true
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope/app.py",
+        "--multiply",
+        "3",
+        "4"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+      "arguments": [
+        "--multiply",
+        "3",
+        "4"
+      ],
+      "returncode": 0,
+      "stdout": "12\n",
+      "stderr": "",
+      "feature": "multiply",
+      "state": "positive",
+      "expected_returncode": 0,
+      "expected_stdout": "12\n",
+      "expected_fragments": [],
+      "fragment_stream": "stdout",
+      "passed": true
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope/app.py",
+        "--multiply",
+        "-3",
+        "4"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+      "arguments": [
+        "--multiply",
+        "-3",
+        "4"
+      ],
+      "returncode": 0,
+      "stdout": "-12\n",
+      "stderr": "",
+      "feature": "multiply",
+      "state": "negative-left",
+      "expected_returncode": 0,
+      "expected_stdout": "-12\n",
+      "expected_fragments": [],
+      "fragment_stream": "stdout",
+      "passed": true
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope/app.py",
+        "--multiply",
+        "3",
+        "-4"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+      "arguments": [
+        "--multiply",
+        "3",
+        "-4"
+      ],
+      "returncode": 0,
+      "stdout": "-12\n",
+      "stderr": "",
+      "feature": "multiply",
+      "state": "negative-right",
+      "expected_returncode": 0,
+      "expected_stdout": "-12\n",
+      "expected_fragments": [],
+      "fragment_stream": "stdout",
+      "passed": true
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope/app.py",
+        "--multiply",
+        "-3",
+        "-4"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+      "arguments": [
+        "--multiply",
+        "-3",
+        "-4"
+      ],
+      "returncode": 0,
+      "stdout": "12\n",
+      "stderr": "",
+      "feature": "multiply",
+      "state": "both-negative",
+      "expected_returncode": 0,
+      "expected_stdout": "12\n",
+      "expected_fragments": [],
+      "fragment_stream": "stdout",
+      "passed": true
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope/app.py",
+        "--multiply",
+        "0",
+        "7"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+      "arguments": [
+        "--multiply",
+        "0",
+        "7"
+      ],
+      "returncode": 0,
+      "stdout": "0\n",
+      "stderr": "",
+      "feature": "multiply",
+      "state": "zero-left",
+      "expected_returncode": 0,
+      "expected_stdout": "0\n",
+      "expected_fragments": [],
+      "fragment_stream": "stdout",
+      "passed": true
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope/app.py",
+        "--multiply",
+        "7",
+        "0"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+      "arguments": [
+        "--multiply",
+        "7",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "0\n",
+      "stderr": "",
+      "feature": "multiply",
+      "state": "zero-right",
+      "expected_returncode": 0,
+      "expected_stdout": "0\n",
+      "expected_fragments": [],
+      "fragment_stream": "stdout",
+      "passed": true
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope/app.py"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+      "arguments": [],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "usage: app.py [-h] (--double DOUBLE | --multiply MULTIPLY MULTIPLY)\napp.py: error: one of the arguments --double --multiply is required\n",
+      "feature": "argument-validation",
+      "state": "operation-required",
+      "expected_returncode": 2,
+      "expected_stdout": "",
+      "expected_fragments": [
+        "one of the arguments --double --multiply is required"
+      ],
+      "fragment_stream": "stderr",
+      "passed": true
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope/app.py",
+        "--double",
+        "3",
+        "--multiply",
+        "2",
+        "4"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+      "arguments": [
+        "--double",
+        "3",
+        "--multiply",
+        "2",
+        "4"
+      ],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "usage: app.py [-h] (--double DOUBLE | --multiply MULTIPLY MULTIPLY)\napp.py: error: argument --multiply: not allowed with argument --double\n",
+      "feature": "argument-validation",
+      "state": "mutually-exclusive",
+      "expected_returncode": 2,
+      "expected_stdout": "",
+      "expected_fragments": [
+        "not allowed with argument --double"
+      ],
+      "fragment_stream": "stderr",
+      "passed": true
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope/app.py",
+        "--double"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+      "arguments": [
+        "--double"
+      ],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "usage: app.py [-h] (--double DOUBLE | --multiply MULTIPLY MULTIPLY)\napp.py: error: argument --double: expected one argument\n",
+      "feature": "argument-validation",
+      "state": "double-missing",
+      "expected_returncode": 2,
+      "expected_stdout": "",
+      "expected_fragments": [
+        "expected one argument"
+      ],
+      "fragment_stream": "stderr",
+      "passed": true
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope/app.py",
+        "--double",
+        "abc"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+      "arguments": [
+        "--double",
+        "abc"
+      ],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "usage: app.py [-h] (--double DOUBLE | --multiply MULTIPLY MULTIPLY)\napp.py: error: argument --double: invalid int value: 'abc'\n",
+      "feature": "argument-validation",
+      "state": "double-noninteger",
+      "expected_returncode": 2,
+      "expected_stdout": "",
+      "expected_fragments": [
+        "invalid int value"
+      ],
+      "fragment_stream": "stderr",
+      "passed": true
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope/app.py",
+        "--multiply",
+        "3"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+      "arguments": [
+        "--multiply",
+        "3"
+      ],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "usage: app.py [-h] (--double DOUBLE | --multiply MULTIPLY MULTIPLY)\napp.py: error: argument --multiply: expected 2 arguments\n",
+      "feature": "argument-validation",
+      "state": "multiply-missing",
+      "expected_returncode": 2,
+      "expected_stdout": "",
+      "expected_fragments": [
+        "expected 2 arguments"
+      ],
+      "fragment_stream": "stderr",
+      "passed": true
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope/app.py",
+        "--multiply",
+        "3",
+        "abc"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+      "arguments": [
+        "--multiply",
+        "3",
+        "abc"
+      ],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "usage: app.py [-h] (--double DOUBLE | --multiply MULTIPLY MULTIPLY)\napp.py: error: argument --multiply: invalid int value: 'abc'\n",
+      "feature": "argument-validation",
+      "state": "multiply-noninteger",
+      "expected_returncode": 2,
+      "expected_stdout": "",
+      "expected_fragments": [
+        "invalid int value"
+      ],
+      "fragment_stream": "stderr",
+      "passed": true
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope/app.py",
+        "--multiply",
+        "2",
+        "3",
+        "4"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+      "arguments": [
+        "--multiply",
+        "2",
+        "3",
+        "4"
+      ],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "usage: app.py [-h] (--double DOUBLE | --multiply MULTIPLY MULTIPLY)\napp.py: error: unrecognized arguments: 4\n",
+      "feature": "argument-validation",
+      "state": "multiply-extra",
+      "expected_returncode": 2,
+      "expected_stdout": "",
+      "expected_fragments": [
+        "unrecognized arguments: 4"
+      ],
+      "fragment_stream": "stderr",
+      "passed": true
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope/app.py",
+        "--double",
+        "3",
+        "--unknown"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+      "arguments": [
+        "--double",
+        "3",
+        "--unknown"
+      ],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "usage: app.py [-h] (--double DOUBLE | --multiply MULTIPLY MULTIPLY)\napp.py: error: unrecognized arguments: --unknown\n",
+      "feature": "argument-validation",
+      "state": "unknown-option",
+      "expected_returncode": 2,
+      "expected_stdout": "",
+      "expected_fragments": [
+        "unrecognized arguments: --unknown"
+      ],
+      "fragment_stream": "stderr",
+      "passed": true
+    }
+  ],
+  "mapped_features": [
+    "help",
+    "double",
+    "multiply",
+    "argument-validation"
+  ],
+  "blocked_reason": null,
+  "observed_at_utc": "2026-10-19T14:18:14.700658+00:00",
+  "app_sha256": "e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b",
+  "helper_sha256": "7840fd55718430ba014aeff73b9c21ad7633175355de759afca7ebe31e339275",
+  "feature_map_sha256": {
+    "features/argument-validation.md": "569d74d10052cef1d7b8015d4400e24c10c8e68731bb2be95dc11eb78e25e442",
+    "features/double.md": "d0f5e42c0edbf0b554784d8cb3fb491f0f5fecd2f6877607addbfed0d9881d7c",
+    "features/help.md": "92da0ba6447b348e81b424796b90002b6d619bc2f0299374c27e6da6ff74a514",
+    "features/index.json": "deae89495efeb26ab422efc96c093d67c021cf1871f0d76217e430e428f3a950",
+    "features/multiply.md": "b6a4010542aee948e84f17080c50d0b7d590a33f63f8760d65b9751d80144de4"
+  },
+  "evidence_path": "evidence/drive-001.json"
+}

@@ -1,0 +1,62 @@
+$ python3 -c from pathlib import Path; import subprocess; print(subprocess.check_output(["git","diff","--check"],text=True)); print(subprocess.check_output(["git","diff","--","greet.py","tests/test_greet.py"],text=True)); print("FINAL greet.py",Path("greet.py").read_text()); print("FINAL tests",Path("tests/test_greet.py").read_text())
+
+diff --git a/greet.py b/greet.py
+index ecf0bab..b19f274 100644
+--- a/greet.py
++++ b/greet.py
+@@ -3,8 +3,10 @@ import argparse
+ def main():
+     parser = argparse.ArgumentParser()
+     parser.add_argument("name")
++    parser.add_argument("--excited", action="store_true")
+     args = parser.parse_args()
+-    print(f"Hello, {args.name}.")
++    punctuation = "!" if args.excited else "."
++    print(f"Hello, {args.name}{punctuation}")
+ 
+ if __name__ == "__main__":
+     main()
+diff --git a/tests/test_greet.py b/tests/test_greet.py
+index 978eb37..413f478 100644
+--- a/tests/test_greet.py
++++ b/tests/test_greet.py
+@@ -7,3 +7,8 @@ class GreetTest(unittest.TestCase):
+         result = subprocess.run([sys.executable, "greet.py", "Ada"], capture_output=True, text=True)
+         self.assertEqual(result.returncode, 0)
+         self.assertEqual(result.stdout, "Hello, Ada.\n")
++
++    def test_excited_cli(self):
++        result = subprocess.run([sys.executable, "greet.py", "Ada", "--excited"], capture_output=True, text=True)
++        self.assertEqual(result.returncode, 0, result.stderr)
++        self.assertEqual(result.stdout, "Hello, Ada!\n")
+
+FINAL greet.py import argparse
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("name")
+    parser.add_argument("--excited", action="store_true")
+    args = parser.parse_args()
+    punctuation = "!" if args.excited else "."
+    print(f"Hello, {args.name}{punctuation}")
+
+if __name__ == "__main__":
+    main()
+
+FINAL tests import subprocess
+import sys
+import unittest
+
+class GreetTest(unittest.TestCase):
+    def test_normal_cli(self):
+        result = subprocess.run([sys.executable, "greet.py", "Ada"], capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0)
+        self.assertEqual(result.stdout, "Hello, Ada.\n")
+
+    def test_excited_cli(self):
+        result = subprocess.run([sys.executable, "greet.py", "Ada", "--excited"], capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(result.stdout, "Hello, Ada!\n")
+
+
+exit=0

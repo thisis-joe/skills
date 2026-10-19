@@ -1,0 +1,9 @@
+$ python3 -m unittest discover -s tests -v
+test_total (test_ledger.LedgerTest) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+
+exit=0

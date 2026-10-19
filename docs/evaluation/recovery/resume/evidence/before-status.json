@@ -1,0 +1,15 @@
+{
+  "case": "resume",
+  "phase": "before",
+  "label": "status",
+  "cwd": "/tmp/lets-recovery-validation/resume/repo",
+  "command": [
+    "git",
+    "status",
+    "--porcelain=v1",
+    "--untracked-files=all"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

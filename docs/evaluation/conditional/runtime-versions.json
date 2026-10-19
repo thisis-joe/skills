@@ -1,0 +1,10 @@
+{
+  "python3": "/usr/bin/python3",
+  "node": "v22.23.2",
+  "npm_available": "10.9.8",
+  "npm_fixture_requested": "10.9.2",
+  "npm_pinned_version_verification": "unavailable; no bootstrap/install authorized",
+  "tsc": "unavailable",
+  "shellcheck": "unavailable",
+  "claude": "unavailable"
+}

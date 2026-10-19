@@ -1,0 +1,40 @@
+{
+  "commands": [
+    {
+      "name": "syntax",
+      "command": [
+        "bash",
+        "-n",
+        "/tmp/lets-conditional-validation/case4-wizard/setup-wizard.sh"
+      ],
+      "exit": 0,
+      "evidence": "evidence/syntax.txt"
+    },
+    {
+      "name": "readback",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/tmp/lets-conditional-validation/case4-wizard/helpers/env_store.py",
+        "present",
+        "/tmp/lets-conditional-validation/case4-wizard/evidence/fake.env",
+        "RESEND_API_KEY"
+      ],
+      "exit": 0,
+      "evidence": "evidence/readback.txt"
+    }
+  ],
+  "helper_tests": {
+    "literal_roundtrip": true,
+    "duplicate_upsert_idempotent": true,
+    "unrelated_key_and_comment_preserved": true,
+    "existing_mode_0640_preserved": true,
+    "new_mode_0600": true,
+    "secret_readback_presence_only": true,
+    "newline_rejected": true,
+    "symlink_rejected": true
+  },
+  "shellcheck": "unavailable: executable absent",
+  "wizard_execution": "not performed: interactive human-only deliverable",
+  "remote_effects": "none",
+  "real_dashboard_logged_in_steps": "unavailable; documented URL redirects to login"
+}

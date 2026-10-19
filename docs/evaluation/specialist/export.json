@@ -1,0 +1,216 @@
+{
+  "original_root": "/tmp/lets-specialist-validation",
+  "copied_files": [
+    {
+      "path": "checks.py",
+      "sha256": "039812148641070398dbbff368c09bcc2fc2fcbcd22eed5abb00908d1d0fdae5"
+    },
+    {
+      "path": "evidence/artifact-manifest.json",
+      "sha256": "67710b1453fb3a5804a0a1947830b4c59455d8f91e3e1437115894c23db8a127"
+    },
+    {
+      "path": "evidence/check-summary.json",
+      "sha256": "95409d3ab5fcdcd10c263a7352aa2b364561bd46e2f9f83ea9d4c27aaff0218b"
+    },
+    {
+      "path": "evidence/checks.stderr",
+      "sha256": "2d8bb80c7cfc9e97c45c36b288d0a97bc6c720d398394ad213159ec574a0f44f"
+    },
+    {
+      "path": "evidence/checks.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/observations.json",
+      "sha256": "71d267f6a7a5a26889e87a679c6d50076305278f0323c2d135d415892f62d528"
+    },
+    {
+      "path": "evidence/run-metadata.json",
+      "sha256": "6afdad722408cbaf6f9d11bb45243efff057885b96273a1e39746ac5cd354c19"
+    },
+    {
+      "path": "evidence/runtime-helper/capture.json",
+      "sha256": "5d90fae30eb1c456d3fa445341d1d59171e3e03c6abbfb1ba4108c064696ebbb"
+    },
+    {
+      "path": "evidence/runtime-helper/check-evidence.json",
+      "sha256": "102353ccecb00ecc58d04bb733d544464101a2aecee1599b7c154f2ab1c41aff"
+    },
+    {
+      "path": "evidence/runtime-helper/cleanup.json",
+      "sha256": "81297d78e07d5667c0bbdf06226c3be075bd7d54f623336cf761f2af50399f5c"
+    },
+    {
+      "path": "evidence/runtime-helper/doctor.json",
+      "sha256": "03929b99100fe91ba57e6ce4352934e6d0dcff48286474c241540b4d42064a89"
+    },
+    {
+      "path": "evidence/runtime-helper/drive.json",
+      "sha256": "85151b2288d778ba942eac4a06d3515b9a2c9cb1dfb7b27bd122ee090141fc9d"
+    },
+    {
+      "path": "evidence/runtime-helper/launch.json",
+      "sha256": "a3f4c0568834a225e2f1e62873a72ff74bf724cf850a883b407bb52ba4033df4"
+    },
+    {
+      "path": "evidence/skill-snapshot.json",
+      "sha256": "e785515e6cf9b34319119b4b6b694f6c06627c42d301829ee345813f840936e2"
+    },
+    {
+      "path": "finalize_report.py",
+      "sha256": "8ce315d23d06ebd1c4f26de53e2dcfc2a6b73313056b6220d3fe53bbf2531a1c"
+    },
+    {
+      "path": "fixtures/decision-facts.rst",
+      "sha256": "5e31e39d0b6564429c967211d731848c824dfca2b1f09db116165f30ceeab80e"
+    },
+    {
+      "path": "fixtures/decisions/0007-email-source.original.rst",
+      "sha256": "3b44e30849134db5404d87d9e89addc1f4a671c1d192b952e3c1fc07f9364dbc"
+    },
+    {
+      "path": "fixtures/decisions/0007-email-source.rst",
+      "sha256": "3b44e30849134db5404d87d9e89addc1f4a671c1d192b952e3c1fc07f9364dbc"
+    },
+    {
+      "path": "fixtures/dependency/install.js",
+      "sha256": "9b8b8c24bb2097ee2d8acadcb3c5bc427366d4281b090d3edbc9fd32b1ce35d1"
+    },
+    {
+      "path": "fixtures/dependency/package.json",
+      "sha256": "1bb44934c9d2112f07c66b4e56e00a97cff47ffe436f1c1fdf79a4e3ec271fb2"
+    },
+    {
+      "path": "fixtures/dependency/pending-package.json",
+      "sha256": "6bd6e20355ca27f5db833dd4b319ee12b8df2d376d28065b07c44580391241cc"
+    },
+    {
+      "path": "fixtures/dynamic-caller.py",
+      "sha256": "41924187d7932f4a93707d36d17d9bf2cd0d6247998db97d3e685a74d286aa7c"
+    },
+    {
+      "path": "fixtures/form.html",
+      "sha256": "d66e9abfde45dc525b50ce44da34f235bc19b2f92b89941410529466d3e2928c"
+    },
+    {
+      "path": "fixtures/frontend-evidence.json",
+      "sha256": "d589aec8bb91692d3526b5fc6621084131f748f156aa746e6b80eda477878b61"
+    },
+    {
+      "path": "fixtures/performance.json",
+      "sha256": "fe7f3de65230c467819b280b5258d1a57598a8b2c1f7a1c166269b9dff6cf4c6"
+    },
+    {
+      "path": "fixtures/release.json",
+      "sha256": "e762c228f0cb1b8075fc2b44f9fb1a57728a5ed80b163e28f6c75360051165b5"
+    },
+    {
+      "path": "fixtures/retro-one-run.json",
+      "sha256": "7225d0908164ebd8f2809dccfb3f5efe2c13e9db7cfac40a90c46c4dc10760a5"
+    },
+    {
+      "path": "fixtures/runtime-config.json",
+      "sha256": "27d1cbe5ba4d1118dad412dd1c3747b7b3245e661850d0e3210b62a497621c8d"
+    },
+    {
+      "path": "fixtures/scenarios.py",
+      "sha256": "9881b94e34666e1952bbff7a9d977becc02fd1bf55b10b798d5c10e10010b38a"
+    },
+    {
+      "path": "fixtures/security-ownership.json",
+      "sha256": "f5df79a5b25903f6fb8b739b75200f854ac248e260c782fa31c40f4762fd5c90"
+    },
+    {
+      "path": "outputs/0008-dual-email.rst",
+      "sha256": "1cf64d6527d945db0bc00aa2feec64342d3cb30f60ca1a04f1a0b0611ac28a56"
+    },
+    {
+      "path": "outputs/automation-contract.json",
+      "sha256": "9c01a28a5deb6128728f5fa8c920c82c89e77de12106bd9669c43689a547bc52"
+    },
+    {
+      "path": "outputs/automation-runbook.md",
+      "sha256": "edcf1fd5961db8547cab1f2cd1f94239f3a05837d0d3526343639bff79c10a65"
+    },
+    {
+      "path": "outputs/email-migration-exercise.rst",
+      "sha256": "6096155401566bb427fb2cf1f7c87513111796d85c7f0f9b9a59050af1ed07c3"
+    },
+    {
+      "path": "outputs/evaluation-protocol.json",
+      "sha256": "34081b058902ac6a2991fb397745a1cb036746be6e807308094aaeae7b954ff5"
+    },
+    {
+      "path": "outputs/formal-verification-status.md",
+      "sha256": "6b9fbfb998379f4750828276401637b541016f40c9d53831cdbde7b1471316ab"
+    },
+    {
+      "path": "outputs/frontend-acceptance.md",
+      "sha256": "98fc499bcf87fe662f2d29d7b14e6c837fc4dca8d8db108ef15f0cbf1420acc5"
+    },
+    {
+      "path": "outputs/migration-plan.md",
+      "sha256": "af8a4986c2e4086d926060257a99cdeb75e1a58a0bc718e04a7bf6a5d64f705c"
+    },
+    {
+      "path": "outputs/observability-plan.md",
+      "sha256": "8630efece96623407c836b508fce3483e6030c0aaea2e081b9e2378aa0a4365d"
+    },
+    {
+      "path": "outputs/performance-decision.md",
+      "sha256": "c6c54db727762e9f5531f606f7b4d3822236982d0b890b0ccb24d669a3629e4c"
+    },
+    {
+      "path": "outputs/release-readiness.md",
+      "sha256": "1bb551d664c71833026bc759146fc10d9199f0d92d70230d6921d92b09c0c780"
+    },
+    {
+      "path": "outputs/retrospective.md",
+      "sha256": "f25419e0fc4f5853a83354da20953696db8a8f9ca1fbc5c87a1e1efd16ffddd2"
+    },
+    {
+      "path": "outputs/runtime-helper-status.md",
+      "sha256": "eca63c3e43a74be789d1a2648878596c7fcaafc1c96bf3bcaf45a0cf98be3669"
+    },
+    {
+      "path": "outputs/security-review.md",
+      "sha256": "81b57f613121f020a582c5818ab3b5e1f850a8526f48da919514168c14758381"
+    },
+    {
+      "path": "outputs/simplification-plan.md",
+      "sha256": "b5c6923152a070ced96704a3a02a505f99a6b0edc46199eccb7f9885a47ffde4"
+    },
+    {
+      "path": "prepare_artifacts.py",
+      "sha256": "0b75fe47adb29e69117edb9b8d236918889f6660ddb215ec8707d87585cb681b"
+    },
+    {
+      "path": "report.md",
+      "sha256": "e41531adcaf3698ea1f3826b85b642481799421152fbeafadba80c15bb76a21d"
+    },
+    {
+      "path": "results.json",
+      "sha256": "137d4a85985b37b3a055db3d59c21e44b894560f4d7f787b3af8f4351bd3b3d5"
+    },
+    {
+      "path": "runtime-helper/features.json",
+      "sha256": "c41e1c40244dc7b82731421876aea794e86741784b306dde5ff1ebf9ff705a22"
+    },
+    {
+      "path": "runtime-helper/helper.py",
+      "sha256": "122b31104fbbe24fb8b687ebd12a18d32cd34e101cca16f30e77050bb7c0c4b8"
+    },
+    {
+      "path": "runtime-helper/launch.py",
+      "sha256": "4349a4070bb53ca5eb16bfb1f0e3433f7035202940aaf33f55692693ea566874"
+    }
+  ],
+  "excluded": [
+    ".git directories (core fixture histories exported as bundles)",
+    "__pycache__",
+    "scratch directories",
+    "symlinks"
+  ],
+  "note": "Raw reports and command records are unchanged. Absolute paths describe the original run; this mirror does not rewrite or re-execute those records."
+}

@@ -1,0 +1,20 @@
+$ python3 -m unittest discover -s tests -v
+test_double (test_double.DoubleTest) ... FAIL
+
+======================================================================
+FAIL: test_double (test_double.DoubleTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/lets-core-validation/context/repo/tests/test_double.py", line 8, in test_double
+    self.assertEqual(p.stdout,"12\n")
+AssertionError: '6\n' != '12\n'
+- 6
++ 12
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.015s
+
+FAILED (failures=1)
+
+exit=1

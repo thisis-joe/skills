@@ -1,0 +1,456 @@
+{
+  "scope": "Actual temporary local Git operations, not an independent agent or live Jira test",
+  "git_version": "git version 2.50.1 (Apple Git-155)",
+  "cases": [
+    {
+      "case": "valid Git branch round trip",
+      "jira_key_fixture": "TEAM-123",
+      "summary_fixture": "OAuth2.0_구글",
+      "branch": "feat(be)/123-OAuth2.0_구글",
+      "summary_preserved_exactly": true,
+      "head_and_user_file_preserved": true
+    },
+    {
+      "case": "valid Git branch round trip",
+      "jira_key_fixture": "TEAM-126",
+      "summary_fixture": "구글_로그인_오류",
+      "branch": "fix(fe)/126-구글_로그인_오류",
+      "summary_preserved_exactly": true,
+      "head_and_user_file_preserved": true
+    },
+    {
+      "case": "Git-invalid candidate rejected by read-only precheck",
+      "candidate": "feat(be)/124-구글 로그인",
+      "exit_code": 128,
+      "branch_refs_and_user_file_preserved": true,
+      "no_automatic_rewrite_attempted": true
+    },
+    {
+      "case": "Git-invalid candidate rejected by read-only precheck",
+      "candidate": "fix(fe)/125-로그인:오류",
+      "exit_code": 128,
+      "branch_refs_and_user_file_preserved": true,
+      "no_automatic_rewrite_attempted": true
+    },
+    {
+      "case": "existing branch name creation rejected by Git",
+      "exit_code": 128,
+      "branch_refs_and_user_file_preserved": true
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "init",
+        "--quiet",
+        "--template=<fixture>/empty-template"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "config",
+        "user.name",
+        "COCO local fixture"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "config",
+        "user.email",
+        "coco-fixture@example.invalid"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "config",
+        "core.quotepath",
+        "false"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "add",
+        "base.txt"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "-c",
+        "commit.gpgsign=false",
+        "commit",
+        "--quiet",
+        "-m",
+        "fixture baseline"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "d1c2767fbd61785e96049e05e13210245eab5f7f\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "status",
+        "--porcelain=v1",
+        "-z"
+      ],
+      "exit_code": 0,
+      "stdout": "?? 사용자-메모.txt\u0000",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "check-ref-format",
+        "--branch",
+        "feat(be)/123-OAuth2.0_구글"
+      ],
+      "exit_code": 0,
+      "stdout": "feat(be)/123-OAuth2.0_구글\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "switch",
+        "-c",
+        "feat(be)/123-OAuth2.0_구글",
+        "d1c2767fbd61785e96049e05e13210245eab5f7f"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Switched to a new branch 'feat(be)/123-OAuth2.0_구글'\n"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "branch",
+        "--show-current"
+      ],
+      "exit_code": 0,
+      "stdout": "feat(be)/123-OAuth2.0_구글\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "d1c2767fbd61785e96049e05e13210245eab5f7f\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "status",
+        "--porcelain=v1",
+        "-z"
+      ],
+      "exit_code": 0,
+      "stdout": "?? 사용자-메모.txt\u0000",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "check-ref-format",
+        "--branch",
+        "fix(fe)/126-구글_로그인_오류"
+      ],
+      "exit_code": 0,
+      "stdout": "fix(fe)/126-구글_로그인_오류\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "switch",
+        "-c",
+        "fix(fe)/126-구글_로그인_오류",
+        "d1c2767fbd61785e96049e05e13210245eab5f7f"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Switched to a new branch 'fix(fe)/126-구글_로그인_오류'\n"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "branch",
+        "--show-current"
+      ],
+      "exit_code": 0,
+      "stdout": "fix(fe)/126-구글_로그인_오류\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "d1c2767fbd61785e96049e05e13210245eab5f7f\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "status",
+        "--porcelain=v1",
+        "-z"
+      ],
+      "exit_code": 0,
+      "stdout": "?? 사용자-메모.txt\u0000",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "for-each-ref",
+        "--format=%(refname):%(objectname)",
+        "refs/heads/"
+      ],
+      "exit_code": 0,
+      "stdout": "refs/heads/feat(be)/123-OAuth2.0_구글:d1c2767fbd61785e96049e05e13210245eab5f7f\nrefs/heads/fix(fe)/126-구글_로그인_오류:d1c2767fbd61785e96049e05e13210245eab5f7f\nrefs/heads/master:d1c2767fbd61785e96049e05e13210245eab5f7f\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "branch",
+        "--show-current"
+      ],
+      "exit_code": 0,
+      "stdout": "fix(fe)/126-구글_로그인_오류\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "check-ref-format",
+        "--branch",
+        "feat(be)/124-구글 로그인"
+      ],
+      "exit_code": 128,
+      "stdout": "",
+      "stderr": "fatal: 'feat(be)/124-구글 로그인' is not a valid branch name\n"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "for-each-ref",
+        "--format=%(refname):%(objectname)",
+        "refs/heads/"
+      ],
+      "exit_code": 0,
+      "stdout": "refs/heads/feat(be)/123-OAuth2.0_구글:d1c2767fbd61785e96049e05e13210245eab5f7f\nrefs/heads/fix(fe)/126-구글_로그인_오류:d1c2767fbd61785e96049e05e13210245eab5f7f\nrefs/heads/master:d1c2767fbd61785e96049e05e13210245eab5f7f\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "branch",
+        "--show-current"
+      ],
+      "exit_code": 0,
+      "stdout": "fix(fe)/126-구글_로그인_오류\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "status",
+        "--porcelain=v1",
+        "-z"
+      ],
+      "exit_code": 0,
+      "stdout": "?? 사용자-메모.txt\u0000",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "check-ref-format",
+        "--branch",
+        "fix(fe)/125-로그인:오류"
+      ],
+      "exit_code": 128,
+      "stdout": "",
+      "stderr": "fatal: 'fix(fe)/125-로그인:오류' is not a valid branch name\n"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "for-each-ref",
+        "--format=%(refname):%(objectname)",
+        "refs/heads/"
+      ],
+      "exit_code": 0,
+      "stdout": "refs/heads/feat(be)/123-OAuth2.0_구글:d1c2767fbd61785e96049e05e13210245eab5f7f\nrefs/heads/fix(fe)/126-구글_로그인_오류:d1c2767fbd61785e96049e05e13210245eab5f7f\nrefs/heads/master:d1c2767fbd61785e96049e05e13210245eab5f7f\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "branch",
+        "--show-current"
+      ],
+      "exit_code": 0,
+      "stdout": "fix(fe)/126-구글_로그인_오류\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "status",
+        "--porcelain=v1",
+        "-z"
+      ],
+      "exit_code": 0,
+      "stdout": "?? 사용자-메모.txt\u0000",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "switch",
+        "-c",
+        "feat(be)/123-OAuth2.0_구글",
+        "d1c2767fbd61785e96049e05e13210245eab5f7f"
+      ],
+      "exit_code": 128,
+      "stdout": "",
+      "stderr": "fatal: a branch named 'feat(be)/123-OAuth2.0_구글' already exists\n"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "for-each-ref",
+        "--format=%(refname):%(objectname)",
+        "refs/heads/"
+      ],
+      "exit_code": 0,
+      "stdout": "refs/heads/feat(be)/123-OAuth2.0_구글:d1c2767fbd61785e96049e05e13210245eab5f7f\nrefs/heads/fix(fe)/126-구글_로그인_오류:d1c2767fbd61785e96049e05e13210245eab5f7f\nrefs/heads/master:d1c2767fbd61785e96049e05e13210245eab5f7f\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "branch",
+        "--show-current"
+      ],
+      "exit_code": 0,
+      "stdout": "fix(fe)/126-구글_로그인_오류\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "<fixture>/repo",
+        "status",
+        "--porcelain=v1",
+        "-z"
+      ],
+      "exit_code": 0,
+      "stdout": "?? 사용자-메모.txt\u0000",
+      "stderr": ""
+    }
+  ],
+  "skill_sha256": "3db9888f3bf39836611735b771435ef1fe7f96e805833c63a8b79dfa3e1602d1"
+}

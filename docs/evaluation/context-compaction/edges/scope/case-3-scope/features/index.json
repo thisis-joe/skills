@@ -1,0 +1,8 @@
+{
+  "features": [
+    "help",
+    "double",
+    "multiply",
+    "argument-validation"
+  ]
+}

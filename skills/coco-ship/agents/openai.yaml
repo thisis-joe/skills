@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-ship"
+  short_description: "Purpose-led ship with source-backed checks and evidence"
+  default_prompt: "Use $coco-ship for the current request and provide its required result."

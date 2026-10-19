@@ -1,0 +1,3 @@
+steps:
+  - run: python3 -m py_compile src/report.py
+  - run: python3 -m unittest discover -s tests -v

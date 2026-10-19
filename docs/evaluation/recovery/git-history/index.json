@@ -1,0 +1,12 @@
+[
+  {
+    "fixture": "resume/repo",
+    "bundle": "git-history/resume.bundle",
+    "head": "03b7e6a2131b4eec2d177c6591a22084c554e3f6"
+  },
+  {
+    "fixture": "context-only/repo",
+    "bundle": "git-history/context-only.bundle",
+    "head": "03b7e6a2131b4eec2d177c6591a22084c554e3f6"
+  }
+]

@@ -1,0 +1,487 @@
+{
+  "original_root": "/tmp/coco-updateskill-validation",
+  "copied_files": [
+    {
+      "path": "instruction-source-hashes.after.json",
+      "sha256": "7a810aef650a5f7531b5fba8bbb743ed884f118d7446c1a8e16b6b5552ff8fb9"
+    },
+    {
+      "path": "report.md",
+      "sha256": "f0c3d2bc23bb5f275d73edb4044edabfdfa89a44b9a9180f506088d9c796f2b7"
+    },
+    {
+      "path": "setup-repair.txt",
+      "sha256": "3a26ce7f34d5770d9662835baaa3dc30cf776c624a7380804598cae046641840"
+    },
+    {
+      "path": "apply_cases.py",
+      "sha256": "5c303690b097d2c138c34cec29da7bf8507da7bb856c4e036501f0594489d487"
+    },
+    {
+      "path": "results.json",
+      "sha256": "1049bf32e9047388c35a7534e4f5406d853282d2fc0b4be51d32ee0c190db49e"
+    },
+    {
+      "path": "finalize.py",
+      "sha256": "b0493a411036547270d6447f81a2665683346acf0f81eeb6e05dd51395a0352c"
+    },
+    {
+      "path": "instruction-source-hashes.before.json",
+      "sha256": "7a810aef650a5f7531b5fba8bbb743ed884f118d7446c1a8e16b6b5552ff8fb9"
+    },
+    {
+      "path": "setup.py",
+      "sha256": "258f8133c64481da203e0c07988f139ad3fee73df9e10ffb50056aea7211d8a9"
+    },
+    {
+      "path": "case-c/before.json",
+      "sha256": "758a8e521a8fb1533deecf3b90512350db968637f2d24e8c158a24c7ddb3582c"
+    },
+    {
+      "path": "case-c/preserved-installed-user-change.diff",
+      "sha256": "8f0957c88c7a1f6ef4bcbfe78671a86cf7b73fbd3751d62f06a1a5a1765b5274"
+    },
+    {
+      "path": "case-c/change-basis.md",
+      "sha256": "84d61339149ee06109ca2c4b3ff059c57d0f2b9b77ebd0ab84c39de04a6bcac7"
+    },
+    {
+      "path": "case-c/commands.jsonl",
+      "sha256": "fa2870ffe730d2a7423f449da3d518a8808f347c2cbd7f7d7f83683deb31a9c9"
+    },
+    {
+      "path": "case-c/source-change.diff",
+      "sha256": "7728618d3cd359d59a922350252627ea6d6a3d4a1f2b1a6a2a746a3d5f9b67a5"
+    },
+    {
+      "path": "case-c/after.json",
+      "sha256": "8685485f489e6cb5d3b71d352e666c651ca03f59923b81a00a339c31b98f02ac"
+    },
+    {
+      "path": "case-c/request.md",
+      "sha256": "6575aebc37bcdd157829767845d4c8a80c64d4bddaa3cc66969e47a6b4d054bf"
+    },
+    {
+      "path": "case-c/caller-and-rule-inspection.txt",
+      "sha256": "20003fe8f112f25d47b0f4cbdd9b3b857d6f27e4a5540c466893fa24993ace7a"
+    },
+    {
+      "path": "case-c/installed/.coco-install.json",
+      "sha256": "5455e257b89cbca058b1f0d9495910e556777149bdc0a7be5652138927a67611"
+    },
+    {
+      "path": "case-c/installed/unrelated-user-note.md",
+      "sha256": "3b462ed58adbd69a22657afa3ce0baa3270068a27421b0624238071448573036"
+    },
+    {
+      "path": "case-c/installed/coco-build/SKILL.md",
+      "sha256": "272d5a11d8a80520f540008190373ce21d14a994c0f306e5638f519090fed7eb"
+    },
+    {
+      "path": "case-c/installed/coco-build/references/team-checks.md",
+      "sha256": "6c52c8aceff894b93ed5931a652d0b4b8f24dacdce2626c2ac5bf1e3d7088ad4"
+    },
+    {
+      "path": "case-c/installed/coco-build/agents/openai.yaml",
+      "sha256": "0fa010b311e487132230af3965f5bd1c547ae134cb3e12023c3e5d5752eb0746"
+    },
+    {
+      "path": "case-c/installed/user-only-skill/SKILL.md",
+      "sha256": "117809b55d5db8005283659e2b35f71a40b45d0b1a86da1d8dca42c93a92fa27"
+    },
+    {
+      "path": "case-c/installed/_coco-shared/contracts.md",
+      "sha256": "2d983f92b76d6b27cad84cb449b829598be506cad5deeb42f9918270d44dc02c"
+    },
+    {
+      "path": "case-c/installed/_coco-shared/decisions.md",
+      "sha256": "2c938755f4d1778bb6602d1ece7da9f6b8141261a12df2c5dd0c1ba96cc210cb"
+    },
+    {
+      "path": "case-c/installed/coco-review/SKILL.md",
+      "sha256": "8afb0970c3aeb06c36a634e39e1c01dcc826eab9958e6ed5612909de47a2a4d0"
+    },
+    {
+      "path": "case-c/installed/coco-review/references/team-checks.md",
+      "sha256": "6c52c8aceff894b93ed5931a652d0b4b8f24dacdce2626c2ac5bf1e3d7088ad4"
+    },
+    {
+      "path": "case-c/installed/coco-review/agents/openai.yaml",
+      "sha256": "2955b95754327f09f0682eb14a3b8de850c5a2bf503313ce3cd81a4d52f89a49"
+    },
+    {
+      "path": "case-c/package/coco.json",
+      "sha256": "b332fa10ff04202ba1e28a4b86c1ab60a6defd5cc00286d15103a42e7cff2f94"
+    },
+    {
+      "path": "case-c/package/README.md",
+      "sha256": "353f30febe0ce20a0f24c4afd4ccaa8d10ff3fabcb8039975cdad44b93d3717f"
+    },
+    {
+      "path": "case-c/package/AGENTS.md",
+      "sha256": "0d9aff6d7b7497212fb0934657e7f05224cac92823738c7eb390578e8eb83fb5"
+    },
+    {
+      "path": "case-c/package/tests/test_fixture.py",
+      "sha256": "af247c639f1258fdca3819e8d1c02d4fcebf8efcf8c4ad70de16d7bd73bfe2cd"
+    },
+    {
+      "path": "case-c/package/scripts/validate.py",
+      "sha256": "64d2b092c43a98a01b3eaf5a1b9255be40322a4ad38c09129d2124435455a81a"
+    },
+    {
+      "path": "case-c/package/scripts/package_utils.py",
+      "sha256": "2fe984e7471f84ea9fa6983f06cfbe1218477c95c167f8206fb09558e4edd277"
+    },
+    {
+      "path": "case-c/package/scripts/install.py",
+      "sha256": "fab48dcd907456f15bac9b496a1696c8837bf8de4f5630ee3de63ad1805e2f6e"
+    },
+    {
+      "path": "case-c/package/.github/workflows/checks.yml",
+      "sha256": "46ba4c501599234d13325ac6183be6a098f447013eac979c32688b86b3256d96"
+    },
+    {
+      "path": "case-c/package/sources/manifest.json",
+      "sha256": "afcfb7130832defe65193041d82ca9e7fad0df3066b5b5e92cb1ab0386d990d8"
+    },
+    {
+      "path": "case-c/package/sources/coverage.json",
+      "sha256": "e1be9fb3abe3730e7243464f01832ddbfe1f4dacfe6e77cd5b29dbaad9752036"
+    },
+    {
+      "path": "case-c/package/sources/synthetic/build.source",
+      "sha256": "ea99a21bc6d5e81b45e7df2947c40970d4693b62bb46eccba716a65cb6a12cab"
+    },
+    {
+      "path": "case-c/package/skills/coco-build/SKILL.md",
+      "sha256": "574b36e80fbea12cc60444a281a34e074f24c053300768d230d30a14210db22d"
+    },
+    {
+      "path": "case-c/package/skills/coco-build/references/team-checks.md",
+      "sha256": "79dd5dcf27c1bfaab510f45c182d118b99d793407c5a6fae1978d9386fb3fb25"
+    },
+    {
+      "path": "case-c/package/skills/coco-build/agents/openai.yaml",
+      "sha256": "0fa010b311e487132230af3965f5bd1c547ae134cb3e12023c3e5d5752eb0746"
+    },
+    {
+      "path": "case-c/package/skills/_coco-shared/contracts.md",
+      "sha256": "c3b1a8bee660ff753d2f4af82ba495c0ab89a47b24c567565bb3902330d34e5b"
+    },
+    {
+      "path": "case-c/package/skills/_coco-shared/decisions.md",
+      "sha256": "cd85a68726a9001f96dd6ea4ec94a064d5e343885b9e1201586cc91757c29652"
+    },
+    {
+      "path": "case-c/package/skills/coco-review/SKILL.md",
+      "sha256": "59d9093a980d417cc47cf61a99daccb681060f5ce093f822965bdc02a5ad51bf"
+    },
+    {
+      "path": "case-c/package/skills/coco-review/references/team-checks.md",
+      "sha256": "79dd5dcf27c1bfaab510f45c182d118b99d793407c5a6fae1978d9386fb3fb25"
+    },
+    {
+      "path": "case-c/package/skills/coco-review/agents/openai.yaml",
+      "sha256": "2955b95754327f09f0682eb14a3b8de850c5a2bf503313ce3cd81a4d52f89a49"
+    },
+    {
+      "path": "case-b/before.json",
+      "sha256": "7a1454f3e92cbfacbf7900b17627f3a9e5b893b67bfea33d89660387862f4d87"
+    },
+    {
+      "path": "case-b/change-basis.md",
+      "sha256": "84d61339149ee06109ca2c4b3ff059c57d0f2b9b77ebd0ab84c39de04a6bcac7"
+    },
+    {
+      "path": "case-b/commands.jsonl",
+      "sha256": "bdcfc3dad0e536acef16e50bba77eb284bfae0142512a31c05da668ec357a7b6"
+    },
+    {
+      "path": "case-b/after.json",
+      "sha256": "0eb8f26c80f5dd94ebffef380037038cf19cb4ccc8a8af3faac5a5347ebedf5e"
+    },
+    {
+      "path": "case-b/request.md",
+      "sha256": "f6f70d569b9a34ee4c7cc50113ae17e9b555d839ef5fa79b6691c4b25c1d77d2"
+    },
+    {
+      "path": "case-b/proposal.md",
+      "sha256": "62f7fff7a743d141ca71d37ec964c0887e028b763dadb9f991be3204dbe1d970"
+    },
+    {
+      "path": "case-b/installed/.coco-install.json",
+      "sha256": "5455e257b89cbca058b1f0d9495910e556777149bdc0a7be5652138927a67611"
+    },
+    {
+      "path": "case-b/installed/unrelated-user-note.md",
+      "sha256": "3b462ed58adbd69a22657afa3ce0baa3270068a27421b0624238071448573036"
+    },
+    {
+      "path": "case-b/installed/coco-build/SKILL.md",
+      "sha256": "7d62929f58c907182360656f46cb32fa3d1efafd130c7cc5dbc0bf95931a22c8"
+    },
+    {
+      "path": "case-b/installed/coco-build/references/team-checks.md",
+      "sha256": "6c52c8aceff894b93ed5931a652d0b4b8f24dacdce2626c2ac5bf1e3d7088ad4"
+    },
+    {
+      "path": "case-b/installed/coco-build/agents/openai.yaml",
+      "sha256": "0fa010b311e487132230af3965f5bd1c547ae134cb3e12023c3e5d5752eb0746"
+    },
+    {
+      "path": "case-b/installed/user-only-skill/SKILL.md",
+      "sha256": "117809b55d5db8005283659e2b35f71a40b45d0b1a86da1d8dca42c93a92fa27"
+    },
+    {
+      "path": "case-b/installed/_coco-shared/contracts.md",
+      "sha256": "2d983f92b76d6b27cad84cb449b829598be506cad5deeb42f9918270d44dc02c"
+    },
+    {
+      "path": "case-b/installed/_coco-shared/decisions.md",
+      "sha256": "2c938755f4d1778bb6602d1ece7da9f6b8141261a12df2c5dd0c1ba96cc210cb"
+    },
+    {
+      "path": "case-b/installed/coco-review/SKILL.md",
+      "sha256": "8afb0970c3aeb06c36a634e39e1c01dcc826eab9958e6ed5612909de47a2a4d0"
+    },
+    {
+      "path": "case-b/installed/coco-review/references/team-checks.md",
+      "sha256": "6c52c8aceff894b93ed5931a652d0b4b8f24dacdce2626c2ac5bf1e3d7088ad4"
+    },
+    {
+      "path": "case-b/installed/coco-review/agents/openai.yaml",
+      "sha256": "2955b95754327f09f0682eb14a3b8de850c5a2bf503313ce3cd81a4d52f89a49"
+    },
+    {
+      "path": "case-b/package/coco.json",
+      "sha256": "b332fa10ff04202ba1e28a4b86c1ab60a6defd5cc00286d15103a42e7cff2f94"
+    },
+    {
+      "path": "case-b/package/README.md",
+      "sha256": "ce8366c3a6536af45882d7b7dc97dbf54b8f9b391235ec1678030341bbfead86"
+    },
+    {
+      "path": "case-b/package/AGENTS.md",
+      "sha256": "0d9aff6d7b7497212fb0934657e7f05224cac92823738c7eb390578e8eb83fb5"
+    },
+    {
+      "path": "case-b/package/tests/test_fixture.py",
+      "sha256": "af247c639f1258fdca3819e8d1c02d4fcebf8efcf8c4ad70de16d7bd73bfe2cd"
+    },
+    {
+      "path": "case-b/package/scripts/validate.py",
+      "sha256": "64d2b092c43a98a01b3eaf5a1b9255be40322a4ad38c09129d2124435455a81a"
+    },
+    {
+      "path": "case-b/package/scripts/package_utils.py",
+      "sha256": "2fe984e7471f84ea9fa6983f06cfbe1218477c95c167f8206fb09558e4edd277"
+    },
+    {
+      "path": "case-b/package/scripts/install.py",
+      "sha256": "fab48dcd907456f15bac9b496a1696c8837bf8de4f5630ee3de63ad1805e2f6e"
+    },
+    {
+      "path": "case-b/package/.github/workflows/checks.yml",
+      "sha256": "46ba4c501599234d13325ac6183be6a098f447013eac979c32688b86b3256d96"
+    },
+    {
+      "path": "case-b/package/sources/manifest.json",
+      "sha256": "afcfb7130832defe65193041d82ca9e7fad0df3066b5b5e92cb1ab0386d990d8"
+    },
+    {
+      "path": "case-b/package/sources/coverage.json",
+      "sha256": "88bca0bfe3ea0db4e29dc3d95d3274d832c49c8ec252f11de652b0d6c1f8c99c"
+    },
+    {
+      "path": "case-b/package/sources/synthetic/build.source",
+      "sha256": "ea99a21bc6d5e81b45e7df2947c40970d4693b62bb46eccba716a65cb6a12cab"
+    },
+    {
+      "path": "case-b/package/skills/coco-build/SKILL.md",
+      "sha256": "7d62929f58c907182360656f46cb32fa3d1efafd130c7cc5dbc0bf95931a22c8"
+    },
+    {
+      "path": "case-b/package/skills/coco-build/references/team-checks.md",
+      "sha256": "6c52c8aceff894b93ed5931a652d0b4b8f24dacdce2626c2ac5bf1e3d7088ad4"
+    },
+    {
+      "path": "case-b/package/skills/coco-build/agents/openai.yaml",
+      "sha256": "0fa010b311e487132230af3965f5bd1c547ae134cb3e12023c3e5d5752eb0746"
+    },
+    {
+      "path": "case-b/package/skills/_coco-shared/contracts.md",
+      "sha256": "2d983f92b76d6b27cad84cb449b829598be506cad5deeb42f9918270d44dc02c"
+    },
+    {
+      "path": "case-b/package/skills/_coco-shared/decisions.md",
+      "sha256": "2c938755f4d1778bb6602d1ece7da9f6b8141261a12df2c5dd0c1ba96cc210cb"
+    },
+    {
+      "path": "case-b/package/skills/coco-review/SKILL.md",
+      "sha256": "8afb0970c3aeb06c36a634e39e1c01dcc826eab9958e6ed5612909de47a2a4d0"
+    },
+    {
+      "path": "case-b/package/skills/coco-review/references/team-checks.md",
+      "sha256": "6c52c8aceff894b93ed5931a652d0b4b8f24dacdce2626c2ac5bf1e3d7088ad4"
+    },
+    {
+      "path": "case-b/package/skills/coco-review/agents/openai.yaml",
+      "sha256": "2955b95754327f09f0682eb14a3b8de850c5a2bf503313ce3cd81a4d52f89a49"
+    },
+    {
+      "path": "case-a/before.json",
+      "sha256": "7a1454f3e92cbfacbf7900b17627f3a9e5b893b67bfea33d89660387862f4d87"
+    },
+    {
+      "path": "case-a/change-basis.md",
+      "sha256": "84d61339149ee06109ca2c4b3ff059c57d0f2b9b77ebd0ab84c39de04a6bcac7"
+    },
+    {
+      "path": "case-a/commands.jsonl",
+      "sha256": "6431e2ed1704e3fdf730b198883215dc61cf62074a996d8f40f626d4a4376dd6"
+    },
+    {
+      "path": "case-a/source-change.diff",
+      "sha256": "7728618d3cd359d59a922350252627ea6d6a3d4a1f2b1a6a2a746a3d5f9b67a5"
+    },
+    {
+      "path": "case-a/after.json",
+      "sha256": "464392e393450e0eed6d88de24eb6527e23dfb2fcef3f4a5ad2b2cb805c394ef"
+    },
+    {
+      "path": "case-a/request.md",
+      "sha256": "4a74cbb1698d1e16bb51db0c177866bf56422eeb904f6240d7e527426791a404"
+    },
+    {
+      "path": "case-a/caller-and-rule-inspection.txt",
+      "sha256": "20003fe8f112f25d47b0f4cbdd9b3b857d6f27e4a5540c466893fa24993ace7a"
+    },
+    {
+      "path": "case-a/installed/.coco-install.json",
+      "sha256": "8acc764d8f456dbfbe6704bc0ccec7642e9eb77a111fdd2685db9be1568188d8"
+    },
+    {
+      "path": "case-a/installed/unrelated-user-note.md",
+      "sha256": "3b462ed58adbd69a22657afa3ce0baa3270068a27421b0624238071448573036"
+    },
+    {
+      "path": "case-a/installed/coco-build/SKILL.md",
+      "sha256": "574b36e80fbea12cc60444a281a34e074f24c053300768d230d30a14210db22d"
+    },
+    {
+      "path": "case-a/installed/coco-build/references/team-checks.md",
+      "sha256": "79dd5dcf27c1bfaab510f45c182d118b99d793407c5a6fae1978d9386fb3fb25"
+    },
+    {
+      "path": "case-a/installed/coco-build/agents/openai.yaml",
+      "sha256": "0fa010b311e487132230af3965f5bd1c547ae134cb3e12023c3e5d5752eb0746"
+    },
+    {
+      "path": "case-a/installed/user-only-skill/SKILL.md",
+      "sha256": "117809b55d5db8005283659e2b35f71a40b45d0b1a86da1d8dca42c93a92fa27"
+    },
+    {
+      "path": "case-a/installed/_coco-shared/contracts.md",
+      "sha256": "c3b1a8bee660ff753d2f4af82ba495c0ab89a47b24c567565bb3902330d34e5b"
+    },
+    {
+      "path": "case-a/installed/_coco-shared/decisions.md",
+      "sha256": "cd85a68726a9001f96dd6ea4ec94a064d5e343885b9e1201586cc91757c29652"
+    },
+    {
+      "path": "case-a/installed/coco-review/SKILL.md",
+      "sha256": "59d9093a980d417cc47cf61a99daccb681060f5ce093f822965bdc02a5ad51bf"
+    },
+    {
+      "path": "case-a/installed/coco-review/references/team-checks.md",
+      "sha256": "79dd5dcf27c1bfaab510f45c182d118b99d793407c5a6fae1978d9386fb3fb25"
+    },
+    {
+      "path": "case-a/installed/coco-review/agents/openai.yaml",
+      "sha256": "2955b95754327f09f0682eb14a3b8de850c5a2bf503313ce3cd81a4d52f89a49"
+    },
+    {
+      "path": "case-a/package/coco.json",
+      "sha256": "b332fa10ff04202ba1e28a4b86c1ab60a6defd5cc00286d15103a42e7cff2f94"
+    },
+    {
+      "path": "case-a/package/README.md",
+      "sha256": "353f30febe0ce20a0f24c4afd4ccaa8d10ff3fabcb8039975cdad44b93d3717f"
+    },
+    {
+      "path": "case-a/package/AGENTS.md",
+      "sha256": "0d9aff6d7b7497212fb0934657e7f05224cac92823738c7eb390578e8eb83fb5"
+    },
+    {
+      "path": "case-a/package/tests/test_fixture.py",
+      "sha256": "af247c639f1258fdca3819e8d1c02d4fcebf8efcf8c4ad70de16d7bd73bfe2cd"
+    },
+    {
+      "path": "case-a/package/scripts/validate.py",
+      "sha256": "64d2b092c43a98a01b3eaf5a1b9255be40322a4ad38c09129d2124435455a81a"
+    },
+    {
+      "path": "case-a/package/scripts/package_utils.py",
+      "sha256": "2fe984e7471f84ea9fa6983f06cfbe1218477c95c167f8206fb09558e4edd277"
+    },
+    {
+      "path": "case-a/package/scripts/install.py",
+      "sha256": "fab48dcd907456f15bac9b496a1696c8837bf8de4f5630ee3de63ad1805e2f6e"
+    },
+    {
+      "path": "case-a/package/.github/workflows/checks.yml",
+      "sha256": "46ba4c501599234d13325ac6183be6a098f447013eac979c32688b86b3256d96"
+    },
+    {
+      "path": "case-a/package/sources/manifest.json",
+      "sha256": "afcfb7130832defe65193041d82ca9e7fad0df3066b5b5e92cb1ab0386d990d8"
+    },
+    {
+      "path": "case-a/package/sources/coverage.json",
+      "sha256": "e1be9fb3abe3730e7243464f01832ddbfe1f4dacfe6e77cd5b29dbaad9752036"
+    },
+    {
+      "path": "case-a/package/sources/synthetic/build.source",
+      "sha256": "ea99a21bc6d5e81b45e7df2947c40970d4693b62bb46eccba716a65cb6a12cab"
+    },
+    {
+      "path": "case-a/package/skills/coco-build/SKILL.md",
+      "sha256": "574b36e80fbea12cc60444a281a34e074f24c053300768d230d30a14210db22d"
+    },
+    {
+      "path": "case-a/package/skills/coco-build/references/team-checks.md",
+      "sha256": "79dd5dcf27c1bfaab510f45c182d118b99d793407c5a6fae1978d9386fb3fb25"
+    },
+    {
+      "path": "case-a/package/skills/coco-build/agents/openai.yaml",
+      "sha256": "0fa010b311e487132230af3965f5bd1c547ae134cb3e12023c3e5d5752eb0746"
+    },
+    {
+      "path": "case-a/package/skills/_coco-shared/contracts.md",
+      "sha256": "c3b1a8bee660ff753d2f4af82ba495c0ab89a47b24c567565bb3902330d34e5b"
+    },
+    {
+      "path": "case-a/package/skills/_coco-shared/decisions.md",
+      "sha256": "cd85a68726a9001f96dd6ea4ec94a064d5e343885b9e1201586cc91757c29652"
+    },
+    {
+      "path": "case-a/package/skills/coco-review/SKILL.md",
+      "sha256": "59d9093a980d417cc47cf61a99daccb681060f5ce093f822965bdc02a5ad51bf"
+    },
+    {
+      "path": "case-a/package/skills/coco-review/references/team-checks.md",
+      "sha256": "79dd5dcf27c1bfaab510f45c182d118b99d793407c5a6fae1978d9386fb3fb25"
+    },
+    {
+      "path": "case-a/package/skills/coco-review/agents/openai.yaml",
+      "sha256": "2955b95754327f09f0682eb14a3b8de850c5a2bf503313ce3cd81a4d52f89a49"
+    }
+  ],
+  "excluded": [
+    ".git internals (histories exported as bundles)",
+    "__pycache__",
+    "symlinks"
+  ],
+  "note": "Raw reports/commands preserved unchanged; absolute paths identify the original run. Synthetic provenance is fixture data."
+}

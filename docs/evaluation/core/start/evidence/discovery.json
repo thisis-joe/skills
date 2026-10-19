@@ -1,0 +1,11 @@
+{
+  "cwd": "/tmp/lets-core-validation/start/repo",
+  "command": [
+    "python3",
+    "-c",
+    "from pathlib import Path; import subprocess; print(subprocess.check_output([\"git\",\"status\",\"--short\",\"--branch\"],text=True)); print(Path(\"README.md\").read_text()); print(Path(\"AGENTS.md\").read_text()); print(Path(\".github/workflows/ci.yml\").read_text()); print(\"spec/plan/task paths\",[str(p) for p in Path(\".\").rglob(\"*\") if \".git\" not in p.parts and any(t in p.name.lower() for t in [\"spec\",\"plan\",\"task\"])])"
+  ],
+  "exit_code": 0,
+  "stdout": "## main\n\n# Ledger helper\nPython 3 standard library. Run `python3 -m unittest discover -s tests -v`. CI is authoritative. Existing behavior is approved; no open feature plan or tracker exists.\n\nUse feature branches for feature work and one commit per work unit. Required check: python3 -m unittest discover -s tests -v.\n\nname: tests\non: [push]\njobs:\n  tests:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - run: python3 -m unittest discover -s tests -v\n\nspec/plan/task paths []\n",
+  "stderr": ""
+}

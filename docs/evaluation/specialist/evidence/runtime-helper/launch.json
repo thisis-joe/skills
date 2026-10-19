@@ -1,0 +1,6 @@
+{
+  "action": "launch",
+  "exit": 2,
+  "stdout": "{\"state\": \"blocked\", \"required\": \"/private/tmp/lets-specialist-validation/runtime-helper/fixture-state.json\", \"reason\": \"baseline fixture-state is absent; server not started\"}",
+  "instance_created": false
+}

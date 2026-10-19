@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-review"
+  short_description: "Purpose-led review with source-backed checks and evidence"
+  default_prompt: "Use $coco-review for the current request and provide its required result."

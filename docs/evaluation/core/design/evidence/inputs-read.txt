@@ -1,0 +1,14 @@
+$ python3 -c from pathlib import Path; import sys;
+for name in sys.argv[1:]: print(name+"\n"+Path(name).read_text()) input.md brief.md caller.py
+input.md
+Compare queue worker interfaces for a receipt-delivery service. At-least-once delivery, retries, worker crash and remote-send timeout may occur. Propose a small interface and test surface. Do not implement or send anything.
+
+brief.md
+One receipt per order version to one address; two distinct order versions represent distinct intents. Provider supports idempotency keys and read-only lookup by key. Local DB can enforce unique intent key and transactional writes. No current public API compatibility obligation. Same intent with changed address must conflict. Delivery status is customer visible; a send timeout does not establish outcome. Maximum redelivery/replay horizon is 30 days, operations require retention 45 days.
+
+caller.py
+def on_message(message, receipts):
+    return receipts.deliver(message.order_id, message.address)
+
+
+exit=0

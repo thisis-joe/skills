@@ -1,0 +1,24 @@
+$ python3 -c from pathlib import Path; import subprocess; print(subprocess.check_output(["git","status","--short","--branch"],text=True)); print(subprocess.check_output(["git","rev-parse","HEAD"],text=True)); print(Path("README.md").read_text()); print(Path("AGENTS.md").read_text()); print(Path("../task-state.json").read_text()); print(Path("NOTES.md").read_text())
+## feature/build
+ M NOTES.md
+
+3b16a6a282b39052ee1c18257f260869e01418b0
+
+# Greet CLI
+Python standard library only. Required: python3 -m unittest discover -s tests -v; python3 greet.py Ada; python3 greet.py Ada --excited. Authoritative task state: ../task-state.json. Existing public test boundary is subprocess CLI, approved.
+
+One feature branch per feature. One commit per task. Required scoped review before commit; self-review acceptable when independence unavailable, report its limit. Preserve user changes.
+
+{
+  "T1": {
+    "status": "ready",
+    "blockers": [],
+    "acceptance": "excited CLI prints Hello, Ada!; normal behavior preserved",
+    "commit": null
+  }
+}
+User notes baseline.
+Unrelated uncommitted user brainstorming: keep this intact.
+
+
+exit=0

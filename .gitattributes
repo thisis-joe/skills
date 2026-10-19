@@ -1,0 +1,7 @@
+# Keep pinned sources and recorded evaluation artifacts byte-for-byte stable.
+sources/** -text -whitespace
+docs/evaluation/** -text
+# These raw formats contain significant diff context / Git output whitespace.
+docs/evaluation/**/*.diff -whitespace
+docs/evaluation/**/*.porcelain -whitespace
+docs/evaluation/**/evidence/*.txt -whitespace

@@ -1,0 +1,203 @@
+{
+  "synthetic": [
+    {
+      "case": "push",
+      "command_data_only": "git push origin main",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: push is denied by project policy",
+      "pass": true
+    },
+    {
+      "case": "push flags",
+      "command_data_only": "git --no-pager -C \"folder with spaces\" push origin main",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: push is denied by project policy",
+      "pass": true
+    },
+    {
+      "case": "hard reset",
+      "command_data_only": "git reset --hard HEAD~1",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: hard reset is denied",
+      "pass": true
+    },
+    {
+      "case": "hard equals",
+      "command_data_only": "git reset --hard=HEAD",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: hard reset is denied",
+      "pass": true
+    },
+    {
+      "case": "forced clean",
+      "command_data_only": "git clean -fdx",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: forced clean is denied",
+      "pass": true
+    },
+    {
+      "case": "forced clean long",
+      "command_data_only": "git clean --force -d",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: forced clean is denied",
+      "pass": true
+    },
+    {
+      "case": "branch delete",
+      "command_data_only": "git branch -D feature/old",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: forced branch deletion is denied",
+      "pass": true
+    },
+    {
+      "case": "branch long",
+      "command_data_only": "git branch --delete --force feature/old",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: forced branch deletion is denied",
+      "pass": true
+    },
+    {
+      "case": "checkout dot",
+      "command_data_only": "git checkout -- .",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: whole-tree discard is denied (conservative dot-path match)",
+      "pass": true
+    },
+    {
+      "case": "restore dot",
+      "command_data_only": "git restore --worktree .",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: whole-tree discard is denied (conservative dot-path match)",
+      "pass": true
+    },
+    {
+      "case": "status",
+      "command_data_only": "git status --short",
+      "exit": 0,
+      "expected": 0,
+      "diagnostic": "",
+      "pass": true
+    },
+    {
+      "case": "quoted path",
+      "command_data_only": "git diff -- \"file with spaces.ts\"",
+      "exit": 0,
+      "expected": 0,
+      "diagnostic": "",
+      "pass": true
+    },
+    {
+      "case": "global flags",
+      "command_data_only": "git -c core.quotePath=false --git-dir=.git status",
+      "exit": 0,
+      "expected": 0,
+      "diagnostic": "",
+      "pass": true
+    },
+    {
+      "case": "compound",
+      "command_data_only": "git status && git push origin main",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: push is denied by project policy",
+      "pass": true
+    },
+    {
+      "case": "quoted literal",
+      "command_data_only": "printf \"git push origin main\"",
+      "exit": 0,
+      "expected": 0,
+      "diagnostic": "",
+      "pass": true
+    },
+    {
+      "case": "wrapper",
+      "command_data_only": "bash -c \"git push\"",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: unsupported command wrapper requires review",
+      "pass": true
+    },
+    {
+      "case": "substitution",
+      "command_data_only": "git $(printf push)",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: unsupported expansion/escape/heredoc requires review",
+      "pass": true
+    },
+    {
+      "case": "alias",
+      "command_data_only": "git -c alias.safe=push safe",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: Git aliases require review",
+      "pass": true
+    },
+    {
+      "case": "invalid quoting",
+      "command_data_only": "git status '",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: malformed payload or unsupported quoting",
+      "pass": true
+    },
+    {
+      "case": "pipe",
+      "command_data_only": "printf x | git push origin main",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: push is denied by project policy",
+      "pass": true
+    },
+    {
+      "case": "newline",
+      "command_data_only": "git status\ngit push",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: push is denied by project policy",
+      "pass": true
+    },
+    {
+      "case": "bad JSON",
+      "payload": "{",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: malformed payload or unsupported quoting",
+      "pass": true
+    },
+    {
+      "case": "missing command",
+      "payload": "{\"tool_input\":{}}",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: missing command string",
+      "pass": true
+    },
+    {
+      "case": "wrong command type",
+      "payload": "{\"tool_input\":{\"command\":[]}}",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: missing command string",
+      "pass": true
+    }
+  ],
+  "all_passed": true,
+  "local_dispatch": {
+    "simulated_runtime": true,
+    "other_hook_ran": true,
+    "harmless_git_status_exit": 0
+  },
+  "real_claude_interception": "unavailable: claude executable absent"
+}

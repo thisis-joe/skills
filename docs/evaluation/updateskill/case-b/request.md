@@ -1,0 +1,1 @@
+Proposal-only request: Review how to improve existing coco-build check selection for the current team package. Give a concrete modification proposal and caller/provenance/installation impact only. Do not change maintained source or installed files, and do not commit or install.

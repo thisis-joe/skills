@@ -1,0 +1,11 @@
+{
+  "check_type": "static document completeness, not workflow execution",
+  "checks": {
+    "notes_preserved": true,
+    "authority_and_open_decisions": true,
+    "stable_stages": true,
+    "retry_and_recovery": true,
+    "server_credential_boundary": true,
+    "activation_and_runtime_limits": true
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "fixture": "case-c/package",
+    "bundle": "git-history/case-c__package.bundle"
+  },
+  {
+    "fixture": "case-b/package",
+    "bundle": "git-history/case-b__package.bundle"
+  },
+  {
+    "fixture": "case-a/package",
+    "bundle": "git-history/case-a__package.bundle"
+  }
+]

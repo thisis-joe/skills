@@ -1,0 +1,18 @@
+[
+  {
+    "id": "coco-tellmeskill",
+    "path": "skills/coco-tellmeskill/SKILL.md"
+  },
+  {
+    "id": "coco-verify",
+    "path": "skills/coco-verify/SKILL.md"
+  },
+  {
+    "id": "coco-whattosay",
+    "path": "skills/coco-whattosay/SKILL.md"
+  },
+  {
+    "id": "fixture-report",
+    "path": "skills/fixture-report/SKILL.md"
+  }
+]

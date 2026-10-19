@@ -1,0 +1,219 @@
+[
+  {
+    "command": [
+      "git",
+      "init",
+      "-b",
+      "fixture/main"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case8-quality/setup-project",
+    "exit": 0,
+    "evidence": "evidence/setup-project-init.txt"
+  },
+  {
+    "command": [
+      "git",
+      "add",
+      "--",
+      "src/report.py",
+      "tests/test_report.py",
+      "artifacts/coverage.json",
+      "README.md",
+      ".github/workflows/check.yml",
+      "TASKS.md"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case8-quality/setup-project",
+    "exit": 0,
+    "evidence": "evidence/setup-project-stage.txt"
+  },
+  {
+    "command": [
+      "git",
+      "commit",
+      "-m",
+      "fixture: establish baseline"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case8-quality/setup-project",
+    "exit": 0,
+    "evidence": "evidence/setup-project-baseline.txt"
+  },
+  {
+    "command": [
+      "git",
+      "switch",
+      "-c",
+      "feature/setup-project"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case8-quality/setup-project",
+    "exit": 0,
+    "evidence": "evidence/setup-project-branch.txt"
+  },
+  {
+    "command": [
+      "git",
+      "init",
+      "-b",
+      "fixture/main"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case8-quality/audit-project",
+    "exit": 0,
+    "evidence": "evidence/audit-project-init.txt"
+  },
+  {
+    "command": [
+      "git",
+      "add",
+      "--",
+      "src/report.py",
+      "tests/test_report.py",
+      "artifacts/coverage.json",
+      "README.md",
+      ".github/workflows/check.yml",
+      "TASKS.md",
+      "CONSTRAINTS.md",
+      "quality.json"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case8-quality/audit-project",
+    "exit": 0,
+    "evidence": "evidence/audit-project-stage.txt"
+  },
+  {
+    "command": [
+      "git",
+      "commit",
+      "-m",
+      "fixture: establish baseline"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case8-quality/audit-project",
+    "exit": 0,
+    "evidence": "evidence/audit-project-baseline.txt"
+  },
+  {
+    "command": [
+      "git",
+      "switch",
+      "-c",
+      "feature/audit-project"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case8-quality/audit-project",
+    "exit": 0,
+    "evidence": "evidence/audit-project-branch.txt"
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "fixture/main"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case8-quality/setup-project",
+    "exit": 0,
+    "evidence": "evidence/setup-base.txt"
+  },
+  {
+    "command": [
+      "python3",
+      "/tmp/lets-conditional-validation/case8-quality/floor_guard.py",
+      "--repo",
+      "/tmp/lets-conditional-validation/case8-quality/setup-project",
+      "--base",
+      "fixture/main"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case8-quality/setup-project",
+    "exit": 0,
+    "evidence": "evidence/setup-floor-clean.txt"
+  },
+  {
+    "command": [
+      "python3",
+      "-m",
+      "py_compile",
+      "src/report.py"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case8-quality/setup-project",
+    "exit": 0,
+    "evidence": "evidence/setup-syntax.txt"
+  },
+  {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case8-quality/setup-project",
+    "exit": 0,
+    "evidence": "evidence/setup-tests.txt"
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "fixture/main"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case8-quality/audit-project",
+    "exit": 0,
+    "evidence": "evidence/audit-base.txt"
+  },
+  {
+    "command": [
+      "git",
+      "add",
+      "--",
+      "src/report.py"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case8-quality/audit-project",
+    "exit": 0,
+    "evidence": "evidence/audit-committed-stage.txt"
+  },
+  {
+    "command": [
+      "git",
+      "commit",
+      "-m",
+      "fixture: add source suppression"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case8-quality/audit-project",
+    "exit": 0,
+    "evidence": "evidence/audit-committed-change.txt"
+  },
+  {
+    "command": [
+      "git",
+      "add",
+      "--",
+      "quality.json"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case8-quality/audit-project",
+    "exit": 0,
+    "evidence": "evidence/audit-staged-policy.txt"
+  },
+  {
+    "command": [
+      "python3",
+      "/tmp/lets-conditional-validation/case8-quality/floor_guard.py",
+      "--repo",
+      "/tmp/lets-conditional-validation/case8-quality/audit-project",
+      "--base",
+      "fixture/main"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case8-quality/audit-project",
+    "exit": 1,
+    "evidence": "evidence/audit-floor-violation.txt"
+  },
+  {
+    "command": [
+      "python3",
+      "/tmp/lets-conditional-validation/case8-quality/floor_guard.py",
+      "--repo",
+      "/tmp/lets-conditional-validation/case8-quality/audit-project",
+      "--base",
+      "does-not-exist"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case8-quality/audit-project",
+    "exit": 2,
+    "evidence": "evidence/audit-floor-unavailable.txt"
+  }
+]

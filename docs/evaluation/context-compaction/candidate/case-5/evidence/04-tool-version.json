@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python3",
+    "--version"
+  ],
+  "exit_code": 0,
+  "stdout": "Python 3.9.6\n",
+  "stderr": "",
+  "status": "passed"
+}

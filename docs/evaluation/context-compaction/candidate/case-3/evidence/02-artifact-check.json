@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "-c",
+    "from pathlib import Path; p=Path('WORKFLOW.md'); s=p.read_text(); required=['Status: specification prepared; inactive.', 'Source identity and adapter undecided; disabled', 'one configured coordinator', 'payload digest', 'before retry', 'zero writes', 'compensat', 'No schedule', 'Next work is a separately scoped implementation']; assert all(x.lower() in s.lower() for x in required); assert Path('NOTES.md').is_file(); print('PASS: artifact exists, explicit inactive boundary and required specification constraints present. Runtime workflow and external integrations were not exercised.')"
+  ],
+  "exit_code": 0,
+  "stdout": "PASS: artifact exists, explicit inactive boundary and required specification constraints present. Runtime workflow and external integrations were not exercised.\n",
+  "stderr": "",
+  "status": "passed",
+  "claim": "Static artifact completeness only, not workflow runtime behavior."
+}

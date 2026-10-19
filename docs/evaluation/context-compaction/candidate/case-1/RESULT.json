@@ -1,0 +1,75 @@
+{
+  "case": "case-1",
+  "outcome": "passed",
+  "claim": "Shipped CLI doubles 3 to 6 and -4 to -8; existing checks pass.",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "app.py",
+        "--double",
+        "3"
+      ],
+      "exit_code": 0,
+      "stdout": "6\n",
+      "stderr": "",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "python3",
+        "app.py",
+        "--double",
+        "-4"
+      ],
+      "exit_code": 0,
+      "stdout": "-8\n",
+      "stderr": "",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_double (test_app.CliTests) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.021s\n\nOK\n",
+      "status": "passed"
+    },
+    {
+      "command": "cleanup generated test_app bytecode and verify retained evidence/source hashes",
+      "exit_code": 0,
+      "stdout": "{\"removed_owned_cache\": [], \"sources_unchanged\": true, \"evidence_retained\": true}\n",
+      "stderr": "",
+      "status": "passed"
+    }
+  ],
+  "evidence_paths": [
+    "evidence/01.json",
+    "evidence/01.stderr",
+    "evidence/01.stdout",
+    "evidence/02.json",
+    "evidence/02.stderr",
+    "evidence/02.stdout",
+    "evidence/03.json",
+    "evidence/03.stderr",
+    "evidence/03.stdout",
+    "evidence/04-cleanup.json",
+    "evidence/04-cleanup.stderr",
+    "evidence/04-cleanup.stdout",
+    "evidence/snapshot.json"
+  ],
+  "modified_files": [],
+  "missing_prerequisites": [],
+  "limits": [
+    "Checks cover the requested double inputs and existing unittest only; no claim of exhaustive CLI coverage."
+  ],
+  "snapshot": {
+    "README.md": "222fb4c4a4d9c7b9aaf9a0a27c3bc454393861a63c494eb63f6a0d843d92a296",
+    "app.py": "7ea18480b723397aa1e243ea4d3b4991673b7aeedb4950c0aac94326b6308555",
+    "test_app.py": "927ac4a3b173cc10fc624c756cafabefe4082885ed2006e9e911e88703cf85d7"
+  }
+}

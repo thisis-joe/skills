@@ -1,0 +1,13 @@
+{
+  "required_checks": {
+    "suite": "evidence/fixture-green.json",
+    "runtime": "evidence/fixture-runtime.json",
+    "review": "fixture-review.md"
+  },
+  "files": {
+    "double.py": "225720b8825667245511593a05c0e1492738218ecbf027750255744c3292d0cc",
+    "tests/test_double.py": "cea265f7656931163b44c84129c0b2297346c6414f3155f8bd12a41922d732e3",
+    "README.md": "ffdcdecb69b8ad2037a19f71229d5c74795c05501cb03a02513d35f455595fa1"
+  },
+  "review_independence": "degraded self-review"
+}

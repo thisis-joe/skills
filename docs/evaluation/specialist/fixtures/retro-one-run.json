@@ -1,0 +1,11 @@
+{
+  "source": "constructed biased evaluation summary from supplied scenario",
+  "completed_tasks": 1,
+  "author_selected_task": true,
+  "baseline_count": 0,
+  "held_out": false,
+  "rubric_frozen_before_run": false,
+  "blind_judge": false,
+  "reported_score": 1,
+  "reported_claim": "skill improved quality"
+}

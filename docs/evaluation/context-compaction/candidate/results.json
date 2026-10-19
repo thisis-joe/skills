@@ -1,0 +1,566 @@
+[
+  {
+    "case": "case-1",
+    "outcome": "passed",
+    "claim": "Shipped CLI doubles 3 to 6 and -4 to -8; existing checks pass.",
+    "commands": [
+      {
+        "command": [
+          "python3",
+          "app.py",
+          "--double",
+          "3"
+        ],
+        "exit_code": 0,
+        "stdout": "6\n",
+        "stderr": "",
+        "status": "passed"
+      },
+      {
+        "command": [
+          "python3",
+          "app.py",
+          "--double",
+          "-4"
+        ],
+        "exit_code": 0,
+        "stdout": "-8\n",
+        "stderr": "",
+        "status": "passed"
+      },
+      {
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "-v"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "test_double (test_app.CliTests) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.021s\n\nOK\n",
+        "status": "passed"
+      },
+      {
+        "command": "cleanup generated test_app bytecode and verify retained evidence/source hashes",
+        "exit_code": 0,
+        "stdout": "{\"removed_owned_cache\": [], \"sources_unchanged\": true, \"evidence_retained\": true}\n",
+        "stderr": "",
+        "status": "passed"
+      }
+    ],
+    "evidence_paths": [
+      "evidence/01.json",
+      "evidence/01.stderr",
+      "evidence/01.stdout",
+      "evidence/02.json",
+      "evidence/02.stderr",
+      "evidence/02.stdout",
+      "evidence/03.json",
+      "evidence/03.stderr",
+      "evidence/03.stdout",
+      "evidence/04-cleanup.json",
+      "evidence/04-cleanup.stderr",
+      "evidence/04-cleanup.stdout",
+      "evidence/snapshot.json"
+    ],
+    "modified_files": [],
+    "missing_prerequisites": [],
+    "limits": [
+      "Checks cover the requested double inputs and existing unittest only; no claim of exhaustive CLI coverage."
+    ],
+    "snapshot": {
+      "README.md": "222fb4c4a4d9c7b9aaf9a0a27c3bc454393861a63c494eb63f6a0d843d92a296",
+      "app.py": "7ea18480b723397aa1e243ea4d3b4991673b7aeedb4950c0aac94326b6308555",
+      "test_app.py": "927ac4a3b173cc10fc624c756cafabefe4082885ed2006e9e911e88703cf85d7"
+    }
+  },
+  {
+    "case": "case-2",
+    "outcome": "changed",
+    "claim": "Maintain complete source/live feature map for the current CLI.",
+    "commands": [
+      {
+        "name": "doctor",
+        "command": [
+          "python3",
+          "app.py",
+          "--help"
+        ],
+        "expected_exit": 0,
+        "expected_stdout": null,
+        "expected_markers": [
+          "--double",
+          "--triple"
+        ],
+        "exit_code": 0,
+        "stdout": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\n\noptional arguments:\n  -h, --help       show this help message and exit\n  --double DOUBLE\n  --triple TRIPLE\n",
+        "stderr": "",
+        "status": "passed"
+      },
+      {
+        "name": "double_positive",
+        "command": [
+          "python3",
+          "app.py",
+          "--double",
+          "3"
+        ],
+        "expected_exit": 0,
+        "expected_stdout": "6\n",
+        "expected_markers": [],
+        "exit_code": 0,
+        "stdout": "6\n",
+        "stderr": "",
+        "status": "passed"
+      },
+      {
+        "name": "double_negative",
+        "command": [
+          "python3",
+          "app.py",
+          "--double",
+          "-4"
+        ],
+        "expected_exit": 0,
+        "expected_stdout": "-8\n",
+        "expected_markers": [],
+        "exit_code": 0,
+        "stdout": "-8\n",
+        "stderr": "",
+        "status": "passed"
+      },
+      {
+        "name": "double_zero",
+        "command": [
+          "python3",
+          "app.py",
+          "--double",
+          "0"
+        ],
+        "expected_exit": 0,
+        "expected_stdout": "0\n",
+        "expected_markers": [],
+        "exit_code": 0,
+        "stdout": "0\n",
+        "stderr": "",
+        "status": "passed"
+      },
+      {
+        "name": "triple_positive",
+        "command": [
+          "python3",
+          "app.py",
+          "--triple",
+          "3"
+        ],
+        "expected_exit": 0,
+        "expected_stdout": "9\n",
+        "expected_markers": [],
+        "exit_code": 0,
+        "stdout": "9\n",
+        "stderr": "",
+        "status": "passed"
+      },
+      {
+        "name": "triple_negative",
+        "command": [
+          "python3",
+          "app.py",
+          "--triple",
+          "-4"
+        ],
+        "expected_exit": 0,
+        "expected_stdout": "-12\n",
+        "expected_markers": [],
+        "exit_code": 0,
+        "stdout": "-12\n",
+        "stderr": "",
+        "status": "passed"
+      },
+      {
+        "name": "triple_zero",
+        "command": [
+          "python3",
+          "app.py",
+          "--triple",
+          "0"
+        ],
+        "expected_exit": 0,
+        "expected_stdout": "0\n",
+        "expected_markers": [],
+        "exit_code": 0,
+        "stdout": "0\n",
+        "stderr": "",
+        "status": "passed"
+      },
+      {
+        "name": "required",
+        "command": [
+          "python3",
+          "app.py"
+        ],
+        "expected_exit": 2,
+        "expected_stdout": "",
+        "expected_markers": [
+          "one of the arguments --double --triple is required"
+        ],
+        "exit_code": 2,
+        "stdout": "",
+        "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: one of the arguments --double --triple is required\n",
+        "status": "passed"
+      },
+      {
+        "name": "exclusive",
+        "command": [
+          "python3",
+          "app.py",
+          "--double",
+          "3",
+          "--triple",
+          "3"
+        ],
+        "expected_exit": 2,
+        "expected_stdout": "",
+        "expected_markers": [
+          "not allowed with argument"
+        ],
+        "exit_code": 2,
+        "stdout": "",
+        "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: argument --triple: not allowed with argument --double\n",
+        "status": "passed"
+      },
+      {
+        "name": "double_type",
+        "command": [
+          "python3",
+          "app.py",
+          "--double",
+          "abc"
+        ],
+        "expected_exit": 2,
+        "expected_stdout": "",
+        "expected_markers": [
+          "invalid int value"
+        ],
+        "exit_code": 2,
+        "stdout": "",
+        "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: argument --double: invalid int value: 'abc'\n",
+        "status": "passed"
+      },
+      {
+        "name": "triple_type",
+        "command": [
+          "python3",
+          "app.py",
+          "--triple",
+          "abc"
+        ],
+        "expected_exit": 2,
+        "expected_stdout": "",
+        "expected_markers": [
+          "invalid int value"
+        ],
+        "exit_code": 2,
+        "stdout": "",
+        "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: argument --triple: invalid int value: 'abc'\n",
+        "status": "passed"
+      },
+      {
+        "name": "unknown",
+        "command": [
+          "python3",
+          "app.py",
+          "--double",
+          "3",
+          "--unknown"
+        ],
+        "expected_exit": 2,
+        "expected_stdout": "",
+        "expected_markers": [
+          "unrecognized arguments"
+        ],
+        "exit_code": 2,
+        "stdout": "",
+        "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: unrecognized arguments: --unknown\n",
+        "status": "passed"
+      },
+      {
+        "name": "existing_checks",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "-v"
+        ],
+        "expected_exit": 0,
+        "expected_stdout": null,
+        "expected_markers": [
+          "OK"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "test_double (test_app.CliTests) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.018s\n\nOK\n",
+        "status": "passed"
+      },
+      {
+        "command": "local artifact and unchanged-source check after VERIFY.md update",
+        "exit_code": 0,
+        "stdout": "All 13 recorded checks passed; raw stdout/stderr exist; app.py and test_app.py hashes unchanged; no long-lived processes launched.\n",
+        "status": "passed"
+      }
+    ],
+    "evidence_paths": [
+      "evidence/01-doctor.json",
+      "evidence/01-doctor.stderr",
+      "evidence/01-doctor.stdout",
+      "evidence/02-double_positive.json",
+      "evidence/02-double_positive.stderr",
+      "evidence/02-double_positive.stdout",
+      "evidence/03-double_negative.json",
+      "evidence/03-double_negative.stderr",
+      "evidence/03-double_negative.stdout",
+      "evidence/04-double_zero.json",
+      "evidence/04-double_zero.stderr",
+      "evidence/04-double_zero.stdout",
+      "evidence/05-triple_positive.json",
+      "evidence/05-triple_positive.stderr",
+      "evidence/05-triple_positive.stdout",
+      "evidence/06-triple_negative.json",
+      "evidence/06-triple_negative.stderr",
+      "evidence/06-triple_negative.stdout",
+      "evidence/07-triple_zero.json",
+      "evidence/07-triple_zero.stderr",
+      "evidence/07-triple_zero.stdout",
+      "evidence/08-required.json",
+      "evidence/08-required.stderr",
+      "evidence/08-required.stdout",
+      "evidence/09-exclusive.json",
+      "evidence/09-exclusive.stderr",
+      "evidence/09-exclusive.stdout",
+      "evidence/10-double_type.json",
+      "evidence/10-double_type.stderr",
+      "evidence/10-double_type.stdout",
+      "evidence/11-triple_type.json",
+      "evidence/11-triple_type.stderr",
+      "evidence/11-triple_type.stdout",
+      "evidence/12-unknown.json",
+      "evidence/12-unknown.stderr",
+      "evidence/12-unknown.stdout",
+      "evidence/13-existing_checks.json",
+      "evidence/13-existing_checks.stderr",
+      "evidence/13-existing_checks.stdout",
+      "evidence/14-retention.json",
+      "evidence/snapshot.json"
+    ],
+    "modified_files": [
+      "VERIFY.md"
+    ],
+    "missing_prerequisites": [],
+    "limits": [
+      "Representative live inputs and parser states, not exhaustive integers or other runtimes."
+    ],
+    "snapshot": {
+      "README.md": "222fb4c4a4d9c7b9aaf9a0a27c3bc454393861a63c494eb63f6a0d843d92a296",
+      "app.py": "7ea18480b723397aa1e243ea4d3b4991673b7aeedb4950c0aac94326b6308555",
+      "test_app.py": "927ac4a3b173cc10fc624c756cafabefe4082885ed2006e9e911e88703cf85d7"
+    },
+    "finding": "VERIFY.md omitted --triple; all inspected user-facing features were exercised live, with no observed product regression."
+  },
+  {
+    "case": "case-3",
+    "outcome": "prepared",
+    "commands": [
+      {
+        "command": "Read NOTES.md locally",
+        "exit_code": 0,
+        "stdout": "Wanted artifact: a workflow specification for bug intake and a server-side webhook. No activation, scheduling, network requests or messages are authorized. Source and adapter identities are undecided.\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "python3",
+          "-c",
+          "from pathlib import Path; p=Path('WORKFLOW.md'); s=p.read_text(); required=['Status: specification prepared; inactive.', 'Source identity and adapter undecided; disabled', 'one configured coordinator', 'payload digest', 'before retry', 'zero writes', 'compensat', 'No schedule', 'Next work is a separately scoped implementation']; assert all(x.lower() in s.lower() for x in required); assert Path('NOTES.md').is_file(); print('PASS: artifact exists, explicit inactive boundary and required specification constraints present. Runtime workflow and external integrations were not exercised.')"
+        ],
+        "exit_code": 0,
+        "stdout": "PASS: artifact exists, explicit inactive boundary and required specification constraints present. Runtime workflow and external integrations were not exercised.\n",
+        "stderr": "",
+        "status": "passed",
+        "claim": "Static artifact completeness only, not workflow runtime behavior."
+      }
+    ],
+    "evidence_paths": [
+      "evidence/01-notes.json",
+      "evidence/01-notes.stderr",
+      "evidence/01-notes.stdout",
+      "evidence/02-artifact-check.json",
+      "evidence/02-artifact-check.stderr",
+      "evidence/02-artifact-check.stdout"
+    ],
+    "modified_files": [
+      "WORKFLOW.md"
+    ],
+    "missing_prerequisites": [
+      "Source and adapter identities",
+      "Repository, owner, marker, destination/field mappings, budgets and retention",
+      "Authenticated webhook runtime, secret facility, durable state and delivery readback",
+      "Separate implementation and activation authorization"
+    ],
+    "limits": [
+      "Specification-only task: no automation scenario, external service, schedule, installation, or message executed. Static checks do not establish runtime behavior."
+    ],
+    "snapshot": {
+      "NOTES.md": "7bf9b03d0bca70a8a96882337022166aab901ae0679bacec60c042c5dba18c71",
+      "WORKFLOW.md": "dcc3728f81008f6365c6858d2dd162f9576e0f59c5cb5319b0720831acd95bd3"
+    }
+  },
+  {
+    "case": "case-4",
+    "outcome": "blocked",
+    "assessment_status": "passed",
+    "commands": [
+      {
+        "command": [
+          "python3",
+          "-c",
+          "from pathlib import Path\nimport json\np=json.loads(Path('intake.json').read_text())\nmissing=[]\nif not p.get('trusted_identity'): missing.append('trusted configured verdict identity unavailable; ready cannot be accepted')\nif not p.get('tracker_compensation'): missing.append('tracker compensation unavailable; ticket/handoff writes disabled')\nif not p.get('control_adapter'): missing.append('control adapter unavailable; live reproduction and equal-input proof unavailable')\nprint(json.dumps({'source_thread':p.get('source_thread'),'verdict_marker':p.get('verdict_marker'),'accepted_marker':False,'safe_actions':['local file inspection','static prerequisite assessment','local evidence/report creation'],'blocked_actions':['marker-driven reproduction','bounded product fix','external replies/tickets/webhook writes','draft PR creation','merge/deploy'],'reasons':missing},indent=2))\nassert len(missing)==3\n"
+        ],
+        "exit_code": 0,
+        "stdout": "{\n  \"source_thread\": \"local-example/thread-7\",\n  \"verdict_marker\": \"ready\",\n  \"accepted_marker\": false,\n  \"safe_actions\": [\n    \"local file inspection\",\n    \"static prerequisite assessment\",\n    \"local evidence/report creation\"\n  ],\n  \"blocked_actions\": [\n    \"marker-driven reproduction\",\n    \"bounded product fix\",\n    \"external replies/tickets/webhook writes\",\n    \"draft PR creation\",\n    \"merge/deploy\"\n  ],\n  \"reasons\": [\n    \"trusted configured verdict identity unavailable; ready cannot be accepted\",\n    \"tracker compensation unavailable; ticket/handoff writes disabled\",\n    \"control adapter unavailable; live reproduction and equal-input proof unavailable\"\n  ]\n}\n",
+        "stderr": "",
+        "status": "passed",
+        "claim": "Local preflight assessment identifies missing trust, compensation and control prerequisites; this is not execution of an intake engine."
+      }
+    ],
+    "evidence_paths": [
+      "evidence/01-preflight.json",
+      "evidence/01-preflight.stderr",
+      "evidence/01-preflight.stdout",
+      "evidence/snapshot-after.json",
+      "evidence/snapshot-before.json"
+    ],
+    "modified_files": [
+      "ASSESSMENT.md"
+    ],
+    "missing_prerequisites": [
+      "Trusted verdict identity and authenticated original-root provenance",
+      "Tracker compensation capability",
+      "Application control adapter",
+      "Complete intake mappings, owner/PR/commit readback, freshness policy and budgets"
+    ],
+    "limits": [
+      "Only local static assessment ran. No marker-driven reproduction/fix or external writes were attempted. Product bytes unchanged."
+    ],
+    "snapshot": {
+      "intake.json": "589a3b06ce1dae986611f5a18c9779f5d217eb48f40227482a11afd54b8f8b1f",
+      "product.py": "37a5ddd282078173f597d9f32edb8e659e5a1b1ea0606d25da31c4c07876bad6"
+    }
+  },
+  {
+    "case": "case-5",
+    "outcome": "bug",
+    "maintenance_status": "updated",
+    "commands": [
+      {
+        "command": [
+          "python3",
+          "proof/check.py"
+        ],
+        "phase": "unchanged baseline before code/model inspection",
+        "exit_code": 0,
+        "stdout": "bounded model passed: balances 0..2, amounts 0..3\n",
+        "stderr": "",
+        "status": "passed",
+        "snapshot": {
+          "wallet.py": "c2a7fe2a389d179f1060189feffe4ce1675ad51bb4c3ad601daaf5e2968ffdc2",
+          "proof/check.py": "11110e7963b1a51482e19297ea8b02a398e6e9d0835b4b9ad00712e8f2628062",
+          "proof/README.md": "d84c561a9f3a718e9e7cdad8e1624ddaef6b9e5f6754fc1a15306103962bd3cc"
+        }
+      },
+      {
+        "command": [
+          "python3",
+          "proof/check.py"
+        ],
+        "exit_code": 1,
+        "stdout": "{\n  \"property\": \"balance stays nonnegative after spend\",\n  \"wallet_sha256\": \"c2a7fe2a389d179f1060189feffe4ce1675ad51bb4c3ad601daaf5e2968ffdc2\",\n  \"bounds\": {\n    \"balance\": [\n      0,\n      2\n    ],\n    \"amount\": [\n      0,\n      3\n    ],\n    \"steps\": 1\n  },\n  \"checked_input_pairs\": 12,\n  \"model_code_mismatches\": [],\n  \"counterexamples\": [\n    {\n      \"balance\": 0,\n      \"amount\": 1,\n      \"model_result\": -1,\n      \"actual_result\": -1\n    },\n    {\n      \"balance\": 0,\n      \"amount\": 2,\n      \"model_result\": -2,\n      \"actual_result\": -2\n    },\n    {\n      \"balance\": 0,\n      \"amount\": 3,\n      \"model_result\": -3,\n      \"actual_result\": -3\n    },\n    {\n      \"balance\": 1,\n      \"amount\": 2,\n      \"model_result\": -1,\n      \"actual_result\": -1\n    },\n    {\n      \"balance\": 1,\n      \"amount\": 3,\n      \"model_result\": -2,\n      \"actual_result\": -2\n    },\n    {\n      \"balance\": 2,\n      \"amount\": 3,\n      \"model_result\": -1,\n      \"actual_result\": -1\n    }\n  ],\n  \"status\": \"failed\"\n}\n",
+        "stderr": "",
+        "status": "failed"
+      },
+      {
+        "command": [
+          "python3",
+          "-c",
+          "from wallet import spend; balance, amount = 0, 1; actual = spend(balance, amount); print(f'spend(balance={balance}, amount={amount}) -> {actual}', flush=True); assert actual >= 0, f'nonnegative balance violated: {actual}'"
+        ],
+        "exit_code": 1,
+        "stdout": "spend(balance=0, amount=1) -> -1\n",
+        "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nAssertionError: nonnegative balance violated: -1\n",
+        "status": "failed"
+      },
+      {
+        "command": [
+          "python3",
+          "--version"
+        ],
+        "exit_code": 0,
+        "stdout": "Python 3.9.6\n",
+        "stderr": "",
+        "status": "passed"
+      },
+      {
+        "command": "local evidence retention, bounds, source-hash and report checks",
+        "exit_code": 0,
+        "stdout": "All recorded streams exist. wallet.py SHA-256 unchanged. Bounds retained at balances 0..2, amounts 0..3; 12 actual/model comparisons; six real negative outcomes; no mismatches.\n",
+        "status": "passed"
+      }
+    ],
+    "evidence_paths": [
+      "evidence/01-baseline.json",
+      "evidence/01-baseline.stderr",
+      "evidence/01-baseline.stdout",
+      "evidence/02-current-bounded-check.json",
+      "evidence/02-current-bounded-check.stderr",
+      "evidence/02-current-bounded-check.stdout",
+      "evidence/03-real-counterexample.json",
+      "evidence/03-real-counterexample.stderr",
+      "evidence/03-real-counterexample.stdout",
+      "evidence/04-tool-version.json",
+      "evidence/04-tool-version.stderr",
+      "evidence/04-tool-version.stdout",
+      "evidence/05-retention.json",
+      "evidence/original-README.md.txt",
+      "evidence/original-check.py.txt",
+      "evidence/snapshot-after.json",
+      "evidence/snapshot-before.json"
+    ],
+    "modified_files": [
+      "proof/check.py",
+      "proof/README.md"
+    ],
+    "missing_prerequisites": [
+      "Sync commit/history unavailable; original files are only a provisional baseline"
+    ],
+    "limits": [
+      "One sequential spend call over balances 0..2 and amounts 0..3 only. No unbounded proof or deployed-system verification.",
+      "No new pass: nonnegative property fails in six pairs and the minimal counterexample replays against real wallet.py.",
+      "wallet.py unchanged; product fix outside authorized verification scope."
+    ],
+    "snapshot_before": {
+      "wallet.py": "c2a7fe2a389d179f1060189feffe4ce1675ad51bb4c3ad601daaf5e2968ffdc2",
+      "proof/check.py": "11110e7963b1a51482e19297ea8b02a398e6e9d0835b4b9ad00712e8f2628062",
+      "proof/README.md": "d84c561a9f3a718e9e7cdad8e1624ddaef6b9e5f6754fc1a15306103962bd3cc"
+    },
+    "snapshot_after": {
+      "wallet.py": "c2a7fe2a389d179f1060189feffe4ce1675ad51bb4c3ad601daaf5e2968ffdc2",
+      "proof/check.py": "0b58a84fdf4e12cba36c6896bbdb1991362f0d7997bae671e44756c7efcd2b59",
+      "proof/README.md": "6568c12ac8a18a3ea3c9c54049560914debfb7e55982fb150bdfd7e890146ada"
+    },
+    "counterexample": {
+      "balance": 0,
+      "amount": 1,
+      "actual_result": -1
+    },
+    "classification": "Stale assumed overspend rejection corrected; real product violation confirmed."
+  }
+]

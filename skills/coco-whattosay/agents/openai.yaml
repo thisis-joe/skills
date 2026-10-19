@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-whattosay"
+  short_description: "Recommend contextual requests for a selected skill"
+  default_prompt: "Use $coco-whattosay to suggest contextual request options for the skill I selected and wait for my choice."

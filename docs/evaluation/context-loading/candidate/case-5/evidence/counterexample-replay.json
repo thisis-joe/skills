@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "-c",
+    "from wallet import spend; import json; result=spend(0,1); print(json.dumps({\"balance\":0,\"amount\":1,\"actual\":result}), flush=True); assert result >= 0, \"nonnegative balance violated\""
+  ],
+  "cwd": "/private/tmp/coco-context-loading-6bhlglo9/workspace-forest/case-5",
+  "exit_code": 1,
+  "stdout": "{\"balance\": 0, \"amount\": 1, \"actual\": -1}\n",
+  "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nAssertionError: nonnegative balance violated\n"
+}

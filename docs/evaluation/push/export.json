@@ -1,0 +1,379 @@
+{
+  "original_root": "/private/tmp/coco-push-validation",
+  "copied_files": [
+    {
+      "path": "runner.py",
+      "sha256": "2e7e5f6897ba7525f74cef02b4d1870c57701740e88662951ee90a266d881f18"
+    },
+    {
+      "path": "report.md",
+      "sha256": "ceea3967f51ac382c5990143626d4e8479da6c729085474504c9a3236177bc54"
+    },
+    {
+      "path": "results.json",
+      "sha256": "844af5eb32a52b0e6e3514581809cb2a0557cf8c6597f96c65891a683e5df5bb"
+    },
+    {
+      "path": "commands.jsonl",
+      "sha256": "6e227caf4eb9811b27e8b6e23c5b0a9e176ea38224e8160f59bac6d576dd5b52"
+    },
+    {
+      "path": "isolated.gitconfig",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "case-3/final.json",
+      "sha256": "22635501ac782593ca35df30e41bdfdbbeda1aa9f12f746cf4296a8365be0fc4"
+    },
+    {
+      "path": "case-3/initial.json",
+      "sha256": "22635501ac782593ca35df30e41bdfdbbeda1aa9f12f746cf4296a8365be0fc4"
+    },
+    {
+      "path": "case-3/seed/notes.txt",
+      "sha256": "7cbda8a4b4c11caa2b5abfa80557a7c35dfa4134cf9e3b41800621b29a2da093"
+    },
+    {
+      "path": "case-3/seed/quota.py",
+      "sha256": "d0159bf4d5546aff8d7c6a7a79da6e8a011ce3583c9f9e63660dc99c85fae874"
+    },
+    {
+      "path": "case-3/seed/app.py",
+      "sha256": "e06708fab3f15ff41d818041f633cebfec85051596454da352fbc0b38e4e0be3"
+    },
+    {
+      "path": "case-3/seed/AGENTS.md",
+      "sha256": "6b36688a409ccfdd996435ee87cad29e1cc86d1e1aebc02a0bc3bedb5d3e9150"
+    },
+    {
+      "path": "case-3/seed/tests/test_core.py",
+      "sha256": "e72ccefbd7f4910e542c40f1c250ca82a68d20ba22bab2dbb634f00607652fa8"
+    },
+    {
+      "path": "case-3/work/notes.txt",
+      "sha256": "7cbda8a4b4c11caa2b5abfa80557a7c35dfa4134cf9e3b41800621b29a2da093"
+    },
+    {
+      "path": "case-3/work/quota.py",
+      "sha256": "d0159bf4d5546aff8d7c6a7a79da6e8a011ce3583c9f9e63660dc99c85fae874"
+    },
+    {
+      "path": "case-3/work/app.py",
+      "sha256": "a55c14346b5c0e11da873793db175efd28d4840a330a5edba18d03d7d7310626"
+    },
+    {
+      "path": "case-3/work/AGENTS.md",
+      "sha256": "6b36688a409ccfdd996435ee87cad29e1cc86d1e1aebc02a0bc3bedb5d3e9150"
+    },
+    {
+      "path": "case-3/work/tests/test_feature.py",
+      "sha256": "a3df632cb7d2e61fc77ef8422532ae85d528b2d5200acddba53fb662a3ce2b9b"
+    },
+    {
+      "path": "case-3/work/tests/test_core.py",
+      "sha256": "e72ccefbd7f4910e542c40f1c250ca82a68d20ba22bab2dbb634f00607652fa8"
+    },
+    {
+      "path": "case-4/final.json",
+      "sha256": "acbced34e6cfb20779b62507131f98f1e68982d03746c4b00e5a76ef72c718df"
+    },
+    {
+      "path": "case-4/initial.json",
+      "sha256": "acbced34e6cfb20779b62507131f98f1e68982d03746c4b00e5a76ef72c718df"
+    },
+    {
+      "path": "case-4/seed/notes.txt",
+      "sha256": "7cbda8a4b4c11caa2b5abfa80557a7c35dfa4134cf9e3b41800621b29a2da093"
+    },
+    {
+      "path": "case-4/seed/quota.py",
+      "sha256": "d0159bf4d5546aff8d7c6a7a79da6e8a011ce3583c9f9e63660dc99c85fae874"
+    },
+    {
+      "path": "case-4/seed/app.py",
+      "sha256": "e06708fab3f15ff41d818041f633cebfec85051596454da352fbc0b38e4e0be3"
+    },
+    {
+      "path": "case-4/seed/AGENTS.md",
+      "sha256": "6b36688a409ccfdd996435ee87cad29e1cc86d1e1aebc02a0bc3bedb5d3e9150"
+    },
+    {
+      "path": "case-4/seed/tests/test_core.py",
+      "sha256": "e72ccefbd7f4910e542c40f1c250ca82a68d20ba22bab2dbb634f00607652fa8"
+    },
+    {
+      "path": "case-4/work/notes.txt",
+      "sha256": "14ee0f978ba25739773ee6655ef6e8657de9eaca64e3dba98c265b2621eaba70"
+    },
+    {
+      "path": "case-4/work/quota.py",
+      "sha256": "d0159bf4d5546aff8d7c6a7a79da6e8a011ce3583c9f9e63660dc99c85fae874"
+    },
+    {
+      "path": "case-4/work/app.py",
+      "sha256": "a55c14346b5c0e11da873793db175efd28d4840a330a5edba18d03d7d7310626"
+    },
+    {
+      "path": "case-4/work/AGENTS.md",
+      "sha256": "6b36688a409ccfdd996435ee87cad29e1cc86d1e1aebc02a0bc3bedb5d3e9150"
+    },
+    {
+      "path": "case-4/work/tests/test_feature.py",
+      "sha256": "a3df632cb7d2e61fc77ef8422532ae85d528b2d5200acddba53fb662a3ce2b9b"
+    },
+    {
+      "path": "case-4/work/tests/test_core.py",
+      "sha256": "e72ccefbd7f4910e542c40f1c250ca82a68d20ba22bab2dbb634f00607652fa8"
+    },
+    {
+      "path": "case-5/final.json",
+      "sha256": "4274bba0ae2ca783121b7a4f5fcbc99fe6adb1b5927ed9ce311c569d5cff3870"
+    },
+    {
+      "path": "case-5/initial.json",
+      "sha256": "ef5195179181fa214f900e5f8990f2d240a2c66162569c63e0b8c4c36a66be26"
+    },
+    {
+      "path": "case-5/seed/notes.txt",
+      "sha256": "7cbda8a4b4c11caa2b5abfa80557a7c35dfa4134cf9e3b41800621b29a2da093"
+    },
+    {
+      "path": "case-5/seed/quota.py",
+      "sha256": "d0159bf4d5546aff8d7c6a7a79da6e8a011ce3583c9f9e63660dc99c85fae874"
+    },
+    {
+      "path": "case-5/seed/app.py",
+      "sha256": "8f0ae199c923ea32022c9cedcb3866c3741e993e26819a103f7e9e03107df700"
+    },
+    {
+      "path": "case-5/seed/AGENTS.md",
+      "sha256": "6b36688a409ccfdd996435ee87cad29e1cc86d1e1aebc02a0bc3bedb5d3e9150"
+    },
+    {
+      "path": "case-5/seed/tests/test_required_quota.py",
+      "sha256": "0da9c99c4ac0a40e69ccc7fd8d8ae9c947b250f2e2ac4e3c451e8d1508dceae3"
+    },
+    {
+      "path": "case-5/seed/tests/test_core.py",
+      "sha256": "e72ccefbd7f4910e542c40f1c250ca82a68d20ba22bab2dbb634f00607652fa8"
+    },
+    {
+      "path": "case-5/seed/tests/test_develop.py",
+      "sha256": "a946bbb07f4d75702fc9ffa7342f47434e8e26b7f52466fa848036dff3c772b7"
+    },
+    {
+      "path": "case-5/work/notes.txt",
+      "sha256": "7cbda8a4b4c11caa2b5abfa80557a7c35dfa4134cf9e3b41800621b29a2da093"
+    },
+    {
+      "path": "case-5/work/quota.py",
+      "sha256": "d0159bf4d5546aff8d7c6a7a79da6e8a011ce3583c9f9e63660dc99c85fae874"
+    },
+    {
+      "path": "case-5/work/app.py",
+      "sha256": "9bb6db2ca3e423462eae12ce39588160c915558bf45f5d4e3c36cb2e8471c3b0"
+    },
+    {
+      "path": "case-5/work/AGENTS.md",
+      "sha256": "6b36688a409ccfdd996435ee87cad29e1cc86d1e1aebc02a0bc3bedb5d3e9150"
+    },
+    {
+      "path": "case-5/work/tests/test_required_quota.py",
+      "sha256": "0da9c99c4ac0a40e69ccc7fd8d8ae9c947b250f2e2ac4e3c451e8d1508dceae3"
+    },
+    {
+      "path": "case-5/work/tests/test_feature.py",
+      "sha256": "a3df632cb7d2e61fc77ef8422532ae85d528b2d5200acddba53fb662a3ce2b9b"
+    },
+    {
+      "path": "case-5/work/tests/test_core.py",
+      "sha256": "e72ccefbd7f4910e542c40f1c250ca82a68d20ba22bab2dbb634f00607652fa8"
+    },
+    {
+      "path": "case-5/work/tests/test_develop.py",
+      "sha256": "a946bbb07f4d75702fc9ffa7342f47434e8e26b7f52466fa848036dff3c772b7"
+    },
+    {
+      "path": "case-2/final.json",
+      "sha256": "4deb2c9c4adbaef7fc8a8dfb494b66bdb82cdeb89be70e90389b4750d826c3d4"
+    },
+    {
+      "path": "case-2/initial.json",
+      "sha256": "7a15bd16f04a100e8db36485251d157cd1d2906aacdd1fcd72474533c700e5ae"
+    },
+    {
+      "path": "case-2/seed/notes.txt",
+      "sha256": "7cbda8a4b4c11caa2b5abfa80557a7c35dfa4134cf9e3b41800621b29a2da093"
+    },
+    {
+      "path": "case-2/seed/quota.py",
+      "sha256": "d0159bf4d5546aff8d7c6a7a79da6e8a011ce3583c9f9e63660dc99c85fae874"
+    },
+    {
+      "path": "case-2/seed/app.py",
+      "sha256": "8f0ae199c923ea32022c9cedcb3866c3741e993e26819a103f7e9e03107df700"
+    },
+    {
+      "path": "case-2/seed/AGENTS.md",
+      "sha256": "6b36688a409ccfdd996435ee87cad29e1cc86d1e1aebc02a0bc3bedb5d3e9150"
+    },
+    {
+      "path": "case-2/seed/tests/test_core.py",
+      "sha256": "e72ccefbd7f4910e542c40f1c250ca82a68d20ba22bab2dbb634f00607652fa8"
+    },
+    {
+      "path": "case-2/seed/tests/test_develop.py",
+      "sha256": "a946bbb07f4d75702fc9ffa7342f47434e8e26b7f52466fa848036dff3c772b7"
+    },
+    {
+      "path": "case-2/peer/notes.txt",
+      "sha256": "7cbda8a4b4c11caa2b5abfa80557a7c35dfa4134cf9e3b41800621b29a2da093"
+    },
+    {
+      "path": "case-2/peer/quota.py",
+      "sha256": "d0159bf4d5546aff8d7c6a7a79da6e8a011ce3583c9f9e63660dc99c85fae874"
+    },
+    {
+      "path": "case-2/peer/peer.py",
+      "sha256": "54b05e1df7360424c8c96d788f6bbac3115597ae5e108974365f1ebbef3616aa"
+    },
+    {
+      "path": "case-2/peer/app.py",
+      "sha256": "a55c14346b5c0e11da873793db175efd28d4840a330a5edba18d03d7d7310626"
+    },
+    {
+      "path": "case-2/peer/AGENTS.md",
+      "sha256": "6b36688a409ccfdd996435ee87cad29e1cc86d1e1aebc02a0bc3bedb5d3e9150"
+    },
+    {
+      "path": "case-2/peer/tests/test_feature.py",
+      "sha256": "a3df632cb7d2e61fc77ef8422532ae85d528b2d5200acddba53fb662a3ce2b9b"
+    },
+    {
+      "path": "case-2/peer/tests/test_core.py",
+      "sha256": "e72ccefbd7f4910e542c40f1c250ca82a68d20ba22bab2dbb634f00607652fa8"
+    },
+    {
+      "path": "case-2/peer/tests/test_peer.py",
+      "sha256": "215bcc1e7011ba79fa53d35850da5e1e1b4117f9e07b282a198510e90d418cb6"
+    },
+    {
+      "path": "case-2/work/notes.txt",
+      "sha256": "7cbda8a4b4c11caa2b5abfa80557a7c35dfa4134cf9e3b41800621b29a2da093"
+    },
+    {
+      "path": "case-2/work/quota.py",
+      "sha256": "d0159bf4d5546aff8d7c6a7a79da6e8a011ce3583c9f9e63660dc99c85fae874"
+    },
+    {
+      "path": "case-2/work/peer.py",
+      "sha256": "54b05e1df7360424c8c96d788f6bbac3115597ae5e108974365f1ebbef3616aa"
+    },
+    {
+      "path": "case-2/work/feature-notes.txt",
+      "sha256": "0eaf0993d654ade607797488287ce52692224356cd5763a5ea6c9536bce1562f"
+    },
+    {
+      "path": "case-2/work/app.py",
+      "sha256": "9bb6db2ca3e423462eae12ce39588160c915558bf45f5d4e3c36cb2e8471c3b0"
+    },
+    {
+      "path": "case-2/work/AGENTS.md",
+      "sha256": "6b36688a409ccfdd996435ee87cad29e1cc86d1e1aebc02a0bc3bedb5d3e9150"
+    },
+    {
+      "path": "case-2/work/tests/test_feature.py",
+      "sha256": "a3df632cb7d2e61fc77ef8422532ae85d528b2d5200acddba53fb662a3ce2b9b"
+    },
+    {
+      "path": "case-2/work/tests/test_core.py",
+      "sha256": "e72ccefbd7f4910e542c40f1c250ca82a68d20ba22bab2dbb634f00607652fa8"
+    },
+    {
+      "path": "case-2/work/tests/test_peer.py",
+      "sha256": "215bcc1e7011ba79fa53d35850da5e1e1b4117f9e07b282a198510e90d418cb6"
+    },
+    {
+      "path": "case-2/work/tests/test_develop.py",
+      "sha256": "a946bbb07f4d75702fc9ffa7342f47434e8e26b7f52466fa848036dff3c772b7"
+    },
+    {
+      "path": "sources/skills/coco-push/SKILL.md",
+      "sha256": "959121baf79bfa634dcba2ba533da969b6d0987efacf3d0e03cdfa85aeb3bcd1"
+    },
+    {
+      "path": "sources/skills/coco-push/references/sync-and-push.md",
+      "sha256": "a991b9a39aaaf7ef8c8f1d2fa3d313174da0bb36aa837101f9226913aa600118"
+    },
+    {
+      "path": "sources/skills/_coco-shared/contracts.md",
+      "sha256": "4e1cea512e22996d4234056168e204394752c97cdc9ef5082be424deaaa5bb89"
+    },
+    {
+      "path": "case-1/final.json",
+      "sha256": "3fd4c33ff61e133ffb04408187f6a4a31712b39b9a5b0ef185ae82d7d218939e"
+    },
+    {
+      "path": "case-1/initial.json",
+      "sha256": "08020f7848388fc7c7529ac224384dcae0957281cc0f02cb3732b5d12859f677"
+    },
+    {
+      "path": "case-1/seed/notes.txt",
+      "sha256": "7cbda8a4b4c11caa2b5abfa80557a7c35dfa4134cf9e3b41800621b29a2da093"
+    },
+    {
+      "path": "case-1/seed/quota.py",
+      "sha256": "d0159bf4d5546aff8d7c6a7a79da6e8a011ce3583c9f9e63660dc99c85fae874"
+    },
+    {
+      "path": "case-1/seed/app.py",
+      "sha256": "8f0ae199c923ea32022c9cedcb3866c3741e993e26819a103f7e9e03107df700"
+    },
+    {
+      "path": "case-1/seed/AGENTS.md",
+      "sha256": "6b36688a409ccfdd996435ee87cad29e1cc86d1e1aebc02a0bc3bedb5d3e9150"
+    },
+    {
+      "path": "case-1/seed/tests/test_core.py",
+      "sha256": "e72ccefbd7f4910e542c40f1c250ca82a68d20ba22bab2dbb634f00607652fa8"
+    },
+    {
+      "path": "case-1/seed/tests/test_develop.py",
+      "sha256": "a946bbb07f4d75702fc9ffa7342f47434e8e26b7f52466fa848036dff3c772b7"
+    },
+    {
+      "path": "case-1/work/notes.txt",
+      "sha256": "7cbda8a4b4c11caa2b5abfa80557a7c35dfa4134cf9e3b41800621b29a2da093"
+    },
+    {
+      "path": "case-1/work/quota.py",
+      "sha256": "d0159bf4d5546aff8d7c6a7a79da6e8a011ce3583c9f9e63660dc99c85fae874"
+    },
+    {
+      "path": "case-1/work/app.py",
+      "sha256": "9bb6db2ca3e423462eae12ce39588160c915558bf45f5d4e3c36cb2e8471c3b0"
+    },
+    {
+      "path": "case-1/work/AGENTS.md",
+      "sha256": "6b36688a409ccfdd996435ee87cad29e1cc86d1e1aebc02a0bc3bedb5d3e9150"
+    },
+    {
+      "path": "case-1/work/tests/test_feature.py",
+      "sha256": "a3df632cb7d2e61fc77ef8422532ae85d528b2d5200acddba53fb662a3ce2b9b"
+    },
+    {
+      "path": "case-1/work/tests/test_core.py",
+      "sha256": "e72ccefbd7f4910e542c40f1c250ca82a68d20ba22bab2dbb634f00607652fa8"
+    },
+    {
+      "path": "case-1/work/tests/test_develop.py",
+      "sha256": "a946bbb07f4d75702fc9ffa7342f47434e8e26b7f52466fa848036dff3c772b7"
+    }
+  ],
+  "excluded": [
+    ".git internals and bare directories (histories exported as bundles)",
+    "__pycache__",
+    "symlinks"
+  ],
+  "note": "Raw reports and commands preserved unchanged; absolute paths identify the original run."
+}

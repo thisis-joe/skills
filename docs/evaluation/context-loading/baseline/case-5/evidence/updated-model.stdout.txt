@@ -1,0 +1,49 @@
+{
+  "property": "balance stays nonnegative after spend",
+  "bounds": {
+    "initial_balance": [
+      0,
+      2
+    ],
+    "amount": [
+      0,
+      3
+    ],
+    "steps": 1
+  },
+  "cases_checked": 12,
+  "model_transition": "balance - amount (unconditional)",
+  "property_holds": false,
+  "counterexamples": [
+    {
+      "balance": 0,
+      "amount": 1,
+      "model_after": -1
+    },
+    {
+      "balance": 0,
+      "amount": 2,
+      "model_after": -2
+    },
+    {
+      "balance": 0,
+      "amount": 3,
+      "model_after": -3
+    },
+    {
+      "balance": 1,
+      "amount": 2,
+      "model_after": -1
+    },
+    {
+      "balance": 1,
+      "amount": 3,
+      "model_after": -2
+    },
+    {
+      "balance": 2,
+      "amount": 3,
+      "model_after": -1
+    }
+  ]
+}

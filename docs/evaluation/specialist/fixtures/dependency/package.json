@@ -1,0 +1,8 @@
+{
+  "name": "fixture-service",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "dependencies": {
+    "fixture-native-module": "1.0.0"
+  }
+}

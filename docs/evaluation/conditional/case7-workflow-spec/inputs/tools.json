@@ -1,0 +1,19 @@
+{
+  "inventory_kind": "supplied local tool capability fixture; not live integrations",
+  "available": {
+    "list_notes": "python3 scripts/list_notes.py --since YYYY-MM-DD --until YYYY-MM-DD (read-only local paths, JSON list)",
+    "sha256": "python3 hashlib (standard library)",
+    "draft": "current authorized model session, local text input and artifact write only",
+    "local_storage": "local reports/ and atomic rename standard filesystem",
+    "review": "human operator in current terminal/chat"
+  },
+  "missing": [
+    "scheduler activation not supplied/needed",
+    "remote report publisher not supplied/authorized",
+    "automatic owner resolver not supplied"
+  ],
+  "current_pain": [
+    "source version drift",
+    "duplicate rerun reports"
+  ]
+}

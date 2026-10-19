@@ -1,0 +1,22 @@
+{
+  "case": "context-only",
+  "phase": "verification",
+  "label": "suite",
+  "cwd": "/tmp/lets-recovery-validation/context-only/repo",
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "environment_overrides": {
+    "GIT_OPTIONAL_LOCKS": "0",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_double (test_double.DoubleTest) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.011s\n\nOK\n"
+}

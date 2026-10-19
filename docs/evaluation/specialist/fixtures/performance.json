@@ -1,0 +1,22 @@
+{
+  "source": "constructed values instantiating the supplied 3% / +/-5% scenario; not a benchmark run",
+  "baseline_ms": [
+    95,
+    100,
+    105,
+    98,
+    102
+  ],
+  "candidate_ms": [
+    92.15,
+    97,
+    101.85,
+    95.06,
+    98.94
+  ],
+  "baseline_cache": "cold",
+  "candidate_cache": "warm",
+  "work_count": "not recorded",
+  "errors": "not recorded",
+  "limiter": "not profiled"
+}

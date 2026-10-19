@@ -1,0 +1,24 @@
+{
+  "guidance": {
+    "families": {
+      "verify": {
+        "selection_characters": 1797,
+        "module_guard_characters": 385,
+        "module_count": 7
+      },
+      "automate": {
+        "selection_characters": 1852,
+        "module_guard_characters": 456,
+        "module_count": 8
+      }
+    },
+    "total_characters": 4490
+  },
+  "reconstruction": {
+    "failures": [],
+    "reconstructed_sha256": {
+      "verify": "0730bccf5ff7fe1737028c8dd8e1509ece19c56d3b8dad20adb76462dfd1aa5e",
+      "automate": "e6995f27dbab8ef6567f365a4bd7e09d68cf37b8a51c2665e49702b7bbe6ad8c"
+    }
+  }
+}

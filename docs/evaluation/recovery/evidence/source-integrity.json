@@ -1,0 +1,9 @@
+{
+  "frozen_and_fixture_files_hashed": 127,
+  "changed": [],
+  "confirmed_unchanged": true,
+  "before_manifest": "evidence/source-sha256.before.json",
+  "after_manifest": "evidence/source-sha256.after.json",
+  "before_manifest_sha256": "79ed25f205740b3238b8fe428bd0dddea6700a70a4e03a4f431e21526c66366f",
+  "after_manifest_sha256": "79ed25f205740b3238b8fe428bd0dddea6700a70a4e03a4f431e21526c66366f"
+}

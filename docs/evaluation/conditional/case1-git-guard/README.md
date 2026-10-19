@@ -1,0 +1,10 @@
+# Case 1 — project Git guard preparation
+Owner: lets-security for threat/control/negative checks; lets-build would own an authorized real-project implementation/commit. Artifacts only in this fixture; no user-wide setting changed and no runtime hook activated.
+
+Supplied unrelated env entry and existing Bash/Write hooks survive in `.claude/settings.json`; `settings.diff` is reviewable and `settings-rollback.json` is an exact rollback copy. Default deny set used without custom additions to requested Git policy. The parser also holds unsupported syntax for review.
+
+Supported: literal git executable (including absolute path), standard -C/-c and listed long global flags, shell separators/pipes, shell-quoted arguments. Denies push, hard reset, forced clean, forced branch delete, whole-tree checkout/restore. Some safe dot comparisons are conservatively denied. Unsupported shell expansion, aliases, wrappers, escapes, redirection and heredocs block with exit 2. Other programs/alias configuration already existing outside this payload can bypass this helper; this is a convenience guard, not a complete shell security boundary. Rebase/stash and arbitrary programs are outside the proposed deny set.
+
+Actual check: `python3 build_case1.py` invoked the helper on synthetic stdin only, never executed dangerous Git data, then dispatched two hooks through a labelled local stand-in and executed only git init/status. tests.json records every input/exit/diagnostic. Real harmless Claude intercepted call is unavailable because Claude Code is absent; the local stand-in cannot prove runtime loading/matching/version support. Activation remains prepared only. For real activation confirm the target runtime supports onFailure, reload its project hook config, and make one harmless intercepted status call.
+
+Runtime schema, project scope and exit 2 were verified against [official Claude Code hooks documentation](https://code.claude.com/docs/en/hooks). The target runtime version is not supplied; version compatibility remains open.

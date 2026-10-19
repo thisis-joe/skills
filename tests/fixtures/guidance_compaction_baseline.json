@@ -1,0 +1,17 @@
+{
+  "baseline_commit": "206773f",
+  "measurement": "Unicode code points, with headings, whitespace, and trailing newlines retained; both Mode selection sections and all fifteen module preambles.",
+  "families": {
+    "verify": {
+      "selection_characters": 2829,
+      "module_guard_characters": 1533,
+      "module_count": 7
+    },
+    "automate": {
+      "selection_characters": 2887,
+      "module_guard_characters": 1752,
+      "module_count": 8
+    }
+  },
+  "total_characters": 9001
+}

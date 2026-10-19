@@ -1,0 +1,20 @@
+$ python3 -m unittest discover -s tests -p test_greet.py -v
+test_excited_cli (test_greet.GreetTest) ... FAIL
+test_normal_cli (test_greet.GreetTest) ... ok
+
+======================================================================
+FAIL: test_excited_cli (test_greet.GreetTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/lets-core-validation/build/repo/tests/test_greet.py", line 13, in test_excited_cli
+    self.assertEqual(result.returncode, 0, result.stderr)
+AssertionError: 2 != 0 : usage: greet.py [-h] name
+greet.py: error: unrecognized arguments: --excited
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.043s
+
+FAILED (failures=1)
+
+exit=1

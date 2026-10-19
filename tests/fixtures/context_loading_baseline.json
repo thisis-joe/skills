@@ -1,0 +1,157 @@
+{
+  "baseline_commit": "1f0f37012ae37f65697872fa97276860a3a7e82f",
+  "families": {
+    "verify": {
+      "original_sha256": "0730bccf5ff7fe1737028c8dd8e1509ece19c56d3b8dad20adb76462dfd1aa5e",
+      "original_characters": 13478,
+      "preamble": "# Verification modes\n\nApply the [common contract](../contracts.md) and [resolved decisions](../decisions.md).\nThis procedure returns evidence. [Build](build.md) owns product changes, commits, and task completion.\nSelect only the mode needed by the claim; creating a helper or formal model is conditional work.\n\n",
+      "sections": [
+        {
+          "heading": "Establish the claim",
+          "destination": "verify.md",
+          "sha256": "4e1470b8f3d8f3bf5da0ddd5f05f52c9fcf873624892b79d7cbc0bcf24a7005a",
+          "characters": 963
+        },
+        {
+          "heading": "Conditional standing-quality-bar audit",
+          "destination": "verify-quality-audit.md",
+          "sha256": "330e81a0e9e8d2c6517030a33100890a43f9ad87537221ea0cec04b9e4f83a74",
+          "characters": 634
+        },
+        {
+          "heading": "Behavioral checks",
+          "destination": "verify.md",
+          "sha256": "92d840c7bfff177d140dfaaafb26f76071ec8ca9abe92bb3573b46378a642ba7",
+          "characters": 1059
+        },
+        {
+          "heading": "Runtime journey",
+          "destination": "verify.md",
+          "sha256": "822a3a511f2a410154d4f1b2f299daf8170df198a725992d150f5a9d8b945f0d",
+          "characters": 1282
+        },
+        {
+          "heading": "Create a runtime verification helper",
+          "destination": "verify-runtime-create.md",
+          "sha256": "97344405760bcf3646ae665cb41e63add5e8f65cf7ba761ccae13555df25d268",
+          "characters": 1950
+        },
+        {
+          "heading": "Maintain runtime verification",
+          "destination": "verify-runtime-maintain.md",
+          "sha256": "dfa45d8ad4a04c4a5eb3ff61e42b3efbe887ae353dfdda721544ad52421dfc3c",
+          "characters": 1175
+        },
+        {
+          "heading": "Create formal verification",
+          "destination": "verify-formal-create.md",
+          "sha256": "5e2be181d26817656311206977e1046186e24e6102312b07d56957778e067d9d",
+          "characters": 1335
+        },
+        {
+          "heading": "Maintain formal verification",
+          "destination": "verify-formal-maintain.md",
+          "sha256": "888a93b352e52980dd1b531cbba84f441b4d66622e050dbeee6354f88bfb9c5d",
+          "characters": 1204
+        },
+        {
+          "heading": "Skill, prompt, and harness experiments",
+          "destination": "verify-experiments.md",
+          "sha256": "73d8e15543146cd9a11aeb543e7d3adf0f6a5d53c3f8e90a4e1a3ad394860f3f",
+          "characters": 1354
+        },
+        {
+          "heading": "Return evidence",
+          "destination": "verify.md",
+          "sha256": "918d12e161bbb7902efbe437995aa9781daaf373ca150a13394847840b28b01a",
+          "characters": 278
+        },
+        {
+          "heading": "Conditional pre-commit verification setup",
+          "destination": "verify-pre-commit.md",
+          "sha256": "6ee8775679f1c32a3b384ebad6d65e65f06e32c0237b8ca4f7899dd9cb904a76",
+          "characters": 1933
+        }
+      ]
+    },
+    "automate": {
+      "original_sha256": "e6995f27dbab8ef6567f365a4bd7e09d68cf37b8a51c2665e49702b7bbe6ad8c",
+      "original_characters": 14730,
+      "preamble": "# Automation modes\n\nApply the [common contract](../contracts.md) and [resolved decisions](../decisions.md).\nChoose CI, recurring work, webhook UI, sustained task execution, or report intake from the actual request.\nPreparing automation is distinct from activating it; existing authorization and native runtime requirements govern each external action.\nNever install another agent stack, invoke source skills, scan private transcripts, or infer publication permission from automatic mode.\n\n",
+      "sections": [
+        {
+          "heading": "Define the operation",
+          "destination": "automate.md",
+          "sha256": "618e1a01351aa85ef556e8d55b64278b2390bd5c62148ebf1f589ce19be76844",
+          "characters": 839
+        },
+        {
+          "heading": "Retry and crash semantics",
+          "destination": "automate.md",
+          "sha256": "284033436d2a36764ac5a15c7102b8637475eb0294adc945dbb8ee7b51fed9b9",
+          "characters": 820
+        },
+        {
+          "heading": "CI and deployment preparation",
+          "destination": "automate-ci.md",
+          "sha256": "353d368adb955fdd02bb7f65779f1133d17a8fa99c90e0391a49a731364a3e26",
+          "characters": 1189
+        },
+        {
+          "heading": "Sustained task graph and recovery",
+          "destination": "automate-sustained.md",
+          "sha256": "d18a7359e8d637c0a59d6a4c771c08013240aa5f1915ad836d73fe69047d3452",
+          "characters": 2133
+        },
+        {
+          "heading": "Decision trail",
+          "destination": "automate.md",
+          "sha256": "328a4117817925293f3052f11a77003362af9275174d2f771bc8ec1e631f2a52",
+          "characters": 776
+        },
+        {
+          "heading": "Webhook or bot UI",
+          "destination": "automate-webhook.md",
+          "sha256": "797963538b8155b38e74670a5ffc4bf144e140e0e4f713cc610c3d8b9c1f091c",
+          "characters": 1192
+        },
+        {
+          "heading": "Report-intake setup",
+          "destination": "automate-intake-setup.md",
+          "sha256": "8c32ab4656cfc4c057614f92b5784d66a0149c3b143d61353afdd8d45f761d6a",
+          "characters": 1021
+        },
+        {
+          "heading": "Intake triage condition",
+          "destination": "automate-intake-triage.md",
+          "sha256": "42c0918fc17ae6077bef9c259b4ffb93e14b7682b58dccd5b60e398c01045ca7",
+          "characters": 1268
+        },
+        {
+          "heading": "Intake reproduction and bounded fix",
+          "destination": "automate-intake-fix.md",
+          "sha256": "3830c1284d03e2b31d7cecebc6bc4d1b44bc810779c4fb6d5465a703830e165a",
+          "characters": 1032
+        },
+        {
+          "heading": "Return",
+          "destination": "automate.md",
+          "sha256": "9a7ba09d183e788d9ceb0e2c85e7260d3b48de04e5935ebcde321c921c2e45f3",
+          "characters": 293
+        },
+        {
+          "heading": "Conditional human-operated setup wizard",
+          "destination": "automate-wizard.md",
+          "sha256": "4d24a7c6608862068e601803aa184d30235b6f2d37fa29f99ab364acbc511e5d",
+          "characters": 2126
+        },
+        {
+          "heading": "Conditional workflow specification only",
+          "destination": "automate-specification.md",
+          "sha256": "46847690098fdc58869294800d9464487c04c19f4c2c6ebccfd0bc6f9f98bd41",
+          "characters": 1552
+        }
+      ]
+    }
+  }
+}

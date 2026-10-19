@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-design"
+  short_description: "Purpose-led design with source-backed checks and evidence"
+  default_prompt: "Use $coco-design for the current request and provide its required result."

@@ -1,0 +1,16 @@
+{
+  "cwd": "/tmp/lets-core-validation/spec",
+  "command": [
+    "python3",
+    "-c",
+    "from pathlib import Path; import sys;\nfor name in sys.argv[1:]: print(name+\"\\n\"+Path(name).read_text())",
+    "input.md",
+    "issue-42.md",
+    "glossary.md",
+    "README.md",
+    "specs/ISSUE-42.md"
+  ],
+  "exit_code": 0,
+  "stdout": "input.md\nWrite the settled issue into the existing spec file. Do not re-interview or implement.\n\nissue-42.md\n# Issue 42 approved\nUsers export visible invoices as UTF-8 CSV in current sort order. Columns invoice_id,total_cents,paid. paid is lowercase true/false. Header always exists for empty results. Formula-like text fields are prefixed with apostrophe for spreadsheet safety. Preserve current on-screen filtering and ordering. Existing approved boundary: public export_invoices(rows)->str tested with stdlib csv reader; no browser test required for this library-only task. API has no file/download UI.\n\nglossary.md\nInvoice: immutable billing record identified by invoice_id. Visible invoices: rows already filtered and sorted by the caller.\n\nREADME.md\nSpecs live in specs/ISSUE-<id>.md with Objective, Behavior, Scope, Acceptance, Tests, Open issues. Standing check: python3 -m unittest discover -s tests -v.\n\nspecs/ISSUE-42.md\n# ISSUE-42 v0\nPlaceholder for the approved export contract.\n\n",
+  "stderr": ""
+}

@@ -1,0 +1,69 @@
+{
+  "initial_base": "42b612509867d11b6c03564165e9ce73b28f199e",
+  "worktrees": [
+    {
+      "path": "/tmp/lets-conditional-validation/case5-cleanup/repo",
+      "managed": false,
+      "owner": "fixture-validator",
+      "chat_active": true,
+      "chat_pinned": false,
+      "purpose": "primary fixture repository",
+      "branch": "fixture/main",
+      "head": "296df591f0304818b60fc4ba27c1341d68ff888a",
+      "base_at_creation": "42b612509867d11b6c03564165e9ce73b28f199e",
+      "current_merge_base": "296df591f0304818b60fc4ba27c1341d68ff888a",
+      "head_merged_into_fixture_main": true,
+      "status": "",
+      "ignored_paths": [],
+      "du_sk": "212\t/tmp/lets-conditional-validation/case5-cleanup/repo",
+      "active_cwd_pid": null,
+      "decision": "HOLD primary",
+      "recovery": "Committed history retained in fixture/main and feature/completed-task; eventual git worktree remove only after fresh ownership/inactivity/status check"
+    },
+    {
+      "path": "/tmp/lets-conditional-validation/case5-cleanup/active-dirty",
+      "managed": false,
+      "owner": "active-fixture-chat",
+      "chat_active": true,
+      "chat_pinned": true,
+      "purpose": "active user task; no removal authorization",
+      "branch": "feature/active-task",
+      "head": "42b612509867d11b6c03564165e9ce73b28f199e",
+      "base_at_creation": "42b612509867d11b6c03564165e9ce73b28f199e",
+      "current_merge_base": "42b612509867d11b6c03564165e9ce73b28f199e",
+      "head_merged_into_fixture_main": true,
+      "status": " M tracked.txt\n?? untracked.txt\n",
+      "ignored_paths": [
+        ".cache/fixture.bin",
+        "ignored.env"
+      ],
+      "du_sk": "24\t/tmp/lets-conditional-validation/case5-cleanup/active-dirty",
+      "active_cwd_pid": 9388,
+      "decision": "HOLD dirty+active+pinned+ignored data",
+      "recovery": "Uncommitted tracked/untracked/ignored data must be preserved; a commit-only backup is insufficient"
+    },
+    {
+      "path": "/tmp/lets-conditional-validation/case5-cleanup/merged-unused",
+      "managed": false,
+      "owner": "fixture-validator",
+      "chat_active": false,
+      "chat_pinned": false,
+      "purpose": "completed unused fixture; plan-only scope",
+      "branch": "feature/completed-task",
+      "head": "296df591f0304818b60fc4ba27c1341d68ff888a",
+      "base_at_creation": "42b612509867d11b6c03564165e9ce73b28f199e",
+      "current_merge_base": "296df591f0304818b60fc4ba27c1341d68ff888a",
+      "head_merged_into_fixture_main": true,
+      "status": "",
+      "ignored_paths": [],
+      "du_sk": "16\t/tmp/lets-conditional-validation/case5-cleanup/merged-unused",
+      "active_cwd_pid": null,
+      "decision": "CANDIDATE plan only; no deletion performed",
+      "recovery": "Committed history retained in fixture/main and feature/completed-task; eventual git worktree remove only after fresh ownership/inactivity/status check"
+    }
+  ],
+  "owned_process_stopped_after_inventory": true,
+  "simulator_observations": "fixture only",
+  "deletions": [],
+  "reclaimed_bytes": 0
+}

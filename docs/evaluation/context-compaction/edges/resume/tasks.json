@@ -1,0 +1,9 @@
+[
+  {
+    "id": "resume-stand-in",
+    "case": "case-4-resume",
+    "start_with": "coco-verify/SKILL.md",
+    "delivery": "Use a fresh worker with this request and artifacts, without the earlier transcript.",
+    "request": "Resume verification-helper maintenance from HANDOFF.json and TASK_STATE.json against the actual current CLI and worktree. The product and user notes contain pre-existing uncommitted changes. Inspect actual state, maintain only owned verification docs/helper/maps, and return current evidence and remaining gaps. Preserve product, tests, user changes, prior evidence, handoff, and product task state; do not commit or mark a product task complete."
+  }
+]

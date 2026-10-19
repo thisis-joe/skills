@@ -1,0 +1,6 @@
+{
+  "command": "verify retained evidence paths with pathlib.Path.is_file after drives and teardown",
+  "exit_code": 0,
+  "stdout": "[\"evidence/baseline-checks.json\", \"evidence/baseline-doctor.json\", \"evidence/commands.json\", \"evidence/coverage.json\", \"evidence/doctor.json\", \"evidence/double-0.json\", \"evidence/double-3.json\", \"evidence/double-equals.json\", \"evidence/double-invalid.json\", \"evidence/double-missing.json\", \"evidence/double-negative4.json\", \"evidence/exclusive-modes.json\", \"evidence/existing-checks.json\", \"evidence/required-mode.json\", \"evidence/short-help.json\", \"evidence/snapshot-after.json\", \"evidence/snapshot-before.json\", \"evidence/triple-0.json\", \"evidence/triple-3.json\", \"evidence/triple-equals.json\", \"evidence/triple-invalid.json\", \"evidence/triple-missing.json\", \"evidence/triple-negative4.json\", \"evidence/unknown-flag.json\"]\n",
+  "stderr": ""
+}

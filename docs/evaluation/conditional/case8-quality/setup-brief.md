@@ -1,0 +1,1 @@
+Establish one standing quality bar for this small Python CLI. No existing bar. Use unittest and a fast syntax check already documented in README/CI; enforce the quality floor. This is an unattended setup draft; coverage target is unset, so record the existing coverage artifact as measured-only. No dependencies/CI activation authorized. Owner is the project maintainer.

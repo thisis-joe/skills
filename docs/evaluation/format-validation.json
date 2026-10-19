@@ -1,0 +1,138 @@
+{
+  "validator": "/Users/Joseph/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+  "runtime": "temporary authoring virtualenv with PyYAML; not a package/runtime dependency",
+  "checks": [
+    {
+      "skill": "lets-start",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "lets-clarify",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "lets-research",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "lets-design",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "lets-spec",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "lets-plan",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "lets-build",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "lets-debug",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "lets-verify",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "lets-review",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "lets-security",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "lets-migrate",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "lets-performance",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "lets-frontend",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "lets-observe",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "lets-automate",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "lets-ship",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "lets-document",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "lets-context",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "lets-retro",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "lets-triage",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "lets-simplify",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    }
+  ]
+}

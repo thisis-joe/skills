@@ -1,0 +1,1 @@
+`$fixture-report 이 디렉터리의 INPUT.json만 읽고 values의 합계 정리를 초점으로 원본 값, 합계, 요청한 초점만 포함한 REPORT.json을 만들어줘. 계산을 확인한 뒤 실제 보고서 경로와 합계를 알려줘. INPUT.json, USER_NOTES.md와 모든 기존 사용자 파일을 보존하고, 외부 게시·메시지 전송·외부 서비스 접촉 없이 로컬 자료만 사용해줘.`

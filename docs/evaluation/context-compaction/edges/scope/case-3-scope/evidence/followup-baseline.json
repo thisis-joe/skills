@@ -1,0 +1,43 @@
+{
+  "target_app_sha256": "e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b",
+  "protected_before_sha256": {
+    "app.py": "e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b",
+    "test_app.py": "43e4b979a3fef8184f285c8f106f59af090529db4686d7f840aec65e7806af86",
+    "USER_NOTES.md": "06fe4574adc6427c1b531277f5cce7cf8bef49b1de86eb318a48ef3139b9562f",
+    "README.md": "e12925ce460bbae0bee34ae2ddc847f3cd4eeadf1f65e85cfaa7e52ce43a818f",
+    "INITIAL_RESULT.json": "b264784ac543859f2af3008cb55969c4f808491801867c14b8e9447695aaea0a"
+  },
+  "prior_proof_before_sha256": {
+    "evidence/doctor.json": "86592224ed2f516cbe2972e14b920846e84ec5499bfea7fa2b84e443d3ef0de6",
+    "evidence/drive.json": "e5dbb5634b20284972cc0a745e500ea906713239633ce68641ee9d63a884132d"
+  },
+  "owned_before": {
+    "VERIFY.md": {
+      "sha256": "782a312ca85dbdbbc3b545ada0ea768b9c9ca962874f53087b147536cc59c580",
+      "content": "# Runtime verification\n\nThis short-lived CLI has no dependencies or long-running server.\nLaunch: python3 app.py --help\nDoctor: python3 verify_cli.py doctor\nDrive: python3 verify_cli.py drive\nReset: each invocation is a fresh process; keep retained evidence.\nEvidence: evidence/doctor.json and evidence/drive.json contain actual subprocess\ninputs, outputs, return codes, and the app snapshot.\nCleanup: there are no owned background processes; preserve proof and user files.\n\nFeature index: features/index.json. Currently mapped: double.\n"
+    },
+    "verify_cli.py": {
+      "sha256": "fbb671e4aa7056b6332b785a30af0aeda6c53a5e228eac2767551582f1cfffe7",
+      "content": "\"\"\"Existing owned verification helper; currently maps only double.\"\"\"\nimport hashlib\nimport json\nfrom pathlib import Path\nimport subprocess\nimport sys\n\nROOT = Path(__file__).resolve().parent\n\n\ndef invoke(arguments):\n    completed = subprocess.run([sys.executable, str(ROOT / 'app.py'), *arguments],\n                               cwd=ROOT, capture_output=True, text=True)\n    return {'arguments': arguments, 'returncode': completed.returncode,\n            'stdout': completed.stdout, 'stderr': completed.stderr}\n\n\ndef retain(name, result):\n    directory = ROOT / 'evidence'\n    directory.mkdir(exist_ok=True)\n    result['app_sha256'] = hashlib.sha256((ROOT / 'app.py').read_bytes()).hexdigest()\n    (directory / (name + '.json')).write_text(json.dumps(result, indent=2) + '\\n')\n    print(json.dumps(result))\n\n\ndef main():\n    if len(sys.argv) != 2 or sys.argv[1] not in ('doctor', 'drive'):\n        raise SystemExit('usage: python3 verify_cli.py doctor|drive')\n    if sys.argv[1] == 'doctor':\n        observed = invoke(['--help'])\n        passed = observed['returncode'] == 0 and 'usage:' in observed['stdout']\n        retain('doctor', {'passed': passed, 'observation': observed})\n    else:\n        checks = []\n        for arguments, expected in [(['--double', '3'], '6\\n'),\n                                    (['--double', '-4'], '-8\\n')]:\n            observed = invoke(arguments)\n            observed['expected_stdout'] = expected\n            observed['passed'] = observed['returncode'] == 0 and observed['stdout'] == expected\n            checks.append(observed)\n        passed = all(check['passed'] for check in checks)\n        retain('drive', {'passed': passed, 'checks': checks})\n    raise SystemExit(0 if passed else 1)\n\n\nif __name__ == '__main__':\n    main()\n"
+    },
+    "features/index.json": {
+      "sha256": "97116e0d5f927bd6b4c2b68c8ae784a03b3a1b42462d7ba8abc690bbcd4c136f",
+      "content": "{\n  \"features\": [\n    \"double\"\n  ]\n}\n"
+    },
+    "features/double.md": {
+      "sha256": "f2d47e56eb6ab960c7273ed244b07c78d803bc866d40cbd4738ed2f13d402156",
+      "content": "# Double\n\nRoute: python3 app.py --double N\nStates: positive, negative, zero. No authentication or fixture needed.\nRecipe: --double 3 returns 6; --double -4 returns -8.\n"
+    }
+  },
+  "baseline_doctor": {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "app.py",
+      "--help"
+    ],
+    "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+    "returncode": 0,
+    "stdout": "usage: app.py [-h] (--double DOUBLE | --multiply MULTIPLY MULTIPLY)\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --double DOUBLE\n  --multiply MULTIPLY MULTIPLY\n",
+    "stderr": ""
+  }
+}

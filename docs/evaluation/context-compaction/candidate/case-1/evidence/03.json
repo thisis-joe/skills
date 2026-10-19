@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "-v"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_double (test_app.CliTests) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.021s\n\nOK\n",
+  "status": "passed"
+}

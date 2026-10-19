@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "observation": {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "/private/tmp/coco-guidance-compaction-muorgx4u/edge-resume/case-4-resume/app.py",
+      "--help"
+    ],
+    "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-resume/case-4-resume",
+    "arguments": [
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: app.py [-h] (--double DOUBLE | --multiply MULTIPLY MULTIPLY)\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --double DOUBLE\n  --multiply MULTIPLY MULTIPLY\n",
+    "stderr": ""
+  },
+  "app_sha256": "e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b",
+  "helper_sha256": "a6881ac09289d7381381a575c2f0665a51b94e1d80f5bf229601f6edf0111f42",
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "evidence_path": "evidence/doctor-20261019T141619.007403Z.json"
+}

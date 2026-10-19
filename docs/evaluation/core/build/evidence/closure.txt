@@ -1,0 +1,24 @@
+$ python3 -c from pathlib import Path; import hashlib,json,subprocess; commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(); names=subprocess.check_output(["git","show","--format=","--name-only","HEAD"],text=True).split(); assert set(names)=={"greet.py","tests/test_greet.py"},names; actual=hashlib.sha256(Path("NOTES.md").read_bytes()).hexdigest(); assert actual==Path("../user-dirty-sha256.txt").read_text().strip(); state=json.loads(Path("../task-state.json").read_text()); state["T1"].update(status="done",commit=commit,evidence=["evidence/red.json","evidence/green.json","evidence/runtime-excited.json","evidence/runtime-normal.json","review.md"]); Path("../task-state.json").write_text(json.dumps(state,indent=2)); print("commit",commit); print("owned paths",names); print("user notes unchanged",actual); print(subprocess.check_output(["git","status","--short","--branch"],text=True)); print(Path("../task-state.json").read_text())
+commit 0accc817b35be9d05b8d1a192e72cda44c85203d
+owned paths ['greet.py', 'tests/test_greet.py']
+user notes unchanged 60044655887ee3c74e0487bab745a13f8a85437db9f8458382c8dcacbd85d1d8
+## feature/build
+ M NOTES.md
+
+{
+  "T1": {
+    "status": "done",
+    "blockers": [],
+    "acceptance": "excited CLI prints Hello, Ada!; normal behavior preserved",
+    "commit": "0accc817b35be9d05b8d1a192e72cda44c85203d",
+    "evidence": [
+      "evidence/red.json",
+      "evidence/green.json",
+      "evidence/runtime-excited.json",
+      "evidence/runtime-normal.json",
+      "review.md"
+    ]
+  }
+}
+
+exit=0

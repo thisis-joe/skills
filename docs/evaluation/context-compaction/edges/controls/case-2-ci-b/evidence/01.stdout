@@ -1,0 +1,20 @@
+# CI preparation
+
+Platform: GitHub Actions. Supported runner: ubuntu-latest.
+Runtime: Python 3.11 or newer, standard library only.
+Test command: python3 -m unittest discover -s tests -v
+Trigger: push and pull_request. Permissions: contents: read.
+A checkout step is required. Prepare an artifact only; this fixture has no remote.
+def double(value):
+    return value * 2
+import unittest
+from app import double
+
+class DoubleTests(unittest.TestCase):
+    def test_positive_and_negative(self):
+        self.assertEqual(double(3), 6)
+        self.assertEqual(double(-4), -8)
+# User working notes
+
+Preserve this draft byte-for-byte. This is user work, not harness output.
+한글 메모: 검증 문서를 고쳐도 이 파일은 보존한다.

@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python3",
+    "proof/check.py"
+  ],
+  "exit_code": 0,
+  "stdout": "bounded model passed: balances 0..2, amounts 0..3\n",
+  "stderr": "",
+  "phase": "Existing check run unchanged before inspecting code/model drift."
+}

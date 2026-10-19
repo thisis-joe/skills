@@ -1,0 +1,14 @@
+{
+  "base": "ac83c20a7ea84e22a5111ba5a033da21e4d7dcf8",
+  "head_after_blocked_commit": "ac83c20a7ea84e22a5111ba5a033da21e4d7dcf8",
+  "hook_blocked_commit": true,
+  "block_cause": "missing local lint-staged in offline/no-install mode; not a demonstrated test failure",
+  "prepare_preserved": true,
+  "format_policy_sha256_unchanged": "e24497110d30ae51a49983c8de5867fd377f01fa5fa68f4159287ca6b272da71",
+  "missing_typecheck_reported": true,
+  "unrelated_untracked_preserved": true,
+  "real_format_staged_only": "unavailable: prettier/lint-staged absent",
+  "successful_real_hook_commit": "unavailable: dependencies absent",
+  "failing_test_blocks_hook": "unavailable: lint-staged prerequisite cannot run",
+  "actual_activation": "temporary fixture local core.hooksPath only; no project or global activation"
+}

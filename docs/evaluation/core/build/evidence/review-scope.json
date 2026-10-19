@@ -1,0 +1,18 @@
+{
+  "cwd": "/tmp/lets-core-validation/build/repo",
+  "command": [
+    "python3",
+    "/Users/Joseph/workspaces/skills/skills/_lets-shared/tools/review_scope.py",
+    "--repo",
+    ".",
+    "--base",
+    "main",
+    "--path",
+    "greet.py",
+    "--path",
+    "tests/test_greet.py"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"schema\": 1,\n  \"repository\": \"/private/tmp/lets-core-validation/build/repo\",\n  \"requested_base\": \"main\",\n  \"base_commit\": \"3b16a6a282b39052ee1c18257f260869e01418b0\",\n  \"comparison_commit\": \"3b16a6a282b39052ee1c18257f260869e01418b0\",\n  \"head\": \"3b16a6a282b39052ee1c18257f260869e01418b0\",\n  \"task_paths\": [\n    \"greet.py\",\n    \"tests/test_greet.py\"\n  ],\n  \"has_changes\": true,\n  \"files\": [\n    {\n      \"path\": \"greet.py\",\n      \"layers\": [\n        \"worktree\"\n      ],\n      \"statuses\": {\n        \"worktree\": \"M\"\n      },\n      \"current_sha256\": \"14a8b1943dd96aa0e0062a44f6af93d1765e23824fc2ff91a96d581b222777f5\"\n    },\n    {\n      \"path\": \"tests/test_greet.py\",\n      \"layers\": [\n        \"worktree\"\n      ],\n      \"statuses\": {\n        \"worktree\": \"M\"\n      },\n      \"current_sha256\": \"40470549780ba138039566a4c89c04159b0bca588d1d1356f6ec3f62fa4440f7\"\n    }\n  ],\n  \"snapshot\": \"3d4ecea5553dfc9da4e83588ab4370298ba38f6ecbdbb0c734ee57f8982e271c\"\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,18 @@
+{
+  "case": "context-only",
+  "phase": "verification",
+  "label": "runtime",
+  "cwd": "/tmp/lets-recovery-validation/context-only/repo",
+  "command": [
+    "python3",
+    "double.py",
+    "6"
+  ],
+  "environment_overrides": {
+    "GIT_OPTIONAL_LOCKS": "0",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exit_code": 0,
+  "stdout": "12\n",
+  "stderr": ""
+}

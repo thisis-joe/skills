@@ -1,0 +1,11 @@
+{
+  "cwd": "/tmp/lets-core-validation/context/repo",
+  "command": [
+    "python3",
+    "-c",
+    "from pathlib import Path; import subprocess; print(subprocess.check_output([\"git\",\"diff\",\"--\",\"double.py\"],text=True)); print(Path(\"tests/test_double.py\").read_text()); print(subprocess.check_output([\"git\",\"diff\",\"--check\"],text=True))"
+  ],
+  "exit_code": 0,
+  "stdout": "diff --git a/double.py b/double.py\nindex 3da3d45..a07e58e 100644\n--- a/double.py\n+++ b/double.py\n@@ -1,2 +1,2 @@\n import sys\n-print(int(sys.argv[1]))\n+print(int(sys.argv[1]) * 2)\n\nimport subprocess\nimport sys\nimport unittest\nclass DoubleTest(unittest.TestCase):\n    def test_double(self):\n        p=subprocess.run([sys.executable,\"double.py\",\"6\"],capture_output=True,text=True)\n        self.assertEqual(p.returncode,0)\n        self.assertEqual(p.stdout,\"12\\n\")\n\n\n",
+  "stderr": ""
+}

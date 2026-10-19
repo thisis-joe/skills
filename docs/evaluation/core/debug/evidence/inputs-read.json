@@ -1,0 +1,14 @@
+{
+  "cwd": "/tmp/lets-core-validation/debug",
+  "command": [
+    "python3",
+    "-c",
+    "from pathlib import Path; import sys;\nfor name in sys.argv[1:]: print(name+\"\\n\"+Path(name).read_text())",
+    "input.md",
+    "report.txt",
+    "worker.py"
+  ],
+  "exit_code": 0,
+  "stdout": "input.md\nInvestigate intermittent duplicate processing. Produce an executable red-capable harness or state unavailable evidence. Diagnosis only; no production fix or commit. Original production service/telemetry are unavailable. Provided small local worker reproduces the relevant check-then-act path.\n\nreport.txt\nIn production receipt jobs sometimes process twice under concurrent redelivery. Logs suggest 1 in 40 attempts, but sample definition unknown. Expect one effect per stable message ID. The supplied worker is an isolated representation, not a production snapshot.\n\nworker.py\nimport time\n\ndef process(message_id, seen, effects, before_effect=lambda: None):\n    if message_id in seen:\n        return \"duplicate\"\n    before_effect()\n    effects.append(message_id)\n    seen.add(message_id)\n    return \"processed\"\n\n",
+  "stderr": ""
+}

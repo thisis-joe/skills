@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "package": {
+    "schema": 1,
+    "shared": "_coco-shared",
+    "skills": [
+      "coco-build",
+      "coco-review"
+    ],
+    "display_prefix": "coco-",
+    "provenance_required": true
+  },
+  "files": {
+    "_coco-shared/contracts.md": "c3b1a8bee660ff753d2f4af82ba495c0ab89a47b24c567565bb3902330d34e5b",
+    "_coco-shared/decisions.md": "cd85a68726a9001f96dd6ea4ec94a064d5e343885b9e1201586cc91757c29652",
+    "coco-build/SKILL.md": "574b36e80fbea12cc60444a281a34e074f24c053300768d230d30a14210db22d",
+    "coco-build/agents/openai.yaml": "0fa010b311e487132230af3965f5bd1c547ae134cb3e12023c3e5d5752eb0746",
+    "coco-build/references/team-checks.md": "79dd5dcf27c1bfaab510f45c182d118b99d793407c5a6fae1978d9386fb3fb25",
+    "coco-review/SKILL.md": "59d9093a980d417cc47cf61a99daccb681060f5ce093f822965bdc02a5ad51bf",
+    "coco-review/agents/openai.yaml": "2955b95754327f09f0682eb14a3b8de850c5a2bf503313ce3cd81a4d52f89a49",
+    "coco-review/references/team-checks.md": "79dd5dcf27c1bfaab510f45c182d118b99d793407c5a6fae1978d9386fb3fb25"
+  }
+}

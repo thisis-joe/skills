@@ -1,0 +1,31 @@
+{
+  "case": "case-3",
+  "outcome": "specification-written",
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "-c",
+        "from pathlib import Path; import hashlib,json; n=Path('NOTES.md'); p=Path('WORKFLOW.md'); s=p.read_text(); terms=['specification only','immutable','thread-only','exactly one','compensation','server','secret facility','durable queue','payload_digest','readback','zero external writes','No runtime or external success']; checks={t:t in s for t in terms}; print(json.dumps({'checks':checks,'notes_sha256':hashlib.sha256(n.read_bytes()).hexdigest(),'workflow_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'scope':'static documentation checks only'},indent=2)); raise SystemExit(0 if all(checks.values()) else 1)"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "evidence_paths": [
+    "evidence/static-check.json"
+  ],
+  "modified_files": [
+    "WORKFLOW.md",
+    "evidence/static-check.json",
+    "RESULT.json"
+  ],
+  "missing_prerequisites": [
+    "Source channel/root policy and trusted triage identity/marker are undecided.",
+    "Repository/default branch, tracker/control/webhook adapters, destination and server secret facility are not supplied.",
+    "Owner, feature maps, retention, concrete numeric budgets and adapter contract tests remain activation prerequisites."
+  ],
+  "limits": [
+    "Only a specification and static documentation checks were executed. No workflow, delivery, retry, crash, compensation or external-write behavior was run or proven.",
+    "No activation, schedule, package installation, external service call or message was performed."
+  ]
+}

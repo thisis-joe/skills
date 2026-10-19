@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-frontend"
+  short_description: "Purpose-led frontend with source-backed checks and evidence"
+  default_prompt: "Use $coco-frontend for the current request and provide its required result."

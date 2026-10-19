@@ -1,0 +1,67 @@
+{
+  "phase": "lets-build",
+  "operation": "Guarded atomic replacement of T1 in the designated authoritative local task-state file. No Git mutation or product write.",
+  "authorization": "User explicitly authorized resuming approved implementation sequence and reconciling local task state.",
+  "state_path": "/tmp/lets-recovery-validation/resume/task-state.json",
+  "before_sha256": "5156b3f51d4ae746285645fa468076a2a304a79625e3929d5ba61ccbe48c3cd5",
+  "after_sha256": "1e2189f4ee461e773668fc69e4a850e067bd9fc10e02ffe88757fec8303a1da1",
+  "existing_commit": "03b7e6a2131b4eec2d177c6591a22084c554e3f6",
+  "state_before": {
+    "T1": {
+      "status": "open",
+      "commit": null,
+      "blockers": []
+    },
+    "T2": {
+      "status": "pending",
+      "blockers": [
+        "T1"
+      ],
+      "title": "Document examples"
+    }
+  },
+  "state_readback": {
+    "T1": {
+      "status": "done",
+      "commit": "03b7e6a2131b4eec2d177c6591a22084c554e3f6",
+      "blockers": [],
+      "evidence": {
+        "suite": {
+          "status": "passed",
+          "artifact": "evidence/current-suite.json",
+          "prior_receipt": "evidence/fixture-green.json"
+        },
+        "runtime": {
+          "status": "passed",
+          "artifact": "evidence/current-runtime.json",
+          "prior_receipt": "evidence/fixture-runtime.json"
+        },
+        "review": {
+          "status": "passed",
+          "artifact": "fixture-review.md",
+          "independence": "degraded self-review",
+          "required_findings": []
+        },
+        "identity": "evidence/receipt-identity.json",
+        "scope": {
+          "artifact": "evidence/current-scope.json",
+          "snapshot": "ffadc7dbace9023e04d4f2650466d4b9ebf6b4abb1ebd8b54ecc34732cb24360"
+        }
+      }
+    },
+    "T2": {
+      "status": "pending",
+      "blockers": [
+        "T1"
+      ],
+      "title": "Document examples"
+    }
+  },
+  "tasks_changed": [
+    "T1"
+  ],
+  "T2_preserved": true,
+  "product_commit_created": false,
+  "next_ready_task": "T2",
+  "stopped_reason": "README and request exclude implementing T2 now."
+}

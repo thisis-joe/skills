@@ -1,0 +1,21 @@
+$ python3 -c from pathlib import Path; import sys;
+for name in sys.argv[1:]: print(name+"\n"+Path(name).read_text()) input.md issue-42.md glossary.md README.md specs/ISSUE-42.md
+input.md
+Write the settled issue into the existing spec file. Do not re-interview or implement.
+
+issue-42.md
+# Issue 42 approved
+Users export visible invoices as UTF-8 CSV in current sort order. Columns invoice_id,total_cents,paid. paid is lowercase true/false. Header always exists for empty results. Formula-like text fields are prefixed with apostrophe for spreadsheet safety. Preserve current on-screen filtering and ordering. Existing approved boundary: public export_invoices(rows)->str tested with stdlib csv reader; no browser test required for this library-only task. API has no file/download UI.
+
+glossary.md
+Invoice: immutable billing record identified by invoice_id. Visible invoices: rows already filtered and sorted by the caller.
+
+README.md
+Specs live in specs/ISSUE-<id>.md with Objective, Behavior, Scope, Acceptance, Tests, Open issues. Standing check: python3 -m unittest discover -s tests -v.
+
+specs/ISSUE-42.md
+# ISSUE-42 v0
+Placeholder for the approved export contract.
+
+
+exit=0

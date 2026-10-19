@@ -1,0 +1,12 @@
+worktree /private/tmp/lets-conditional-validation/case5-cleanup/repo
+HEAD 296df591f0304818b60fc4ba27c1341d68ff888a
+branch refs/heads/fixture/main
+
+worktree /private/tmp/lets-conditional-validation/case5-cleanup/active-dirty
+HEAD 42b612509867d11b6c03564165e9ce73b28f199e
+branch refs/heads/feature/active-task
+
+worktree /private/tmp/lets-conditional-validation/case5-cleanup/merged-unused
+HEAD 296df591f0304818b60fc4ba27c1341d68ff888a
+branch refs/heads/feature/completed-task
+

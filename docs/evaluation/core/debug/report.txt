@@ -1,0 +1,1 @@
+In production receipt jobs sometimes process twice under concurrent redelivery. Logs suggest 1 in 40 attempts, but sample definition unknown. Expect one effect per stable message ID. The supplied worker is an isolated representation, not a production snapshot.

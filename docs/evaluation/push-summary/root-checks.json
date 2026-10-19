@@ -1,0 +1,35 @@
+{
+  "pre_change_commit": "41531b9fb0c7ed80e83f6630df74fef118bde6f3",
+  "checks": [
+    {
+      "command": "python3 scripts/validate.py",
+      "exit_code": 0,
+      "skills": 25
+    },
+    {
+      "command": "python3 -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 23
+    },
+    {
+      "command": "skill-creator/scripts/quick_validate.py skills/coco-push",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 scripts/install.py --dry-run",
+      "exit_code": 0,
+      "skills": 25,
+      "files": 82
+    }
+  ],
+  "upstream_essential_rules_and_manifest_preserved": true,
+  "source_sha256": {
+    "skills/coco-push/SKILL.md": "f1445576eb242bfd71f79aecc1cad160607a894041ff438abedbe934071558fb",
+    "skills/coco-push/agents/openai.yaml": "9eb48b8238e37983a74265da0d1832ce321727907b00437af00c32b341fd0d55",
+    "skills/coco-push/references/sync-and-push.md": "41a4948fe119a987d0a3eed9233eb75c9c759b60abf13648d74f2e302ddfb461",
+    "skills/coco-push/references/branch-and-ticket.md": "c5a1857e5f71eb7bff40705ed8e5120950fa6803beecd502a7ea377ea8e11ec5",
+    "skills/_coco-shared/contracts.md": "dae44c6677c388ed35cb9d42385f98be2c48a6d1566b5e783d7b0e39fcecd8e5",
+    "skills/_coco-shared/decisions.md": "89c523379e27a39ebbbbe9e953d72dd42504fbb9dc755b1512788dfce859a942"
+  },
+  "behavior_evidence": "README.md"
+}

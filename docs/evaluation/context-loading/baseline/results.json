@@ -1,0 +1,47 @@
+{
+  "workspace": "/private/tmp/coco-context-loading-6bhlglo9/workspace-river",
+  "case_reports": [
+    {
+      "case": "case-1",
+      "report": "case-1/RESULT.json",
+      "outcome": "passed"
+    },
+    {
+      "case": "case-2",
+      "report": "case-2/RESULT.json",
+      "outcome": "changed"
+    },
+    {
+      "case": "case-3",
+      "report": "case-3/RESULT.json",
+      "outcome": "prepared"
+    },
+    {
+      "case": "case-4",
+      "report": "case-4/RESULT.json",
+      "outcome": "blocked"
+    },
+    {
+      "case": "case-5",
+      "report": "case-5/RESULT.json",
+      "outcome": "bug"
+    }
+  ],
+  "final_audit": {
+    "command": [
+      "python3",
+      "evidence/final_audit.py"
+    ],
+    "exit": 0,
+    "evidence": [
+      "evidence/final_audit.stdout.txt",
+      "evidence/final_audit.stderr.txt",
+      "evidence/final_audit.exit.txt"
+    ]
+  },
+  "limits": [
+    "Only local disposable tasks in this workspace were executed.",
+    "No external services, messages, schedules, installs, pushes or product fixes were performed.",
+    "The workflow specification is prepared only, intake reproduction is blocked, and the nonnegative wallet property fails within its original bounded domain."
+  ]
+}

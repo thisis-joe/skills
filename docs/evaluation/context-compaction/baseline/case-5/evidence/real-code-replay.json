@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python3",
+    "-c",
+    "from wallet import spend\nbalance, amount = 0, 1\nresult = spend(balance, amount)\nprint(f\"wallet.spend({balance}, {amount}) = {result}\")\nprint(f\"nonnegative property holds: {result >= 0}\")\nassert result == -1\nassert result < 0\nprint(\"Real-code counterexample replay confirmed; this is a property failure.\")\n"
+  ],
+  "exit_code": 0,
+  "stdout": "wallet.spend(0, 1) = -1\nnonnegative property holds: False\nReal-code counterexample replay confirmed; this is a property failure.\n",
+  "stderr": "",
+  "observation": "Exit 0 confirms successful reproduction of the failure, not a passing balance property."
+}

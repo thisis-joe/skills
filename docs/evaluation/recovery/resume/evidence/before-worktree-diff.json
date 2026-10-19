@@ -1,0 +1,13 @@
+{
+  "case": "resume",
+  "phase": "before",
+  "label": "worktree-diff",
+  "cwd": "/tmp/lets-recovery-validation/resume/repo",
+  "command": [
+    "git",
+    "diff"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

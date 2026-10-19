@@ -1,0 +1,242 @@
+[
+  {
+    "case": 1,
+    "path": "/tmp/lets-conditional-validation/case1-git-guard/README.md",
+    "exists": true,
+    "sha256": "dc633ac3ed296bac2c310e11b7d5fe5f379cca9b5f40a1da8913e96c635a082b"
+  },
+  {
+    "case": 1,
+    "path": "/tmp/lets-conditional-validation/case1-git-guard/THREAT-CONTROL-TEST.md",
+    "exists": true,
+    "sha256": "38f30a9e1840835332eb3c019cf51383241ff43fc7af04a22ae00a5c3621f3f2"
+  },
+  {
+    "case": 1,
+    "path": "/tmp/lets-conditional-validation/case1-git-guard/settings.diff",
+    "exists": true,
+    "sha256": "77a59edee1a7860c15995cbf07ef0320b9cebaa98b8a60f3b37f363a423ba09b"
+  },
+  {
+    "case": 1,
+    "path": "/tmp/lets-conditional-validation/case1-git-guard/tests.json",
+    "exists": true,
+    "sha256": "228abb3f4d9aee39264d75194165d576d5e1b6e2e996da135aaa834cad507221"
+  },
+  {
+    "case": 1,
+    "path": "/tmp/lets-conditional-validation/frozen-reapply-cases1-2.json",
+    "exists": true,
+    "sha256": "e62298cec1c6db6f775cbe7074a4228c289707e38e54d5f6c662958630e6098b"
+  },
+  {
+    "case": 2,
+    "path": "/tmp/lets-conditional-validation/case2-fixtures/PLAN.md",
+    "exists": true,
+    "sha256": "08e7fa70eda30715d208e2e99ed319433dc6e36102b87026fe739df770c268bd"
+  },
+  {
+    "case": 2,
+    "path": "/tmp/lets-conditional-validation/case2-fixtures/migration.diff",
+    "exists": true,
+    "sha256": "1fec6ff0ef7fb325d2bcdbacbdb9b53df02821983e9245aca642bea97a8442db"
+  },
+  {
+    "case": 2,
+    "path": "/tmp/lets-conditional-validation/case2-fixtures/checks.json",
+    "exists": true,
+    "sha256": "e44cad7ee94672e6f324d0625ec0de21f88e6cc97e8d7b8035bc1012fbcd1185"
+  },
+  {
+    "case": 2,
+    "path": "/tmp/lets-conditional-validation/case2-fixtures/evidence/published-package-metadata.json",
+    "exists": true,
+    "sha256": "f2cd8ac658db749dea408c29384151760e73a282bf5c0fe247d3075b3e033fcd"
+  },
+  {
+    "case": 2,
+    "path": "/tmp/lets-conditional-validation/case2-fixtures/evidence/commands.json",
+    "exists": true,
+    "sha256": "744ee2a0baedd600b8b226b802c1dc66386316776db9dc6aef9beae176f625d5"
+  },
+  {
+    "case": 2,
+    "path": "/tmp/lets-conditional-validation/frozen-reapply-cases1-2.json",
+    "exists": true,
+    "sha256": "e62298cec1c6db6f775cbe7074a4228c289707e38e54d5f6c662958630e6098b"
+  },
+  {
+    "case": 3,
+    "path": "/tmp/lets-conditional-validation/case3-precommit/README.md",
+    "exists": true,
+    "sha256": "f8154b668258b183395a56f55bde18e0b98064b33d9dcf01f7d1edd1b1fd7793"
+  },
+  {
+    "case": 3,
+    "path": "/tmp/lets-conditional-validation/case3-precommit/hook.diff",
+    "exists": true,
+    "sha256": "d11d09442571545743be647b2c3b69f28ec109d6847374d033a1c6e266055c90"
+  },
+  {
+    "case": 3,
+    "path": "/tmp/lets-conditional-validation/case3-precommit/project/.lintstagedrc.json",
+    "exists": true,
+    "sha256": "63480ffaa9f6154b7bb83c6924c16e514e19743d233bfbc35aa1c1da7ef7af73"
+  },
+  {
+    "case": 3,
+    "path": "/tmp/lets-conditional-validation/case3-precommit/checks.json",
+    "exists": true,
+    "sha256": "7cc579058543f334398d96c6a18e92b13b41f9ef7094c8b307a7f1ab9bd4de2b"
+  },
+  {
+    "case": 3,
+    "path": "/tmp/lets-conditional-validation/case3-precommit/evidence/commands.json",
+    "exists": true,
+    "sha256": "218e79ef670d1dab7713264d20a30885b505047b022a9906935eef4be40fa04c"
+  },
+  {
+    "case": 4,
+    "path": "/tmp/lets-conditional-validation/case4-wizard/STAGES.md",
+    "exists": true,
+    "sha256": "413b1f1aa61dec24e20d51a690ba38fce72e7d4a150a9f74a1a3f62273ab5929"
+  },
+  {
+    "case": 4,
+    "path": "/tmp/lets-conditional-validation/case4-wizard/setup-wizard.sh",
+    "exists": true,
+    "sha256": "7fa2584dba34eaf64a38ee9e88be579c580e8fea1af24df1001296c971d9dd1a"
+  },
+  {
+    "case": 4,
+    "path": "/tmp/lets-conditional-validation/case4-wizard/helpers/env_store.py",
+    "exists": true,
+    "sha256": "af636e8750feee75c5e974de188a85860b62d3163858f95c49dad149a4250a33"
+  },
+  {
+    "case": 4,
+    "path": "/tmp/lets-conditional-validation/case4-wizard/checks.json",
+    "exists": true,
+    "sha256": "c1d0beab16a79df9557a3b9fedaac33d23ea08faeffe0ab1c8d1543456bd1a6f"
+  },
+  {
+    "case": 5,
+    "path": "/tmp/lets-conditional-validation/case5-cleanup/PLAN.md",
+    "exists": true,
+    "sha256": "710e083b906e79d1c8835919f897e80d50416513a69db5b449a41516196be4de"
+  },
+  {
+    "case": 5,
+    "path": "/tmp/lets-conditional-validation/case5-cleanup/inventory.json",
+    "exists": true,
+    "sha256": "ee0e6fc6a947eac31d2db6470e99b346053dc65413c085551cd720ca1d59fc0d"
+  },
+  {
+    "case": 5,
+    "path": "/tmp/lets-conditional-validation/case5-cleanup/ownership.fixture.json",
+    "exists": true,
+    "sha256": "3ec8b3890494bf81047a69d8f9112bfd784e66a2f34365e2ca4b3f71d3bdcafb"
+  },
+  {
+    "case": 5,
+    "path": "/tmp/lets-conditional-validation/case5-cleanup/simulators.fixture.json",
+    "exists": true,
+    "sha256": "65d5c26fda5c436fca5dacb092b95f2d9c05e8758c7b16004ca180320c25ceaa"
+  },
+  {
+    "case": 5,
+    "path": "/tmp/lets-conditional-validation/case5-cleanup/evidence/commands.json",
+    "exists": true,
+    "sha256": "c674416a429c506dce64e188960acf3c8a282909410e8c97baa9122fdefdd957"
+  },
+  {
+    "case": 5,
+    "path": "/tmp/lets-conditional-validation/case5-cleanup/evidence/disk-after-plan.json",
+    "exists": true,
+    "sha256": "4e313bd0bfd8b9ef68c15d9c89ad6551cd7b0dd4251fbeaf638378d644866b9c"
+  },
+  {
+    "case": 6,
+    "path": "/tmp/lets-conditional-validation/case6-pr-check/REPORT.md",
+    "exists": true,
+    "sha256": "7bd260c329716282393249e86b8d7b466058905062b905c1fe7bd6c18ecc4629"
+  },
+  {
+    "case": 6,
+    "path": "/tmp/lets-conditional-validation/case6-pr-check/host-status.fixture.json",
+    "exists": true,
+    "sha256": "1c07c438f91cad5a5675189c7b5c28bd3c3bcb916a27797d0c7a60a72a3f09d8"
+  },
+  {
+    "case": 6,
+    "path": "/tmp/lets-conditional-validation/case6-pr-check/checks.json",
+    "exists": true,
+    "sha256": "4b72ee50dc3ee41bbf52e3a5b791cf82088b701943ff7cea1bb2903163e7d916"
+  },
+  {
+    "case": 7,
+    "path": "/tmp/lets-conditional-validation/case7-workflow-spec/WORKFLOW-SPEC.md",
+    "exists": true,
+    "sha256": "bd3f04c0415903f41a9f8f8f99c4b5c5bf77f49979889623b3004d2e079b0148"
+  },
+  {
+    "case": 7,
+    "path": "/tmp/lets-conditional-validation/case7-workflow-spec/input-manifest.json",
+    "exists": true,
+    "sha256": "2c9ea51de39cde57f678f7dcf1ac92ee880204dc20e86b57df06dfe0ea66c125"
+  },
+  {
+    "case": 7,
+    "path": "/tmp/lets-conditional-validation/case7-workflow-spec/checks.json",
+    "exists": true,
+    "sha256": "4b55b3c52b41d64e91dc1b5c9226ea4b17c05244cecebaa37df6721b7ec627db"
+  },
+  {
+    "case": 7,
+    "path": "/tmp/lets-conditional-validation/case7-workflow-spec/inputs/brief.md",
+    "exists": true,
+    "sha256": "5ed27c700cd0e9afde554e817f5689a36fbce4f2b700c83ef0b42c9d4367a629"
+  },
+  {
+    "case": 8,
+    "path": "/tmp/lets-conditional-validation/case8-quality/setup-brief.md",
+    "exists": true,
+    "sha256": "32a92583fea6acea18a4b9c66b98514fe67d7762c54f7345be1c8001a8ef46bc"
+  },
+  {
+    "case": 8,
+    "path": "/tmp/lets-conditional-validation/case8-quality/audit-brief.md",
+    "exists": true,
+    "sha256": "ed80234d10ee3de3180b3c51eed4b37130dd301ecc9e9300949b24a96c6104e6"
+  },
+  {
+    "case": 8,
+    "path": "/tmp/lets-conditional-validation/case8-quality/setup-project/CONSTRAINTS.md",
+    "exists": true,
+    "sha256": "aeb263832d0998a5424ca257bae1cbef90daaccfc315942cd82786c892c2a01a"
+  },
+  {
+    "case": 8,
+    "path": "/tmp/lets-conditional-validation/case8-quality/OUTCOMES.md",
+    "exists": true,
+    "sha256": "53f65d67687a38467d3ee07afc187eb2e4c1e6875a815f7c54978b92abc84318"
+  },
+  {
+    "case": 8,
+    "path": "/tmp/lets-conditional-validation/case8-quality/checks.json",
+    "exists": true,
+    "sha256": "299cca6abeb47bccf4a1b95a171d1aa3002037b2504136ad80aa789ff66095b7"
+  },
+  {
+    "case": 8,
+    "path": "/tmp/lets-conditional-validation/case8-quality/evidence/audit-scope.json",
+    "exists": true,
+    "sha256": "182bcf7e80f7ea396eb2718a77ae8da5121ceb9ebe3ad01a5560e287326de7eb"
+  },
+  {
+    "case": 8,
+    "path": "/tmp/lets-conditional-validation/case8-quality/scope-source.json",
+    "exists": true,
+    "sha256": "f8e00de552c1d291940f389fb7ae4f75ae562f9e59e21552d908e1c0b1a31fbe"
+  }
+]

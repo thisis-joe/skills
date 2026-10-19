@@ -1,0 +1,10 @@
+$ python3 -m unittest discover -s tests -v
+test_excited_cli (test_greet.GreetTest) ... ok
+test_normal_cli (test_greet.GreetTest) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.036s
+
+OK
+
+exit=0

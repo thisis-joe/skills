@@ -1,0 +1,24 @@
+{
+  "at_utc": "2026-10-19T08:53:45.668085+00:00",
+  "instruction_hashes_match_current": true,
+  "cases": [
+    {
+      "case": "case-a",
+      "head": "920d6eaaf89cd7593255d25fe729d0048ddcfce0",
+      "source_and_installed_hashes_match_record": true,
+      "installation_status": "installed"
+    },
+    {
+      "case": "case-b",
+      "head": "38bc62576d9ec0cff1ba457f43c570b6aa20421d",
+      "source_and_installed_hashes_match_record": true,
+      "installation_status": "unchanged-no-install-attempt"
+    },
+    {
+      "case": "case-c",
+      "head": "59e4e770b37416a89c06f7d2d625477b307b091c",
+      "source_and_installed_hashes_match_record": true,
+      "installation_status": "blocked-user-modified-managed-file"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "double_type",
+  "command": [
+    "python3",
+    "app.py",
+    "--double",
+    "abc"
+  ],
+  "expected_exit": 2,
+  "expected_stdout": "",
+  "expected_markers": [
+    "invalid int value"
+  ],
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: argument --double: invalid int value: 'abc'\n",
+  "status": "passed"
+}

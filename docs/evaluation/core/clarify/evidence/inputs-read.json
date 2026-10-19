@@ -1,0 +1,14 @@
+{
+  "cwd": "/tmp/lets-core-validation/clarify",
+  "command": [
+    "python3",
+    "-c",
+    "from pathlib import Path; import sys;\nfor name in sys.argv[1:]: print(name+\"\\n\"+Path(name).read_text())",
+    "input.md",
+    "agreement.md",
+    "glossary.md"
+  ],
+  "exit_code": 0,
+  "stdout": "input.md\nDraft focused clarification for the proposed refund policy. Existing approved glossary must be preserved. Two decisions remain: refund eligibility window; whether shipping cost is refunded. Documentation changes and implementation are not requested.\n\nagreement.md\nSettled: customer may request a refund for a captured payment; support approves requests; refunded money goes to original payment method. No store credit. Amount cannot exceed captured amount less prior refunds. Open: eligibility window after delivery (14, 30, or 60 calendar days), shipping-charge inclusion. These decisions are independent.\n\nglossary.md\n# Approved glossary\nRefund: money returned to the original payment method after approval.\nReturn: physical goods sent back by the customer.\nShipping charge: separately itemized outbound delivery charge.\n\n",
+  "stderr": ""
+}

@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python3",
+    "proof/check.py"
+  ],
+  "cwd": "/private/tmp/coco-context-loading-6bhlglo9/workspace-forest/case-5",
+  "exit_code": 0,
+  "stdout": "bounded model passed: balances 0..2, amounts 0..3\n",
+  "stderr": "",
+  "phase": "unchanged baseline, before proof-file edits"
+}

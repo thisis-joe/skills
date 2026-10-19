@@ -1,0 +1,107 @@
+{
+  "initial_reads": "live installed files, before freeze notification; original read bytes not archived",
+  "remaining_target": "/tmp/lets-frozen-candidate/skills",
+  "warning": "current live equality cannot establish historical byte equality",
+  "files": [
+    {
+      "file": "lets-start/SKILL.md",
+      "live_now_matches_frozen": true,
+      "frozen_sha256": "7d86ecd2e25b99c1f141692697e35f0cfdf560687b7d43cf1d7e5c6599bc6bb2"
+    },
+    {
+      "file": "lets-security/SKILL.md",
+      "live_now_matches_frozen": true,
+      "frozen_sha256": "47a4073dad8b55cefb319964199dc09b7ca2ff18a37f1626d2058d6c31b186d2"
+    },
+    {
+      "file": "lets-migrate/SKILL.md",
+      "live_now_matches_frozen": true,
+      "frozen_sha256": "e390b992b298f989012fae733e73c1fa2c32077f0446dc8cf8dd0afa2fe69da6"
+    },
+    {
+      "file": "lets-verify/SKILL.md",
+      "live_now_matches_frozen": true,
+      "frozen_sha256": "1c3297eafedd87a3de638505e2be67b3e860acf4c81adfec055ede66b0065ac9"
+    },
+    {
+      "file": "lets-ship/SKILL.md",
+      "live_now_matches_frozen": true,
+      "frozen_sha256": "1fedcdacba076ebef413b42a22c227098f85fb81bc5a0ad7249a943e8ad94cbe"
+    },
+    {
+      "file": "lets-review/SKILL.md",
+      "live_now_matches_frozen": true,
+      "frozen_sha256": "5ccc3880aa5ed16f7be45072e1197c6a4c8874b05520b73088014bb9db9d29a9"
+    },
+    {
+      "file": "lets-automate/SKILL.md",
+      "live_now_matches_frozen": true,
+      "frozen_sha256": "ce55d177595c154cf3edb3bbece91107c1070b490f1f5d5bd8e9785a77628753"
+    },
+    {
+      "file": "lets-spec/SKILL.md",
+      "live_now_matches_frozen": true,
+      "frozen_sha256": "7b64d9a2644568d396f1f596229f67c3ed40b3f5d603eda8fb5821be865ac43a"
+    },
+    {
+      "file": "lets-context/SKILL.md",
+      "live_now_matches_frozen": true,
+      "frozen_sha256": "2e5ccc5063b11aeb66231ab1d0562b88895938a99410a03a8ab45edadefea6b3"
+    },
+    {
+      "file": "_lets-shared/contracts.md",
+      "live_now_matches_frozen": true,
+      "frozen_sha256": "62272ac57e59eada632f236092f6a6d24eeb1360a0ad4d9210623d9203b18395"
+    },
+    {
+      "file": "_lets-shared/routing.md",
+      "live_now_matches_frozen": true,
+      "frozen_sha256": "64e8b1e5d9644adb977b280564679a1c2f042767ce9bfe5c9e74ddaa91a13307"
+    },
+    {
+      "file": "_lets-shared/advanced/start.md",
+      "live_now_matches_frozen": true,
+      "frozen_sha256": "013d86b738481e6d278c27fc3b58ca1e66c42e62dc27c8a8f9f542cbfe47ea3e"
+    },
+    {
+      "file": "_lets-shared/advanced/security.md",
+      "live_now_matches_frozen": true,
+      "frozen_sha256": "37e216d32b1281fd505b5c0b9ac4db0118e61087a14316ac3f7679d2e2651a77"
+    },
+    {
+      "file": "_lets-shared/advanced/migrate.md",
+      "live_now_matches_frozen": true,
+      "frozen_sha256": "f47274905a53085956fed1eea453d94c8208d1696cafeb799fad2344cadc0490"
+    },
+    {
+      "file": "_lets-shared/advanced/verify.md",
+      "live_now_matches_frozen": true,
+      "frozen_sha256": "0730bccf5ff7fe1737028c8dd8e1509ece19c56d3b8dad20adb76462dfd1aa5e"
+    },
+    {
+      "file": "_lets-shared/advanced/automate.md",
+      "live_now_matches_frozen": true,
+      "frozen_sha256": "e6995f27dbab8ef6567f365a4bd7e09d68cf37b8a51c2665e49702b7bbe6ad8c"
+    },
+    {
+      "file": "_lets-shared/advanced/ship.md",
+      "live_now_matches_frozen": true,
+      "frozen_sha256": "c4a5b21881757d9defd0049b558891498b203676148c6cba10e4d524b70b63f5"
+    },
+    {
+      "file": "_lets-shared/advanced/review.md",
+      "live_now_matches_frozen": true,
+      "frozen_sha256": "3745815b6fee805ccdb58908db88f6f0e7fc849de347aeb3731322b6c1e9260a"
+    },
+    {
+      "file": "_lets-shared/advanced/spec.md",
+      "live_now_matches_frozen": true,
+      "frozen_sha256": "705aea9292b9a64e9c0798ef29b54e8c24eed6ccf57d7514b3337231cf9a5cb0"
+    },
+    {
+      "file": "_lets-shared/advanced/context.md",
+      "live_now_matches_frozen": true,
+      "frozen_sha256": "f62e7c3e07269e7c14f56b12ec0cb5c01be608b8e019628de2bb9a434b4e88b6"
+    }
+  ]
+}

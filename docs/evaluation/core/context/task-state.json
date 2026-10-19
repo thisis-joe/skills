@@ -1,0 +1,16 @@
+{
+  "T1": {
+    "status": "done",
+    "commit": "03b7e6a2131b4eec2d177c6591a22084c554e3f6",
+    "blockers": [],
+    "evidence": "receipt.json",
+    "reconciliation": "Existing commit and unchanged suite/runtime/review receipts verified; recovered interrupted state write"
+  },
+  "T2": {
+    "status": "pending",
+    "blockers": [
+      "T1"
+    ],
+    "title": "Document examples"
+  }
+}

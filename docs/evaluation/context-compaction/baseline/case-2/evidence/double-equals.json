@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python3",
+    "app.py",
+    "--double=3"
+  ],
+  "exit_code": 0,
+  "stdout": "6\n",
+  "stderr": ""
+}

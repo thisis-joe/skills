@@ -1,0 +1,1 @@
+The project uses .githooks with a local core.hooksPath. Existing prepare is independent. Formatting authority: .prettierrc.json/.prettierignore. Do not introduce Husky. Typecheck script is intentionally absent. Lock is a fixture inventory, not a complete installable lock.

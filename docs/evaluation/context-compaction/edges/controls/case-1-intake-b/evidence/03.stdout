@@ -1,0 +1,7 @@
+{
+  "root_matches": true,
+  "locally_matching_trusted_verdict_ids": [
+    "verdict-2"
+  ],
+  "authenticated_readback": false
+}

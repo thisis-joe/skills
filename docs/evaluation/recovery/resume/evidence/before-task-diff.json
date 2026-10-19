@@ -1,0 +1,17 @@
+{
+  "case": "resume",
+  "phase": "before",
+  "label": "task-diff",
+  "cwd": "/tmp/lets-recovery-validation/resume/repo",
+  "command": [
+    "git",
+    "diff",
+    "main...HEAD",
+    "--",
+    "double.py",
+    "tests/test_double.py"
+  ],
+  "exit_code": 0,
+  "stdout": "diff --git a/double.py b/double.py\nindex 3da3d45..a07e58e 100644\n--- a/double.py\n+++ b/double.py\n@@ -1,2 +1,2 @@\n import sys\n-print(int(sys.argv[1]))\n+print(int(sys.argv[1]) * 2)\n",
+  "stderr": ""
+}

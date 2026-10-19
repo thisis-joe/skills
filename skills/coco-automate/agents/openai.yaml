@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-automate"
+  short_description: "Purpose-led automate with source-backed checks and evidence"
+  default_prompt: "Use $coco-automate for the current request and provide its required result."

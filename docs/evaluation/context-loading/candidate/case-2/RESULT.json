@@ -1,0 +1,201 @@
+{
+  "case": "case-2",
+  "outcome": "changed",
+  "finding": "VERIFY.md omitted the shipped --triple feature; documentation and complete local feature map updated after source inspection and live exercise.",
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "-v"
+      ],
+      "exit_code": 0,
+      "evidence": "evidence/baseline-checks.json"
+    },
+    {
+      "argv": [
+        "python3",
+        "app.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "evidence": "evidence/doctor.json"
+    },
+    {
+      "argv": [
+        "python3",
+        "app.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "evidence": "evidence/help.json"
+    },
+    {
+      "argv": [
+        "python3",
+        "app.py",
+        "--double",
+        "3"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "evidence": "evidence/double-positive.json"
+    },
+    {
+      "argv": [
+        "python3",
+        "app.py",
+        "--double",
+        "-4"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "evidence": "evidence/double-negative.json"
+    },
+    {
+      "argv": [
+        "python3",
+        "app.py",
+        "--double",
+        "0"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "evidence": "evidence/double-zero.json"
+    },
+    {
+      "argv": [
+        "python3",
+        "app.py",
+        "--triple",
+        "3"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "evidence": "evidence/triple-positive.json"
+    },
+    {
+      "argv": [
+        "python3",
+        "app.py",
+        "--triple",
+        "-4"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "evidence": "evidence/triple-negative.json"
+    },
+    {
+      "argv": [
+        "python3",
+        "app.py",
+        "--triple",
+        "0"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "evidence": "evidence/triple-zero.json"
+    },
+    {
+      "argv": [
+        "python3",
+        "app.py"
+      ],
+      "exit_code": 2,
+      "status": "passed",
+      "evidence": "evidence/missing-operation.json"
+    },
+    {
+      "argv": [
+        "python3",
+        "app.py",
+        "--double",
+        "3",
+        "--triple",
+        "3"
+      ],
+      "exit_code": 2,
+      "status": "passed",
+      "evidence": "evidence/conflicting-operations.json"
+    },
+    {
+      "argv": [
+        "python3",
+        "app.py",
+        "--triple",
+        "nope"
+      ],
+      "exit_code": 2,
+      "status": "passed",
+      "evidence": "evidence/invalid-integer.json"
+    },
+    {
+      "argv": [
+        "python3",
+        "app.py",
+        "--double"
+      ],
+      "exit_code": 2,
+      "status": "passed",
+      "evidence": "evidence/missing-value.json"
+    },
+    {
+      "argv": [
+        "python3",
+        "app.py",
+        "--double",
+        "3",
+        "--unknown"
+      ],
+      "exit_code": 2,
+      "status": "passed",
+      "evidence": "evidence/unknown-option.json"
+    }
+  ],
+  "evidence_paths": [
+    "evidence/snapshot.json",
+    "evidence/baseline-checks.json",
+    "evidence/doctor.json",
+    "evidence/help.json",
+    "evidence/double-positive.json",
+    "evidence/double-negative.json",
+    "evidence/double-zero.json",
+    "evidence/triple-positive.json",
+    "evidence/triple-negative.json",
+    "evidence/triple-zero.json",
+    "evidence/missing-operation.json",
+    "evidence/conflicting-operations.json",
+    "evidence/invalid-integer.json",
+    "evidence/missing-value.json",
+    "evidence/unknown-option.json",
+    "evidence/closure.json"
+  ],
+  "modified_files": [
+    "VERIFY.md",
+    "RESULT.json",
+    "evidence/baseline-checks.json",
+    "evidence/closure.json",
+    "evidence/conflicting-operations.json",
+    "evidence/doctor.json",
+    "evidence/double-negative.json",
+    "evidence/double-positive.json",
+    "evidence/double-zero.json",
+    "evidence/help.json",
+    "evidence/invalid-integer.json",
+    "evidence/missing-operation.json",
+    "evidence/missing-value.json",
+    "evidence/snapshot.json",
+    "evidence/triple-negative.json",
+    "evidence/triple-positive.json",
+    "evidence/triple-zero.json",
+    "evidence/unknown-option.json"
+  ],
+  "missing_prerequisites": [],
+  "limits": [
+    "All discovered user-facing features exercised through the shipped CLI on the recorded local snapshot.",
+    "Finite representative integer cases and parser error states only; not exhaustive inputs, parser spellings, Python versions, or platforms.",
+    "app.py and test_app.py are unchanged; no product regression observed."
+  ]
+}

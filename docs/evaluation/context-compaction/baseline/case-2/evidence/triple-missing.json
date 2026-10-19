@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python3",
+    "app.py",
+    "--triple"
+  ],
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: argument --triple: expected one argument\n"
+}

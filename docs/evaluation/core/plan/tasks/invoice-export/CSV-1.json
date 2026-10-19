@@ -1,0 +1,23 @@
+{
+  "id": "CSV-1",
+  "status": "ready",
+  "blockers": [],
+  "acceptance": "Safe CSV for visible invoices in caller order; exact header, booleans, empty and dangerous-text cases",
+  "verification": [
+    "python3 -m unittest tests.test_export -v",
+    "python3 scripts/exercise_export.py"
+  ],
+  "closure": [
+    "project full suite",
+    "relevant actual public runtime journey",
+    "scoped review",
+    "task-owned work-unit commit"
+  ],
+  "expected_scope": "export public path and tests",
+  "branch": "feature/invoice-export",
+  "base": "unavailable: actual repository not provided",
+  "environment": "Python project/source map only; commands unexecuted",
+  "risk_rollback": "plans/invoice-export.md",
+  "execution_mode": "single-owner sequential; planning-only request",
+  "commit": null
+}

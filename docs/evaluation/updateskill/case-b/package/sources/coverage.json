@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "entries": [
+    {
+      "author": "synthetic-fixture",
+      "path": "build/SKILL.md",
+      "family": "build",
+      "disposition": "merged",
+      "essential_rules": [
+        "Run pytest -q for every project before completion."
+      ],
+      "adaptation": "Adopted unconditional pytest check for the team in decision D001.",
+      "implemented_references": [
+        "skills/_coco-shared/contracts.md#checks",
+        "skills/coco-build/SKILL.md"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "@total-typescript/shoehorn",
+  "version": "0.1.2",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "dev": "vitest",
+    "attw": "attw --pack",
+    "lint": "tsc",
+    "test": "vitest run",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "release": "turbo build lint test attw && changeset publish"
+  },
+  "dist": {
+    "shasum": "a0c095ce8cb9b4ae3556bcff42702ddb072e9d18",
+    "tarball": "https://registry.npmjs.org/@total-typescript/shoehorn/-/shoehorn-0.1.2.tgz",
+    "fileCount": 8,
+    "integrity": "sha512-p7nNZbOZIofpDNyP0u1BctFbjxD44Qc+oO5jufgQdFdGIXJLc33QRloJpq7k5T59CTgLWfQSUxsuqLcmeurYRw==",
+    "signatures": [
+      {
+        "sig": "MEUCICE6UNd72bn2sE55e72KNsBaxuASZJiwbup7eTASGTdhAiEAu+XD4mmqx+azelN4ZIpQkV4y2RvQR2AnpmVwlx49wBY=",
+        "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+      }
+    ],
+    "unpackedSize": 9444
+  },
+  "repository": {
+    "url": "git+https://github.com/total-typescript/shoehorn.git",
+    "type": "git"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "scenario_evidence": "desktop happy-path screenshot only",
+  "image_file_supplied": false,
+  "browser_driver_available": false,
+  "source": "fixtures/form.html",
+  "rendered_widths_recorded": []
+}

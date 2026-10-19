@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-retro"
+  short_description: "Purpose-led retro with source-backed checks and evidence"
+  default_prompt: "Use $coco-retro for the current request and provide its required result."

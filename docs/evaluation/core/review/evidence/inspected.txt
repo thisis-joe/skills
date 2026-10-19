@@ -1,0 +1,43 @@
+$ python3 -c from pathlib import Path; import subprocess; print("branch",subprocess.check_output(["git","status","--short","--branch"],text=True)); print("base...HEAD",repr(subprocess.check_output(["git","diff","main...HEAD"],text=True))); print(Path("ISSUE.md").read_text()); print(Path("AGENTS.md").read_text()); print(subprocess.check_output(["git","diff","--","tests/test_discount.py"],text=True)); print("untracked implementation",Path("discount.py").read_text()); print("full test",Path("tests/test_discount.py").read_text()); print("diffcheck",subprocess.check_output(["git","diff","--check"],text=True))
+branch ## main
+ M tests/test_discount.py
+?? discount.py
+
+base...HEAD ''
+net_total(100,10) returns 90 cents. net_total(100,0) returns 100. Integer percentage 0..100, inputs positive cents; no rounding concern in this slice. Required stdlib public API behavior test.
+
+Stdlib only. Tests assert literal expected business outputs. Review current worktree including new files.
+
+diff --git a/tests/test_discount.py b/tests/test_discount.py
+index a02eaab..6ad1525 100644
+--- a/tests/test_discount.py
++++ b/tests/test_discount.py
+@@ -1,4 +1,9 @@
+ import unittest
++from discount import net_total
++
+ class DiscountTest(unittest.TestCase):
+-    def test_baseline(self):
+-        self.assertEqual(100,100)
++    def test_ten_percent(self):
++        self.assertEqual(net_total(100, 10), 90)
++
++    def test_no_discount(self):
++        self.assertEqual(net_total(100, 0), 100)
+
+untracked implementation def net_total(amount_cents, discount_percent):
+    return amount_cents * discount_percent // 100
+
+full test import unittest
+from discount import net_total
+
+class DiscountTest(unittest.TestCase):
+    def test_ten_percent(self):
+        self.assertEqual(net_total(100, 10), 90)
+
+    def test_no_discount(self):
+        self.assertEqual(net_total(100, 0), 100)
+
+diffcheck 
+
+exit=0

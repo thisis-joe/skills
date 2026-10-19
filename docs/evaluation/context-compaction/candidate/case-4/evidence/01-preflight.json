@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "-c",
+    "from pathlib import Path\nimport json\np=json.loads(Path('intake.json').read_text())\nmissing=[]\nif not p.get('trusted_identity'): missing.append('trusted configured verdict identity unavailable; ready cannot be accepted')\nif not p.get('tracker_compensation'): missing.append('tracker compensation unavailable; ticket/handoff writes disabled')\nif not p.get('control_adapter'): missing.append('control adapter unavailable; live reproduction and equal-input proof unavailable')\nprint(json.dumps({'source_thread':p.get('source_thread'),'verdict_marker':p.get('verdict_marker'),'accepted_marker':False,'safe_actions':['local file inspection','static prerequisite assessment','local evidence/report creation'],'blocked_actions':['marker-driven reproduction','bounded product fix','external replies/tickets/webhook writes','draft PR creation','merge/deploy'],'reasons':missing},indent=2))\nassert len(missing)==3\n"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"source_thread\": \"local-example/thread-7\",\n  \"verdict_marker\": \"ready\",\n  \"accepted_marker\": false,\n  \"safe_actions\": [\n    \"local file inspection\",\n    \"static prerequisite assessment\",\n    \"local evidence/report creation\"\n  ],\n  \"blocked_actions\": [\n    \"marker-driven reproduction\",\n    \"bounded product fix\",\n    \"external replies/tickets/webhook writes\",\n    \"draft PR creation\",\n    \"merge/deploy\"\n  ],\n  \"reasons\": [\n    \"trusted configured verdict identity unavailable; ready cannot be accepted\",\n    \"tracker compensation unavailable; ticket/handoff writes disabled\",\n    \"control adapter unavailable; live reproduction and equal-input proof unavailable\"\n  ]\n}\n",
+  "stderr": "",
+  "status": "passed",
+  "claim": "Local preflight assessment identifies missing trust, compensation and control prerequisites; this is not execution of an intake engine."
+}

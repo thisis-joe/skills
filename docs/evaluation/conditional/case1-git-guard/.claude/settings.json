@@ -1,0 +1,32 @@
+{
+  "env": {
+    "UNRELATED_SETTING": "keep-me"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/unrelated.py\""
+          },
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/git_guard.py\"",
+            "onFailure": "block"
+          }
+        ]
+      },
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "true"
+          }
+        ]
+      }
+    ]
+  }
+}

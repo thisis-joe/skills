@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python3",
+    "app.py",
+    "--triple",
+    "3"
+  ],
+  "cwd": "/private/tmp/coco-context-loading-6bhlglo9/workspace-forest/case-2",
+  "exit_code": 0,
+  "stdout": "9\n",
+  "stderr": "",
+  "expected_exit": 0,
+  "expected_stdout": "9",
+  "expected_contains": [],
+  "status": "passed"
+}

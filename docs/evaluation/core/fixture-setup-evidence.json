@@ -1,0 +1,347 @@
+[
+  {
+    "case": "start",
+    "command": [
+      "git",
+      "init",
+      "-b",
+      "main"
+    ],
+    "cwd": "/tmp/lets-core-validation/start/repo",
+    "exit_code": 0,
+    "stdout": "Initialized empty Git repository in /private/tmp/lets-core-validation/start/repo/.git/\n",
+    "stderr": ""
+  },
+  {
+    "case": "start",
+    "command": [
+      "git",
+      "config",
+      "user.name",
+      "LET S Fixture"
+    ],
+    "cwd": "/tmp/lets-core-validation/start/repo",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "start",
+    "command": [
+      "git",
+      "config",
+      "user.email",
+      "fixture@example.invalid"
+    ],
+    "cwd": "/tmp/lets-core-validation/start/repo",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "start",
+    "command": [
+      "git",
+      "add",
+      "."
+    ],
+    "cwd": "/tmp/lets-core-validation/start/repo",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "start",
+    "command": [
+      "git",
+      "commit",
+      "-m",
+      "Initial imported fixture"
+    ],
+    "cwd": "/tmp/lets-core-validation/start/repo",
+    "exit_code": 0,
+    "stdout": "[main (root-commit) bcf75b6] Initial imported fixture\n 5 files changed, 18 insertions(+)\n create mode 100644 .github/workflows/ci.yml\n create mode 100644 AGENTS.md\n create mode 100644 README.md\n create mode 100644 ledger.py\n create mode 100644 tests/test_ledger.py\n",
+    "stderr": ""
+  },
+  {
+    "case": "research",
+    "command": [
+      "git",
+      "init",
+      "-b",
+      "main"
+    ],
+    "cwd": "/tmp/lets-core-validation/research/repo",
+    "exit_code": 0,
+    "stdout": "Initialized empty Git repository in /private/tmp/lets-core-validation/research/repo/.git/\n",
+    "stderr": ""
+  },
+  {
+    "case": "research",
+    "command": [
+      "git",
+      "config",
+      "user.name",
+      "LET S Fixture"
+    ],
+    "cwd": "/tmp/lets-core-validation/research/repo",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "research",
+    "command": [
+      "git",
+      "config",
+      "user.email",
+      "fixture@example.invalid"
+    ],
+    "cwd": "/tmp/lets-core-validation/research/repo",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "research",
+    "command": [
+      "git",
+      "add",
+      "README.md",
+      "client.py"
+    ],
+    "cwd": "/tmp/lets-core-validation/research/repo",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "research",
+    "command": [
+      "git",
+      "commit",
+      "-m",
+      "Initial imported fixture"
+    ],
+    "cwd": "/tmp/lets-core-validation/research/repo",
+    "exit_code": 0,
+    "stdout": "[main (root-commit) 7563f58] Initial imported fixture\n 2 files changed, 6 insertions(+)\n create mode 100644 README.md\n create mode 100644 client.py\n",
+    "stderr": ""
+  },
+  {
+    "case": "build",
+    "command": [
+      "git",
+      "init",
+      "-b",
+      "main"
+    ],
+    "cwd": "/tmp/lets-core-validation/build/repo",
+    "exit_code": 0,
+    "stdout": "Initialized empty Git repository in /private/tmp/lets-core-validation/build/repo/.git/\n",
+    "stderr": ""
+  },
+  {
+    "case": "build",
+    "command": [
+      "git",
+      "config",
+      "user.name",
+      "LET S Fixture"
+    ],
+    "cwd": "/tmp/lets-core-validation/build/repo",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "build",
+    "command": [
+      "git",
+      "config",
+      "user.email",
+      "fixture@example.invalid"
+    ],
+    "cwd": "/tmp/lets-core-validation/build/repo",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "build",
+    "command": [
+      "git",
+      "add",
+      "."
+    ],
+    "cwd": "/tmp/lets-core-validation/build/repo",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "build",
+    "command": [
+      "git",
+      "commit",
+      "-m",
+      "Initial imported fixture"
+    ],
+    "cwd": "/tmp/lets-core-validation/build/repo",
+    "exit_code": 0,
+    "stdout": "[main (root-commit) 3b16a6a] Initial imported fixture\n 5 files changed, 23 insertions(+)\n create mode 100644 AGENTS.md\n create mode 100644 NOTES.md\n create mode 100644 README.md\n create mode 100644 greet.py\n create mode 100644 tests/test_greet.py\n",
+    "stderr": ""
+  },
+  {
+    "case": "build",
+    "command": [
+      "git",
+      "switch",
+      "-c",
+      "feature/build"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "Switched to a new branch 'feature/build'\n"
+  },
+  {
+    "case": "review",
+    "command": [
+      "git",
+      "init",
+      "-b",
+      "main"
+    ],
+    "cwd": "/tmp/lets-core-validation/review/repo",
+    "exit_code": 0,
+    "stdout": "Initialized empty Git repository in /private/tmp/lets-core-validation/review/repo/.git/\n",
+    "stderr": ""
+  },
+  {
+    "case": "review",
+    "command": [
+      "git",
+      "config",
+      "user.name",
+      "LET S Fixture"
+    ],
+    "cwd": "/tmp/lets-core-validation/review/repo",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "review",
+    "command": [
+      "git",
+      "config",
+      "user.email",
+      "fixture@example.invalid"
+    ],
+    "cwd": "/tmp/lets-core-validation/review/repo",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "review",
+    "command": [
+      "git",
+      "add",
+      "."
+    ],
+    "cwd": "/tmp/lets-core-validation/review/repo",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "review",
+    "command": [
+      "git",
+      "commit",
+      "-m",
+      "Initial imported fixture"
+    ],
+    "cwd": "/tmp/lets-core-validation/review/repo",
+    "exit_code": 0,
+    "stdout": "[main (root-commit) 0d8a1e4] Initial imported fixture\n 3 files changed, 6 insertions(+)\n create mode 100644 AGENTS.md\n create mode 100644 ISSUE.md\n create mode 100644 tests/test_discount.py\n",
+    "stderr": ""
+  },
+  {
+    "case": "context",
+    "command": [
+      "git",
+      "init",
+      "-b",
+      "main"
+    ],
+    "cwd": "/tmp/lets-core-validation/context/repo",
+    "exit_code": 0,
+    "stdout": "Initialized empty Git repository in /private/tmp/lets-core-validation/context/repo/.git/\n",
+    "stderr": ""
+  },
+  {
+    "case": "context",
+    "command": [
+      "git",
+      "config",
+      "user.name",
+      "LET S Fixture"
+    ],
+    "cwd": "/tmp/lets-core-validation/context/repo",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "context",
+    "command": [
+      "git",
+      "config",
+      "user.email",
+      "fixture@example.invalid"
+    ],
+    "cwd": "/tmp/lets-core-validation/context/repo",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "context",
+    "command": [
+      "git",
+      "add",
+      "."
+    ],
+    "cwd": "/tmp/lets-core-validation/context/repo",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "context",
+    "command": [
+      "git",
+      "commit",
+      "-m",
+      "Initial imported fixture"
+    ],
+    "cwd": "/tmp/lets-core-validation/context/repo",
+    "exit_code": 0,
+    "stdout": "[main (root-commit) 6175af5] Initial imported fixture\n 3 files changed, 12 insertions(+)\n create mode 100644 README.md\n create mode 100644 double.py\n create mode 100644 tests/test_double.py\n",
+    "stderr": ""
+  },
+  {
+    "case": "context",
+    "command": [
+      "git",
+      "switch",
+      "-c",
+      "feature/context"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "Switched to a new branch 'feature/context'\n"
+  }
+]

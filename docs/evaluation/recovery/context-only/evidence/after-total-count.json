@@ -1,0 +1,15 @@
+{
+  "case": "context-only",
+  "phase": "after",
+  "label": "total-count",
+  "cwd": "/tmp/lets-recovery-validation/context-only/repo",
+  "command": [
+    "git",
+    "rev-list",
+    "--count",
+    "HEAD"
+  ],
+  "exit_code": 0,
+  "stdout": "2\n",
+  "stderr": ""
+}

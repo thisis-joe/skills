@@ -1,0 +1,22 @@
+{
+  "replay_type": "Post-edit count-only replay on immutable baseline; not the original initial RED output.",
+  "baseline_commit": "206773fbf03cf1046299408a49e3a6999cb2a19c",
+  "measurement": {
+    "families": {
+      "verify": {
+        "selection_characters": 2829,
+        "module_guard_characters": 1533,
+        "module_count": 7
+      },
+      "automate": {
+        "selection_characters": 2887,
+        "module_guard_characters": 1752,
+        "module_count": 8
+      }
+    },
+    "total_characters": 9001
+  },
+  "ceiling_fixed_before_editing": 4500,
+  "count_acceptance": false,
+  "expected_result": "fail"
+}

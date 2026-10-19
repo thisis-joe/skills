@@ -1,0 +1,49 @@
+{
+  "state": "PREPARED_LOCAL_PREVIEW_INACTIVE",
+  "trigger": {
+    "kind": "issue.opened webhook",
+    "trusted_source": "fixture/team signed provider delivery; actual envelope/signature adapter not supplied",
+    "initiating_key": "repository:issue_id:event_id:action",
+    "delivery_id": "transport receipt only; not the intent key"
+  },
+  "owner": "configured repository automation owner; real identity unresolved",
+  "permitted_effect": "add needs-triage label to the original fixture issue only",
+  "forbidden_effects": [
+    "widen permissions",
+    "deploy",
+    "message users",
+    "create schedules",
+    "act outside configured repository"
+  ],
+  "permissions": [
+    "issues label write restricted to configured repository"
+  ],
+  "claim": {
+    "storage": "SQLite scratch jobs primary key",
+    "atomicity": "BEGIN IMMEDIATE + UNIQUE key",
+    "binding": "SHA256 canonical repository/issue/event/action payload",
+    "duplicate_behavior": "return persisted claimed/unknown/succeeded state without resending"
+  },
+  "recovery": {
+    "after_claim": "stop; no automatic stale takeover without proof owner is dead and effect absent",
+    "after_possible_effect_timeout": "state unknown; provider readback by stable key before any retry",
+    "readback_finds_receipt": "mark succeeded, preserve one effect",
+    "readback_unavailable_or_non_authoritative_absence": "blocked; do not blindly repeat",
+    "retries": "one effect attempt in preview; bounded manual recovery only",
+    "retention": "production owner must choose a duration exceeding provider replay and recovery windows before activation"
+  },
+  "activation_requirements": [
+    "real provider event/schema and signature verification",
+    "repository ownership and least privilege credentials",
+    "provider idempotency or authoritative result lookup for unknown outcomes",
+    "durable storage backup/retention and transaction semantics validation",
+    "crash/duplicate tests on actual adapter",
+    "explicit activation authorization"
+  ],
+  "not_done": [
+    "no schedule created",
+    "no webhook endpoint exposed",
+    "no external effect",
+    "no credentials installed"
+  ]
+}

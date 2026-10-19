@@ -1,0 +1,85 @@
+{
+  "start": {
+    "input_exists": true,
+    "output_exists": true
+  },
+  "clarify": {
+    "input_exists": true,
+    "output_exists": true
+  },
+  "research": {
+    "input_exists": true,
+    "output_exists": true
+  },
+  "design": {
+    "input_exists": true,
+    "output_exists": true
+  },
+  "spec": {
+    "input_exists": true,
+    "output_exists": true
+  },
+  "plan": {
+    "input_exists": true,
+    "output_exists": true
+  },
+  "build": {
+    "input_exists": true,
+    "output_exists": true
+  },
+  "debug": {
+    "input_exists": true,
+    "output_exists": true
+  },
+  "verify": {
+    "input_exists": true,
+    "output_exists": true
+  },
+  "review": {
+    "input_exists": true,
+    "output_exists": true
+  },
+  "context": {
+    "input_exists": true,
+    "output_exists": true
+  },
+  "triage": {
+    "input_exists": true,
+    "output_exists": true
+  },
+  "plan_dag": {
+    "tasks": 9,
+    "acyclic": true,
+    "frontier": [
+      "CSV-1",
+      "MIG-EXPAND"
+    ]
+  },
+  "review_scope": {
+    "before_equals_after_and_current_collector": true,
+    "snapshot": "79a2bb5311f3c4cc60cd70386397e0ab6913b707970575310e1c667486a8cbac",
+    "has_changes": true
+  },
+  "build_ownership": {
+    "commit": "0accc817b35be9d05b8d1a192e72cda44c85203d",
+    "task_paths_only": true,
+    "user_dirty_file_unchanged": true
+  },
+  "context_recovery": {
+    "stale_state_preserved": true,
+    "done_commit": "03b7e6a2131b4eec2d177c6591a22084c554e3f6",
+    "no_resume_product_commit": true
+  },
+  "bundle_integrity": {
+    "global_snapshot_stayed_fixed": false,
+    "changed_paths": [
+      "/Users/Joseph/workspaces/skills/skills/_lets-shared/contracts.md",
+      "/Users/Joseph/workspaces/skills/skills/_lets-shared/tools/review_scope.py",
+      "/Users/Joseph/workspaces/skills/skills/_lets-shared/advanced/start.md",
+      "/Users/Joseph/workspaces/skills/skills/_lets-shared/advanced/verify.md",
+      "/Users/Joseph/workspaces/skills/skills/_lets-shared/advanced/context.md"
+    ],
+    "note": "Read-only target changed during this run; evaluator wrote only /tmp artifacts. Frozen final copy retained."
+  },
+  "frozen_current_bundle_copy_matches_manifest": true
+}

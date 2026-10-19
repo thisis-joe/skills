@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-clarify"
+  short_description: "Purpose-led clarify with source-backed checks and evidence"
+  default_prompt: "Use $coco-clarify for the current request and provide its required result."

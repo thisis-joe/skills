@@ -1,0 +1,1 @@
+Settled: customer may request a refund for a captured payment; support approves requests; refunded money goes to original payment method. No store credit. Amount cannot exceed captured amount less prior refunds. Open: eligibility window after delivery (14, 30, or 60 calendar days), shipping-charge inclusion. These decisions are independent.

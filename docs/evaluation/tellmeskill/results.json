@@ -1,0 +1,48 @@
+{
+  "scope": "One bounded application; generated transcript inspection, not a repeated trial or controlled comparison.",
+  "assistant_responses": 9,
+  "case_A_turns": 6,
+  "case_B_turns": 1,
+  "case_C_turns": 2,
+  "catalog_order": [
+    "coco-build",
+    "coco-security",
+    "coco-tellmeskill",
+    "skill-creator"
+  ],
+  "catalog_complete": true,
+  "initial_response_waits_for_target": true,
+  "selected_security_waits_for_length": true,
+  "security_brief_then_detail": true,
+  "new_build_target_waits_for_new_length": true,
+  "build_detail_after_choice": true,
+  "direct_request_skips_satisfied_choices": true,
+  "unknown_target_retains_selection_stage": true,
+  "eight_fields_preserved": {
+    "A3": true,
+    "A4": true,
+    "A6": true,
+    "B1": true
+  },
+  "manual_content_review": {
+    "sources_treated_as_explanation_data": true,
+    "conditional_modes_and_permissions_described_as_conditional": true,
+    "source_actions_executed": false,
+    "actual_user_questions_sent": false,
+    "external_services_invoked": false,
+    "repository_or_installed_files_modified": false,
+    "agents_spawned": false
+  },
+  "ambiguity": {
+    "location": "coco-tellmeskill/SKILL.md, section 2",
+    "text": "번호와 정확한 이름을 모두 받는다.",
+    "observation": "Literal wording can mean both values are required together, while section 1 and the explicit example allow selection by either a number or a name. This application accepted exact names and did not require a second identifier.",
+    "classification": "Source wording ambiguity; no resulting stage error observed in this transcript."
+  },
+  "limits": [
+    "The catalog was supplied as four entries; no runtime catalog discovery was exercised.",
+    "No actual interactive runtime, target skill execution, install, security test, build, or commit was exercised.",
+    "Numeric selection, ambiguous names, namespace duplicates, missing catalog/source, cancellation, and long catalogs were not exercised.",
+    "Artifact checks inspect the generated outputs only and do not establish future model reliability."
+  ]
+}

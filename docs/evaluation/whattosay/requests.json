@@ -1,0 +1,23 @@
+{
+  "review": [
+    "아까 coco-whichskill로 coco-review를 골랐어. 이 저장소에서 주문 할인 기능을 수정했고 요구사항은 README.md에 있어. 작업 범위는 pricing.py와 tests/야. $coco-whattosay 리뷰할 때 뭐라고 요청하면 좋을까?",
+    "2"
+  ],
+  "draft": [
+    "$coco-whattosay coco-document README.md의 CSV 내보내기 기능을 매장 운영자에게 안내하려고 해. 요청 문장만 추천해줘.",
+    "99",
+    "2번인데 CSV의 열 순서 확인만 다루도록 좁혀줘. 문장만 줘.",
+    "방금 문장을 CSV를 처음 여는 직원도 이해하도록 더 쉽게 바꿔줘.",
+    "이제 그 문장 그대로 실행해줘."
+  ],
+  "environment": {
+    "original_run": "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/coco-whattosay-gc40j2t1",
+    "review_base": "712118450a90e6f8ee9aa841630b7d68bad6564d",
+    "skill_path": "snapshot/skills/coco-whattosay/SKILL.md",
+    "target_skill_sources": [
+      "snapshot/skills/coco-review/SKILL.md",
+      "snapshot/skills/coco-document/SKILL.md"
+    ],
+    "harness": "Each agent received the named skill and raw workspace, saved its exact final response and a command/result log, and received only one user message per turn. The author did not supply an expected answer, defect diagnosis, or later messages in advance. No agent was authorized to modify this source repository or installed skills."
+  }
+}

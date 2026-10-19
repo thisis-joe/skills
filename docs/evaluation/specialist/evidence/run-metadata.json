@@ -1,0 +1,18 @@
+{
+  "generated_at_utc": "2026-10-19T08:04:03.103712+00:00",
+  "python_version": "3.9.6",
+  "command": "python3 /tmp/lets-specialist-validation/checks.py",
+  "exit": 0,
+  "check_summary": {
+    "tests": 15,
+    "failures": 0,
+    "errors": 0,
+    "successful": true,
+    "meaning": "fixture expectations, including unsafe behavior, were observed"
+  },
+  "scope": "single fresh agent applying 12 synthetic specialist scenarios",
+  "independence": "no source audits/author conversation or expected-answer files read; no separate trials per skill; evaluator not blinded",
+  "repository_mutations": false,
+  "external_service_writes": false,
+  "external_service_clis_or_installs": false
+}

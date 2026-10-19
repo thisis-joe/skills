@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python3",
+    "proof/check.py"
+  ],
+  "exit_code": 1,
+  "stdout": "{\n  \"property\": \"balance stays nonnegative after spend\",\n  \"wallet_sha256\": \"c2a7fe2a389d179f1060189feffe4ce1675ad51bb4c3ad601daaf5e2968ffdc2\",\n  \"bounds\": {\n    \"balance\": [\n      0,\n      2\n    ],\n    \"amount\": [\n      0,\n      3\n    ],\n    \"steps\": 1\n  },\n  \"checked_input_pairs\": 12,\n  \"model_code_mismatches\": [],\n  \"counterexamples\": [\n    {\n      \"balance\": 0,\n      \"amount\": 1,\n      \"model_result\": -1,\n      \"actual_result\": -1\n    },\n    {\n      \"balance\": 0,\n      \"amount\": 2,\n      \"model_result\": -2,\n      \"actual_result\": -2\n    },\n    {\n      \"balance\": 0,\n      \"amount\": 3,\n      \"model_result\": -3,\n      \"actual_result\": -3\n    },\n    {\n      \"balance\": 1,\n      \"amount\": 2,\n      \"model_result\": -1,\n      \"actual_result\": -1\n    },\n    {\n      \"balance\": 1,\n      \"amount\": 3,\n      \"model_result\": -2,\n      \"actual_result\": -2\n    },\n    {\n      \"balance\": 2,\n      \"amount\": 3,\n      \"model_result\": -1,\n      \"actual_result\": -1\n    }\n  ],\n  \"status\": \"failed\"\n}\n",
+  "stderr": "",
+  "status": "failed"
+}

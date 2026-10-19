@@ -1,0 +1,30 @@
+{
+  "scope": "One additional numeric-selection application only; original cases were not rerun.",
+  "assistant_responses": 3,
+  "user_messages": [
+    "`$coco-tellmeskill`",
+    "`2`",
+    "`1`"
+  ],
+  "catalog_complete_and_sorted": true,
+  "initial_waits_for_target": true,
+  "target_2_selects_security": true,
+  "numbered_length_menu": true,
+  "target_choice_does_not_start_explanation": true,
+  "length_1_keeps_security_and_selects_brief": true,
+  "eight_fields_preserved": true,
+  "brief_fields_each_one_line": true,
+  "original_artifacts_unchanged": {
+    "transcript.md": true,
+    "transcript.json": true,
+    "report.md": true,
+    "results.json": true,
+    "source-hashes.json": true
+  },
+  "new_ambiguity_or_stage_error_observed": false,
+  "limits": [
+    "Only this 3-turn numeric path was applied once.",
+    "No real user questions, target-skill execution, external services, workspace/global edits, or spawned agents.",
+    "Generated output inspection does not establish future model reliability."
+  ]
+}

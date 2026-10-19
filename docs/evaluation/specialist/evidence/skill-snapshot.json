@@ -1,0 +1,102 @@
+[
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_lets-shared/contracts.md",
+    "sha256": "62272ac57e59eada632f236092f6a6d24eeb1360a0ad4d9210623d9203b18395"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_lets-shared/routing.md",
+    "sha256": "64e8b1e5d9644adb977b280564679a1c2f042767ce9bfe5c9e74ddaa91a13307"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_lets-shared/decisions.md",
+    "sha256": "48011a0ee107443c2839e5aa31ddd103c4f75763655e7d24fcd844b85c33ec0f"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/lets-security/SKILL.md",
+    "sha256": "47a4073dad8b55cefb319964199dc09b7ca2ff18a37f1626d2058d6c31b186d2"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_lets-shared/advanced/security.md",
+    "sha256": "37e216d32b1281fd505b5c0b9ac4db0118e61087a14316ac3f7679d2e2651a77"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/lets-migrate/SKILL.md",
+    "sha256": "e390b992b298f989012fae733e73c1fa2c32077f0446dc8cf8dd0afa2fe69da6"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_lets-shared/advanced/migrate.md",
+    "sha256": "f47274905a53085956fed1eea453d94c8208d1696cafeb799fad2344cadc0490"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/lets-performance/SKILL.md",
+    "sha256": "f1df341935e787a271939abb19b380e988fc88eb475f7081bcd6f2a15c1e2cdf"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_lets-shared/advanced/performance.md",
+    "sha256": "fc0628e89767f1a2bac6ca5ae56871b8809e3fd852ba24dbd89bf340acc0f9f3"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/lets-frontend/SKILL.md",
+    "sha256": "4b4a84efd6e088c1461403ec68196fb08d83a5b9b4eaa70c112f935a5de9d36c"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_lets-shared/advanced/frontend.md",
+    "sha256": "87fb40fd11fd2eefac14f51d5e35437bbb6f90d93abd79b7a174afaec6bd946a"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/lets-observe/SKILL.md",
+    "sha256": "216e7bc143a07712a51072da13cd7a2987c768a7daa65072cefd9ba710cb662e"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_lets-shared/advanced/observe.md",
+    "sha256": "c46843c089fb6155ed0c537e1548a01ed53d2e40704882c05a5e5a5ac2c5e7d5"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/lets-automate/SKILL.md",
+    "sha256": "ce55d177595c154cf3edb3bbece91107c1070b490f1f5d5bd8e9785a77628753"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_lets-shared/advanced/automate.md",
+    "sha256": "e6995f27dbab8ef6567f365a4bd7e09d68cf37b8a51c2665e49702b7bbe6ad8c"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/lets-ship/SKILL.md",
+    "sha256": "1fedcdacba076ebef413b42a22c227098f85fb81bc5a0ad7249a943e8ad94cbe"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_lets-shared/advanced/ship.md",
+    "sha256": "c4a5b21881757d9defd0049b558891498b203676148c6cba10e4d524b70b63f5"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/lets-document/SKILL.md",
+    "sha256": "9e0d4654fc9f4f31d3eab15e9b561164636ec9f9c8e87ead891ac7826cefb1b9"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_lets-shared/advanced/document.md",
+    "sha256": "b0b1ed6b5a84cee5bbeee80f07ab35b26f11f646aa3ac00617ec3bab53ac20b8"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/lets-retro/SKILL.md",
+    "sha256": "49859602b91412c94914fa7936199aee360516d0af7a4ffd4a7fb82fb082983c"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_lets-shared/advanced/retro.md",
+    "sha256": "c4c81a169ecccf8a7c9361863542a3cbd1e76bb8ab19311cd841babbf312a118"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/lets-simplify/SKILL.md",
+    "sha256": "132cc2b698664920f31a28ffbba118c4a042d002cc8fe24b308cd011758ab34a"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_lets-shared/advanced/simplify.md",
+    "sha256": "32b5dd02fa59490867cc4ef845a7b32afa14ab0aa23aec1569181158d97d414b"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/lets-verify/SKILL.md",
+    "sha256": "1c3297eafedd87a3de638505e2be67b3e860acf4c81adfec055ede66b0065ac9"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_lets-shared/advanced/verify.md",
+    "sha256": "0730bccf5ff7fe1737028c8dd8e1509ece19c56d3b8dad20adb76462dfd1aa5e"
+  }
+]

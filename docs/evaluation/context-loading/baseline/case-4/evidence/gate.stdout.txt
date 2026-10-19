@@ -1,0 +1,33 @@
+{
+  "status": "blocked",
+  "checks": {
+    "source_coordinate_present": true,
+    "ready_text_present": true,
+    "trusted_identity_configured": false,
+    "tracker_compensation_supported": false,
+    "control_adapter_configured": false
+  },
+  "missing_prerequisites": [
+    "trusted_identity_configured",
+    "tracker_compensation_supported",
+    "control_adapter_configured"
+  ],
+  "marker_authenticity": "unverified; ready text is not a configured trusted verdict",
+  "source_validation": "coordinate syntax only; original parent existence and ownership were not verified",
+  "allowed_now": [
+    "local read-only source/JSON inspection",
+    "local diagnostics and evidence artifacts"
+  ],
+  "not_authorized_or_unavailable": [
+    "UI reproduction without a control adapter and trusted verdict",
+    "product edits",
+    "source replies or tracker writes",
+    "webhook delivery or external calls",
+    "PR, merge, deployment, activation or schedules"
+  ],
+  "effect_observation": "This checker only reads local files and prints diagnostics; it invokes no product code or adapters.",
+  "snapshot": {
+    "intake.json": "589a3b06ce1dae986611f5a18c9779f5d217eb48f40227482a11afd54b8f8b1f",
+    "product.py": "37a5ddd282078173f597d9f32edb8e659e5a1b1ea0606d25da31c4c07876bad6"
+  }
+}

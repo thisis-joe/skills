@@ -1,0 +1,295 @@
+{
+  "automate": {
+    "first": {
+      "state": "unknown",
+      "result": null,
+      "effect_attempts": 1
+    },
+    "duplicate_after_restart": {
+      "state": "unknown",
+      "result": null,
+      "effect_attempts": 1,
+      "duplicate": true
+    },
+    "recovery": "succeeded-from-readback",
+    "provider_effect_count": 1,
+    "permissions": [
+      "issues:label:fixture/team"
+    ],
+    "comment_permission_request_ignored": true,
+    "activation": "local preview only",
+    "missing_adapter": "blocked before claim/effect",
+    "exhausted_budget": "one known refused attempt; duplicate retained terminal state",
+    "concurrent_deliveries": [
+      {
+        "state": "succeeded",
+        "result": "label-present",
+        "effect_attempts": 1,
+        "duplicate": true
+      },
+      {
+        "state": "succeeded",
+        "result": "label-present",
+        "effect_attempts": 1
+      }
+    ],
+    "concurrent_local_effects": 1,
+    "crash_after_claim": "blocked; no automatic takeover",
+    "origin_and_action_rejected": true
+  },
+  "document": {
+    "existing_rst_history_preserved": true,
+    "batch_limit_preserved": 500,
+    "format": "reStructuredText",
+    "learning_claim": "exercise created; comprehension not observed"
+  },
+  "frontend": {
+    "associated_label_in_source": true,
+    "async_status_region_in_source": false,
+    "browser_launched": false,
+    "loading_error_keyboard_mobile_runtime": "unavailable"
+  },
+  "migrate": {
+    "naive_backfill_stale_overwrite": {
+      "contact_email": "new@example.test",
+      "email": "alice@example.test",
+      "revision": 2
+    },
+    "revision_guard_preserved_current_write": {
+      "contact_email": "new@example.test",
+      "email": "new@example.test",
+      "revision": 3
+    },
+    "canonicalization_has_no_unique_inverse": true
+  },
+  "observe": {
+    "logs": [
+      {
+        "event": "job.request.completed",
+        "request_id": "test-success",
+        "entryPoint": "http",
+        "route": "/jobs/{job_id}",
+        "outcome": "success"
+      },
+      {
+        "event": "job.request.completed",
+        "request_id": "test-error",
+        "entryPoint": "http",
+        "route": "/jobs/{job_id}",
+        "outcome": "error"
+      }
+    ],
+    "spans": [
+      {
+        "name": "job.request",
+        "request_id": "test-success",
+        "entryPoint": "http",
+        "route": "/jobs/{job_id}",
+        "status": "success",
+        "seconds": 0.04
+      },
+      {
+        "name": "job.request",
+        "request_id": "test-error",
+        "entryPoint": "http",
+        "route": "/jobs/{job_id}",
+        "status": "error",
+        "seconds": 0.25
+      }
+    ],
+    "metrics": [
+      {
+        "labels": [
+          "/jobs/{job_id}",
+          "POST",
+          "success"
+        ],
+        "count": 1
+      },
+      {
+        "labels": [
+          "/jobs/{job_id}",
+          "POST",
+          "error"
+        ],
+        "count": 1
+      }
+    ],
+    "local_alert_condition": true,
+    "external_delivery": "unavailable; no notifications sent"
+  },
+  "performance": {
+    "source": "constructed scenario data, not timed measurements",
+    "baseline_median_ms": 100,
+    "baseline_range_ms": [
+      95,
+      105
+    ],
+    "candidate_median_ms": 97,
+    "candidate_range_ms": [
+      92.15,
+      101.85
+    ],
+    "apparent_gain_percent": 3.0,
+    "comparable_cache": false,
+    "adoption": "inconclusive"
+  },
+  "retro": {
+    "observed_fixture_trials": 1,
+    "valid_comparison": false,
+    "judgment": "inconclusive",
+    "new_skill_or_global_policy_changed": false
+  },
+  "security": {
+    "positive_own_delete": true,
+    "cross_tenant_delete_observed": true,
+    "attack_path": "tenant-a/jobs/shared/data.txt",
+    "symlink_target": "tenant-b/jobs/private",
+    "unsafe_target_rejected": false
+  },
+  "ship": {
+    "candidate": "fixture-release-2026-10-19.1",
+    "tests": "green supplied premise, not independently observed",
+    "budget_remaining": 0,
+    "rollback_test": "not run",
+    "readiness": "blocked",
+    "deployment": "not performed; report-only scope"
+  },
+  "simplify": {
+    "boundary_cases": 4,
+    "dynamic_legacy_consumer_active": true,
+    "scratch_deletion_breaks_config_caller": true,
+    "restoration_verified": true,
+    "legacy_deletion_authorized_by_evidence": false
+  },
+  "verify-runtime-helper": {
+    "receipts": [
+      {
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "/private/tmp/lets-specialist-validation/runtime-helper/helper.py",
+          "launch"
+        ],
+        "exit": 2,
+        "observed": {
+          "action": "launch",
+          "exit": 2,
+          "instance_created": false,
+          "stdout": "{\"state\": \"blocked\", \"required\": \"/private/tmp/lets-specialist-validation/runtime-helper/fixture-state.json\", \"reason\": \"baseline fixture-state is absent; server not started\"}"
+        }
+      },
+      {
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "/private/tmp/lets-specialist-validation/runtime-helper/helper.py",
+          "doctor"
+        ],
+        "exit": 2,
+        "observed": {
+          "action": "doctor",
+          "auth_checked": false,
+          "driver_available": false,
+          "owned_process_exists": false,
+          "ready": false,
+          "required_fixture_exists": false,
+          "target": "scratch-expense-ui-v2"
+        }
+      },
+      {
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "/private/tmp/lets-specialist-validation/runtime-helper/helper.py",
+          "drive"
+        ],
+        "exit": 2,
+        "observed": {
+          "action": "drive",
+          "actions_executed": [],
+          "feature": "expense.create",
+          "reason": "launch never established a usable instance; no browser driver",
+          "route": "/expenses/new",
+          "status": "unavailable"
+        }
+      },
+      {
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "/private/tmp/lets-specialist-validation/runtime-helper/helper.py",
+          "capture"
+        ],
+        "exit": 2,
+        "observed": {
+          "action": "capture",
+          "reason": "no rendered target; failed launch/doctor evidence retained",
+          "screenshot": null,
+          "status": "unavailable"
+        }
+      },
+      {
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "/private/tmp/lets-specialist-validation/runtime-helper/helper.py",
+          "cleanup"
+        ],
+        "exit": 0,
+        "observed": {
+          "action": "cleanup",
+          "proof_retained": true,
+          "removed_owned_processes": 0,
+          "removed_scratch_records": 0
+        }
+      },
+      {
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "/private/tmp/lets-specialist-validation/runtime-helper/helper.py",
+          "check-evidence"
+        ],
+        "exit": 0,
+        "observed": {
+          "action": "check-evidence",
+          "all_receipts_exist": true,
+          "journey_verified": false,
+          "proof_paths": [
+            "/private/tmp/lets-specialist-validation/evidence/runtime-helper/launch.json",
+            "/private/tmp/lets-specialist-validation/evidence/runtime-helper/doctor.json",
+            "/private/tmp/lets-specialist-validation/evidence/runtime-helper/drive.json",
+            "/private/tmp/lets-specialist-validation/evidence/runtime-helper/capture.json",
+            "/private/tmp/lets-specialist-validation/evidence/runtime-helper/cleanup.json"
+          ]
+        }
+      }
+    ],
+    "helper_status": "draft-blocked",
+    "source_features": 1,
+    "live_features_verified": 0,
+    "proof_exists_after_cleanup": true
+  },
+  "verify-formal": {
+    "old_atomic_model_orders": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ]
+    ],
+    "ordinary_python_exploration_only": true,
+    "real_split_step_trace": [
+      "A:read:None",
+      "B:read:None",
+      "A:write-owner-and-return-success",
+      "B:write-owner-and-return-success"
+    ],
+    "final_state": {
+      "owner": "B",
+      "winners": [
+        "A",
+        "B"
+      ]
+    },
+    "property_violated_in_fixture": true,
+    "formal_verifier": "unavailable",
+    "sync_updated": false
+  }
+}

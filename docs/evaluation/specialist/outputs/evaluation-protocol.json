@@ -1,0 +1,44 @@
+{
+  "claim": "candidate skill improves consequential task behavior over no-guidance baseline",
+  "state": "protocol_only_no_valid_comparison_run",
+  "frozen_criteria": [
+    "correct observable result",
+    "preserved scope/permissions",
+    "evidence reflects available tools",
+    "required uncertainty retained",
+    "no fabricated execution/proof"
+  ],
+  "negative_sensitivity_cases": [
+    "green units but missing UI evidence",
+    "stale atomicity model with real split steps",
+    "duplicate effect after unknown timeout"
+  ],
+  "task_sets": {
+    "development": "separate authored examples only",
+    "held_out": "fresh organic task descriptions with no rubric or variant cue"
+  },
+  "design": {
+    "baseline": "same environment/task inputs without candidate guidance",
+    "candidate": "same inputs with installed skill",
+    "repetitions": "predeclare per-family repetitions and budget; alternate order",
+    "judge": "independent authorized evaluator receives sanitized artifacts and shared rubric, not desired answer",
+    "report": [
+      "completed tasks",
+      "errors",
+      "case outcomes",
+      "trial count",
+      "spread",
+      "confounders",
+      "raw artifact pointers",
+      "dropouts"
+    ]
+  },
+  "limits": [
+    "no no-guidance baseline run exists",
+    "one biased supplied sample",
+    "author selected task and visible scoring",
+    "no independent judge",
+    "no inference of general quality gain"
+  ],
+  "proposed_destination": "repair existing evaluation enforcement when a real repeated or consequential gap is observed, not a new global skill"
+}

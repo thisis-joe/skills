@@ -1,0 +1,29 @@
+$ python3 /Users/Joseph/workspaces/skills/skills/_lets-shared/tools/review_scope.py --repo . --base main --path double.py --path tests/test_double.py
+{
+  "schema": 1,
+  "repository": "/private/tmp/lets-core-validation/context/repo",
+  "requested_base": "main",
+  "base_commit": "6175af547fab7883e093e0dfdfcde1fd977a3c93",
+  "comparison_commit": "6175af547fab7883e093e0dfdfcde1fd977a3c93",
+  "head": "6175af547fab7883e093e0dfdfcde1fd977a3c93",
+  "task_paths": [
+    "double.py",
+    "tests/test_double.py"
+  ],
+  "has_changes": true,
+  "files": [
+    {
+      "path": "double.py",
+      "layers": [
+        "worktree"
+      ],
+      "statuses": {
+        "worktree": "M"
+      },
+      "current_sha256": "225720b8825667245511593a05c0e1492738218ecbf027750255744c3292d0cc"
+    }
+  ],
+  "snapshot": "f0716b4c7b2b112f0ce86d85eb09fb681f886e54e110c42596c807e82b096c22"
+}
+
+exit=0

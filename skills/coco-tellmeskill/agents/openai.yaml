@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-tellmeskill"
+  short_description: "Browse skills and choose short or detailed explanations"
+  default_prompt: "Use $coco-tellmeskill to list all available skills and let me choose a skill and explanation depth."

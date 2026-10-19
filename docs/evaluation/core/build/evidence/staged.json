@@ -1,0 +1,12 @@
+{
+  "cwd": "/tmp/lets-core-validation/build/repo",
+  "command": [
+    "git",
+    "diff",
+    "--cached",
+    "--stat"
+  ],
+  "exit_code": 0,
+  "stdout": " greet.py            | 4 +++-\n tests/test_greet.py | 5 +++++\n 2 files changed, 8 insertions(+), 1 deletion(-)\n",
+  "stderr": ""
+}

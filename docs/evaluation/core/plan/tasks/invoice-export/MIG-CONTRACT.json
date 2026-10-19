@@ -1,0 +1,27 @@
+{
+  "id": "MIG-CONTRACT",
+  "status": "pending",
+  "blockers": [
+    "MIG-EXPORT",
+    "MIG-MAIL",
+    "MIG-AUDIT"
+  ],
+  "acceptance": "No old active consumers; remove alias only after compatibility obligation checked",
+  "verification": [
+    "old-name search across active readers plus wire/schema review",
+    "python3 -m unittest discover -s tests -v"
+  ],
+  "closure": [
+    "project full suite",
+    "relevant actual public runtime journey",
+    "scoped review",
+    "task-owned work-unit commit"
+  ],
+  "expected_scope": "core alias and remaining backreferences",
+  "branch": "feature/delivery-result",
+  "base": "unavailable: actual repository not provided",
+  "environment": "Python project/source map only; commands unexecuted",
+  "risk_rollback": "plans/invoice-export.md",
+  "execution_mode": "single-owner sequential; planning-only request",
+  "commit": null
+}

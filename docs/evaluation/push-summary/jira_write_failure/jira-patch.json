@@ -1,0 +1,5 @@
+{
+  "summary": "토큰_회전과_재사용차단",
+  "description": "Original requirements\n- Existing expiry boundary stays unchanged.\n- Rotate returns a new refresh token.\n- Reusing an old refresh token revokes its token family.\n- Follow-up: per-device selective revoke UI remains unimplemented.\n\nAcceptance criteria\n- At expiration time the token is rejected.\n- A valid refresh token rotates twice successfully.\n- Reusing the prior token blocks the entire family.\n\nReference: https://example.invalid/spec/433\nPeer note (Mina): retain expiry API contract.\n\n## This branch work\n- Implemented refresh-token rotation and token-family revocation after reuse.\n- Preserved expiry boundary.\n- Validation: python3 -m unittest discover -s tests -v passed 5 tests, including shared develop timeout behavior.\n- Remaining: per-device selective revoke UI is unimplemented.\n",
+  "expected_version": 1
+}

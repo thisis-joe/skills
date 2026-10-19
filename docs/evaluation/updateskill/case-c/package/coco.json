@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "shared": "_coco-shared",
+  "skills": [
+    "coco-build",
+    "coco-review"
+  ],
+  "display_prefix": "coco-",
+  "provenance_required": true
+}

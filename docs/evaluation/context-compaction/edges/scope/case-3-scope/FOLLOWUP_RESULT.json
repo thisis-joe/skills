@@ -1,0 +1,218 @@
+{
+  "request": "Maintain the existing verification helper, VERIFY.md and complete current CLI feature map, including multiply; drive mapped paths live while preserving product, tests, notes and prior proof.",
+  "status": "changed",
+  "verification_status": "passed",
+  "observed_at_utc": "2026-10-19T14:18:58.895746+00:00",
+  "snapshot": {
+    "app_sha256": "e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b",
+    "helper_sha256": "7840fd55718430ba014aeff73b9c21ad7633175355de759afca7ebe31e339275"
+  },
+  "selected_mode": "Existing runtime-helper and feature-map maintenance",
+  "guidance_read_via_logged_reader": [
+    "coco-verify/SKILL.md",
+    "_coco-shared/contracts.md",
+    "_coco-shared/advanced/verify.md",
+    "_coco-shared/advanced/verify-runtime-create.md",
+    "_coco-shared/advanced/verify-runtime-maintain.md"
+  ],
+  "guidance_read_log": "../reads.jsonl",
+  "drift_classification": [
+    {
+      "type": "driver gap",
+      "observed_before": "Original driver only exercised --double 3 and --double -4 despite the existing public --multiply operation.",
+      "evidence": [
+        "evidence/followup-baseline.json: owned_before.verify_cli.py",
+        "evidence/drive.json"
+      ]
+    },
+    {
+      "type": "description/map drift",
+      "observed_before": "Feature index and instructions mapped only double.",
+      "evidence": "evidence/followup-baseline.json: owned_before"
+    },
+    {
+      "type": "proof retention gap",
+      "observed_before": "Original helper always wrote doctor.json or drive.json, replacing prior runs.",
+      "evidence": "evidence/followup-baseline.json: owned_before.verify_cli.py"
+    }
+  ],
+  "actual_changes": [
+    {
+      "path": "VERIFY.md",
+      "change": "modified",
+      "before_sha256": "782a312ca85dbdbbc3b545ada0ea768b9c9ca962874f53087b147536cc59c580",
+      "after_sha256": "ba7dbf8b8be81ada9d7f428c3b98dd91b1df6d8ae41a035c68dfe39cc6cb8361"
+    },
+    {
+      "path": "verify_cli.py",
+      "change": "modified",
+      "before_sha256": "fbb671e4aa7056b6332b785a30af0aeda6c53a5e228eac2767551582f1cfffe7",
+      "after_sha256": "7840fd55718430ba014aeff73b9c21ad7633175355de759afca7ebe31e339275"
+    },
+    {
+      "path": "features/index.json",
+      "change": "modified",
+      "before_sha256": "97116e0d5f927bd6b4c2b68c8ae784a03b3a1b42462d7ba8abc690bbcd4c136f",
+      "after_sha256": "deae89495efeb26ab422efc96c093d67c021cf1871f0d76217e430e428f3a950"
+    },
+    {
+      "path": "features/double.md",
+      "change": "modified",
+      "before_sha256": "f2d47e56eb6ab960c7273ed244b07c78d803bc866d40cbd4738ed2f13d402156",
+      "after_sha256": "d0f5e42c0edbf0b554784d8cb3fb491f0f5fecd2f6877607addbfed0d9881d7c"
+    },
+    {
+      "path": "features/multiply.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "b6a4010542aee948e84f17080c50d0b7d590a33f63f8760d65b9751d80144de4"
+    },
+    {
+      "path": "features/help.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "92da0ba6447b348e81b424796b90002b6d619bc2f0299374c27e6da6ff74a514"
+    },
+    {
+      "path": "features/argument-validation.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "569d74d10052cef1d7b8015d4400e24c10c8e68731bb2be95dc11eb78e25e442"
+    }
+  ],
+  "change_summary": [
+    "Mapped both help aliases, double, multiply and argument-validation states with concrete commands and expected observations.",
+    "Expanded live driver to 19 independently expected public CLI cases and added doctor reconciliation for public options and feature files.",
+    "Changed evidence retention to exclusive numbered files, preserving existing proof and recording app/helper/map snapshots.",
+    "Documented exact launch, doctor, drive, regression, reset, evidence, cleanup and failure behavior."
+  ],
+  "claim_to_evidence": [
+    {
+      "claim": "CLI launch/help is usable on the unchanged product snapshot",
+      "status": "passed",
+      "evidence": "evidence/followup-baseline.json: baseline_doctor"
+    },
+    {
+      "claim": "Current public source options, helper recipes, index and feature documents agree",
+      "status": "passed",
+      "evidence": "evidence/doctor-001.json",
+      "source_add_argument_options": [
+        "--double",
+        "--multiply"
+      ],
+      "builtin_help_options": [
+        "-h",
+        "--help"
+      ]
+    },
+    {
+      "claim": "Every mapped feature is exercised live with its documented cases",
+      "status": "passed",
+      "evidence": "evidence/drive-001.json",
+      "case_counts": {
+        "help": 2,
+        "double": 3,
+        "multiply": 6,
+        "argument-validation": 8
+      },
+      "total_cases": 19
+    },
+    {
+      "claim": "Existing unittest suite passes",
+      "status": "passed",
+      "evidence": "evidence/followup-execution.json: commands[2]",
+      "observed_stderr": "test_double_positive (test_app.CliTests) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.027s\n\nOK\n"
+    },
+    {
+      "claim": "Unsupported helper invocation fails with documented usage",
+      "status": "passed",
+      "evidence": "evidence/followup-execution.json: commands[3]"
+    },
+    {
+      "claim": "Retained helper proof exists and matches the actual printed output",
+      "status": "passed",
+      "evidence": "evidence/followup-execution.json: retained_evidence_checks"
+    },
+    {
+      "claim": "Product, tests, user notes, README and initial result are unchanged",
+      "status": "passed",
+      "evidence": "FOLLOWUP_RESULT.json: preservation.protected_files"
+    },
+    {
+      "claim": "All prior proof remains byte-for-byte unchanged and accessible",
+      "status": "passed",
+      "evidence": "FOLLOWUP_RESULT.json: preservation.prior_proof"
+    },
+    {
+      "claim": "Cleanup leaves no owned running process or scratch fixture",
+      "status": "passed",
+      "evidence": "evidence/followup-execution.json: cleanup",
+      "observation": "Every subprocess.run returned; commands create no persistent app state and cleanup deletes no proof."
+    }
+  ],
+  "raw_execution_evidence": [
+    "evidence/followup-baseline.json",
+    "evidence/followup-execution.json",
+    "evidence/doctor-001.json",
+    "evidence/drive-001.json"
+  ],
+  "preservation": {
+    "protected_files": {
+      "before_sha256": {
+        "app.py": "e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b",
+        "test_app.py": "43e4b979a3fef8184f285c8f106f59af090529db4686d7f840aec65e7806af86",
+        "USER_NOTES.md": "06fe4574adc6427c1b531277f5cce7cf8bef49b1de86eb318a48ef3139b9562f",
+        "README.md": "e12925ce460bbae0bee34ae2ddc847f3cd4eeadf1f65e85cfaa7e52ce43a818f",
+        "INITIAL_RESULT.json": "b264784ac543859f2af3008cb55969c4f808491801867c14b8e9447695aaea0a"
+      },
+      "after_sha256": {
+        "app.py": "e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b",
+        "test_app.py": "43e4b979a3fef8184f285c8f106f59af090529db4686d7f840aec65e7806af86",
+        "USER_NOTES.md": "06fe4574adc6427c1b531277f5cce7cf8bef49b1de86eb318a48ef3139b9562f",
+        "README.md": "e12925ce460bbae0bee34ae2ddc847f3cd4eeadf1f65e85cfaa7e52ce43a818f",
+        "INITIAL_RESULT.json": "b264784ac543859f2af3008cb55969c4f808491801867c14b8e9447695aaea0a"
+      },
+      "unchanged": true
+    },
+    "prior_proof": {
+      "before_sha256": {
+        "evidence/doctor.json": "86592224ed2f516cbe2972e14b920846e84ec5499bfea7fa2b84e443d3ef0de6",
+        "evidence/drive.json": "e5dbb5634b20284972cc0a745e500ea906713239633ce68641ee9d63a884132d"
+      },
+      "after_sha256": {
+        "evidence/doctor.json": "86592224ed2f516cbe2972e14b920846e84ec5499bfea7fa2b84e443d3ef0de6",
+        "evidence/drive.json": "e5dbb5634b20284972cc0a745e500ea906713239633ce68641ee9d63a884132d"
+      },
+      "unchanged_and_accessible": true
+    }
+  },
+  "action_and_file_scope": {
+    "owned_verification_files": [
+      "VERIFY.md",
+      "verify_cli.py",
+      "features/index.json",
+      "features/double.md",
+      "features/multiply.md",
+      "features/help.md",
+      "features/argument-validation.md"
+    ],
+    "added_evidence_and_report_files": [
+      "evidence/followup-baseline.json",
+      "evidence/followup-execution.json",
+      "evidence/doctor-001.json",
+      "evidence/drive-001.json",
+      "FOLLOWUP_RESULT.json"
+    ],
+    "product_test_user_note_edits": [],
+    "commits": [],
+    "product_task_state_changed": false,
+    "external_actions": []
+  },
+  "unresolved_prerequisites": [],
+  "remaining_gaps": [],
+  "coverage_limits": [
+    "All currently exposed CLI operations and mapped representative states were exercised on the recorded local snapshot.",
+    "This is runtime evidence for documented states, not exhaustive proof over all integers, argparse spellings, or Python versions."
+  ],
+  "minimum_next_verification": "Re-run doctor and drive if public CLI options, documented states, helper recipes or runtime environment change."
+}

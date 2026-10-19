@@ -1,0 +1,8 @@
+[
+  {
+    "id": "ci-a",
+    "case": "case-2-ci-a",
+    "start_with": "coco-automate/SKILL.md",
+    "request": "Prepare .github/workflows/check.yml for this Python repository using its documented test command. Run the local tests and retain the actual result. Prepare the workflow file only; do not activate CI, install dependencies, contact external services, commit, or modify product/test/user files. Report unavailable prerequisites truthfully."
+  }
+]

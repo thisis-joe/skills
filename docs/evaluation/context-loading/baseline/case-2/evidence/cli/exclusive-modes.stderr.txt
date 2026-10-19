@@ -1,0 +1,2 @@
+usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)
+app.py: error: argument --triple: not allowed with argument --double

@@ -1,0 +1,7 @@
+{
+  "metric": "line coverage",
+  "percent": 82.5,
+  "kind": "supplied prior-run fixture measurement; not measured by this validation",
+  "environment": "Python CLI, full suite",
+  "measurement_id": "coverage-fixture-2026-10-16"
+}

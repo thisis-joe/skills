@@ -1,0 +1,75 @@
+{
+  "at_utc": "2026-10-19T08:31:11.791115+00:00",
+  "skills": 23,
+  "files": 75,
+  "all_installed_bytes_match_package": true,
+  "unrelated_entries_preserved": 50,
+  "unit_tests_passed": 23,
+  "new_skill_format_check": "passed",
+  "new_skill_files": {
+    "coco-tellmeskill/SKILL.md": "e481aa8db3866876bcd0c793d206ab44b0303411e8576dbc856f29b37921c7c7",
+    "coco-tellmeskill/agents/openai.yaml": "ff707f1e1a4d298246d5c6145f345b60b70f5ddb1d152e807e8bb15f57fbb8d0",
+    "coco-tellmeskill/references/explanation-format.md": "b33bb7483013a396d1c17b6142f94c82f9c27635172a25756b67dda3d268b73e"
+  },
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "scripts/install.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 23,\n  \"files\": 75,\n  \"destination\": \"/Users/Joseph/.codex/skills\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/validate.py",
+        "--installed",
+        "/Users/Joseph/.codex/skills"
+      ],
+      "exit_code": 0,
+      "stdout": "Validated installed bundle: 23 skills, 75 files\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/install.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"unchanged\",\n  \"skills\": 23,\n  \"files\": 75,\n  \"destination\": \"/Users/Joseph/.codex/skills\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/install.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 23,\n  \"files\": 75,\n  \"destination\": \"/Users/Joseph/.codex/skills\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/validate.py",
+        "--installed",
+        "/Users/Joseph/.codex/skills"
+      ],
+      "exit_code": 0,
+      "stdout": "Validated installed bundle: 23 skills, 75 files\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/install.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"unchanged\",\n  \"skills\": 23,\n  \"files\": 75,\n  \"destination\": \"/Users/Joseph/.codex/skills\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "selection_wording_clarification_installed": true
+}

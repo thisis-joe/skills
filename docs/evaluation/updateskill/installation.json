@@ -1,0 +1,45 @@
+{
+  "at_utc": "2026-10-19T08:54:14.807638+00:00",
+  "skills": 25,
+  "files": 81,
+  "all_installed_bytes_match_package": true,
+  "unrelated_entries_preserved": 50,
+  "unit_tests_passed": 23,
+  "new_skill_format_check": "passed",
+  "new_skill_files": {
+    "coco-updateskill/SKILL.md": "c138886a41b72154b27e681a44ee4308023c1a810ae3c4065e66af131258258a",
+    "coco-updateskill/agents/openai.yaml": "e45fdf0a282439d6542623ffcdd1a71055eab2dbef1c946cf847a644bd5a4829",
+    "coco-updateskill/references/team-update.md": "9062a3a25e6819755334104afb9d4301815b892e1c83519a7a8ebd526d86ca23"
+  },
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "scripts/install.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 25,\n  \"files\": 81,\n  \"destination\": \"/Users/Joseph/.codex/skills\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/validate.py",
+        "--installed",
+        "/Users/Joseph/.codex/skills"
+      ],
+      "exit_code": 0,
+      "stdout": "Validated installed bundle: 25 skills, 81 files\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/install.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"unchanged\",\n  \"skills\": 25,\n  \"files\": 81,\n  \"destination\": \"/Users/Joseph/.codex/skills\"\n}\n",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "app.py",
+    "--double",
+    "-4"
+  ],
+  "exit_code": 0,
+  "stdout": "-8\n",
+  "stderr": "",
+  "status": "passed"
+}

@@ -1,0 +1,280 @@
+[
+  {
+    "command": [
+      "python3",
+      "app.py",
+      "--help"
+    ],
+    "exit_code": 0,
+    "stdout": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\n\noptional arguments:\n  -h, --help       show this help message and exit\n  --double DOUBLE\n  --triple TRIPLE\n",
+    "stderr": "",
+    "expected_exit": 0,
+    "expected_stdout": null,
+    "expected_error_contains": null,
+    "status": "passed",
+    "evidence": "evidence/doctor.json"
+  },
+  {
+    "command": [
+      "python3",
+      "app.py",
+      "--double",
+      "3"
+    ],
+    "exit_code": 0,
+    "stdout": "6\n",
+    "stderr": "",
+    "expected_exit": 0,
+    "expected_stdout": "6\n",
+    "expected_error_contains": null,
+    "status": "passed",
+    "evidence": "evidence/double-3.json"
+  },
+  {
+    "command": [
+      "python3",
+      "app.py",
+      "--double",
+      "-4"
+    ],
+    "exit_code": 0,
+    "stdout": "-8\n",
+    "stderr": "",
+    "expected_exit": 0,
+    "expected_stdout": "-8\n",
+    "expected_error_contains": null,
+    "status": "passed",
+    "evidence": "evidence/double-negative4.json"
+  },
+  {
+    "command": [
+      "python3",
+      "app.py",
+      "--double",
+      "0"
+    ],
+    "exit_code": 0,
+    "stdout": "0\n",
+    "stderr": "",
+    "expected_exit": 0,
+    "expected_stdout": "0\n",
+    "expected_error_contains": null,
+    "status": "passed",
+    "evidence": "evidence/double-0.json"
+  },
+  {
+    "command": [
+      "python3",
+      "app.py",
+      "--triple",
+      "3"
+    ],
+    "exit_code": 0,
+    "stdout": "9\n",
+    "stderr": "",
+    "expected_exit": 0,
+    "expected_stdout": "9\n",
+    "expected_error_contains": null,
+    "status": "passed",
+    "evidence": "evidence/triple-3.json"
+  },
+  {
+    "command": [
+      "python3",
+      "app.py",
+      "--triple",
+      "-4"
+    ],
+    "exit_code": 0,
+    "stdout": "-12\n",
+    "stderr": "",
+    "expected_exit": 0,
+    "expected_stdout": "-12\n",
+    "expected_error_contains": null,
+    "status": "passed",
+    "evidence": "evidence/triple-negative4.json"
+  },
+  {
+    "command": [
+      "python3",
+      "app.py",
+      "--triple",
+      "0"
+    ],
+    "exit_code": 0,
+    "stdout": "0\n",
+    "stderr": "",
+    "expected_exit": 0,
+    "expected_stdout": "0\n",
+    "expected_error_contains": null,
+    "status": "passed",
+    "evidence": "evidence/triple-0.json"
+  },
+  {
+    "command": [
+      "python3",
+      "app.py",
+      "-h"
+    ],
+    "exit_code": 0,
+    "stdout": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\n\noptional arguments:\n  -h, --help       show this help message and exit\n  --double DOUBLE\n  --triple TRIPLE\n",
+    "stderr": "",
+    "expected_exit": 0,
+    "expected_stdout": null,
+    "expected_error_contains": null,
+    "status": "passed",
+    "evidence": "evidence/short-help.json"
+  },
+  {
+    "command": [
+      "python3",
+      "app.py"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: one of the arguments --double --triple is required\n",
+    "expected_exit": 2,
+    "expected_stdout": "",
+    "expected_error_contains": "one of the arguments",
+    "status": "passed",
+    "evidence": "evidence/required-mode.json"
+  },
+  {
+    "command": [
+      "python3",
+      "app.py",
+      "--double",
+      "3",
+      "--triple",
+      "3"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: argument --triple: not allowed with argument --double\n",
+    "expected_exit": 2,
+    "expected_stdout": "",
+    "expected_error_contains": "not allowed with argument",
+    "status": "passed",
+    "evidence": "evidence/exclusive-modes.json"
+  },
+  {
+    "command": [
+      "python3",
+      "app.py",
+      "--double",
+      "nope"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: argument --double: invalid int value: 'nope'\n",
+    "expected_exit": 2,
+    "expected_stdout": "",
+    "expected_error_contains": "invalid int value",
+    "status": "passed",
+    "evidence": "evidence/double-invalid.json"
+  },
+  {
+    "command": [
+      "python3",
+      "app.py",
+      "--double"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: argument --double: expected one argument\n",
+    "expected_exit": 2,
+    "expected_stdout": "",
+    "expected_error_contains": "expected one argument",
+    "status": "passed",
+    "evidence": "evidence/double-missing.json"
+  },
+  {
+    "command": [
+      "python3",
+      "app.py",
+      "--triple",
+      "nope"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: argument --triple: invalid int value: 'nope'\n",
+    "expected_exit": 2,
+    "expected_stdout": "",
+    "expected_error_contains": "invalid int value",
+    "status": "passed",
+    "evidence": "evidence/triple-invalid.json"
+  },
+  {
+    "command": [
+      "python3",
+      "app.py",
+      "--triple"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: argument --triple: expected one argument\n",
+    "expected_exit": 2,
+    "expected_stdout": "",
+    "expected_error_contains": "expected one argument",
+    "status": "passed",
+    "evidence": "evidence/triple-missing.json"
+  },
+  {
+    "command": [
+      "python3",
+      "app.py",
+      "--unknown"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: one of the arguments --double --triple is required\n",
+    "expected_exit": 2,
+    "expected_stdout": "",
+    "expected_error_contains": "error:",
+    "status": "passed",
+    "evidence": "evidence/unknown-flag.json"
+  },
+  {
+    "command": [
+      "python3",
+      "app.py",
+      "--double=3"
+    ],
+    "exit_code": 0,
+    "stdout": "6\n",
+    "stderr": "",
+    "expected_exit": 0,
+    "expected_stdout": "6\n",
+    "expected_error_contains": null,
+    "status": "passed",
+    "evidence": "evidence/double-equals.json"
+  },
+  {
+    "command": [
+      "python3",
+      "app.py",
+      "--triple=3"
+    ],
+    "exit_code": 0,
+    "stdout": "9\n",
+    "stderr": "",
+    "expected_exit": 0,
+    "expected_stdout": "9\n",
+    "expected_error_contains": null,
+    "status": "passed",
+    "evidence": "evidence/triple-equals.json"
+  },
+  {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "-v"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "test_double (test_app.CliTests) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.019s\n\nOK\n",
+    "status": "passed",
+    "evidence": "evidence/existing-checks.json"
+  }
+]

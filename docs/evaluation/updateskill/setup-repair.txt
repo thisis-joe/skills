@@ -1,0 +1,1 @@
+Fixture setup initially failed because scripts/ was not created before copying allowed checker files. Created that directory and recreated only the incomplete temp case-a fixture. No application outcome was inferred from the failed setup.

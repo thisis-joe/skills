@@ -1,0 +1,39 @@
+$ python3 /Users/Joseph/workspaces/skills/skills/_lets-shared/tools/review_scope.py --repo . --base main --path greet.py --path tests/test_greet.py
+{
+  "schema": 1,
+  "repository": "/private/tmp/lets-core-validation/build/repo",
+  "requested_base": "main",
+  "base_commit": "3b16a6a282b39052ee1c18257f260869e01418b0",
+  "comparison_commit": "3b16a6a282b39052ee1c18257f260869e01418b0",
+  "head": "3b16a6a282b39052ee1c18257f260869e01418b0",
+  "task_paths": [
+    "greet.py",
+    "tests/test_greet.py"
+  ],
+  "has_changes": true,
+  "files": [
+    {
+      "path": "greet.py",
+      "layers": [
+        "worktree"
+      ],
+      "statuses": {
+        "worktree": "M"
+      },
+      "current_sha256": "14a8b1943dd96aa0e0062a44f6af93d1765e23824fc2ff91a96d581b222777f5"
+    },
+    {
+      "path": "tests/test_greet.py",
+      "layers": [
+        "worktree"
+      ],
+      "statuses": {
+        "worktree": "M"
+      },
+      "current_sha256": "40470549780ba138039566a4c89c04159b0bca588d1d1356f6ec3f62fa4440f7"
+    }
+  ],
+  "snapshot": "3d4ecea5553dfc9da4e83588ab4370298ba38f6ecbdbb0c734ee57f8982e271c"
+}
+
+exit=0

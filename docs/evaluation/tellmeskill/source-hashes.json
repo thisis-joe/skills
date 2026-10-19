@@ -1,0 +1,47 @@
+[
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/coco-tellmeskill/SKILL.md",
+    "sha256": "90989437a07664b8e9b72a82cf93a03757eb527f17f9acd36886d4db351f5237",
+    "bytes": 4260
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/coco-tellmeskill/references/explanation-format.md",
+    "sha256": "b33bb7483013a396d1c17b6142f94c82f9c27635172a25756b67dda3d268b73e",
+    "bytes": 2166
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/coco-security/SKILL.md",
+    "sha256": "53bac454fd206fac123c885d3dfc84d5a89e05619eade1e943f1c98a2663a32e",
+    "bytes": 1844
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/coco-build/SKILL.md",
+    "sha256": "1716fe870c293d3a07432a9e7767b7b72aea550fa089a5376228798e41fab42b",
+    "bytes": 2221
+  },
+  {
+    "path": "/Users/Joseph/.codex/skills/.system/skill-creator/SKILL.md",
+    "sha256": "6656e54755638e8efcf275a472b9672eaa8a9a1b9e59dc210e275b03b59e1e66",
+    "bytes": 15311
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_coco-shared/contracts.md",
+    "sha256": "8a4d971296770a8e52566d9f7af9375ccdc844a586dcc46cc760591758028793",
+    "bytes": 4857
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_coco-shared/advanced/security.md",
+    "sha256": "5b5a7b56386f54b92a965f8f2cddf2b77db663e1fb59bb3e02f87022eec7e4c0",
+    "bytes": 8260
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_coco-shared/advanced/build.md",
+    "sha256": "c34a1810ec6f87db16d897aacbb3b1594359bb4ab1307b55023f837272b6efe7",
+    "bytes": 9417
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_coco-shared/decisions.md",
+    "sha256": "9ec77a8341c374b6ba5a01f281010a326abf87cb5b3f4270101ec187670f2c1d",
+    "bytes": 3248
+  }
+]

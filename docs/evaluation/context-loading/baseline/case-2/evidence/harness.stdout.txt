@@ -1,0 +1,15 @@
+help-long: passed
+help-short: passed
+double-positive: passed
+double-negative: passed
+double-zero: passed
+triple-positive: passed
+triple-negative: passed
+triple-zero: passed
+required-mode: passed
+exclusive-modes: passed
+double-invalid-integer: passed
+triple-invalid-integer: passed
+double-missing-value: passed
+triple-missing-value: passed
+unknown-option: passed

@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-simplify"
+  short_description: "Purpose-led simplify with source-backed checks and evidence"
+  default_prompt: "Use $coco-simplify for the current request and provide its required result."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-spec"
+  short_description: "Purpose-led spec with source-backed checks and evidence"
+  default_prompt: "Use $coco-spec for the current request and provide its required result."

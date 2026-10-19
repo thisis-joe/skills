@@ -1,0 +1,62 @@
+{
+  "scope_drift": {
+    "repo": "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/coco-push-forward-g56i2o5w/scope_drift/work",
+    "remote": "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/coco-push-forward-g56i2o5w/scope_drift/origin.git",
+    "old_branch": "feat(be)/431-토큰_만료설정",
+    "candidate_branch": "feat(be)/431-토큰_회전과_재사용차단",
+    "task_key": "TEAM-431",
+    "initial": "bb041abaadf565c347712de3697109f5ae8c6a92",
+    "work": "a077a81423157ac6175383dd885b47682db653c1",
+    "base_develop": "c1640e67dac3ea7fe47b2de918459a6d5ca241b7",
+    "peer_commit": "10eab6b6d493cda21c05611a3bad77553e7e5360",
+    "collision_commit": null
+  },
+  "adequate_summary": {
+    "repo": "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/coco-push-forward-g56i2o5w/adequate_summary/work",
+    "remote": "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/coco-push-forward-g56i2o5w/adequate_summary/origin.git",
+    "old_branch": "feat(be)/432-CSV_내보내기",
+    "candidate_branch": "feat(be)/432-CSV_내보내기",
+    "task_key": "TEAM-432",
+    "initial": "1b8a8c510187d172c81979550bcd8f1df319ed2c",
+    "work": "794c2e3fdd2ca089d0a4ca52fd1c6ffaa79b37fd",
+    "base_develop": "a9bddd3dce40b5bc9160a76f41221309365f2785",
+    "peer_commit": null,
+    "collision_commit": null
+  },
+  "jira_write_failure": {
+    "repo": "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/coco-push-forward-g56i2o5w/jira_write_failure/work",
+    "remote": "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/coco-push-forward-g56i2o5w/jira_write_failure/origin.git",
+    "old_branch": "feat(be)/433-토큰_만료설정",
+    "candidate_branch": "feat(be)/433-토큰_회전과_재사용차단",
+    "task_key": "TEAM-433",
+    "initial": "de0d0d87791a0078945b4b0f2422342dd255892d",
+    "work": "0a8c6e8cb851a4bdc5f947f02910e61a4a8d1f9d",
+    "base_develop": "8707c89f451703aa815f48aeffea80a96cf2d8bf",
+    "peer_commit": null,
+    "collision_commit": null
+  },
+  "ambiguous_project": {
+    "repo": "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/coco-push-forward-g56i2o5w/ambiguous_project/work",
+    "remote": "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/coco-push-forward-g56i2o5w/ambiguous_project/origin.git",
+    "old_branch": "feat(be)/434-토큰_만료설정",
+    "candidate_branch": "feat(be)/434-토큰_회전과_재사용차단",
+    "task_key": null,
+    "initial": "de0d0d87791a0078945b4b0f2422342dd255892d",
+    "work": "0a8c6e8cb851a4bdc5f947f02910e61a4a8d1f9d",
+    "base_develop": "8707c89f451703aa815f48aeffea80a96cf2d8bf",
+    "peer_commit": null,
+    "collision_commit": null
+  },
+  "unrelated_collision": {
+    "repo": "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/coco-push-forward-g56i2o5w/unrelated_collision/work",
+    "remote": "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/coco-push-forward-g56i2o5w/unrelated_collision/origin.git",
+    "old_branch": "feat(be)/435-토큰_만료설정",
+    "candidate_branch": "feat(be)/435-토큰_회전과_재사용차단",
+    "task_key": "TEAM-435",
+    "initial": "de0d0d87791a0078945b4b0f2422342dd255892d",
+    "work": "81b536b5487d6162854cae20d44498062fad6cdb",
+    "base_develop": "ae218fc4f137e66e7dc8463953f6cfcab8d87d76",
+    "peer_commit": null,
+    "collision_commit": "4d1f7f002431308ac68ed30fef36d3dbdec7f3f9"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "command": "local evidence retention, bounds, source-hash and report checks",
+  "exit_code": 0,
+  "stdout": "All recorded streams exist. wallet.py SHA-256 unchanged. Bounds retained at balances 0..2, amounts 0..3; 12 actual/model comparisons; six real negative outcomes; no mismatches.\n",
+  "status": "passed"
+}

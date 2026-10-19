@@ -1,0 +1,14 @@
+{
+  "case": "context-only",
+  "phase": "after",
+  "label": "state-readback",
+  "cwd": "/tmp/lets-recovery-validation/context-only/repo",
+  "command": [
+    "python3",
+    "-c",
+    "from pathlib import Path; import json; print(json.dumps(json.loads(Path(\"../task-state.json\").read_text()), indent=2))"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"T1\": {\n    \"status\": \"open\",\n    \"commit\": null,\n    \"blockers\": []\n  },\n  \"T2\": {\n    \"status\": \"pending\",\n    \"blockers\": [\n      \"T1\"\n    ],\n    \"title\": \"Document examples\"\n  }\n}\n",
+  "stderr": ""
+}

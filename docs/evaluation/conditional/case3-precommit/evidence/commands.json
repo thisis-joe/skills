@@ -1,0 +1,118 @@
+[
+  {
+    "command": [
+      "git",
+      "init",
+      "-b",
+      "feature/commit-checks"
+    ],
+    "exit": 0,
+    "output": "evidence/git-init.txt"
+  },
+  {
+    "command": [
+      "git",
+      "add",
+      "--",
+      "package.json",
+      "package-lock.json",
+      "ci.yml",
+      ".prettierrc.json",
+      ".prettierignore",
+      "scripts/existing-prepare.mjs",
+      "scripts/policy.mjs",
+      "scripts/example.test.mjs",
+      ".githooks/pre-commit",
+      "README.md"
+    ],
+    "exit": 0,
+    "output": "evidence/baseline-stage.txt"
+  },
+  {
+    "command": [
+      "git",
+      "commit",
+      "-m",
+      "fixture: establish existing project policy"
+    ],
+    "exit": 0,
+    "output": "evidence/baseline-commit.txt"
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit": 0,
+    "output": "evidence/base.txt"
+  },
+  {
+    "command": [
+      "sh",
+      "-n",
+      ".githooks/pre-commit"
+    ],
+    "exit": 0,
+    "output": "evidence/shell-syntax.txt"
+  },
+  {
+    "command": [
+      "npm",
+      "test"
+    ],
+    "exit": 0,
+    "output": "evidence/existing-tests.txt"
+  },
+  {
+    "command": [
+      "git",
+      "config",
+      "--local",
+      "core.hooksPath",
+      ".githooks"
+    ],
+    "exit": 0,
+    "output": "evidence/local-hook-path.txt"
+  },
+  {
+    "command": [
+      "git",
+      "add",
+      "--",
+      ".githooks/pre-commit",
+      ".lintstagedrc.json",
+      "supported.js"
+    ],
+    "exit": 0,
+    "output": "evidence/stage-owned.txt"
+  },
+  {
+    "command": [
+      "git",
+      "commit",
+      "-m",
+      "fixture: prepare commit-time checks"
+    ],
+    "exit": 1,
+    "output": "evidence/real-hook-commit.txt"
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit": 0,
+    "output": "evidence/head-after-hook.txt"
+  },
+  {
+    "command": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "exit": 0,
+    "output": "evidence/status.txt"
+  }
+]

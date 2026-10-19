@@ -1,0 +1,4 @@
+# Fixture rule decisions
+
+- D001, revised for the current maintained package: Replace the synthetic upstream unconditional `pytest -q` requirement with [repository-specific check discovery](contracts.md#checks). AGENTS.md and .github/workflows/checks.yml both require the current validator and unittest commands. The former unconditional command is no longer adopted; original source bytes, checksum and essential_rules remain historical facts in coverage. This applies to shared check selection used by build and review, with the COCO command examples conditional on this maintained package.
+- D002, new team convention: [Shared procedure impact](contracts.md#shared-procedure-impact) requires inspecting both registered callers and linked references before a shared-rule commit. This has no claimed upstream source. Build/review identity, invocation policy, dependencies, permission scope and user files remain unchanged.

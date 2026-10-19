@@ -1,0 +1,8 @@
+{
+  "sha256": {
+    "wallet.py": "c2a7fe2a389d179f1060189feffe4ce1675ad51bb4c3ad601daaf5e2968ffdc2",
+    "proof/check.py": "34f9f8640d0a522a7f5f28f900ecf7ee158ea1a54294b720d35a031cf8b6d2ce",
+    "proof/README.md": "ce52191fdf37425621a212bf32641355a491e70a4e664e53c85fc171e82579b2"
+  },
+  "wallet_unchanged": true
+}

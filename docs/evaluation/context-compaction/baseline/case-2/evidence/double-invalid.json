@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python3",
+    "app.py",
+    "--double",
+    "nope"
+  ],
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: argument --double: invalid int value: 'nope'\n"
+}

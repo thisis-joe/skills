@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/Users/Joseph/.local/bin/python3.11",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b",
+  "environment_override": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exit_code": 0,
+  "stdout": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/05.stdout",
+  "stderr": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/05.stderr"
+}

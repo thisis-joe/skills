@@ -1,0 +1,37 @@
+{
+  "T1": {
+    "status": "done",
+    "commit": "03b7e6a2131b4eec2d177c6591a22084c554e3f6",
+    "blockers": [],
+    "evidence": {
+      "suite": {
+        "status": "passed",
+        "artifact": "evidence/current-suite.json",
+        "prior_receipt": "evidence/fixture-green.json"
+      },
+      "runtime": {
+        "status": "passed",
+        "artifact": "evidence/current-runtime.json",
+        "prior_receipt": "evidence/fixture-runtime.json"
+      },
+      "review": {
+        "status": "passed",
+        "artifact": "fixture-review.md",
+        "independence": "degraded self-review",
+        "required_findings": []
+      },
+      "identity": "evidence/receipt-identity.json",
+      "scope": {
+        "artifact": "evidence/current-scope.json",
+        "snapshot": "ffadc7dbace9023e04d4f2650466d4b9ebf6b4abb1ebd8b54ecc34732cb24360"
+      }
+    }
+  },
+  "T2": {
+    "status": "pending",
+    "blockers": [
+      "T1"
+    ],
+    "title": "Document examples"
+  }
+}

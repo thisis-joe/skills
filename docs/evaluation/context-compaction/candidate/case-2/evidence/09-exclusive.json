@@ -1,0 +1,20 @@
+{
+  "name": "exclusive",
+  "command": [
+    "python3",
+    "app.py",
+    "--double",
+    "3",
+    "--triple",
+    "3"
+  ],
+  "expected_exit": 2,
+  "expected_stdout": "",
+  "expected_markers": [
+    "not allowed with argument"
+  ],
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "usage: app.py [-h] (--double DOUBLE | --triple TRIPLE)\napp.py: error: argument --triple: not allowed with argument --double\n",
+  "status": "passed"
+}

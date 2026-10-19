@@ -1,0 +1,42 @@
+{
+  "phase": "context",
+  "write_owner": "lets-build",
+  "authoritative_task_state": "task-state.json",
+  "precondition_sha256": "5156b3f51d4ae746285645fa468076a2a304a79625e3929d5ba61ccbe48c3cd5",
+  "replace_task": {
+    "T1": {
+      "status": "done",
+      "commit": "03b7e6a2131b4eec2d177c6591a22084c554e3f6",
+      "blockers": [],
+      "evidence": {
+        "suite": {
+          "status": "passed",
+          "artifact": "evidence/current-suite.json",
+          "prior_receipt": "evidence/fixture-green.json"
+        },
+        "runtime": {
+          "status": "passed",
+          "artifact": "evidence/current-runtime.json",
+          "prior_receipt": "evidence/fixture-runtime.json"
+        },
+        "review": {
+          "status": "passed",
+          "artifact": "fixture-review.md",
+          "independence": "degraded self-review",
+          "required_findings": []
+        },
+        "identity": "evidence/receipt-identity.json",
+        "scope": {
+          "artifact": "evidence/current-scope.json",
+          "snapshot": "ffadc7dbace9023e04d4f2650466d4b9ebf6b4abb1ebd8b54ecc34732cb24360"
+        }
+      }
+    }
+  },
+  "preserve_tasks": [
+    "T2"
+  ],
+  "next_ready_task": "T2",
+  "next_ready_reason": "Its referenced dependency T1 is verified complete. T2 is not requested now; its original pending record and dependency reference are retained.",
+  "authorization": "Context-only: proposed update only, no implementation or completion-state write authorized."
+}

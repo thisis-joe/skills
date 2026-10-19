@@ -1,0 +1,30 @@
+{
+  "review": {
+    "before_files": {
+      "AGENTS.md": "bd2193248735fc4a3698e6d8e345c0ced47fc6a5ef6cbbbfa64d203962ac194b",
+      "README.md": "db877e020f6dde7c989a20ccda6b8dfaa0c29e1b2ed518f6846e9d04060deafa",
+      "pricing.py": "6e0b94a321fdadd034b3b8c5efa8225b76c0d71862307903b0146b687386db89",
+      "tests/test_bulk.py": "16a69c9ba0b558baa8171cf0f0ac6eb68d9207e8b3b06a16f1e9ce9fede7d54d",
+      "tests/test_pricing.py": "cf7e71a04b89d7e68fc683ccac4fe65c519ee20e5ff07040074e5785d5950fc0"
+    },
+    "after_files": {
+      "AGENTS.md": "bd2193248735fc4a3698e6d8e345c0ced47fc6a5ef6cbbbfa64d203962ac194b",
+      "README.md": "db877e020f6dde7c989a20ccda6b8dfaa0c29e1b2ed518f6846e9d04060deafa",
+      "pricing.py": "6e0b94a321fdadd034b3b8c5efa8225b76c0d71862307903b0146b687386db89",
+      "tests/test_bulk.py": "16a69c9ba0b558baa8171cf0f0ac6eb68d9207e8b3b06a16f1e9ce9fede7d54d",
+      "tests/test_pricing.py": "cf7e71a04b89d7e68fc683ccac4fe65c519ee20e5ff07040074e5785d5950fc0"
+    },
+    "source_files_unchanged": true,
+    "before_status": "M  pricing.py\n M tests/test_pricing.py\n?? tests/test_bulk.py",
+    "after_status": "M  pricing.py\n M tests/test_pricing.py\n?? tests/test_bulk.py"
+  },
+  "draft": {
+    "before_files": {
+      "README.md": "39cd272bf2f505a2b646cbf1a5bbc246287ff3e0c44a2dfdd78069564cc8b6d6"
+    },
+    "after_files": {
+      "README.md": "39cd272bf2f505a2b646cbf1a5bbc246287ff3e0c44a2dfdd78069564cc8b6d6"
+    },
+    "source_files_unchanged": true
+  }
+}

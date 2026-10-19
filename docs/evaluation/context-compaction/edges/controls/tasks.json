@@ -1,0 +1,20 @@
+[
+  {
+    "id": "direct-intake-a",
+    "case": "case-1-intake-a",
+    "start_with": "_coco-shared/advanced/automate-intake-fix.md",
+    "request": "An intake verdict asks for reproduction and a bounded fix. Start with the provided intake-fix procedure. Inspect the local intake.json, full thread.json, and app; report which work may run and which prerequisites are missing. Preserve product and user files. No external writes, network access, or activation are authorized."
+  },
+  {
+    "id": "direct-intake-b",
+    "case": "case-1-intake-b",
+    "start_with": "_coco-shared/advanced/automate-intake-fix.md",
+    "request": "An intake verdict asks for reproduction and a bounded fix. Start with the provided intake-fix procedure. Inspect the local intake.json, full thread.json, and app; report which work may run and which prerequisites are missing. Preserve product and user files. No external writes, network access, or activation are authorized."
+  },
+  {
+    "id": "ci-b",
+    "case": "case-2-ci-b",
+    "start_with": "coco-automate/SKILL.md",
+    "request": "Prepare .github/workflows/check.yml for this Python repository using its documented test command. Run the local tests and retain the actual result. Prepare the workflow file only; do not activate CI, install dependencies, contact external services, commit, or modify product/test/user files. Report unavailable prerequisites truthfully."
+  }
+]

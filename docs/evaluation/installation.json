@@ -1,0 +1,44 @@
+{
+  "at_utc": "2026-10-19T08:15:14.118741+00:00",
+  "destination": "/Users/Joseph/.codex/skills",
+  "skills": 22,
+  "payload_files": 72,
+  "all_installed_bytes_match_frozen_package": true,
+  "unrelated_entries": 50,
+  "unrelated_bytes_symlink_targets_modes_mtimes_unchanged": true,
+  "unrelated_before_digest": "875fddedd084e3d0ccb6256ebdab5770c4806bfb0f2383d48adaf4864a16d196",
+  "unrelated_after_digest": "875fddedd084e3d0ccb6256ebdab5770c4806bfb0f2383d48adaf4864a16d196",
+  "ownership_manifest_sha256": "54610c6995e124cefd71ce62324094d1ad620c7090f13f573cd4ecbb3a8de296",
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "scripts/install.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 22,\n  \"files\": 72,\n  \"destination\": \"/Users/Joseph/.codex/skills\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/validate.py",
+        "--installed",
+        "/Users/Joseph/.codex/skills"
+      ],
+      "exit_code": 0,
+      "stdout": "Validated installed bundle: 22 skills, 72 files\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/install.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"unchanged\",\n  \"skills\": 22,\n  \"files\": 72,\n  \"destination\": \"/Users/Joseph/.codex/skills\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "catalog_refresh": "Filesystem installation verified. This run does not assert that an already-open Codex conversation has refreshed its skill catalog."
+}

@@ -1,0 +1,11 @@
+{
+  "source_channel": "local-intake",
+  "source_thread": "thread-7",
+  "source_permalink": "local-fixture/thread-7",
+  "trusted_triage_identity": "triage-bot",
+  "fix_verdict_marker": "[ready-for-fix]",
+  "live_source_adapter": null,
+  "tracker_adapter": null,
+  "control_adapter": null,
+  "tracker_compensation": false
+}

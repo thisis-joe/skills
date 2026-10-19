@@ -1,0 +1,11 @@
+diff --git a/tests/test_pricing.py b/tests/test_pricing.py
+index e45a561..d407f38 100644
+--- a/tests/test_pricing.py
++++ b/tests/test_pricing.py
+@@ -4,3 +4,6 @@ from pricing import total
+ class PricingTests(unittest.TestCase):
+     def test_regular(self):
+         self.assertEqual(total(100, 1), 100)
++
++    def test_member(self):
++        self.assertEqual(total(100, 1, member=True), 90)

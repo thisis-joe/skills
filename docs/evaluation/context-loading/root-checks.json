@@ -1,0 +1,62 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "scripts/validate.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Validated package: 26 skills, source checksums, coverage and references\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_changed_original_instruction_is_detected (test_context_loading.ContextLoadingTests) ... ok\ntest_directly_opened_module_must_lead_back_to_its_core (test_context_loading.ContextLoadingTests) ... ok\ntest_duplicate_original_in_an_unrelated_document_is_detected (test_context_loading.ContextLoadingTests) ... ok\ntest_duplicate_section_in_router_is_detected (test_context_loading.ContextLoadingTests) ... ok\ntest_missing_module_is_detected (test_context_loading.ContextLoadingTests) ... ok\ntest_module_relative_links_are_checked_from_their_new_owner (test_context_loading.ContextLoadingTests) ... ok\ntest_only_the_router_may_add_a_mode_selection_section (test_context_loading.ContextLoadingTests) ... ok\ntest_original_core_order_is_preserved (test_context_loading.ContextLoadingTests) ... ok\ntest_original_core_section_cannot_move_to_a_different_owner (test_context_loading.ContextLoadingTests) ... ok\ntest_original_sections_are_preserved_once_and_reassemble_exactly (test_context_loading.ContextLoadingTests) ... ok\ntest_router_must_link_to_every_module_in_its_selection_section (test_context_loading.ContextLoadingTests) ... ok\ntest_router_preamble_cannot_change_during_extraction (test_context_loading.ContextLoadingTests) ... ok\ntest_broken_reference_and_wrong_name_are_rejected (test_package.PackageTests) ... ok\ntest_dry_run_does_not_create_destination (test_package.PackageTests) ... ok\ntest_extra_user_file_in_managed_directory_prevents_update (test_package.PackageTests) ... ok\ntest_foreign_skill_conflict_prevents_all_writes (test_package.PackageTests) ... ok\ntest_installation_is_idempotent (test_package.PackageTests) ... ok\ntest_installed_tampering_is_detected (test_package.PackageTests) ... ok\ntest_installs_shared_contract_and_references_remain_valid (test_package.PackageTests) ... ok\ntest_manifest_cannot_escape_destination (test_package.PackageTests) ... ok\ntest_modified_managed_file_is_preserved_on_update (test_package.PackageTests) ... ok\ntest_other_installed_skills_are_untouched (test_package.PackageTests) ... ok\ntest_source_checksum_and_coverage_are_verified (test_package.PackageTests) ... ok\ntest_symlink_in_package_or_target_is_refused (test_package.PackageTests) ... ok\ntest_unmodified_managed_install_can_update (test_package.PackageTests) ... ok\ntest_clean_repository_returns_empty_scope (test_review_scope.ReviewScopeTests) ... ok\ntest_collecting_scope_does_not_modify_git_or_files (test_review_scope.ReviewScopeTests) ... ok\ntest_deleted_and_unusual_filenames_are_not_lost (test_review_scope.ReviewScopeTests) ... ok\ntest_fingerprint_changes_when_reviewed_content_changes (test_review_scope.ReviewScopeTests) ... ok\ntest_fingerprint_includes_staged_content_not_just_worktree (test_review_scope.ReviewScopeTests) ... ok\ntest_invalid_base_and_escaping_scope_fail_clearly (test_review_scope.ReviewScopeTests) ... ok\ntest_nested_collect_api_honors_root_relative_literal_filter (test_review_scope.ReviewScopeTests) ... ok\ntest_nested_repository_argument_uses_root_paths_and_real_content (test_review_scope.ReviewScopeTests) ... ok\ntest_reports_all_four_layers_including_untracked (test_review_scope.ReviewScopeTests) ... ok\ntest_task_paths_are_literal_and_directory_scopes_work (test_review_scope.ReviewScopeTests) ... ok\n\n----------------------------------------------------------------------\nRan 35 tests in 3.767s\n\nOK\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/validate.py",
+        "--installed",
+        "/Users/Joseph/.codex/skills"
+      ],
+      "exit_code": 0,
+      "stdout": "Validated installed bundle: 26 skills, 99 files\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit_code": 2,
+      "stdout": "skills/_coco-shared/advanced/automate-ci.md:15: new blank line at EOF.\nskills/_coco-shared/advanced/automate-intake-fix.md:12: new blank line at EOF.\nskills/_coco-shared/advanced/automate-intake-setup.md:12: new blank line at EOF.\nskills/_coco-shared/advanced/automate-intake-triage.md:14: new blank line at EOF.\nskills/_coco-shared/advanced/automate-sustained.md:21: new blank line at EOF.\nskills/_coco-shared/advanced/automate-webhook.md:14: new blank line at EOF.\nskills/_coco-shared/advanced/automate-wizard.md:28: new blank line at EOF.\nskills/_coco-shared/advanced/automate.md:69: new blank line at EOF.\nskills/_coco-shared/advanced/verify-experiments.md:15: new blank line at EOF.\nskills/_coco-shared/advanced/verify-formal-create.md:16: new blank line at EOF.\nskills/_coco-shared/advanced/verify-formal-maintain.md:16: new blank line at EOF.\nskills/_coco-shared/advanced/verify-quality-audit.md:11: new blank line at EOF.\nskills/_coco-shared/advanced/verify-runtime-create.md:24: new blank line at EOF.\nskills/_coco-shared/advanced/verify-runtime-maintain.md:16: new blank line at EOF.\nskills/_coco-shared/advanced/verify.md:79: new blank line at EOF.\n",
+      "stderr": ""
+    }
+  ],
+  "whitespace_exception": "15 EOF separator blank lines preserve exact original operational-section bytes; no checker configuration changed",
+  "required_checks_passed": true,
+  "baseline_negative_replay": {
+    "argv": [
+      "python3",
+      "-c",
+      "import json,sys; from pathlib import Path; sys.path.insert(0,'tests'); from test_context_loading import inspect_context_loading; result=inspect_context_loading(Path('/private/tmp/coco-context-loading-6bhlglo9/workspace-river')); print(json.dumps(result,ensure_ascii=False,indent=2)); sys.exit(1 if result['failures'] else 0)"
+    ],
+    "exit_code": 1,
+    "stdout": "{\n  \"failures\": [\n    [\n      \"missing-file\",\n      \"verify-experiments.md\"\n    ],\n    [\n      \"missing-file\",\n      \"verify-formal-create.md\"\n    ],\n    [\n      \"missing-file\",\n      \"verify-formal-maintain.md\"\n    ],\n    [\n      \"missing-file\",\n      \"verify-pre-commit.md\"\n    ],\n    [\n      \"missing-file\",\n      \"verify-quality-audit.md\"\n    ],\n    [\n      \"missing-file\",\n      \"verify-runtime-create.md\"\n    ],\n    [\n      \"missing-file\",\n      \"verify-runtime-maintain.md\"\n    ],\n    [\n      \"mode-selection\",\n      \"verify.md\"\n    ],\n    [\n      \"section-order\",\n      \"verify.md\"\n    ],\n    [\n      \"wrong-owner\",\n      \"Conditional standing-quality-bar audit: verify.md\"\n    ],\n    [\n      \"wrong-owner\",\n      \"Create a runtime verification helper: verify.md\"\n    ],\n    [\n      \"wrong-owner\",\n      \"Maintain runtime verification: verify.md\"\n    ],\n    [\n      \"wrong-owner\",\n      \"Create formal verification: verify.md\"\n    ],\n    [\n      \"wrong-owner\",\n      \"Maintain formal verification: verify.md\"\n    ],\n    [\n      \"wrong-owner\",\n      \"Skill, prompt, and harness experiments: verify.md\"\n    ],\n    [\n      \"wrong-owner\",\n      \"Conditional pre-commit verification setup: verify.md\"\n    ],\n    [\n      \"unreachable-module\",\n      \"verify-experiments.md\"\n    ],\n    [\n      \"unreachable-module\",\n      \"verify-formal-create.md\"\n    ],\n    [\n      \"unreachable-module\",\n      \"verify-formal-maintain.md\"\n    ],\n    [\n      \"unreachable-module\",\n      \"verify-pre-commit.md\"\n    ],\n    [\n      \"unreachable-module\",\n      \"verify-quality-audit.md\"\n    ],\n    [\n      \"unreachable-module\",\n      \"verify-runtime-create.md\"\n    ],\n    [\n      \"unreachable-module\",\n      \"verify-runtime-maintain.md\"\n    ],\n    [\n      \"missing-file\",\n      \"automate-ci.md\"\n    ],\n    [\n      \"missing-file\",\n      \"automate-intake-fix.md\"\n    ],\n    [\n      \"missing-file\",\n      \"automate-intake-setup.md\"\n    ],\n    [\n      \"missing-file\",\n      \"automate-intake-triage.md\"\n    ],\n    [\n      \"missing-file\",\n      \"automate-specification.md\"\n    ],\n    [\n      \"missing-file\",\n      \"automate-sustained.md\"\n    ],\n    [\n      \"missing-file\",\n      \"automate-webhook.md\"\n    ],\n    [\n      \"missing-file\",\n      \"automate-wizard.md\"\n    ],\n    [\n      \"mode-selection\",\n      \"automate.md\"\n    ],\n    [\n      \"section-order\",\n      \"automate.md\"\n    ],\n    [\n      \"wrong-owner\",\n      \"CI and deployment preparation: automate.md\"\n    ],\n    [\n      \"wrong-owner\",\n      \"Sustained task graph and recovery: automate.md\"\n    ],\n    [\n      \"wrong-owner\",\n      \"Webhook or bot UI: automate.md\"\n    ],\n    [\n      \"wrong-owner\",\n      \"Report-intake setup: automate.md\"\n    ],\n    [\n      \"wrong-owner\",\n      \"Intake triage condition: automate.md\"\n    ],\n    [\n      \"wrong-owner\",\n      \"Intake reproduction and bounded fix: automate.md\"\n    ],\n    [\n      \"wrong-owner\",\n      \"Conditional human-operated setup wizard: automate.md\"\n    ],\n    [\n      \"wrong-owner\",\n      \"Conditional workflow specification only: automate.md\"\n    ],\n    [\n      \"unreachable-module\",\n      \"automate-ci.md\"\n    ],\n    [\n      \"unreachable-module\",\n      \"automate-intake-fix.md\"\n    ],\n    [\n      \"unreachable-module\",\n      \"automate-intake-setup.md\"\n    ],\n    [\n      \"unreachable-module\",\n      \"automate-intake-triage.md\"\n    ],\n    [\n      \"unreachable-module\",\n      \"automate-specification.md\"\n    ],\n    [\n      \"unreachable-module\",\n      \"automate-sustained.md\"\n    ],\n    [\n      \"unreachable-module\",\n      \"automate-webhook.md\"\n    ],\n    [\n      \"unreachable-module\",\n      \"automate-wizard.md\"\n    ]\n  ],\n  \"reconstructed_sha256\": {\n    \"verify\": \"0730bccf5ff7fe1737028c8dd8e1509ece19c56d3b8dad20adb76462dfd1aa5e\",\n    \"automate\": \"e6995f27dbab8ef6567f365a4bd7e09d68cf37b8a51c2665e49702b7bbe6ad8c\"\n  }\n}\n",
+    "stderr": "",
+    "interpretation": "Post-implementation reproduction against the immutable baseline snapshot; original initial RED output was observed but not independently archived."
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "type": "bounded independent forward application of coco-push",
+  "fixed_version": true,
+  "changed_skill_files": [],
+  "assessment": "passed_in_bounded_local_cases",
+  "real_git": true,
+  "jira": "LOCAL MOCK file-backed adapter only",
+  "external_writes": false,
+  "fixture_count": 5,
+  "results": {
+    "scope_drift": {
+      "outcome": "published",
+      "behavior_assessment": "passed",
+      "local_branch": "feat(be)/431-토큰_회전과_재사용차단",
+      "head": "2dd5d356758d52c992d4698d33eebda62ebf4c0c",
+      "jira_operations": {
+        "reads": 3,
+        "searches": 0,
+        "updates_attempted": 1,
+        "updates_succeeded": 1
+      },
+      "push_attempts": 1,
+      "test_count": 6,
+      "questions": []
+    },
+    "adequate_summary": {
+      "outcome": "published",
+      "behavior_assessment": "passed",
+      "local_branch": "feat(be)/432-CSV_내보내기",
+      "head": "d11198cad3db78bf97d2a999a75f0514862b0377",
+      "jira_operations": {
+        "reads": 1,
+        "searches": 0,
+        "updates_attempted": 0,
+        "updates_succeeded": 0
+      },
+      "push_attempts": 1,
+      "test_count": 3,
+      "questions": []
+    },
+    "jira_write_failure": {
+      "outcome": "stopped_before_push",
+      "behavior_assessment": "passed",
+      "local_branch": "feat(be)/433-토큰_회전과_재사용차단",
+      "head": "af25206e7908b7f167da7e7d2e84f56a8e9a5293",
+      "jira_operations": {
+        "reads": 3,
+        "searches": 0,
+        "updates_attempted": 1,
+        "updates_succeeded": 0
+      },
+      "push_attempts": 0,
+      "test_count": 5,
+      "questions": []
+    },
+    "ambiguous_project": {
+      "outcome": "stopped_before_push",
+      "behavior_assessment": "passed",
+      "local_branch": "feat(be)/434-토큰_만료설정",
+      "head": "16e0afca4b97bcc56fdbd6bdc6d6ccf977c28cc4",
+      "jira_operations": {
+        "reads": 0,
+        "searches": 1,
+        "updates_attempted": 0,
+        "updates_succeeded": 0
+      },
+      "push_attempts": 0,
+      "test_count": 5,
+      "questions": [
+        "434번 작업은 TEAM-434와 OPS-434 중 어느 Jira 프로젝트/전체 키에 연결되어 있나요? 확인 전에는 브랜치 개명·Jira 갱신·푸시를 멈춥니다."
+      ]
+    },
+    "unrelated_collision": {
+      "outcome": "stopped_before_push",
+      "behavior_assessment": "passed",
+      "local_branch": "feat(be)/435-토큰_만료설정",
+      "head": "a53b422904fd0cd89d396c0d39014b84747b31d3",
+      "jira_operations": {
+        "reads": 1,
+        "searches": 0,
+        "updates_attempted": 0,
+        "updates_succeeded": 0
+      },
+      "push_attempts": 0,
+      "test_count": 5,
+      "questions": [
+        "제안한 브랜치 이름은 OPS-435의 별도 작업에 사용 중입니다. TEAM-435 작업에 사용할 충돌하지 않는 작업요약을 정해주세요. 확인 전 개명·티켓 갱신·푸시를 멈춥니다."
+      ]
+    }
+  },
+  "limitations": [
+    "No real Jira connector, permissions, ADF-rich text, or authentication was tested.",
+    "No text conflict, concurrent write race, dual push URL, or retry-limit stress case was included.",
+    "This is one model-driven application pass with five designed fixtures, not a statistical reliability claim.",
+    "Original setup was revised before applying the skill so CSV implementation belongs to the feature diff and Python caches are ignored; discarded setup commands are retained separately."
+  ]
+}

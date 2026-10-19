@@ -1,0 +1,11 @@
+diff --git a/pricing.py b/pricing.py
+index 6d72eac..fcb6607 100644
+--- a/pricing.py
++++ b/pricing.py
+@@ -1,2 +1,5 @@
+ def total(price, quantity, member=False):
+-    return price * quantity
++    amount = price * quantity
++    if member or quantity >= 3:
++        return amount * 0.9
++    return amount

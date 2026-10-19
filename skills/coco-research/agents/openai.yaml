@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-research"
+  short_description: "Purpose-led research with source-backed checks and evidence"
+  default_prompt: "Use $coco-research for the current request and provide its required result."

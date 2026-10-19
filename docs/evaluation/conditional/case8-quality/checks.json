@@ -1,0 +1,49 @@
+{
+  "setup_owner": "lets-start",
+  "audit_owner": "lets-verify",
+  "setup_guard_exit": 0,
+  "audit_guard_exit": 1,
+  "unavailable_guard_exit": 2,
+  "audit_layers": [
+    "committed",
+    "staged",
+    "untracked",
+    "worktree"
+  ],
+  "audit_findings": [
+    {
+      "rule": "lowered-threshold",
+      "path": "quality.json",
+      "line": 1,
+      "baseline": 80,
+      "current": 65
+    },
+    {
+      "rule": "incomplete-new-exception",
+      "path": "quality.json",
+      "line": 1
+    },
+    {
+      "rule": "added-skip-or-suppression",
+      "path": "src/report.py",
+      "line": 2
+    },
+    {
+      "rule": "added-skip-or-suppression",
+      "path": "tests/test_new.py",
+      "line": 2
+    },
+    {
+      "rule": "changed-or-weakened-assertion",
+      "path": "tests/test_report.py",
+      "line": 1,
+      "interpretation": "heuristic; inspect exact test contract"
+    }
+  ],
+  "audit_snapshot": "861fd9eea513cd3625c3d5edbfe01bd4e502f572a4a8aa5671aafefaec5d4bb9",
+  "audit_files_unchanged": true,
+  "coverage_artifact_unchanged": true,
+  "collector_source": "scope-source.json",
+  "guard_source": "validation-created floor_guard.py, not a shipped checker",
+  "activation": "none"
+}

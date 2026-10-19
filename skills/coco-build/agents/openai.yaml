@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-build"
+  short_description: "Purpose-led build with source-backed checks and evidence"
+  default_prompt: "Use $coco-build for the current request and provide its required result."

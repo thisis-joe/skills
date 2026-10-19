@@ -1,0 +1,99 @@
+{
+  "scope": "One fresh agent, two bounded applications of the frozen LET'S workflow; not formal or general proof.",
+  "frozen_bundle": "/tmp/lets-frozen-candidate/skills",
+  "raw_fixture": "/tmp/lets-core-validation/context",
+  "output_root": "/tmp/lets-recovery-validation",
+  "cases": {
+    "resume": {
+      "workflows": [
+        "lets-context",
+        "lets-build"
+      ],
+      "state_status": "done",
+      "state_commit": "03b7e6a2131b4eec2d177c6591a22084c554e3f6",
+      "state_before_sha256": "5156b3f51d4ae746285645fa468076a2a304a79625e3929d5ba61ccbe48c3cd5",
+      "state_after_sha256": "1e2189f4ee461e773668fc69e4a850e067bd9fc10e02ffe88757fec8303a1da1",
+      "product_commits_before": 1,
+      "product_commits_after": 1,
+      "total_commits_after": 2,
+      "head": "03b7e6a2131b4eec2d177c6591a22084c554e3f6",
+      "head_unchanged": true,
+      "branch_unchanged": true,
+      "dirty_paths_before": [],
+      "dirty_paths_after": [],
+      "tracked_unstaged_after": "",
+      "staged_after": "",
+      "untracked_after": [],
+      "changed_preexisting_artifacts": [
+        "task-state.json"
+      ],
+      "all_repo_and_git_bytes_preserved": true,
+      "receipt_identity_preserved": true,
+      "suite": "passed",
+      "runtime": "passed",
+      "review": "passed, degraded same-agent self-review",
+      "task_state_reconciled": true,
+      "task_state_byte_identical": false,
+      "T2_preserved": true,
+      "new_product_commits": 0,
+      "next_ready_task": "T2 after T1 reconciliation, excluded from current requested work",
+      "packet": "/tmp/lets-recovery-validation/resume/packet.md"
+    },
+    "context-only": {
+      "workflows": [
+        "lets-context"
+      ],
+      "state_status": "open",
+      "state_commit": null,
+      "state_before_sha256": "5156b3f51d4ae746285645fa468076a2a304a79625e3929d5ba61ccbe48c3cd5",
+      "state_after_sha256": "5156b3f51d4ae746285645fa468076a2a304a79625e3929d5ba61ccbe48c3cd5",
+      "product_commits_before": 1,
+      "product_commits_after": 1,
+      "total_commits_after": 2,
+      "head": "03b7e6a2131b4eec2d177c6591a22084c554e3f6",
+      "head_unchanged": true,
+      "branch_unchanged": true,
+      "dirty_paths_before": [],
+      "dirty_paths_after": [],
+      "tracked_unstaged_after": "",
+      "staged_after": "",
+      "untracked_after": [],
+      "changed_preexisting_artifacts": [],
+      "all_repo_and_git_bytes_preserved": true,
+      "receipt_identity_preserved": true,
+      "suite": "passed",
+      "runtime": "passed",
+      "review": "passed, degraded same-agent self-review",
+      "task_state_reconciled": false,
+      "task_state_byte_identical": true,
+      "T2_preserved": true,
+      "new_product_commits": 0,
+      "next_ready_task": "T2 after T1 reconciliation, excluded from current requested work",
+      "packet": "/tmp/lets-recovery-validation/context-only/packet.md"
+    }
+  },
+  "source_integrity": {
+    "frozen_and_fixture_files_hashed": 127,
+    "changed": [],
+    "confirmed_unchanged": true,
+    "before_manifest": "evidence/source-sha256.before.json",
+    "after_manifest": "evidence/source-sha256.after.json",
+    "before_manifest_sha256": "79ed25f205740b3238b8fe428bd0dddea6700a70a4e03a4f431e21526c66366f",
+    "after_manifest_sha256": "79ed25f205740b3238b8fe428bd0dddea6700a70a4e03a4f431e21526c66366f"
+  },
+  "contradictions": [],
+  "observed_ambiguities": [
+    "Fixture input says external tracker checkbox, while repository README and user scope designate local ../task-state.json. Only copied local state was used; no external access.",
+    "T2 blockers field contains T1 as a dependency reference. This bounded T1 reconciliation preserves T2 exactly and computes readiness from T1 completion without claiming a T2 state change."
+  ],
+  "limits": [
+    "No nonempty unrelated dirty state was supplied; baseline and final dirty inventories are both empty. Preservation of nonempty unrelated edits is not exercised.",
+    "Review evidence is degraded same-agent self-review; no independent-review claim.",
+    "Existing pre-commit scope token and current committed scope token differ by Git topology. Exact file/commit hashes were checked; tokens were not equated."
+  ],
+  "evaluator_artifacts_read": false,
+  "agents_spawned": false,
+  "product_writes": false,
+  "global_or_external_writes": false,
+  "verdict": "Both bounded applications produced their authorized outcomes."
+}

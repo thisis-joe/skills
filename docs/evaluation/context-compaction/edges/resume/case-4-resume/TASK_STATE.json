@@ -1,0 +1,9 @@
+{
+  "task_id": "runtime-map-maintenance",
+  "claimed_status": "completed",
+  "app_sha256": "fc12390d43e91276f3274872c7680531d9c89648a668f9b06de36cae449a0cfd",
+  "completed_checks": [
+    "double"
+  ],
+  "remaining_checks": []
+}

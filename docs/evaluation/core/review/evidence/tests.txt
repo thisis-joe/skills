@@ -1,0 +1,26 @@
+$ python3 -m unittest discover -s tests -v
+test_no_discount (test_discount.DiscountTest) ... FAIL
+test_ten_percent (test_discount.DiscountTest) ... FAIL
+
+======================================================================
+FAIL: test_no_discount (test_discount.DiscountTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/lets-core-validation/review/repo/tests/test_discount.py", line 9, in test_no_discount
+    self.assertEqual(net_total(100, 0), 100)
+AssertionError: 0 != 100
+
+======================================================================
+FAIL: test_ten_percent (test_discount.DiscountTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/lets-core-validation/review/repo/tests/test_discount.py", line 6, in test_ten_percent
+    self.assertEqual(net_total(100, 10), 90)
+AssertionError: 10 != 90
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+FAILED (failures=2)
+
+exit=1

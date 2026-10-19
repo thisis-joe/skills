@@ -1,0 +1,190 @@
+{
+  "case": "ci-b",
+  "status": "prepared-not-activated",
+  "artifact": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/.github/workflows/check.yml",
+  "operation": {
+    "trigger": [
+      "push",
+      "pull_request"
+    ],
+    "owner": "repository maintainer on authorized publication",
+    "inputs": [
+      "repository checkout",
+      "Python 3.11",
+      "existing tests"
+    ],
+    "output": "GitHub Actions test job result only if later published/activated",
+    "permissions": {
+      "contents": "read"
+    },
+    "budget": "10 minute job timeout; no retry loop",
+    "stop_predicate": "test command exits nonzero or job timeout",
+    "cleanup": "No background sessions; Python bytecode writing disabled for local checks"
+  },
+  "observations": [
+    "README documents GitHub Actions, ubuntu-latest, Python >=3.11, standard library only, checkout, read-only contents permission, push/pull_request, exact unittest command, and no remote.",
+    "Workflow includes the checkout action, setup-python selecting Python 3.11, minimum documented permission, bounded job timeout and the exact documented unittest command.",
+    "Default local python3 is Python 3.9.6; its test pass is retained but does not satisfy the documented supported runtime.",
+    "Separately discovered /Users/Joseph/.local/bin/python3.11 was invoked directly; see version and test receipts for actual result."
+  ],
+  "commands": [
+    {
+      "argv": [
+        "cat",
+        "README.md",
+        "app.py",
+        "tests/test_app.py",
+        "USER_NOTES.md"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b",
+      "environment_override": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "exit_code": 0,
+      "stdout": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/01.stdout",
+      "stderr": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/01.stderr"
+    },
+    {
+      "argv": [
+        "python3",
+        "--version"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b",
+      "environment_override": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "exit_code": 0,
+      "stdout": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/02.stdout",
+      "stderr": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/02.stderr"
+    },
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b",
+      "environment_override": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "exit_code": 0,
+      "stdout": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/03.stdout",
+      "stderr": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/03.stderr"
+    },
+    {
+      "argv": [
+        "/Users/Joseph/.local/bin/python3.11",
+        "--version"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b",
+      "environment_override": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "exit_code": 0,
+      "stdout": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/04.stdout",
+      "stderr": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/04.stderr"
+    },
+    {
+      "argv": [
+        "/Users/Joseph/.local/bin/python3.11",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b",
+      "environment_override": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "exit_code": 0,
+      "stdout": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/05.stdout",
+      "stderr": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/05.stderr"
+    },
+    {
+      "argv": [
+        "cat",
+        ".github/workflows/check.yml"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b",
+      "environment_override": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "exit_code": 0,
+      "stdout": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/06.stdout",
+      "stderr": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/06.stderr"
+    }
+  ],
+  "checks": {
+    "documented_test_command_default_interpreter": {
+      "status": "passed",
+      "limit": "Default Python is below supported >=3.11; not used alone as supported-runtime evidence."
+    },
+    "supported_runtime_version": {
+      "status": "passed",
+      "evidence": {
+        "argv": [
+          "/Users/Joseph/.local/bin/python3.11",
+          "--version"
+        ],
+        "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b",
+        "environment_override": {
+          "PYTHONDONTWRITEBYTECODE": "1"
+        },
+        "exit_code": 0,
+        "stdout": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/04.stdout",
+        "stderr": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/04.stderr"
+      }
+    },
+    "supported_runtime_tests": {
+      "status": "passed",
+      "evidence": {
+        "argv": [
+          "/Users/Joseph/.local/bin/python3.11",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b",
+        "environment_override": {
+          "PYTHONDONTWRITEBYTECODE": "1"
+        },
+        "exit_code": 0,
+        "stdout": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/05.stdout",
+        "stderr": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/05.stderr"
+      }
+    },
+    "workflow_provider_execution": "unavailable; no remote/services authorized or configured",
+    "protected_files_unchanged": true
+  },
+  "effect_boundaries": [
+    "Prepared local .github/workflows/check.yml only.",
+    "No dependency installation, CI activation, commit, remote contact, credentials, schedules or external writes."
+  ],
+  "activation_requirements": [
+    "Authorized publication to a GitHub repository with Actions enabled.",
+    "GitHub runner and action resolution for checkout@v4 and setup-python@v5; not verified locally or over network."
+  ],
+  "retry_crash_semantics": "Test-only job reads the checked-out code and has no deployment/persistent write step. Actual provider duplicate/crash/retry behavior was not exercised and remains unavailable.",
+  "file_changes": [
+    ".github/workflows/check.yml",
+    "RESULT.json",
+    "evidence/ owned command receipts and hashes"
+  ],
+  "evidence_paths": [
+    "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/protected-before.json",
+    "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/protected-after.json"
+  ],
+  "limits": [
+    "Provider workflow schema/action execution not validated against a live GitHub service.",
+    "The test suite proves its existing positive/negative test only; no product behavior changes were attempted."
+  ]
+}

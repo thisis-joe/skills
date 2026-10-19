@@ -1,0 +1,61 @@
+{
+  "public_boundary": "wallet.spend(balance, amount)",
+  "replays": [
+    {
+      "balance": 0,
+      "amount": 1,
+      "model_after": -1,
+      "actual_after": -1,
+      "model_matches_code": true,
+      "property_holds": false
+    },
+    {
+      "balance": 0,
+      "amount": 2,
+      "model_after": -2,
+      "actual_after": -2,
+      "model_matches_code": true,
+      "property_holds": false
+    },
+    {
+      "balance": 0,
+      "amount": 3,
+      "model_after": -3,
+      "actual_after": -3,
+      "model_matches_code": true,
+      "property_holds": false
+    },
+    {
+      "balance": 1,
+      "amount": 2,
+      "model_after": -1,
+      "actual_after": -1,
+      "model_matches_code": true,
+      "property_holds": false
+    },
+    {
+      "balance": 1,
+      "amount": 3,
+      "model_after": -2,
+      "actual_after": -2,
+      "model_matches_code": true,
+      "property_holds": false
+    },
+    {
+      "balance": 2,
+      "amount": 3,
+      "model_after": -1,
+      "actual_after": -1,
+      "model_matches_code": true,
+      "property_holds": false
+    }
+  ],
+  "positive_observer": {
+    "balance": 2,
+    "amount": 1,
+    "expected_after": 1,
+    "actual_after": 1,
+    "matches": true
+  },
+  "all_counterexamples_reproduced": true
+}

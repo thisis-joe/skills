@@ -1,0 +1,14 @@
+{
+  "case": "resume",
+  "phase": "before",
+  "label": "branch",
+  "cwd": "/tmp/lets-recovery-validation/resume/repo",
+  "command": [
+    "git",
+    "branch",
+    "--show-current"
+  ],
+  "exit_code": 0,
+  "stdout": "feature/context\n",
+  "stderr": ""
+}

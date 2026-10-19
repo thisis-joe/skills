@@ -1,0 +1,174 @@
+{
+  "task_id": "initial-cli",
+  "request": "Verify --double 3 returns 6 and --double -4 returns -8 through the real CLI, run existing tests, retain evidence; do not edit product, tests, user notes, or helper.",
+  "status": "passed",
+  "observed_at_utc": "2026-10-19T14:15:04.529516+00:00",
+  "target_snapshot": {
+    "app_sha256": "e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b",
+    "protected_files_before_sha256": {
+      "app.py": "e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b",
+      "test_app.py": "43e4b979a3fef8184f285c8f106f59af090529db4686d7f840aec65e7806af86",
+      "USER_NOTES.md": "06fe4574adc6427c1b531277f5cce7cf8bef49b1de86eb318a48ef3139b9562f",
+      "verify_cli.py": "fbb671e4aa7056b6332b785a30af0aeda6c53a5e228eac2767551582f1cfffe7",
+      "README.md": "e12925ce460bbae0bee34ae2ddc847f3cd4eeadf1f65e85cfaa7e52ce43a818f",
+      "VERIFY.md": "782a312ca85dbdbbc3b545ada0ea768b9c9ca962874f53087b147536cc59c580",
+      "features/index.json": "97116e0d5f927bd6b4c2b68c8ae784a03b3a1b42462d7ba8abc690bbcd4c136f",
+      "features/double.md": "f2d47e56eb6ab960c7273ed244b07c78d803bc866d40cbd4738ed2f13d402156"
+    },
+    "protected_files_after_sha256": {
+      "app.py": "e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b",
+      "test_app.py": "43e4b979a3fef8184f285c8f106f59af090529db4686d7f840aec65e7806af86",
+      "USER_NOTES.md": "06fe4574adc6427c1b531277f5cce7cf8bef49b1de86eb318a48ef3139b9562f",
+      "verify_cli.py": "fbb671e4aa7056b6332b785a30af0aeda6c53a5e228eac2767551582f1cfffe7",
+      "README.md": "e12925ce460bbae0bee34ae2ddc847f3cd4eeadf1f65e85cfaa7e52ce43a818f",
+      "VERIFY.md": "782a312ca85dbdbbc3b545ada0ea768b9c9ca962874f53087b147536cc59c580",
+      "features/index.json": "97116e0d5f927bd6b4c2b68c8ae784a03b3a1b42462d7ba8abc690bbcd4c136f",
+      "features/double.md": "f2d47e56eb6ab960c7273ed244b07c78d803bc866d40cbd4738ed2f13d402156"
+    },
+    "unchanged": true
+  },
+  "evidence": {
+    "commands": [
+      {
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "verify_cli.py",
+          "doctor"
+        ],
+        "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+        "returncode": 0,
+        "stdout": "{\"passed\": true, \"observation\": {\"arguments\": [\"--help\"], \"returncode\": 0, \"stdout\": \"usage: app.py [-h] (--double DOUBLE | --multiply MULTIPLY MULTIPLY)\\n\\noptional arguments:\\n  -h, --help            show this help message and exit\\n  --double DOUBLE\\n  --multiply MULTIPLY MULTIPLY\\n\", \"stderr\": \"\"}, \"app_sha256\": \"e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b\"}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "verify_cli.py",
+          "drive"
+        ],
+        "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+        "returncode": 0,
+        "stdout": "{\"passed\": true, \"checks\": [{\"arguments\": [\"--double\", \"3\"], \"returncode\": 0, \"stdout\": \"6\\n\", \"stderr\": \"\", \"expected_stdout\": \"6\\n\", \"passed\": true}, {\"arguments\": [\"--double\", \"-4\"], \"returncode\": 0, \"stdout\": \"-8\\n\", \"stderr\": \"\", \"expected_stdout\": \"-8\\n\", \"passed\": true}], \"app_sha256\": \"e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b\"}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "-m",
+          "unittest",
+          "-v"
+        ],
+        "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "test_double_positive (test_app.CliTests) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.023s\n\nOK\n"
+      }
+    ],
+    "doctor": {
+      "passed": true,
+      "observation": {
+        "arguments": [
+          "--help"
+        ],
+        "returncode": 0,
+        "stdout": "usage: app.py [-h] (--double DOUBLE | --multiply MULTIPLY MULTIPLY)\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --double DOUBLE\n  --multiply MULTIPLY MULTIPLY\n",
+        "stderr": ""
+      },
+      "app_sha256": "e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b"
+    },
+    "drive": {
+      "passed": true,
+      "checks": [
+        {
+          "arguments": [
+            "--double",
+            "3"
+          ],
+          "returncode": 0,
+          "stdout": "6\n",
+          "stderr": "",
+          "expected_stdout": "6\n",
+          "passed": true
+        },
+        {
+          "arguments": [
+            "--double",
+            "-4"
+          ],
+          "returncode": 0,
+          "stdout": "-8\n",
+          "stderr": "",
+          "expected_stdout": "-8\n",
+          "passed": true
+        }
+      ],
+      "app_sha256": "e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b"
+    }
+  },
+  "claim_to_evidence": [
+    {
+      "claim": "--double 3 returns 6",
+      "status": "passed",
+      "pointer": "evidence/drive.json: checks[0]",
+      "observed_stdout": "6\n",
+      "returncode": 0
+    },
+    {
+      "claim": "--double -4 returns -8",
+      "status": "passed",
+      "pointer": "evidence/drive.json: checks[1]",
+      "observed_stdout": "-8\n",
+      "returncode": 0
+    },
+    {
+      "claim": "Existing tests pass",
+      "status": "passed",
+      "pointer": "INITIAL_RESULT.json: evidence.commands[2]"
+    },
+    {
+      "claim": "Product, tests, user notes, helper and existing verification guidance preserved",
+      "status": "passed",
+      "pointer": "INITIAL_RESULT.json: target_snapshot"
+    }
+  ],
+  "action_and_file_scope": {
+    "actions": [
+      "Read provided verification entrypoint and shared contract through read_skill.py",
+      "Inspected local CLI and verification instructions",
+      "Ran existing doctor and drive helper through Python",
+      "Ran existing unittest suite",
+      "Retained actual stdout, stderr and return codes"
+    ],
+    "created_or_updated": [
+      "evidence/doctor.json",
+      "evidence/drive.json",
+      "INITIAL_RESULT.json"
+    ],
+    "read_log": "../reads.jsonl",
+    "product_test_notes_helper_edits": [],
+    "commits": [],
+    "external_actions": []
+  },
+  "cleared_conditions": [
+    "Python runtime available",
+    "CLI --help succeeds",
+    "Both requested real CLI invocations produce exact expected output and exit zero",
+    "Existing unittest suite succeeds",
+    "Protected files unchanged"
+  ],
+  "advanced_mode_screen": {
+    "standing_quality_audit": false,
+    "runtime_helper_creation_or_maintenance": false,
+    "formal_verification_creation_or_maintenance": false,
+    "requested_workflow_experiment": false,
+    "pre_commit_setup": false,
+    "rationale": "This request only executes the existing CLI and helper and retains evidence; no helper or workflow maintenance was requested."
+  },
+  "unresolved_prerequisites": [],
+  "remaining_gaps": [],
+  "limits": [
+    "Evidence covers the requested double inputs, CLI help and the existing one-test suite on the recorded snapshot.",
+    "Zero and multiply behavior were outside the current request."
+  ],
+  "minimum_next_verification": "None required for this request on the unchanged snapshot."
+}

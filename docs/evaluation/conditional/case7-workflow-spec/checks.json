@@ -1,0 +1,22 @@
+{
+  "inputs_inspected": [
+    "brief.md",
+    "notes/2026-10-12-planning.md",
+    "notes/2026-10-14-checkin.md",
+    "reports/2026-10-09.md",
+    "scripts/list_notes.py",
+    "tools.json"
+  ],
+  "workflow_executed": false,
+  "schedule_created": false,
+  "remote_writes": false,
+  "implementation_claim": "unavailable: specification only",
+  "self_check": {
+    "stable_stage_ids": 5,
+    "source_version_binding": true,
+    "idempotency_and_recovery": true,
+    "manual_judgment_boundary": true,
+    "existing_report_preserved": true,
+    "missing_capabilities_explicit": true
+  }
+}
