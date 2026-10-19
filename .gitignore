@@ -3,3 +3,6 @@ __pycache__/
 .DS_Store
 .superpowers/
 .venv/
+dist/
+*.tgz
+node_modules/

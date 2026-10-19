@@ -63,12 +63,20 @@ class PackageTests(unittest.TestCase):
     def test_runtime_defaults_keep_codex_and_claude_separate(self):
         task_home = Path(self.temp.name) / 'home'
         with patch('install.Path.home', return_value=task_home), patch.dict(
-                os.environ, {'CLAUDE_CONFIG_DIR': ''}):
+                os.environ, {'CLAUDE_CONFIG_DIR': '', 'CODEX_HOME': ''}):
             self.assertEqual(default_destination('codex'), task_home / '.codex/skills')
             self.assertEqual(default_destination('claude'), task_home / '.claude/skills')
         with patch('install.Path.home', return_value=task_home), patch.dict(
-                os.environ, self.claude_env()):
+                os.environ, {**self.claude_env(), 'CODEX_HOME': ''}):
             self.assertEqual(default_destination('codex'), task_home / '.codex/skills')
+
+    def test_each_runtime_uses_only_its_own_config_home(self):
+        codex_config = Path(self.temp.name) / 'codex config'
+        claude_config = Path(self.temp.name) / 'claude config'
+        with patch.dict(os.environ, {'CODEX_HOME': str(codex_config),
+                                    'CLAUDE_CONFIG_DIR': str(claude_config)}):
+            self.assertEqual(default_destination('codex'), codex_config / 'skills')
+            self.assertEqual(default_destination('claude'), claude_config / 'skills')
 
     def test_claude_runtime_installs_into_its_configured_skills_directory(self):
         env = self.claude_env()

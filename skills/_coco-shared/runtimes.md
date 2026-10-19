@@ -8,7 +8,7 @@ project's working directory. `_coco-shared` is supporting material without a
 
 | Runtime | Personal destination | Invocation |
 | --- | --- | --- |
-| Codex | `~/.codex/skills` | `$coco-build <request>` |
+| Codex | `~/.codex/skills`, or `$CODEX_HOME/skills` when configured | `$coco-build <request>` |
 | Claude Code | `~/.claude/skills`, or `$CLAUDE_CONFIG_DIR/skills` when configured | `/coco-build <request>` |
 
 For Claude Code project scope, install the whole bundle in the target project's

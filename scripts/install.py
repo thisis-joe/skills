@@ -10,10 +10,10 @@ from package_utils import (PackageError, install_manifest, payload, sha,
 
 
 def default_destination(runtime):
-    if runtime == 'claude':
-        config_dir = os.environ.get('CLAUDE_CONFIG_DIR')
-        return (Path(config_dir).expanduser() if config_dir else Path.home() / '.claude') / 'skills'
-    return Path.home() / '.codex/skills'
+    variable = 'CLAUDE_CONFIG_DIR' if runtime == 'claude' else 'CODEX_HOME'
+    directory = '.claude' if runtime == 'claude' else '.codex'
+    config_dir = os.environ.get(variable)
+    return (Path(config_dir).expanduser() if config_dir else Path.home() / directory) / 'skills'
 
 
 def preflight(dest, desired):
@@ -105,8 +105,8 @@ def main():
                         help='Runtime for the default destination (default: codex)')
     parser.add_argument('--dest', type=Path,
                         help='Override destination, e.g. /project/.claude/skills; '
-                             'otherwise ~/.codex/skills or $CLAUDE_CONFIG_DIR/skills '
-                             '(~/.claude/skills when unset)')
+                             'otherwise $CODEX_HOME/skills (~/.codex/skills) or '
+                             '$CLAUDE_CONFIG_DIR/skills (~/.claude/skills)')
     parser.add_argument('--dry-run', action='store_true')
     args = parser.parse_args()
     try:
