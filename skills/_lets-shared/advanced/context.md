@@ -32,11 +32,16 @@ Fixed token percentages/file counts are hints, not proof that context is safe. N
 1. Read the named trail's overview/latest state, then only the decisions needed to understand the stop point.
 2. Inspect current branch/worktree, base/HEAD, dirty paths, actual commits and selected diff. Reconcile them with spec/task state and existing evidence.
 3. Separate accepted decisions, completed work, work in flight and pending blockers. Locate the first incomplete dependency-ready task.
-4. If commit succeeded before the status update, verify that commit's contents/evidence and reconcile the task state; do not duplicate the work or commit.
+4. If commit succeeded before the status update, verify that commit's contents/evidence and prepare the exact reconciliation for build; do not write completion status from the context phase or duplicate the work/commit.
 5. Reuse evidence only for unchanged relevant code/environment and matching checks. Recheck moved state or unsupported inherited claims without restarting every successful experiment.
 6. Route the remaining action: execute, verify, review, ship a recommendation, or investigate the failed run.
 
 Output: inherited state, anything rechecked and why, exact resume point and remaining outcome. A stale checkbox or prior self-report is insufficient proof.
+
+Context owns inspection and the handoff packet. Build owns the authoritative completion-state write.
+If the user has authorized implementation resumption, continue directly in the build phase using this
+packet and the existing grant; no additional approval is needed merely to reconcile a verified commit.
+A context-only/read-only request ends with the mismatch and proposed update, leaving task state intact.
 
 ## Current-chat catchup
 
