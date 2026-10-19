@@ -1,0 +1,14 @@
+{
+  "case": "context-only",
+  "phase": "after",
+  "label": "index-diff",
+  "cwd": "/tmp/lets-recovery-validation/context-only/repo",
+  "command": [
+    "git",
+    "diff",
+    "--cached"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

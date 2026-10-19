@@ -1,0 +1,39 @@
+$ python3 /Users/Joseph/workspaces/skills/skills/_lets-shared/tools/review_scope.py --repo . --base main --path discount.py --path tests/test_discount.py
+{
+  "schema": 1,
+  "repository": "/private/tmp/lets-core-validation/review/repo",
+  "requested_base": "main",
+  "base_commit": "0d8a1e4564958dd6a98d65dfd20aa095c1f0a320",
+  "comparison_commit": "0d8a1e4564958dd6a98d65dfd20aa095c1f0a320",
+  "head": "0d8a1e4564958dd6a98d65dfd20aa095c1f0a320",
+  "task_paths": [
+    "discount.py",
+    "tests/test_discount.py"
+  ],
+  "has_changes": true,
+  "files": [
+    {
+      "path": "discount.py",
+      "layers": [
+        "untracked"
+      ],
+      "statuses": {
+        "untracked": "?"
+      },
+      "current_sha256": "a4360c0dd5decde23436d75a83a8cb26799697b723b38025d922fee083dfc8f9"
+    },
+    {
+      "path": "tests/test_discount.py",
+      "layers": [
+        "worktree"
+      ],
+      "statuses": {
+        "worktree": "M"
+      },
+      "current_sha256": "c40014bb74b9ff2e7b93f0e7515dea321f2885329a48a2bc58fe0d8ed07799e9"
+    }
+  ],
+  "snapshot": "79a2bb5311f3c4cc60cd70386397e0ab6913b707970575310e1c667486a8cbac"
+}
+
+exit=0

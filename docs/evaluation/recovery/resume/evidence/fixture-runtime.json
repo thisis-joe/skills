@@ -1,0 +1,11 @@
+{
+  "cwd": "/tmp/lets-core-validation/context/repo",
+  "command": [
+    "python3",
+    "double.py",
+    "6"
+  ],
+  "exit_code": 0,
+  "stdout": "12\n",
+  "stderr": ""
+}

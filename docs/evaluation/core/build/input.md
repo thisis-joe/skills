@@ -1,0 +1,1 @@
+Implement T1: add --excited to greet.py so python3 greet.py Ada --excited prints Hello, Ada! plus newline. Existing normal CLI prints Hello, Ada. plus newline and stays unchanged. Implement, test, review and commit only T1. Deadline is short; preserve unrelated dirty notes. No external actions.

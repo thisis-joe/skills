@@ -1,0 +1,14 @@
+{
+  "cwd": "/tmp/lets-core-validation/debug",
+  "command": [
+    "python3",
+    "repro.py",
+    "--mode",
+    "sequential",
+    "--attempts",
+    "10"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"target_sha256\": \"ad021bc6f316e52b8db024ebbbbf0684ee9dde47517bcbc7297e9811387a2387\",\n  \"mode\": \"sequential\",\n  \"attempts\": 10,\n  \"duplicate_failures\": 0,\n  \"results\": [\n    {\n      \"trial\": 0,\n      \"effects\": [\n        \"order-17:v1\"\n      ],\n      \"statuses\": [\n        \"processed\",\n        \"duplicate\"\n      ],\n      \"expected_effect_count\": 1\n    },\n    {\n      \"trial\": 1,\n      \"effects\": [\n        \"order-17:v1\"\n      ],\n      \"statuses\": [\n        \"processed\",\n        \"duplicate\"\n      ],\n      \"expected_effect_count\": 1\n    },\n    {\n      \"trial\": 2,\n      \"effects\": [\n        \"order-17:v1\"\n      ],\n      \"statuses\": [\n        \"processed\",\n        \"duplicate\"\n      ],\n      \"expected_effect_count\": 1\n    },\n    {\n      \"trial\": 3,\n      \"effects\": [\n        \"order-17:v1\"\n      ],\n      \"statuses\": [\n        \"processed\",\n        \"duplicate\"\n      ],\n      \"expected_effect_count\": 1\n    },\n    {\n      \"trial\": 4,\n      \"effects\": [\n        \"order-17:v1\"\n      ],\n      \"statuses\": [\n        \"processed\",\n        \"duplicate\"\n      ],\n      \"expected_effect_count\": 1\n    },\n    {\n      \"trial\": 5,\n      \"effects\": [\n        \"order-17:v1\"\n      ],\n      \"statuses\": [\n        \"processed\",\n        \"duplicate\"\n      ],\n      \"expected_effect_count\": 1\n    },\n    {\n      \"trial\": 6,\n      \"effects\": [\n        \"order-17:v1\"\n      ],\n      \"statuses\": [\n        \"processed\",\n        \"duplicate\"\n      ],\n      \"expected_effect_count\": 1\n    },\n    {\n      \"trial\": 7,\n      \"effects\": [\n        \"order-17:v1\"\n      ],\n      \"statuses\": [\n        \"processed\",\n        \"duplicate\"\n      ],\n      \"expected_effect_count\": 1\n    },\n    {\n      \"trial\": 8,\n      \"effects\": [\n        \"order-17:v1\"\n      ],\n      \"statuses\": [\n        \"processed\",\n        \"duplicate\"\n      ],\n      \"expected_effect_count\": 1\n    },\n    {\n      \"trial\": 9,\n      \"effects\": [\n        \"order-17:v1\"\n      ],\n      \"statuses\": [\n        \"processed\",\n        \"duplicate\"\n      ],\n      \"expected_effect_count\": 1\n    }\n  ]\n}\n",
+  "stderr": ""
+}

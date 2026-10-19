@@ -1,0 +1,7 @@
+{
+  "trusted_identity": "tenant-a",
+  "approved_root": "storage/tenant-a/jobs",
+  "required_owner_registry": "trusted server-side job_id -> tenant_id binding",
+  "unsafe_claim": "lexically tenant-prefixed path implies ownership",
+  "marker_writable_by_requester": true
+}

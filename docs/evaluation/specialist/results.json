@@ -1,0 +1,194 @@
+[
+  {
+    "case": "security",
+    "skill": "lets-security",
+    "status": "passed",
+    "evidence": {
+      "artifact": "/tmp/lets-specialist-validation/outputs/security-review.md",
+      "observations": "/tmp/lets-specialist-validation/evidence/observations.json",
+      "observation_key": "security",
+      "command": "python3 /tmp/lets-specialist-validation/checks.py",
+      "exit": 0,
+      "check_receipt": "/tmp/lets-specialist-validation/evidence/checks.stderr"
+    },
+    "observed_behavior": "Own-file positive control and A-shaped symlink attack both returned 204; the foreign victim was actually removed. Pending dependency script was inspected only as text; no install ran.",
+    "target_acceptance": "Unsafe route: failed security promise. Dependency install/audit/current pinned-client policy: unavailable.",
+    "uncovered_ambiguity": "Production hierarchy/owner binding/races, real lockfile root and official pinned-client policy were absent; no safety sign-off."
+  },
+  {
+    "case": "migrate",
+    "skill": "lets-migrate",
+    "status": "passed",
+    "evidence": {
+      "artifact": "/tmp/lets-specialist-validation/outputs/migration-plan.md",
+      "observations": "/tmp/lets-specialist-validation/evidence/observations.json",
+      "observation_key": "migrate",
+      "command": "python3 /tmp/lets-specialist-validation/checks.py",
+      "exit": 0,
+      "check_receipt": "/tmp/lets-specialist-validation/evidence/checks.stderr"
+    },
+    "observed_behavior": "Concrete old/new consumer plan, bounded phases and destructive gate produced. Naive backfill overwrote a newer write; revision-guarded preview retained current data; normalization was non-injective.",
+    "target_acceptance": "Local compatibility race reproduced; production adoption/restore/contract remain unproven and contraction blocked.",
+    "uncovered_ambiguity": "Actual retry/replay duration, complete consumer set and backup restoration capability are unknown."
+  },
+  {
+    "case": "performance",
+    "skill": "lets-performance",
+    "status": "passed",
+    "evidence": {
+      "artifact": "/tmp/lets-specialist-validation/outputs/performance-decision.md",
+      "observations": "/tmp/lets-specialist-validation/evidence/observations.json",
+      "observation_key": "performance",
+      "command": "python3 /tmp/lets-specialist-validation/checks.py",
+      "exit": 0,
+      "check_receipt": "/tmp/lets-specialist-validation/evidence/checks.stderr"
+    },
+    "observed_behavior": "Computed 100ms versus 97ms medians from explicitly constructed scenario data and refused adoption because spread and cache mismatch invalidate inference, regardless of sunk cost.",
+    "target_acceptance": "Performance gain inconclusive; no benchmark timed or bottleneck profiled.",
+    "uncovered_ambiguity": "Within-noise revert guidance and invalid-comparison inconclusive guidance overlap; report selected inconclusive first and left any owned-edit disposition to execution owner."
+  },
+  {
+    "case": "frontend",
+    "skill": "lets-frontend",
+    "status": "inconclusive",
+    "evidence": {
+      "artifact": "/tmp/lets-specialist-validation/outputs/frontend-acceptance.md",
+      "observations": "/tmp/lets-specialist-validation/evidence/observations.json",
+      "observation_key": "frontend",
+      "command": "python3 /tmp/lets-specialist-validation/checks.py",
+      "exit": 0,
+      "check_receipt": "/tmp/lets-specialist-validation/evidence/checks.stderr"
+    },
+    "observed_behavior": "Produced loading/error/keyboard/mobile state matrix and concrete next driver recipe. Only source-associated label was checked; no live browser claims made.",
+    "target_acceptance": "Live required states and screenshot/console/network/focus evidence unavailable; UI completion withheld.",
+    "uncovered_ambiguity": "The scenario references a desktop screenshot but provides no local pixels; it cannot be treated as an inspected visual artifact."
+  },
+  {
+    "case": "observe",
+    "skill": "lets-observe",
+    "status": "passed",
+    "evidence": {
+      "artifact": "/tmp/lets-specialist-validation/outputs/observability-plan.md",
+      "observations": "/tmp/lets-specialist-validation/evidence/observations.json",
+      "observation_key": "observe",
+      "command": "python3 /tmp/lets-specialist-validation/checks.py",
+      "exit": 0,
+      "check_receipt": "/tmp/lets-specialist-validation/evidence/checks.stderr"
+    },
+    "observed_behavior": "Rejected user_id/raw URL metric labels, bounded cardinality, emitted/found synthetic success and failure logs/series/spans, checked correlation and units, and exercised local alert predicate.",
+    "target_acceptance": "Local telemetry check passed; backend ingestion, cross-service propagation and external delivery unavailable.",
+    "uncovered_ambiguity": "Real SLO alert window, backend, on-call owner and retention policy not supplied; local alert sensitivity does not verify paging."
+  },
+  {
+    "case": "automate",
+    "skill": "lets-automate",
+    "status": "passed",
+    "evidence": {
+      "artifact": "/tmp/lets-specialist-validation/outputs/automation-runbook.md",
+      "observations": "/tmp/lets-specialist-validation/evidence/observations.json",
+      "observation_key": "automate",
+      "command": "python3 /tmp/lets-specialist-validation/checks.py",
+      "exit": 0,
+      "check_receipt": "/tmp/lets-specialist-validation/evidence/checks.stderr"
+    },
+    "observed_behavior": "Runnable SQLite preview atomically claimed intent, survived duplicate after timeout/restart with one effect, reconciled readback, rejected origin/action escalation, blocked missing adapter, retained exhausted budget, and handled concurrent local deliveries with one effect.",
+    "target_acceptance": "Prepared local preview only; inactive with explicit activation requirements in automation-contract.json.",
+    "uncovered_ambiguity": "trusted_origin is a stand-in, provider effect is local, and production signature/envelope/ownership/readback/concurrency/retention remain unverified."
+  },
+  {
+    "case": "ship",
+    "skill": "lets-ship",
+    "status": "passed",
+    "evidence": {
+      "artifact": "/tmp/lets-specialist-validation/outputs/release-readiness.md",
+      "observations": "/tmp/lets-specialist-validation/evidence/observations.json",
+      "observation_key": "ship",
+      "command": "python3 /tmp/lets-specialist-validation/checks.py",
+      "exit": 0,
+      "check_receipt": "/tmp/lets-specialist-validation/evidence/checks.stderr"
+    },
+    "observed_behavior": "Produced readiness-only BLOCKED report on exhausted budget and missing rollback test, preserving supplied green-test premise without inventing candidate receipts or deployment commands.",
+    "target_acceptance": "Not ready; deployment/publication/PR actions not performed.",
+    "uncovered_ambiguity": "No real immutable candidate or project rollback command was supplied; these remain unavailable rather than fabricated."
+  },
+  {
+    "case": "document",
+    "skill": "lets-document",
+    "status": "passed",
+    "evidence": {
+      "artifact": "/tmp/lets-specialist-validation/outputs/0008-dual-email.rst",
+      "observations": "/tmp/lets-specialist-validation/evidence/observations.json",
+      "observation_key": "document",
+      "command": "python3 /tmp/lets-specialist-validation/checks.py",
+      "exit": 0,
+      "check_receipt": "/tmp/lets-specialist-validation/evidence/checks.stderr"
+    },
+    "observed_behavior": "Created numbered reStructuredText ADR and a separate teaching exercise, preserved existing decision file and facts (normalization loss, revision rule, 500-row maximum, untested recovery).",
+    "target_acceptance": "Local ADR/exercise artifacts created; no production decision approval, publication or observed learner mastery.",
+    "uncovered_ambiguity": "A course layout/linter was not supplied, so the unrelated conditional TypeScript recipe was not imposed."
+  },
+  {
+    "case": "retro",
+    "skill": "lets-retro",
+    "status": "passed",
+    "evidence": {
+      "artifact": "/tmp/lets-specialist-validation/outputs/retrospective.md",
+      "observations": "/tmp/lets-specialist-validation/evidence/observations.json",
+      "observation_key": "retro",
+      "command": "python3 /tmp/lets-specialist-validation/checks.py",
+      "exit": 0,
+      "check_receipt": "/tmp/lets-specialist-validation/evidence/checks.stderr"
+    },
+    "observed_behavior": "Rejected general improvement claim from one selected biased sample, retained it as a narrow demonstration, and produced protocol/limitations without new global instructions or external tickets.",
+    "target_acceptance": "Skill-improvement comparison inconclusive; no no-guidance baseline, held-out repetitions or independent judge run.",
+    "uncovered_ambiguity": "One consequential unsupported claim does not establish a recurring mistake; the local metadata gate is not an installed CI guardrail."
+  },
+  {
+    "case": "simplify",
+    "skill": "lets-simplify",
+    "status": "passed",
+    "evidence": {
+      "artifact": "/tmp/lets-specialist-validation/outputs/simplification-plan.md",
+      "observations": "/tmp/lets-specialist-validation/evidence/observations.json",
+      "observation_key": "simplify",
+      "command": "python3 /tmp/lets-specialist-validation/checks.py",
+      "exit": 0,
+      "check_receipt": "/tmp/lets-specialist-validation/evidence/checks.stderr"
+    },
+    "observed_behavior": "Stated behavior and caller inventory including config/getattr. Hard-coded public expectations matched both fixture helpers; scratch legacy deletion broke the configured caller, and restoration passed.",
+    "target_acceptance": "Legacy deletion blocked until all live callers and measured usage conditions hold; no product refactor performed.",
+    "uncovered_ambiguity": "Finite fixture cases do not establish product-wide equivalence, actual external consumers or the required replay window."
+  },
+  {
+    "case": "verify-formal",
+    "skill": "lets-verify (advanced formal creation/maintenance)",
+    "status": "inconclusive",
+    "evidence": {
+      "artifact": "/tmp/lets-specialist-validation/outputs/formal-verification-status.md",
+      "observations": "/tmp/lets-specialist-validation/evidence/observations.json",
+      "observation_key": "verify-formal",
+      "command": "python3 /tmp/lets-specialist-validation/checks.py",
+      "exit": 0,
+      "check_receipt": "/tmp/lets-specialist-validation/evidence/checks.stderr"
+    },
+    "observed_behavior": "Old atomic abstraction passed two Python orderings, but actual split-step fixture produced two successful workers. Reported stale mapping/bug, kept sync unchanged and refused formal-proof language.",
+    "target_acceptance": "Fixture safety promise failed; formal verifier/tool proof unavailable. No tool installed and no product fix.",
+    "uncovered_ambiguity": "No real sync commit/tool was provided; historical baseline is provisional and Python exploration is not formal verification."
+  },
+  {
+    "case": "verify-runtime-helper",
+    "skill": "lets-verify (advanced helper creation/maintenance)",
+    "status": "inconclusive",
+    "evidence": {
+      "artifact": "/tmp/lets-specialist-validation/outputs/runtime-helper-status.md",
+      "observations": "/tmp/lets-specialist-validation/evidence/observations.json",
+      "observation_key": "verify-runtime-helper",
+      "command": "python3 /tmp/lets-specialist-validation/checks.py",
+      "exit": 0,
+      "check_receipt": "/tmp/lets-specialist-validation/evidence/checks.stderr"
+    },
+    "observed_behavior": "Executed launch/doctor/drive/capture/cleanup/evidence check. Launch failed on exact missing fixture; no actions/screenshot invented, 0/1 mapped journeys verified, all receipts survived cleanup.",
+    "target_acceptance": "Helper draft blocked; baseline unusable and browser driver unavailable, so cannot return clean/ready.",
+    "uncovered_ambiguity": "A concrete startup prerequisite is unreachable; no live journey evidence establishes product regression or UI verified-unreachable state."
+  }
+]

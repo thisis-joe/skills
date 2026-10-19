@@ -1,0 +1,1 @@
+Compare queue worker interfaces for a receipt-delivery service. At-least-once delivery, retries, worker crash and remote-send timeout may occur. Propose a small interface and test surface. Do not implement or send anything.

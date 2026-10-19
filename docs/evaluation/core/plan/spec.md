@@ -1,0 +1,2 @@
+# Approved export feature
+CAP-CSV: user exports visible invoices to CSV with fixed header and safe text cells. CAP-EMAIL: user requests email with link to that export; recipient validation occurs before enqueue; request status shown. CAP-AUDIT: support sees completed export events for current tenant only. Preserve existing list filtering. Internal Result type ExportResult is misnamed and must become DeliveryResult across CSV, mail, audit adapters, examples and docs. No external compatibility commitment; 3 internal caller packages.

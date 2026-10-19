@@ -1,0 +1,18 @@
+{
+  "cwd": "/tmp/lets-core-validation/review/repo",
+  "command": [
+    "python3",
+    "/tmp/lets-core-validation/frozen-current-bundle/skills/_lets-shared/tools/review_scope.py",
+    "--repo",
+    ".",
+    "--base",
+    "main",
+    "--path",
+    "discount.py",
+    "--path",
+    "tests/test_discount.py"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"schema\": 1,\n  \"repository\": \"/private/tmp/lets-core-validation/review/repo\",\n  \"requested_base\": \"main\",\n  \"base_commit\": \"0d8a1e4564958dd6a98d65dfd20aa095c1f0a320\",\n  \"comparison_commit\": \"0d8a1e4564958dd6a98d65dfd20aa095c1f0a320\",\n  \"head\": \"0d8a1e4564958dd6a98d65dfd20aa095c1f0a320\",\n  \"task_paths\": [\n    \"discount.py\",\n    \"tests/test_discount.py\"\n  ],\n  \"has_changes\": true,\n  \"files\": [\n    {\n      \"path\": \"discount.py\",\n      \"layers\": [\n        \"untracked\"\n      ],\n      \"statuses\": {\n        \"untracked\": \"?\"\n      },\n      \"current_sha256\": \"a4360c0dd5decde23436d75a83a8cb26799697b723b38025d922fee083dfc8f9\"\n    },\n    {\n      \"path\": \"tests/test_discount.py\",\n      \"layers\": [\n        \"worktree\"\n      ],\n      \"statuses\": {\n        \"worktree\": \"M\"\n      },\n      \"current_sha256\": \"c40014bb74b9ff2e7b93f0e7515dea321f2885329a48a2bc58fe0d8ed07799e9\"\n    }\n  ],\n  \"snapshot\": \"79a2bb5311f3c4cc60cd70386397e0ab6913b707970575310e1c667486a8cbac\"\n}\n",
+  "stderr": ""
+}

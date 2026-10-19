@@ -1,0 +1,42 @@
+$ python3 -c from pathlib import Path; import subprocess; print(Path("client.py").read_text()); print(subprocess.check_output(["git","log","--follow","--format=fuller","--","client.py"],text=True)); print(subprocess.check_output(["git","blame","-L","1,4","--","client.py"],text=True)); print(subprocess.check_output(["git","show","HEAD","--","client.py"],text=True)); print("available records",[str(p) for p in Path(".").rglob("*") if p.is_file() and ".git" not in p.parts]); print(Path("README.md").read_text())
+REQUEST_TIMEOUT_MS = 300
+
+def request(client, url):
+    return client.get(url, timeout=REQUEST_TIMEOUT_MS / 1000)
+
+commit 7563f5800fcc721a60c54c93fd839e536666c3f7
+Author:     LET S Fixture <fixture@example.invalid>
+AuthorDate: Mon Oct 19 16:56:17 2026 +0900
+Commit:     LET S Fixture <fixture@example.invalid>
+CommitDate: Mon Oct 19 16:56:17 2026 +0900
+
+    Initial imported fixture
+
+^7563f58 (LET S Fixture 2026-10-19 16:56:17 +0900 1) REQUEST_TIMEOUT_MS = 300
+^7563f58 (LET S Fixture 2026-10-19 16:56:17 +0900 2) 
+^7563f58 (LET S Fixture 2026-10-19 16:56:17 +0900 3) def request(client, url):
+^7563f58 (LET S Fixture 2026-10-19 16:56:17 +0900 4)     return client.get(url, timeout=REQUEST_TIMEOUT_MS / 1000)
+
+commit 7563f5800fcc721a60c54c93fd839e536666c3f7
+Author: LET S Fixture <fixture@example.invalid>
+Date:   Mon Oct 19 16:56:17 2026 +0900
+
+    Initial imported fixture
+
+diff --git a/client.py b/client.py
+new file mode 100644
+index 0000000..ca3ffe9
+--- /dev/null
++++ b/client.py
+@@ -0,0 +1,4 @@
++REQUEST_TIMEOUT_MS = 300
++
++def request(client, url):
++    return client.get(url, timeout=REQUEST_TIMEOUT_MS / 1000)
+
+available records ['client.py', 'README.md']
+# Client wrapper
+No historical design records were retained in this import.
+
+
+exit=0

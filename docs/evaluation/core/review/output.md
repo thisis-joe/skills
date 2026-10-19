@@ -1,0 +1,9 @@
+# Current discount review
+
+One required finding: **[P1] Return payable amount instead of discount amount** at discount.py:2. For the approved net_total(100,10) input, the new function returns 10 instead of 90; for 0% it returns 0 instead of 100. The expression computes the discount itself. This violates ISSUE.md and would understate what the customer owes. Subtract the independently defined discount from the original amount, and rerun the two public behavior cases. One finding covers spec and correctness axes.
+
+The shared read-only collector found discount.py as untracked and tests/test_discount.py as modified worktree content, despite `git diff main...HEAD` being empty. Requested base, merge-base comparison and HEAD are the identical commit in evidence/before.json; selected paths and snapshot are frozen there. New implementation, full test content and tracked patch were actually read (`evidence/inspected.json`), rather than inferring content from inventory.
+
+Separate verdicts: spec/acceptance **failed** (both required values wrong); standards **passed for examined rules** (stdlib only, literal business expectations, complete worktree scope, diff --check clean); quality/risk **failed** due to the same reachable arithmetic defect. The replaced baseline assertion was a tautology; the new assertions add meaningful business coverage and were not weakened to hide a failure. No additional speculative nit is raised.
+
+`python3 -m unittest discover -s tests -v` failed both assertions (evidence/tests.json). Review did not fix files, stage or commit. Before/after collector snapshots match exactly, proving no selected code mutation during review. PYTHONDONTWRITEBYTECODE=1 prevented review test cache changes. This is one fresh evaluator's fixture review, without another independent reviewer. Any subsequent code edit invalidates the affected verdict.

@@ -1,0 +1,4 @@
+$ python3 -c import client; seen={}; fake=type("Capture",(),{"get":lambda self,url,**kw:seen.update(url=url,**kw)})(); client.request(fake,"https://fixture.invalid"); print(seen); assert seen["timeout"]==0.3
+{'url': 'https://fixture.invalid', 'timeout': 0.3}
+
+exit=0

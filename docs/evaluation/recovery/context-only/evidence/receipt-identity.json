@@ -1,0 +1,60 @@
+{
+  "case": "context-only",
+  "receipt_sha256": "a61985275358d01db3cc082b302b571fca7a5e7cfb29fb592cace9a36aee2125",
+  "files": [
+    {
+      "path": "double.py",
+      "receipt_sha256": "225720b8825667245511593a05c0e1492738218ecbf027750255744c3292d0cc",
+      "working_file_sha256": "225720b8825667245511593a05c0e1492738218ecbf027750255744c3292d0cc",
+      "committed_blob_sha256": "225720b8825667245511593a05c0e1492738218ecbf027750255744c3292d0cc",
+      "command_exit": 0,
+      "match": true
+    },
+    {
+      "path": "tests/test_double.py",
+      "receipt_sha256": "cea265f7656931163b44c84129c0b2297346c6414f3155f8bd12a41922d732e3",
+      "working_file_sha256": "cea265f7656931163b44c84129c0b2297346c6414f3155f8bd12a41922d732e3",
+      "committed_blob_sha256": "cea265f7656931163b44c84129c0b2297346c6414f3155f8bd12a41922d732e3",
+      "command_exit": 0,
+      "match": true
+    },
+    {
+      "path": "README.md",
+      "receipt_sha256": "ffdcdecb69b8ad2037a19f71229d5c74795c05501cb03a02513d35f455595fa1",
+      "working_file_sha256": "ffdcdecb69b8ad2037a19f71229d5c74795c05501cb03a02513d35f455595fa1",
+      "committed_blob_sha256": "ffdcdecb69b8ad2037a19f71229d5c74795c05501cb03a02513d35f455595fa1",
+      "command_exit": 0,
+      "match": true
+    }
+  ],
+  "required_receipts": [
+    {
+      "kind": "suite",
+      "artifact": "evidence/fixture-green.json",
+      "sha256": "1c3036ce7b38548ad233ff81ee1c49ad18c29c4b7a3930e4ae709b1c524a8dc2",
+      "original_sha256": "1c3036ce7b38548ad233ff81ee1c49ad18c29c4b7a3930e4ae709b1c524a8dc2",
+      "identity_preserved": true
+    },
+    {
+      "kind": "runtime",
+      "artifact": "evidence/fixture-runtime.json",
+      "sha256": "c253e7dac17195923819a284d912cebbf104170d937cdf799c0f84c679da19c9",
+      "original_sha256": "c253e7dac17195923819a284d912cebbf104170d937cdf799c0f84c679da19c9",
+      "identity_preserved": true
+    },
+    {
+      "kind": "review",
+      "artifact": "fixture-review.md",
+      "sha256": "903d914d3336ea0ed4d8cdc75fa9de3d3b8c5a0edfd8efcdb71cb8af2c280b10",
+      "original_sha256": "903d914d3336ea0ed4d8cdc75fa9de3d3b8c5a0edfd8efcdb71cb8af2c280b10",
+      "identity_preserved": true
+    }
+  ],
+  "review_independence": "degraded self-review",
+  "receipt_reuse": "Product/test/README content matches both HEAD and the receipt; old scope changed only from worktree to committed layer. Fresh suite and CLI were run because the isolated directory is a different execution context.",
+  "suite_status": "passed",
+  "runtime_status": "passed",
+  "review_status": "passed with degraded self-review independence",
+  "review_required_findings": [],
+  "source_receipts_unchanged": true
+}

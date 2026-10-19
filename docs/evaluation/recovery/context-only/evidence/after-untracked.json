@@ -1,0 +1,15 @@
+{
+  "case": "context-only",
+  "phase": "after",
+  "label": "untracked",
+  "cwd": "/tmp/lets-recovery-validation/context-only/repo",
+  "command": [
+    "git",
+    "ls-files",
+    "--others",
+    "--exclude-standard"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

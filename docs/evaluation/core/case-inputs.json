@@ -1,0 +1,18 @@
+{
+  "cases": [
+    "start",
+    "clarify",
+    "research",
+    "design",
+    "spec",
+    "plan",
+    "build",
+    "debug",
+    "verify",
+    "review",
+    "context",
+    "triage"
+  ],
+  "synthetic_inputs": true,
+  "source_boundary": "Only integrated skills bundle; no source audits or author conversation read."
+}

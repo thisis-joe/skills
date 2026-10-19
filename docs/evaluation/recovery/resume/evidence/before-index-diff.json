@@ -1,0 +1,14 @@
+{
+  "case": "resume",
+  "phase": "before",
+  "label": "index-diff",
+  "cwd": "/tmp/lets-recovery-validation/resume/repo",
+  "command": [
+    "git",
+    "diff",
+    "--cached"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

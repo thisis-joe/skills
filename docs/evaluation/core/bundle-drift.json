@@ -1,0 +1,27 @@
+[
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_lets-shared/contracts.md",
+    "initial_sha256": "01baafe1cf9a65983efa3ac5bf57b0a8aee2cddb90fe3983891ce7ec3f6cfc00",
+    "current_sha256": "62272ac57e59eada632f236092f6a6d24eeb1360a0ad4d9210623d9203b18395"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_lets-shared/tools/review_scope.py",
+    "initial_sha256": "817cf980ed7ba5c2828de94a5816fefcc19de8014832283db96a0d413bbb588f",
+    "current_sha256": "906784fa44e365a0324034b8f0e7c3ad74b270a0651eaa45e3e7a9b2757a5703"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_lets-shared/advanced/start.md",
+    "initial_sha256": "66e63467352a1760d3b542dbe38bc5192b9505c7f99431b5fd7cdfa3d4ba21a0",
+    "current_sha256": "013d86b738481e6d278c27fc3b58ca1e66c42e62dc27c8a8f9f542cbfe47ea3e"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_lets-shared/advanced/verify.md",
+    "initial_sha256": "f57927972d7e7975c3c2990a72fde0bef66792c5cf8b3205f7d87160128a1581",
+    "current_sha256": "0730bccf5ff7fe1737028c8dd8e1509ece19c56d3b8dad20adb76462dfd1aa5e"
+  },
+  {
+    "path": "/Users/Joseph/workspaces/skills/skills/_lets-shared/advanced/context.md",
+    "initial_sha256": "885010f045bfeb0b27a6799f793331e80bb0309f4fe16865c2432c0f238a6f22",
+    "current_sha256": "47eabb73a0e7c8b8af123124a10802f19c5ed5a6513f639c30d466ba26f8781e"
+  }
+]

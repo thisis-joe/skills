@@ -1,0 +1,6 @@
+{
+  "action": "capture",
+  "status": "unavailable",
+  "screenshot": null,
+  "reason": "no rendered target; failed launch/doctor evidence retained"
+}

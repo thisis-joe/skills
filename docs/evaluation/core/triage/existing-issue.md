@@ -1,0 +1,2 @@
+# ISSUE-81: Duplicate receipt after send timeout
+Owner: Payments maintainer. Status: fix merged, released 1.8.1. Trigger: redelivery after unknown outcome of provider send; order_id/version was not retained as stable key. Fix: persist intent key and reconcile unknown outcome before retrying. Fix commit: local evidence id fix-81 (repository unavailable in this scenario). Regression receipt says baseline duplicate, patched one effect for same retry path; actual executable app not supplied. No active separate implementation requested.

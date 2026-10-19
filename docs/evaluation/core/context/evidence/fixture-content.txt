@@ -1,0 +1,22 @@
+$ python3 -c from pathlib import Path; import subprocess; print(subprocess.check_output(["git","diff","--","double.py"],text=True)); print(Path("tests/test_double.py").read_text()); print(subprocess.check_output(["git","diff","--check"],text=True))
+diff --git a/double.py b/double.py
+index 3da3d45..a07e58e 100644
+--- a/double.py
++++ b/double.py
+@@ -1,2 +1,2 @@
+ import sys
+-print(int(sys.argv[1]))
++print(int(sys.argv[1]) * 2)
+
+import subprocess
+import sys
+import unittest
+class DoubleTest(unittest.TestCase):
+    def test_double(self):
+        p=subprocess.run([sys.executable,"double.py","6"],capture_output=True,text=True)
+        self.assertEqual(p.returncode,0)
+        self.assertEqual(p.stdout,"12\n")
+
+
+
+exit=0

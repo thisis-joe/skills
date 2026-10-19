@@ -1,0 +1,14 @@
+{
+  "case": "context-only",
+  "phase": "before",
+  "label": "log",
+  "cwd": "/tmp/lets-recovery-validation/context-only/repo",
+  "command": [
+    "git",
+    "log",
+    "--format=%H%x09%s"
+  ],
+  "exit_code": 0,
+  "stdout": "03b7e6a2131b4eec2d177c6591a22084c554e3f6\tImplement T1 integer doubling\n6175af547fab7883e093e0dfdfcde1fd977a3c93\tInitial imported fixture\n",
+  "stderr": ""
+}

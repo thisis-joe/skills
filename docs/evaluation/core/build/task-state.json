@@ -1,0 +1,15 @@
+{
+  "T1": {
+    "status": "done",
+    "blockers": [],
+    "acceptance": "excited CLI prints Hello, Ada!; normal behavior preserved",
+    "commit": "0accc817b35be9d05b8d1a192e72cda44c85203d",
+    "evidence": [
+      "evidence/red.json",
+      "evidence/green.json",
+      "evidence/runtime-excited.json",
+      "evidence/runtime-normal.json",
+      "review.md"
+    ]
+  }
+}

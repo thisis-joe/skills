@@ -1,0 +1,13 @@
+{
+  "case": "context-only",
+  "phase": "before",
+  "label": "worktree-diff",
+  "cwd": "/tmp/lets-recovery-validation/context-only/repo",
+  "command": [
+    "git",
+    "diff"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

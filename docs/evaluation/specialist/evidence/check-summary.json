@@ -1,0 +1,7 @@
+{
+  "tests": 15,
+  "failures": 0,
+  "errors": 0,
+  "successful": true,
+  "meaning": "fixture expectations, including unsafe behavior, were observed"
+}

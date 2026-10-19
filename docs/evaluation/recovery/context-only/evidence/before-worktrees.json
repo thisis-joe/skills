@@ -1,0 +1,15 @@
+{
+  "case": "context-only",
+  "phase": "before",
+  "label": "worktrees",
+  "cwd": "/tmp/lets-recovery-validation/context-only/repo",
+  "command": [
+    "git",
+    "worktree",
+    "list",
+    "--porcelain"
+  ],
+  "exit_code": 0,
+  "stdout": "worktree /private/tmp/lets-recovery-validation/context-only/repo\nHEAD 03b7e6a2131b4eec2d177c6591a22084c554e3f6\nbranch refs/heads/feature/context\n\n",
+  "stderr": ""
+}

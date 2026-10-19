@@ -1,0 +1,11 @@
+{
+  "cwd": "/tmp/lets-core-validation/context/repo",
+  "command": [
+    "python3",
+    "-c",
+    "from pathlib import Path; import json,subprocess; p=Path(\"../task-state.json\"); state=json.loads(p.read_text()); commit=subprocess.check_output([\"git\",\"rev-parse\",\"HEAD\"],text=True).strip(); assert subprocess.check_output([\"git\",\"show\",\"--format=\",\"--name-only\",\"HEAD\"],text=True).strip()==\"double.py\"; state[\"T1\"].update(status=\"done\",commit=commit,evidence=\"receipt.json\",reconciliation=\"Existing commit and unchanged suite/runtime/review receipts verified; recovered interrupted state write\"); p.write_text(json.dumps(state,indent=2)); print(p.read_text()); print(\"commit count\",subprocess.check_output([\"git\",\"rev-list\",\"--count\",\"HEAD\"],text=True)); print(\"next frontier T2: Document examples; packet-only request stops before execution\")"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"T1\": {\n    \"status\": \"done\",\n    \"commit\": \"03b7e6a2131b4eec2d177c6591a22084c554e3f6\",\n    \"blockers\": [],\n    \"evidence\": \"receipt.json\",\n    \"reconciliation\": \"Existing commit and unchanged suite/runtime/review receipts verified; recovered interrupted state write\"\n  },\n  \"T2\": {\n    \"status\": \"pending\",\n    \"blockers\": [\n      \"T1\"\n    ],\n    \"title\": \"Document examples\"\n  }\n}\ncommit count 2\n\nnext frontier T2: Document examples; packet-only request stops before execution\n",
+  "stderr": ""
+}

@@ -1,0 +1,11 @@
+{
+  "cwd": "/tmp/lets-core-validation/build/repo",
+  "command": [
+    "python3",
+    "-c",
+    "from pathlib import Path; import hashlib,json,subprocess; commit=subprocess.check_output([\"git\",\"rev-parse\",\"HEAD\"],text=True).strip(); names=subprocess.check_output([\"git\",\"show\",\"--format=\",\"--name-only\",\"HEAD\"],text=True).split(); assert set(names)=={\"greet.py\",\"tests/test_greet.py\"},names; actual=hashlib.sha256(Path(\"NOTES.md\").read_bytes()).hexdigest(); assert actual==Path(\"../user-dirty-sha256.txt\").read_text().strip(); state=json.loads(Path(\"../task-state.json\").read_text()); state[\"T1\"].update(status=\"done\",commit=commit,evidence=[\"evidence/red.json\",\"evidence/green.json\",\"evidence/runtime-excited.json\",\"evidence/runtime-normal.json\",\"review.md\"]); Path(\"../task-state.json\").write_text(json.dumps(state,indent=2)); print(\"commit\",commit); print(\"owned paths\",names); print(\"user notes unchanged\",actual); print(subprocess.check_output([\"git\",\"status\",\"--short\",\"--branch\"],text=True)); print(Path(\"../task-state.json\").read_text())"
+  ],
+  "exit_code": 0,
+  "stdout": "commit 0accc817b35be9d05b8d1a192e72cda44c85203d\nowned paths ['greet.py', 'tests/test_greet.py']\nuser notes unchanged 60044655887ee3c74e0487bab745a13f8a85437db9f8458382c8dcacbd85d1d8\n## feature/build\n M NOTES.md\n\n{\n  \"T1\": {\n    \"status\": \"done\",\n    \"blockers\": [],\n    \"acceptance\": \"excited CLI prints Hello, Ada!; normal behavior preserved\",\n    \"commit\": \"0accc817b35be9d05b8d1a192e72cda44c85203d\",\n    \"evidence\": [\n      \"evidence/red.json\",\n      \"evidence/green.json\",\n      \"evidence/runtime-excited.json\",\n      \"evidence/runtime-normal.json\",\n      \"review.md\"\n    ]\n  }\n}\n",
+  "stderr": ""
+}

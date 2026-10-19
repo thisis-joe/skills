@@ -1,0 +1,11 @@
+{
+  "cwd": "/tmp/lets-core-validation/research/repo",
+  "command": [
+    "python3",
+    "-c",
+    "from pathlib import Path; import subprocess; print(Path(\"client.py\").read_text()); print(subprocess.check_output([\"git\",\"log\",\"--follow\",\"--format=fuller\",\"--\",\"client.py\"],text=True)); print(subprocess.check_output([\"git\",\"blame\",\"-L\",\"1,4\",\"--\",\"client.py\"],text=True)); print(subprocess.check_output([\"git\",\"show\",\"HEAD\",\"--\",\"client.py\"],text=True)); print(\"available records\",[str(p) for p in Path(\".\").rglob(\"*\") if p.is_file() and \".git\" not in p.parts]); print(Path(\"README.md\").read_text())"
+  ],
+  "exit_code": 0,
+  "stdout": "REQUEST_TIMEOUT_MS = 300\n\ndef request(client, url):\n    return client.get(url, timeout=REQUEST_TIMEOUT_MS / 1000)\n\ncommit 7563f5800fcc721a60c54c93fd839e536666c3f7\nAuthor:     LET S Fixture <fixture@example.invalid>\nAuthorDate: Mon Oct 19 16:56:17 2026 +0900\nCommit:     LET S Fixture <fixture@example.invalid>\nCommitDate: Mon Oct 19 16:56:17 2026 +0900\n\n    Initial imported fixture\n\n^7563f58 (LET S Fixture 2026-10-19 16:56:17 +0900 1) REQUEST_TIMEOUT_MS = 300\n^7563f58 (LET S Fixture 2026-10-19 16:56:17 +0900 2) \n^7563f58 (LET S Fixture 2026-10-19 16:56:17 +0900 3) def request(client, url):\n^7563f58 (LET S Fixture 2026-10-19 16:56:17 +0900 4)     return client.get(url, timeout=REQUEST_TIMEOUT_MS / 1000)\n\ncommit 7563f5800fcc721a60c54c93fd839e536666c3f7\nAuthor: LET S Fixture <fixture@example.invalid>\nDate:   Mon Oct 19 16:56:17 2026 +0900\n\n    Initial imported fixture\n\ndiff --git a/client.py b/client.py\nnew file mode 100644\nindex 0000000..ca3ffe9\n--- /dev/null\n+++ b/client.py\n@@ -0,0 +1,4 @@\n+REQUEST_TIMEOUT_MS = 300\n+\n+def request(client, url):\n+    return client.get(url, timeout=REQUEST_TIMEOUT_MS / 1000)\n\navailable records ['client.py', 'README.md']\n# Client wrapper\nNo historical design records were retained in this import.\n\n",
+  "stderr": ""
+}

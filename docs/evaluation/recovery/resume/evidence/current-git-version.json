@@ -1,0 +1,17 @@
+{
+  "case": "resume",
+  "phase": "verification",
+  "label": "git-version",
+  "cwd": "/tmp/lets-recovery-validation/resume/repo",
+  "command": [
+    "git",
+    "--version"
+  ],
+  "environment_overrides": {
+    "GIT_OPTIONAL_LOCKS": "0",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exit_code": 0,
+  "stdout": "git version 2.50.1 (Apple Git-155)\n",
+  "stderr": ""
+}

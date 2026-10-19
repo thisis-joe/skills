@@ -1,0 +1,4 @@
+$ python3 greet.py Ada --excited
+Hello, Ada!
+
+exit=0

@@ -1,0 +1,11 @@
+{
+  "candidate": "fixture-release-2026-10-19.1",
+  "purpose": "readiness only",
+  "environment": "fixture-production",
+  "required_tests": "green supplied scenario premise; real receipts absent",
+  "rollback_test": "not run",
+  "error_budget_remaining": 0,
+  "release_policy": "freeze feature releases when exhausted",
+  "deployment_authorized": false,
+  "production_command_inventory": "not provided"
+}

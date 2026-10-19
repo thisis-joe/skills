@@ -1,0 +1,6 @@
+$ git diff --cached --stat
+ greet.py            | 4 +++-
+ tests/test_greet.py | 5 +++++
+ 2 files changed, 8 insertions(+), 1 deletion(-)
+
+exit=0

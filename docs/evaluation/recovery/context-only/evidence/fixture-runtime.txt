@@ -1,0 +1,4 @@
+$ python3 double.py 6
+12
+
+exit=0

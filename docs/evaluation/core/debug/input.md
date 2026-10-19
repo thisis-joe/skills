@@ -1,0 +1,1 @@
+Investigate intermittent duplicate processing. Produce an executable red-capable harness or state unavailable evidence. Diagnosis only; no production fix or commit. Original production service/telemetry are unavailable. Provided small local worker reproduces the relevant check-then-act path.

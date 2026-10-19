@@ -1,0 +1,27 @@
+[
+  {
+    "fixture": "research/repo",
+    "bundle": "git-history/research-repo.bundle",
+    "head": "7563f5800fcc721a60c54c93fd839e536666c3f7"
+  },
+  {
+    "fixture": "context/repo",
+    "bundle": "git-history/context-repo.bundle",
+    "head": "03b7e6a2131b4eec2d177c6591a22084c554e3f6"
+  },
+  {
+    "fixture": "start/repo",
+    "bundle": "git-history/start-repo.bundle",
+    "head": "bcf75b65742c0cbcf91aba8658dff83a38925181"
+  },
+  {
+    "fixture": "review/repo",
+    "bundle": "git-history/review-repo.bundle",
+    "head": "0d8a1e4564958dd6a98d65dfd20aa095c1f0a320"
+  },
+  {
+    "fixture": "build/repo",
+    "bundle": "git-history/build-repo.bundle",
+    "head": "0accc817b35be9d05b8d1a192e72cda44c85203d"
+  }
+]

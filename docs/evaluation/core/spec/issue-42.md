@@ -1,0 +1,2 @@
+# Issue 42 approved
+Users export visible invoices as UTF-8 CSV in current sort order. Columns invoice_id,total_cents,paid. paid is lowercase true/false. Header always exists for empty results. Formula-like text fields are prefixed with apostrophe for spreadsheet safety. Preserve current on-screen filtering and ordering. Existing approved boundary: public export_invoices(rows)->str tested with stdlib csv reader; no browser test required for this library-only task. API has no file/download UI.

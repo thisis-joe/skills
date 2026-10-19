@@ -1,0 +1,16 @@
+{
+  "case": "context-only",
+  "phase": "before",
+  "label": "commit",
+  "cwd": "/tmp/lets-recovery-validation/context-only/repo",
+  "command": [
+    "git",
+    "show",
+    "--format=fuller",
+    "--stat",
+    "HEAD"
+  ],
+  "exit_code": 0,
+  "stdout": "commit 03b7e6a2131b4eec2d177c6591a22084c554e3f6\nAuthor:     LET S Fixture <fixture@example.invalid>\nAuthorDate: Mon Oct 19 16:57:56 2026 +0900\nCommit:     LET S Fixture <fixture@example.invalid>\nCommitDate: Mon Oct 19 16:57:56 2026 +0900\n\n    Implement T1 integer doubling\n\n double.py | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)\n",
+  "stderr": ""
+}

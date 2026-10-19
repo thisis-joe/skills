@@ -1,0 +1,29 @@
+{
+  "id": "INTEGRATE",
+  "status": "pending",
+  "blockers": [
+    "CSV-1",
+    "EMAIL-1",
+    "AUDIT-1",
+    "MIG-CONTRACT"
+  ],
+  "acceptance": "Combined CSV-to-email/status/audit flow correct; tenant boundaries correct; migration fully contracted",
+  "verification": [
+    "python3 -m unittest discover -s tests -v",
+    "python3 scripts/exercise_export.py",
+    "python3 scripts/exercise_email.py"
+  ],
+  "closure": [
+    "project full suite",
+    "relevant actual public runtime journey",
+    "scoped review",
+    "task-owned work-unit commit"
+  ],
+  "expected_scope": "final combined change",
+  "branch": "integration branch chosen from actual common base",
+  "base": "unavailable: actual repository not provided",
+  "environment": "Python project/source map only; commands unexecuted",
+  "risk_rollback": "plans/invoice-export.md",
+  "execution_mode": "single-owner sequential; planning-only request",
+  "commit": null
+}

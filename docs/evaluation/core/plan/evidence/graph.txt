@@ -1,0 +1,87 @@
+$ python3 -c from pathlib import Path; import json; rows=[json.loads(p.read_text()) for p in Path("tasks/invoice-export").glob("*.json")]; print(json.dumps([{k:x[k] for k in ["id","status","blockers","acceptance","branch"]} for x in sorted(rows,key=lambda x:x["id"])],indent=2))
+[
+  {
+    "id": "AUDIT-1",
+    "status": "pending",
+    "blockers": [
+      "CSV-1"
+    ],
+    "acceptance": "Support sees completed export events for current tenant only; positive and cross-tenant negative case",
+    "branch": "feature/invoice-export"
+  },
+  {
+    "id": "CSV-1",
+    "status": "ready",
+    "blockers": [],
+    "acceptance": "Safe CSV for visible invoices in caller order; exact header, booleans, empty and dangerous-text cases",
+    "branch": "feature/invoice-export"
+  },
+  {
+    "id": "EMAIL-1",
+    "status": "pending",
+    "blockers": [
+      "CSV-1"
+    ],
+    "acceptance": "Validated recipient before enqueue; user receives export link and sees actual delivery status",
+    "branch": "feature/invoice-export"
+  },
+  {
+    "id": "INTEGRATE",
+    "status": "pending",
+    "blockers": [
+      "CSV-1",
+      "EMAIL-1",
+      "AUDIT-1",
+      "MIG-CONTRACT"
+    ],
+    "acceptance": "Combined CSV-to-email/status/audit flow correct; tenant boundaries correct; migration fully contracted",
+    "branch": "integration branch chosen from actual common base"
+  },
+  {
+    "id": "MIG-AUDIT",
+    "status": "pending",
+    "blockers": [
+      "MIG-EXPAND"
+    ],
+    "acceptance": "Audit consumers use DeliveryResult; same observed behavior",
+    "branch": "feature/delivery-result"
+  },
+  {
+    "id": "MIG-CONTRACT",
+    "status": "pending",
+    "blockers": [
+      "MIG-EXPORT",
+      "MIG-MAIL",
+      "MIG-AUDIT"
+    ],
+    "acceptance": "No old active consumers; remove alias only after compatibility obligation checked",
+    "branch": "feature/delivery-result"
+  },
+  {
+    "id": "MIG-EXPAND",
+    "status": "ready",
+    "blockers": [],
+    "acceptance": "DeliveryResult canonical with compatible ExportResult alias and unchanged callers green",
+    "branch": "feature/delivery-result"
+  },
+  {
+    "id": "MIG-EXPORT",
+    "status": "pending",
+    "blockers": [
+      "MIG-EXPAND"
+    ],
+    "acceptance": "Export consumers use DeliveryResult; same observed behavior",
+    "branch": "feature/delivery-result"
+  },
+  {
+    "id": "MIG-MAIL",
+    "status": "pending",
+    "blockers": [
+      "MIG-EXPAND"
+    ],
+    "acceptance": "Mail consumers use DeliveryResult; same observed behavior",
+    "branch": "feature/delivery-result"
+  }
+]
+
+exit=0

@@ -1,0 +1,1 @@
+Draft focused clarification for the proposed refund policy. Existing approved glossary must be preserved. Two decisions remain: refund eligibility window; whether shipping cost is refunded. Documentation changes and implementation are not requested.

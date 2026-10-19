@@ -1,0 +1,12 @@
+{
+  "action": "check-evidence",
+  "all_receipts_exist": true,
+  "proof_paths": [
+    "/private/tmp/lets-specialist-validation/evidence/runtime-helper/launch.json",
+    "/private/tmp/lets-specialist-validation/evidence/runtime-helper/doctor.json",
+    "/private/tmp/lets-specialist-validation/evidence/runtime-helper/drive.json",
+    "/private/tmp/lets-specialist-validation/evidence/runtime-helper/capture.json",
+    "/private/tmp/lets-specialist-validation/evidence/runtime-helper/cleanup.json"
+  ],
+  "journey_verified": false
+}

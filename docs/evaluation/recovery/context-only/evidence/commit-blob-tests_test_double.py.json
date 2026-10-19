@@ -1,0 +1,11 @@
+{
+  "cwd": "/tmp/lets-recovery-validation/context-only/repo",
+  "command": [
+    "git",
+    "show",
+    "HEAD:tests/test_double.py"
+  ],
+  "exit_code": 0,
+  "stdout": "import subprocess\nimport sys\nimport unittest\nclass DoubleTest(unittest.TestCase):\n    def test_double(self):\n        p=subprocess.run([sys.executable,\"double.py\",\"6\"],capture_output=True,text=True)\n        self.assertEqual(p.returncode,0)\n        self.assertEqual(p.stdout,\"12\\n\")\n",
+  "stderr": ""
+}

@@ -1,0 +1,15 @@
+{
+  "case": "context-only",
+  "phase": "after",
+  "label": "status",
+  "cwd": "/tmp/lets-recovery-validation/context-only/repo",
+  "command": [
+    "git",
+    "status",
+    "--porcelain=v1",
+    "--untracked-files=all"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

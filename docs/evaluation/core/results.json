@@ -1,0 +1,177 @@
+{
+  "evaluation": "One fresh agent applying 12 scenarios; not 12 independent model runs",
+  "source_boundary": "Only current integrated skills/lets-* and skills/_lets-shared were consulted for instructions; no author conversation, sources or source audits.",
+  "status_meaning": "Case status describes observed application of the skill, not production acceptance or formal validation.",
+  "overall_snapshot_status": "inconclusive: five consulted files changed during the run; initial/final digests and a frozen final copy are retained.",
+  "results": [
+    {
+      "case": "start",
+      "skill": "lets-start",
+      "status": "passed",
+      "evidence": [
+        "/tmp/lets-core-validation/start/output.md",
+        "/tmp/lets-core-validation/start/evidence/discovery.json",
+        "/tmp/lets-core-validation/start/evidence/baseline.json"
+      ],
+      "observed_behavior": "Selected reuse/setup only from actual Python tests and CI; no product workflow manufactured.",
+      "limitations": "The one-test fixture is small; no real service or CI run is proved."
+    },
+    {
+      "case": "clarify",
+      "skill": "lets-clarify",
+      "status": "passed",
+      "evidence": [
+        "/tmp/lets-core-validation/clarify/output.md",
+        "/tmp/lets-core-validation/clarify/agreement.md",
+        "/tmp/lets-core-validation/clarify/glossary.md",
+        "/tmp/lets-core-validation/clarify/evidence/inputs-read.json"
+      ],
+      "observed_behavior": "Two independent refund decisions remain explicit; approved glossary preserved.",
+      "limitations": "No human answers were obtained; policy is correctly still unsettled. Recommendations are draft proposals."
+    },
+    {
+      "case": "research",
+      "skill": "lets-research",
+      "status": "passed",
+      "evidence": [
+        "/tmp/lets-core-validation/research/output.md",
+        "/tmp/lets-core-validation/research/evidence/history.json",
+        "/tmp/lets-core-validation/research/evidence/probe.json",
+        "/tmp/lets-core-validation/research/base.txt"
+      ],
+      "observed_behavior": "Separated 300ms code behavior from unknown historical intent.",
+      "limitations": "Downstream HTTP timeout semantics, pre-import discussion, metrics and tracker evidence unavailable."
+    },
+    {
+      "case": "design",
+      "skill": "lets-design",
+      "status": "passed",
+      "evidence": [
+        "/tmp/lets-core-validation/design/output.md",
+        "/tmp/lets-core-validation/design/brief.md",
+        "/tmp/lets-core-validation/design/caller.py",
+        "/tmp/lets-core-validation/design/evidence/inputs-read.json"
+      ],
+      "observed_behavior": "Compared direct handler and persistent service; concrete retry/unknown-outcome interface.",
+      "limitations": "Draft design only: actual provider guarantees, DB semantics and crash-window implementation not executed."
+    },
+    {
+      "case": "spec",
+      "skill": "lets-spec",
+      "status": "passed",
+      "evidence": [
+        "/tmp/lets-core-validation/spec/output.md",
+        "/tmp/lets-core-validation/spec/specs/ISSUE-42.md",
+        "/tmp/lets-core-validation/spec/evidence/inputs-read.json",
+        "/tmp/lets-core-validation/spec/evidence/saved-spec.json"
+      ],
+      "observed_behavior": "Synthesized existing issue into one spec and preserved approved test seam.",
+      "limitations": "Fixture issue says formula-like without exhaustive classifier; preserved/disclosed that precision limit, not an invented accepted set."
+    },
+    {
+      "case": "plan",
+      "skill": "lets-plan",
+      "status": "passed",
+      "evidence": [
+        "/tmp/lets-core-validation/plan/output.md",
+        "/tmp/lets-core-validation/plan/plans/invoice-export.md",
+        "/tmp/lets-core-validation/plan/tasks/invoice-export/CSV-1.json",
+        "/tmp/lets-core-validation/plan/tasks/invoice-export/MIG-EXPAND.json",
+        "/tmp/lets-core-validation/plan/evidence/graph.json"
+      ],
+      "observed_behavior": "Concrete vertical tasks and separate shared expand/migrate/contract graph.",
+      "limitations": "Source map only, so actual Git base and executable command availability are unverified. Plan only, no task completion claimed."
+    },
+    {
+      "case": "build",
+      "skill": "lets-build",
+      "status": "passed",
+      "evidence": [
+        "/tmp/lets-core-validation/build/output.md",
+        "/tmp/lets-core-validation/build/review.md",
+        "/tmp/lets-core-validation/build/task-state.json",
+        "/tmp/lets-core-validation/build/evidence/red.json",
+        "/tmp/lets-core-validation/build/evidence/green.json",
+        "/tmp/lets-core-validation/build/evidence/runtime-excited.json",
+        "/tmp/lets-core-validation/build/evidence/runtime-normal.json",
+        "/tmp/lets-core-validation/build/evidence/review-scope.json",
+        "/tmp/lets-core-validation/build/evidence/commit.json",
+        "/tmp/lets-core-validation/build/evidence/closure.json"
+      ],
+      "observed_behavior": "Actual TDD/CLI/review/scoped commit retained unrelated dirty user file.",
+      "limitations": "Required scoped review is same-agent self-review explicitly permitted by fixture rules; no independent reviewer, production acceptance or external publish."
+    },
+    {
+      "case": "debug",
+      "skill": "lets-debug",
+      "status": "passed",
+      "evidence": [
+        "/tmp/lets-core-validation/debug/output.md",
+        "/tmp/lets-core-validation/debug/worker.py",
+        "/tmp/lets-core-validation/debug/repro.py",
+        "/tmp/lets-core-validation/debug/evidence/sequential.json",
+        "/tmp/lets-core-validation/debug/evidence/red-race.json"
+      ],
+      "observed_behavior": "Executed red-capable concurrency harness with positive sequential control.",
+      "limitations": "Confirms supplied isolated worker race only. Production path/cause/rate and regression-after-fix unavailable, and no fix requested."
+    },
+    {
+      "case": "verify",
+      "skill": "lets-verify",
+      "status": "passed",
+      "evidence": [
+        "/tmp/lets-core-validation/verify/output.md",
+        "/tmp/lets-core-validation/verify/input.md",
+        "/tmp/lets-core-validation/verify/evidence/unit.json",
+        "/tmp/lets-core-validation/verify/evidence/inputs-read.json"
+      ],
+      "observed_behavior": "Real UI claim remained unavailable despite a green unit fixture.",
+      "limitations": "No UI target/version or alternative reachable driver supplied. This passes evidence-boundary behavior; it does not pass UI acceptance. Prompt states the scope gap explicitly."
+    },
+    {
+      "case": "review",
+      "skill": "lets-review",
+      "status": "passed",
+      "evidence": [
+        "/tmp/lets-core-validation/review/output.md",
+        "/tmp/lets-core-validation/review/evidence/before.json",
+        "/tmp/lets-core-validation/review/evidence/inspected.json",
+        "/tmp/lets-core-validation/review/evidence/tests.json",
+        "/tmp/lets-core-validation/review/evidence/after.json",
+        "/tmp/lets-core-validation/review/evidence/current-bundle-before.json",
+        "/tmp/lets-core-validation/review/evidence/current-bundle-after.json"
+      ],
+      "observed_behavior": "Collector and actual content review included untracked implementation with empty HEAD range.",
+      "limitations": "One fixture covers unstaged/untracked plus empty committed range; not an exhaustive collector test of every Git edge. Current copied collector rerun matches original snapshot."
+    },
+    {
+      "case": "context",
+      "skill": "lets-context",
+      "status": "inconclusive",
+      "evidence": [
+        "/tmp/lets-core-validation/context/output.md",
+        "/tmp/lets-core-validation/context/task-state.before.json",
+        "/tmp/lets-core-validation/context/task-state.json",
+        "/tmp/lets-core-validation/context/receipt.json",
+        "/tmp/lets-core-validation/context/evidence/fixture-commit.json",
+        "/tmp/lets-core-validation/context/evidence/resume-inspection.json",
+        "/tmp/lets-core-validation/context/evidence/reconciliation.json"
+      ],
+      "observed_behavior": "Actual safe recovery packet; ownership ambiguity between common/build and context instructions.",
+      "limitations": "Common contract reserves completion updates to build; advanced context explicitly says reconcile task state. User authorized fixture reconciliation, but skill ownership of the write is not explicit. This procedural claim is inconclusive; implementation was not repeated."
+    },
+    {
+      "case": "triage",
+      "skill": "lets-triage",
+      "status": "passed",
+      "evidence": [
+        "/tmp/lets-core-validation/triage/output.md",
+        "/tmp/lets-core-validation/triage/report.md",
+        "/tmp/lets-core-validation/triage/existing-issue.md",
+        "/tmp/lets-core-validation/triage/evidence/concept-search.json"
+      ],
+      "observed_behavior": "Local disposition matched existing fix evidence and ignored report-level external-action injection.",
+      "limitations": "Fix is a local evidence label and summary, without executable repository or verified tracker URL; runtime confirmation unavailable."
+    }
+  ]
+}

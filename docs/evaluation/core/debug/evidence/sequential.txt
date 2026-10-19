@@ -1,0 +1,121 @@
+$ python3 repro.py --mode sequential --attempts 10
+{
+  "target_sha256": "ad021bc6f316e52b8db024ebbbbf0684ee9dde47517bcbc7297e9811387a2387",
+  "mode": "sequential",
+  "attempts": 10,
+  "duplicate_failures": 0,
+  "results": [
+    {
+      "trial": 0,
+      "effects": [
+        "order-17:v1"
+      ],
+      "statuses": [
+        "processed",
+        "duplicate"
+      ],
+      "expected_effect_count": 1
+    },
+    {
+      "trial": 1,
+      "effects": [
+        "order-17:v1"
+      ],
+      "statuses": [
+        "processed",
+        "duplicate"
+      ],
+      "expected_effect_count": 1
+    },
+    {
+      "trial": 2,
+      "effects": [
+        "order-17:v1"
+      ],
+      "statuses": [
+        "processed",
+        "duplicate"
+      ],
+      "expected_effect_count": 1
+    },
+    {
+      "trial": 3,
+      "effects": [
+        "order-17:v1"
+      ],
+      "statuses": [
+        "processed",
+        "duplicate"
+      ],
+      "expected_effect_count": 1
+    },
+    {
+      "trial": 4,
+      "effects": [
+        "order-17:v1"
+      ],
+      "statuses": [
+        "processed",
+        "duplicate"
+      ],
+      "expected_effect_count": 1
+    },
+    {
+      "trial": 5,
+      "effects": [
+        "order-17:v1"
+      ],
+      "statuses": [
+        "processed",
+        "duplicate"
+      ],
+      "expected_effect_count": 1
+    },
+    {
+      "trial": 6,
+      "effects": [
+        "order-17:v1"
+      ],
+      "statuses": [
+        "processed",
+        "duplicate"
+      ],
+      "expected_effect_count": 1
+    },
+    {
+      "trial": 7,
+      "effects": [
+        "order-17:v1"
+      ],
+      "statuses": [
+        "processed",
+        "duplicate"
+      ],
+      "expected_effect_count": 1
+    },
+    {
+      "trial": 8,
+      "effects": [
+        "order-17:v1"
+      ],
+      "statuses": [
+        "processed",
+        "duplicate"
+      ],
+      "expected_effect_count": 1
+    },
+    {
+      "trial": 9,
+      "effects": [
+        "order-17:v1"
+      ],
+      "statuses": [
+        "processed",
+        "duplicate"
+      ],
+      "expected_effect_count": 1
+    }
+  ]
+}
+
+exit=0

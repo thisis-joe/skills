@@ -1,0 +1,15 @@
+{
+  "cwd": "/tmp/lets-core-validation/plan",
+  "command": [
+    "python3",
+    "-c",
+    "from pathlib import Path; import sys;\nfor name in sys.argv[1:]: print(name+\"\\n\"+Path(name).read_text())",
+    "input.md",
+    "spec.md",
+    "code-map.md",
+    "commands.md"
+  ],
+  "exit_code": 0,
+  "stdout": "input.md\nPlan invoice export and emailed export links as vertical tasks, plus a shared symbol-wide ExportResult -> DeliveryResult migration. Do not implement. Use one task-state target.\n\nspec.md\n# Approved export feature\nCAP-CSV: user exports visible invoices to CSV with fixed header and safe text cells. CAP-EMAIL: user requests email with link to that export; recipient validation occurs before enqueue; request status shown. CAP-AUDIT: support sees completed export events for current tenant only. Preserve existing list filtering. Internal Result type ExportResult is misnamed and must become DeliveryResult across CSV, mail, audit adapters, examples and docs. No external compatibility commitment; 3 internal caller packages.\n\ncode-map.md\nCurrent public user paths: GET /invoices; background email processor. Current packages: export/, mail/, audit/. Each imports ExportResult from core/result.py. Local Python tests can load both symbols during expansion; no technical need for red commits. Existing plans directory: plans/. Task state convention: tasks/<feature>/<id>.json, state stored there only. All work is single-owner sequential execution.\n\ncommands.md\nFocused checks: python3 -m unittest tests.test_export -v; python3 -m unittest tests.test_mail -v; python3 -m unittest tests.test_audit -v. Closure: python3 -m unittest discover -s tests -v. Runtime fixtures: python3 scripts/exercise_export.py; python3 scripts/exercise_email.py. These commands are planned source inputs, not execution receipts in this evaluation.\n\n",
+  "stderr": ""
+}

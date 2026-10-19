@@ -1,0 +1,17 @@
+{
+  "cwd": "/tmp/lets-core-validation/build/repo",
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_greet.py",
+    "-v"
+  ],
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "test_excited_cli (test_greet.GreetTest) ... FAIL\ntest_normal_cli (test_greet.GreetTest) ... ok\n\n======================================================================\nFAIL: test_excited_cli (test_greet.GreetTest)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/tmp/lets-core-validation/build/repo/tests/test_greet.py\", line 13, in test_excited_cli\n    self.assertEqual(result.returncode, 0, result.stderr)\nAssertionError: 2 != 0 : usage: greet.py [-h] name\ngreet.py: error: unrecognized arguments: --excited\n\n\n----------------------------------------------------------------------\nRan 2 tests in 0.043s\n\nFAILED (failures=1)\n"
+}

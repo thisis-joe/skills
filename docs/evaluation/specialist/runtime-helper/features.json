@@ -1,0 +1,31 @@
+{
+  "target": "scratch-expense-ui-v2",
+  "features": [
+    {
+      "id": "expense.create",
+      "route": "/expenses/new",
+      "subfeatures": [
+        "enter amount",
+        "submit expense",
+        "show saved receipt"
+      ],
+      "preconditions": [
+        "usable app instance",
+        "signed-in isolated fixture account",
+        "empty test ledger"
+      ],
+      "drive": [
+        "open /expenses/new",
+        "fill Amount with 12.50",
+        "activate Save expense",
+        "read visible Saved and ledger entry for 12.50"
+      ],
+      "success": "visible saved receipt and independently read persisted expense",
+      "gotchas": [
+        "do not synthesize fixture state to bypass the launch failure",
+        "no browser driver available"
+      ]
+    }
+  ],
+  "mapped_features": 1
+}

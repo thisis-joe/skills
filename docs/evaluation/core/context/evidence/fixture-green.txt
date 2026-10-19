@@ -1,0 +1,9 @@
+$ python3 -m unittest discover -s tests -v
+test_double (test_double.DoubleTest) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.012s
+
+OK
+
+exit=0

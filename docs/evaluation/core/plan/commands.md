@@ -1,0 +1,1 @@
+Focused checks: python3 -m unittest tests.test_export -v; python3 -m unittest tests.test_mail -v; python3 -m unittest tests.test_audit -v. Closure: python3 -m unittest discover -s tests -v. Runtime fixtures: python3 scripts/exercise_export.py; python3 scripts/exercise_email.py. These commands are planned source inputs, not execution receipts in this evaluation.

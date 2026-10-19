@@ -1,0 +1,1 @@
+Prepare a resumable packet after interruption. T1 implementation commit succeeded, external tracker checkbox still open. Inspect evidence and reconcile only task state if supported. Do not reimplement or create another product commit.

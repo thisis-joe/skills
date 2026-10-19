@@ -1,0 +1,25 @@
+{
+  "id": "EMAIL-1",
+  "status": "pending",
+  "blockers": [
+    "CSV-1"
+  ],
+  "acceptance": "Validated recipient before enqueue; user receives export link and sees actual delivery status",
+  "verification": [
+    "python3 -m unittest tests.test_mail -v",
+    "python3 scripts/exercise_email.py"
+  ],
+  "closure": [
+    "project full suite",
+    "relevant actual public runtime journey",
+    "scoped review",
+    "task-owned work-unit commit"
+  ],
+  "expected_scope": "mail request, queue, status and tests",
+  "branch": "feature/invoice-export",
+  "base": "unavailable: actual repository not provided",
+  "environment": "Python project/source map only; commands unexecuted",
+  "risk_rollback": "plans/invoice-export.md",
+  "execution_mode": "single-owner sequential; planning-only request",
+  "commit": null
+}

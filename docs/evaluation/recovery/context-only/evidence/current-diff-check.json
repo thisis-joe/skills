@@ -1,0 +1,19 @@
+{
+  "case": "context-only",
+  "phase": "verification",
+  "label": "diff-check",
+  "cwd": "/tmp/lets-recovery-validation/context-only/repo",
+  "command": [
+    "git",
+    "diff",
+    "--check",
+    "main...HEAD"
+  ],
+  "environment_overrides": {
+    "GIT_OPTIONAL_LOCKS": "0",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

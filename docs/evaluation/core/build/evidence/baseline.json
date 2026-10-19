@@ -1,0 +1,15 @@
+{
+  "cwd": "/tmp/lets-core-validation/build/repo",
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_normal_cli (test_greet.GreetTest) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.020s\n\nOK\n"
+}

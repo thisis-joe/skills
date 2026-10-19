@@ -1,0 +1,9 @@
+{
+  "action": "doctor",
+  "target": "scratch-expense-ui-v2",
+  "ready": false,
+  "required_fixture_exists": false,
+  "owned_process_exists": false,
+  "driver_available": false,
+  "auth_checked": false
+}

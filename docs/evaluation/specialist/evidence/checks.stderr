@@ -1,0 +1,20 @@
+test_automate_duplicate_timeout_restart_reconciles_one_effect (__main__.ScenarioChecks) ... ok
+test_automate_missing_adapter_exhausted_budget_and_concurrent_claim (__main__.ScenarioChecks) ... ok
+test_automate_untrusted_malformed_crash_fail_closed (__main__.ScenarioChecks) ... ok
+test_document_preserves_rst_convention_and_technical_facts (__main__.ScenarioChecks) ... ok
+test_frontend_static_semantics_cannot_certify_missing_states (__main__.ScenarioChecks) ... ok
+test_migration_mixed_consumers_and_concurrent_overwrite (__main__.ScenarioChecks) ... ok
+test_observe_records_success_failure_and_correlated_units (__main__.ScenarioChecks) ... ok
+test_performance_fixture_does_not_support_adoption (__main__.ScenarioChecks) ... ok
+test_retro_single_biased_sample_cannot_establish_improvement (__main__.ScenarioChecks) ... ok
+test_security_observer_positive_and_cross_tenant_symlink (__main__.ScenarioChecks) ... ok
+test_security_shape_guard_does_not_establish_ownership (__main__.ScenarioChecks) ... ok
+test_ship_green_test_premise_does_not_override_budget_and_recovery (__main__.ScenarioChecks) ... ok
+test_simplify_boundary_outputs_errors_and_dynamic_deletion (__main__.ScenarioChecks) ... ok
+test_verify_runtime_helper_cold_reader_unavailable_journey (__main__.ScenarioChecks) ... ok
+test_verify_stale_atomic_model_vs_real_split_steps (__main__.ScenarioChecks) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.157s
+
+OK

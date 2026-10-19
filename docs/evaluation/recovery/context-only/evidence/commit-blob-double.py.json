@@ -1,0 +1,11 @@
+{
+  "cwd": "/tmp/lets-recovery-validation/context-only/repo",
+  "command": [
+    "git",
+    "show",
+    "HEAD:double.py"
+  ],
+  "exit_code": 0,
+  "stdout": "import sys\nprint(int(sys.argv[1]) * 2)\n",
+  "stderr": ""
+}

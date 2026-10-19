@@ -1,0 +1,3 @@
+$ git add -- greet.py tests/test_greet.py
+
+exit=0
