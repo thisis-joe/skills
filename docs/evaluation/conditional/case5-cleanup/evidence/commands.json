@@ -1,0 +1,403 @@
+[
+  {
+    "command": [
+      "git",
+      "init",
+      "-b",
+      "fixture/main",
+      "/tmp/lets-conditional-validation/case5-cleanup/repo"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup",
+    "exit": 0,
+    "stdout": "Initialized empty Git repository in /private/tmp/lets-conditional-validation/case5-cleanup/repo/.git/\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "add",
+      "--",
+      "tracked.txt",
+      ".gitignore"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/repo",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "commit",
+      "-m",
+      "fixture: baseline"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/repo",
+    "exit": 0,
+    "stdout": "[fixture/main (root-commit) 42b6125] fixture: baseline\n 2 files changed, 3 insertions(+)\n create mode 100644 .gitignore\n create mode 100644 tracked.txt\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/repo",
+    "exit": 0,
+    "stdout": "42b612509867d11b6c03564165e9ce73b28f199e\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "worktree",
+      "add",
+      "-b",
+      "feature/active-task",
+      "/tmp/lets-conditional-validation/case5-cleanup/active-dirty"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/repo",
+    "exit": 0,
+    "stdout": "HEAD is now at 42b6125 fixture: baseline\n",
+    "stderr": "Preparing worktree (new branch 'feature/active-task')\n"
+  },
+  {
+    "command": [
+      "git",
+      "worktree",
+      "add",
+      "-b",
+      "feature/completed-task",
+      "/tmp/lets-conditional-validation/case5-cleanup/merged-unused"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/repo",
+    "exit": 0,
+    "stdout": "HEAD is now at 42b6125 fixture: baseline\n",
+    "stderr": "Preparing worktree (new branch 'feature/completed-task')\n"
+  },
+  {
+    "command": [
+      "git",
+      "add",
+      "--",
+      "complete.txt"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/merged-unused",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "commit",
+      "-m",
+      "fixture: complete independent task"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/merged-unused",
+    "exit": 0,
+    "stdout": "[feature/completed-task 296df59] fixture: complete independent task\n 1 file changed, 1 insertion(+)\n create mode 100644 complete.txt\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "merge",
+      "--ff-only",
+      "feature/completed-task"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/repo",
+    "exit": 0,
+    "stdout": "Updating 42b6125..296df59\nFast-forward\n complete.txt | 1 +\n 1 file changed, 1 insertion(+)\n create mode 100644 complete.txt\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "worktree",
+      "list",
+      "--porcelain"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/repo",
+    "exit": 0,
+    "stdout": "worktree /private/tmp/lets-conditional-validation/case5-cleanup/repo\nHEAD 296df591f0304818b60fc4ba27c1341d68ff888a\nbranch refs/heads/fixture/main\n\nworktree /private/tmp/lets-conditional-validation/case5-cleanup/active-dirty\nHEAD 42b612509867d11b6c03564165e9ce73b28f199e\nbranch refs/heads/feature/active-task\n\nworktree /private/tmp/lets-conditional-validation/case5-cleanup/merged-unused\nHEAD 296df591f0304818b60fc4ba27c1341d68ff888a\nbranch refs/heads/feature/completed-task\n\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "lsof",
+      "-a",
+      "-p",
+      "9388",
+      "-d",
+      "cwd",
+      "-Fn"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup",
+    "exit": 0,
+    "stdout": "p9388\nfcwd\nn/private/tmp/lets-conditional-validation/case5-cleanup/active-dirty\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "branch",
+      "--show-current"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/repo",
+    "exit": 0,
+    "stdout": "fixture/main\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/repo",
+    "exit": 0,
+    "stdout": "296df591f0304818b60fc4ba27c1341d68ff888a\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "merge-base",
+      "HEAD",
+      "fixture/main"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/repo",
+    "exit": 0,
+    "stdout": "296df591f0304818b60fc4ba27c1341d68ff888a\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "merge-base",
+      "--is-ancestor",
+      "HEAD",
+      "fixture/main"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/repo",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "status",
+      "--short",
+      "--untracked-files=all"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/repo",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "ls-files",
+      "--others",
+      "--ignored",
+      "--exclude-standard"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/repo",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "du",
+      "-sk",
+      "/tmp/lets-conditional-validation/case5-cleanup/repo"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup",
+    "exit": 0,
+    "stdout": "212\t/tmp/lets-conditional-validation/case5-cleanup/repo\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "branch",
+      "--show-current"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/active-dirty",
+    "exit": 0,
+    "stdout": "feature/active-task\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/active-dirty",
+    "exit": 0,
+    "stdout": "42b612509867d11b6c03564165e9ce73b28f199e\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "merge-base",
+      "HEAD",
+      "fixture/main"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/active-dirty",
+    "exit": 0,
+    "stdout": "42b612509867d11b6c03564165e9ce73b28f199e\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "merge-base",
+      "--is-ancestor",
+      "HEAD",
+      "fixture/main"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/active-dirty",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "status",
+      "--short",
+      "--untracked-files=all"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/active-dirty",
+    "exit": 0,
+    "stdout": " M tracked.txt\n?? untracked.txt\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "ls-files",
+      "--others",
+      "--ignored",
+      "--exclude-standard"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/active-dirty",
+    "exit": 0,
+    "stdout": ".cache/fixture.bin\nignored.env\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "du",
+      "-sk",
+      "/tmp/lets-conditional-validation/case5-cleanup/active-dirty"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup",
+    "exit": 0,
+    "stdout": "24\t/tmp/lets-conditional-validation/case5-cleanup/active-dirty\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "branch",
+      "--show-current"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/merged-unused",
+    "exit": 0,
+    "stdout": "feature/completed-task\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/merged-unused",
+    "exit": 0,
+    "stdout": "296df591f0304818b60fc4ba27c1341d68ff888a\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "merge-base",
+      "HEAD",
+      "fixture/main"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/merged-unused",
+    "exit": 0,
+    "stdout": "296df591f0304818b60fc4ba27c1341d68ff888a\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "merge-base",
+      "--is-ancestor",
+      "HEAD",
+      "fixture/main"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/merged-unused",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "status",
+      "--short",
+      "--untracked-files=all"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/merged-unused",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "ls-files",
+      "--others",
+      "--ignored",
+      "--exclude-standard"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/merged-unused",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "du",
+      "-sk",
+      "/tmp/lets-conditional-validation/case5-cleanup/merged-unused"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup",
+    "exit": 0,
+    "stdout": "16\t/tmp/lets-conditional-validation/case5-cleanup/merged-unused\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "worktree",
+      "list",
+      "--porcelain"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case5-cleanup/repo",
+    "exit": 0,
+    "stdout": "worktree /private/tmp/lets-conditional-validation/case5-cleanup/repo\nHEAD 296df591f0304818b60fc4ba27c1341d68ff888a\nbranch refs/heads/fixture/main\n\nworktree /private/tmp/lets-conditional-validation/case5-cleanup/active-dirty\nHEAD 42b612509867d11b6c03564165e9ce73b28f199e\nbranch refs/heads/feature/active-task\n\nworktree /private/tmp/lets-conditional-validation/case5-cleanup/merged-unused\nHEAD 296df591f0304818b60fc4ba27c1341d68ff888a\nbranch refs/heads/feature/completed-task\n\n",
+    "stderr": ""
+  }
+]

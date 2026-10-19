@@ -1,0 +1,1 @@
+Canonical quality policy. Require minimum coverage 80 percent; quality.json owns numeric threshold. Do not lower thresholds, weaken tests or introduce suppressions. Existing exceptions need owner/tracking/review date. Read artifacts/coverage.json; do not rerun just to extract the metric.

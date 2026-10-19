@@ -1,0 +1,1 @@
+Initialized empty Git repository in /private/tmp/lets-conditional-validation/case3-precommit/project/.git/

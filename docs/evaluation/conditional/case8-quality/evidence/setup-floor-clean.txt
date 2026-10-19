@@ -1,0 +1,38 @@
+{
+  "outcome": "clean",
+  "scope": {
+    "schema": 1,
+    "repository": "/private/tmp/lets-conditional-validation/case8-quality/setup-project",
+    "requested_base": "fixture/main",
+    "base_commit": "ab430b26788f0f48a73382dd400c7ced99b04f49",
+    "comparison_commit": "ab430b26788f0f48a73382dd400c7ced99b04f49",
+    "head": "ab430b26788f0f48a73382dd400c7ced99b04f49",
+    "task_paths": [],
+    "has_changes": true,
+    "files": [
+      {
+        "path": "CONSTRAINTS.md",
+        "layers": [
+          "untracked"
+        ],
+        "statuses": {
+          "untracked": "?"
+        },
+        "current_sha256": "aeb263832d0998a5424ca257bae1cbef90daaccfc315942cd82786c892c2a01a"
+      },
+      {
+        "path": "README.md",
+        "layers": [
+          "worktree"
+        ],
+        "statuses": {
+          "worktree": "M"
+        },
+        "current_sha256": "da42a8cda0b7eed44ebd22e463d6bb11dda84bdf42bc820d939be1b0f17cbf28"
+      }
+    ],
+    "snapshot": "36a34980b346cf4062ba5f36f9030c821b08aaed852da82cc202783ec7efc179"
+  },
+  "findings": [],
+  "guard_kind": "validation-authored heuristic; inspect findings, not malicious-intent proof"
+}

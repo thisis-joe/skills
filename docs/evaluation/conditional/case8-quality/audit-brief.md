@@ -1,0 +1,1 @@
+Audit the existing quality bar on the complete feature task diff relative to fixture/main, including new files. Report weakened assertions, lower thresholds and bad exceptions. Do not fix code or change policy, install tools, or recalculate existing coverage by rerunning tests only for that metric.

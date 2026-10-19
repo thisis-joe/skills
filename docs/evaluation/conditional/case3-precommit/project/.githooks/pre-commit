@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+npm exec --offline --no -- lint-staged
+npm run policy:check
+# No typecheck script exists; this check remains unavailable.
+npm test

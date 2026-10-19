@@ -1,0 +1,14 @@
+{
+  "mode": "check",
+  "fixture_snapshot_sha256": "1c07c438f91cad5a5675189c7b5c28bd3c3bcb916a27797d0c7a60a72a3f09d8",
+  "snapshot_reads": 1,
+  "current_checks": 4,
+  "stale_checks_excluded": 1,
+  "unresolved_threads": 2,
+  "resolved_threads": 1,
+  "mock_ready": false,
+  "actual_external_calls": 0,
+  "actual_mutations": 0,
+  "monitor_created": false,
+  "runtime_service_verification": "not-applicable: requested fixture-only report"
+}

@@ -1,0 +1,18 @@
+{
+  "minimum_coverage_percent": 65,
+  "exceptions": [
+    {
+      "rule": "legacy ownership",
+      "path": "src/legacy.py",
+      "reason": "upstream interface pending",
+      "owner": "maintainer",
+      "tracking": "Q-12",
+      "review_date": "2026-11-01"
+    },
+    {
+      "rule": "skip tests",
+      "path": "tests/test_new.py",
+      "reason": "temporary"
+    }
+  ]
+}

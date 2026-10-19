@@ -1,0 +1,29 @@
+{
+  "observation_kind": "simulated runtime/chat metadata, not host API output",
+  "worktrees": [
+    {
+      "path": "/tmp/lets-conditional-validation/case5-cleanup/repo",
+      "managed": false,
+      "owner": "fixture-validator",
+      "chat_active": true,
+      "chat_pinned": false,
+      "purpose": "primary fixture repository"
+    },
+    {
+      "path": "/tmp/lets-conditional-validation/case5-cleanup/active-dirty",
+      "managed": false,
+      "owner": "active-fixture-chat",
+      "chat_active": true,
+      "chat_pinned": true,
+      "purpose": "active user task; no removal authorization"
+    },
+    {
+      "path": "/tmp/lets-conditional-validation/case5-cleanup/merged-unused",
+      "managed": false,
+      "owner": "fixture-validator",
+      "chat_active": false,
+      "chat_pinned": false,
+      "purpose": "completed unused fixture; plan-only scope"
+    }
+  ]
+}

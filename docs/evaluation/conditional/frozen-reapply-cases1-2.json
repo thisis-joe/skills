@@ -1,0 +1,214 @@
+{
+  "source_root": "/tmp/lets-frozen-candidate/skills",
+  "case1_synthetic": [
+    {
+      "case": "push",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: push is denied by project policy",
+      "passed": true
+    },
+    {
+      "case": "push flags",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: push is denied by project policy",
+      "passed": true
+    },
+    {
+      "case": "hard reset",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: hard reset is denied",
+      "passed": true
+    },
+    {
+      "case": "hard equals",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: hard reset is denied",
+      "passed": true
+    },
+    {
+      "case": "forced clean",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: forced clean is denied",
+      "passed": true
+    },
+    {
+      "case": "forced clean long",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: forced clean is denied",
+      "passed": true
+    },
+    {
+      "case": "branch delete",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: forced branch deletion is denied",
+      "passed": true
+    },
+    {
+      "case": "branch long",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: forced branch deletion is denied",
+      "passed": true
+    },
+    {
+      "case": "checkout dot",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: whole-tree discard is denied (conservative dot-path match)",
+      "passed": true
+    },
+    {
+      "case": "restore dot",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: whole-tree discard is denied (conservative dot-path match)",
+      "passed": true
+    },
+    {
+      "case": "status",
+      "exit": 0,
+      "expected": 0,
+      "diagnostic": "",
+      "passed": true
+    },
+    {
+      "case": "quoted path",
+      "exit": 0,
+      "expected": 0,
+      "diagnostic": "",
+      "passed": true
+    },
+    {
+      "case": "global flags",
+      "exit": 0,
+      "expected": 0,
+      "diagnostic": "",
+      "passed": true
+    },
+    {
+      "case": "compound",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: push is denied by project policy",
+      "passed": true
+    },
+    {
+      "case": "quoted literal",
+      "exit": 0,
+      "expected": 0,
+      "diagnostic": "",
+      "passed": true
+    },
+    {
+      "case": "wrapper",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: unsupported command wrapper requires review",
+      "passed": true
+    },
+    {
+      "case": "substitution",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: unsupported expansion/escape/heredoc requires review",
+      "passed": true
+    },
+    {
+      "case": "alias",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: Git aliases require review",
+      "passed": true
+    },
+    {
+      "case": "invalid quoting",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: malformed payload or unsupported quoting",
+      "passed": true
+    },
+    {
+      "case": "pipe",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: push is denied by project policy",
+      "passed": true
+    },
+    {
+      "case": "newline",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: push is denied by project policy",
+      "passed": true
+    },
+    {
+      "case": "bad JSON",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: malformed payload or unsupported quoting",
+      "passed": true
+    },
+    {
+      "case": "missing command",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: missing command string",
+      "passed": true
+    },
+    {
+      "case": "wrong command type",
+      "exit": 2,
+      "expected": 2,
+      "diagnostic": "Git guard: missing command string",
+      "passed": true
+    }
+  ],
+  "case1_settings_preserved": true,
+  "case2_commands": [
+    {
+      "case": 2,
+      "command": [
+        "node",
+        "--experimental-strip-types",
+        "--test",
+        "request.test.ts"
+      ],
+      "cwd": "/tmp/lets-conditional-validation/case2-fixtures/before",
+      "exit": 0,
+      "evidence": "/tmp/lets-conditional-validation/case2-fixtures/evidence/frozen-reapply-before-tests.txt"
+    },
+    {
+      "case": 2,
+      "command": [
+        "node",
+        "--experimental-strip-types",
+        "--test",
+        "request.test.ts"
+      ],
+      "cwd": "/tmp/lets-conditional-validation/case2-fixtures/proposed",
+      "exit": 1,
+      "evidence": "/tmp/lets-conditional-validation/case2-fixtures/evidence/frozen-reapply-proposed-tests.txt"
+    },
+    {
+      "case": 2,
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "cwd": "/tmp/lets-conditional-validation/case2-fixtures",
+      "exit": 127,
+      "evidence": "/tmp/lets-conditional-validation/case2-fixtures/evidence/frozen-reapply-typecheck.txt"
+    }
+  ],
+  "case2_classification_and_negative_value_preserved": true,
+  "case2_production_unchanged": true,
+  "limitation": "Reapplication reassesses the same authored artifacts, not a second independent cold-reader trial."
+}

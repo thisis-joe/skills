@@ -1,0 +1,32 @@
+[
+  {
+    "fixture": "case1-git-guard/repo",
+    "head": null,
+    "status": "unborn-no-history",
+    "diagnostic": "fatal: Needed a single revision\n"
+  },
+  {
+    "fixture": "case3-precommit/project",
+    "head": "ac83c20a7ea84e22a5111ba5a033da21e4d7dcf8",
+    "bundle": "git-history/case3-precommit__project.bundle",
+    "status": "exported"
+  },
+  {
+    "fixture": "case5-cleanup/repo",
+    "head": "296df591f0304818b60fc4ba27c1341d68ff888a",
+    "bundle": "git-history/case5-cleanup__repo.bundle",
+    "status": "exported"
+  },
+  {
+    "fixture": "case8-quality/audit-project",
+    "head": "e64eba1114ddf2d822cc904634eb3a96f16d2b75",
+    "bundle": "git-history/case8-quality__audit-project.bundle",
+    "status": "exported"
+  },
+  {
+    "fixture": "case8-quality/setup-project",
+    "head": "ab430b26788f0f48a73382dd400c7ced99b04f49",
+    "bundle": "git-history/case8-quality__setup-project.bundle",
+    "status": "exported"
+  }
+]

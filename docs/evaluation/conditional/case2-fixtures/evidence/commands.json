@@ -1,0 +1,34 @@
+[
+  {
+    "command": [
+      "node",
+      "--experimental-strip-types",
+      "--test",
+      "request.test.ts"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case2-fixtures/before",
+    "exit": 0,
+    "output": "evidence/before-test.txt"
+  },
+  {
+    "command": [
+      "node",
+      "--experimental-strip-types",
+      "--test",
+      "request.test.ts"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case2-fixtures/proposed",
+    "exit": 1,
+    "output": "evidence/proposed-test.txt"
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "typecheck"
+    ],
+    "cwd": "/tmp/lets-conditional-validation/case2-fixtures",
+    "exit": 127,
+    "output": "evidence/typecheck.txt"
+  }
+]

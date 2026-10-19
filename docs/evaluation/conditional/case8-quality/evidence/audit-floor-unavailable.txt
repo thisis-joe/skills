@@ -1,0 +1,1 @@
+{"outcome": "unavailable", "reason": "scope/merge-base unavailable", "findings": null}

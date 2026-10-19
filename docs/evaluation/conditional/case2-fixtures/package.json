@@ -1,0 +1,13 @@
+{
+  "name": "fixture-migration-case",
+  "private": true,
+  "packageManager": "npm@10.9.2",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-strip-types --test request.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "5.7.3"
+  }
+}

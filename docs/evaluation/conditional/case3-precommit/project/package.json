@@ -1,0 +1,14 @@
+{
+  "name": "commit-check-fixture",
+  "private": true,
+  "packageManager": "npm@10.9.2",
+  "scripts": {
+    "prepare": "node scripts/existing-prepare.mjs",
+    "policy:check": "node scripts/policy.mjs",
+    "test": "node --test scripts/example.test.mjs"
+  },
+  "devDependencies": {
+    "prettier": "3.4.2",
+    "lint-staged": "15.2.10"
+  }
+}

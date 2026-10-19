@@ -1,0 +1,16 @@
+{
+  "package_version": "0.1.2",
+  "registry_sha1_matched": true,
+  "exports_found": {
+    "fromPartial": true,
+    "fromAny": true,
+    "fromExact": true
+  },
+  "all_helpers_test_only": true,
+  "production_sha256_before": "ed14f166a175df8a56be83d8d2ad58a8c5cd4496f4fe514e50df193546151d52",
+  "production_sha256_after": "ed14f166a175df8a56be83d8d2ad58a8c5cd4496f4fe514e50df193546151d52",
+  "package_installation": "not performed",
+  "proposed_typecheck": "unavailable: TypeScript and local project dependencies absent",
+  "proposed_test": "unavailable: shoehorn not installed",
+  "negative_mutation": "unavailable: migrated test cannot run against real shoehorn without installation"
+}

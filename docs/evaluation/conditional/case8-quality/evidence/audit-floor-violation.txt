@@ -1,0 +1,87 @@
+{
+  "outcome": "violation",
+  "scope": {
+    "schema": 1,
+    "repository": "/private/tmp/lets-conditional-validation/case8-quality/audit-project",
+    "requested_base": "fixture/main",
+    "base_commit": "963c155e10c1fe1453ef8438395eade722231964",
+    "comparison_commit": "963c155e10c1fe1453ef8438395eade722231964",
+    "head": "e64eba1114ddf2d822cc904634eb3a96f16d2b75",
+    "task_paths": [],
+    "has_changes": true,
+    "files": [
+      {
+        "path": "quality.json",
+        "layers": [
+          "staged"
+        ],
+        "statuses": {
+          "staged": "M"
+        },
+        "current_sha256": "72745eea8d9e1a4032e88ae1b5787c7d309f20d9000dc4c0d35e5e272e6d8c10"
+      },
+      {
+        "path": "src/report.py",
+        "layers": [
+          "committed"
+        ],
+        "statuses": {
+          "committed": "M"
+        },
+        "current_sha256": "797f1d652b8fe428ebcc13bbcc7b0101de93e6cecae2ca28f698e5a27b887452"
+      },
+      {
+        "path": "tests/test_new.py",
+        "layers": [
+          "untracked"
+        ],
+        "statuses": {
+          "untracked": "?"
+        },
+        "current_sha256": "0f24c3a88b46951edaf172c54b5c21e737ec296b9adc6a7aa1c9a1f11c519c5f"
+      },
+      {
+        "path": "tests/test_report.py",
+        "layers": [
+          "worktree"
+        ],
+        "statuses": {
+          "worktree": "M"
+        },
+        "current_sha256": "bc8dba11de50014fc517c34ffdd935267f1dd93103c8a044bb642dc21fc68b64"
+      }
+    ],
+    "snapshot": "861fd9eea513cd3625c3d5edbfe01bd4e502f572a4a8aa5671aafefaec5d4bb9"
+  },
+  "findings": [
+    {
+      "rule": "lowered-threshold",
+      "path": "quality.json",
+      "line": 1,
+      "baseline": 80,
+      "current": 65
+    },
+    {
+      "rule": "incomplete-new-exception",
+      "path": "quality.json",
+      "line": 1
+    },
+    {
+      "rule": "added-skip-or-suppression",
+      "path": "src/report.py",
+      "line": 2
+    },
+    {
+      "rule": "added-skip-or-suppression",
+      "path": "tests/test_new.py",
+      "line": 2
+    },
+    {
+      "rule": "changed-or-weakened-assertion",
+      "path": "tests/test_report.py",
+      "line": 1,
+      "interpretation": "heuristic; inspect exact test contract"
+    }
+  ],
+  "guard_kind": "validation-authored heuristic; inspect findings, not malicious-intent proof"
+}

@@ -1,0 +1,4 @@
+M  .githooks/pre-commit
+A  .lintstagedrc.json
+A  supported.js
+?? unrelated-user.txt

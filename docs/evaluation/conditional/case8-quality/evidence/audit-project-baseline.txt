@@ -1,0 +1,10 @@
+[fixture/main (root-commit) 963c155] fixture: establish baseline
+ 8 files changed, 33 insertions(+)
+ create mode 100644 .github/workflows/check.yml
+ create mode 100644 CONSTRAINTS.md
+ create mode 100644 README.md
+ create mode 100644 TASKS.md
+ create mode 100644 artifacts/coverage.json
+ create mode 100644 quality.json
+ create mode 100644 src/report.py
+ create mode 100644 tests/test_report.py

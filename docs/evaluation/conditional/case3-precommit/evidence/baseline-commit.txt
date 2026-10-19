@@ -1,0 +1,12 @@
+[feature/commit-checks (root-commit) ac83c20] fixture: establish existing project policy
+ 10 files changed, 45 insertions(+)
+ create mode 100755 .githooks/pre-commit
+ create mode 100644 .prettierignore
+ create mode 100644 .prettierrc.json
+ create mode 100644 README.md
+ create mode 100644 ci.yml
+ create mode 100644 package-lock.json
+ create mode 100644 package.json
+ create mode 100644 scripts/example.test.mjs
+ create mode 100644 scripts/existing-prepare.mjs
+ create mode 100644 scripts/policy.mjs

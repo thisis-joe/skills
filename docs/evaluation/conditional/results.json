@@ -1,0 +1,106 @@
+[
+  {
+    "case": 1,
+    "skill": "lets-security",
+    "status": "partial",
+    "evidence": [
+      "case1-git-guard/README.md",
+      "case1-git-guard/THREAT-CONTROL-TEST.md",
+      "case1-git-guard/settings.diff",
+      "case1-git-guard/tests.json",
+      "frozen-reapply-cases1-2.json"
+    ],
+    "claim": "Guard/helper/config preparation and 24 synthetic payload checks passed; real runtime interception unavailable."
+  },
+  {
+    "case": 2,
+    "skill": "lets-migrate",
+    "status": "partial",
+    "evidence": [
+      "case2-fixtures/PLAN.md",
+      "case2-fixtures/migration.diff",
+      "case2-fixtures/checks.json",
+      "case2-fixtures/evidence/published-package-metadata.json",
+      "case2-fixtures/evidence/commands.json",
+      "frozen-reapply-cases1-2.json"
+    ],
+    "claim": "Concrete test-only proposal preserves negative input; original tests pass, migrated tests cannot run without package, actual typecheck unavailable."
+  },
+  {
+    "case": 3,
+    "skill": "lets-verify",
+    "status": "partial",
+    "evidence": [
+      "case3-precommit/README.md",
+      "case3-precommit/hook.diff",
+      "case3-precommit/project/.lintstagedrc.json",
+      "case3-precommit/checks.json",
+      "case3-precommit/evidence/commands.json"
+    ],
+    "claim": "Configuration preserves runner/formatter/prepare and reports missing typecheck. Real temp hook commit blocks on missing lint-staged; format/successful commit/failing-test smokes unavailable."
+  },
+  {
+    "case": 4,
+    "skill": "lets-automate",
+    "status": "prepared-static-checked",
+    "evidence": [
+      "case4-wizard/STAGES.md",
+      "case4-wizard/setup-wizard.sh",
+      "case4-wizard/helpers/env_store.py",
+      "case4-wizard/checks.json"
+    ],
+    "claim": "Human wizard, Bash syntax and fake-data helpers checked; interactive flow and logged-in dashboard unverified by design, ShellCheck unavailable."
+  },
+  {
+    "case": 5,
+    "skill": "lets-context",
+    "status": "plan-complete-fixture-limited",
+    "evidence": [
+      "case5-cleanup/PLAN.md",
+      "case5-cleanup/inventory.json",
+      "case5-cleanup/ownership.fixture.json",
+      "case5-cleanup/simulators.fixture.json",
+      "case5-cleanup/evidence/commands.json",
+      "case5-cleanup/evidence/disk-after-plan.json"
+    ],
+    "claim": "Real three-worktree inventory/size/status/process evidence, no removal. Chat metadata and simulator inventory simulated; real platform cleanup unavailable."
+  },
+  {
+    "case": 6,
+    "skill": "lets-ship",
+    "status": "report-complete-fixture-only",
+    "evidence": [
+      "case6-pr-check/REPORT.md",
+      "case6-pr-check/host-status.fixture.json",
+      "case6-pr-check/checks.json"
+    ],
+    "claim": "One read-only check-mode fixture report, no real host observation, mutation, retry or watcher."
+  },
+  {
+    "case": 7,
+    "skill": "lets-automate",
+    "status": "specification-complete-unexecuted",
+    "evidence": [
+      "case7-workflow-spec/WORKFLOW-SPEC.md",
+      "case7-workflow-spec/input-manifest.json",
+      "case7-workflow-spec/checks.json",
+      "case7-workflow-spec/inputs/brief.md"
+    ],
+    "claim": "Specification owns stages/tools/manual judgment/idempotency/recovery; no workflow execution or scheduling."
+  },
+  {
+    "case": 8,
+    "skill": "lets-start + lets-verify",
+    "status": "local-outcomes-demonstrated",
+    "evidence": [
+      "case8-quality/setup-brief.md",
+      "case8-quality/audit-brief.md",
+      "case8-quality/setup-project/CONSTRAINTS.md",
+      "case8-quality/OUTCOMES.md",
+      "case8-quality/checks.json",
+      "case8-quality/evidence/audit-scope.json",
+      "case8-quality/scope-source.json"
+    ],
+    "claim": "Setup versus audit owners differ. Actual shipped scope collector covers all layers; demonstration heuristic produces clean/violation/unavailable exits 0/1/2 and five concrete findings."
+  }
+]

@@ -1,0 +1,7 @@
+jobs:
+  report:
+    steps:
+      - run: python3 send.py
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          APP_ORIGIN: ${{ vars.APP_ORIGIN }}

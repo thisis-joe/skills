@@ -1,0 +1,24 @@
+{
+  "actual_local_du": [
+    {
+      "path": "/tmp/lets-conditional-validation/case5-cleanup/repo",
+      "before_du_sk": "212\t/tmp/lets-conditional-validation/case5-cleanup/repo",
+      "after_du_sk": "212\t/tmp/lets-conditional-validation/case5-cleanup/repo",
+      "exit": 0
+    },
+    {
+      "path": "/tmp/lets-conditional-validation/case5-cleanup/active-dirty",
+      "before_du_sk": "24\t/tmp/lets-conditional-validation/case5-cleanup/active-dirty",
+      "after_du_sk": "24\t/tmp/lets-conditional-validation/case5-cleanup/active-dirty",
+      "exit": 0
+    },
+    {
+      "path": "/tmp/lets-conditional-validation/case5-cleanup/merged-unused",
+      "before_du_sk": "16\t/tmp/lets-conditional-validation/case5-cleanup/merged-unused",
+      "after_du_sk": "16\t/tmp/lets-conditional-validation/case5-cleanup/merged-unused",
+      "exit": 0
+    }
+  ],
+  "deletions": 0,
+  "no_reclaimed_space_claim": true
+}
