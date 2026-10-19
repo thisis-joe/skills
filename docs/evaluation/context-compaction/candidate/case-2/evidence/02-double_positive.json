@@ -1,0 +1,16 @@
+{
+  "name": "double_positive",
+  "command": [
+    "python3",
+    "app.py",
+    "--double",
+    "3"
+  ],
+  "expected_exit": 0,
+  "expected_stdout": "6\n",
+  "expected_markers": [],
+  "exit_code": 0,
+  "stdout": "6\n",
+  "stderr": "",
+  "status": "passed"
+}

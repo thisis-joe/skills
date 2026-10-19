@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "python3",
+    "/private/tmp/coco-guidance-compaction-muorgx4u/edge-missing-ci/read_skill.py",
+    "_coco-shared/advanced/automate-ci.md"
+  ],
+  "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-missing-ci",
+  "returncode": 1,
+  "stdout_path": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-missing-ci/case-2-ci-a/evidence/05-ci-guidance.stdout",
+  "stderr_path": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-missing-ci/case-2-ci-a/evidence/05-ci-guidance.stderr"
+}

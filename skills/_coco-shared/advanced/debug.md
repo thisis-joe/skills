@@ -1,6 +1,6 @@
 # Diagnosis and fix modes
 
-Apply the [common contract](../contracts.md) and [resolved decisions](../decisions.md).
+Apply the [common contract](../contracts.md).
 Diagnosis returns the exact symptom, supported mechanism, and reproduction evidence.
 [Build](build.md) owns the product fix, work-unit commit, and completion state, retaining these debugging checks.
 

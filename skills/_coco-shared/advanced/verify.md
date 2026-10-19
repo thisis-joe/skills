@@ -1,35 +1,24 @@
 # Verification modes
 
-Apply the [common contract](../contracts.md) and [resolved decisions](../decisions.md).
+Apply the [common contract](../contracts.md).
 This procedure returns evidence. [Build](build.md) owns product changes, commits, and task completion.
 Select only the mode needed by the claim; creating a helper or formal model is conditional work.
 
 ## Mode selection
 
-Mode selection is cumulative, never exclusive. Keep the common contract and all core sections
-below active for every claim. Evaluate every
-condition independently and load all matching modules cumulatively before the first action that
-depends on them. Re-evaluate when new scope, risk, state, or missing prerequisites are discovered;
-ordinary runtime checking does not exempt a newly discovered helper, proof, policy, or experiment need.
-If applicability is uncertain, read the relevant modules broadly; if the work cannot be classified,
-read all verification modules. If a required reference is unavailable, stop the dependent work and
-report the missing guidance rather than infer it. Select internally from the actual request and
-artifacts; never require the user to learn or choose source skills or internal mode names.
+Evaluate each row independently; read all matches before dependent work. Re-evaluate on new scope, risk, state, or missing prerequisites, including helper/proof/policy/experiment needs found in runtime checks. If uncertain, read relevant modes broadly; if unclassifiable, read all modes. Stop dependent work and report unavailable required guidance.
 
-Loading more guidance preserves constraints; it does not expand the requested scope or authorize
-helper creation, model changes, dependency installation, product edits, or external effects.
-Common-contract authorization, safety, isolation, evidence, and completion rules remain applicable
-when no optional module matches.
+Apply the common contract and entire core even without matches. Select internally from request/evidence; users need not learn source skills or mode names. Reading grants no wider scope or authority.
 
-| Condition in the requested work or current evidence | Read before dependent work |
+| When | Read |
 | --- | --- |
-| Constraints, quality floors, guards, metric ratchets, or their enforcement are under verification. | [Standing-quality-bar audit](verify-quality-audit.md) |
-| A reusable runtime driver/helper is requested, or authorized work includes establishing missing verification support. | [Runtime helper creation](verify-runtime-create.md) |
-| An existing runtime helper, feature map, drive recipe, or its coverage needs maintenance, including drift or newly uncovered journeys. | [Runtime helper creation](verify-runtime-create.md) for the launch/doctor/drive/evidence/cleanup and feature-map contract, then [runtime maintenance](verify-runtime-maintain.md); reading creation guidance does not authorize recreating the helper. |
-| Authorized work creates a formal model, property, proof, or formal verification check. | [Formal verification creation](verify-formal-create.md) |
-| An existing formal check or its code mapping, assumptions, bounds, or sync state needs maintenance. | [Formal verification creation](verify-formal-create.md) for model/code correspondence and sensitivity requirements, then [formal maintenance](verify-formal-maintain.md); preserve the contract without silently recreating or weakening it. |
-| Structural skill, prompt, or harness evaluation is requested, including comparative quality or speed claims. | [Workflow experiments](verify-experiments.md) |
-| Establishing commit-time formatting, typechecking, or tests is requested. | [Pre-commit verification setup](verify-pre-commit.md), including its dependency-script security guidance. |
+| Constraints, quality floors, guards, metric ratchets, or their enforcement under verification. | [Audit](verify-quality-audit.md) |
+| Reusable runtime driver/helper is requested, or authorized work needs missing verification support. | [Create](verify-runtime-create.md) |
+| Existing runtime helper, feature map, drive recipe, or coverage needs maintenance, including drift/new journeys. | [Contract](verify-runtime-create.md) (launch/doctor/drive/evidence/cleanup, feature map), then [Maintain](verify-runtime-maintain.md); reading grants no recreation authority. |
+| Authorized formal model, property, proof, or check creation. | [Create](verify-formal-create.md) |
+| Existing formal check, code mapping, assumptions, bounds, or sync state needs maintenance. | [Contract](verify-formal-create.md) (model/code correspondence, sensitivity), then [Maintain](verify-formal-maintain.md); no silent recreation/weakening. |
+| Structural skill/prompt/harness evaluation requested, including quality/speed comparisons. | [Evaluate](verify-experiments.md) |
+| Commit-time formatting, typechecking, or tests setup requested. | [Pre-commit](verify-pre-commit.md), including dependency-script security. |
 
 ## Establish the claim
 

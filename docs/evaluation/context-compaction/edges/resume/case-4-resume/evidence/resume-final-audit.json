@@ -1,0 +1,62 @@
+{
+  "commands": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-resume/case-4-resume",
+      "stdout": "",
+      "stderr": "",
+      "exit": 0
+    },
+    {
+      "command": [
+        "git",
+        "status",
+        "--porcelain=v1"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-resume/case-4-resume",
+      "stdout": " M USER_NOTES.md\n M VERIFY.md\n M app.py\n M features/double.md\n M features/index.json\n M verify_cli.py\n?? evidence/doctor-20261019T141619.007403Z.json\n?? evidence/doctor.json\n?? evidence/drive-20261019T141619.384783Z.json\n?? evidence/drive.json\n?? evidence/resume-baseline.json\n?? evidence/resume-validation.json\n?? features/multiply.md\n?? features/operation-selection.md\n",
+      "stderr": "",
+      "exit": 0
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-resume/case-4-resume",
+      "stdout": "78923f0272d116aa877d02d0e74b0a142263e40e\n",
+      "stderr": "",
+      "exit": 0
+    },
+    {
+      "command": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-resume/case-4-resume",
+      "stdout": "fixture/resume\n",
+      "stderr": "",
+      "exit": 0
+    }
+  ],
+  "protected_sha256": {
+    "app.py": "e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b",
+    "test_app.py": "43e4b979a3fef8184f285c8f106f59af090529db4686d7f840aec65e7806af86",
+    "USER_NOTES.md": "f0022ca0ffe7e3d13c36856a34901c50580a779a17a877b041cdf0377f4bbc91",
+    "HANDOFF.json": "e3233770f1ddf37f594931a55b3f12838fdf470e44559f4b6235f91ac326cd09",
+    "TASK_STATE.json": "518c4939846ced96d28505fb3b06e3be8a2e3d2257e65a774e968cde20f00f81",
+    "evidence/previous-double.json": "6d5d6d11deff7a27475dfc327d8a6bf7f6bb9ccbea00ccf492d77f07173275f1"
+  },
+  "feature_index_matches_files": true,
+  "all_mapped_features_have_live_checks": true,
+  "proof_after_cleanup": [
+    "evidence/doctor-20261019T141619.007403Z.json",
+    "evidence/drive-20261019T141619.384783Z.json"
+  ]
+}

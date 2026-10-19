@@ -1,0 +1,16 @@
+{
+  "root": "thread-7",
+  "messages": [
+    {
+      "id": "report-1",
+      "author": "reporter",
+      "body": "app.py --double 3 prints 9; expected 6."
+    },
+    {
+      "id": "verdict-2",
+      "author": "triage-bot",
+      "body": "Reproduce and prepare a bounded fix. [ready-for-fix]"
+    }
+  ],
+  "limitations": "Local JSON is diagnostic input, not authenticated source readback."
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "id": "initial-cli",
+    "case": "case-3-scope",
+    "start_with": "coco-verify/SKILL.md",
+    "request": "Verify the current CLI through its real interface: --double 3 returns 6 and --double -4 returns -8. Run existing tests and retain concrete evidence. Do not edit product, tests, user notes, or the verification helper."
+  }
+]

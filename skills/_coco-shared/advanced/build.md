@@ -1,6 +1,6 @@
 # Implementation modes
 
-Apply the [common contract](../contracts.md) and [resolved decisions](../decisions.md).
+Apply the [common contract](../contracts.md).
 Build owns product edits, work-unit commits, and the authoritative completion-state update.
 Reuse an existing spec, plan, test-boundary agreement, and execution grant instead of interviewing again.
 

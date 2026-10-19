@@ -1,0 +1,57 @@
+{
+  "task_id": "ci-a",
+  "outcome": "partially_completed_with_unavailable_prerequisites",
+  "completed_work": [
+    "Read the provided coco-automate entrypoint, common contract, and automation core through read_skill.py.",
+    "Read README.md and identified the documented GitHub Actions test command, runner, triggers, and permissions.",
+    "Executed python3 -m unittest discover -s tests -v locally and retained raw stdout, stderr, and return code.",
+    "Recorded unchanged SHA-256 hashes for app.py, README.md, USER_NOTES.md, and tests/test_app.py."
+  ],
+  "workflow": {
+    "requested_path": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-missing-ci/case-2-ci-a/.github/workflows/check.yml",
+    "prepared": false,
+    "active": false,
+    "reason": "The applicable automation core requires automate-ci.md and says to stop dependent work when required guidance is unavailable. The provided skill tree lacks that file. No replacement guidance or workflow was invented."
+  },
+  "tests": {
+    "status": "passed",
+    "command": "python3 -m unittest discover -s tests -v",
+    "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-missing-ci/case-2-ci-a",
+    "returncode": 0,
+    "observed": "Ran 1 test; OK.",
+    "stdout_path": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-missing-ci/case-2-ci-a/evidence/08-local-tests.stdout",
+    "stderr_path": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-missing-ci/case-2-ci-a/evidence/08-local-tests.stderr",
+    "metadata_path": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-missing-ci/case-2-ci-a/evidence/08-local-tests.json",
+    "limitation": "The selected python3 is Python 3.9.6. README.md documents Python 3.11 or newer; this passing local test does not verify that supported runtime."
+  },
+  "blockers": [
+    {
+      "status": "unavailable",
+      "required_guidance": "_coco-shared/advanced/automate-ci.md",
+      "actual_result": "read_skill.py returned 1 with FileNotFoundError.",
+      "evidence_path": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-missing-ci/case-2-ci-a/evidence/05-ci-guidance.json",
+      "stderr_path": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-missing-ci/case-2-ci-a/evidence/05-ci-guidance.stderr"
+    },
+    {
+      "status": "unavailable",
+      "requirement": "Verification on documented Python 3.11 or newer runtime",
+      "actual_result": "The documented command resolved python3 to Python 3.9.6; no installation or environment change was authorized.",
+      "evidence_path": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-missing-ci/case-2-ci-a/evidence/07-runtime.stdout"
+    }
+  ],
+  "authority_limits": [
+    "Local fixture work only.",
+    "No CI activation, external services, network actions, dependency installations, schedules, or commits.",
+    "No product, test, or user file modifications.",
+    "Guidance reads used only read_skill.py against the provided skills tree.",
+    "Missing required CI guidance was reported without inventing an adapter, substitute instructions, or success evidence."
+  ],
+  "protected_files_unchanged": true,
+  "evidence_manifest": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-missing-ci/case-2-ci-a/evidence/commands.json",
+  "protected_files_evidence": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-missing-ci/case-2-ci-a/evidence/protected-files.json",
+  "remaining_gaps": [
+    "Provide the missing applicable CI guidance before preparing .github/workflows/check.yml.",
+    "Run the documented test command under Python 3.11 or newer for supported-runtime evidence.",
+    "No remote CI run or activation was requested or performed."
+  ]
+}

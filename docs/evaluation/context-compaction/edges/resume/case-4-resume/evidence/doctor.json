@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "observation": {
+    "arguments": [
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: app.py [-h] (--double DOUBLE | --multiply MULTIPLY MULTIPLY)\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --double DOUBLE\n  --multiply MULTIPLY MULTIPLY\n",
+    "stderr": ""
+  },
+  "app_sha256": "e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b"
+}

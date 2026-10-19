@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python3",
+    "proof/check.py"
+  ],
+  "phase": "unchanged baseline before code/model inspection",
+  "exit_code": 0,
+  "stdout": "bounded model passed: balances 0..2, amounts 0..3\n",
+  "stderr": "",
+  "status": "passed",
+  "snapshot": {
+    "wallet.py": "c2a7fe2a389d179f1060189feffe4ce1675ad51bb4c3ad601daaf5e2968ffdc2",
+    "proof/check.py": "11110e7963b1a51482e19297ea8b02a398e6e9d0835b4b9ad00712e8f2628062",
+    "proof/README.md": "d84c561a9f3a718e9e7cdad8e1624ddaef6b9e5f6754fc1a15306103962bd3cc"
+  }
+}

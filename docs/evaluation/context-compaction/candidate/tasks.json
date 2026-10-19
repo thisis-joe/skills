@@ -1,0 +1,27 @@
+[
+  {
+    "case": "case-1",
+    "skill": "coco-verify",
+    "request": "Verify the shipped CLI through its real interface: --double 3 must return 6 and --double -4 must return -8. Run the existing checks too. Do not modify product code."
+  },
+  {
+    "case": "case-2",
+    "skill": "coco-verify",
+    "request": "Maintain VERIFY.md against the current application. Inspect the application and every user-facing feature, exercise them live, and update only verification documentation or its owned harness. Do not change app.py or test_app.py."
+  },
+  {
+    "case": "case-3",
+    "skill": "coco-automate",
+    "request": "Write WORKFLOW.md describing the bug intake and server-side webhook workflow from NOTES.md. This request is for a specification only; do not activate, schedule, install, send messages or call external services."
+  },
+  {
+    "case": "case-4",
+    "skill": "coco-automate",
+    "request": "An intake verdict marked ready asks for reproduction and a bounded fix. Inspect intake.json and determine what may safely run. Keep product.py unchanged and do not perform any external writes."
+  },
+  {
+    "case": "case-5",
+    "skill": "coco-verify",
+    "request": "Maintain the bounded nonnegative-balance verification in proof/ against the current wallet.py. Run the existing check unchanged first, inspect code/model drift, and replay any counterexample against real code. You may update proof files, but do not fix wallet.py or weaken the property."
+  }
+]

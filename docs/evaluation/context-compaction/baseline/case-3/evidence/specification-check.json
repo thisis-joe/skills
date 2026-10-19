@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python3",
+    "-c",
+    "from pathlib import Path\ntext=Path(\"WORKFLOW.md\").read_text()\nrequired={\"artifact-only boundary\":\"specification only; inactive\", \"unresolved identities\":\"UNRESOLVED\", \"server secret\":\"server-side secret facility\", \"trust boundary\":\"untrusted data\", \"source root\":\"immutable source\", \"parent preflight\":\"before every write\", \"idempotency\":\"Atomically claim\", \"durable delivery\":\"durable event queue\", \"unknown outcome\":\"read actual external state\", \"triage\":\"Classify bug\", \"deduplication\":\"plausible related live issue\", \"compensation\":\"verified cancellation\", \"trusted verdict\":\"configured trusted author\", \"implementation ownership\":\"verification-only\", \"reproduction\":\"two independent exact\", \"equal input\":\"equal inputs\", \"no merge\":\"never merge or deploy\", \"recovery\":\"stale claim\", \"bounded retries\":\"exhausted\", \"acceptance\":\"scenario checks\", \"next boundary\":\"next boundary\"}\nmissing=[name for name,phrase in required.items() if phrase not in text]\nfor name in required: print(name+\": \"+(\"MISSING\" if name in missing else \"present\"))\nassert not missing, missing\nassert Path(\"NOTES.md\").read_text()==\"Wanted artifact: a workflow specification for bug intake and a server-side webhook. No activation, scheduling, network requests or messages are authorized. Source and adapter identities are undecided.\\n\"\nprint(\"NOTES.md unchanged; specification coverage checks passed. No live workflow executed.\")\n"
+  ],
+  "exit_code": 1,
+  "stdout": "artifact-only boundary: present\nunresolved identities: present\nserver secret: present\ntrust boundary: present\nsource root: present\nparent preflight: present\nidempotency: present\ndurable delivery: present\nunknown outcome: present\ntriage: present\ndeduplication: present\ncompensation: present\ntrusted verdict: present\nimplementation ownership: present\nreproduction: present\nequal input: present\nno merge: present\nrecovery: MISSING\nbounded retries: present\nacceptance: present\nnext boundary: present\n",
+  "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 6, in <module>\nAssertionError: ['recovery']\n",
+  "scope": "Static document consistency and input-preservation check only."
+}

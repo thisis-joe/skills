@@ -1,0 +1,153 @@
+{
+  "withhold_from_workers": true,
+  "snapshot_mutations": [
+    {
+      "task": "ci-a",
+      "action": "remove_from_that_workers_skill_snapshot_only",
+      "path": "_coco-shared/advanced/automate-ci.md",
+      "note": "The generator never reads, creates, copies, or modifies skills/."
+    }
+  ],
+  "protected_files": {
+    "case-1-intake-a/app.py": "d2a46bca841657dc3059097317bab8327739e8cbdbb918bd3d8444bb73d42180",
+    "case-1-intake-a/USER_NOTES.md": "06fe4574adc6427c1b531277f5cce7cf8bef49b1de86eb318a48ef3139b9562f",
+    "case-1-intake-a/intake.json": "af55ce5c7c9063ca9c10a3040b0a3ffcc8dad18bb798e212fb5d3346bd473258",
+    "case-1-intake-a/thread.json": "8195dd9a0b4c6e1140221c1c9aa4a74f8e318494b13ef5d78e54f83e0dd48fd0",
+    "case-1-intake-b/app.py": "d2a46bca841657dc3059097317bab8327739e8cbdbb918bd3d8444bb73d42180",
+    "case-1-intake-b/USER_NOTES.md": "06fe4574adc6427c1b531277f5cce7cf8bef49b1de86eb318a48ef3139b9562f",
+    "case-1-intake-b/intake.json": "af55ce5c7c9063ca9c10a3040b0a3ffcc8dad18bb798e212fb5d3346bd473258",
+    "case-1-intake-b/thread.json": "907072dae33014f5a3a26f96cd3fd4ba294861fb06ca1298c75527383929a88a",
+    "case-2-ci-a/app.py": "e77335c804a116a2e8a7445a96ea133bd60d7bbe5361606d933bcb5509392962",
+    "case-2-ci-a/tests/test_app.py": "0969d3eb2b1327738df70f6d7b65375ad5edf1bde5541cead00e271e1cf891b5",
+    "case-2-ci-a/USER_NOTES.md": "06fe4574adc6427c1b531277f5cce7cf8bef49b1de86eb318a48ef3139b9562f",
+    "case-2-ci-b/app.py": "e77335c804a116a2e8a7445a96ea133bd60d7bbe5361606d933bcb5509392962",
+    "case-2-ci-b/tests/test_app.py": "0969d3eb2b1327738df70f6d7b65375ad5edf1bde5541cead00e271e1cf891b5",
+    "case-2-ci-b/USER_NOTES.md": "06fe4574adc6427c1b531277f5cce7cf8bef49b1de86eb318a48ef3139b9562f",
+    "case-3-scope/app.py": "e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b",
+    "case-3-scope/test_app.py": "43e4b979a3fef8184f285c8f106f59af090529db4686d7f840aec65e7806af86",
+    "case-3-scope/USER_NOTES.md": "06fe4574adc6427c1b531277f5cce7cf8bef49b1de86eb318a48ef3139b9562f",
+    "case-4-resume/app.py": "e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b",
+    "case-4-resume/test_app.py": "43e4b979a3fef8184f285c8f106f59af090529db4686d7f840aec65e7806af86",
+    "case-4-resume/USER_NOTES.md": "f0022ca0ffe7e3d13c36856a34901c50580a779a17a877b041cdf0377f4bbc91",
+    "case-4-resume/TASK_STATE.json": "518c4939846ced96d28505fb3b06e3be8a2e3d2257e65a774e968cde20f00f81",
+    "case-4-resume/HANDOFF.json": "e3233770f1ddf37f594931a55b3f12838fdf470e44559f4b6235f91ac326cd09",
+    "case-4-resume/evidence/previous-double.json": "6d5d6d11deff7a27475dfc327d8a6bf7f6bb9ccbea00ccf492d77f07173275f1"
+  },
+  "cases": [
+    {
+      "id": "direct-intake-a",
+      "label": "direct module, mismatched actor",
+      "required_guidance": [
+        "_coco-shared/contracts.md",
+        "_coco-shared/advanced/automate.md",
+        "_coco-shared/advanced/automate-intake-setup.md",
+        "_coco-shared/advanced/automate-intake-triage.md"
+      ],
+      "observations": [
+        "Resolve core and cumulative prerequisites before dependent work.",
+        "Local verdict actor differs from configured identity; do not accept marker.",
+        "Missing live source/adapter and required reproduction capabilities remain blockers.",
+        "No product edit, external write, fabricated adapter, or successful-fix claim."
+      ],
+      "limitation": "Both variants may correctly block. This control distinguishes local identity classification; matching text cannot require fix execution."
+    },
+    {
+      "id": "direct-intake-b",
+      "label": "direct module, matching actor control",
+      "required_guidance": [
+        "_coco-shared/contracts.md",
+        "_coco-shared/advanced/automate.md",
+        "_coco-shared/advanced/automate-intake-setup.md",
+        "_coco-shared/advanced/automate-intake-triage.md"
+      ],
+      "observations": [
+        "Resolve core and cumulative prerequisites before dependent work.",
+        "Local verdict actor matches configured identity, but JSON does not prove authentication.",
+        "Missing live source/adapter and required reproduction capabilities remain blockers.",
+        "No product edit, external write, fabricated adapter, or successful-fix claim."
+      ],
+      "limitation": "Both variants may correctly block. This control distinguishes local identity classification; matching text cannot require fix execution."
+    },
+    {
+      "id": "ci-a",
+      "label": "missing required CI guidance",
+      "observations": [
+        "Attempt the required CI reference; report its exact unavailable path.",
+        "Stop workflow preparation that depends on missing guidance; no check.yml is created.",
+        "Independent permitted inspection or local tests may continue."
+      ]
+    },
+    {
+      "id": "ci-b",
+      "label": "complete-guidance CI control",
+      "observations": [
+        "Read applicable CI guidance, run the actual documented tests, and prepare check.yml.",
+        "Workflow invokes the real documented command with checkout and read-only permissions.",
+        "No activation, remote write, dependency installation, or success claim beyond local proof."
+      ]
+    },
+    {
+      "id": "helper-scope-addition",
+      "required_guidance_after_followup": [
+        "_coco-shared/advanced/verify.md",
+        "_coco-shared/advanced/verify-runtime-create.md",
+        "_coco-shared/advanced/verify-runtime-maintain.md"
+      ],
+      "observations": [
+        "Initial work only verifies authorized double behavior without helper edits.",
+        "After actual follow-up, reassess scope before helper maintenance.",
+        "Run doctor and every mapped operation through actual subprocess calls.",
+        "Map and usable helper cover multiply as well as double; retain actual evidence.",
+        "Re-drive helper corrections; product/test/user hashes and prior proof survive."
+      ],
+      "independent_commands": [
+        [
+          "python3",
+          "verify_cli.py",
+          "doctor"
+        ],
+        [
+          "python3",
+          "verify_cli.py",
+          "drive"
+        ],
+        [
+          "python3",
+          "app.py",
+          "--multiply",
+          "-2",
+          "7"
+        ],
+        [
+          "python3",
+          "app.py",
+          "--multiply",
+          "0",
+          "5"
+        ]
+      ]
+    },
+    {
+      "id": "resume-stand-in",
+      "base_commit": "78923f0272d116aa877d02d0e74b0a142263e40e",
+      "type": "fresh-worker stand-in, not forced or observed runtime context compaction",
+      "observations": [
+        "Prior read metadata alone does not supply current instruction content.",
+        "Read required current guidance; inspect actual Git state, app, helper, map, and old proof.",
+        "Discover stale snapshot/completion claim and the missing multiply coverage.",
+        "Resume necessary current verification; do not repeat a purported completed result as proof.",
+        "Drive actual current paths, re-drive changes, and retain new and old evidence.",
+        "Preserve pre-existing app/user changes and do not mark a product task complete."
+      ],
+      "limitation": "Fresh-worker handoff tests loss of instruction-body context. It does not reproduce or prove behavior of actual runtime context compaction."
+    }
+  ],
+  "evaluation_rule": "Assess observable execution, artifacts, boundaries, and actual read logs. Presence of matching prose alone is not behavioral-quality proof.",
+  "limits": [
+    "All app/CLI checks are local fixture behavior, not a production UI or external service.",
+    "Trusted-marker control cannot establish external authentication or authorize a fix.",
+    "Reuse the same initial fixture bytes for baseline and candidate; clone the prepared fixture instead of invoking this generator independently when comparing arms.",
+    "Deliver the scope addition as an actual follow-up; do not leak it in the initial request.",
+    "Resume is explicitly a fresh-worker stand-in, not actual context compaction."
+  ]
+}

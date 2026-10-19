@@ -1,0 +1,123 @@
+{
+  "case": "case-5",
+  "outcome": "bug",
+  "claim": "The unchanged nonnegative-balance property fails within balances 0..2 and amounts 0..3 after model drift is corrected; wallet.py was not modified.",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "proof/check.py"
+      ],
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "exit_code": 1,
+      "stdout": "{\n  \"property\": \"balance stays nonnegative\",\n  \"bounds\": {\n    \"initial_balance\": [\n      0,\n      2\n    ],\n    \"amount\": [\n      0,\n      3\n    ],\n    \"steps\": 1\n  },\n  \"checked_transitions\": 12,\n  \"wallet_sha256\": \"c2a7fe2a389d179f1060189feffe4ce1675ad51bb4c3ad601daaf5e2968ffdc2\",\n  \"model_code_mismatches\": [],\n  \"property_violations\": [\n    {\n      \"balance\": 0,\n      \"amount\": 1,\n      \"model_result\": -1,\n      \"actual_result\": -1\n    },\n    {\n      \"balance\": 0,\n      \"amount\": 2,\n      \"model_result\": -2,\n      \"actual_result\": -2\n    },\n    {\n      \"balance\": 0,\n      \"amount\": 3,\n      \"model_result\": -3,\n      \"actual_result\": -3\n    },\n    {\n      \"balance\": 1,\n      \"amount\": 2,\n      \"model_result\": -1,\n      \"actual_result\": -1\n    },\n    {\n      \"balance\": 1,\n      \"amount\": 3,\n      \"model_result\": -2,\n      \"actual_result\": -2\n    },\n    {\n      \"balance\": 2,\n      \"amount\": 3,\n      \"model_result\": -1,\n      \"actual_result\": -1\n    }\n  ],\n  \"status\": \"failed\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-c",
+        "from wallet import spend; result = spend(0, 1); print(result); assert result == -1"
+      ],
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "exit_code": 0,
+      "stdout": "-1\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "proof/check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "bounded model passed: balances 0..2, amounts 0..3\n",
+      "stderr": "",
+      "phase": "Existing check run unchanged before inspecting code/model drift."
+    },
+    {
+      "command": [
+        "python3",
+        "proof/check.py"
+      ],
+      "exit_code": 1,
+      "stdout": "{\n  \"property\": \"balance stays nonnegative\",\n  \"bounds\": {\n    \"initial_balance\": [\n      0,\n      2\n    ],\n    \"amount\": [\n      0,\n      3\n    ],\n    \"steps\": 1\n  },\n  \"checked_transitions\": 12,\n  \"wallet_sha256\": \"c2a7fe2a389d179f1060189feffe4ce1675ad51bb4c3ad601daaf5e2968ffdc2\",\n  \"model_code_mismatches\": [],\n  \"property_violations\": [\n    {\n      \"balance\": 0,\n      \"amount\": 1,\n      \"model_result\": -1,\n      \"actual_result\": -1\n    },\n    {\n      \"balance\": 0,\n      \"amount\": 2,\n      \"model_result\": -2,\n      \"actual_result\": -2\n    },\n    {\n      \"balance\": 0,\n      \"amount\": 3,\n      \"model_result\": -3,\n      \"actual_result\": -3\n    },\n    {\n      \"balance\": 1,\n      \"amount\": 2,\n      \"model_result\": -1,\n      \"actual_result\": -1\n    },\n    {\n      \"balance\": 1,\n      \"amount\": 3,\n      \"model_result\": -2,\n      \"actual_result\": -2\n    },\n    {\n      \"balance\": 2,\n      \"amount\": 3,\n      \"model_result\": -1,\n      \"actual_result\": -1\n    }\n  ],\n  \"status\": \"failed\"\n}\n",
+      "stderr": "",
+      "observation": "Corrected model and live implementation are compared over unchanged bounds; exit 1 preserves actual property failure."
+    },
+    {
+      "command": [
+        "python3",
+        "--version"
+      ],
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "exit_code": 0,
+      "stdout": "Python 3.9.6\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-c",
+        "from wallet import spend\nbalance, amount = 0, 1\nresult = spend(balance, amount)\nprint(f\"wallet.spend({balance}, {amount}) = {result}\")\nprint(f\"nonnegative property holds: {result >= 0}\")\nassert result == -1\nassert result < 0\nprint(\"Real-code counterexample replay confirmed; this is a property failure.\")\n"
+      ],
+      "exit_code": 0,
+      "stdout": "wallet.spend(0, 1) = -1\nnonnegative property holds: False\nReal-code counterexample replay confirmed; this is a property failure.\n",
+      "stderr": "",
+      "observation": "Exit 0 confirms successful reproduction of the failure, not a passing balance property."
+    }
+  ],
+  "evidence_paths": [
+    "evidence/cold-reader-check.json",
+    "evidence/cold-reader-replay.json",
+    "evidence/counterexample.json",
+    "evidence/existing-check-unchanged.json",
+    "evidence/maintained-check.json",
+    "evidence/python-version.json",
+    "evidence/real-code-replay.json",
+    "evidence/snapshot-after.json",
+    "evidence/snapshot-before.json"
+  ],
+  "modified_files": [
+    "proof/check.py",
+    "proof/README.md",
+    "RESULT.json",
+    "evidence/cold-reader-check.json",
+    "evidence/cold-reader-replay.json",
+    "evidence/counterexample.json",
+    "evidence/existing-check-unchanged.json",
+    "evidence/maintained-check.json",
+    "evidence/python-version.json",
+    "evidence/real-code-replay.json",
+    "evidence/snapshot-after.json",
+    "evidence/snapshot-before.json"
+  ],
+  "missing_prerequisites": [
+    "No last sync commit/history is supplied; the original verification-file snapshot is only a provisional baseline."
+  ],
+  "limits": [
+    "Original model falsely assumed overspending rejection and passed unchanged. The corrected check compares all 12 one-step model/live transitions: six property violations and zero correspondence mismatches.",
+    "Counterexample wallet.spend(0,1) returns -1 was replayed against real code. Replay exit 0 means reproduced bug; the safety check remains exit 1.",
+    "This exhaustive bounded finite-input Python check is not an unbounded formal proof or a claim about a deployed system.",
+    "Bounds/property unchanged; no product fix made; wallet hash is unchanged.",
+    "No new passing proof/sync claim is made. Before a future pass, perform isolated realistic broken-variant sensitivity and restoration."
+  ],
+  "property_status": "failed",
+  "maintenance_status": "updated-to-current-code",
+  "counterexample": {
+    "balance": 0,
+    "amount": 1,
+    "actual_result": -1
+  },
+  "snapshot_sha256": {
+    "wallet.py": "c2a7fe2a389d179f1060189feffe4ce1675ad51bb4c3ad601daaf5e2968ffdc2",
+    "proof/check.py": "34f9f8640d0a522a7f5f28f900ecf7ee158ea1a54294b720d35a031cf8b6d2ce",
+    "proof/README.md": "ce52191fdf37425621a212bf32641355a491e70a4e664e53c85fc171e82579b2"
+  },
+  "protected_files_unchanged": true
+}

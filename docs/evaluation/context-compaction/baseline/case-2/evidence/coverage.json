@@ -1,0 +1,23 @@
+{
+  "inspected_files": [
+    "app.py",
+    "test_app.py",
+    "VERIFY.md",
+    "README.md"
+  ],
+  "features": [
+    "double: positive, negative, zero, equals syntax",
+    "triple: positive, negative, zero, equals syntax",
+    "help: long and short",
+    "required mode",
+    "mutually exclusive modes",
+    "noninteger argument for each mode",
+    "missing integer for each mode",
+    "unknown flag"
+  ],
+  "drift": "VERIFY.md indexed only double; source also exposed triple and parser help/errors.",
+  "product_regressions": [],
+  "unreachable_features": [],
+  "protected_files_unchanged": true,
+  "cleanup": "No persistent process or bytecode created; fresh process per command."
+}

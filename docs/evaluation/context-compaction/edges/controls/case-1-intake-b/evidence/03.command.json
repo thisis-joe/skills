@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "python3",
+    "-c",
+    "import json; i=json.load(open('intake.json')); t=json.load(open('thread.json')); m=[x['id'] for x in t['messages'] if x['author']==i['trusted_triage_identity'] and i['fix_verdict_marker'] in x['body']]; print(json.dumps({'root_matches':t['root']==i['source_thread'],'locally_matching_trusted_verdict_ids':m,'authenticated_readback':False},indent=2))"
+  ],
+  "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-1-intake-b",
+  "exit_code": 0,
+  "stdout": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-1-intake-b/evidence/03.stdout",
+  "stderr": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-1-intake-b/evidence/03.stderr"
+}

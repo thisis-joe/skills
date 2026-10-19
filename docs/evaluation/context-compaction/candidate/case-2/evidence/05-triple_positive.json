@@ -1,0 +1,16 @@
+{
+  "name": "triple_positive",
+  "command": [
+    "python3",
+    "app.py",
+    "--triple",
+    "3"
+  ],
+  "expected_exit": 0,
+  "expected_stdout": "9\n",
+  "expected_markers": [],
+  "exit_code": 0,
+  "stdout": "9\n",
+  "stderr": "",
+  "status": "passed"
+}

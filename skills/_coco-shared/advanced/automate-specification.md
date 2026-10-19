@@ -1,4 +1,4 @@
-Before applying this mode, read the [automation core and selection](automate.md) and apply its common contract and cumulative selection rules. Loading a mode does not expand the requested scope or authorize execution.
+Read/apply [core](automate.md) first; no new authority.
 
 ## Conditional workflow specification only
 

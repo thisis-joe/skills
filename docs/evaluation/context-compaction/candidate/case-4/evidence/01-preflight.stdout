@@ -1,0 +1,22 @@
+{
+  "source_thread": "local-example/thread-7",
+  "verdict_marker": "ready",
+  "accepted_marker": false,
+  "safe_actions": [
+    "local file inspection",
+    "static prerequisite assessment",
+    "local evidence/report creation"
+  ],
+  "blocked_actions": [
+    "marker-driven reproduction",
+    "bounded product fix",
+    "external replies/tickets/webhook writes",
+    "draft PR creation",
+    "merge/deploy"
+  ],
+  "reasons": [
+    "trusted configured verdict identity unavailable; ready cannot be accepted",
+    "tracker compensation unavailable; ticket/handoff writes disabled",
+    "control adapter unavailable; live reproduction and equal-input proof unavailable"
+  ]
+}

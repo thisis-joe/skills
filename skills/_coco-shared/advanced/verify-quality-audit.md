@@ -1,4 +1,4 @@
-Before applying this mode, read the [verification core and selection](verify.md) and apply its common contract and cumulative selection rules. Loading a mode does not expand the requested scope or authorize execution.
+Read/apply [core](verify.md) first; no new authority.
 
 ## Conditional standing-quality-bar audit
 

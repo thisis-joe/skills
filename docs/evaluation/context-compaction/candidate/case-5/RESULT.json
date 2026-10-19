@@ -1,0 +1,107 @@
+{
+  "case": "case-5",
+  "outcome": "bug",
+  "maintenance_status": "updated",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "proof/check.py"
+      ],
+      "phase": "unchanged baseline before code/model inspection",
+      "exit_code": 0,
+      "stdout": "bounded model passed: balances 0..2, amounts 0..3\n",
+      "stderr": "",
+      "status": "passed",
+      "snapshot": {
+        "wallet.py": "c2a7fe2a389d179f1060189feffe4ce1675ad51bb4c3ad601daaf5e2968ffdc2",
+        "proof/check.py": "11110e7963b1a51482e19297ea8b02a398e6e9d0835b4b9ad00712e8f2628062",
+        "proof/README.md": "d84c561a9f3a718e9e7cdad8e1624ddaef6b9e5f6754fc1a15306103962bd3cc"
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "proof/check.py"
+      ],
+      "exit_code": 1,
+      "stdout": "{\n  \"property\": \"balance stays nonnegative after spend\",\n  \"wallet_sha256\": \"c2a7fe2a389d179f1060189feffe4ce1675ad51bb4c3ad601daaf5e2968ffdc2\",\n  \"bounds\": {\n    \"balance\": [\n      0,\n      2\n    ],\n    \"amount\": [\n      0,\n      3\n    ],\n    \"steps\": 1\n  },\n  \"checked_input_pairs\": 12,\n  \"model_code_mismatches\": [],\n  \"counterexamples\": [\n    {\n      \"balance\": 0,\n      \"amount\": 1,\n      \"model_result\": -1,\n      \"actual_result\": -1\n    },\n    {\n      \"balance\": 0,\n      \"amount\": 2,\n      \"model_result\": -2,\n      \"actual_result\": -2\n    },\n    {\n      \"balance\": 0,\n      \"amount\": 3,\n      \"model_result\": -3,\n      \"actual_result\": -3\n    },\n    {\n      \"balance\": 1,\n      \"amount\": 2,\n      \"model_result\": -1,\n      \"actual_result\": -1\n    },\n    {\n      \"balance\": 1,\n      \"amount\": 3,\n      \"model_result\": -2,\n      \"actual_result\": -2\n    },\n    {\n      \"balance\": 2,\n      \"amount\": 3,\n      \"model_result\": -1,\n      \"actual_result\": -1\n    }\n  ],\n  \"status\": \"failed\"\n}\n",
+      "stderr": "",
+      "status": "failed"
+    },
+    {
+      "command": [
+        "python3",
+        "-c",
+        "from wallet import spend; balance, amount = 0, 1; actual = spend(balance, amount); print(f'spend(balance={balance}, amount={amount}) -> {actual}', flush=True); assert actual >= 0, f'nonnegative balance violated: {actual}'"
+      ],
+      "exit_code": 1,
+      "stdout": "spend(balance=0, amount=1) -> -1\n",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nAssertionError: nonnegative balance violated: -1\n",
+      "status": "failed"
+    },
+    {
+      "command": [
+        "python3",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "Python 3.9.6\n",
+      "stderr": "",
+      "status": "passed"
+    },
+    {
+      "command": "local evidence retention, bounds, source-hash and report checks",
+      "exit_code": 0,
+      "stdout": "All recorded streams exist. wallet.py SHA-256 unchanged. Bounds retained at balances 0..2, amounts 0..3; 12 actual/model comparisons; six real negative outcomes; no mismatches.\n",
+      "status": "passed"
+    }
+  ],
+  "evidence_paths": [
+    "evidence/01-baseline.json",
+    "evidence/01-baseline.stderr",
+    "evidence/01-baseline.stdout",
+    "evidence/02-current-bounded-check.json",
+    "evidence/02-current-bounded-check.stderr",
+    "evidence/02-current-bounded-check.stdout",
+    "evidence/03-real-counterexample.json",
+    "evidence/03-real-counterexample.stderr",
+    "evidence/03-real-counterexample.stdout",
+    "evidence/04-tool-version.json",
+    "evidence/04-tool-version.stderr",
+    "evidence/04-tool-version.stdout",
+    "evidence/05-retention.json",
+    "evidence/original-README.md.txt",
+    "evidence/original-check.py.txt",
+    "evidence/snapshot-after.json",
+    "evidence/snapshot-before.json"
+  ],
+  "modified_files": [
+    "proof/check.py",
+    "proof/README.md"
+  ],
+  "missing_prerequisites": [
+    "Sync commit/history unavailable; original files are only a provisional baseline"
+  ],
+  "limits": [
+    "One sequential spend call over balances 0..2 and amounts 0..3 only. No unbounded proof or deployed-system verification.",
+    "No new pass: nonnegative property fails in six pairs and the minimal counterexample replays against real wallet.py.",
+    "wallet.py unchanged; product fix outside authorized verification scope."
+  ],
+  "snapshot_before": {
+    "wallet.py": "c2a7fe2a389d179f1060189feffe4ce1675ad51bb4c3ad601daaf5e2968ffdc2",
+    "proof/check.py": "11110e7963b1a51482e19297ea8b02a398e6e9d0835b4b9ad00712e8f2628062",
+    "proof/README.md": "d84c561a9f3a718e9e7cdad8e1624ddaef6b9e5f6754fc1a15306103962bd3cc"
+  },
+  "snapshot_after": {
+    "wallet.py": "c2a7fe2a389d179f1060189feffe4ce1675ad51bb4c3ad601daaf5e2968ffdc2",
+    "proof/check.py": "0b58a84fdf4e12cba36c6896bbdb1991362f0d7997bae671e44756c7efcd2b59",
+    "proof/README.md": "6568c12ac8a18a3ea3c9c54049560914debfb7e55982fb150bdfd7e890146ada"
+  },
+  "counterexample": {
+    "balance": 0,
+    "amount": 1,
+    "actual_result": -1
+  },
+  "classification": "Stale assumed overspend rejection corrected; real product violation confirmed."
+}

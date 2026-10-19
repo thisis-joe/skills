@@ -1,5 +1,7 @@
 # Resolved integration decisions
 
+Execution rules belong to the [common contract](contracts.md) and selected procedures. Consult this record for unresolved conflicts or rationale, not as a routine prerequisite. Delegation and experimental-mode limits are explicitly owned by the common contract.
+
 | Rule tension | COCO decision | Reason |
 |---|---|---|
 | Matt red→green, Addy red→green→refactor | Observe a red behavior test, implement minimal green, permit small local naming/duplication cleanup only after green and recheck; structural changes are separate scoped work | Preserve rapid behavioral feedback and prevent scope expansion |
@@ -20,5 +22,6 @@
 | Cursor setup, transcript globbing and automatic source actions | Replace with supported tools and task-scoped artifacts; no original pstack invocation, private-history sweep, auto-publication or permission expansion | Honor no-Cursor scope and existing user authority |
 | Prototype, experimental and niche tools | Explicit opt-in conditional modes, disposable artifacts, primary-source facts, normal checks before adopting production code | Preserve capabilities without making them default workflow |
 | Context cost versus preserving integrated behavior | Keep the common contract, discovery metadata and operational rules; split verify/automate specialist sections without rewriting them, with cumulative before-action selection and conservative fallback | Reduce unrelated material read for a selected task without removing safety triggers, changing authorization, or claiming quality equivalence from file-size or package checks |
+| Verbatim extraction versus useful context savings | Preserve the original operational sections, compact added routing/guards, and put routine execution policy in the common contract; consult this record for unresolved conflicts or rationale | The first mixed-session application saved only 1.6% in document characters. Audit rule ownership and behavioral boundaries before reducing repeated guidance; keep adverse fallback results and measurement limits visible |
 
 Every source skill/command is accounted for in `sources/coverage.json` in the repository. That file records the original essential rules and adaptation rationale. The active procedures here are authoritative for COCO; original directives are not reloaded at runtime.

@@ -1,0 +1,8 @@
+{
+  "initial_balance": 0,
+  "operation": "wallet.spend",
+  "amount": 1,
+  "result": -1,
+  "property": "result >= 0",
+  "property_holds": false
+}

@@ -8,7 +8,7 @@ license: MIT
 
 Return execution evidence for the actual claim and its limits.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and when scope, risk, or state changes, check for standing-quality audits, runtime-helper creation/maintenance, formal verification creation/maintenance, requested workflow experiments, and pre-commit setup. If any trigger applies or applicability is unclear, read the [advanced core and cumulative mode selection](../_coco-shared/advanced/verify.md) and every matching module before dependent work. The [integration decisions](../_coco-shared/decisions.md) resolve original rule conflicts.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for standing-quality audits, runtime-helper or formal-verification creation/maintenance, requested workflow experiments, and pre-commit setup. If any applies or is unclear, read the [advanced core and mode selection](../_coco-shared/advanced/verify.md) and all matching modules before dependent work.
 
 ## Procedure and output
 

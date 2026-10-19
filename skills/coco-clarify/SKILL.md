@@ -8,7 +8,7 @@ license: MIT
 
 Reach a shared understanding of the behavior and decisions that matter.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/clarify.md) only when the task needs their additional procedure. The [integration decisions](../_coco-shared/decisions.md) resolve original rule conflicts.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/clarify.md) only when the task needs their additional procedure.
 
 ## Procedure and output
 

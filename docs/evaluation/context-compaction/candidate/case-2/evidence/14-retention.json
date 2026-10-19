@@ -1,0 +1,6 @@
+{
+  "command": "local artifact and unchanged-source check after VERIFY.md update",
+  "exit_code": 0,
+  "stdout": "All 13 recorded checks passed; raw stdout/stderr exist; app.py and test_app.py hashes unchanged; no long-lived processes launched.\n",
+  "status": "passed"
+}

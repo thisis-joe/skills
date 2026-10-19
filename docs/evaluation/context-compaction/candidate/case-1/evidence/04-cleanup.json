@@ -1,0 +1,7 @@
+{
+  "command": "cleanup generated test_app bytecode and verify retained evidence/source hashes",
+  "exit_code": 0,
+  "stdout": "{\"removed_owned_cache\": [], \"sources_unchanged\": true, \"evidence_retained\": true}\n",
+  "stderr": "",
+  "status": "passed"
+}

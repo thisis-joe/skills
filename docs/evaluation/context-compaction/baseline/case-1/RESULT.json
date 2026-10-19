@@ -1,0 +1,71 @@
+{
+  "case": "case-1",
+  "outcome": "passed",
+  "claim": "Shipped CLI doubles 3 to 6 and -4 to -8; existing checks pass.",
+  "snapshot_sha256": {
+    "app.py": "7ea18480b723397aa1e243ea4d3b4991673b7aeedb4950c0aac94326b6308555",
+    "test_app.py": "927ac4a3b173cc10fc624c756cafabefe4082885ed2006e9e911e88703cf85d7",
+    "README.md": "222fb4c4a4d9c7b9aaf9a0a27c3bc454393861a63c494eb63f6a0d843d92a296"
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "app.py",
+        "--double",
+        "3"
+      ],
+      "exit_code": 0,
+      "stdout": "6\n",
+      "stderr": "",
+      "status": "passed",
+      "expected_stdout": "6\n",
+      "evidence": "evidence/double-positive.json"
+    },
+    {
+      "command": [
+        "python3",
+        "app.py",
+        "--double",
+        "-4"
+      ],
+      "exit_code": 0,
+      "stdout": "-8\n",
+      "stderr": "",
+      "status": "passed",
+      "expected_stdout": "-8\n",
+      "evidence": "evidence/double-negative.json"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_double (test_app.CliTests) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.019s\n\nOK\n",
+      "status": "passed",
+      "expected_stdout": null,
+      "evidence": "evidence/existing-checks.json"
+    }
+  ],
+  "evidence_paths": [
+    "evidence/double-positive.json",
+    "evidence/double-negative.json",
+    "evidence/existing-checks.json",
+    "evidence/snapshot.json"
+  ],
+  "modified_files": [
+    "RESULT.json",
+    "evidence/double-negative.json",
+    "evidence/double-positive.json",
+    "evidence/existing-checks.json",
+    "evidence/snapshot.json"
+  ],
+  "missing_prerequisites": [],
+  "limits": [
+    "Claims are limited to the two requested real CLI inputs and existing test suite. No product code was modified."
+  ]
+}

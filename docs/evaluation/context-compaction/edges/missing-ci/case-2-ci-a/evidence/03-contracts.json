@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "python3",
+    "/private/tmp/coco-guidance-compaction-muorgx4u/edge-missing-ci/read_skill.py",
+    "_coco-shared/contracts.md"
+  ],
+  "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-missing-ci",
+  "returncode": 0,
+  "stdout_path": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-missing-ci/case-2-ci-a/evidence/03-contracts.stdout",
+  "stderr_path": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-missing-ci/case-2-ci-a/evidence/03-contracts.stderr"
+}

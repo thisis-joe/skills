@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python3",
+    "-c",
+    "from wallet import spend; balance, amount = 0, 1; actual = spend(balance, amount); print(f'spend(balance={balance}, amount={amount}) -> {actual}', flush=True); assert actual >= 0, f'nonnegative balance violated: {actual}'"
+  ],
+  "exit_code": 1,
+  "stdout": "spend(balance=0, amount=1) -> -1\n",
+  "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nAssertionError: nonnegative balance violated: -1\n",
+  "status": "failed"
+}

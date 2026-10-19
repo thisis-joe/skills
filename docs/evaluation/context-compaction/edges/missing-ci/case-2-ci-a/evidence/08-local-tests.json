@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-missing-ci/case-2-ci-a",
+  "returncode": 0,
+  "stdout_path": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-missing-ci/case-2-ci-a/evidence/08-local-tests.stdout",
+  "stderr_path": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-missing-ci/case-2-ci-a/evidence/08-local-tests.stderr"
+}

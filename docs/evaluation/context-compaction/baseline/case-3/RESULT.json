@@ -1,0 +1,55 @@
+{
+  "case": "case-3",
+  "outcome": "specified",
+  "claim": "WORKFLOW.md specifies bug intake and server-side authenticated webhook boundaries without activation.",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-c",
+        "from pathlib import Path\ntext=Path(\"WORKFLOW.md\").read_text()\nrequired={\"artifact-only boundary\":\"specification only; inactive\", \"unresolved identities\":\"UNRESOLVED\", \"server secret\":\"server-side secret facility\", \"trust boundary\":\"untrusted data\", \"source root\":\"immutable source\", \"parent preflight\":\"before every write\", \"idempotency\":\"Atomically claim\", \"durable delivery\":\"durable event queue\", \"unknown outcome\":\"read actual external state\", \"triage\":\"Classify bug\", \"deduplication\":\"plausible related live issue\", \"compensation\":\"verified cancellation\", \"trusted verdict\":\"configured trusted author\", \"implementation ownership\":\"verification-only\", \"reproduction\":\"two independent exact\", \"equal input\":\"equal inputs\", \"no merge\":\"never merge or deploy\", \"recovery\":\"stale claim\", \"bounded retries\":\"exhausted\", \"acceptance\":\"scenario checks\", \"next boundary\":\"next boundary\"}\nmissing=[name for name,phrase in required.items() if phrase not in text]\nfor name in required: print(name+\": \"+(\"MISSING\" if name in missing else \"present\"))\nassert not missing, missing\nassert Path(\"NOTES.md\").read_text()==\"Wanted artifact: a workflow specification for bug intake and a server-side webhook. No activation, scheduling, network requests or messages are authorized. Source and adapter identities are undecided.\\n\"\nprint(\"NOTES.md unchanged; specification coverage checks passed. No live workflow executed.\")\n"
+      ],
+      "exit_code": 1,
+      "stdout": "artifact-only boundary: present\nunresolved identities: present\nserver secret: present\ntrust boundary: present\nsource root: present\nparent preflight: present\nidempotency: present\ndurable delivery: present\nunknown outcome: present\ntriage: present\ndeduplication: present\ncompensation: present\ntrusted verdict: present\nimplementation ownership: present\nreproduction: present\nequal input: present\nno merge: present\nrecovery: MISSING\nbounded retries: present\nacceptance: present\nnext boundary: present\n",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 6, in <module>\nAssertionError: ['recovery']\n",
+      "scope": "Static document consistency and input-preservation check only."
+    },
+    {
+      "command": [
+        "python3",
+        "-c",
+        "from pathlib import Path\ntext=\" \".join(Path(\"WORKFLOW.md\").read_text().lower().split())\nrequired={\"artifact-only boundary\":\"specification only; inactive\", \"unresolved identities\":\"unresolved\", \"server secret\":\"server-side secret facility\", \"trust boundary\":\"untrusted data\", \"source root\":\"immutable source\", \"parent preflight\":\"before every write\", \"idempotency\":\"atomically claim\", \"durable delivery\":\"durable event queue\", \"unknown outcome\":\"read actual external state\", \"triage\":\"classify bug\", \"deduplication\":\"plausible related live issue\", \"compensation\":\"verified cancellation\", \"trusted verdict\":\"configured trusted author\", \"implementation ownership\":\"verification-only\", \"reproduction\":\"two independent exact\", \"equal input\":\"equal inputs\", \"no merge\":\"never merge or deploy\", \"recovery\":\"stale claim\", \"bounded retries\":\"exhausted\", \"acceptance\":\"scenario checks\", \"next boundary\":\"next boundary\"}\nmissing=[name for name,phrase in required.items() if phrase not in text]\nfor name in required: print(name+\": \"+(\"MISSING\" if name in missing else \"present\"))\nassert not missing, missing\nassert Path(\"NOTES.md\").read_text().strip()==\"Wanted artifact: a workflow specification for bug intake and a server-side webhook. No activation, scheduling, network requests or messages are authorized. Source and adapter identities are undecided.\"\nprint(\"NOTES.md unchanged; normalized specification coverage checks passed. No live workflow executed.\")\n"
+      ],
+      "exit_code": 0,
+      "stdout": "artifact-only boundary: present\nunresolved identities: present\nserver secret: present\ntrust boundary: present\nsource root: present\nparent preflight: present\nidempotency: present\ndurable delivery: present\nunknown outcome: present\ntriage: present\ndeduplication: present\ncompensation: present\ntrusted verdict: present\nimplementation ownership: present\nreproduction: present\nequal input: present\nno merge: present\nrecovery: present\nbounded retries: present\nacceptance: present\nnext boundary: present\nNOTES.md unchanged; normalized specification coverage checks passed. No live workflow executed.\n",
+      "stderr": "",
+      "scope": "Static document consistency and input-preservation check only.",
+      "correction": "Normalize line wrapping/case before phrase comparison; original false missing recovery caused by a line break between stale and claim."
+    }
+  ],
+  "evidence_paths": [
+    "evidence/specification-check.json",
+    "evidence/specification-check-corrected.json",
+    "evidence/snapshot.json"
+  ],
+  "modified_files": [
+    "WORKFLOW.md",
+    "RESULT.json",
+    "evidence/specification-check.json",
+    "evidence/specification-check-corrected.json",
+    "evidence/snapshot.json"
+  ],
+  "missing_prerequisites": [
+    "Source identity and immutable source-root policy",
+    "Repository/default branch, operational owner, trusted verdict identity/marker",
+    "Tracker/control adapters and user feature/routing map",
+    "Server/webhook provider, actual authenticated envelope and secret facility",
+    "Budgets, retention, access policy and explicit live-action authority"
+  ],
+  "limits": [
+    "Deliverable is a specification only; no workflow, webhook, schedule, installation, message or external service call was executed.",
+    "Static coverage checks do not prove adapter behavior, authentication, crash safety, deduplication or live delivery.",
+    "Execution stages remain disabled until identities, capabilities, authority and acceptance evidence are resolved.",
+    "Initial static phrase checker falsely reported missing recovery due to line wrapping; corrected normalized check passed, and both raw observations are retained."
+  ]
+}

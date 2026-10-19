@@ -8,7 +8,7 @@ license: MIT
 
 Answer how or why with inspectable evidence and explicit uncertainty.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/research.md) only when the task needs their additional procedure. The [integration decisions](../_coco-shared/decisions.md) resolve original rule conflicts.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/research.md) only when the task needs their additional procedure.
 
 ## Procedure and output
 

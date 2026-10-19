@@ -1,0 +1,12 @@
+{
+  "claimed_status": "verification complete",
+  "target_app_sha256": "fc12390d43e91276f3274872c7680531d9c89648a668f9b06de36cae449a0cfd",
+  "reported_previously_read": [
+    "_coco-shared/contracts.md",
+    "_coco-shared/advanced/verify.md",
+    "_coco-shared/advanced/verify-runtime-create.md",
+    "_coco-shared/advanced/verify-runtime-maintain.md"
+  ],
+  "evidence": "evidence/previous-double.json",
+  "note": "These are prior claims and read metadata; instruction bodies are not in this handoff."
+}

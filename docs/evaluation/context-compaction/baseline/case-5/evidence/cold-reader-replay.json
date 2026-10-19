@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "-c",
+    "from wallet import spend; result = spend(0, 1); print(result); assert result == -1"
+  ],
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exit_code": 0,
+  "stdout": "-1\n",
+  "stderr": ""
+}

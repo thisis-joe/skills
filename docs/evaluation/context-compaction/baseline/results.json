@@ -1,0 +1,40 @@
+{
+  "case_reports": [
+    {
+      "case": "case-1",
+      "report": "case-1/RESULT.json",
+      "outcome": "passed"
+    },
+    {
+      "case": "case-2",
+      "report": "case-2/RESULT.json",
+      "outcome": "changed"
+    },
+    {
+      "case": "case-3",
+      "report": "case-3/RESULT.json",
+      "outcome": "specified"
+    },
+    {
+      "case": "case-4",
+      "report": "case-4/RESULT.json",
+      "outcome": "blocked"
+    },
+    {
+      "case": "case-5",
+      "report": "case-5/RESULT.json",
+      "outcome": "bug"
+    }
+  ],
+  "validation": {
+    "command": [
+      "python3",
+      "-c",
+      "import json\nfrom pathlib import Path\nrequired={\"case\",\"outcome\",\"commands\",\"evidence_paths\",\"modified_files\",\"missing_prerequisites\",\"limits\"}\nfor i in range(1,6):\n root=Path(f\"case-{i}\"); report=json.loads((root/\"RESULT.json\").read_text())\n assert required <= report.keys(), (i, required-report.keys())\n for path in report[\"evidence_paths\"]: assert (root/path).is_file(), (i,path)\n for command in report[\"commands\"]: assert {\"command\",\"exit_code\",\"stdout\",\"stderr\"} <= command.keys(), (i,command)\n print(f\"case-{i}: {report['outcome']}; {len(report['evidence_paths'])} retained evidence files; report schema complete\")\nassert json.loads(Path(\"case-2/evidence/coverage.json\").read_text())[\"protected_files_unchanged\"]\nassert json.loads(Path(\"case-5/evidence/snapshot-after.json\").read_text())[\"wallet_unchanged\"]\nprint(\"Protected-source hash checks and all report/evidence paths passed.\")\n"
+    ],
+    "exit_code": 0,
+    "stdout": "case-1: passed; 4 retained evidence files; report schema complete\ncase-2: changed; 25 retained evidence files; report schema complete\ncase-3: specified; 3 retained evidence files; report schema complete\ncase-4: blocked; 2 retained evidence files; report schema complete\ncase-5: bug; 9 retained evidence files; report schema complete\nProtected-source hash checks and all report/evidence paths passed.\n",
+    "stderr": ""
+  },
+  "scope": "Local disposable tasks only. No products modified, no external services/messages/schedules/installations/pushes."
+}

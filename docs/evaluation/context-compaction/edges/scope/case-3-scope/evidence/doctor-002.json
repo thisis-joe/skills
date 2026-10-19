@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "observation": {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope/app.py",
+      "--help"
+    ],
+    "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-scope/case-3-scope",
+    "arguments": [
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: app.py [-h] (--double DOUBLE | --multiply MULTIPLY MULTIPLY)\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --double DOUBLE\n  --multiply MULTIPLY MULTIPLY\n",
+    "stderr": ""
+  },
+  "observed_public_options": [
+    "--double",
+    "--help",
+    "--multiply"
+  ],
+  "expected_public_options": [
+    "--double",
+    "--help",
+    "--multiply"
+  ],
+  "mapped_features": [
+    "help",
+    "double",
+    "multiply",
+    "argument-validation"
+  ],
+  "feature_files": [
+    "argument-validation",
+    "double",
+    "help",
+    "multiply"
+  ],
+  "checks": {
+    "help_usable": true,
+    "public_options_mapped": true,
+    "index_matches_driver": true,
+    "index_matches_feature_files": true
+  },
+  "observed_at_utc": "2026-10-19T14:20:04.561757+00:00",
+  "app_sha256": "e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b",
+  "helper_sha256": "7840fd55718430ba014aeff73b9c21ad7633175355de759afca7ebe31e339275",
+  "feature_map_sha256": {
+    "features/argument-validation.md": "569d74d10052cef1d7b8015d4400e24c10c8e68731bb2be95dc11eb78e25e442",
+    "features/double.md": "d0f5e42c0edbf0b554784d8cb3fb491f0f5fecd2f6877607addbfed0d9881d7c",
+    "features/help.md": "92da0ba6447b348e81b424796b90002b6d619bc2f0299374c27e6da6ff74a514",
+    "features/index.json": "deae89495efeb26ab422efc96c093d67c021cf1871f0d76217e430e428f3a950",
+    "features/multiply.md": "b6a4010542aee948e84f17080c50d0b7d590a33f63f8760d65b9751d80144de4"
+  },
+  "evidence_path": "evidence/doctor-002.json"
+}

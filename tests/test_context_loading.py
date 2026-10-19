@@ -30,6 +30,18 @@ def split_sections(text):
     return preamble, blocks
 
 
+def current_preamble(original):
+    """Only the audited loading-policy reference changed after extraction.
+
+    Keep the historical preamble for exact original reconstruction below.
+    The common contract now owns operative policy; decisions is conditional
+    background. Evidence/ownership/conditional-work lines remain byte-frozen.
+    """
+    return original.replace(
+        'Apply the [common contract](../contracts.md) and [resolved decisions](../decisions.md).',
+        'Apply the [common contract](../contracts.md).')
+
+
 def local_links(text, source):
     """Resolve Markdown file links from the file that actually owns the text."""
     for match in LINK.finditer(text):
@@ -77,7 +89,7 @@ def inspect_context_loading(root=ROOT, baseline=None):
             managed = name in actual_files
             if managed:
                 if name == router_name:
-                    if preamble != original['preamble']:
+                    if preamble != current_preamble(original['preamble']):
                         fail('preamble', name)
                 else:
                     # A directly opened module must lead back to its family core.

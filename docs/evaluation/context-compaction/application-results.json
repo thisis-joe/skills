@@ -1,0 +1,247 @@
+{
+  "baseline_commit": "206773fbf03cf1046299408a49e3a6999cb2a19c",
+  "measurement": "Unicode characters output by instrumented skill-document reads; not native session tokens, peak context, time, or cost.",
+  "arms": {
+    "baseline": {
+      "characters": 42571,
+      "document_reads": 15,
+      "frozen_snapshot_unchanged": true,
+      "case_outcomes": [
+        {
+          "case": "case-1",
+          "outcome": "passed",
+          "claim": "Shipped CLI doubles 3 to 6 and -4 to -8; existing checks pass."
+        },
+        {
+          "case": "case-2",
+          "outcome": "changed",
+          "claim": "Runtime verification documentation covers all discoverable CLI features and listed representative states."
+        },
+        {
+          "case": "case-3",
+          "outcome": "specified",
+          "claim": "WORKFLOW.md specifies bug intake and server-side authenticated webhook boundaries without activation."
+        },
+        {
+          "case": "case-4",
+          "outcome": "blocked",
+          "claim": "Only read-only local intake/source inspection is safe; ready marker does not permit reproduction or fix."
+        },
+        {
+          "case": "case-5",
+          "outcome": "bug",
+          "claim": "The unchanged nonnegative-balance property fails within balances 0..2 and amounts 0..3 after model drift is corrected; wallet.py was not modified."
+        }
+      ]
+    },
+    "candidate": {
+      "characters": 33422,
+      "document_reads": 14,
+      "frozen_snapshot_unchanged": true,
+      "case_outcomes": [
+        {
+          "case": "case-1",
+          "outcome": "passed",
+          "claim": "Shipped CLI doubles 3 to 6 and -4 to -8; existing checks pass."
+        },
+        {
+          "case": "case-2",
+          "outcome": "changed",
+          "claim": "Maintain complete source/live feature map for the current CLI."
+        },
+        {
+          "case": "case-3",
+          "outcome": "prepared",
+          "claim": null
+        },
+        {
+          "case": "case-4",
+          "outcome": "blocked",
+          "claim": null
+        },
+        {
+          "case": "case-5",
+          "outcome": "bug",
+          "claim": null
+        }
+      ]
+    }
+  },
+  "coordinator_rechecks": [
+    {
+      "arm": "baseline",
+      "case": "case-1",
+      "argv": [
+        "python3",
+        "app.py",
+        "--double",
+        "3"
+      ],
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "stdout": "6\n",
+      "stderr": ""
+    },
+    {
+      "arm": "baseline",
+      "case": "case-1",
+      "argv": [
+        "python3",
+        "app.py",
+        "--double",
+        "-4"
+      ],
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "stdout": "-8\n",
+      "stderr": ""
+    },
+    {
+      "arm": "baseline",
+      "case": "case-1",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "-v"
+      ],
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_double (test_app.CliTests) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.019s\n\nOK\n"
+    },
+    {
+      "arm": "baseline",
+      "case": "case-2",
+      "argv": [
+        "python3",
+        "app.py",
+        "--triple",
+        "-4"
+      ],
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "stdout": "-12\n",
+      "stderr": ""
+    },
+    {
+      "arm": "baseline",
+      "case": "case-5",
+      "argv": [
+        "python3",
+        "proof/check.py"
+      ],
+      "expected_exit_code": 1,
+      "exit_code": 1,
+      "stdout": "{\n  \"property\": \"balance stays nonnegative\",\n  \"bounds\": {\n    \"initial_balance\": [\n      0,\n      2\n    ],\n    \"amount\": [\n      0,\n      3\n    ],\n    \"steps\": 1\n  },\n  \"checked_transitions\": 12,\n  \"wallet_sha256\": \"c2a7fe2a389d179f1060189feffe4ce1675ad51bb4c3ad601daaf5e2968ffdc2\",\n  \"model_code_mismatches\": [],\n  \"property_violations\": [\n    {\n      \"balance\": 0,\n      \"amount\": 1,\n      \"model_result\": -1,\n      \"actual_result\": -1\n    },\n    {\n      \"balance\": 0,\n      \"amount\": 2,\n      \"model_result\": -2,\n      \"actual_result\": -2\n    },\n    {\n      \"balance\": 0,\n      \"amount\": 3,\n      \"model_result\": -3,\n      \"actual_result\": -3\n    },\n    {\n      \"balance\": 1,\n      \"amount\": 2,\n      \"model_result\": -1,\n      \"actual_result\": -1\n    },\n    {\n      \"balance\": 1,\n      \"amount\": 3,\n      \"model_result\": -2,\n      \"actual_result\": -2\n    },\n    {\n      \"balance\": 2,\n      \"amount\": 3,\n      \"model_result\": -1,\n      \"actual_result\": -1\n    }\n  ],\n  \"status\": \"failed\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "arm": "baseline",
+      "case": "case-5",
+      "argv": [
+        "python3",
+        "-c",
+        "from wallet import spend; result=spend(0,1); print(result); assert result == -1"
+      ],
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "stdout": "-1\n",
+      "stderr": ""
+    },
+    {
+      "arm": "candidate",
+      "case": "case-1",
+      "argv": [
+        "python3",
+        "app.py",
+        "--double",
+        "3"
+      ],
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "stdout": "6\n",
+      "stderr": ""
+    },
+    {
+      "arm": "candidate",
+      "case": "case-1",
+      "argv": [
+        "python3",
+        "app.py",
+        "--double",
+        "-4"
+      ],
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "stdout": "-8\n",
+      "stderr": ""
+    },
+    {
+      "arm": "candidate",
+      "case": "case-1",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "-v"
+      ],
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_double (test_app.CliTests) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.025s\n\nOK\n"
+    },
+    {
+      "arm": "candidate",
+      "case": "case-2",
+      "argv": [
+        "python3",
+        "app.py",
+        "--triple",
+        "-4"
+      ],
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "stdout": "-12\n",
+      "stderr": ""
+    },
+    {
+      "arm": "candidate",
+      "case": "case-5",
+      "argv": [
+        "python3",
+        "proof/check.py"
+      ],
+      "expected_exit_code": 1,
+      "exit_code": 1,
+      "stdout": "{\n  \"property\": \"balance stays nonnegative after spend\",\n  \"wallet_sha256\": \"c2a7fe2a389d179f1060189feffe4ce1675ad51bb4c3ad601daaf5e2968ffdc2\",\n  \"bounds\": {\n    \"balance\": [\n      0,\n      2\n    ],\n    \"amount\": [\n      0,\n      3\n    ],\n    \"steps\": 1\n  },\n  \"checked_input_pairs\": 12,\n  \"model_code_mismatches\": [],\n  \"counterexamples\": [\n    {\n      \"balance\": 0,\n      \"amount\": 1,\n      \"model_result\": -1,\n      \"actual_result\": -1\n    },\n    {\n      \"balance\": 0,\n      \"amount\": 2,\n      \"model_result\": -2,\n      \"actual_result\": -2\n    },\n    {\n      \"balance\": 0,\n      \"amount\": 3,\n      \"model_result\": -3,\n      \"actual_result\": -3\n    },\n    {\n      \"balance\": 1,\n      \"amount\": 2,\n      \"model_result\": -1,\n      \"actual_result\": -1\n    },\n    {\n      \"balance\": 1,\n      \"amount\": 3,\n      \"model_result\": -2,\n      \"actual_result\": -2\n    },\n    {\n      \"balance\": 2,\n      \"amount\": 3,\n      \"model_result\": -1,\n      \"actual_result\": -1\n    }\n  ],\n  \"status\": \"failed\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "arm": "candidate",
+      "case": "case-5",
+      "argv": [
+        "python3",
+        "-c",
+        "from wallet import spend; result=spend(0,1); print(result); assert result == -1"
+      ],
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "stdout": "-1\n",
+      "stderr": ""
+    }
+  ],
+  "characters_saved": 9149,
+  "reduction_percent": 21.491155951234408,
+  "original_pre_extraction_reference": {
+    "characters": 43249,
+    "source": "../context-loading/application-results.json",
+    "not_a_third_repeated_arm": true
+  },
+  "limits": [
+    "One worker per arm, five sequential tasks, one pass; no statistical equivalence claim.",
+    "Parent/default configuration inherited without model override; exact backend identifier unavailable.",
+    "Read logs have no case timestamps, so they do not independently prove pre-action loading order.",
+    "No production browser, remote intake, scheduler, or actual formal tool tested."
+  ]
+}

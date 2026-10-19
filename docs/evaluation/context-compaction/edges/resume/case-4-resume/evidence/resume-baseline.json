@@ -1,0 +1,93 @@
+{
+  "protected_sha256": {
+    "app.py": "e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b",
+    "test_app.py": "43e4b979a3fef8184f285c8f106f59af090529db4686d7f840aec65e7806af86",
+    "USER_NOTES.md": "f0022ca0ffe7e3d13c36856a34901c50580a779a17a877b041cdf0377f4bbc91",
+    "HANDOFF.json": "e3233770f1ddf37f594931a55b3f12838fdf470e44559f4b6235f91ac326cd09",
+    "TASK_STATE.json": "518c4939846ced96d28505fb3b06e3be8a2e3d2257e65a774e968cde20f00f81",
+    "evidence/previous-double.json": "6d5d6d11deff7a27475dfc327d8a6bf7f6bb9ccbea00ccf492d77f07173275f1"
+  },
+  "commands": [
+    {
+      "command": [
+        "git",
+        "status",
+        "--porcelain=v1"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-resume/case-4-resume",
+      "stdout": " M USER_NOTES.md\n M app.py\n",
+      "stderr": "",
+      "exit": 0
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-resume/case-4-resume",
+      "stdout": "78923f0272d116aa877d02d0e74b0a142263e40e\n",
+      "stderr": "",
+      "exit": 0
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--",
+        "app.py",
+        "USER_NOTES.md"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-resume/case-4-resume",
+      "stdout": "diff --git a/USER_NOTES.md b/USER_NOTES.md\nindex cbabbec..82aa9c2 100644\n--- a/USER_NOTES.md\n+++ b/USER_NOTES.md\n@@ -2,3 +2,5 @@\n \n Preserve this draft byte-for-byte. This is user work, not harness output.\n \ud55c\uae00 \uba54\ubaa8: \uac80\uc99d \ubb38\uc11c\ub97c \uace0\uccd0\ub3c4 \uc774 \ud30c\uc77c\uc740 \ubcf4\uc874\ud55c\ub2e4.\n+\n+USER MODIFICATION: keep this additional draft text.\ndiff --git a/app.py b/app.py\nindex 9c86bdf..3dfcffa 100644\n--- a/app.py\n+++ b/app.py\n@@ -3,6 +3,7 @@ import argparse\n parser = argparse.ArgumentParser()\n group = parser.add_mutually_exclusive_group(required=True)\n group.add_argument('--double', type=int)\n+group.add_argument('--multiply', type=int, nargs=2)\n args = parser.parse_args()\n-result = args.double * 2\n+result = args.double * 2 if args.double is not None else args.multiply[0] * args.multiply[1]\n print(result)\n",
+      "stderr": "",
+      "exit": 0
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "app.py",
+        "--help"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-resume/case-4-resume",
+      "stdout": "usage: app.py [-h] (--double DOUBLE | --multiply MULTIPLY MULTIPLY)\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --double DOUBLE\n  --multiply MULTIPLY MULTIPLY\n",
+      "stderr": "",
+      "exit": 0
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "verify_cli.py",
+        "doctor"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-resume/case-4-resume",
+      "stdout": "{\"passed\": true, \"observation\": {\"arguments\": [\"--help\"], \"returncode\": 0, \"stdout\": \"usage: app.py [-h] (--double DOUBLE | --multiply MULTIPLY MULTIPLY)\\n\\noptional arguments:\\n  -h, --help            show this help message and exit\\n  --double DOUBLE\\n  --multiply MULTIPLY MULTIPLY\\n\", \"stderr\": \"\"}, \"app_sha256\": \"e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b\"}\n",
+      "stderr": "",
+      "exit": 0
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "verify_cli.py",
+        "drive"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-resume/case-4-resume",
+      "stdout": "{\"passed\": true, \"checks\": [{\"arguments\": [\"--double\", \"3\"], \"returncode\": 0, \"stdout\": \"6\\n\", \"stderr\": \"\", \"expected_stdout\": \"6\\n\", \"passed\": true}, {\"arguments\": [\"--double\", \"-4\"], \"returncode\": 0, \"stdout\": \"-8\\n\", \"stderr\": \"\", \"expected_stdout\": \"-8\\n\", \"passed\": true}], \"app_sha256\": \"e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b\"}\n",
+      "stderr": "",
+      "exit": 0
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-m",
+        "unittest",
+        "-v"
+      ],
+      "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-resume/case-4-resume",
+      "stdout": "",
+      "stderr": "test_double_positive (test_app.CliTests) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.021s\n\nOK\n",
+      "exit": 0
+    }
+  ],
+  "finding": "Current app hash differs from handoff/task claims; existing driver omits multiply, double zero and invalid shared CLI states."
+}

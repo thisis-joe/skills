@@ -8,7 +8,7 @@ license: MIT
 
 Create scoped, resumable automation with explicit activation and effect boundaries.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and when scope, risk, or state changes, check for CI/deployment, sustained execution, webhook/bot work, configured report intake, manual setup wizards, and workflow specifications. If any trigger applies or applicability is unclear, read the [advanced core and cumulative mode selection](../_coco-shared/advanced/automate.md) and every matching module before dependent work. The [integration decisions](../_coco-shared/decisions.md) resolve original rule conflicts.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for CI/deployment, sustained execution, webhook/bot work, report intake (setup/triage/fix), manual setup wizards, and workflow specifications. If any applies or is unclear, read the [advanced core and mode selection](../_coco-shared/advanced/automate.md) and all matching modules before dependent work.
 
 ## Procedure and output
 

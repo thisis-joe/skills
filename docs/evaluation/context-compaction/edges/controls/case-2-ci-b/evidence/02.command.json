@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "python3",
+    "--version"
+  ],
+  "cwd": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b",
+  "environment_override": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exit_code": 0,
+  "stdout": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/02.stdout",
+  "stderr": "/private/tmp/coco-guidance-compaction-muorgx4u/edge-controls/case-2-ci-b/evidence/02.stderr"
+}

@@ -8,7 +8,7 @@ license: MIT
 
 Own execution from the first ready task through evidence-backed work-unit completion.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/build.md) only when the task needs their additional procedure. The [integration decisions](../_coco-shared/decisions.md) resolve original rule conflicts.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/build.md) only when the task needs their additional procedure.
 
 ## 기능 브랜치 준비
 

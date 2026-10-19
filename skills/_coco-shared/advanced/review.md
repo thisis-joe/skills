@@ -1,6 +1,6 @@
 # Review modes
 
-Apply the [common contract](../contracts.md) and [resolved decisions](../decisions.md).
+Apply the [common contract](../contracts.md).
 Review returns findings on a frozen artifact. It does not edit product code, stage files, commit, or mark tasks done.
 [Build](build.md) owns accepted fixes and returns the changed snapshot for only the affected rechecks.
 

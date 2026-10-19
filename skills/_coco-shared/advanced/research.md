@@ -1,6 +1,6 @@
 # Research procedures
 
-Apply the [common contract](../contracts.md) and [integration decisions](../decisions.md). Research establishes facts and constraints; it does not authorize implementation, account changes or publication.
+Apply the [common contract](../contracts.md). Research establishes facts and constraints; it does not authorize implementation, account changes or publication.
 
 ## Input and selection
 

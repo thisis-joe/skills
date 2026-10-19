@@ -1,37 +1,26 @@
 # Automation modes
 
-Apply the [common contract](../contracts.md) and [resolved decisions](../decisions.md).
+Apply the [common contract](../contracts.md).
 Choose CI, recurring work, webhook UI, sustained task execution, or report intake from the actual request.
 Preparing automation is distinct from activating it; existing authorization and native runtime requirements govern each external action.
 Never install another agent stack, invoke source skills, scan private transcripts, or infer publication permission from automatic mode.
 
 ## Mode selection
 
-Keep the common contract and all core sections below active for every operation. Evaluate every
-condition independently against the work being designed, prepared, or executed, and load all
-matching modules cumulatively before the first action that depends on them. Re-evaluate when new
-scope, risk, state, or missing prerequisites are discovered. If applicability is uncertain, read
-the relevant modules broadly; if the work cannot be classified, read all automation modules.
-If a required reference is unavailable, stop the dependent work and report the missing guidance
-rather than infer it. Select internally from the actual request and artifacts; never require the
-user to learn or choose source skills or internal mode names.
+Evaluate each row independently; read all matches before dependent work. Re-evaluate on new scope, risk, state, or missing prerequisites. If uncertain, read relevant modes broadly; if unclassifiable, read all modes. Stop dependent work and report unavailable required guidance.
 
-Loading a module supplies its constraints and dependencies; it does not authorize execution,
-activation, messaging, tickets, deployment, or a wider scope. For a specification-only request,
-read matching execution modules to preserve their requirements, then return the specification;
-do not execute or activate the operation. Existing user authorization and native runtime boundaries
-still govern every effect. Intake dependencies below apply even when only a later stage is requested.
+Apply the common contract and entire core even without matches. Select internally from request/evidence; users need not learn source skills or mode names. Reading grants no wider scope or authority. For specification-only requests, read matching execution modes for constraints; return the specification without executing/activating.
 
-| Condition in the requested work or current evidence | Read before dependent work |
+| When | Read |
 | --- | --- |
-| CI/CD, build/test gates, pipeline failures, or deployment preparation are involved. | [CI and deployment preparation](automate-ci.md) |
-| An authorized task sequence, worker queue, dependency graph, interruption, or sustained recovery needs orchestration. | [Sustained task execution](automate-sustained.md) |
-| A requested webhook or bot UI, authenticated event delivery, or its transport is involved. | [Webhook or bot UI](automate-webhook.md) |
-| Report intake is configured, prepared, activated, or its integration contracts are designed. | [Report-intake setup](automate-intake-setup.md) |
-| Report intake investigates/classifies/deduplicates reports or may write a verdict, reply, or ticket. | [Report-intake setup](automate-intake-setup.md), then [intake triage](automate-intake-triage.md), even for an existing configured intake. |
-| Intake reproduces or verifies a report, follows a verdict marker, or attempts a bounded fix or draft PR. | [Report-intake setup](automate-intake-setup.md), [intake triage](automate-intake-triage.md), then [intake reproduction and fix](automate-intake-fix.md); setup and triage remain prerequisites. |
-| Explicitly requested repeatable/manual setup needs a person's dashboard access, credential entry, or irreversible choice. | [Human-operated setup wizard](automate-wizard.md) |
-| The requested deliverable is a reusable workflow specification, including a workflow-design interview. | [Workflow specification only](automate-specification.md), plus every other matching module for its constraints only. |
+| CI/CD, build/test gates, pipeline failures, or deployment preparation. | [CI](automate-ci.md) |
+| Authorized task sequence, worker queue, dependency graph, interruption, or sustained recovery orchestration. | [Sustained](automate-sustained.md) |
+| Requested webhook/bot UI, authenticated event delivery, or transport. | [Webhook](automate-webhook.md) |
+| Report intake configured/prepared/activated, or its integration contracts designed. | [Setup](automate-intake-setup.md) |
+| Intake investigation/classification/deduplication, or possible verdict/reply/ticket writes. | [Setup](automate-intake-setup.md), then [triage](automate-intake-triage.md), even for existing intake. |
+| Intake reproduction/verification, verdict-marker following, or bounded fix/draft PR. | [Setup](automate-intake-setup.md), then [triage](automate-intake-triage.md), then [fix](automate-intake-fix.md). |
+| Explicitly requested repeatable/manual setup needs dashboard access, credential entry, or irreversible human choice. | [Wizard](automate-wizard.md) |
+| Reusable workflow specification, including workflow-design interview. | [Spec](automate-specification.md), plus other matches for constraints only. |
 
 ## Define the operation
 

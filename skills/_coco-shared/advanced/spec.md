@@ -1,6 +1,6 @@
 # Specification procedures
 
-Apply the [common contract](../contracts.md) and [resolved decisions](../decisions.md). A spec owns expected behavior; [plan](plan.md) owns execution structure and the designated task target owns status.
+Apply the [common contract](../contracts.md). A spec owns expected behavior; [plan](plan.md) owns execution structure and the designated task target owns status.
 
 ## Input and mode
 

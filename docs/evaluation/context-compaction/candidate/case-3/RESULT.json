@@ -1,0 +1,48 @@
+{
+  "case": "case-3",
+  "outcome": "prepared",
+  "commands": [
+    {
+      "command": "Read NOTES.md locally",
+      "exit_code": 0,
+      "stdout": "Wanted artifact: a workflow specification for bug intake and a server-side webhook. No activation, scheduling, network requests or messages are authorized. Source and adapter identities are undecided.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-c",
+        "from pathlib import Path; p=Path('WORKFLOW.md'); s=p.read_text(); required=['Status: specification prepared; inactive.', 'Source identity and adapter undecided; disabled', 'one configured coordinator', 'payload digest', 'before retry', 'zero writes', 'compensat', 'No schedule', 'Next work is a separately scoped implementation']; assert all(x.lower() in s.lower() for x in required); assert Path('NOTES.md').is_file(); print('PASS: artifact exists, explicit inactive boundary and required specification constraints present. Runtime workflow and external integrations were not exercised.')"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: artifact exists, explicit inactive boundary and required specification constraints present. Runtime workflow and external integrations were not exercised.\n",
+      "stderr": "",
+      "status": "passed",
+      "claim": "Static artifact completeness only, not workflow runtime behavior."
+    }
+  ],
+  "evidence_paths": [
+    "evidence/01-notes.json",
+    "evidence/01-notes.stderr",
+    "evidence/01-notes.stdout",
+    "evidence/02-artifact-check.json",
+    "evidence/02-artifact-check.stderr",
+    "evidence/02-artifact-check.stdout"
+  ],
+  "modified_files": [
+    "WORKFLOW.md"
+  ],
+  "missing_prerequisites": [
+    "Source and adapter identities",
+    "Repository, owner, marker, destination/field mappings, budgets and retention",
+    "Authenticated webhook runtime, secret facility, durable state and delivery readback",
+    "Separate implementation and activation authorization"
+  ],
+  "limits": [
+    "Specification-only task: no automation scenario, external service, schedule, installation, or message executed. Static checks do not establish runtime behavior."
+  ],
+  "snapshot": {
+    "NOTES.md": "7bf9b03d0bca70a8a96882337022166aab901ae0679bacec60c042c5dba18c71",
+    "WORKFLOW.md": "dcc3728f81008f6365c6858d2dd162f9576e0f59c5cb5319b0720831acd95bd3"
+  }
+}

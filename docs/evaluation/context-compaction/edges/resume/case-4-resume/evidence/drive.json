@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "arguments": [
+        "--double",
+        "3"
+      ],
+      "returncode": 0,
+      "stdout": "6\n",
+      "stderr": "",
+      "expected_stdout": "6\n",
+      "passed": true
+    },
+    {
+      "arguments": [
+        "--double",
+        "-4"
+      ],
+      "returncode": 0,
+      "stdout": "-8\n",
+      "stderr": "",
+      "expected_stdout": "-8\n",
+      "passed": true
+    }
+  ],
+  "app_sha256": "e6e8764395b498c4fd7b88f2a5e434db7018a29767e94862733e5fac9a622f0b"
+}

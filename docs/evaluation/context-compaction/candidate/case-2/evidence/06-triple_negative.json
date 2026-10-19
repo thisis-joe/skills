@@ -1,0 +1,16 @@
+{
+  "name": "triple_negative",
+  "command": [
+    "python3",
+    "app.py",
+    "--triple",
+    "-4"
+  ],
+  "expected_exit": 0,
+  "expected_stdout": "-12\n",
+  "expected_markers": [],
+  "exit_code": 0,
+  "stdout": "-12\n",
+  "stderr": "",
+  "status": "passed"
+}
