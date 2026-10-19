@@ -26,7 +26,7 @@ For each option, provide:
 
 - A unique number and short title.
 - One line explaining its value in the current context.
-- A complete, copyable invocation containing the exact skill invocation name and request.
+- A complete, copyable invocation containing the exact skill invocation name and request in the current runtime's syntax: `$name` in Codex or `/name` in Claude Code. Preserve catalog namespaces.
 
 Mark one best fit as **Recommended** and explain why. Include the necessary target, work, scope, and expected result while preserving agreed constraints. If the user wants one task, keep every option within it; do not add continuous execution or external publication. Do not present unresolved policy as settled fact in a suggested request.
 
@@ -41,4 +41,4 @@ Briefly name the selected skill and current purpose, present options, explain th
 
 The recommendation stage ends with options and waiting for selection. The selected skill owns subsequent work and reports actual results and incomplete conditions under its procedure.
 
-Examples: `$coco-whattosay coco-review` suggests review requests for the current work. `$coco-whattosay coco-review Suggest request wording only` does not execute even after a number is selected. If the skill is already selected, `$coco-whattosay` carries it forward. Use `coco-tellmeskill` when discovery or explanation itself is the goal.
+Examples: `$coco-whattosay coco-review` in Codex or `/coco-whattosay coco-review` in Claude Code suggests review requests for the current work. Adding `Suggest request wording only` does not execute even after a number is selected. If the skill is already selected, invoking `coco-whattosay` carries it forward. Use `coco-tellmeskill` when discovery or explanation itself is the goal.

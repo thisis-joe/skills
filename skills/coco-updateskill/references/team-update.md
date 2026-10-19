@@ -33,12 +33,12 @@ Discover actual COCO check commands. Examples for the current package:
 ```text
 python3 scripts/validate.py
 python3 -m unittest discover -s tests -v
-python3 scripts/install.py --dry-run
-python3 scripts/install.py
+python3 scripts/install.py --runtime <confirmed-runtime> --dry-run
+python3 scripts/install.py --runtime <confirmed-runtime>
 python3 scripts/validate.py --installed <confirmed-installation-directory>
 ```
 
-Do not assume another repository has these commands. Also run available skill-format checks. Format validation does not prove sound judgment: test actual cases for both changed and preserved paths. If required tools or independent review are unavailable, distinguish confirmed scope from unverified scope. Do not weaken checks or rewrite historical evaluation reports to hide failure.
+Use `codex` or `claude` for the confirmed runtime; retain an explicit destination when updating a project-scoped or custom installation. Follow the [runtime guide](../../_coco-shared/runtimes.md) when both runtimes are installed. Do not assume another repository has these commands. Also run available skill-format checks. Format validation does not prove sound judgment: test actual cases for both changed and preserved paths. If required tools or independent review are unavailable, distinguish confirmed scope from unverified scope. Do not weaken checks or rewrite historical evaluation reports to hide failure.
 
 Before installation, compare the ownership manifest with current files and use the supported installer's preflight. Preserve and show differences for conflicts involving personal edits, extra files, same-name external skills, or symbolic links. Do not delete the ownership manifest or manipulate hashes to manufacture installation success. If a supported preservation/migration procedure cannot be established, leave installation blocked separately from source changes.
 

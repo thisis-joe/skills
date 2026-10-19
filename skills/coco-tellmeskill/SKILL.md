@@ -37,4 +37,4 @@ Distinguish behavior actually supported by the source from conditional/optional 
 
 Apply follow-up requests such as "more detail" or "briefly" to the selected target in the same format. For a different skill, ask for the new target's explanation length. Stop on cancellation. Explaining or selecting a skill does not authorize execution, installation, or configuration changes.
 
-Example: `$coco-tellmeskill` → complete list → `coco-build` → "simple explanation." A direct request such as `$coco-tellmeskill coco-build detailed explanation` goes straight to explanation after checking source and format.
+Example: `$coco-tellmeskill` in Codex or `/coco-tellmeskill` in Claude Code → complete list → `coco-build` → "simple explanation." Appending `coco-build detailed explanation` goes straight to explanation after checking source and format.
