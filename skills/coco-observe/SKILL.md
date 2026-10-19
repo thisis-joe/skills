@@ -1,6 +1,6 @@
 ---
 name: coco-observe
-description: "Use when adding or repairing logs, metrics, tracing, alerts, runbooks or operational visibility for a feature. 관측·계측·알림·운영 진단."
+description: "Use when adding or repairing logs, metrics, tracing, alerts, runbooks or operational visibility for a feature."
 license: MIT
 ---
 

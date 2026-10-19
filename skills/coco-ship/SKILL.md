@@ -1,6 +1,6 @@
 ---
 name: coco-ship
-description: "Use when preparing a PR, deciding release readiness, planning a staged launch, or executing an already authorized release. PR·출시 판단·롤백 준비."
+description: "Use when preparing a PR, deciding release readiness, planning a staged launch, or executing an already authorized release."
 license: MIT
 ---
 

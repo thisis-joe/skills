@@ -1,6 +1,6 @@
 ---
 name: coco-triage
-description: "Use when assessing incoming issues, deduplicating bug reports, selecting ready work, or distinguishing investigation from implementable tasks. 이슈 분류·우선순위·작업 선택."
+description: "Use when assessing incoming issues, deduplicating bug reports, selecting ready work, or distinguishing investigation from implementable tasks."
 license: MIT
 ---
 

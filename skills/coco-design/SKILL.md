@@ -1,6 +1,6 @@
 ---
 name: coco-design
-description: "Use when choosing module or API interfaces, changing architecture, deciding a test boundary, exploring prototypes, or comparing alternative implementations. 설계·인터페이스·프로토타입."
+description: "Use when choosing module or API interfaces, changing architecture, deciding a test boundary, exploring prototypes, or comparing alternative implementations."
 license: MIT
 ---
 

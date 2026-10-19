@@ -1,6 +1,6 @@
 ---
 name: coco-research
-description: "Use when understanding existing code, tracing a design decision, locating implementation, checking an external API against its installed version, or conducting technical research. 코드 조사와 설계 이유 확인."
+description: "Use when understanding existing code, tracing a design decision, locating implementation, checking an external API against its installed version, or conducting technical research."
 license: MIT
 ---
 

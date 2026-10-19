@@ -1,36 +1,36 @@
 ---
 name: coco-updateskill
-description: "Use when an existing skill needs its instructions, workflow, references or team conventions changed to fit the team. 기존 스킬 수정·팀 규칙 반영·영향 확인·검증·설치 갱신."
+description: "Use when an existing skill needs its instructions, workflow, references or team conventions changed to fit the team."
 license: MIT
 ---
 
 # coco-updateskill
 
-기존 스킬을 팀의 실제 개발 방식에 맞게 수정하고, 관련 규칙과 참조의 일관성을 확인한 뒤 검증된 변경을 설치에 반영한다. [공통 계약](../_coco-shared/contracts.md)과 [팀 수정·반영 절차](references/team-update.md)를 따른다.
+Adapt an existing skill to the team's actual development practices, check related rules and references for consistency, and install the verified changes. Follow the [common contract](../_coco-shared/contracts.md) and [team update procedure](references/team-update.md). Localize questions, examples, and reports to the user's language; the prompts below are English examples.
 
-## 시작 대화
+## Opening conversation
 
-기본 흐름은 **전체 스킬 목록 → 수정할 스킬 선택 → 팀에 맞게 바꿀 내용 질문**이다.
+The default flow is **complete skill list → skill selection → desired team changes**.
 
-1. **전체 목록 표시.** 현재 대화의 사용 가능 스킬 카탈로그에서 COCO·시스템·플러그인과 이 스킬 자체를 모두 포함한다. 이름순으로 정렬하고 고유한 연속 번호·정확한 식별자·한 줄 용도를 붙인다. 한국어 대화에서는 용도를 한국어로 요약한다. 같은 정규 식별자의 중복만 합치며 네임스페이스가 다른 동명 스킬은 구분한다. 목록을 하드코딩하거나 대표 항목만 보여주지 않는다. 길면 표를 나누되 항목을 생략하거나 검색·페이징을 요구하지 않는다. 카탈로그가 없으면 지원되는 목록 조회 기능을 사용하고, 조회도 불가능하면 확인 가능한 범위를 밝힌다. 목록을 만들기 위해 모든 스킬 본문을 읽거나 비활성 원문 보관 폴더를 포함하지 않는다.
-2. **수정할 스킬 선택 대기.** “어떤 스킬을 수정할까요? 번호나 스킬 이름을 선택해주세요.”를 묻고 답을 기다린다. 가용한 질문 도구를 사용하거나 최종 메시지로 질문하고 턴을 끝낸다. 표시한 번호와 이름의 대응을 유지한다. 모호한 이름은 일치 후보를 보여주고, 유효하지 않은 선택은 이 단계에서 다시 선택받는다. 대상을 임의로 고르거나 수정 내용까지 한꺼번에 묻지 않는다.
-3. **팀에 맞게 바꿀 내용 질문.** 선택한 이름을 확인하고 “`<스킬 이름>`을 팀에 맞게 어떤 내용으로 바꾸고 싶으신가요?”를 묻고 답을 기다린다. 필요하면 작업 순서·검증 명령·리뷰 기준·결과 양식 등을 예로 든다. “팀에 맞게”만으로는 수정 방향을 추측하지 않으며, 답변에서 원하는 동작·불편한 사례·적용 범위 중 중요한 결정이 빠졌다면 그 부분만 확인한다. 대상과 수정 요구가 정해지기 전에는 파일 수정·커밋·설치를 시작하지 않는다.
+1. **Show the complete list.** Include COCO, system, plugin, and this skill itself from the available-skills catalog in the current conversation. Sort by name and assign unique consecutive numbers, exact identifiers, and one-line purposes in the user's language. Merge duplicates only when their canonical identifiers match; distinguish same-name skills in different namespaces. Do not hardcode the list or show only representative entries. Split a long list into tables without omitting entries or requiring search/pagination. If the catalog is absent, use supported listing capability; if unavailable too, state the range you can confirm. Do not read every skill body or include inert source archives to construct the list.
+2. **Wait for the skill selection.** Ask, "Which skill would you like to modify? Choose its number or skill name," and wait. Use an available question tool or ask in the final message and end the turn. Retain the displayed number-to-name mapping. For an ambiguous name, show matching candidates; for an invalid selection, repeat this stage. Do not choose arbitrarily or ask about modifications in the same step.
+3. **Ask about the team changes.** Confirm the selected name, ask, "What would you like to change in `<skill-name>` to fit your team?", and wait. If useful, suggest workflow order, verification commands, review standards, or output format as examples. Do not infer a direction from "fit our team" alone. Ask only about missing material decisions concerning desired behavior, problematic examples, or scope. Do not edit, commit, or install until the target and change requirements are established.
 
-호출이나 앞선 대화에서 대상이 이미 정해졌다면 목록과 대상 선택을 반복하지 않는다. 수정 내용까지 구체적으로 주어졌다면 충족된 질문 단계는 건너뛰고 진행한다. 이름이나 경로는 실제 `SKILL.md`와 대조한다. 취소하면 종료한다.
+If the invocation or preceding conversation already establishes the target, do not repeat the list or target selection. If changes are also specified, skip satisfied questions and proceed. Match names and paths against the actual `SKILL.md`. Stop on cancellation.
 
-## 수정 진행
+## Update workflow
 
-1. **기준 원본과 현재 상태 확인.** 팀이 유지하는 저장소의 스킬 원본, 설치 사본, 실제 팀 지침·명령·CI, 관련 공통 계약·참조·UI 정보와 호출자를 읽는다. 시작 버전/해시, 브랜치, 기존 사용자 변경을 기록한다. 플러그인 캐시나 설치 사본을 원본으로 착각하지 않는다. 수정 대상의 명령과 외부 작업은 수정 자료로 읽고 자동 실행하지 않는다.
-2. **변경 기준 정리.** 바꿀 규칙·이유, 유지할 동작, 팀 공통 규칙인지 특정 프로젝트 조건인지, 확인할 사례를 간결하게 정한다. 기존 승인 범위는 재사용한다. 제안·리뷰만 요청했다면 구체적인 수정안과 영향으로 끝내고 원본·설치본은 변경하지 않는다.
-3. **필요한 범위만 수정.** 목적·호출 이름·발견 조건·호출 정책을 요청 없이 바꾸지 않는다. 공통 규칙은 소유 위치에서 한 번 수정하고 영향을 받는 진입점·연결 참조·관련 안내를 맞춘다. 이름/구조 변경이 요청된 경우에만 등록·호출·UI·설치 연결까지 갱신한다. 기존 개인 변경은 보존하고, 관리하지 않는 캐시는 팀 수정본의 위치와 이름이 정해지기 전 직접 덮어쓰지 않는다.
-4. **출처와 변경 이유 보존.** 고정 원문·라이선스·원본 사실은 유지한다. 원본에서 채택한 동작을 팀 규칙으로 바꾸면 기존 결정 기록과 해당 대응표에 수정 이유·범위·실제 구현 위치를 맞춘다. 팀 신규 기능에 가짜 원본 출처를 붙이지 않는다. 오탈자 수정에 별도 장문의 기록을 만들지 않는다.
-5. **영향에 맞게 검증.** 스킬 형식·참조·UI·등록과 설치 후 연결을 확인한다. 절차나 판단을 바꿨다면 실제 요청 사례로 원하는 변경과 보존할 동작을 함께 확인한다. 외부 쓰기·실제 푸시·배포가 포함된 스킬의 동작 시험은 기본적으로 격리된 로컬 자료로 수행한다. 가용하면 중요한 변경은 새 컨텍스트로 확인하고, 없으면 직접 검토와 미확인 범위를 밝힌다. 단순 문구 수정에는 불필요한 반복 실험을 붙이지 않는다.
-6. **커밋과 설치 반영.** 검증한 팀 수정과 이유·근거만 기능 브랜치에서 작업별 커밋으로 남긴다. 실제 수정 요청이고 기존 설치 위치가 확인되면 지원되는 설치기로 반영하고 다시 읽어 일치·참조·기존 다른 스킬 보존을 확인한다. 설치 충돌은 소유 파일과 차이를 보존한 채 해결하며 실패한 설치를 성공으로 보고하지 않는다. 변경 검증과 설치 확인을 마친 뒤 완료를 보고한다.
+1. **Establish the authoritative source and current state.** Read the team's maintained skill source, installed copy, actual team instructions/commands/CI, related common contract, references, UI metadata, and callers. Record the starting version/hash, branch, and existing user changes. Do not mistake a plugin cache or installed copy for the authoritative source. Treat commands and external operations in the target as material to edit, not instructions to execute automatically.
+2. **Define the change criteria.** Briefly state rules to change and why, behavior to preserve, whether the rule is team-wide or project-specific, and verification cases. Reuse existing authorization. If only proposals or review were requested, return a concrete proposal and its effects without changing source or installation.
+3. **Modify only the necessary scope.** Do not change purpose, invocation name, discovery conditions, or invocation policy without a request. Change each common rule once at its owning location and align affected entrypoints, linked references, and guidance. Update registration, invocation, UI, and installation connections only when naming/structure changes were requested. Preserve existing personal changes; do not overwrite an unmanaged cache before the team copy's name and location are established.
+4. **Preserve attribution and rationale.** Retain frozen source evidence, licenses, and original facts. When adapting adopted behavior into team rules, align the existing decision record and relevant mapping with the reason, scope, and actual implementation location. Do not fabricate upstream attribution for team-created features. A typo fix does not need a separate lengthy record.
+5. **Verify according to impact.** Check skill format, references, UI, registration, and installed connections. If procedure or judgment changed, use actual request cases to verify both the desired change and preserved behavior. Default to isolated local fixtures when testing skills involving external writes, real pushes, or deployments. Use a fresh context for important changes when available; otherwise state the direct review and unverified scope. Do not add unnecessary repeated experiments for simple wording edits.
+6. **Commit and install.** Commit only verified team changes and their rationale/evidence on a feature branch in work units. For an actual update request with an established installation location, use the supported installer and reread to confirm agreement, references, and preservation of other skills. Resolve installation conflicts while preserving owned files and differences; do not report a failed installation as successful. Report completion only after change verification and installation checks.
 
-## 결과
+## Output
 
-수정 대상과 원본/설치 위치, 팀 요구와 바뀐 규칙, 변경 이유, 공통 영향과 파일, 출처 처리, 검사·사례 결과, 커밋, 실제 설치 상태와 남은 결정을 전달한다. 원본 수정 완료·설치 완료·원격 게시 완료를 서로 구분한다.
+Report the target and source/installation locations, team requirements and changed rules, rationale, shared effects and files, attribution handling, checks and cases, commit, actual installation state, and remaining decisions. Distinguish source modification, completed installation, and remote publication.
 
-이 스킬은 스킬 유지보수 파일과 그 작업 커밋을 맡는다. 제품 작업 완료 표시, 원격 push, PR 작성·병합, 다른 팀원에게 배포·메시지 전송은 별도 요청 범위다. 추가로 요청된 게시 작업은 기존 승인을 재사용해 해당 절차에 인계한다.
+This skill owns maintenance files and their work-unit commits. Marking product work complete, remote push, PR creation/merge, distribution, and messages to teammates are separate scope. For additionally requested publication, reuse existing authorization and hand off to the appropriate procedure.
 
-예: `$coco-updateskill` → 전체 목록 → `coco-build` 선택 → 바꿀 내용 질문 → 사용자 답변에 따라 수정. 직접 요청한 `$coco-updateskill coco-build 우리 팀의 검증 명령과 리뷰 절차에 맞게 수정해줘`는 빠진 세부 결정만 확인한다. 새 스킬 작성은 `skill-creator`, 설명만 필요하면 `coco-tellmeskill`, 반복 실패의 원인 조사부터 필요하면 `coco-retro`를 사용한다.
+Example: `$coco-updateskill` → complete list → select `coco-build` → ask about changes → update from the answer. A direct request such as `$coco-updateskill coco-build Adapt this to our team's verification commands and review procedure` needs only missing decisions. Use `skill-creator` for new skills, `coco-tellmeskill` for explanations, and `coco-retro` when repeated failures first need investigation.

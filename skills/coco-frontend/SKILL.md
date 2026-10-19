@@ -1,6 +1,6 @@
 ---
 name: coco-frontend
-description: "Use when building or changing browser UI behavior, visual hierarchy, responsive states, interactions or accessibility. 화면 구현·반응형·접근성."
+description: "Use when building or changing browser UI behavior, visual hierarchy, responsive states, interactions or accessibility."
 license: MIT
 ---
 

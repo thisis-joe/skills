@@ -1,0 +1,12 @@
+{
+  "baseline_commit": "78ab56a",
+  "instruction_document_count": 97,
+  "skill_count": 26,
+  "description_characters_before": 4447,
+  "description_characters_after": 3967,
+  "all_english_primary_descriptions_preserved": true,
+  "ui_metadata_unchanged": true,
+  "source_files_unchanged": true,
+  "license_unchanged": true,
+  "native_model_tokens_measured": false
+}

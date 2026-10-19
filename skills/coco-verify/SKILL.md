@@ -1,6 +1,6 @@
 ---
 name: coco-verify
-description: "Use when checking real app/API/CLI behavior, testing change impact, proving a safety assumption, or creating/maintaining a verification or formal-proof harness. 실행 검증·영향 검증·증명."
+description: "Use when checking real app/API/CLI behavior, testing change impact, proving a safety assumption, or creating/maintaining a verification or formal-proof harness."
 license: MIT
 ---
 

@@ -1,56 +1,56 @@
-# 개발 브랜치 반영과 단일 브랜치 푸시
+# Integrate the development branch and push one work branch
 
-## 대상과 시작 상태
+## Targets and starting state
 
-원격 이름·ref·경로는 실제 저장소에서 확인하고 셸이나 프로세스 인자로 안전하게 전달한다. 아래 `<…>`는 확인한 값을 넣을 자리이며 명령을 문자 그대로 실행하지 않는다.
+Discover remote names, refs, and paths from the actual repository and pass them safely as shell/process arguments. The `<...>` values below are placeholders for confirmed values; do not execute them literally.
 
-- `git rev-parse --show-toplevel`, `git branch --show-current`, `git status --porcelain=v1 -uall`, 현재 HEAD와 스테이지 내용을 확인한다. detached HEAD나 unborn 브랜치는 푸시할 작업 브랜치/초기 커밋이 정해지기 전 진행하지 않는다.
-- merge/rebase/cherry-pick/revert 등 기존 작업을 확인한다. 요청과 관계없는 진행 상태를 자동 abort하거나 덮어쓰지 않는다. 미커밋 변경은 범위가 확인된 요청 작업만 분리 커밋하며, 사용자 변경을 통째로 스테이징하거나 자동 stash/pop하지 않는다. 안전한 작업 범위가 결정되지 않으면 경로와 필요한 결정만 알린다.
-- 기준 ref는 확인한 원격의 `refs/heads/dev` 또는 `refs/heads/develop`다. 현재 작업 브랜치의 업스트림이나 원격 기본 HEAD가 곧 개발 기준이라는 가정은 하지 않는다. 두 후보가 있으면 명시 요청·저장소 규칙·현재 PR 기준을 적용하고, 남은 모호성만 질문한다. 둘 다 없으면 `main` 등으로 대체하거나 원격 개발 브랜치를 만들지 않는다.
-- 푸시 원격과 대상 ref를 별도로 확인한다. 기본은 현재 브랜치와 같은 이름의 `refs/heads/<작업브랜치>`다. 작업 브랜치가 `feature/x`인데 업스트림이 `origin/dev`라는 이유만으로 `dev`에 푸시하지 않는다. 다른 이름의 대상으로 쓰려면 그 대상을 지정한 사용자 요청이나 확인된 저장소 규칙이 있어야 한다. 브랜치 이름은 `git check-ref-format`으로 확인한다.
-- 원격 URL에 포함될 수 있는 토큰은 출력에 노출하지 않는다. 기존 pushRemote·pushDefault·fork/PR 연결과 실제 push URL을 확인하되 전역 Git 설정을 변경하지 않는다. 여러 push URL은 여러 저장소를 동시에 바꿀 수 있으므로 단일 쓰기 목적지가 확정되기 전 실행하지 않는다.
+- Check `git rev-parse --show-toplevel`, `git branch --show-current`, `git status --porcelain=v1 -uall`, current HEAD, and staged content. With detached HEAD or an unborn branch, establish the work branch/initial commit before proceeding.
+- Identify existing merge/rebase/cherry-pick/revert operations. Do not automatically abort or overwrite unrelated progress. Commit only confirmed, in-scope requested changes separately; do not stage all user changes or automatically stash/pop them. If safe scope is unresolved, report only the affected paths and necessary decision.
+- The base ref is `refs/heads/dev` or `refs/heads/develop` at the confirmed remote. Do not assume the work branch's upstream or remote default HEAD is the development base. If both candidates exist, apply the explicit request, repository rules, and current PR base; ask only about remaining ambiguity. If neither exists, do not substitute `main` or create a remote development branch.
+- Establish the push remote and target ref separately. Default to `refs/heads/<work-branch>` with the current branch's name. A `feature/x` branch tracking `origin/dev` must not be pushed to `dev` merely because of its upstream. A differently named target needs an explicit user request or confirmed repository rule. Validate the branch name with `git check-ref-format`.
+- Do not expose tokens embedded in remote URLs. Inspect existing pushRemote, pushDefault, fork/PR links, and the actual push URL without changing global Git configuration. Multiple push URLs may change multiple repositories; do not push before establishing one write destination.
 
-이름은 최종 작업요약 대조에서 바뀔 수 있다. 시작 시의 원격 작업 ref/OID와 사용자가 명시한 목적지를 기록하고, [브랜치·티켓 정리](branch-and-ticket.md)를 적용한 뒤 최종 ref를 확정한다. 개명 전에 기존 작업 원격의 미반영 커밋을 가져오는 절차를 생략하지 않는다.
+The name may change during final work-summary comparison. Record the initial remote work ref/OID and explicitly requested destination, then finalize the ref after [branch and ticket alignment](branch-and-ticket.md). Do not skip fetching unintegrated commits from the original work remote before renaming.
 
-## 최신 ref 가져오기
+## Fetch current refs
 
-원격 조회나 fetch가 실패하면 과거의 추적 ref를 최신이라고 사용하지 않는다. 실제 브랜치 존재와 OID는 다음처럼 정확한 ref로 조회한다.
+After a failed remote query or fetch, do not treat old tracking refs as current. Query exact refs for actual branch existence and OIDs:
 
 ```text
 git ls-remote --heads <base-remote> refs/heads/dev refs/heads/develop
-git fetch <base-remote> refs/heads/<선택한-개발브랜치>
+git fetch <base-remote> refs/heads/<selected-development-branch>
 git rev-parse FETCH_HEAD
 ```
 
-fetch한 개발 커밋을 변수/기록으로 고정한 뒤 다른 fetch를 한다. `FETCH_HEAD`는 다음 fetch로 바뀐다. 푸시 원격의 대상 ref도 `ls-remote`로 확인하고, 존재하면 정확한 ref를 fetch해 커밋을 따로 고정한다. 이름만 확인하고 예전 `origin/dev`를 병합하는 실수를 피한다. 실제 가져온 커밋의 타입이 commit인지 확인한다.
+Record the fetched development commit in a variable/trail before another fetch: the next fetch changes `FETCH_HEAD`. Query the target ref at the push remote with `ls-remote`; if present, fetch that exact ref and record its commit separately. Do not confirm only the name and then merge a stale `origin/dev`. Confirm each fetched object is a commit.
 
-기존 원격 작업 브랜치의 커밋이 로컬 HEAD의 조상이 아니면 먼저 그 작업 브랜치를 통합한다. 개발 기준 커밋도 HEAD의 조상이 될 때까지 반영한다. 원격의 다른 사람 작업을 버리고 로컬을 강제로 올리지 않는다. 서로 관계없는 이력에는 `--allow-unrelated-histories`를 자동 적용하지 않는다.
+If the original remote work commit is not an ancestor of local HEAD, integrate that work branch first. Also integrate the development-base commit until it is an ancestor of HEAD. Do not discard others' remote work and force local history over it. Do not automatically apply `--allow-unrelated-histories` to unrelated histories.
 
-## 병합과 충돌 해결
+## Merge and resolve conflicts
 
-기본은 기록한 커밋을 `git merge --no-commit --no-edit <fetched-commit>`으로 반영하는 pull이다. `--no-commit`은 fast-forward를 막지 않으므로 `MERGE_HEAD` 유무로 미완료 병합과 이미 완료된 fast-forward를 구분한다. 저장소가 다른 통합 정책을 요구하면 이를 존중하되 공유 커밋 재작성이나 강제 푸시가 필요해지는 경로를 자동 선택하지 않는다.
+The default pull integrates each recorded commit with `git merge --no-commit --no-edit <fetched-commit>`. Since `--no-commit` permits fast-forward, distinguish an unfinished merge from a completed fast-forward using `MERGE_HEAD`. Honor a different repository integration policy without automatically choosing shared-history rewrites or a path requiring force-push.
 
-충돌이 나면 `git status`와 `git ls-files -u`로 전체 목록을 파악한다. 양쪽 버전·공통 기준·요구·호출부·테스트를 읽고 양쪽 의도를 보존하도록 해결한다. 파일 삭제/수정·이름 변경·스키마·잠금 파일·바이너리 충돌은 의미에 맞춰 처리한다. 잠금 파일은 저장소의 실제 도구와 정책을 사용하고, 의존성 설치 권한을 새로 가정하지 않는다. 광범위한 `--ours`/`--theirs`로 한쪽 전체를 버리지 않는다.
+On conflicts, obtain the complete list with `git status` and `git ls-files -u`. Read both versions, the common base, requirements, callers, and tests; preserve both intentions. Resolve delete/modify, rename, schema, lockfile, and binary conflicts according to their meaning. Use the repository's actual tools/policy for lockfiles without assuming new authority to install dependencies. Do not discard an entire side through broad `--ours`/`--theirs` use.
 
-분명한 텍스트 충돌은 해결하고 계속 진행한다. 예컨대 한쪽은 기존 응답 형식을 유지하고 다른 쪽은 바꾸려는 등 제품 계약이 양립하지 않으면 해당 선택과 대안을 제시한다. 단지 충돌이 있었다는 이유로 모든 단계의 승인을 다시 받지 않는다.
+Resolve clear text conflicts and continue. If product contracts conflict, such as preserving versus changing a response format, present that choice and its alternatives. A conflict alone does not require renewed approval for every stage.
 
-해결한 경로만 스테이징한다. `git ls-files -u`가 비어 있고 diff와 의심 표식이 확인돼야 한다. 표식처럼 생긴 정상 문자열을 무조건 삭제하지 않는다. 실제 프로젝트의 lint/typecheck/test/build 및 변경에 필요한 동작 확인을 수행한다. 검사 도구가 없으면 필수 검사를 통과로 바꾸지 않는다. 정상 경로와 원격/로컬 각각의 변경이 함께 유지되는 회귀를 확인한다. 텍스트 충돌이 없는 자동 병합도 이 검증을 거친다.
+Stage only resolved paths. Confirm `git ls-files -u` is empty and inspect the diff and suspected markers. Do not blindly remove legitimate strings resembling markers. Run actual project lint/typecheck/test/build and needed behavior checks. Missing tools do not make required checks pass. Verify normal paths and regressions showing both remote and local changes survive together. Apply these checks to automatic merges without text conflicts too.
 
-미완료 병합은 검사 후 통합 커밋으로 완료한다. 검사 수정 중 새 미커밋 변경이 생겼다면 필요한 변경만 반영·재검증한다. 그다음 필요한 통합이 더 있으면 같은 절차를 적용하고, 마지막 HEAD에 대한 필수 검사를 확인한다. 실패했을 때 원래 커밋·현재 상태·복구 가능한 통합 지점을 남기고 자동 reset으로 흔적을 지우지 않는다.
+Complete an unfinished merge with an integration commit after checking. If check-related fixes create uncommitted changes, include only necessary changes and verify again. Apply the same process to additional integrations and confirm required checks for final HEAD. On failure, retain the original commits, current state, and recoverable integration points instead of erasing evidence with an automatic reset.
 
-## 푸시와 경합
+## Push and races
 
-푸시 전에 [실제 작업과 브랜치·티켓의 정합성](branch-and-ticket.md)을 확인한다. 정리가 필요했다면 개명과 Jira 갱신·재조회까지 완료돼야 게시한다. 검증한 HEAD의 OID를 고정하고, 실제 기준 커밋의 포함 관계, 미해결 인덱스와 미완료 Git 작업 없음, 필요한 작업 커밋 완료를 다시 확인한다. 기준 개발 ref와 작업 원격 ref도 다시 조회하고 전진했으면 새 커밋을 통합·검증·요약 대조한다. 개명한 경우 기존 작업 원격 ref와 새 목적지 ref를 모두 확인한다. 계속 전진해 고정할 수 없는 경우에도 갱신·통합 라운드는 최대 3회에서 멈춘다. `git push`의 기본 matching 동작에 맡기지 않고 검증한 OID를 소스로 하는 단일 refspec을 명시한다. 그 사이 HEAD가 달라져도 검증하지 않은 새 커밋을 함께 올리지 않는다.
+Before pushing, confirm [alignment between actual work, branch, and ticket](branch-and-ticket.md). If alignment was necessary, finish renaming, Jira updates, and readback before publication. Record the verified HEAD OID; recheck inclusion of the actual base commit, no unmerged index or unfinished Git operations, and completion of required work commits. Query the development-base and remote work refs again; if they advanced, integrate and verify the new commits and reassess the summary. After a rename, check both the original remote work ref and new destination ref. Stop after at most three refresh/integration rounds even if continuous advancement prevents a stable snapshot. Use a single explicit refspec with the verified OID as source rather than Git's default matching behavior. Do not publish an unverified new commit if HEAD changes meanwhile.
 
 ```text
-git push <확인한-단일-push-목적지> <검증한-커밋-OID>:refs/heads/<확정한-작업브랜치>
-git ls-remote --heads <동일한-push-목적지> refs/heads/<확정한-작업브랜치>
+git push <confirmed-single-push-destination> <verified-commit-OID>:refs/heads/<final-work-branch>
+git ls-remote --heads <same-push-destination> refs/heads/<final-work-branch>
 ```
 
-실제 push URL과 fetch URL이 다를 수 있다. 쓰기 목적지의 ref를 확인·fetch하고 같은 쓰기 목적지로 푸시·재조회를 수행한다. 여러 push URL이 있는 remote는 이 예제대로 바로 쓰지 않는다. 확인한 단일 목적지를 명시하고 같은 목적지에서 결과를 읽는다. `--force`, `--force-with-lease`, `--mirror`, `--all`, 보호 정책 우회는 이 스킬의 기본 동작에 없다.
+Push and fetch URLs may differ. Query/fetch refs at the write destination and use that same destination for push and readback. Do not apply the example directly to a remote with multiple push URLs. Specify one confirmed destination and read results there. `--force`, `--force-with-lease`, `--mirror`, `--all`, and protection-policy bypass are not this skill's default behavior.
 
-원격 작업 브랜치가 전진해 non-fast-forward로 거절되면 기준 개발 ref와 푸시 대상 ref를 다시 가져오고, 필요한 새 커밋을 통합·검증한 뒤 재시도한다. 총 push 시도는 최대 3회다. 보호 정책·인증·검사 훅 실패는 경합과 구분하고 무한 재시도하거나 검사를 우회하지 않는다.
+After a non-fast-forward rejection caused by remote work advancing, refetch the development-base and push-target refs, integrate and verify required new commits, then retry. Limit total push attempts to three. Distinguish protection-policy, authentication, and check-hook failures from races; do not retry indefinitely or bypass checks.
 
-push 응답을 보지 못한 네트워크 오류는 실패나 성공으로 단정하지 않는다. 원격 ref를 읽어 실제 게시 여부를 확인한 뒤 다음 행동을 정한다. 성공한 push 뒤 ref가 정확히 같은 OID면 확인 완료다. 다른 커밋으로 전진했다면 그 ref를 fetch해 푸시 커밋의 포함 여부를 확인한다. 포함하면 “게시 확인 후 원격이 전진함”, 포함하지 않거나 확인 불가면 그 상태를 보고하고 성공/충돌 없음으로 뭉뚱그리지 않는다.
+A network error hiding the push response establishes neither failure nor success. Read the remote ref to determine publication before deciding the next action. After a successful push, an exactly matching OID confirms it. If the ref advanced to another commit, fetch it and check whether it contains the pushed commit. If it does, report that publication was confirmed and the remote subsequently advanced. Otherwise, or if verification is unavailable, report that state instead of flattening it into success or no conflicts.
 
-확인 범위는 가져온 기준 커밋과 검증한 작업 커밋까지다. 다른 사람이 푸시 후 개발 브랜치를 바꾸는 것까지 원자적으로 막았다고 주장하지 않는다. 원격 브랜치 삭제·보호 설정 변경·PR 병합·배포는 별도 요청 범위다.
+Verification covers the fetched base commit and verified work commit. Do not claim atomic prevention of later development-branch changes by others. Remote branch deletion, protection-setting changes, PR merge, and deployment need a separate request.

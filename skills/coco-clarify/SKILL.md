@@ -1,6 +1,6 @@
 ---
 name: coco-clarify
-description: "Use when requirements, terminology, idea viability, scope or important product decisions remain unsettled. 요구사항 질문, 아이디어 정리, 공통 용어 합의."
+description: "Use when requirements, terminology, idea viability, scope or important product decisions remain unsettled."
 license: MIT
 ---
 

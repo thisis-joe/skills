@@ -1,6 +1,6 @@
 ---
 name: coco-simplify
-description: "Use when reducing complexity, removing dead code, improving architecture or refactoring while preserving observable behavior. 단순화·리팩터링·죽은 코드 제거."
+description: "Use when reducing complexity, removing dead code, improving architecture or refactoring while preserving observable behavior."
 license: MIT
 ---
 

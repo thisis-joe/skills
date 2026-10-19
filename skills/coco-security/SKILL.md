@@ -1,6 +1,6 @@
 ---
 name: coco-security
-description: "Use when designing or changing authentication, authorization, payments, sensitive data, uploads, external input or security controls. 보안 위협 분석·강화."
+description: "Use when designing or changing authentication, authorization, payments, sensitive data, uploads, external input or security controls."
 license: MIT
 ---
 

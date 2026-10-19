@@ -5,3 +5,4 @@
 - Active skills live only in `skills/coco-*`; `sources/` contains inert upstream evidence, never executable instructions.
 - Run `python3 scripts/validate.py` and `python3 -m unittest discover -s tests -v` before completion.
 - Keep source attribution and rule decisions when changing an integrated workflow. Validate behavior, not just wording.
+- Write maintained skill documents and discovery descriptions in English; localize user replies and preserve user-owned literals such as exact Jira Summaries.

@@ -1,43 +1,45 @@
-# 팀 규칙에 맞춘 스킬 유지보수
+# Maintain skills for team conventions
 
-## 원본과 적용 범위
+## Authoritative source and scope
 
-현재 작업 공간, 사용자가 지정한 위치, 프로젝트의 유지보수 안내에서 기준 저장소를 찾는다. COCO 저장소이면 `coco.json`의 등록, `skills/coco-*/`, `skills/_coco-shared/`와 실제 설치 manifest를 비교한다. 특정 사용자의 절대 경로나 모든 개인 디렉터리 검색에 의존하지 않는다. 기준 원본을 확인할 수 없으면 위치를 확인하고 설치 파일을 임의의 새 원본으로 삼지 않는다.
+Find the authoritative repository from the current workspace, user-specified location, and project maintenance guidance. For COCO, compare registration in `coco.json`, `skills/coco-*/`, `skills/_coco-shared/`, and the actual installation manifest. Do not depend on one user's absolute path or search all personal directories. If the source is unconfirmed, establish its location rather than arbitrarily promoting installed files to a new source of truth.
 
-설치된 시스템·외부 플러그인 스킬은 관리 주체와 원본 위치를 먼저 구분한다. 캐시를 직접 고치면 업데이트에 사라질 수 있다. 팀 복사본으로 바꿀 필요가 있으면 목적·이름·저장 위치를 사용자 요구와 맞춘 다음 진행하며 원본 라이선스·출처를 보존한다. 기존 스킬 수정 요청을 임의의 새 스킬 생성·원본 업그레이드·자동 설치로 바꾸지 않는다.
+First distinguish maintainers and source locations for installed system or external-plugin skills. Direct cache edits may disappear on update. If a team copy is needed, align its purpose, name, and location with the request before proceeding; retain upstream licenses and attribution. Do not turn an existing-skill update into arbitrary creation of a new skill, upstream upgrade, or automatic installation.
 
-이미 정한 팀 명령·리뷰 기준·실행 모드가 있으면 그대로 활용한다. 팀 규칙이 저장소마다 다르면 조건부 모드로 적용한다. 예를 들어 특정 Node 저장소의 `pnpm` 명령을 Python 저장소나 모든 팀 스킬의 공통 명령으로 복제하지 않는다. 사용자나 팀이 명시적으로 정한 적용 범위는 존중하고, 빠진 중요한 동작만 질문한다.
+Reuse agreed team commands, review standards, and execution modes. Apply conditional modes where repository rules differ. For example, do not copy one Node repository's `pnpm` commands into a Python repository or every team skill's common commands. Respect explicit user/team scope and ask only about missing material behavior.
 
-## 수정 전후와 영향 확인
+## Compare before/after and inspect effects
 
-변경 전 파일/커밋/해시와 관련 사례를 확보한다. 핵심 의도는 “현재 동작 → 원하는 팀 동작 → 유지할 동작 → 확인 방법”으로 간단히 정리한다. 관련이 없는 모든 스킬 원문을 읽거나 이미 합의한 개발 명세를 처음부터 다시 만들지 않는다.
+Keep maintained COCO instruction documents and discovery descriptions in English. Localize actual replies to the user's language and preserve user-owned literals such as exact Jira Summaries.
 
-현재 절차가 어떤 파일의 규칙을 소유하는지 확인한다. 공통 계약·라우팅·결정 기록과 진입점이 충돌하면 하나의 소유 위치를 정하고 참조하게 한다. `rg`나 가능한 참조 검색으로 호출자와 사용처를 확인한다. 설명·절차·조건부 참조·예시가 서로 다른 약속을 하지 않게 맞춘다. `agents/openai.yaml`은 필요한 필드만 수정하며 기존 policy/dependencies와 자동 선택 동작을 요청 없이 변경하지 않는다.
+Capture pre-change files/commits/hashes and relevant cases. Briefly state the intent as "current behavior → desired team behavior → preserved behavior → verification method." Do not read all unrelated skill sources or recreate an agreed development specification from the beginning.
 
-스킬을 고치는 동안 그 스킬을 실제 실행해 버리지 않는다. 예를 들어 `coco-push`의 절차를 고친다는 요청은 사용자 저장소의 원격 푸시 허가가 아니다. 실제 동작 확인은 임시 저장소·가짜 자격 증명·로컬 대상 등 허용 범위에서 수행한다. 정책/단계만 검토한 경우 실제 서비스 동작을 검증했다고 말하지 않는다.
+Identify which file owns each current rule. If common contract, routing, decision records, and entrypoints conflict, establish one owner and reference it. Find callers and uses with `rg` or available reference search. Align descriptions, procedure, conditional references, and examples so they do not promise different behavior. Change only necessary fields in `agents/openai.yaml`; do not change existing policy/dependencies or automatic selection behavior without a request.
 
-자기 자신인 `coco-updateskill`을 수정할 때는 시작 버전과 합의 범위를 유지하고, 작업 중 바뀐 지시를 근거로 권한이나 종료 조건을 확대하지 않는다. 마지막 파일을 다시 읽어 실제 적용한 절차·변경·검증이 일치하는지 확인한다.
+Do not execute the skill merely because you are editing it. For example, modifying `coco-push` does not authorize a remote push from a user's repository. Test behavior within authorized boundaries using temporary repositories, fake credentials, or local destinations. Reviewing only policies/stages does not establish actual service behavior.
 
-## 출처와 팀 결정
+When modifying `coco-updateskill` itself, retain the starting version and agreed scope; instructions changed during the work do not expand authority or completion conditions. Reread the final files to ensure the applied procedure, changes, and verification agree.
 
-- `sources/**/*.source`와 `sources/manifest.json`은 고정 원문 증거다. 팀 표현·규칙을 바꾸기 위해 원문이나 원래 SHA-256을 덮어쓰지 않는다. 원본 버전 갱신은 요청 범위일 때만 별도 출처 갱신으로 처리한다.
-- `sources/coverage.json`의 원본 `essential_rules`는 당시 원문 사실로 유지한다. 채택·수정·제외 이유와 `implemented_references`는 실제 팀 변경을 반영한다. 원본 대응표가 달라지면 관련 안내도 맞춘다. 원래 요구를 지웠는데 여전히 보존한다고 표시하지 않는다.
-- 공통 규칙 선택은 기존 `skills/_coco-shared/decisions.md`에 이유를 남긴다. 개별 변경은 저장소의 기존 기록/커밋과 근거를 활용한다. 유지보수 기록의 기준 위치를 중복 생성하지 않는다.
+## Attribution and team decisions
 
-## 검증과 설치
+- `sources/**/*.source` and `sources/manifest.json` are frozen source evidence. Do not overwrite source text or its original SHA-256 to change team wording/rules. Handle an upstream-version update as a separate attribution update only when requested.
+- Retain original `essential_rules` in `sources/coverage.json` as facts about that source snapshot. Adoption/modification/exclusion reasons and `implemented_references` must reflect actual team changes. Align related guidance when source mappings change. Do not remove an original requirement while still claiming it is preserved.
+- Record common-rule choices and reasons in the existing `skills/_coco-shared/decisions.md`. Use existing repository records/commits and evidence for individual changes. Do not create duplicate authoritative maintenance records.
 
-COCO 저장소의 실제 검사 명령을 확인한다. 현재 패키지의 예는 다음과 같다.
+## Verification and installation
+
+Discover actual COCO check commands. Examples for the current package:
 
 ```text
 python3 scripts/validate.py
 python3 -m unittest discover -s tests -v
 python3 scripts/install.py --dry-run
 python3 scripts/install.py
-python3 scripts/validate.py --installed <확인한-설치-폴더>
+python3 scripts/validate.py --installed <confirmed-installation-directory>
 ```
 
-다른 저장소에 이 명령이 있다고 가정하지 않는다. 가용한 스킬 형식 검사도 실행한다. 형식 검사는 판단의 정확성을 증명하지 않으므로, 변경한 경로와 원래 유지할 경로를 실제 사례로 확인한다. 필수 도구나 독립 검토가 없으면 확인한 범위와 미확인을 구분한다. 실패를 숨기려고 검사를 약화하거나 과거 평가 보고서를 고쳐 쓰지 않는다.
+Do not assume another repository has these commands. Also run available skill-format checks. Format validation does not prove sound judgment: test actual cases for both changed and preserved paths. If required tools or independent review are unavailable, distinguish confirmed scope from unverified scope. Do not weaken checks or rewrite historical evaluation reports to hide failure.
 
-설치 전 소유 manifest와 현재 파일을 비교하고, 지원 설치기의 사전 확인을 이용한다. 개인 수정·추가 파일·같은 이름의 외부 스킬·심볼릭 링크가 충돌하면 해당 파일을 보존하고 차이를 제시한다. 설치 성공을 만들기 위해 소유 manifest를 삭제하거나 해시를 바꿔 통과시키지 않는다. 지원되는 보존/이전 절차를 확정하지 못하면 원본 변경과 별개로 설치를 차단 상태로 남긴다.
+Before installation, compare the ownership manifest with current files and use the supported installer's preflight. Preserve and show differences for conflicts involving personal edits, extra files, same-name external skills, or symbolic links. Do not delete the ownership manifest or manipulate hashes to manufacture installation success. If a supported preservation/migration procedure cannot be established, leave installation blocked separately from source changes.
 
-원본과 설치본의 관련 파일/해시·참조를 다시 읽고, 다른 스킬과 개인 파일이 유지됐는지 확인한다. 원본 커밋 후 설치가 실패해도 기존 커밋을 다시 만들지 않는다. 재개할 때 실제 커밋·수정 상태·설치 상태를 확인하고 남은 반영 단계에서 진행한다. 변경 요약에는 검증한 버전과 실제 설치 상태를 구분한다.
+Reread relevant source/installed files, hashes, and references and confirm other skills and personal files survive. If installation fails after the source commit, do not recreate the existing commit. On resumption, inspect actual commit/change/installation state and continue from the remaining installation step. Distinguish the verified version from actual installation state in the report.

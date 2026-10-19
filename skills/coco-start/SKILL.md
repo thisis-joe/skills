@@ -1,6 +1,6 @@
 ---
 name: coco-start
-description: "Use when choosing a development workflow, setting up repository commands and quality constraints, or deciding which specialist procedure is needed. 작업 분류와 공통 개발 기준 설정."
+description: "Use when choosing a development workflow, setting up repository commands and quality constraints, or deciding which specialist procedure is needed."
 license: MIT
 ---
 

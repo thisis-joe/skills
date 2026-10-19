@@ -1,6 +1,6 @@
 ---
 name: coco-document
-description: "Use when recording an ADR, documenting APIs or agent guidance, explaining technical material, teaching, preparing exercises or editing prose without changing meaning. 문서·설명·교육·글쓰기."
+description: "Use when recording an ADR, documenting APIs or agent guidance, explaining technical material, teaching, preparing exercises or editing prose without changing meaning."
 license: MIT
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: coco-retro
-description: "Use when examining a completed task or incident, repeated failures, an agent workflow, or a demonstrated lesson that needs a reusable improvement. 회고·평가·개선."
+description: "Use when examining a completed task or incident, repeated failures, an agent workflow, or a demonstrated lesson that needs a reusable improvement."
 license: MIT
 ---
 

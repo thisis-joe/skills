@@ -1,6 +1,6 @@
 ---
 name: coco-performance
-description: "Use when a measured latency, responsiveness, memory, throughput or bundle problem needs diagnosis, or a benchmark result needs validation. 성능 측정·최적화·벤치마크."
+description: "Use when a measured latency, responsiveness, memory, throughput or bundle problem needs diagnosis, or a benchmark result needs validation."
 license: MIT
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: coco-debug
-description: "Use when tests fail unexpectedly, builds break, behavior is wrong, a regression is intermittent, or a performance failure needs root-cause diagnosis. 버그 재현·원인 조사·복구."
+description: "Use when tests fail unexpectedly, builds break, behavior is wrong, a regression is intermittent, or a performance failure needs root-cause diagnosis."
 license: MIT
 ---
 

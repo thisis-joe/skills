@@ -1,6 +1,6 @@
 ---
 name: coco-spec
-description: "Use when agreed requirements need an authoritative specification, or a substantial feature needs explicit scope and acceptance criteria. 명세 작성·기존 대화 명세화."
+description: "Use when agreed requirements need an authoritative specification, or a substantial feature needs explicit scope and acceptance criteria."
 license: MIT
 ---
 

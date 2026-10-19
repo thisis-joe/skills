@@ -1,6 +1,6 @@
 ---
 name: coco-build
-description: "Use when implementing an agreed feature or bug fix, completing one planned task, or executing an authorized sequence. 구현·TDD·작업별 커밋·연속 실행."
+description: "Use when implementing an agreed feature or bug fix, completing one planned task, or executing an authorized sequence."
 license: MIT
 ---
 
@@ -10,24 +10,24 @@ Own execution from the first ready task through evidence-backed work-unit comple
 
 Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/build.md) only when the task needs their additional procedure.
 
-## 기능 브랜치 준비
+## Feature branch preparation
 
-구현 전에 작업 브랜치와 기준 커밋을 확인한다. 새 기능 브랜치의 이름은 다음 팀 규칙을 따른다. 연속 실행에서도 새 기능 브랜치를 만들 때 같은 규칙을 적용한다.
+Before implementation, confirm the working branch and base commit. Use this team format for each new feature branch, including during continuous execution:
 
 ```text
-종류(파트)/지라태스크번호-한글작업요약
-feat(be)/123-OAuth2.0_구글
+type(part)/task-number-exact-summary
+feat(be)/123-OAuth2.0_Google
 ```
 
-- **종류·파트:** 작업 성격과 담당 영역을 저장소 규칙·태스크·사용자 요청에서 확인한다. 예시의 `feat`·`be`를 모든 작업에 고정하지 않는다.
-- **지라태스크번호:** 해당 Jira 태스크의 번호를 사용한다. 예를 들어 키가 `TEAM-123`이면 브랜치에는 `123`을 쓰고, 전체 키는 작업 기록에 남겨 태스크를 구분한다.
-- **한글작업요약:** 해당 Jira 태스크의 작업요약(제목/Summary)을 그대로 사용한다. 상위 에픽 제목이나 설명에서 새로 만든 요약으로 대체하지 않는다. 한글·영문·대소문자·문장부호·밑줄을 보존하며 번역·축약·영문 슬러그화를 하지 않는다. 예시의 태스크 요약은 `OAuth2.0_구글`이다.
+- **Type and part:** derive the work type and area from repository rules, the task, and the user request. Do not hardcode the example's `feat` or `be`.
+- **Task number:** use the linked Jira task's numeric portion: `TEAM-123` becomes `123`. Retain the full key in the work record to distinguish tasks.
+- **Exact summary:** copy that Jira task's Summary/title exactly. Do not substitute the parent epic title or an invented summary from its description. Preserve Korean or other languages, case, punctuation, and underscores; do not translate, abbreviate, or make an English slug. The example task's Summary is `OAuth2.0_Google`.
 
-태스크 키·요약은 이미 제공된 티켓 내용이나 사용 가능한 Jira 조회 기능에서 확인하고, 정해진 정보는 다시 묻지 않는다. 번호·요약·종류·파트 중 확인할 수 없는 필수 정보만 질문하며 임의의 번호나 요약으로 브랜치를 만들지 않는다.
+Reuse ticket details already supplied or retrieve them through an available Jira reader. Do not ask again for settled information. Ask only for required task number, Summary, type, or part that cannot be established; never invent a number or Summary.
 
-전체 후보를 `git check-ref-format --branch`로 검사한다. Jira 요약에 공백 등 Git에서 허용하지 않는 문자가 있으면 원래 요약과 필요한 최소 변환안을 제시하고 사용자에게 적용할 표기를 확인한다. 임의로 공백을 밑줄로 바꾸거나 문자를 삭제하지 않는다. 셸을 사용할 때는 괄호·한글을 포함한 전체 브랜치명을 하나의 인수로 안전하게 인용한다.
+Validate the complete candidate with `git check-ref-format --branch`. If the Jira Summary includes spaces or other Git-invalid characters, present the original and the minimum necessary transformation and confirm the spelling with the user. Do not silently replace spaces with underscores or remove characters. Safely quote the complete branch name as one shell argument, including parentheses and non-ASCII text.
 
-확인한 기준 커밋에서 유효한 이름으로 새 브랜치를 만든다. 같은 이름이 이미 있으면 동일 태스크의 적절한 브랜치인지 확인해 재사용하고, 무관한 브랜치를 덮어쓰지 않는다. 같은 태스크의 기존 작업 브랜치를 재개할 때 이름이 규칙과 다르면 차이를 알리고 처리 방향을 확인하며, 자동으로 개명·삭제·리셋하지 않는다. 기존 사용자 변경은 보존하고 최종 브랜치·기준 커밋·Jira 키·원래 요약을 작업 기록에 남긴다.
+Create the valid branch from the confirmed base commit. If it exists, verify it belongs to the same task and is suitable for reuse; never overwrite an unrelated branch. When resuming a same-task branch whose name differs from this format, explain the difference and confirm how to proceed; do not automatically rename, delete, or reset it. Preserve existing user changes and record the final branch, base commit, Jira key, and original Summary.
 
 ## Procedure and output
 

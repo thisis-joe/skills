@@ -12,7 +12,7 @@ Reuse an existing spec, plan, test-boundary agreement, and execution grant inste
 4. Reconcile a commit already made but not reflected in task state before selecting new work.
 5. Choose one task whose dependencies are actually satisfied; continuous mode repeats this after each completed unit.
 
-Use a feature branch and record pre-existing user changes. Apply the [build entrypoint's Jira branch naming and preparation rules](../../coco-build/SKILL.md#기능-브랜치-준비); the entrypoint owns that team convention. Reuse a suitable authorized branch rather than resetting it.
+Use a feature branch and record pre-existing user changes. Apply the [build entrypoint's Jira branch naming and preparation rules](../../coco-build/SKILL.md#feature-branch-preparation); the entrypoint owns that team convention. Reuse a suitable authorized branch rather than resetting it.
 Isolate overlapping hunks; do not stage user work, reset unrelated files, or create a new base merely for procedural neatness.
 A blocked dependency does not become ready because a summary or stale checkbox says it is done.
 

@@ -1,6 +1,6 @@
 ---
 name: coco-context
-description: "Use when preparing a handoff, resuming work after interruption, managing context limits, recalling task history or maintaining a long-run decision trail. 인수인계·맥락 관리·재개."
+description: "Use when preparing a handoff, resuming work after interruption, managing context limits, recalling task history or maintaining a long-run decision trail."
 license: MIT
 ---
 

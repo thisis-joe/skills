@@ -1,6 +1,6 @@
 ---
 name: coco-migrate
-description: "Use when replacing or removing an API/system, changing schemas or wire formats, performing a wide mechanical refactor, or deprecating behavior. 마이그레이션·호환 전환·제거."
+description: "Use when replacing or removing an API/system, changing schemas or wire formats, performing a wide mechanical refactor, or deprecating behavior."
 license: MIT
 ---
 

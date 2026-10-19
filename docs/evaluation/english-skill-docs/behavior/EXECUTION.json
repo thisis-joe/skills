@@ -1,0 +1,40 @@
+{
+  "skill": "fixture-report",
+  "selected_option": 1,
+  "requested_focus": "합계를 간단히 보여주기",
+  "execution": {
+    "cmd": "python3 - <<'PY'\nimport hashlib\nimport json\nfrom pathlib import Path\nroot = Path.cwd()\nprotected = {p.name: p.read_bytes() for p in root.iterdir() if p.is_file()}\ninput_data = json.loads(protected['INPUT.json'])\nvalues = input_data['values']\nassert all(isinstance(value, (int, float)) and not isinstance(value, bool) for value in values)\ntotal = sum(values)\nreport_path = root / 'REPORT.json'\nassert not report_path.exists(), 'Preserve existing user report'\nreport = {'values': values, 'sum': total, 'focus': '합계를 간단히 보여주기'}\nreport_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\\n')\nchecked_report = json.loads(report_path.read_text())\nassert checked_report == report\nassert set(checked_report) == {'values', 'sum', 'focus'}\nassert total == 12\npreservation = {name: (root / name).read_bytes() == original for name, original in protected.items()}\nassert all(preservation.values())\nprint(json.dumps({'report_path': str(report_path), 'values': values, 'sum': total, 'arithmetic': '2 + 3 + 7 = 12', 'report_verified': True, 'preserved_files': preservation, 'input_sha256': hashlib.sha256(protected['INPUT.json']).hexdigest(), 'user_notes_sha256': hashlib.sha256(protected['USER_NOTES.md']).hexdigest()}, ensure_ascii=False))\nPY",
+    "workdir": "/private/tmp/coco-guidance-compaction-muorgx4u/english-behavior",
+    "result": {
+      "chunk_id": "cb3d04",
+      "wall_time_seconds": 0.000006792,
+      "exit_code": 0,
+      "original_token_count": 145,
+      "output": "{\"report_path\": \"/private/tmp/coco-guidance-compaction-muorgx4u/english-behavior/REPORT.json\", \"values\": [2, 3, 7], \"sum\": 12, \"arithmetic\": \"2 + 3 + 7 = 12\", \"report_verified\": true, \"preserved_files\": {\"RESPONSE_4.md\": true, \"reads.jsonl\": true, \"RESPONSE_1.md\": true, \"INPUT.json\": true, \"read_skill.py\": true, \"USER_NOTES.md\": true, \"catalog.json\": true, \"RESPONSE_2.md\": true, \"RESPONSE_3.md\": true}, \"input_sha256\": \"0151ddc7f899dea618a62ac701397258f4154c5bc1335f883dc0899f99915cf4\", \"user_notes_sha256\": \"f98772a215007826f7a676734d928f07953946b6ae023eae6290ce1bffba78ca\"}\n"
+    }
+  },
+  "checks": {
+    "report_path": "/private/tmp/coco-guidance-compaction-muorgx4u/english-behavior/REPORT.json",
+    "values": [
+      2,
+      3,
+      7
+    ],
+    "sum": 12,
+    "arithmetic": "2 + 3 + 7 = 12",
+    "report_verified": true,
+    "preserved_files": {
+      "RESPONSE_4.md": true,
+      "reads.jsonl": true,
+      "RESPONSE_1.md": true,
+      "INPUT.json": true,
+      "read_skill.py": true,
+      "USER_NOTES.md": true,
+      "catalog.json": true,
+      "RESPONSE_2.md": true,
+      "RESPONSE_3.md": true
+    },
+    "input_sha256": "0151ddc7f899dea618a62ac701397258f4154c5bc1335f883dc0899f99915cf4",
+    "user_notes_sha256": "f98772a215007826f7a676734d928f07953946b6ae023eae6290ce1bffba78ca"
+  }
+}

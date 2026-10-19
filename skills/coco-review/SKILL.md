@@ -1,6 +1,6 @@
 ---
 name: coco-review
-description: "Use when reviewing committed or work-in-progress changes against requirements, repository standards and quality, or challenging a consequential design claim. 코드 리뷰·중요 판단 검토."
+description: "Use when reviewing committed or work-in-progress changes against requirements, repository standards and quality, or challenging a consequential design claim."
 license: MIT
 ---
 

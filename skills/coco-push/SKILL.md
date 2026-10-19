@@ -1,28 +1,28 @@
 ---
 name: coco-push
-description: "Use when the user wants the current Git branch synchronized with remote dev or develop, its summary and linked Jira task aligned with actual work when needed, and the verified branch pushed. 최신 반영·충돌 해결·브랜치/Jira 정리·푸시."
+description: "Use when the user wants the current Git branch synchronized with remote dev or develop, its summary and linked Jira task aligned with actual work when needed, and the verified branch pushed."
 license: MIT
 ---
 
 # coco-push
 
-원격 `dev` 또는 `develop`의 최신 변경을 현재 작업 브랜치에 반영하고, 충돌 해결·검증 후 그 작업 브랜치를 일반 푸시한다. 푸시 전 실제 작업과 브랜치명의 작업요약을 비교하고, 적절하지 않으면 브랜치명과 연결된 Jira 태스크를 맞춘다. [공통 계약](../_coco-shared/contracts.md), [동기화 절차](references/sync-and-push.md), 필요한 경우 [브랜치·티켓 정리](references/branch-and-ticket.md)를 따른다.
+Integrate the latest remote `dev` or `develop` changes into the current work branch, resolve conflicts, verify, and push that branch normally. Before pushing, compare the actual work with the branch name's task summary; align the name and linked Jira task when the summary is unsuitable. Follow the [common contract](../_coco-shared/contracts.md), [synchronization procedure](references/sync-and-push.md), and, when needed, [branch and ticket alignment](references/branch-and-ticket.md). Localize questions and reports to the user's language.
 
-## 진행
+## Workflow
 
-1. 저장소 최상위, 현재 브랜치·HEAD·상태, 진행 중인 Git 작업, 원격과 업스트림, 저장소 규칙과 검사 명령을 확인한다. 시작 브랜치·커밋·변경 경로를 기록한다. 이 실행 요청은 해당 범위의 동기화·충돌 해결·필요한 브랜치명 및 연결 Jira 태스크의 제목/작업설명 정리·일반 푸시를 포함하며 같은 승인을 다시 요구하지 않는다. 설명·검토만 요청한 경우에는 Git·Jira를 변경하지 않는다.
-2. 기준 원격과 `dev`/`develop`, 별도의 푸시 원격·브랜치를 확인한다. 명시한 대상, 저장소 지침·설정, 현재 PR의 기준 등 확인한 근거를 우선한다. 두 개발 브랜치가 모두 있고 기준을 결정할 근거가 없으면 둘 중 하나를 선택받는다. 둘 다 없으면 다른 기준을 임의로 택하지 않는다. 기본 푸시 대상은 최종 작업 브랜치와 같은 이름이며 기준 브랜치로 변경하지 않는다. 변경 전 작업 브랜치의 원격 ref와 명시적인 푸시 대상은 따로 기록한다.
-3. 사용자 미커밋 변경을 보존한다. 소유·범위가 확인된 요청 작업은 필요한 검증 후 작업별 커밋으로 준비한다. 소유를 알 수 없는 변경이나 기존 merge/rebase 등이 있으면 상태와 필요한 결정을 제시한다. 임의의 전체 커밋·stash·reset·clean으로 시작 상태를 지우지 않는다.
-4. 원격의 실제 최신 ref를 조회·fetch하고 가져온 커밋을 고정한다. 푸시 대상에만 있는 커밋도 반영한다. 기본 pull 동작은 `fetch + merge`로 분리해 공유 이력을 유지한다. 충돌은 양쪽 의도·주변 코드·테스트를 읽고 파일별로 해결한다. 제품 동작 선택이 불분명하면 그 결정만 확인한다.
-5. 미해결 인덱스, 충돌 표식 의심, 변경 diff를 확인하고 저장소의 필수 검사와 충돌 영향 검증을 수행한다. 해결 경로만 스테이징하고 필요한 통합 커밋을 완성한다. 자동 병합됐어도 의미 충돌을 검증한다. 필수 실패·미실행 또는 미완료 Git 작업이 있으면 푸시하지 않는다.
-6. 선택한 개발 기준과 최종 HEAD의 diff·브랜치 고유 커밋·태스크를 읽고 이번 브랜치의 실제 작업을 요약한다. 브랜치명의 작업요약이 핵심 목적·범위를 적절히 나타내면 이름과 티켓을 유지한다. 목적이 달라졌거나 중요한 작업이 빠져 부적절하면 [브랜치·티켓 정리](references/branch-and-ticket.md)에 따라 요약 부분을 고치고 Jira 제목(Summary)과 작업설명(Description)을 함께 갱신·재확인한다. 필수 정보·쓰기 기능·권한이 없거나 갱신을 확인할 수 없으면 그 상태를 남기고 푸시 전 멈춘다.
-7. 푸시 직전 기준 ref와 작업 원격 ref가 전진했는지 다시 확인하고, 달라졌으면 다시 통합·검증·작업요약 확인을 수행한다. 이름을 바꾼 경우 최종 이름의 ref와 기존 작업 원격 ref도 확인한다. 검증한 HEAD를 확인한 단일 쓰기 목적지에 명시적인 단일 refspec으로 일반 푸시한다. 강제 푸시·미러·전체 브랜치 푸시나 보호 규칙 우회를 사용하지 않는다. 경합으로 거절되면 최신 변경을 다시 가져와 통합·검증한다. 갱신·통합 라운드와 총 push 시도는 각각 최대 3회로 제한한다. 인증·보호 정책·네트워크 장애는 경합으로 취급하지 않는다.
-8. 성공 응답과 원격 ref를 다시 읽어 결과를 확인한다. 대상 원격 브랜치가 검증한 커밋과 일치해야 성공이며, 직후 다른 커밋으로 전진했다면 포함 관계를 확인하고 관찰 상태를 구분한다. 검증 이후 로컬 변경이 생기면 해당 HEAD를 푸시 성공으로 포장하지 않는다.
+1. Check the repository root, current branch, HEAD, working state, unfinished Git operations, remotes, upstream, repository rules, and check commands. Record the starting branch, commit, and changed paths. An execution request authorizes synchronization, conflict resolution, necessary branch-name and linked Jira title/description alignment, and a normal push within this scope; do not request the same authorization again. For explanation or review only, change neither Git nor Jira.
+2. Establish the base remote and `dev`/`develop`, separately from the push remote and branch. Prefer evidence from the explicit target, repository rules/configuration, or current PR base. If both development branches exist with no evidence to choose between them, ask the user to choose. If neither exists, do not invent another base. The default push target has the final work branch's name; do not replace it with the base branch. Separately record the pre-change remote work ref and any explicitly requested push target.
+3. Preserve uncommitted user changes. Prepare owned, in-scope requested work as separate work-unit commits after the necessary checks. If ownership is unknown or a merge/rebase or other operation already exists, report the state and required decision. Do not erase the starting state through an indiscriminate commit, stash, reset, or clean.
+4. Query and fetch the actual latest remote refs, recording the fetched commits. Integrate commits found only at the push target too. Separate the default pull operation into `fetch + merge` to preserve shared history. Resolve each conflict after reading both intentions, surrounding code, and tests. Ask only about an unresolved product-behavior choice.
+5. Check unmerged index entries, suspected conflict markers, and the diff; run required repository checks and verification of conflict effects. Stage only resolved paths and complete any necessary integration commit. Verify semantic conflicts even after automatic merging. Do not push with required checks failed or unrun, or with an unfinished Git operation.
+6. Read the diff from the selected development base to final HEAD, branch-specific commits, and task requirements to summarize this branch's actual work. Keep the name and ticket if the branch summary appropriately describes its main purpose and scope. If the purpose changed or important work is omitted, follow [branch and ticket alignment](references/branch-and-ticket.md) to revise the summary and update and reread both Jira Summary and Description. If required information, write capability, or authority is unavailable, or the update cannot be confirmed, record the state and stop before pushing.
+7. Immediately before pushing, recheck whether the base ref and remote work ref advanced; if so, reintegrate, reverify, and reassess the work summary. After a rename, check both the final-name ref and original remote work ref. Push the verified HEAD normally to the confirmed single write destination using one explicit refspec. Do not force-push, mirror, push all branches, or bypass protection rules. After a race rejection, fetch, integrate, and verify again. Limit refresh/integration rounds and total push attempts to three each. Authentication, protection-policy, and network failures are not races.
+8. Confirm the successful response and reread the remote ref. Success requires the target remote branch to match the verified commit. If it immediately advanced to another commit, check ancestry and distinguish the observed state. If local changes occurred after verification, do not present an unverified HEAD as successfully pushed.
 
-## 결과
+## Output
 
-기준 원격/브랜치와 가져온 커밋, 실제 작업요약과 이름 유지/변경 이유, 변경 전후 브랜치·Jira 키·제목·작업설명 변경 범위와 재조회 결과, 최종 푸시 대상, 해결한 충돌과 판단, 생성한 커밋, 검사 결과, 푸시한 커밋과 원격 확인, 남은 사용자 변경이나 차단 사유를 보고한다. 기존 원격 이름을 남겼거나 일부 단계만 성공했다면 구분한다. 충돌이 없었다는 것은 이번에 확인한 범위·시점의 결과이며 향후 경합까지 보장하지 않는다.
+Report the base remote/branch and fetched commit; actual work summary and reasons for keeping or changing the name; branch before/after, Jira key, title/description changes and readback; final push target; conflicts and decisions; created commits; check results; pushed commit and remote confirmation; and remaining user changes or blockers. Distinguish retaining the original remote name and partial success. A conflict-free result applies only to the checked scope and time, not future races.
 
-`coco-push`는 통합 커밋·필요한 브랜치/연결 티켓 정리·해당 브랜치 푸시를 맡는다. Jira 정리는 제목과 작업설명 필드에 한정한다. 새 기능이나 무관한 수정은 `coco-build`의 별도 작업으로 남기며 제품 완료 상태나 Jira 상태·담당자 등을 바꾸지 않는다. 기존 원격 브랜치 삭제, PR 생성·병합·배포는 이 요청에 포함하지 않는다.
+`coco-push` owns integration commits, necessary branch/linked-ticket alignment, and pushing that branch. Jira alignment is limited to Summary and Description. New features and unrelated fixes remain separate `coco-build` work; do not mark product work complete or change Jira status, assignee, or other fields. Deleting the original remote branch, creating or merging a PR, and deployment are outside this request.
 
-예: `$coco-push` 또는 `$coco-push origin/develop 기준으로 현재 브랜치를 최신화하고 충돌 해결과 검증 후 푸시해줘`.
+Examples: `$coco-push` or `$coco-push Update the current branch from origin/develop, resolve conflicts, verify, and push`.

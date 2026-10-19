@@ -1,6 +1,6 @@
 ---
 name: coco-plan
-description: "Use when a spec or clear brief needs dependency-ordered tasks, verifiable slices, ticket publication, or execution checkpoints. 계획·작업 분해·티켓."
+description: "Use when a spec or clear brief needs dependency-ordered tasks, verifiable slices, ticket publication, or execution checkpoints."
 license: MIT
 ---
 

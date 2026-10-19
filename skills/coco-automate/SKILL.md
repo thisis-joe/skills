@@ -1,6 +1,6 @@
 ---
 name: coco-automate
-description: "Use when building CI/CD, recurring workflows, issue bots, reusable verification helpers or task automation. CI·자동화·봇·반복 작업."
+description: "Use when building CI/CD, recurring workflows, issue bots, reusable verification helpers or task automation."
 license: MIT
 ---
 
