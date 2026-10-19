@@ -2,6 +2,8 @@
 
 고정 버전의 모든 스킬·명령을 빠짐없이 기록합니다. `merged`는 공통 절차에 흡수, `adapted`는 팀/도구/권한에 맞춘 수정, `reference`는 필요할 때 적용하는 전문·실험 모드입니다. 원본 파일은 실행하지 않는 `.source` 자료입니다.
 
+팀 요청으로 추가한 [coco-whattosay](../skills/coco-whattosay/SKILL.md)는 선택된 스킬에 맞는 요청문을 추천하는 신규 절차입니다. 원본에서 유래한 동작이 아니므로 아래 원본 대응과 `sources/coverage.json`의 131개 항목은 추가·변경하지 않습니다. 선택과 실행의 경계는 [결정 기록](../skills/_coco-shared/decisions.md)에 남깁니다.
+
 | 출처 | 원본 | 통합 절차 | 처리 |
 |---|---|---|---|
 | matt | [skills/engineering/ask-matt](../sources/matt/skills/engineering/ask-matt/SKILL.md.source) | [coco-start](../skills/coco-start/SKILL.md) | adapted |

@@ -16,7 +16,7 @@ Matt Pocock, Addy Osmani, Lauren Tan(pstack)의 스킬 트리를 목적별 스�
 
 ## 목적별 스킬
 
-`start`, `clarify`, `research`, `design`, `spec`, `plan`, `build`, `debug`, `verify`, `review`, `security`, `migrate`, `performance`, `frontend`, `observe`, `automate`, `ship`, `document`, `context`, `retro`, `triage`, `simplify`의 통합 진입점 22개에 팀 안내용 `tellmeskill`, 원격 동기화·푸시용 `push`, 팀 맞춤 유지보수용 `updateskill`을 더해 총 25개를 둔다. `start`의 선택표가 상황·목적·기대 결과를 한곳에서 설명한다. `tellmeskill`은 현재 전체 스킬 목록에서 대상과 설명 길이를 선택받고 모든 대상·모드에 동일한 양식으로 설명한다. `push`는 개발 기준과 푸시 목적지를 구분하고 검증 후 단일 작업 브랜치를 게시하며, 실제 변경과 작업요약이 어긋나면 브랜치명과 Jira 제목·작업설명을 보존적으로 맞춘다. `updateskill`은 기준 원본과 설치 사본을 구분하고 팀 규칙·출처·참조를 일관되게 수정·검증·반영한다. 세 팀 전용 스킬은 원본에서 유래한 기능으로 꾸며 대응표에 추가하지 않는다. 이름이 겹쳐도 같은 절차를 두 번 실행하지 않는다.
+`start`, `clarify`, `research`, `design`, `spec`, `plan`, `build`, `debug`, `verify`, `review`, `security`, `migrate`, `performance`, `frontend`, `observe`, `automate`, `ship`, `document`, `context`, `retro`, `triage`, `simplify`의 통합 진입점 22개에 팀 안내용 `tellmeskill`, 원격 동기화·푸시용 `push`, 팀 맞춤 유지보수용 `updateskill`, 요청문 추천용 `whattosay`를 더해 총 26개를 둔다. `start`의 선택표가 상황·목적·기대 결과를 한곳에서 설명한다. `tellmeskill`은 현재 전체 스킬 목록에서 대상과 설명 길이를 선택받고 모든 대상·모드에 동일한 양식으로 설명한다. `push`는 개발 기준과 푸시 목적지를 구분하고 검증 후 단일 작업 브랜치를 게시하며, 실제 변경과 작업요약이 어긋나면 브랜치명과 Jira 제목·작업설명을 보존적으로 맞춘다. `updateskill`은 기준 원본과 설치 사본을 구분하고 팀 규칙·출처·참조를 일관되게 수정·검증·반영한다. `whattosay`는 확정한 스킬·목적·범위를 이어받아 같은 스킬의 전체 호출문을 추천하고 사용자 선택 후 실행한다. 문장만 요청한 경우는 실행하지 않으며, `coco-whichskill`의 인계나 직접 지정을 지원하되 미설치 스킬에 의존하지 않는다. 네 팀 전용 스킬은 원본에서 유래한 기능으로 꾸며 대응표에 추가하지 않는다. 이름이 겹쳐도 같은 절차를 두 번 실행하지 않는다.
 
 ## 불변 조건
 
@@ -33,4 +33,4 @@ Matt Pocock, Addy Osmani, Lauren Tan(pstack)의 스킬 트리를 목적별 스�
 
 ## 완료 근거
 
-원본 전 항목의 대응표와 체크섬, 통합 진입점 22개와 팀 전용 3개를 포함한 유효한 스킬 25개, 끊기지 않는 설치 후 참조, 실제 Git 범위 수집 테스트, 기존 파일을 보존하는 설치 테스트, 변경 전·후 행동 평가, 독립 최종 검토와 수정 결과가 필요하다. 형식 검사만으로 행동 준수를 주장하지 않는다. 실제 개인 스킬 폴더에 설치하고 설치된 파일의 일치도까지 확인한다.
+원본 전 항목의 대응표와 체크섬, 통합 진입점 22개와 팀 전용 4개를 포함한 유효한 스킬 26개, 끊기지 않는 설치 후 참조, 실제 Git 범위 수집 테스트, 기존 파일을 보존하는 설치 테스트, 변경 전·후 행동 평가, 독립 최종 검토와 수정 결과가 필요하다. 형식 검사만으로 행동 준수를 주장하지 않는다. 실제 개인 스킬 폴더에 설치하고 설치된 파일의 일치도까지 확인한다.

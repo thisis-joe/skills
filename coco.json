@@ -28,7 +28,8 @@
     "coco-simplify",
     "coco-tellmeskill",
     "coco-push",
-    "coco-updateskill"
+    "coco-updateskill",
+    "coco-whattosay"
   ],
   "provenance_required": true
 }
