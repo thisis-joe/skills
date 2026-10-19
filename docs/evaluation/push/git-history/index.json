@@ -1,0 +1,66 @@
+[
+  {
+    "fixture": "case-3/remote.git",
+    "bundle": "git-history/case-3__remote.git.bundle"
+  },
+  {
+    "fixture": "case-3/seed",
+    "bundle": "git-history/case-3__seed.bundle"
+  },
+  {
+    "fixture": "case-3/work",
+    "bundle": "git-history/case-3__work.bundle"
+  },
+  {
+    "fixture": "case-4/remote.git",
+    "bundle": "git-history/case-4__remote.git.bundle"
+  },
+  {
+    "fixture": "case-4/seed",
+    "bundle": "git-history/case-4__seed.bundle"
+  },
+  {
+    "fixture": "case-4/work",
+    "bundle": "git-history/case-4__work.bundle"
+  },
+  {
+    "fixture": "case-5/remote.git",
+    "bundle": "git-history/case-5__remote.git.bundle"
+  },
+  {
+    "fixture": "case-5/seed",
+    "bundle": "git-history/case-5__seed.bundle"
+  },
+  {
+    "fixture": "case-5/work",
+    "bundle": "git-history/case-5__work.bundle"
+  },
+  {
+    "fixture": "case-2/remote.git",
+    "bundle": "git-history/case-2__remote.git.bundle"
+  },
+  {
+    "fixture": "case-2/seed",
+    "bundle": "git-history/case-2__seed.bundle"
+  },
+  {
+    "fixture": "case-2/peer",
+    "bundle": "git-history/case-2__peer.bundle"
+  },
+  {
+    "fixture": "case-2/work",
+    "bundle": "git-history/case-2__work.bundle"
+  },
+  {
+    "fixture": "case-1/remote.git",
+    "bundle": "git-history/case-1__remote.git.bundle"
+  },
+  {
+    "fixture": "case-1/seed",
+    "bundle": "git-history/case-1__seed.bundle"
+  },
+  {
+    "fixture": "case-1/work",
+    "bundle": "git-history/case-1__work.bundle"
+  }
+]
