@@ -44,7 +44,7 @@
 | matt | [skills/productivity/writing-for-agents](../sources/matt/skills/productivity/writing-for-agents/SKILL.md.source) | [lets-document](../skills/lets-document/SKILL.md) | merged |
 | addy | [.claude/commands/build.md](../sources/addy/.claude/commands/build.md.source) | [lets-build](../skills/lets-build/SKILL.md) | adapted |
 | addy | [.claude/commands/code-simplify.md](../sources/addy/.claude/commands/code-simplify.md.source) | [lets-simplify](../skills/lets-simplify/SKILL.md) | merged |
-| addy | [.claude/commands/constraints.md](../sources/addy/.claude/commands/constraints.md.source) | [lets-verify](../skills/lets-verify/SKILL.md) | adapted |
+| addy | [.claude/commands/constraints.md](../sources/addy/.claude/commands/constraints.md.source) | [lets-start](../skills/lets-start/SKILL.md) | adapted |
 | addy | [.claude/commands/plan.md](../sources/addy/.claude/commands/plan.md.source) | [lets-plan](../skills/lets-plan/SKILL.md) | adapted |
 | addy | [.claude/commands/review.md](../sources/addy/.claude/commands/review.md.source) | [lets-review](../skills/lets-review/SKILL.md) | merged |
 | addy | [.claude/commands/ship.md](../sources/addy/.claude/commands/ship.md.source) | [lets-ship](../skills/lets-ship/SKILL.md) | adapted |
@@ -56,7 +56,7 @@
 | addy | [skills/ci-cd-and-automation](../sources/addy/skills/ci-cd-and-automation/SKILL.md.source) | [lets-automate](../skills/lets-automate/SKILL.md) | adapted |
 | addy | [skills/code-review-and-quality](../sources/addy/skills/code-review-and-quality/SKILL.md.source) | [lets-review](../skills/lets-review/SKILL.md) | adapted |
 | addy | [skills/code-simplification](../sources/addy/skills/code-simplification/SKILL.md.source) | [lets-simplify](../skills/lets-simplify/SKILL.md) | merged |
-| addy | [skills/constraint-driven-development](../sources/addy/skills/constraint-driven-development/SKILL.md.source) | [lets-verify](../skills/lets-verify/SKILL.md) | adapted |
+| addy | [skills/constraint-driven-development](../sources/addy/skills/constraint-driven-development/SKILL.md.source) | [lets-start](../skills/lets-start/SKILL.md) | adapted |
 | addy | [skills/context-engineering](../sources/addy/skills/context-engineering/SKILL.md.source) | [lets-context](../skills/lets-context/SKILL.md) | adapted |
 | addy | [skills/debugging-and-error-recovery](../sources/addy/skills/debugging-and-error-recovery/SKILL.md.source) | [lets-debug](../skills/lets-debug/SKILL.md) | merged |
 | addy | [skills/deprecation-and-migration](../sources/addy/skills/deprecation-and-migration/SKILL.md.source) | [lets-migrate](../skills/lets-migrate/SKILL.md) | merged |

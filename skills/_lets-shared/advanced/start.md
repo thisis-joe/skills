@@ -91,3 +91,33 @@ Link one canonical quality policy from the project's existing agent rules when a
 Stop setup when enough is known to execute the requested work safely.
 Unresolved material decisions block their dependent action; other permitted work can continue.
 Use the [context contract](../contracts.md) for evidence and interruption recovery.
+
+## Former pstack playbook coverage
+
+These are provenance labels, not original commands to invoke. The named neutral mode owns the procedure.
+
+| Original playbook | Integrated conditional home |
+|---|---|
+| authoring-a-skill | [retro](retro.md) evaluation plus [verify](verify.md) helper/experiment lifecycle |
+| autonomous-run | [build](build.md) authorized continuous execution and decision trail |
+| autopilot-full | [build](build.md) scoped end-to-end work, then [ship](ship.md) requested PR |
+| autopilot-stack | [plan](plan.md) dependency graph, build ownership, ship frontier |
+| babysit | [ship](ship.md) check/threads-only/drive/background supervision |
+| bug-fix | [debug](debug.md) reproducible cause and build fix |
+| eval | [retro](retro.md) structural evaluation and verify experiments |
+| feature | [build](build.md) test-first feature slices |
+| hillclimb | [performance](performance.md) bounded measured tuning |
+| investigation | [research](research.md) cited how/why answer |
+| multi-phase-plan | [plan](plan.md) phase/PR dependency and integration contracts |
+| opening-a-pr | [ship](ship.md) concrete behavior/validation PR artifact |
+| orchestrate | [automate](automate.md) persisted task graph and one-writer recovery |
+| pause-safely | [context](context.md) truthful recovery capsule and owned resources |
+| perf-issue | [performance](performance.md) baseline/limiter/keep-or-revert |
+| prototype | [design](design.md) isolated disposable primary-source probe |
+| refactoring | [simplify](simplify.md) preserved behavior and removed complexity |
+| runtime-forensics | [research](research.md) runtime evidence and [context](context.md) profile-only boundaries |
+| session-pickup | [context](context.md) Git/artifact reconciliation |
+| shipping | [ship](ship.md) independently verified release/stack landing gate |
+| trace-forensics | [research](research.md) task-scoped evidence, context limits |
+| visual-parity | [frontend](frontend.md) controlled reference/current captures |
+| worktree-cleanup | [context](context.md) owned worktree/simulator inventory and safe cleanup |

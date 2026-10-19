@@ -97,3 +97,28 @@ Record checks as passed, failed, unavailable or not applicable, with evidence po
 Keep exceptions visible; do not lower scanner thresholds or disable checks to pass.
 Stop an affected unsafe action when authorization, ownership or required proof is missing.
 Hand fixes to build and recheck the actual changed snapshot before security sign-off.
+
+## Conditional Git command guard setup
+
+Use when the request is to prevent dangerous Git tool calls, not as an automatic global setting.
+Identify project-only versus user-wide scope from the request; ask only if that choice is missing.
+Inspect the current runtime's documented pre-tool/policy interface and existing configuration.
+Prepare an owned command-policy helper that reads the tool payload as data and never evaluates its command.
+The default proposed deny set is all `git push`, `git reset --hard`, forced `git clean`,
+`git branch -D`, and whole-tree discard through `git checkout .` or `git restore .`.
+Have the user choose any policy customization; an execution grant remains governed by higher-level rules.
+Recognize supported flags/command forms deliberately and document forms the helper cannot interpret.
+A string-pattern hook is a convenience guard, not proof of a complete shell security boundary.
+
+For a runtime with a pre-tool command hook, merge the helper into its existing matching hook array,
+preserving other settings; for Claude Code this is its documented `PreToolUse` Bash hook.
+For a runtime without equivalent interception, report enforcement unavailable and prepare a supported
+policy/wrapper alternative; do not claim an installed hook. Apply configuration only in authorized scope.
+
+Test the helper directly with synthetic stdin such as
+`{"tool_input":{"command":"git push origin main"}}`; assert the runtime's blocking exit/result
+(Claude command hooks use exit 2) and a diagnostic, without executing Git.
+Include hard reset, forced clean, branch deletion, whole-tree discard, harmless status,
+quoted paths, supported Git flags and malformed payloads; unsupported syntax must behave as documented.
+Exercise a harmless intercepted call in a temporary repository and confirm other hooks remain.
+Return the configuration diff, supported coverage, tests, rollback copy and actual activation state.

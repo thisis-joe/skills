@@ -98,3 +98,27 @@ Output a reviewable profile draft/update and evidence for each durable conventio
 Return the requested capsule, handoff/log/profile pointer, source scope, live checks, unresolved claims and next action. Use unavailable for missing access and not-applicable only with a reason.
 
 Context reconstruction is complete when enough reliable state exists to continue the requested work. A missing access or material decision blocks only dependent work. Follow [retro](retro.md) when recurring failures indicate an environment improvement instead of adding more raw history.
+
+## Conditional owned worktree and simulator cleanup
+
+Use only for requested local resource cleanup or teardown of resources created by this task.
+Measure disk use before acting. Discover worktrees through the runtime's attachment inventory or
+`git worktree list --porcelain`, not guessed directory names. Record branch/base, merge state, size,
+tracked/untracked/ignored work, process use and active or pinned chat ownership for each candidate.
+An old, merged or apparently clean directory is not proof it is unused; sibling verification trees
+can belong to an active task. Treat unknown ownership as a hold rather than mining private history.
+
+Prefer the host's recoverable archive/remove operation for managed worktrees. Preserve necessary
+ignored files separately if that operation does not retain them. A plain Git checkout can use its
+normal worktree removal only after requested scope, ownership, inactivity and recovery are established.
+Keep uncommitted work and active/pinned checkouts; obtain a specific decision before irreversible loss.
+Do not use broad force removal or a hand-built recursive deletion as a fallback for failed ownership.
+Re-list remaining worktrees and disk use; report held candidates with reasons and recovery pointers.
+
+For Apple simulators, use the installed supported inventory such as `xcrun simctl list --json` and
+runtime inventory to identify exact unavailable/stale device/runtime IDs, boot state and owning tests.
+Separate task-owned temporary devices from a developer's persistent simulator data. Stop only owned
+sessions; delete only the explicitly authorized exact device/runtime set after checking data loss.
+Never translate cleanup into `delete all`, removal of all caches or global application state.
+Re-inventory device/runtime IDs and disk use and keep proof outside disposable directories.
+Missing platform tools mean unavailable simulator cleanup, not fabricated reclaimed space.

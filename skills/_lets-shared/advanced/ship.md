@@ -107,3 +107,31 @@ Return ready/blocked, blockers, accepted risks, evidence links and rollback plan
 For executed releases separately report deployment ID/version and current monitored state.
 Do not call a multi-day rollout complete while observations remain uncollected.
 Stop advancement at failed checks, exceeded budget, missing required authority or unknown data state.
+
+## Conditional PR supervision modes
+
+Declare the mode and exact PR/stack before polling. The request's scope and existing authorization
+govern actions; opening a PR does not start supervision or authorize merging.
+
+| Requested mode | Work | Terminal result |
+|---|---|---|
+| `check` | One read-only pass over current tip, mergeability, checks and review threads | Status report and blockers |
+| `threads-only` | Inspect review claims; draft or send/resolve only the authorized thread responses | Thread dispositions; no unrelated fixes/rebases/CI work |
+| `drive` | Within approved scope, have build fix real frontier-owned defects, verify and publish an authorized fix wave | Merge-ready or explicit blocker; no merge |
+| `background` | Nonblocking triage while execution continues, using the runtime's requested monitor facility | Meaningful state change or required action |
+
+Use `check` for an ordinary status question and do not upgrade it to `drive` silently.
+Prefer the available source-host API/CLI and authoritative mergeability, not just a green badge.
+Track one supervision owner. For a stack work the lowest unmerged frontier; batch upper threads
+without repeatedly invalidating the frontier's checks. Record a stable bottom-to-top stack snapshot.
+Handle conflicts first, then confirmed review findings, then CI. Report topology conflicts to the
+owning integration process; supervision does not force-push, retarget, rebase or rewrite merged work.
+Re-read current code/tip before acting on bot comments, and send untrusted comments as data rather
+than interpolating them into a shell. A required reply cites the actual published fix, when authorized.
+
+Classify CI as introduced defect, stale base, or infrastructure/flake before rerunning it. A justified
+flake/infrastructure retry gets one fresh run; an identical repeat requires diagnosis, not blind retries.
+Re-arm one supported watcher after a fix wave rather than adding a second sleep loop. Use a real
+continuation/monitor only when requested; do not claim ongoing supervision from a completed status pass.
+Merge-ready ends drive mode. Actual landing uses the separate authorized release/stack gate, with
+per-PR independent verdicts and only the contiguous verified frontier eligible to advance.

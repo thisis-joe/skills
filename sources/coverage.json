@@ -906,7 +906,7 @@
     },
     {
       "path": ".claude/commands/constraints.md",
-      "family": "verify",
+      "family": "start",
       "disposition": "adapted",
       "essential_rules": [
         "Default setup detects stack/tools/coverage/CI first, then uses at most four one-at-a-time defaulted questions instead of asking what files can answer.",
@@ -918,10 +918,11 @@
       "dependencies": [
         "skills/constraint-driven-development/SKILL.md"
       ],
-      "adaptation": "Adapt command wrappers to the full skills non-interactive floor-only path and canonical file ownership; the command itself mentions only CLAUDE.md while the skill also requires AGENTS.md. Retain floor guard reference rather than reimplement patterns.",
+      "adaptation": "Adapt command wrappers to the full skills non-interactive floor-only path and canonical file ownership; the command itself mentions only CLAUDE.md while the skill also requires AGENTS.md. Retain floor guard reference rather than reimplement patterns. LET'S routes standing-bar setup to start; verify links to that owner for a requested quality-bar audit.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-verify/SKILL.md",
+        "skills/lets-start/SKILL.md",
+        "skills/_lets-shared/advanced/start.md",
         "skills/_lets-shared/advanced/verify.md"
       ]
     },
@@ -1159,7 +1160,7 @@
     },
     {
       "path": "skills/constraint-driven-development/SKILL.md",
-      "family": "verify",
+      "family": "start",
       "disposition": "adapted",
       "essential_rules": [
         "Detect existing stack, tooling, CI, coverage and harness before asking; in an interactive setup ask at most four one-at-a-time questions with defaults. In autonomous/CI runs apply the existing constraints, or floor-only with explicit missing-bar notice.",
@@ -1178,10 +1179,11 @@
         "skills/performance-optimization/SKILL.md",
         "skills/constraint-driven-development/references/floor-guard.md"
       ],
-      "adaptation": "Preserve the complete lifecycle and floor reference contract, not just numeric defaults. Stage/budget and 80%/60%/90-day defaults are project choices, not universal gates. The regex guard does not implement secrets scanning, exact line locations, exception approval matching or expiry enforcement; compose scanners and retain heuristics/false-positive caveats.",
+      "adaptation": "Preserve the complete lifecycle and floor reference contract, not just numeric defaults. Stage/budget and 80%/60%/90-day defaults are project choices, not universal gates. The regex guard does not implement secrets scanning, exact line locations, exception approval matching or expiry enforcement; compose scanners and retain heuristics/false-positive caveats. LET'S routes standing-bar setup to start; verify links to that owner for a requested quality-bar audit.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-verify/SKILL.md",
+        "skills/lets-start/SKILL.md",
+        "skills/_lets-shared/advanced/start.md",
         "skills/_lets-shared/advanced/verify.md"
       ]
     },

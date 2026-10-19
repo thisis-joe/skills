@@ -101,3 +101,15 @@ Distinguish passed visual/behavior checks from unavailable browser or assistive 
 A green unit suite cannot certify layout, focus behavior or production rendering.
 Stop completion for a failed required state or missing required runtime evidence.
 Resolve findings through build, then recheck the affected current render.
+
+## Conditional visual parity
+
+Use when preserving an existing rendering while changing implementation or matching an agreed reference.
+Freeze the reference/current revision, viewport/device scale, fonts, data, feature flags and interaction
+state. Capture both through the same supported real-browser path after readiness, not by editing images.
+Compare hierarchy, geometry, typography, colors, responsive behavior and relevant loading/error/focus
+states. A pixel/image comparison can locate a discrepancy but antialiasing noise is not a user defect.
+Exercise the same interactions and persistence on both sides; a matching screenshot alone cannot
+prove behavior parity. Record accepted intentional differences and their authorization separately.
+Fix differences in source through build and recapture the affected states. Preserve reference and
+proof artifacts outside teardown paths; mark unavailable states/tools rather than substituting a score.

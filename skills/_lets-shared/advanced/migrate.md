@@ -93,3 +93,25 @@ Include cutover criteria, active-use evidence, backfill reconciliation and unres
 Keep rollback commands/runbooks explicit and tied to the target/version.
 Stop cutover for failed compatibility, unknown data state or absent required authority.
 Mark migration complete only when the chosen final contract and required integrated checks hold.
+
+## Conditional TypeScript fixture migration
+
+Use for an explicit request to replace test-only assertions or adopt `@total-typescript/shoehorn`.
+Inventory requested `.test.ts`/`.spec.ts` fixtures and classify partial valid data versus intentionally
+invalid input. Preserve existing good typed builders; this is not a production-code cast replacement.
+Verify the installed/requested library version against its official API and the project's package manager.
+If adding it is in scope, add a development dependency using the dependency execution gate in
+[security](security.md); otherwise prepare the concrete proposed migration without installing it.
+
+- Replace a test-only `value as Request` partial fixture with `fromPartial(value)` where the consumer
+  infers the intended type; keep every field the exercised code path actually reads.
+- Replace an intentional `as unknown as Request` bad-input fixture with `fromAny(value)` while retaining
+  the invalid value and the assertion that it is rejected. Do not convert it into valid happy-path data.
+- Use `fromExact(value)` when the complete fixture shape is the point of the test.
+- Import the selected helper from the verified package API and remove obsolete casts/imports.
+
+For example, an existing `getUser({body: {id: '123'}} as Request)` test may become
+`getUser(fromPartial({body: {id: '123'}}))`; this does not authorize dropping required test setup.
+Run the actual typecheck and affected tests, then required closure checks; inspect that negative tests
+still fail when the invalid-input defense is broken in a disposable copy.
+Keep all helper usage in tests, preserve user edits, and hand the migration to build for its scoped commit.
