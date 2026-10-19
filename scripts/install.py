@@ -1,4 +1,4 @@
-"""Install LET'S without overwriting foreign or locally modified skill files."""
+"""Install COCO without overwriting foreign or locally modified skill files."""
 import argparse
 import json
 import os
@@ -48,15 +48,15 @@ def install(root, dest, dry_run=False):
     if dry_run:
         return {'status': 'dry-run', 'skills': len(data['skills']), 'files': len(files), 'destination': str(dest)}
     dest.mkdir(parents=True, exist_ok=True)
-    lock = dest / '.lets-install.lock'
+    lock = dest / '.coco-install.lock'
     try:
         fd = os.open(str(lock), os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o600)
     except FileExistsError as exc:
-        raise PackageError('Another installation owns .lets-install.lock; inspect that process before retrying') from exc
+        raise PackageError('Another installation owns .coco-install.lock; inspect that process before retrying') from exc
     try:
         os.close(fd)
         preflight(dest, desired)
-        with tempfile.TemporaryDirectory(prefix='.lets-stage-', dir=str(dest.parent)) as td:
+        with tempfile.TemporaryDirectory(prefix='.coco-stage-', dir=str(dest.parent)) as td:
             stage = Path(td)
             incoming = stage / 'incoming'
             backup = stage / 'backup'
@@ -78,7 +78,7 @@ def install(root, dest, dry_run=False):
                         activated.append(folder)
                 staged_manifest = stage / 'manifest.json'
                 staged_manifest.write_text(json.dumps(info, ensure_ascii=False, indent=2) + '\n')
-                os.replace(str(staged_manifest), str(dest / '.lets-install.json'))
+                os.replace(str(staged_manifest), str(dest / '.coco-install.json'))
             except BaseException:
                 for folder in reversed(activated):
                     os.replace(str(dest / folder), str(incoming / folder))

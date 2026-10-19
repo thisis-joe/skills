@@ -1,4 +1,4 @@
-"""Validation and file ownership for the dependency-free LET'S bundle."""
+"""Validation and file ownership for the dependency-free COCO bundle."""
 import hashlib
 import json
 from pathlib import Path, PurePosixPath
@@ -31,13 +31,13 @@ def safe_relative(value):
 
 
 def config(root):
-    data = read_json(root / 'lets.json')
+    data = read_json(root / 'coco.json')
     names = data.get('skills', [])
-    if (data.get('schema') != 1 or data.get('shared') != '_lets-shared' or
+    if (data.get('schema') != 1 or data.get('shared') != '_coco-shared' or
             not isinstance(names, list) or not names or len(names) != len(set(names))):
         raise PackageError('Invalid package configuration')
     for name in names:
-        if not isinstance(name, str) or not re.fullmatch(r'lets-[a-z0-9]+(?:-[a-z0-9]+)*', name):
+        if not isinstance(name, str) or not re.fullmatch(r'coco-[a-z0-9]+(?:-[a-z0-9]+)*', name):
             raise PackageError('Invalid skill name/path: ' + str(name))
     return data
 
@@ -98,7 +98,7 @@ def validate_payload(base, data):
                 if line.startswith('  ') and ': ' in line:
                     key, value = line.strip().split(': ', 1)
                     values[key] = scalar(value)
-            expected = data.get('display_prefix', "let's-") + name[len('lets-'):]
+            expected = data.get('display_prefix', "coco-") + name[len('coco-'):]
             if values.get('display_name') != expected:
                 raise PackageError('UI display name does not match the selected prefix')
             if '$' + name not in values.get('default_prompt', ''):
@@ -158,7 +158,7 @@ def validate_sources(root, data):
         if key in actual or key not in expected:
             raise PackageError('Duplicate or unknown coverage item: ' + str(key))
         actual.add(key)
-        if ('lets-' + row['family'] not in data['skills'] or
+        if ('coco-' + row['family'] not in data['skills'] or
                 row.get('disposition') not in {'merged', 'adapted', 'reference'} or
                 not row.get('essential_rules') or not row.get('adaptation') or
                 not row.get('implemented_references')):
@@ -180,7 +180,7 @@ def validate_package(root):
 
 
 def install_manifest(destination):
-    path = destination / '.lets-install.json'
+    path = destination / '.coco-install.json'
     if not path.exists():
         return None
     data = read_json(path)
@@ -188,7 +188,7 @@ def install_manifest(destination):
         raise PackageError('Invalid installation ownership manifest')
     for rel, digest in data['files'].items():
         p = safe_relative(rel)
-        if (p.parts[0] != '_lets-shared' and not re.fullmatch(r'lets-[a-z0-9]+(?:-[a-z0-9]+)*', p.parts[0])):
+        if (p.parts[0] != '_coco-shared' and not re.fullmatch(r'coco-[a-z0-9]+(?:-[a-z0-9]+)*', p.parts[0])):
             raise PackageError('Invalid managed installation path: ' + rel)
         if not re.fullmatch('[0-9a-f]{64}', digest):
             raise PackageError('Invalid managed hash')

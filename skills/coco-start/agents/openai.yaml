@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-start"
+  short_description: "Purpose-led start with source-backed checks and evidence"
+  default_prompt: "Use $coco-start for the current request and provide its required result."

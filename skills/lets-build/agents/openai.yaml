@@ -1,4 +1,0 @@
-interface:
-  display_name: "let's-build"
-  short_description: "Purpose-led build with source-backed checks and evidence"
-  default_prompt: "Use $lets-build for the current request and provide its required result."

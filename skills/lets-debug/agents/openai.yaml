@@ -1,4 +1,0 @@
-interface:
-  display_name: "let's-debug"
-  short_description: "Purpose-led debug with source-backed checks and evidence"
-  default_prompt: "Use $lets-debug for the current request and provide its required result."

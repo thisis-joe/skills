@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-verify"
+  short_description: "Purpose-led verify with source-backed checks and evidence"
+  default_prompt: "Use $coco-verify for the current request and provide its required result."

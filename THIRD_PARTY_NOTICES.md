@@ -1,6 +1,6 @@
 # Third-party notices
 
-LET'S integrates adapted procedures from the following MIT-licensed works. Copyright and permission notices are retained here and in every installed shared bundle. Sources are pinned in sources/manifest.json.
+COCO integrates adapted procedures from the following MIT-licensed works. Copyright and permission notices are retained here and in every installed shared bundle. Sources are pinned in sources/manifest.json.
 
 ## matt
 

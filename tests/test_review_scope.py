@@ -8,7 +8,7 @@ import unittest
 
 
 SCRIPT = Path(__file__).resolve().parents[1] / 'scripts' / 'review_scope.py'
-CANONICAL = SCRIPT.parent.parent / 'skills/_lets-shared/tools/review_scope.py'
+CANONICAL = SCRIPT.parent.parent / 'skills/_coco-shared/tools/review_scope.py'
 
 
 class ReviewScopeTests(unittest.TestCase):

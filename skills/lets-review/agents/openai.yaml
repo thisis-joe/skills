@@ -1,4 +1,0 @@
-interface:
-  display_name: "let's-review"
-  short_description: "Purpose-led review with source-backed checks and evidence"
-  default_prompt: "Use $lets-review for the current request and provide its required result."

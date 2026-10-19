@@ -26,8 +26,8 @@
       "adaptation": "Merge as MALJ purpose router and context-policy reference, with MALJ destinations. The source fixed ~150k smart-zone estimate and /clear /compact commands are harness-specific hints, not portable hard requirements. Keep separate routes for decision planning, implementation, and disposable experiments; no mandatory Matt setup or original-skill installation.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-start/SKILL.md",
-        "skills/_lets-shared/advanced/start.md"
+        "skills/coco-start/SKILL.md",
+        "skills/_coco-shared/advanced/start.md"
       ]
     },
     {
@@ -48,8 +48,8 @@
       "adaptation": "Retain two independent review passes within MALJ review, using isolated reviewers when delegation is authorized/available and sequential passes otherwise. Establish a justified base from context instead of demanding redundant user input; explicitly accommodate unstaged changes if those are the requested review surface. Existing repo standards and output requirements override source formatting.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-review/SKILL.md",
-        "skills/_lets-shared/advanced/review.md"
+        "skills/coco-review/SKILL.md",
+        "skills/_coco-shared/advanced/review.md"
       ]
     },
     {
@@ -71,8 +71,8 @@
       "adaptation": "Integrate as shared MALJ design vocabulary/reference. Preserve architectural meaning without globally banning established repo terms such as service or API. Alternative designs can be sequential when parallel agents are unavailable; the source 3+ reviewers is a method option, not a universal staffing requirement.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-design/SKILL.md",
-        "skills/_lets-shared/advanced/design.md"
+        "skills/coco-design/SKILL.md",
+        "skills/_coco-shared/advanced/design.md"
       ]
     },
     {
@@ -95,8 +95,8 @@
       "adaptation": "Merge into MALJ debug; keep human-loop helper conditional and observational (the template echoes captured values, so sign-in/secrets stay outside capture). A missing reproduction is an explicit evidence/access limit, not permission to fabricate causality. Honor high-priority task scope before production instrumentation.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-debug/SKILL.md",
-        "skills/_lets-shared/advanced/debug.md"
+        "skills/coco-debug/SKILL.md",
+        "skills/_coco-shared/advanced/debug.md"
       ]
     },
     {
@@ -118,8 +118,8 @@
       "adaptation": "Merge into MALJ context as the active domain-model maintenance mode; merely reading a glossary remains a lightweight consumer habit. Preserve repo-owned documentation locations rather than enforcing a new global layout.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-context/SKILL.md",
-        "skills/_lets-shared/advanced/context.md"
+        "skills/coco-context/SKILL.md",
+        "skills/_coco-shared/advanced/context.md"
       ]
     },
     {
@@ -138,8 +138,8 @@
       "adaptation": "Merge as the repo-backed MALJ clarify mode; no separate redundant installed wrapper is required. Plain clarification may stay stateless when the user has no workspace or requests no saved artifacts.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-clarify/SKILL.md",
-        "skills/_lets-shared/advanced/clarify.md"
+        "skills/coco-clarify/SKILL.md",
+        "skills/_coco-shared/advanced/clarify.md"
       ]
     },
     {
@@ -164,8 +164,8 @@
       "adaptation": "Preserve as MALJ build’s explicit whole-spec orchestration mode, distinct from next-ticket execution. Use subagents only when authorized/available, never reset a dirty worker merely to match base, and serialize integration to avoid races. External issue updates, PR publication/readiness, push and merge follow current user authorization; branch/commit granularity follows AGENTS.md.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-build/SKILL.md",
-        "skills/_lets-shared/advanced/build.md"
+        "skills/coco-build/SKILL.md",
+        "skills/_coco-shared/advanced/build.md"
       ]
     },
     {
@@ -185,8 +185,8 @@
       "adaptation": "Merge as scoped MALJ build execution; it is not permission to automatically orchestrate every ticket in a parent spec. Apply user feature-branch and task-unit-commit instructions in place of blindly committing to whichever branch happens to be current.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-build/SKILL.md",
-        "skills/_lets-shared/advanced/build.md"
+        "skills/coco-build/SKILL.md",
+        "skills/_coco-shared/advanced/build.md"
       ]
     },
     {
@@ -210,8 +210,8 @@
       "adaptation": "Integrate survey mode into MALJ design with HTML report as an optional conditional reference. Do not force a CDN-dependent report or open an OS app when a small comparison suffices; preserve before/after architectural evidence and candidate selection. Avoid untrusted CDN/loose-Mermaid defaults in generated reports.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-design/SKILL.md",
-        "skills/_lets-shared/advanced/design.md"
+        "skills/coco-design/SKILL.md",
+        "skills/_coco-shared/advanced/design.md"
       ]
     },
     {
@@ -231,8 +231,8 @@
       "adaptation": "Merge useful evidence/reversibility/representation guidance into MALJ ship while honoring the repo PR template and current developer writing rules. Visuals are conditional on explanatory value; source template is not mandatory. Preserve upstream show-me credit in attribution metadata; external PR creation requires task authorization.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-ship/SKILL.md",
-        "skills/_lets-shared/advanced/ship.md"
+        "skills/coco-ship/SKILL.md",
+        "skills/_coco-shared/advanced/ship.md"
       ]
     },
     {
@@ -255,8 +255,8 @@
       "adaptation": "Retain as explicit experimental design mode. Its no-tests/minimal-error-handling rules apply to disposable exploration only; shipping integration returns to normal build/verify requirements. Separate branch preservation is conditional on git/task context and must not publish or mutate remote issues without authorization.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-design/SKILL.md",
-        "skills/_lets-shared/advanced/design.md"
+        "skills/coco-design/SKILL.md",
+        "skills/_coco-shared/advanced/design.md"
       ]
     },
     {
@@ -272,8 +272,8 @@
       "adaptation": "Merge into MALJ research with delegation conditional on authorization/capability and a synchronous fallback. Retain claim-level citations and durable findings, with explicit uncertainty rather than treating notes as decisions. No original research branch or remote publication is implied by this skill alone.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-research/SKILL.md",
-        "skills/_lets-shared/advanced/research.md"
+        "skills/coco-research/SKILL.md",
+        "skills/_coco-shared/advanced/research.md"
       ]
     },
     {
@@ -294,8 +294,8 @@
       "adaptation": "Merge into MALJ retro. Propose and implement environment improvements only within the requested scope; avoid source chief-of-staff-style unlimited proactive rewrites. Reuse existing repo tools and keep user branch/commit conventions.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-retro/SKILL.md",
-        "skills/_lets-shared/advanced/retro.md"
+        "skills/coco-retro/SKILL.md",
+        "skills/_coco-shared/advanced/retro.md"
       ]
     },
     {
@@ -320,8 +320,8 @@
       "adaptation": "Rework as MALJ repo-discovery/optional configuration, not a mandatory installer or dependency on Matt original skill names. Infer choices already authorized in the session rather than imposing setup confirmation loops. Provider command examples/version claims are reference data to validate against installed tool support; remote writes require external auth and user scope.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-start/SKILL.md",
-        "skills/_lets-shared/advanced/start.md"
+        "skills/coco-start/SKILL.md",
+        "skills/_coco-shared/advanced/start.md"
       ]
     },
     {
@@ -345,8 +345,8 @@
       "adaptation": "Integrate behavioral TDD into MALJ verify/build. Source requires explicit user confirmation before every unagreed seam; MALJ should reuse authorization/spec decisions and ask only material unresolved interface questions. Source forbids refactoring inside the cycle, conflicting with conventional red-green-refactor sources: preserve minimal changes and green checkpoints while permitting justified behavior-preserving refactoring under the merged policy. Do not mandate tests for low-impact changes contrary to higher-priority instructions.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-verify/SKILL.md",
-        "skills/_lets-shared/advanced/verify.md"
+        "skills/coco-verify/SKILL.md",
+        "skills/_coco-shared/advanced/verify.md"
       ]
     },
     {
@@ -368,8 +368,8 @@
       "adaptation": "Merge as MALJ spec synthesis with local draft default when publishing has not been requested. Do not mechanically maximize user-story length or interrupt a fully authorized plan for repeated seam approval; cover actual behavior and preserve unresolved decisions. Tracker publication/labels need authenticated access and explicit action scope.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-spec/SKILL.md",
-        "skills/_lets-shared/advanced/spec.md"
+        "skills/coco-spec/SKILL.md",
+        "skills/_coco-shared/advanced/spec.md"
       ]
     },
     {
@@ -392,8 +392,8 @@
       "adaptation": "Merge into MALJ plan, retaining both vertical-slice and expand-contract branches. Publishing approved work is conditional on user-authorized tracker writes/authentication; previously approved breakdowns need no repeated approval cycle. Preserve feature-branch and task-commit conventions.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-plan/SKILL.md",
-        "skills/_lets-shared/advanced/plan.md"
+        "skills/coco-plan/SKILL.md",
+        "skills/_coco-shared/advanced/plan.md"
       ]
     },
     {
@@ -418,8 +418,8 @@
       "adaptation": "Merge as MALJ triage with source taxonomy and distinction between rejection, deferral and already implemented behavior intact. External labels/comments/closures need authenticated tools and direct authorization; user-requested state overrides can proceed without a fresh interview. Preserve disclaimer on actual AI triage posts. Resolve AGENT-BRIEF example’s obsolete rigid Decision/Reason fields in favor of OUT-OF-SCOPE’s authoritative relaxed rationale format.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-triage/SKILL.md",
-        "skills/_lets-shared/advanced/triage.md"
+        "skills/coco-triage/SKILL.md",
+        "skills/_coco-shared/advanced/triage.md"
       ]
     },
     {
@@ -447,8 +447,8 @@
       "adaptation": "Retain as MALJ plan’s large-effort decision-map mode, with local Markdown fallback. The one-ticket/session pacing is for HITL decision quality, not a reason to stop authorized execution of a clear plan; Notes can explicitly carry execution. Publishing maps, assignment, research pushes and tracker closes require external auth/action scope. Do not simulate the user in HITL rounds.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-plan/SKILL.md",
-        "skills/_lets-shared/advanced/plan.md"
+        "skills/coco-plan/SKILL.md",
+        "skills/_coco-shared/advanced/plan.md"
       ]
     },
     {
@@ -469,8 +469,8 @@
       "adaptation": "Preserve a conditional MALJ automate human-procedure reference with the template reviewed as data, not automatically executed or installed. GitHub secret/variable writes require user-authorized scope and authenticated tools; human confirmation is for actual irreversible manual actions, not a blanket stop before routine preparation. Keep secret input outside transcripts.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-automate/SKILL.md",
-        "skills/_lets-shared/advanced/automate.md#conditional-human-operated-setup-wizard"
+        "skills/coco-automate/SKILL.md",
+        "skills/_coco-shared/advanced/automate.md#conditional-human-operated-setup-wizard"
       ]
     },
     {
@@ -491,8 +491,8 @@
       "adaptation": "Keep experimental/opt-in MALJ automate reference, including this unlisted-in-beta-README skill. Constrain its sweeping all-work-in-subagents and every-message-environment-rewrite instructions to authorized goal scope, actual concurrency and justified improvements. Never silently schedule, expand permissions or alter unrelated systems; recurring external work requires explicit authorization/authentication.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-automate/SKILL.md",
-        "skills/_lets-shared/advanced/automate.md"
+        "skills/coco-automate/SKILL.md",
+        "skills/_coco-shared/advanced/automate.md"
       ]
     },
     {
@@ -511,8 +511,8 @@
       "adaptation": "Retain experimental Claude-specific launch recipe only as an on-demand context reference when that CLI exists and the user requests that harness. Prefer native authorized delegation/handoff in Codex. Validate installed CLI flags instead of assuming claude --bg/claude agents exists; generating a handoff alone does not authorize a new sidebar chat or recurring process.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-context/SKILL.md",
-        "skills/_lets-shared/advanced/context.md"
+        "skills/coco-context/SKILL.md",
+        "skills/_coco-shared/advanced/context.md"
       ]
     },
     {
@@ -532,8 +532,8 @@
       "adaptation": "Merge useful workflow-spec mode into MALJ automate with explicit experimental status and optional notes files. Spec design does not imply scheduling/deployment authority; use supported automation tools and authenticated connectors only after the task calls for operation. Existing authorization resolves routine choices without compulsory exhaustive interviewing.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-automate/SKILL.md",
-        "skills/_lets-shared/advanced/automate.md#conditional-workflow-specification-only"
+        "skills/coco-automate/SKILL.md",
+        "skills/_coco-shared/advanced/automate.md#conditional-workflow-specification-only"
       ]
     },
     {
@@ -555,8 +555,8 @@
       "adaptation": "Retain as conditional experimental MALJ design/verify recipe for repos choosing these boundaries, not a mandatory TypeScript architecture. Verify actual installed dependency-cruiser semantics and existing conventions before copying. Source prose says four rules but config actually defines five forbidden entries (separate app/cross-package boundaries, tests-through-entrypoints, tests-folder-is-private, no-circular); keep implemented privacy semantics and do not overclaim coverage.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-design/SKILL.md",
-        "skills/_lets-shared/advanced/design.md"
+        "skills/coco-design/SKILL.md",
+        "skills/_coco-shared/advanced/design.md"
       ]
     },
     {
@@ -577,8 +577,8 @@
       "adaptation": "Keep conditional experimental MALJ document author-collaboration reference, distinct from ordinary autonomous drafting. Choice-per-beat pacing applies when the user requests this interactive writing mode; do not impose it on every documentation task.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-document/SKILL.md",
-        "skills/_lets-shared/advanced/document.md"
+        "skills/coco-document/SKILL.md",
+        "skills/_coco-shared/advanced/document.md"
       ]
     },
     {
@@ -599,8 +599,8 @@
       "adaptation": "Preserve as an experimental document ideation mode and optional reference. It is deliberately distinct from exploit/shaping; do not contaminate the raw pile with an imposed final article or replace the user’s current edits.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-document/SKILL.md",
-        "skills/_lets-shared/advanced/document.md"
+        "skills/coco-document/SKILL.md",
+        "skills/_coco-shared/advanced/document.md"
       ]
     },
     {
@@ -622,8 +622,8 @@
       "adaptation": "Retain conditional experimental MALJ document shaping reference. It overlaps beats in grounding and incremental authorship but differs in paragraph/format argument rather than a branching next-beat menu; preserve both options without forcing interactive approval on routine docs.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-document/SKILL.md",
-        "skills/_lets-shared/advanced/document.md"
+        "skills/coco-document/SKILL.md",
+        "skills/_coco-shared/advanced/document.md"
       ]
     },
     {
@@ -643,8 +643,8 @@
       "adaptation": "Retain a conditional Claude-only MALJ security setup reference, never auto-install global restrictions or claim Codex hook compatibility. Default blanket push blocking conflicts with normal authorized ship workflows, so install only as an explicit user policy. Harden quoting/parser/dependency checks before production use; preserve the safe synthetic verification pattern.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-security/SKILL.md",
-        "skills/_lets-shared/advanced/security.md#conditional-git-command-guard-setup"
+        "skills/coco-security/SKILL.md",
+        "skills/_coco-shared/advanced/security.md#conditional-git-command-guard-setup"
       ]
     },
     {
@@ -663,8 +663,8 @@
       "adaptation": "Keep a conditional MALJ migrate TypeScript-fixture recipe for users who choose the library, not a global style mandate. Detect package manager and dependency policy rather than hardcoding npm install. Confirm current helper API against primary package docs/source when executing; assertion syntax and const assertions require semantic inspection beyond the source grep.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-migrate/SKILL.md",
-        "skills/_lets-shared/advanced/migrate.md#conditional-typescript-fixture-migration"
+        "skills/coco-migrate/SKILL.md",
+        "skills/_coco-shared/advanced/migrate.md#conditional-typescript-fixture-migration"
       ]
     },
     {
@@ -684,8 +684,8 @@
       "adaptation": "Preserve as a narrow conditional MALJ document/course-authoring reference when the AI Hero layout and linter are actually present. Do not impose this filesystem or unavailable private CLI on general learning/docs work; adapt scaffold checks to the target course tooling otherwise.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-document/SKILL.md",
-        "skills/_lets-shared/advanced/document.md"
+        "skills/coco-document/SKILL.md",
+        "skills/_coco-shared/advanced/document.md"
       ]
     },
     {
@@ -708,8 +708,8 @@
       "adaptation": "Keep a conditional MALJ verify guardrail-setup reference; no automatic replacement of a different existing pre-commit system. Source says stage all changed files, but MALJ must stage only task-owned files and respect user task commits. Prefer meaningful existing checks and avoid inventing/mirroring tests for configuration-only work.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-verify/SKILL.md",
-        "skills/_lets-shared/advanced/verify.md#conditional-pre-commit-verification-setup"
+        "skills/coco-verify/SKILL.md",
+        "skills/_coco-shared/advanced/verify.md#conditional-pre-commit-verification-setup"
       ]
     },
     {
@@ -728,8 +728,8 @@
       "adaptation": "Fold into the MALJ clarify router as a stateless option, with attribution coverage despite the source body being only one invocation. Do not create an independent duplicate implementation.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-clarify/SKILL.md",
-        "skills/_lets-shared/advanced/clarify.md"
+        "skills/coco-clarify/SKILL.md",
+        "skills/_coco-shared/advanced/clarify.md"
       ]
     },
     {
@@ -747,8 +747,8 @@
       "adaptation": "Merge as MALJ clarify interviewing primitive. Source relentless full-frontier grilling and final confirmation apply to an explicit interview, not every task; use existing session authorization, infer routine implementation choices, and ask only consequential unresolved questions. Fact-finding subagents are optional and must comply with delegation permissions.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-clarify/SKILL.md",
-        "skills/_lets-shared/advanced/clarify.md"
+        "skills/coco-clarify/SKILL.md",
+        "skills/_coco-shared/advanced/clarify.md"
       ]
     },
     {
@@ -767,8 +767,8 @@
       "adaptation": "Merge into MALJ context handoff mode. Writing a portable file does not itself start another chat/harness, send it to anyone or schedule work. Keep paths and constraints sufficient for a fresh worker and report the file location.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-context/SKILL.md",
-        "skills/_lets-shared/advanced/context.md"
+        "skills/coco-context/SKILL.md",
+        "skills/_coco-shared/advanced/context.md"
       ]
     },
     {
@@ -792,8 +792,8 @@
       "adaptation": "Preserve as conditional MALJ document/learning reference, not a mandatory structure for ordinary explanations. Clarify source tension: lessons can be one HTML unit while linked shared assets require the workspace to travel with them. External resource/health-sensitive facts need current primary-source verification; joining or messaging a community is not authorized by a teaching request.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-document/SKILL.md",
-        "skills/_lets-shared/advanced/document.md"
+        "skills/coco-document/SKILL.md",
+        "skills/_coco-shared/advanced/document.md"
       ]
     },
     {
@@ -813,8 +813,8 @@
       "adaptation": "Merge into MALJ clarify as an async discovery branch, respecting the repo’s existing document conventions. Infer recipient/context already supplied rather than re-asking fixed exchanges; do not email/message the questionnaire without direct user instruction and authenticated connector access.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-clarify/SKILL.md",
-        "skills/_lets-shared/advanced/clarify.md"
+        "skills/coco-clarify/SKILL.md",
+        "skills/_coco-shared/advanced/clarify.md"
       ]
     },
     {
@@ -832,8 +832,8 @@
       "adaptation": "Merge as MALJ clarify repair mode, preserving the seven-line source’s unique recovery trigger. Simplified Technical English is a clarity cue; do not imply formal ASD-STE100 compliance without a specification/checker or make a rigid vocabulary obscure the explanation.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-clarify/SKILL.md",
-        "skills/_lets-shared/advanced/clarify.md"
+        "skills/coco-clarify/SKILL.md",
+        "skills/_coco-shared/advanced/clarify.md"
       ]
     },
     {
@@ -854,8 +854,8 @@
       "adaptation": "Merge as MALJ document/skill-authoring guidance. Source Skill-tool invocation and disable-model-invocation reach claims are Claude-era mechanics, not universal truths; use the target harness’s actual metadata/lookup behavior. Preserve progressive disclosure without hiding required behavior or sacrificing explicit skill coverage.",
       "author": "matt",
       "implemented_references": [
-        "skills/lets-document/SKILL.md",
-        "skills/_lets-shared/advanced/document.md"
+        "skills/coco-document/SKILL.md",
+        "skills/_coco-shared/advanced/document.md"
       ]
     },
     {
@@ -880,8 +880,8 @@
       "adaptation": "Adapt to canonical spec index and external tracker, reconcile single approval with plan checkpoints, static/TDD exceptions, and record crash-safe commit/verification/task-state mapping. Original paths exclude modular SPEC-id.md and external spec formats supported by its spec skill.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-build/SKILL.md",
-        "skills/_lets-shared/advanced/build.md"
+        "skills/coco-build/SKILL.md",
+        "skills/_coco-shared/advanced/build.md"
       ]
     },
     {
@@ -900,8 +900,8 @@
       "adaptation": "Merge as a thin entry point to the canonical simplification pass; preserve unrelated working changes when reverting an attempt and apply deletion authority from the active task.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-simplify/SKILL.md",
-        "skills/_lets-shared/advanced/simplify.md"
+        "skills/coco-simplify/SKILL.md",
+        "skills/_coco-shared/advanced/simplify.md"
       ]
     },
     {
@@ -918,12 +918,12 @@
       "dependencies": [
         "skills/constraint-driven-development/SKILL.md"
       ],
-      "adaptation": "Adapt command wrappers to the full skills non-interactive floor-only path and canonical file ownership; the command itself mentions only CLAUDE.md while the skill also requires AGENTS.md. Retain floor guard reference rather than reimplement patterns. LET'S routes standing-bar setup to start; verify links to that owner for a requested quality-bar audit.",
+      "adaptation": "Adapt command wrappers to the full skills non-interactive floor-only path and canonical file ownership; the command itself mentions only CLAUDE.md while the skill also requires AGENTS.md. Retain floor guard reference rather than reimplement patterns. COCO routes standing-bar setup to start; verify links to that owner for a requested quality-bar audit.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-start/SKILL.md",
-        "skills/_lets-shared/advanced/start.md#establish-a-standing-bar",
-        "skills/_lets-shared/advanced/verify.md#conditional-standing-quality-bar-audit"
+        "skills/coco-start/SKILL.md",
+        "skills/_coco-shared/advanced/start.md#establish-a-standing-bar",
+        "skills/_coco-shared/advanced/verify.md#conditional-standing-quality-bar-audit"
       ]
     },
     {
@@ -941,8 +941,8 @@
       "adaptation": "Make the command defer to the skills designated external tracker and plan index instead of creating duplicate todo.md; preserve same-work replan versus different-work ownership distinction.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-plan/SKILL.md",
-        "skills/_lets-shared/advanced/plan.md"
+        "skills/coco-plan/SKILL.md",
+        "skills/_coco-shared/advanced/plan.md"
       ]
     },
     {
@@ -962,8 +962,8 @@
       "adaptation": "Merge as a review entry point but choose the exact diff explicitly; staged-or-recent language does not automatically cover unstaged or untracked work, so disclose scope.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-review/SKILL.md",
-        "skills/_lets-shared/advanced/review.md"
+        "skills/coco-review/SKILL.md",
+        "skills/_coco-shared/advanced/review.md"
       ]
     },
     {
@@ -985,8 +985,8 @@
       "adaptation": "Retain independent specialist checks and main-owned merge; explicitly report sequential/degraded mode instead of pretending independent parallel execution. Persona definitions are referenced but absent from this selected source export; harness capability and authorization are prerequisites.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-ship/SKILL.md",
-        "skills/_lets-shared/advanced/ship.md"
+        "skills/coco-ship/SKILL.md",
+        "skills/_coco-shared/advanced/ship.md"
       ]
     },
     {
@@ -1004,8 +1004,8 @@
       "adaptation": "Defer artifact location and whether further clarification is needed to the richer skill: it supports external spec systems and SPEC-module-id.md, and excludes already-unambiguous self-contained tasks. Do not duplicate existing specs.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-spec/SKILL.md",
-        "skills/_lets-shared/advanced/spec.md"
+        "skills/coco-spec/SKILL.md",
+        "skills/_coco-shared/advanced/spec.md"
       ]
     },
     {
@@ -1024,8 +1024,8 @@
       "adaptation": "Preserve thin wrapper but inherit repository-command discovery, static exemptions and vertical one-test slices; plural write-tests wording must not create a bulk horizontal test-first phase. In-loop refactor ownership must be reconciled across sources.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-verify/SKILL.md",
-        "skills/_lets-shared/advanced/verify.md"
+        "skills/coco-verify/SKILL.md",
+        "skills/_coco-shared/advanced/verify.md"
       ]
     },
     {
@@ -1042,8 +1042,8 @@
       "adaptation": "Keep empirical Quick/Deep distinction as specialist reference. The named web-performance-auditor persona is not in the selected export, so preserve the report contract and declare the missing executor; a source scan cannot certify measured performance.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-performance/SKILL.md",
-        "skills/_lets-shared/advanced/performance.md"
+        "skills/coco-performance/SKILL.md",
+        "skills/_coco-shared/advanced/performance.md"
       ]
     },
     {
@@ -1064,8 +1064,8 @@
       "adaptation": "Merge the unusually specific idempotency and compatibility contract instead of reducing it to use typed APIs. The one-version preference is a default; staged compatibility adapters and unavoidable versioning require explicit migration decisions.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-design/SKILL.md",
-        "skills/_lets-shared/advanced/design.md"
+        "skills/coco-design/SKILL.md",
+        "skills/_coco-shared/advanced/design.md"
       ]
     },
     {
@@ -1084,8 +1084,8 @@
       "adaptation": "Retain browser mechanics as an adapter reference because Chrome DevTools MCP is a prerequisite, not universally available. Original arbitrary JS side effects require confirmation; adapt to the harnesss legitimate interaction APIs and persistent authorization, preserving credential/trust limits.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-verify/SKILL.md",
-        "skills/_lets-shared/advanced/verify.md"
+        "skills/coco-verify/SKILL.md",
+        "skills/_coco-shared/advanced/verify.md"
       ]
     },
     {
@@ -1106,8 +1106,8 @@
       "adaptation": "Retain enforcement and pipeline optimization, but refresh generic npm ci samples through the security skills version-specific install-script gate. Resolve no-gate-skipped prose with intentional docs path filters and optional E2E; do not turn setup examples into authorization to deploy or auto-merge.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-automate/SKILL.md",
-        "skills/_lets-shared/advanced/automate.md"
+        "skills/coco-automate/SKILL.md",
+        "skills/_coco-shared/advanced/automate.md"
       ]
     },
     {
@@ -1132,8 +1132,8 @@
       "adaptation": "Keep five axes, severity and mutation evidence alongside any other review axes rather than flattening them. Mutation experiments must preserve unrelated edits. The cleanup-before-submission rule and separate-refactor rule need scoped task ownership, not unsolicited cleanup.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-review/SKILL.md",
-        "skills/_lets-shared/advanced/review.md"
+        "skills/coco-review/SKILL.md",
+        "skills/_coco-shared/advanced/review.md"
       ]
     },
     {
@@ -1154,8 +1154,8 @@
       "adaptation": "Merge as a distinct behavior-preserving pass. The source says confirm dead code is truly dead while review asks before deletion; require scoped authorization and avoid inferring that any unused-looking symbol may be deleted.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-simplify/SKILL.md",
-        "skills/_lets-shared/advanced/simplify.md"
+        "skills/coco-simplify/SKILL.md",
+        "skills/_coco-shared/advanced/simplify.md"
       ]
     },
     {
@@ -1179,12 +1179,12 @@
         "skills/performance-optimization/SKILL.md",
         "skills/constraint-driven-development/references/floor-guard.md"
       ],
-      "adaptation": "Preserve the complete lifecycle and floor reference contract, not just numeric defaults. Stage/budget and 80%/60%/90-day defaults are project choices, not universal gates. The regex guard does not implement secrets scanning, exact line locations, exception approval matching or expiry enforcement; compose scanners and retain heuristics/false-positive caveats. LET'S routes standing-bar setup to start; verify links to that owner for a requested quality-bar audit.",
+      "adaptation": "Preserve the complete lifecycle and floor reference contract, not just numeric defaults. Stage/budget and 80%/60%/90-day defaults are project choices, not universal gates. The regex guard does not implement secrets scanning, exact line locations, exception approval matching or expiry enforcement; compose scanners and retain heuristics/false-positive caveats. COCO routes standing-bar setup to start; verify links to that owner for a requested quality-bar audit.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-start/SKILL.md",
-        "skills/_lets-shared/advanced/start.md#establish-a-standing-bar",
-        "skills/_lets-shared/advanced/verify.md#conditional-standing-quality-bar-audit"
+        "skills/coco-start/SKILL.md",
+        "skills/_coco-shared/advanced/start.md#establish-a-standing-bar",
+        "skills/_coco-shared/advanced/verify.md#conditional-standing-quality-bar-audit"
       ]
     },
     {
@@ -1203,8 +1203,8 @@
       "adaptation": "Preserve restartable evidence and state contract; process supervision/model choice stays with the harness. Its executing-unless-redirect inline plan is not permission to bypass other selected human gates, and token-summary trimming must not erase unresolved evidence needed for a decision trail.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-context/SKILL.md",
-        "skills/_lets-shared/advanced/context.md"
+        "skills/coco-context/SKILL.md",
+        "skills/_coco-shared/advanced/context.md"
       ]
     },
     {
@@ -1225,8 +1225,8 @@
       "adaptation": "Merge stop-the-line triage and preserve evidence before reset/revert. The source has time-pressure fallback examples, not permission to waive acceptance criteria. It references monitoring and privacy incidents but supplies no full postmortem workflow.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-debug/SKILL.md",
-        "skills/_lets-shared/advanced/debug.md"
+        "skills/coco-debug/SKILL.md",
+        "skills/_coco-shared/advanced/debug.md"
       ]
     },
     {
@@ -1247,8 +1247,8 @@
       "adaptation": "Merge the full expand/dual-write/backfill/read-switch/bake/contract sequence. Do not equate a down DDL script with recovery of deleted data: destructive phases need explicit data recovery evidence and required authorization; advisory does not mean ownerless forever.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-migrate/SKILL.md",
-        "skills/_lets-shared/advanced/migrate.md"
+        "skills/coco-migrate/SKILL.md",
+        "skills/_coco-shared/advanced/migrate.md"
       ]
     },
     {
@@ -1267,8 +1267,8 @@
       "adaptation": "Merge existing-convention-first ADRs and evidence-preserving prose review. Resolve default docs/decisions versus other sources docs/adr lazily rather than introduce competing directories; document cleanup does not authorize unrelated code deletion.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-document/SKILL.md",
-        "skills/_lets-shared/advanced/document.md"
+        "skills/coco-document/SKILL.md",
+        "skills/_coco-shared/advanced/document.md"
       ]
     },
     {
@@ -1293,8 +1293,8 @@
       "adaptation": "Retain fresh artifact/contract isolation and bounded reconciliation. Mandatory per-cycle cross-model offers/per-invocation confirmations conflict with persistent user authorization and speed goals when imported wholesale; use explicit capability/authorization semantics and never label same-agent review fresh or independent.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-review/SKILL.md",
-        "skills/_lets-shared/advanced/review.md"
+        "skills/coco-review/SKILL.md",
+        "skills/_coco-shared/advanced/review.md"
       ]
     },
     {
@@ -1315,8 +1315,8 @@
       "adaptation": "Merge concrete design-contract and runtime UX evidence. Numeric component-size and prop-depth signals prompt judgment, not automatic decomposition; illustrative dialog code does not itself implement every promised focus behavior, so verify the real interaction.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-frontend/SKILL.md",
-        "skills/_lets-shared/advanced/frontend.md"
+        "skills/coco-frontend/SKILL.md",
+        "skills/_coco-shared/advanced/frontend.md"
       ]
     },
     {
@@ -1340,8 +1340,8 @@
       "adaptation": "Preserve branch/commit granularity and release contracts. Replace the unqualified reset --hard save-point example with task-owned recovery that preserves unrelated edits/evidence, and replace raw secret grep output with redacted findings. Push/tag/merge/deploy authority must come from the actual task.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-ship/SKILL.md",
-        "skills/_lets-shared/advanced/ship.md"
+        "skills/coco-ship/SKILL.md",
+        "skills/_coco-shared/advanced/ship.md"
       ]
     },
     {
@@ -1367,8 +1367,8 @@
       "adaptation": "Retain optional divergent/convergent ideation and its rubric as a reference; do not force idea expansion after the user already chose an implementation. The optional directory initializer is source data and was not run.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-clarify/SKILL.md",
-        "skills/_lets-shared/advanced/clarify.md"
+        "skills/coco-clarify/SKILL.md",
+        "skills/_coco-shared/advanced/clarify.md"
       ]
     },
     {
@@ -1391,8 +1391,8 @@
       "adaptation": "Merge thin-slice execution and task-scoped commits. TDD must own write-before-implementation order when applicable because this skills illustrative cycle says implement then test; the clean-working-tree final item cannot absorb unrelated existing work.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-build/SKILL.md",
-        "skills/_lets-shared/advanced/build.md"
+        "skills/coco-build/SKILL.md",
+        "skills/_coco-shared/advanced/build.md"
       ]
     },
     {
@@ -1417,8 +1417,8 @@
       "adaptation": "Preserve targeted one-question hypothesis testing and bounded clarification. The unusually narrow yes vocabulary and mandatory terminal turn are original requirements that can cause redundant approvals under persistent user authorization; explicitly resolve them rather than silently inheriting them.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-clarify/SKILL.md",
-        "skills/_lets-shared/advanced/clarify.md"
+        "skills/coco-clarify/SKILL.md",
+        "skills/_coco-shared/advanced/clarify.md"
       ]
     },
     {
@@ -1443,8 +1443,8 @@
       "adaptation": "Merge telemetry generation, attribution and verification rather than generic add logs. Production sinks, SLO history, staging traffic and alert channels are real prerequisites; do not claim test-fired alerts or production evidence from source inspection alone.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-observe/SKILL.md",
-        "skills/_lets-shared/advanced/observe.md"
+        "skills/coco-observe/SKILL.md",
+        "skills/_coco-shared/advanced/observe.md"
       ]
     },
     {
@@ -1466,8 +1466,8 @@
       "adaptation": "Merge empirical keep/revert discipline and specialist references, not a generic optimize performance checklist. Numeric web budgets are defaults for relevant surfaces; field validation and rollout monitoring can outlive one turn and must remain pending rather than claimed complete.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-performance/SKILL.md",
-        "skills/_lets-shared/advanced/performance.md"
+        "skills/coco-performance/SKILL.md",
+        "skills/_coco-shared/advanced/performance.md"
       ]
     },
     {
@@ -1488,8 +1488,8 @@
       "adaptation": "Preserve external-tracker ownership and incomplete-plan guards. Reconcile default human checkpoints with /build autos explicit single gate. /plan currently bypasses the task-target abstraction by demanding tasks/todo.md.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-plan/SKILL.md",
-        "skills/_lets-shared/advanced/plan.md"
+        "skills/coco-plan/SKILL.md",
+        "skills/_coco-shared/advanced/plan.md"
       ]
     },
     {
@@ -1513,8 +1513,8 @@
       "adaptation": "Carry detailed security controls into specialist guidance with applicability and existing authorization. Package-manager policy is explicitly point-in-time and must be verified for the pinned client. Raw grep secret examples conflict with redacted scanner guidance; ownership markers and path checks alone do not defeat races or self-attestation.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-security/SKILL.md",
-        "skills/_lets-shared/advanced/security.md"
+        "skills/coco-security/SKILL.md",
+        "skills/_coco-shared/advanced/security.md"
       ]
     },
     {
@@ -1539,8 +1539,8 @@
       "adaptation": "Preserve rollout/error-budget/flag cleanup and data recovery details with project-specific thresholds and authorized deploy scope. Its audit checklist says no high advisories while security allows documented nonreachable deferrals; choose policy explicitly. Long monitoring windows remain pending evidence, not silently complete.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-ship/SKILL.md",
-        "skills/_lets-shared/advanced/ship.md"
+        "skills/coco-ship/SKILL.md",
+        "skills/_coco-shared/advanced/ship.md"
       ]
     },
     {
@@ -1561,8 +1561,8 @@
       "adaptation": "Merge versioned primary-source research while keeping implementation conventions and the trust boundary intact. The original speed exemption cannot waive higher-priority source-verification requirements; code-comment citation placement should follow the repository.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-research/SKILL.md",
-        "skills/_lets-shared/advanced/research.md"
+        "skills/coco-research/SKILL.md",
+        "skills/_coco-shared/advanced/research.md"
       ]
     },
     {
@@ -1587,8 +1587,8 @@
       "adaptation": "Preserve capability decomposition and living decisions; choose one authoritative artifact/approval contract. Module SPEC-id.md and external spec systems conflict with /build autos narrow path whitelist, and /spec hardcodes root SPEC.md.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-spec/SKILL.md",
-        "skills/_lets-shared/advanced/spec.md"
+        "skills/coco-spec/SKILL.md",
+        "skills/_coco-shared/advanced/spec.md"
       ]
     },
     {
@@ -1610,8 +1610,8 @@
       "adaptation": "Retain repository-tool discovery and explicit static exemptions. In-loop refactoring directly conflicts with Matts loop; scope one loop owner. The original broad unit-heavy pyramid must be reconciled with pre-agreed public seams rather than imposing internal tests.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-build/SKILL.md",
-        "skills/_lets-shared/advanced/build.md"
+        "skills/coco-build/SKILL.md",
+        "skills/_coco-shared/advanced/build.md"
       ]
     },
     {
@@ -1656,8 +1656,8 @@
       "adaptation": "Retain the phase router and shared scope/evidence discipline. Do not impose every phase on every task; explicit skill exclusions and repository instructions must remain visible. Orchestration ownership is main-session/harness-specific.",
       "author": "addy",
       "implemented_references": [
-        "skills/lets-start/SKILL.md",
-        "skills/_lets-shared/advanced/start.md"
+        "skills/coco-start/SKILL.md",
+        "skills/_coco-shared/advanced/start.md"
       ]
     },
     {
@@ -1688,8 +1688,8 @@
       "adaptation": "Required concrete automated repro/bounded-fix and existing-fix verification modes. Replace pstack/control/Slack/model invocations with integrated modes and configured adapters; preserve stricter draft-only/no-merge authority for automation.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-debug/SKILL.md",
-        "skills/_lets-shared/advanced/debug.md"
+        "skills/coco-debug/SKILL.md",
+        "skills/_coco-shared/advanced/debug.md"
       ]
     },
     {
@@ -1718,8 +1718,8 @@
       "adaptation": "Required concrete issue-intake automation setup mode. Do not copy/enable pstack, create .cursor settings, use Cursor automate/editor/protocol routes, or schedule anything without current user request; use native automation tools and project-native paths.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-automate/SKILL.md",
-        "skills/_lets-shared/advanced/automate.md"
+        "skills/coco-automate/SKILL.md",
+        "skills/_coco-shared/advanced/automate.md"
       ]
     },
     {
@@ -1745,8 +1745,8 @@
       "adaptation": "Required concrete automated intake-triage mode under triage, callable by configured automation only. Replace Slack/Benny syntax with an adapter contract and trusted marker configuration; current explicit external-write authorization remains required.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-triage/SKILL.md",
-        "skills/_lets-shared/advanced/triage.md"
+        "skills/coco-triage/SKILL.md",
+        "skills/_coco-shared/advanced/triage.md"
       ]
     },
     {
@@ -1774,8 +1774,8 @@
       "adaptation": "Concrete design mode with conditional alternatives and implementation-deviation review. Replace Cursor arena/models with available capabilities or sequential independent sketches; do not force panels for every function boundary.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-design/SKILL.md",
-        "skills/_lets-shared/advanced/design.md"
+        "skills/coco-design/SKILL.md",
+        "skills/_coco-shared/advanced/design.md"
       ]
     },
     {
@@ -1798,8 +1798,8 @@
       "adaptation": "Preserve as optional design comparison/bakeoff mode, with sequential candidates supported; actual delegation requires current authorization and available agents. No hardcoded model families, Cursor rules, cloud environment, or fallback slug guessing.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-design/SKILL.md",
-        "skills/_lets-shared/advanced/design.md"
+        "skills/coco-design/SKILL.md",
+        "skills/_coco-shared/advanced/design.md"
       ]
     },
     {
@@ -1819,8 +1819,8 @@
       "adaptation": "Concrete personal-workstyle capture/update mode under context, with skill-authoring support from retro/verify. Replace Cursor transcripts/create-skill paths and mandatory parallel mining with scoped accessible history and capability-neutral authoring. User authorization here does not authorize mining unrelated histories.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-context/SKILL.md",
-        "skills/_lets-shared/advanced/context.md"
+        "skills/coco-context/SKILL.md",
+        "skills/_coco-shared/advanced/context.md"
       ]
     },
     {
@@ -1843,8 +1843,8 @@
       "adaptation": "Concrete benchmark-validation mode is mandatory when reporting a measured performance comparison; retain all seven validity questions and the narrow ballpark exception.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-performance/SKILL.md",
-        "skills/_lets-shared/advanced/performance.md"
+        "skills/coco-performance/SKILL.md",
+        "skills/_coco-shared/advanced/performance.md"
       ]
     },
     {
@@ -1867,8 +1867,8 @@
       "adaptation": "Concrete impact-analysis mode within review; optional multiple perspectives for wide changes, never automatic fan-out. Keep proof of the load-bearing safety fact.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-review/SKILL.md",
-        "skills/_lets-shared/advanced/review.md"
+        "skills/coco-review/SKILL.md",
+        "skills/_coco-shared/advanced/review.md"
       ]
     },
     {
@@ -1883,8 +1883,8 @@
       "adaptation": "Plain-language rewrite mode in document; no separate top-level alias is necessary.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-document/SKILL.md",
-        "skills/_lets-shared/advanced/document.md"
+        "skills/coco-document/SKILL.md",
+        "skills/_coco-shared/advanced/document.md"
       ]
     },
     {
@@ -1904,8 +1904,8 @@
       "adaptation": "Concrete recurring-error prevention mode in retro. Preserve explicit local exceptions with reason and review rather than inventing new approvals beyond repository policy.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-retro/SKILL.md",
-        "skills/_lets-shared/advanced/retro.md"
+        "skills/coco-retro/SKILL.md",
+        "skills/_coco-shared/advanced/retro.md"
       ]
     },
     {
@@ -1924,8 +1924,8 @@
       "adaptation": "Required concrete formal-create conditional mode under verify; generate project-native skills/commands without Cursor paths. Formal tools are optional capabilities selected from the project, not assumed dependencies.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-verify/SKILL.md",
-        "skills/_lets-shared/advanced/verify.md"
+        "skills/coco-verify/SKILL.md",
+        "skills/_coco-shared/advanced/verify.md"
       ]
     },
     {
@@ -1946,8 +1946,8 @@
       "adaptation": "Required concrete runtime-create mode under verify with project-native skill paths. Preserve feature-map format and lifecycle helper assets; replace control-ui/control-cli with available UI, HTTP, PTY, simulator, or repository drivers.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-verify/SKILL.md",
-        "skills/_lets-shared/advanced/verify.md"
+        "skills/coco-verify/SKILL.md",
+        "skills/_coco-shared/advanced/verify.md"
       ]
     },
     {
@@ -1973,8 +1973,8 @@
       "adaptation": "Concrete bespoke-execution planning mode. Optional designs/delegates depend on need and authorization; do not import mandatory multi-hour checkpoints where the user already authorizes execution.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-plan/SKILL.md",
-        "skills/_lets-shared/advanced/plan.md"
+        "skills/coco-plan/SKILL.md",
+        "skills/_coco-shared/advanced/plan.md"
       ]
     },
     {
@@ -1994,8 +1994,8 @@
       "adaptation": "Concrete runtime/ownership investigation mode; eliminate mandatory explainer spawn for simple questions and hardcoded Cursor role models. Preserve supporting exploration/explanation prompts as neutral checklists.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-research/SKILL.md",
-        "skills/_lets-shared/advanced/research.md"
+        "skills/coco-research/SKILL.md",
+        "skills/_coco-shared/advanced/research.md"
       ]
     },
     {
@@ -2010,8 +2010,8 @@
       "adaptation": "Goal-restatement mode within clarify; do not transform a requested restatement into implementation.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-clarify/SKILL.md",
-        "skills/_lets-shared/advanced/clarify.md"
+        "skills/coco-clarify/SKILL.md",
+        "skills/_coco-shared/advanced/clarify.md"
       ]
     },
     {
@@ -2034,8 +2034,8 @@
       "adaptation": "Concrete adversarial review mode with optional independent perspectives based on scope and user authorization. Replace model lists and Cursor tools with capability-neutral review; retain rubric, code-quality lens, reviewer prompt, and lead judgment.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-review/SKILL.md",
-        "skills/_lets-shared/advanced/review.md"
+        "skills/coco-review/SKILL.md",
+        "skills/_coco-shared/advanced/review.md"
       ]
     },
     {
@@ -2054,8 +2054,8 @@
       "adaptation": "Concrete current-chat catchup mode, separate from cross-chat recall and single-session pickup. Adapt word/visual limits to the user’s requested language and scope.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-context/SKILL.md",
-        "skills/_lets-shared/advanced/context.md"
+        "skills/coco-context/SKILL.md",
+        "skills/_coco-shared/advanced/context.md"
       ]
     },
     {
@@ -2075,8 +2075,8 @@
       "adaptation": "Required concrete formal-maintain mode under verify. Keep the stale-pass hazard, mutation proof, moved/new-code sweep, and sync-record discipline; portable project skill discovery replaces Cursor-only locations.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-verify/SKILL.md",
-        "skills/_lets-shared/advanced/verify.md"
+        "skills/coco-verify/SKILL.md",
+        "skills/_coco-shared/advanced/verify.md"
       ]
     },
     {
@@ -2098,8 +2098,8 @@
       "adaptation": "Required concrete runtime-maintain mode under verify. Source review can be sequential or bounded parallel; preserve single-driver ownership and full feature coverage, not a mandatory per-feature agent.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-verify/SKILL.md",
-        "skills/_lets-shared/advanced/verify.md"
+        "skills/coco-verify/SKILL.md",
+        "skills/_coco-shared/advanced/verify.md"
       ]
     },
     {
@@ -2116,8 +2116,8 @@
       "adaptation": "Required concrete webhook-bot UI mode under automate. Replace unavailable Grok routines, update_state, SendToUser secret-request, api2.cursor.sh headers, and hardcoded Tailscale install with configured webhook/secret/network adapters. Do not install or expose network services merely because the source says so.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-automate/SKILL.md",
-        "skills/_lets-shared/advanced/automate.md"
+        "skills/coco-automate/SKILL.md",
+        "skills/_coco-shared/advanced/automate.md"
       ]
     },
     {
@@ -2141,8 +2141,8 @@
       "adaptation": "Concrete comment/constraint review mode. Deliberately adapt aggressive source rules that delete ambiguous constraints or demand a theatrical specialist; preserve justified documentation until evidence supports removal and honor authorization for behavior changes.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-simplify/SKILL.md",
-        "skills/_lets-shared/advanced/simplify.md"
+        "skills/coco-simplify/SKILL.md",
+        "skills/_coco-shared/advanced/simplify.md"
       ]
     },
     {
@@ -2203,8 +2203,8 @@
       "adaptation": "MALJ entry/help routing only. Remove pstack installation commands, invocation, Custom Modes, Cursor setup UI, and claims that this is a pstack runtime. Retain source attribution and the purpose distinctions.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-start/SKILL.md",
-        "skills/_lets-shared/advanced/start.md"
+        "skills/coco-start/SKILL.md",
+        "skills/_coco-shared/advanced/start.md"
       ]
     },
     {
@@ -2282,8 +2282,8 @@
       "adaptation": "Purpose-suite router, never an install/invoke wrapper. All 23 playbooks require explicit neutral conditional homes listed in the summary. Replace mandatory panels, ten lanes, hardcoded models/cloud, broad external-message grants, Cursor built-ins, and cache paths with available capabilities and current authorization.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-start/SKILL.md",
-        "skills/_lets-shared/advanced/start.md#former-pstack-playbook-coverage"
+        "skills/coco-start/SKILL.md",
+        "skills/_coco-shared/advanced/start.md#former-pstack-playbook-coverage"
       ]
     },
     {
@@ -2304,8 +2304,8 @@
       "adaptation": "Conditional repeated-failure reset in debug; retain its two-fix trigger rather than dilute to generic root cause.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-debug/SKILL.md",
-        "skills/_lets-shared/advanced/debug.md"
+        "skills/coco-debug/SKILL.md",
+        "skills/_coco-shared/advanced/debug.md"
       ]
     },
     {
@@ -2321,8 +2321,8 @@
       "adaptation": "Shared build/design boundary rules; adapt “trust unconditionally” to proven validated internal contracts, not unchecked foreign data.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-build/SKILL.md",
-        "skills/_lets-shared/advanced/build.md"
+        "skills/coco-build/SKILL.md",
+        "skills/_coco-shared/advanced/build.md"
       ]
     },
     {
@@ -2342,8 +2342,8 @@
       "adaptation": "Concrete repeatable-tool mode used by build/migrate/verify; do not require a framework or committed script for trivial reversible edits. Keep long-lived tools with the change.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-build/SKILL.md",
-        "skills/_lets-shared/advanced/build.md"
+        "skills/coco-build/SKILL.md",
+        "skills/_coco-shared/advanced/build.md"
       ]
     },
     {
@@ -2358,8 +2358,8 @@
       "adaptation": "Shared structural-learning rule across retro and skill maintenance.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-retro/SKILL.md",
-        "skills/_lets-shared/advanced/retro.md"
+        "skills/coco-retro/SKILL.md",
+        "skills/_coco-shared/advanced/retro.md"
       ]
     },
     {
@@ -2374,8 +2374,8 @@
       "adaptation": "Conditional alternatives/prototype mode; comparison can be performed sequentially and does not require agents or paid multi-model panels.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-design/SKILL.md",
-        "skills/_lets-shared/advanced/design.md"
+        "skills/coco-design/SKILL.md",
+        "skills/_coco-shared/advanced/design.md"
       ]
     },
     {
@@ -2391,8 +2391,8 @@
       "adaptation": "Shared experience target for design/frontend/API work.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-design/SKILL.md",
-        "skills/_lets-shared/advanced/design.md"
+        "skills/coco-design/SKILL.md",
+        "skills/_coco-shared/advanced/design.md"
       ]
     },
     {
@@ -2411,8 +2411,8 @@
       "adaptation": "Shared evidence rule for performance and skill evaluations; benchmark mode supplies the full procedure.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-performance/SKILL.md",
-        "skills/_lets-shared/advanced/performance.md"
+        "skills/coco-performance/SKILL.md",
+        "skills/_coco-shared/advanced/performance.md"
       ]
     },
     {
@@ -2428,8 +2428,8 @@
       "adaptation": "Core debug rules with explicit persisted-state and legitimate-state distinction.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-debug/SKILL.md",
-        "skills/_lets-shared/advanced/debug.md"
+        "skills/coco-debug/SKILL.md",
+        "skills/_coco-shared/advanced/debug.md"
       ]
     },
     {
@@ -2445,8 +2445,8 @@
       "adaptation": "Shared design/planning sequencing rule; do not interpret scaffold-first as unrelated infrastructure expansion.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-design/SKILL.md",
-        "skills/_lets-shared/advanced/design.md"
+        "skills/coco-design/SKILL.md",
+        "skills/_coco-shared/advanced/design.md"
       ]
     },
     {
@@ -2461,8 +2461,8 @@
       "adaptation": "Context-budget discipline with direct summarized exploration as default; source bulk-to-subagent advice is conditional on delegation authorization.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-context/SKILL.md",
-        "skills/_lets-shared/advanced/context.md"
+        "skills/coco-context/SKILL.md",
+        "skills/_coco-shared/advanced/context.md"
       ]
     },
     {
@@ -2477,8 +2477,8 @@
       "adaptation": "Shared simplification rule; preserve the concrete duplicate-decision check.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-simplify/SKILL.md",
-        "skills/_lets-shared/advanced/simplify.md"
+        "skills/coco-simplify/SKILL.md",
+        "skills/_coco-shared/advanced/simplify.md"
       ]
     },
     {
@@ -2494,8 +2494,8 @@
       "adaptation": "Concrete retry/crash reconciliation rules for build/automate/migrate.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-build/SKILL.md",
-        "skills/_lets-shared/advanced/build.md"
+        "skills/coco-build/SKILL.md",
+        "skills/_coco-shared/advanced/build.md"
       ]
     },
     {
@@ -2510,8 +2510,8 @@
       "adaptation": "Conditional coordinated-internal-API mode; explicit compatibility preconditions must remain visible.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-migrate/SKILL.md",
-        "skills/_lets-shared/advanced/migrate.md"
+        "skills/coco-migrate/SKILL.md",
+        "skills/_coco-shared/advanced/migrate.md"
       ]
     },
     {
@@ -2530,8 +2530,8 @@
       "adaptation": "Concrete reader-load review within simplify; preserve both independent axes.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-simplify/SKILL.md",
-        "skills/_lets-shared/advanced/simplify.md"
+        "skills/coco-simplify/SKILL.md",
+        "skills/_coco-shared/advanced/simplify.md"
       ]
     },
     {
@@ -2547,8 +2547,8 @@
       "adaptation": "Shared data-first design rule with the no-forced-abstraction exception.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-design/SKILL.md",
-        "skills/_lets-shared/advanced/design.md"
+        "skills/coco-design/SKILL.md",
+        "skills/_coco-shared/advanced/design.md"
       ]
     },
     {
@@ -2563,8 +2563,8 @@
       "adaptation": "Autonomy rule follows current user/developer policy; do not inherit blanket permission for external messages, force pushes, or production changes.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-start/SKILL.md",
-        "skills/_lets-shared/advanced/start.md"
+        "skills/coco-start/SKILL.md",
+        "skills/_coco-shared/advanced/start.md"
       ]
     },
     {
@@ -2579,8 +2579,8 @@
       "adaptation": "Conditional phased-rewrite mode; normal work still favors individually checkable units and established external contracts.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-migrate/SKILL.md",
-        "skills/_lets-shared/advanced/migrate.md"
+        "skills/coco-migrate/SKILL.md",
+        "skills/_coco-shared/advanced/migrate.md"
       ]
     },
     {
@@ -2598,8 +2598,8 @@
       "adaptation": "Core verification contract; simple reversible edits use proportionate real-artifact inspection.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-verify/SKILL.md",
-        "skills/_lets-shared/advanced/verify.md"
+        "skills/coco-verify/SKILL.md",
+        "skills/_coco-shared/advanced/verify.md"
       ]
     },
     {
@@ -2614,8 +2614,8 @@
       "adaptation": "Conditional requirement-integration design reset; maintain scope and evidence rather than authorize a blanket rewrite.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-design/SKILL.md",
-        "skills/_lets-shared/advanced/design.md"
+        "skills/coco-design/SKILL.md",
+        "skills/_coco-shared/advanced/design.md"
       ]
     },
     {
@@ -2631,8 +2631,8 @@
       "adaptation": "Core optional-delegation/concurrency ownership contract, also applies to independent processes without agents.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-plan/SKILL.md",
-        "skills/_lets-shared/advanced/plan.md"
+        "skills/coco-plan/SKILL.md",
+        "skills/_coco-shared/advanced/plan.md"
       ]
     },
     {
@@ -2651,8 +2651,8 @@
       "adaptation": "Shared planning/commit discipline. Respect authorized feature branches and work-unit commits; adapt unconditional clean-trunk rebase to the repository’s actual branch state.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-plan/SKILL.md",
-        "skills/_lets-shared/advanced/plan.md"
+        "skills/coco-plan/SKILL.md",
+        "skills/_coco-shared/advanced/plan.md"
       ]
     },
     {
@@ -2667,8 +2667,8 @@
       "adaptation": "Shared simplification sequence for code and skills; preserve contracts and licenses.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-simplify/SKILL.md",
-        "skills/_lets-shared/advanced/simplify.md"
+        "skills/coco-simplify/SKILL.md",
+        "skills/_coco-shared/advanced/simplify.md"
       ]
     },
     {
@@ -2685,8 +2685,8 @@
       "adaptation": "Core test-quality mode under verify, used for existing tests as well as new ones.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-verify/SKILL.md",
-        "skills/_lets-shared/advanced/verify.md"
+        "skills/coco-verify/SKILL.md",
+        "skills/_coco-shared/advanced/verify.md"
       ]
     },
     {
@@ -2706,8 +2706,8 @@
       "adaptation": "Language-neutral typed-boundary contract; TypeScript-specific patterns stay in a conditional reference.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-build/SKILL.md",
-        "skills/_lets-shared/advanced/build.md"
+        "skills/coco-build/SKILL.md",
+        "skills/_coco-shared/advanced/build.md"
       ]
     },
     {
@@ -2730,8 +2730,8 @@
       "adaptation": "Concrete recent-work recall mode with accessible history adapters; replace Cursor transcript layout and mandatory multi-source fan-out with scoped evidence queries and optional agents.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-context/SKILL.md",
-        "skills/_lets-shared/advanced/context.md"
+        "skills/coco-context/SKILL.md",
+        "skills/_coco-shared/advanced/context.md"
       ]
     },
     {
@@ -2755,8 +2755,8 @@
       "adaptation": "Concrete evidence-to-skill maintenance mode. Replace three/four mandatory agents, Cursor paths/create-skill, automatic backlog posting, and unconditional approval pauses with capability-neutral work within the user’s granted scope.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-retro/SKILL.md",
-        "skills/_lets-shared/advanced/retro.md"
+        "skills/coco-retro/SKILL.md",
+        "skills/_coco-shared/advanced/retro.md"
       ]
     },
     {
@@ -2776,8 +2776,8 @@
       "adaptation": "Preserve useful capability/budget configuration only as a neutral start configuration mode. Do not write Cursor rules, install/configure/call pstack, copy its model list, or require any model panel.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-start/SKILL.md",
-        "skills/_lets-shared/advanced/start.md"
+        "skills/coco-start/SKILL.md",
+        "skills/_coco-shared/advanced/start.md"
       ]
     },
     {
@@ -2792,8 +2792,8 @@
       "adaptation": "Task-sharpening mode within clarify; do the framing without lengthy meta narration or scope inflation.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-clarify/SKILL.md",
-        "skills/_lets-shared/advanced/clarify.md"
+        "skills/coco-clarify/SKILL.md",
+        "skills/_coco-shared/advanced/clarify.md"
       ]
     },
     {
@@ -2817,8 +2817,8 @@
       "adaptation": "Concrete decision-trail mode under context, reused by plan/build/performance/automate. Replace mandatory cross-family reviewer and Cursor transcript assumptions; keep format/helper semantics including formula protection.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-context/SKILL.md",
-        "skills/_lets-shared/advanced/context.md"
+        "skills/coco-context/SKILL.md",
+        "skills/_coco-shared/advanced/context.md"
       ]
     },
     {
@@ -2838,8 +2838,8 @@
       "adaptation": "Optional bounded coverage/race mode in plan and verify. Preserve method/revision receipts; no mandatory agents, cloud environments, Cursor Task schema, or model slugs.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-plan/SKILL.md",
-        "skills/_lets-shared/advanced/plan.md"
+        "skills/coco-plan/SKILL.md",
+        "skills/_coco-shared/advanced/plan.md"
       ]
     },
     {
@@ -2856,8 +2856,8 @@
       "adaptation": "Concrete regression-first mode shared by debug/verify; preserve practical test selection rather than mandatory unit-test ritual.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-debug/SKILL.md",
-        "skills/_lets-shared/advanced/debug.md"
+        "skills/coco-debug/SKILL.md",
+        "skills/_coco-shared/advanced/debug.md"
       ]
     },
     {
@@ -2878,8 +2878,8 @@
       "adaptation": "Concrete teaching mode in document backed by research; no mandatory how/why agent invocations or image generation. Preserve confidence qualifications instead of styling them away.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-document/SKILL.md",
-        "skills/_lets-shared/advanced/document.md"
+        "skills/coco-document/SKILL.md",
+        "skills/_coco-shared/advanced/document.md"
       ]
     },
     {
@@ -2899,8 +2899,8 @@
       "adaptation": "Document mode selection and sentence standard merge into one document family; preserve semantic precision over rigid source punctuation/tab preferences.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-document/SKILL.md",
-        "skills/_lets-shared/advanced/document.md"
+        "skills/coco-document/SKILL.md",
+        "skills/_coco-shared/advanced/document.md"
       ]
     },
     {
@@ -2921,8 +2921,8 @@
       "adaptation": "Concrete TypeScript conditional reference in build. Keep legitimate validated casts and project logger/testing conventions; do not impose a broad TypeScript policy on other languages.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-build/SKILL.md",
-        "skills/_lets-shared/advanced/build.md"
+        "skills/coco-build/SKILL.md",
+        "skills/_coco-shared/advanced/build.md"
       ]
     },
     {
@@ -2939,8 +2939,8 @@
       "adaptation": "Prose-editing mode in document with source catalog as a reference; avoid importing subjective punctuation bans as universal correctness requirements.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-document/SKILL.md",
-        "skills/_lets-shared/advanced/document.md"
+        "skills/coco-document/SKILL.md",
+        "skills/_coco-shared/advanced/document.md"
       ]
     },
     {
@@ -2973,8 +2973,8 @@
       "adaptation": "Concrete rationale/lineage investigation mode. Use relevant available sources and an explicit coverage map; adapt automatic seven-category agent sweeps to scope and authorization while retaining visible gaps and epistemic discipline.",
       "author": "pstack",
       "implemented_references": [
-        "skills/lets-research/SKILL.md",
-        "skills/_lets-shared/advanced/research.md"
+        "skills/coco-research/SKILL.md",
+        "skills/_coco-shared/advanced/research.md"
       ]
     }
   ]

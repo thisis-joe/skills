@@ -1,4 +1,0 @@
-interface:
-  display_name: "let's-security"
-  short_description: "Purpose-led security with source-backed checks and evidence"
-  default_prompt: "Use $lets-security for the current request and provide its required result."

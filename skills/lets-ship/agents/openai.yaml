@@ -1,4 +1,0 @@
-interface:
-  display_name: "let's-ship"
-  short_description: "Purpose-led ship with source-backed checks and evidence"
-  default_prompt: "Use $lets-ship for the current request and provide its required result."

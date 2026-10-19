@@ -1,4 +1,0 @@
-interface:
-  display_name: "let's-performance"
-  short_description: "Purpose-led performance with source-backed checks and evidence"
-  default_prompt: "Use $lets-performance for the current request and provide its required result."

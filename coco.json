@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "display_prefix": "coco-",
+  "invocation_prefix": "coco-",
+  "shared": "_coco-shared",
+  "skills": [
+    "coco-start",
+    "coco-clarify",
+    "coco-research",
+    "coco-design",
+    "coco-spec",
+    "coco-plan",
+    "coco-build",
+    "coco-debug",
+    "coco-verify",
+    "coco-review",
+    "coco-security",
+    "coco-migrate",
+    "coco-performance",
+    "coco-frontend",
+    "coco-observe",
+    "coco-automate",
+    "coco-ship",
+    "coco-document",
+    "coco-context",
+    "coco-retro",
+    "coco-triage",
+    "coco-simplify"
+  ],
+  "provenance_required": true
+}

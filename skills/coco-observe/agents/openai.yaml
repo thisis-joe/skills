@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-observe"
+  short_description: "Purpose-led observe with source-backed checks and evidence"
+  default_prompt: "Use $coco-observe for the current request and provide its required result."

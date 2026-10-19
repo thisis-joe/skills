@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-triage"
+  short_description: "Purpose-led triage with source-backed checks and evidence"
+  default_prompt: "Use $coco-triage for the current request and provide its required result."

@@ -1,4 +1,0 @@
-interface:
-  display_name: "let's-context"
-  short_description: "Purpose-led context with source-backed checks and evidence"
-  default_prompt: "Use $lets-context for the current request and provide its required result."
