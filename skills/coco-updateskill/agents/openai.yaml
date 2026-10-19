@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-updateskill"
+  short_description: "Adapt existing skills to team rules and verify updates"
+  default_prompt: "Use $coco-updateskill to adapt an existing skill to our team requirements, validate its behavior and references, and update the local installation."

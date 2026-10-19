@@ -27,7 +27,8 @@
     "coco-triage",
     "coco-simplify",
     "coco-tellmeskill",
-    "coco-push"
+    "coco-push",
+    "coco-updateskill"
   ],
   "provenance_required": true
 }
