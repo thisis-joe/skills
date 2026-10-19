@@ -1,8 +1,49 @@
-# coco- 개발 스킬
+# COCO Skills
 
-Matt Pocock, Addy Osmani, Lauren Tan(pstack)의 개발 절차를 목적별로 통합한 스킬 모음입니다. 원본 122개 스킬과 Addy 명령 9개의 통합 위치를 추적하며, 통합 진입점 22개에 팀 전용 스킬 4개를 더한 총 26개 스킬을 제공합니다.
+**COCO는 [Matt Pocock의 skills](https://github.com/mattpocock/skills), [Addy Osmani의 agent-skills](https://github.com/addyosmani/agent-skills), [Lauren Tan의 pstack](https://github.com/cursor/plugins/tree/main/pstack)을 합쳐, Codex에서 목적별로 사용할 수 있도록 정리한 개발 스킬 모음입니다.**
 
-표시 이름과 폴더명은 **`coco-build`**, 실제 호출은 **`$coco-build`**입니다. 모든 통합 스킬이 같은 `coco-` 접두사를 사용합니다. pstack과 원본 팩은 설치·호출하지 않으며, 고정한 원문은 비활성 자료로 보관합니다.
+세 원본의 122개 스킬과 9개 명령을 22개 통합 스킬로 재구성하고, 사용 안내·요청문 추천·팀 맞춤 수정·원격 푸시를 위한 스킬 4개를 더했습니다. 총 **26개 스킬**로 요구사항 정리부터 구현·리뷰·검증·출시 준비까지 이어갈 수 있습니다.
+
+## 빠른 설치
+
+**Node.js 22 이상과 Python 3.9 이상**이 필요합니다. npm 계정 없이 설치할 수 있습니다.
+
+```sh
+npx --yes @thisis-joe/coco-skills@latest install
+```
+
+기본 설치 위치는 `~/.codex/skills`이며, `CODEX_HOME`이 설정되어 있으면 그 아래 `skills`를 사용합니다. 업데이트도 같은 명령을 다시 실행하면 됩니다. 설치 후 Codex에서 새 대화를 열거나 스킬 목록을 새로고침하고 다음처럼 요청하세요.
+
+```text
+$coco-start 이 프로젝트에서 어떤 순서로 작업하면 좋을지 정리해줘.
+$coco-tellmeskill 사용 가능한 스킬과 사용법을 알려줘.
+$coco-review 현재 변경에서 버그와 회귀 가능성을 검토해줘.
+```
+
+## 어떻게 합쳤나요?
+
+원본의 이름을 기준으로 묶기보다 **사용자가 하려는 작업**을 기준으로 절차를 모았습니다. 같은 목적의 단계는 합치고, 서로 다른 규칙은 선택 이유를 기록했습니다.
+
+| 원본 | 통합에 반영한 절차의 예 |
+|---|---|
+| Matt Pocock · `mattpocock/skills` | 요구를 질문으로 구체화하기, 명세·작업 분해, TDD, 코드 구조 설계, 인수인계 |
+| Addy Osmani · `addyosmani/agent-skills` | 제약·명세 기반 개발, 구현·리뷰·출시 흐름, 보안·성능·운영 검증 |
+| Lauren Tan · `pstack` | 설계 대안 비교, 변경 영향 검토, 실제 동작 입증, 맥락 관리와 회고 |
+
+1. **출처를 고정했습니다.** 원본 커밋과 파일 체크섬을 보관하고, 131개 스킬·명령 각각이 어디에 통합됐는지 [대응표](docs/source-index.md)에 기록했습니다.
+2. **중복 절차를 목적별로 묶었습니다.** 예를 들어 세 원본의 코드 리뷰 절차는 `coco-review`로 모으고, 명세 준수·팀 규칙·코드 품질을 나누어 판단하도록 정리했습니다.
+3. **충돌하는 규칙은 공통 기준으로 맞췄습니다.** 이미 합의한 요구는 재사용하고 빠진 결정만 질문합니다. 동작을 바꾸는 작업에는 실패를 확인하는 테스트부터 적용하고, 정적 문서 수정에는 그에 맞는 직접 검사를 사용합니다. 선택 이유는 [결정 기록](skills/_coco-shared/decisions.md)에 남겼습니다.
+4. **공통 규칙과 전문 절차를 분리했습니다.** 검증 근거·완료 조건·작업별 커밋은 [공통 계약](skills/_coco-shared/contracts.md)에 두고, 전문·실험 절차는 필요한 경우에 참조합니다. 특정 작성자의 도구·모델·개인 환경에 의존하는 부분은 사용 가능한 환경에 맞게 조정했습니다.
+5. **원문과 실행할 스킬을 구분했습니다.** 원문은 `.source` 자료로 보존하며 설치하거나 호출하지 않습니다. 설치되는 것은 `coco-*` 스킬과 공통 자료뿐입니다. 별도로 추가한 4개 팀 스킬도 원본에서 유래한 기능과 구분했습니다.
+
+## 통합해서 얻는 장점
+
+- **목적에 맞는 스킬을 고르기 쉽습니다.** 세 원본에서 비슷한 스킬을 각각 찾는 대신, 구현은 `$coco-build`, 리뷰는 `$coco-review`, 실행 검증은 `$coco-verify`처럼 같은 이름 체계를 사용합니다.
+- **단계가 바뀌어도 기준이 이어집니다.** 요구사항·명세·계획을 재사용하고, 구현·리뷰·검증의 역할과 완료 조건을 함께 정의해 중복 질문과 기준 충돌을 줄이도록 구성했습니다.
+- **필요한 지침을 골라 읽습니다.** 원본 전체를 매번 불러오지 않고, 작업별 진입점과 관련 공통·전문 절차를 참조합니다.
+- **검증 근거와 한계를 남깁니다.** 코드 수정, 테스트 통과, 실제 동작 확인, 배포 성공을 구분합니다. 확인하지 못한 부분을 완료로 취급하지 않습니다.
+- **출처를 확인하고 팀에 맞게 바꿀 수 있습니다.** 원문·통합 위치·변경 이유·MIT 고지를 보존하며, `$coco-updateskill`로 팀의 개발 규칙에 맞춘 수정을 진행할 수 있습니다.
+- **기존 설치를 보호합니다.** 다른 스킬은 유지하고, 개인적으로 수정한 설치 파일이나 같은 이름의 외부 스킬과 충돌하면 덮어쓰기 전에 중단합니다.
 
 ## 사용
 
@@ -61,16 +102,16 @@ $coco-updateskill coco-build 우리 팀의 검증 명령과 리뷰 절차에 맞
 | 들어온 이슈·중복·작업 준비 상태 분류 | `$coco-triage` | 근거 있는 분류와 다음 준비된 작업 |
 | 복잡도·죽은 코드 제거·구조 정리 | `$coco-simplify` | 동작을 보존하면서 사라진 복잡도와 회귀 근거 |
 
-## 설치와 검증
+## 설치 옵션과 검증
 
-### npm으로 설치
+### 설치 전 확인과 설치 후 검증
 
-공개 npm 패키지명은 `@thisis-joe/coco-skills`입니다. Node.js 22 이상과 Python 3.9 이상이 필요하며, 설치 사용자는 npm 계정이 필요하지 않습니다.
+변경할 내용을 먼저 확인하려면 `--dry-run`을 사용합니다. 설치 후에는 실제 설치 경로를 지정해 검증할 수 있습니다.
 
 ```sh
 npx --yes @thisis-joe/coco-skills@latest install --dry-run
 npx --yes @thisis-joe/coco-skills@latest install
-npx --yes @thisis-joe/coco-skills@latest validate --installed "$HOME/.codex/skills"
+npx --yes @thisis-joe/coco-skills@latest validate --installed "${CODEX_HOME:-$HOME/.codex}/skills"
 ```
 
 업데이트도 같은 `install` 명령을 사용합니다. `--dest ./my-skills`로 설치 경로를 바꾸거나 `@0.1.0`처럼 버전을 고정할 수 있습니다. `CODEX_HOME`이 설정되어 있으면 기본 설치 경로는 그 아래 `skills`입니다. Python을 찾지 못하면 `COCO_PYTHON`에 실행 파일 경로를 지정합니다. 실제 게시와 로컬 패키지 검증 절차는 [배포 안내](docs/distribution.md)에 있습니다.
