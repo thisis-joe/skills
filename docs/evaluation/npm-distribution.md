@@ -49,3 +49,18 @@ Linux·Windows에서의 실제 실행은 아직 검증하지 않았다. Windows 
 - 허용된 registry 조회 `npm view @thisis-joe/coco-skills@0.1.0 ...`는 E404를 반환했다.
 - `npm whoami`와 정확한 아카이브의 `npm publish ... --access public --tag latest`는 현재 제한된 실행 환경에서 `ENOTFOUND registry.npmjs.org`로 실패했다. 승인 요청이 비활성화되어 해당 명령의 네트워크 접근을 확대할 수 없었다.
 - 실제 공개 게시와 익명 다운로드·설치 확인은 아직 완료되지 않았다. 사용자 터미널에서 아카이브를 게시하거나 해당 명령의 네트워크 접근이 허용된 뒤 이어서 확인해야 한다.
+
+## 공개 게시 확인
+
+2026-10-19 14:05 UTC에 공개 registry 조회가 성공했다. 패키지 `@thisis-joe/coco-skills`의 버전과 `latest`는 모두 `0.1.0`이다. 사용자 터미널의 첫 게시 시도는 2FA 요구로 E403이었고, 이후 사용자가 인증 설정과 게시를 진행한 결과를 registry에서 확인했다. 현재 상태는 공개 게시 완료다.
+
+- 패키지 페이지: <https://www.npmjs.com/package/@thisis-joe/coco-skills>.
+- 공개 tarball: <https://registry.npmjs.org/@thisis-joe/coco-skills/-/coco-skills-0.1.0.tgz>.
+- 비어 있는 `user.npmrc`와 `global.npmrc`, 별도 캐시를 사용한 `npm view`도 버전 `0.1.0`, `latest` `0.1.0`을 반환했다. npm 로그인 정보 없이 공개 메타데이터에 접근할 수 있다.
+- registry의 SHA-512 integrity는 위의 검증한 게시 후보와 정확히 같다. 공개 파일과 설치 검증에 사용한 로컬 아카이브가 동일하다.
+- 새 환경 `/private/tmp/coco-public-verify.fnjqln`에서 registry 패키지를 지정한 익명 `npm exec`는 실행 환경의 네트워크 제한으로 ENOTFOUND가 발생했다. 따라서 새 다운로드부터 이어지는 전체 설치가 통과했다고 주장하지 않는다.
+- 같은 임시 환경에서 정확히 일치하는 로컬 아카이브를 오프라인 `npm exec --package=<tgz> -- coco-skills install --dest <temp>/installed`로 설치했다. 결과는 `installed`, 26 skills, 84 files다.
+- 설치가 끝난 후 `python3 scripts/validate.py --installed <temp>/installed`가 26 skills, 84 files를 확인했다.
+- 종료 검사 `python3 scripts/validate.py`와 `python3 -m unittest discover -s tests -v`도 다시 통과했다. 전체 32개 테스트, skipped 0이다.
+
+사용자 설치 명령은 `npx --yes @thisis-joe/coco-skills@latest install`이다. 이 확인은 npm 공개 게시와 설치 아카이브의 동작을 대상으로 하며 Git 원격 브랜치 게시·병합을 수행했다는 뜻은 아니다. 공개 아카이브는 변경하지 않았다.
