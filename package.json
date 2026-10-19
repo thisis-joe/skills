@@ -1,7 +1,6 @@
 {
-  "name": "@coco-placeholder/coco-skills",
+  "name": "@thisis-joe/coco-skills",
   "version": "0.1.0",
-  "private": true,
   "description": "COCO development skills with a safe installer for Codex.",
   "license": "MIT",
   "bin": {

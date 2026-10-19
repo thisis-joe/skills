@@ -65,12 +65,12 @@ $coco-updateskill coco-build 우리 팀의 검증 명령과 리뷰 절차에 맞
 
 ### npm으로 설치
 
-`@SCOPE/coco-skills` 형태의 공개 npm 배포 구성을 제공합니다. `SCOPE`는 게시자의 실제 npm 계정 또는 조직명입니다. 계정명 확정 전에는 임시 패키지명의 게시를 막습니다. **npm 게시가 완료된 버전부터** 아래 명령으로 설치할 수 있습니다. Node.js 22 이상과 Python 3.9 이상이 필요하며, 설치 사용자는 npm 계정이 필요하지 않습니다.
+공개 npm 패키지명은 `@thisis-joe/coco-skills`입니다. Node.js 22 이상과 Python 3.9 이상이 필요하며, 설치 사용자는 npm 계정이 필요하지 않습니다.
 
 ```sh
-npx --yes @SCOPE/coco-skills@latest install --dry-run
-npx --yes @SCOPE/coco-skills@latest install
-npx --yes @SCOPE/coco-skills@latest validate --installed "$HOME/.codex/skills"
+npx --yes @thisis-joe/coco-skills@latest install --dry-run
+npx --yes @thisis-joe/coco-skills@latest install
+npx --yes @thisis-joe/coco-skills@latest validate --installed "$HOME/.codex/skills"
 ```
 
 업데이트도 같은 `install` 명령을 사용합니다. `--dest ./my-skills`로 설치 경로를 바꾸거나 `@0.1.0`처럼 버전을 고정할 수 있습니다. `CODEX_HOME`이 설정되어 있으면 기본 설치 경로는 그 아래 `skills`입니다. Python을 찾지 못하면 `COCO_PYTHON`에 실행 파일 경로를 지정합니다. 실제 게시와 로컬 패키지 검증 절차는 [배포 안내](docs/distribution.md)에 있습니다.

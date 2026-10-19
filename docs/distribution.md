@@ -2,22 +2,22 @@
 
 ## 설치 인터페이스
 
-배포할 npm 패키지명은 `@SCOPE/coco-skills`이며, 실행 명령은 `coco-skills`다. `SCOPE`는 실제 npm 계정 또는 조직명으로 바꾼다. 계정명이 확정될 때까지 `package.json`은 임시 이름과 `private: true`로 게시를 막는다. 아래 registry 명령은 해당 버전의 게시가 끝난 뒤 사용할 수 있다. 준비한 코드나 로컬 `.tgz`만으로 npm 게시 완료를 의미하지 않는다.
+공개 npm 패키지명은 `@thisis-joe/coco-skills`이며, 실행 명령은 `coco-skills`다. 아래 registry 명령은 해당 버전의 게시가 끝난 뒤 사용할 수 있다. 준비한 코드나 로컬 `.tgz`만으로 npm 게시 완료를 의미하지 않는다.
 
 Node.js 22 이상과 Python 3.9 이상이 필요하다. 설치 사용자는 npm 로그인이 필요하지 않다.
 
 ```sh
-npx --yes @SCOPE/coco-skills@latest install --dry-run
-npx --yes @SCOPE/coco-skills@latest install
-npx --yes @SCOPE/coco-skills@latest validate --installed "$HOME/.codex/skills"
+npx --yes @thisis-joe/coco-skills@latest install --dry-run
+npx --yes @thisis-joe/coco-skills@latest install
+npx --yes @thisis-joe/coco-skills@latest validate --installed "$HOME/.codex/skills"
 ```
 
 기본 경로는 `~/.codex/skills`이고 `CODEX_HOME`을 설정했다면 그 아래 `skills`를 사용한다. `--dest`가 기본 경로보다 우선한다. Windows에서도 설치 폴더를 직접 지정할 수 있다.
 
 ```sh
-npx --yes @SCOPE/coco-skills@latest install --dest ./my-skills
-npx --yes @SCOPE/coco-skills@latest validate --installed ./my-skills
-npx --yes @SCOPE/coco-skills@0.1.0 install --dest ./my-skills
+npx --yes @thisis-joe/coco-skills@latest install --dest ./my-skills
+npx --yes @thisis-joe/coco-skills@latest validate --installed ./my-skills
+npx --yes @thisis-joe/coco-skills@0.1.0 install --dest ./my-skills
 ```
 
 업데이트는 `@latest install`을 다시 실행한다. 동일한 내용은 `unchanged`를 반환하고, 관리 중인 파일을 개인적으로 바꿨거나 같은 이름의 다른 스킬이 있으면 변경 전에 중단한다. 이전 버전으로 돌아가려면 원하는 버전을 지정해 같은 명령을 실행한다. 개인 수정으로 충돌하면 기존 파일을 먼저 보관하고 별도 경로에서 새 버전을 검토한다.
@@ -34,7 +34,7 @@ CLI는 `python3`, `python`, Windows의 `py -3` 순서로 Python을 찾는다. `C
 
 ## 게시자 절차
 
-첫 게시에는 npm 계정 또는 조직 scope에 대한 게시 권한이 필요하다. 선택한 npm 계정명으로 `package.json`의 `name`과 이 문서·README의 `SCOPE`를 맞추고 `private` 항목을 제거한다. 다른 소유자의 scope를 추정해서 사용하지 않는다.
+첫 게시는 npm 계정 `thisis-joe`로 로그인해 진행한다. `npm login`을 실행하면 브라우저 인증을 안내하며, 브라우저에서 계정 로그인과 인증을 마친다. `npm whoami`가 `thisis-joe`를 반환하는지 확인한 뒤 게시한다. 조직의 다른 게시자를 추가하는 경우에는 해당 scope에 대한 권한을 별도로 확인한다.
 
 ```sh
 python3 scripts/validate.py
@@ -53,8 +53,8 @@ npm publish --access public
 게시가 성공하면 아래 명령으로 registry 버전과 설치를 확인한다. 공개 패키지 게시와 Git 원격 게시 여부는 별개다.
 
 ```sh
-npm view @SCOPE/coco-skills version dist.integrity --registry=https://registry.npmjs.org
-npx --yes @SCOPE/coco-skills@latest install --dry-run
+npm view @thisis-joe/coco-skills version dist.integrity --registry=https://registry.npmjs.org
+npx --yes @thisis-joe/coco-skills@latest install --dry-run
 ```
 
 다음 버전은 기능·수정에 맞게 `npm version patch`, `minor` 또는 `major`로 올린 뒤 같은 절차로 게시한다. 같은 버전 번호는 재사용하지 않는다.
@@ -64,4 +64,5 @@ npx --yes @SCOPE/coco-skills@latest install --dry-run
 - [npm package.json의 bin·files·publishConfig](https://docs.npmjs.com/cli/v11/configuring-npm/package-json/)
 - [npm exec와 npx](https://docs.npmjs.com/cli/v11/commands/npm-exec/)
 - [공개 scoped 패키지 게시](https://docs.npmjs.com/creating-and-publishing-scoped-public-packages/)
+- [npm login의 브라우저 인증](https://docs.npmjs.com/cli/v10/commands/npm-login/)
 - [npm publish와 dry-run](https://docs.npmjs.com/cli/v11/commands/npm-publish/)
