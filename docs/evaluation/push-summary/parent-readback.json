@@ -1,0 +1,31 @@
+{
+  "fixed_read_skill_versions_match": true,
+  "cases": {
+    "scope_drift": {
+      "head_branch_refs_and_tasks_match": true,
+      "both_git_bundles_verified": true,
+      "outcome": "published"
+    },
+    "adequate_summary": {
+      "head_branch_refs_and_tasks_match": true,
+      "both_git_bundles_verified": true,
+      "outcome": "published"
+    },
+    "jira_write_failure": {
+      "head_branch_refs_and_tasks_match": true,
+      "both_git_bundles_verified": true,
+      "outcome": "stopped_before_push"
+    },
+    "ambiguous_project": {
+      "head_branch_refs_and_tasks_match": true,
+      "both_git_bundles_verified": true,
+      "outcome": "stopped_before_push"
+    },
+    "unrelated_collision": {
+      "head_branch_refs_and_tasks_match": true,
+      "both_git_bundles_verified": true,
+      "outcome": "stopped_before_push"
+    }
+  },
+  "exported_files": 192
+}

@@ -1,0 +1,30 @@
+{
+  "request": "Apply $coco-push to publish this fixture branch, including required branch/ticket alignment. Use origin/develop, preserve existing requirements and acceptance criteria, and use the local mock Jira adapter. This authorizes in-scope synchronization, branch rename, Summary/Description edits, and ordinary push; do not ask again. Stop and record any genuinely missing decision.",
+  "jira_key": "TEAM-431",
+  "branch": "feat(be)/431-토큰_만료설정",
+  "implementation_source": {
+    "requirements": [
+      "Existing expiry boundary stays unchanged.",
+      "Rotate returns a new refresh token.",
+      "Reusing an old refresh token revokes its token family.",
+      "Follow-up: per-device selective revoke UI remains unimplemented."
+    ],
+    "acceptance_criteria": [
+      "At expiration time the token is rejected.",
+      "A valid refresh token rotates twice successfully.",
+      "Reusing the prior token blocks the entire family."
+    ],
+    "scope_note": "Requirements above are the settled authorized work. Unimplemented follow-up remains visible."
+  },
+  "jira_adapter": "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/coco-push-forward-g56i2o5w/scope_drift/jira",
+  "expected_kind_part": "feat(be)",
+  "check": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ]
+}

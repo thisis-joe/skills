@@ -1,0 +1,12 @@
+{
+  "TEAM-432": {
+    "key": "TEAM-432",
+    "project": "TEAM",
+    "summary": "CSV_내보내기",
+    "description": "Original requirements\n- Export records to CSV including commas, quotes, Unicode, and newlines.\n- PDF export is outside this task.\n\nAcceptance criteria\n- Unicode and quoted cells round-trip.\n- Empty export has a header.\n\nReference: https://example.invalid/spec/432\nPeer note (Mina): retain expiry API contract.\n",
+    "status": "In Progress",
+    "assignee": "mina",
+    "priority": "High",
+    "version": 1
+  }
+}

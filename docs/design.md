@@ -16,7 +16,7 @@ Matt Pocock, Addy Osmani, Lauren Tan(pstack)의 스킬 트리를 목적별 스�
 
 ## 목적별 스킬
 
-`start`, `clarify`, `research`, `design`, `spec`, `plan`, `build`, `debug`, `verify`, `review`, `security`, `migrate`, `performance`, `frontend`, `observe`, `automate`, `ship`, `document`, `context`, `retro`, `triage`, `simplify`의 통합 진입점 22개에 팀 안내용 `tellmeskill`, 원격 동기화·푸시용 `push`, 팀 맞춤 유지보수용 `updateskill`을 더해 총 25개를 둔다. `start`의 선택표가 상황·목적·기대 결과를 한곳에서 설명한다. `tellmeskill`은 현재 전체 스킬 목록에서 대상과 설명 길이를 선택받고 모든 대상·모드에 동일한 양식으로 설명한다. `push`는 개발 기준과 푸시 목적지를 구분하고 검증 후 단일 작업 브랜치를 게시한다. `updateskill`은 기준 원본과 설치 사본을 구분하고 팀 규칙·출처·참조를 일관되게 수정·검증·반영한다. 세 팀 전용 스킬은 원본에서 유래한 기능으로 꾸며 대응표에 추가하지 않는다. 이름이 겹쳐도 같은 절차를 두 번 실행하지 않는다.
+`start`, `clarify`, `research`, `design`, `spec`, `plan`, `build`, `debug`, `verify`, `review`, `security`, `migrate`, `performance`, `frontend`, `observe`, `automate`, `ship`, `document`, `context`, `retro`, `triage`, `simplify`의 통합 진입점 22개에 팀 안내용 `tellmeskill`, 원격 동기화·푸시용 `push`, 팀 맞춤 유지보수용 `updateskill`을 더해 총 25개를 둔다. `start`의 선택표가 상황·목적·기대 결과를 한곳에서 설명한다. `tellmeskill`은 현재 전체 스킬 목록에서 대상과 설명 길이를 선택받고 모든 대상·모드에 동일한 양식으로 설명한다. `push`는 개발 기준과 푸시 목적지를 구분하고 검증 후 단일 작업 브랜치를 게시하며, 실제 변경과 작업요약이 어긋나면 브랜치명과 Jira 제목·작업설명을 보존적으로 맞춘다. `updateskill`은 기준 원본과 설치 사본을 구분하고 팀 규칙·출처·참조를 일관되게 수정·검증·반영한다. 세 팀 전용 스킬은 원본에서 유래한 기능으로 꾸며 대응표에 추가하지 않는다. 이름이 겹쳐도 같은 절차를 두 번 실행하지 않는다.
 
 ## 불변 조건
 
