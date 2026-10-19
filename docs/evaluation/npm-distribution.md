@@ -41,3 +41,11 @@ Linux·Windows에서의 실제 실행은 아직 검증하지 않았다. Windows 
 - `npm login --registry=https://registry.npmjs.org --auth-type=web`: 브라우저 인증을 시작했고 사용자의 완료를 기다리는 중이다. 실제 게시와 registry에서의 다운로드·설치는 아직 수행하지 않았다.
 
 인증이 끝나면 `npm whoami`가 `thisis-joe`인지 확인하고 위 아카이브를 게시한다. 게시 응답을 받지 못한 경우 같은 버전을 바로 다시 올리지 말고 registry의 버전과 integrity부터 비교한다. 공개 다운로드 검증에는 인증 정보가 없는 임시 npm 설정·캐시와 별도 설치 경로를 사용한다.
+
+## 인증 완료 후 게시 시도
+
+- 2026-10-19: `npm login`이 종료 코드 0과 `Logged in on https://registry.npmjs.org/.`를 반환했다. 브라우저의 인증 계정은 `thisis-joe`로 확인했다.
+- 아카이브 SHA-256을 다시 확인했고 위 게시 후보의 해시와 일치했다. 코드와 게시 파일은 변경하지 않았다.
+- 허용된 registry 조회 `npm view @thisis-joe/coco-skills@0.1.0 ...`는 E404를 반환했다.
+- `npm whoami`와 정확한 아카이브의 `npm publish ... --access public --tag latest`는 현재 제한된 실행 환경에서 `ENOTFOUND registry.npmjs.org`로 실패했다. 승인 요청이 비활성화되어 해당 명령의 네트워크 접근을 확대할 수 없었다.
+- 실제 공개 게시와 익명 다운로드·설치 확인은 아직 완료되지 않았다. 사용자 터미널에서 아카이브를 게시하거나 해당 명령의 네트워크 접근이 허용된 뒤 이어서 확인해야 한다.
