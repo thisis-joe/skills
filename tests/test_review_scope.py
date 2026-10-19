@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+import runpy
 import subprocess
 import sys
 import tempfile
@@ -7,6 +8,7 @@ import unittest
 
 
 SCRIPT = Path(__file__).resolve().parents[1] / 'scripts' / 'review_scope.py'
+CANONICAL = SCRIPT.parent.parent / 'skills/_lets-shared/tools/review_scope.py'
 
 
 class ReviewScopeTests(unittest.TestCase):
@@ -106,6 +108,8 @@ class ReviewScopeTests(unittest.TestCase):
         self.git('add', 'feature/tracked.txt')
         self.git('commit', '-qm', 'nested baseline')
         self.base = self.git('rev-parse', 'HEAD').strip()
+        self.write('feature/tracked.txt', 'staged\n')
+        self.git('add', 'feature/tracked.txt')
         self.write('feature/tracked.txt', 'one\n')
         self.write('feature/new.txt', 'untracked\n')
 
@@ -118,8 +122,24 @@ class ReviewScopeTests(unittest.TestCase):
         first = nested_scope()
         self.assertEqual(first['repository'], str(self.repo.resolve()))
         self.assertEqual({f['path'] for f in first['files']}, {'feature/tracked.txt', 'feature/new.txt'})
+        tracked = next(f for f in first['files'] if f['path'] == 'feature/tracked.txt')
+        self.assertEqual(tracked['layers'], ['staged', 'worktree'])
         self.write('feature/tracked.txt', 'two\n')
         self.assertNotEqual(first['snapshot'], nested_scope()['snapshot'])
+
+    def test_nested_collect_api_honors_root_relative_literal_filter(self):
+        self.write('feature/tracked.txt', 'baseline\n')
+        self.git('add', 'feature/tracked.txt')
+        self.git('commit', '-qm', 'nested baseline')
+        base = self.git('rev-parse', 'HEAD').strip()
+        self.write('feature/tracked.txt', 'changed\n')
+        self.write('feature/new.txt', 'new\n')
+        collect = runpy.run_path(str(CANONICAL))['collect']
+        result = collect(self.repo / 'feature', base, ['feature'])
+        self.assertEqual(result['repository'], str(self.repo.resolve()))
+        self.assertEqual({f['path'] for f in result['files']}, {'feature/tracked.txt', 'feature/new.txt'})
+        selected = collect(self.repo / 'feature', base, ['feature/new.txt'])
+        self.assertEqual([f['path'] for f in selected['files']], ['feature/new.txt'])
 
 
 if __name__ == '__main__':
