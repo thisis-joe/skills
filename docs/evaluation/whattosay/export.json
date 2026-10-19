@@ -1,0 +1,34 @@
+{
+  "files": {
+    "README.md": "ac60961e62ce40c327e5422c4e1fa318de132182d8b87130b0d7692fb553c45e",
+    "checks.json": "3b234b08f73e9d9f64f581d2479766c017fb4075ed403a30c50792b95ad241a7",
+    "draft-repo/README.md": "39cd272bf2f505a2b646cbf1a5bbc246287ff3e0c44a2dfdd78069564cc8b6d6",
+    "installation.json": "85321472f3a1b7aa0f58861c97a444d24e211cc25d02b410c4a627201f58f8c2",
+    "observations.json": "fe90f830445298db5a324cbda3fba44586f5102ecf6051d6b098c497302a32b1",
+    "requests.json": "87bdd967560d4f12fdca7559b2b42209fa333bfd21cc2fc6a2b234abf9b3a3e2",
+    "responses/draft-01.md": "25f1fb4958de1924ec4355d53f9f94a5413aea771dafd5adcf2c934e7aee8aef",
+    "responses/draft-02.md": "4288ee1d71fb6190ed375a1beb03ded1efe117593e11fe6a7fa291ca5838fe73",
+    "responses/draft-03.md": "9a51d38e88944b1ab3437e4fec7ee6a7519804176c9462d7a9f7f2a54906c229",
+    "responses/draft-04.md": "83a87cbee8230f218de4096da21b3f485c9f9e14d08027dbd1b113d8d0286f1d",
+    "responses/draft-05.md": "ae7f77e7bfefd4c80346a01624497002ce80e1310cbc7120bb5093726518a3b0",
+    "responses/draft-actions.jsonl": "da7d8c79628ee488d9cfb27401303b0e8bbda25f179eaf3e50d123e1866e848b",
+    "responses/review-01.md": "7f36e18b481bbb916483f7c88262a9447084f28e5cd80bb3001ccd5c10ed34c2",
+    "responses/review-02-scope.json": "14652bf28d9cda516d0dd6492ae37871132d3fa102214dc5d7479c0059f79c4a",
+    "responses/review-02.md": "a09359c396ed61c1f5934e1c4c659769c78d47d30bfa002aafae212600b05072",
+    "responses/review-actions.jsonl": "db7bb5c1a052be0acba983d20f50052bed82ee312ce4df2ecb4bcf759bc8830d",
+    "review-baseline.bundle": "8229ac502d068991a6508d92f9373fcd61eef562f5cf28f82db84564f99cb2b9",
+    "review-repo/AGENTS.md": "bd2193248735fc4a3698e6d8e345c0ced47fc6a5ef6cbbbfa64d203962ac194b",
+    "review-repo/README.md": "db877e020f6dde7c989a20ccda6b8dfaa0c29e1b2ed518f6846e9d04060deafa",
+    "review-repo/pricing.py": "6e0b94a321fdadd034b3b8c5efa8225b76c0d71862307903b0146b687386db89",
+    "review-repo/tests/test_bulk.py": "16a69c9ba0b558baa8171cf0f0ac6eb68d9207e8b3b06a16f1e9ce9fede7d54d",
+    "review-repo/tests/test_pricing.py": "cf7e71a04b89d7e68fc683ccac4fe65c519ee20e5ff07040074e5785d5950fc0",
+    "review-staged.patch": "cac7cac842f57f2e79a6ee73d2cb327c28874d71e27cd8c173ecbeea8340d74c",
+    "review-unstaged.patch": "e6c4f128d854a077d5aef30da9fadbdacb086c1fb5a76e00ae58b27616d1f62d",
+    "snapshot.json": "3d7134abcff47e5853880cab50301d19dcfe8b95bb600f24ccb4538c750b61f9"
+  },
+  "excluded": [
+    "nested .git directories",
+    "unrelated installed file names and contents",
+    "unchanged payload copies; recover via feature_commit and snapshot hashes"
+  ]
+}

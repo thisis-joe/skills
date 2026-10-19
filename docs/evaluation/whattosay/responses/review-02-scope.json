@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "repository": "/private/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/coco-whattosay-gc40j2t1/review-repo",
+  "requested_base": "712118450a90e6f8ee9aa841630b7d68bad6564d",
+  "base_commit": "712118450a90e6f8ee9aa841630b7d68bad6564d",
+  "comparison_commit": "712118450a90e6f8ee9aa841630b7d68bad6564d",
+  "head": "712118450a90e6f8ee9aa841630b7d68bad6564d",
+  "task_paths": [
+    "pricing.py",
+    "tests"
+  ],
+  "has_changes": true,
+  "files": [
+    {
+      "path": "pricing.py",
+      "layers": [
+        "staged"
+      ],
+      "statuses": {
+        "staged": "M"
+      },
+      "current_sha256": "6e0b94a321fdadd034b3b8c5efa8225b76c0d71862307903b0146b687386db89"
+    },
+    {
+      "path": "tests/test_bulk.py",
+      "layers": [
+        "untracked"
+      ],
+      "statuses": {
+        "untracked": "?"
+      },
+      "current_sha256": "16a69c9ba0b558baa8171cf0f0ac6eb68d9207e8b3b06a16f1e9ce9fede7d54d"
+    },
+    {
+      "path": "tests/test_pricing.py",
+      "layers": [
+        "worktree"
+      ],
+      "statuses": {
+        "worktree": "M"
+      },
+      "current_sha256": "cf7e71a04b89d7e68fc683ccac4fe65c519ee20e5ff07040074e5785d5950fc0"
+    }
+  ],
+  "snapshot": "1a6cbbac70480fd134ef086abffa77d6ccdb798e51563cc033fb8ab1a5f39d8f"
+}

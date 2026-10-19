@@ -1,0 +1,41 @@
+{
+  "destination": "/Users/Joseph/.codex/skills",
+  "action": {
+    "argv": [
+      "python3",
+      "scripts/install.py"
+    ],
+    "exit_code": 0,
+    "result": {
+      "status": "installed",
+      "skills": 26,
+      "files": 84,
+      "destination": "/Users/Joseph/.codex/skills"
+    }
+  },
+  "source_matches_installed_files": 84,
+  "other_entries_unchanged": 71,
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/validate.py",
+        "--installed",
+        "/Users/Joseph/.codex/skills"
+      ],
+      "exit_code": 0,
+      "stdout": "Validated installed bundle: 26 skills, 84 files\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/install.py",
+        "--dry-run"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"unchanged\",\n  \"skills\": 26,\n  \"files\": 84,\n  \"destination\": \"/Users/Joseph/.codex/skills\"\n}\n",
+      "stderr": ""
+    }
+  ]
+}

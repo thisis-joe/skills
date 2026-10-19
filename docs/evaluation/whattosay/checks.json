@@ -1,0 +1,55 @@
+[
+  {
+    "argv": [
+      "python3",
+      "scripts/validate.py"
+    ],
+    "exit_code": 0,
+    "stdout": "Validated package: 26 skills, source checksums, coverage and references\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "test_broken_reference_and_wrong_name_are_rejected (test_package.PackageTests) ... ok\ntest_dry_run_does_not_create_destination (test_package.PackageTests) ... ok\ntest_extra_user_file_in_managed_directory_prevents_update (test_package.PackageTests) ... ok\ntest_foreign_skill_conflict_prevents_all_writes (test_package.PackageTests) ... ok\ntest_installation_is_idempotent (test_package.PackageTests) ... ok\ntest_installed_tampering_is_detected (test_package.PackageTests) ... ok\ntest_installs_shared_contract_and_references_remain_valid (test_package.PackageTests) ... ok\ntest_manifest_cannot_escape_destination (test_package.PackageTests) ... ok\ntest_modified_managed_file_is_preserved_on_update (test_package.PackageTests) ... ok\ntest_other_installed_skills_are_untouched (test_package.PackageTests) ... ok\ntest_source_checksum_and_coverage_are_verified (test_package.PackageTests) ... ok\ntest_symlink_in_package_or_target_is_refused (test_package.PackageTests) ... ok\ntest_unmodified_managed_install_can_update (test_package.PackageTests) ... ok\ntest_clean_repository_returns_empty_scope (test_review_scope.ReviewScopeTests) ... ok\ntest_collecting_scope_does_not_modify_git_or_files (test_review_scope.ReviewScopeTests) ... ok\ntest_deleted_and_unusual_filenames_are_not_lost (test_review_scope.ReviewScopeTests) ... ok\ntest_fingerprint_changes_when_reviewed_content_changes (test_review_scope.ReviewScopeTests) ... ok\ntest_fingerprint_includes_staged_content_not_just_worktree (test_review_scope.ReviewScopeTests) ... ok\ntest_invalid_base_and_escaping_scope_fail_clearly (test_review_scope.ReviewScopeTests) ... ok\ntest_nested_collect_api_honors_root_relative_literal_filter (test_review_scope.ReviewScopeTests) ... ok\ntest_nested_repository_argument_uses_root_paths_and_real_content (test_review_scope.ReviewScopeTests) ... ok\ntest_reports_all_four_layers_including_untracked (test_review_scope.ReviewScopeTests) ... ok\ntest_task_paths_are_literal_and_directory_scopes_work (test_review_scope.ReviewScopeTests) ... ok\n\n----------------------------------------------------------------------\nRan 23 tests in 2.629s\n\nOK\n"
+  },
+  {
+    "argv": [
+      "/private/tmp/lets-authoring-tools/bin/python",
+      "/Users/Joseph/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+      "skills/coco-whattosay"
+    ],
+    "exit_code": 0,
+    "stdout": "Skill is valid!\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "python3",
+      "scripts/install.py",
+      "--dry-run"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"dry-run\",\n  \"skills\": 26,\n  \"files\": 84,\n  \"destination\": \"/Users/Joseph/.codex/skills\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]
