@@ -1,0 +1,94 @@
+{
+  "claude_code_version": "2.1.303 (Claude Code)",
+  "command": [
+    "claude",
+    "-p",
+    "--verbose",
+    "--output-format",
+    "stream-json",
+    "--no-session-persistence",
+    "--permission-mode",
+    "plan",
+    "--strict-mcp-config",
+    "--max-turns",
+    "3",
+    "--tools",
+    "Read,Skill",
+    "--",
+    "/coco-tellmeskill coco-build simple explanation"
+  ],
+  "installation": {
+    "runtime": "claude",
+    "skill_count": 26,
+    "destination": "<isolated-config>/skills"
+  },
+  "native_loader": {
+    "exit": 0,
+    "catalog_names": [
+      "coco-automate",
+      "coco-build",
+      "coco-clarify",
+      "coco-context",
+      "coco-debug",
+      "coco-design",
+      "coco-document",
+      "coco-frontend",
+      "coco-migrate",
+      "coco-observe",
+      "coco-performance",
+      "coco-plan",
+      "coco-push",
+      "coco-research",
+      "coco-retro",
+      "coco-review",
+      "coco-security",
+      "coco-ship",
+      "coco-simplify",
+      "coco-spec",
+      "coco-start",
+      "coco-tellmeskill",
+      "coco-triage",
+      "coco-updateskill",
+      "coco-verify",
+      "coco-whattosay"
+    ],
+    "catalog_matches_manifest": true,
+    "slash_menu_contains_all": true,
+    "selected_body_matches_source": true,
+    "arguments_loaded": true,
+    "base_directory_provided": true
+  },
+  "native_reads": {
+    "sibling_common_contract": true,
+    "own_supporting_file": true,
+    "target_skill": true,
+    "permission_mode": "plan",
+    "permission_denials": []
+  },
+  "transport": {
+    "endpoint": "localhost HTTP mock only",
+    "request_count": 2,
+    "credential": "fake local-only key",
+    "real_model_api_calls": 0
+  },
+  "plugin_validator_negative_control": {
+    "valid": {
+      "exit": 0,
+      "success": true,
+      "contents_count": 0,
+      "advice_count": 0
+    },
+    "malformed": {
+      "exit": 0,
+      "success": true,
+      "contents_count": 0,
+      "advice_count": 0
+    },
+    "detects_malformed_control": false
+  },
+  "limitations": [
+    "Canned responses choose the Read calls; model judgment and workflow compliance are not evaluated.",
+    "The CLI reports estimated model cost for canned token usage; no paid API was contacted.",
+    "Native plugin validation is not evidence of skill parsing when the malformed control is undetected."
+  ]
+}
