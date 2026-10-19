@@ -1,0 +1,47 @@
+{
+  "name": "@thisis-joe/coco-skills",
+  "version": "0.1.2",
+  "description": "COCO development skills with a safe installer for Codex and Claude Code.",
+  "license": "MIT",
+  "bin": {
+    "coco-skills": "bin/coco-skills.cjs"
+  },
+  "files": [
+    "bin/coco-skills.cjs",
+    "coco.json",
+    "scripts/install.py",
+    "scripts/package_utils.py",
+    "scripts/validate.py",
+    "skills/coco-*/**",
+    "skills/_coco-shared/**",
+    "sources/",
+    "docs/distribution.md",
+    "docs/design.md",
+    "docs/implementation-plan.md",
+    "docs/source-index.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "scripts": {
+    "validate": "node bin/coco-skills.cjs validate",
+    "test": "python3 -m unittest discover -s tests -v",
+    "check": "npm run validate && npm test",
+    "prepack": "npm run check"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thisis-joe/skills.git"
+  },
+  "homepage": "https://github.com/thisis-joe/skills#readme",
+  "bugs": {
+    "url": "https://github.com/thisis-joe/skills/issues"
+  },
+  "keywords": ["codex", "claude-code", "agent-skills", "coco", "skills"]
+}
