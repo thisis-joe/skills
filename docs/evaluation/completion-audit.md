@@ -1,6 +1,6 @@
 # 통합·설치 완료 점검
 
-이 문서는 최초 22개 통합 스킬과 접두사 변경 당시의 점검입니다. 이후 추가한 `coco-tellmeskill`을 포함한 현재 23개 스킬의 설치는 [추가 검증 기록](tellmeskill/README.md)과 [설치 확인](tellmeskill/installation.json)에 기록합니다.
+이 문서는 최초 22개 통합 스킬과 접두사 변경 당시의 점검입니다. 이후 추가한 팀 전용 스킬과 현재 설치 범위는 [사용 안내](../../README.md) 및 [검증 기록 모음](README.md)을 확인합니다. `coco-tellmeskill` 추가 당시 기록은 [별도 보존](tellmeskill/README.md)합니다.
 
 2026-10-19, 통합본의 접두사를 `feat/coco-prefix`에서 `coco-`로 변경하고 `/Users/Joseph/.codex/skills`의 설치본도 이전했습니다. 원본을 통째로 호출하는 래퍼가 아니라, 목적별 22개 진입점과 공통 계약·조건부 절차를 갖는 팀 스킬입니다. 과거 행동 평가의 이름·해시는 당시 기록으로 보존합니다.
 

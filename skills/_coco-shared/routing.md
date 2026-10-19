@@ -5,6 +5,7 @@ Read only the selected entrypoint and the conditional reference relevant to the 
 | Situation / desired output | Entry | Expected result |
 |---|---|---|
 | Browse all available skills or understand a selected skill | tellmeskill | Full current catalog, target/depth choices, source-based explanation using the common format |
+| Integrate remote dev/develop, resolve conflicts and publish the current branch | push | Verified integration commits, single-branch normal push and remote-ref readback |
 | Clear static color/copy edit | Direct lightweight edit; start only if routing is unclear | Requested edit and necessary visual/content check |
 | Establish commands, standing quality bar or select a workflow | start | Project profile, checks with owners, chosen route |
 | Unsettled requirements, terms or idea | clarify | Settled decisions, explicit open items, glossary/ADR only when warranted |

@@ -26,7 +26,8 @@
     "coco-retro",
     "coco-triage",
     "coco-simplify",
-    "coco-tellmeskill"
+    "coco-tellmeskill",
+    "coco-push"
   ],
   "provenance_required": true
 }

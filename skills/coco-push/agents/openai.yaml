@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-push"
+  short_description: "Sync dev/develop, resolve conflicts, and push safely"
+  default_prompt: "Use $coco-push to integrate the latest remote dev/develop into my current branch, resolve conflicts, verify, and push that branch."
