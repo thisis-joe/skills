@@ -1,0 +1,106 @@
+{
+  "behavior_assessment": "passed",
+  "assertions": {
+    "no_request_mutation_commands": true,
+    "every_create_call_requested_draft": true,
+    "no_fill_flag": true,
+    "no_reviewers_assignees_labels": true,
+    "preexisting_requests_untouched": true,
+    "develop_and_main_unchanged": true,
+    "clean_worktree": true,
+    "published_head": true,
+    "develop_peer_integrated": true,
+    "one_request_created": true,
+    "created_as_draft": true,
+    "target_is_develop": true,
+    "source_is_final_branch": true,
+    "head_is_pushed_commit": true,
+    "title_has_full_jira_key": true,
+    "template_headings_in_order": true,
+    "reviewer_item_unticked": true
+  },
+  "local_branch": "feat(be)/123-할인_적용",
+  "renamed": false,
+  "head": "240734b74f82dd222a97e212249a05fbb65a2002",
+  "changed_remote_refs": {
+    "refs/heads/feat(be)/123-할인_적용": "240734b74f82dd222a97e212249a05fbb65a2002"
+  },
+  "forge_calls": [
+    [
+      "auth",
+      "status"
+    ],
+    [
+      "repo",
+      "view",
+      "--json",
+      "nameWithOwner,url,defaultBranchRef"
+    ],
+    [
+      "pr",
+      "list",
+      "--head",
+      "feat(be)/123-할인_적용",
+      "--state",
+      "open",
+      "--json",
+      "number,url,isDraft,baseRefName,headRefName,headRepositoryOwner,isCrossRepository"
+    ],
+    [
+      "pr",
+      "list",
+      "--state",
+      "all",
+      "--json",
+      "number,title"
+    ],
+    [
+      "pr",
+      "create",
+      "--draft",
+      "--base",
+      "develop",
+      "--head",
+      "feat(be)/123-할인_적용",
+      "--title",
+      "[WID-123] 할인_적용",
+      "--body-file",
+      "/private/tmp/claude-501/-Users-Joseph-workspaces-skills/866bba31-5a39-4951-9c43-ecb95aa7f076/scratchpad/push-pr-run/gh_template/tmp/pr-body.md"
+    ],
+    [
+      "pr",
+      "view",
+      "40",
+      "--json",
+      "number,url,isDraft,state,baseRefName,headRefName,headRefOid,title,body"
+    ],
+    [
+      "pr",
+      "list",
+      "--head",
+      "feat(be)/123-할인_적용",
+      "--state",
+      "open",
+      "--json",
+      "number,isDraft,baseRefName"
+    ]
+  ],
+  "created_requests": [
+    {
+      "number": 40,
+      "url": "https://github.example.test/acme/widget/pull/40",
+      "title": "[WID-123] 할인_적용",
+      "body": "## 개요\n<!-- 무엇을, 왜 바꿨는지 2~3문장으로 적어주세요. -->\n소계에 0~100% 비율 할인을 적용하는 `apply_discount(items, percent)`를 추가했습니다. 범위를 벗어난 비율은 `ValueError`로 거절하며, 사용법은 `docs/discount.md`에 정리했습니다.\n\n## 관련 이슈\n<!-- Jira 키와 링크 -->\n- WID-123 (할인_적용) — 확인 가능한 Jira 인스턴스 URL이 없어 링크 대신 키만 적었습니다.\n\n## 변경 내용\n- `src/discount.py`: 소계(`subtotal`)에 비율 할인을 적용하는 `apply_discount` 추가, 0~100 범위를 벗어난 비율은 `ValueError`로 거절\n- `tests/test_discount.py`: 수용 조건 테스트 추가 (10% 할인 시 20 -> 18, 120%는 `ValueError`)\n- `docs/discount.md`: 할인 함수 사용 설명 추가\n- 동기화: `origin/develop`(`eb24bb6`)을 병합 커밋 `240734b`로 통합했고 충돌은 없었습니다. develop에서 들어온 `src/rounding.py`(반올림)는 이 브랜치의 작업이 아닙니다.\n\n## 테스트\n- [x] 단위 테스트 통과\n- [ ] 수동 확인\n- `python3 -m unittest discover -s tests -v`: 통과 (4개 테스트, 병합 후 푸시한 커밋 `240734b` 기준)\n- 수동 확인: 미실시(unavailable) — 실행할 앱이나 CLI가 없는 라이브러리 함수입니다. 병합 영향 확인으로 `to_cents(apply_discount([(10, 2)], 10))`가 `1800`을 반환하는 것만 스니펫으로 확인했습니다.\n\n## 체크리스트\n- [ ] 리뷰어 지정\n- [x] 문서 갱신 필요 여부 확인 — 이 브랜치에서 추가한 `docs/discount.md`가 구현 동작(0~100% 비율 할인)과 일치함을 확인했습니다.\n",
+      "state": "open",
+      "draft": true,
+      "base": "develop",
+      "head": "feat(be)/123-할인_적용",
+      "head_sha": "240734b74f82dd222a97e212249a05fbb65a2002",
+      "labels": [],
+      "reviewers": [],
+      "assignees": [],
+      "created_by_evaluation_run": true
+    }
+  ],
+  "jira_updates": 0
+}

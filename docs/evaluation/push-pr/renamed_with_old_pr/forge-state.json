@@ -1,0 +1,19 @@
+{
+  "requests": [
+    {
+      "number": 21,
+      "title": "[WID-131] 할인_적용",
+      "body": "## 개요\n할인 초안\n",
+      "draft": true,
+      "base": "develop",
+      "head": "feat(be)/131-할인_적용",
+      "url": "https://github.example.test/acme/widget/pull/21",
+      "state": "open",
+      "head_sha": "84af391a5c0ffa1fbaa7c2ef90e922af89ee524d",
+      "labels": [],
+      "reviewers": [],
+      "assignees": []
+    }
+  ],
+  "next_number": 40
+}

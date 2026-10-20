@@ -1,0 +1,9 @@
+## feat(be)/131-할인_적용...origin/feat(be)/131-할인_적용
+
+*   9f58e50 (HEAD -> feat(be)/131-할인_적용, origin/feat(be)/131-할인_적용) Merge origin/develop (afcb1f7) into feat(be)/131-할인_적용
+|\  
+| * afcb1f7 (origin/develop) feat: add half-up cent rounding
+* | e8e6c6d feat: validate coupon codes for discounts
+* | 84af391 feat: add percentage discount
+|/  
+* ea38466 (origin/main, origin/HEAD, main) chore: initial widget pricing

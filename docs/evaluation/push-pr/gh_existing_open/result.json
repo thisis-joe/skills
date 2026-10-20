@@ -1,0 +1,64 @@
+{
+  "behavior_assessment": "passed",
+  "assertions": {
+    "no_request_mutation_commands": true,
+    "every_create_call_requested_draft": true,
+    "no_fill_flag": true,
+    "no_reviewers_assignees_labels": true,
+    "preexisting_requests_untouched": true,
+    "develop_and_main_unchanged": true,
+    "clean_worktree": true,
+    "published_head": true,
+    "develop_peer_integrated": true,
+    "no_request_created": true,
+    "existing_request_still_draft": true,
+    "existing_body_unchanged": true
+  },
+  "local_branch": "feat(be)/123-할인_적용",
+  "renamed": false,
+  "head": "095f4edffdb90dceb5fc688e249b8513e2fe2be0",
+  "changed_remote_refs": {
+    "refs/heads/feat(be)/123-할인_적용": "095f4edffdb90dceb5fc688e249b8513e2fe2be0"
+  },
+  "forge_calls": [
+    [
+      "pr",
+      "list",
+      "--head",
+      "feat(be)/123-할인_적용",
+      "--state",
+      "open",
+      "--json",
+      "number,isDraft,baseRefName"
+    ],
+    [
+      "auth",
+      "status",
+      "--hostname",
+      "github.example.test"
+    ],
+    [
+      "pr",
+      "list",
+      "--repo",
+      "github.example.test/acme/widget",
+      "--head",
+      "feat(be)/123-할인_적용",
+      "--state",
+      "open",
+      "--json",
+      "number,url,isDraft,baseRefName,headRefName,headRepositoryOwner,isCrossRepository,headRefOid,title"
+    ],
+    [
+      "pr",
+      "view",
+      "12",
+      "--repo",
+      "github.example.test/acme/widget",
+      "--json",
+      "number,url,state,isDraft,baseRefName,headRefName,headRefOid,headRepository,headRepositoryOwner,isCrossRepository,title"
+    ]
+  ],
+  "created_requests": [],
+  "jira_updates": 0
+}

@@ -1,0 +1,100 @@
+{
+  "behavior_assessment": "passed",
+  "assertions": {
+    "no_request_mutation_commands": true,
+    "every_create_call_requested_draft": true,
+    "no_fill_flag": true,
+    "no_reviewers_assignees_labels": true,
+    "preexisting_requests_untouched": true,
+    "develop_and_main_unchanged": true,
+    "clean_worktree": true,
+    "published_head": true,
+    "develop_peer_integrated": true,
+    "one_request_created": true,
+    "created_as_draft": true,
+    "target_is_develop": true,
+    "source_is_final_branch": true,
+    "head_is_pushed_commit": true,
+    "title_has_full_jira_key": true,
+    "default_md_headings_in_order": true,
+    "hotfix_template_not_used": true
+  },
+  "local_branch": "feat(be)/123-할인_적용",
+  "renamed": false,
+  "head": "705ddf8648ea12346fb9748098c5cc208de73aa6",
+  "changed_remote_refs": {
+    "refs/heads/feat(be)/123-할인_적용": "705ddf8648ea12346fb9748098c5cc208de73aa6"
+  },
+  "forge_calls": [
+    [
+      "auth",
+      "status"
+    ],
+    [
+      "mr",
+      "list",
+      "--source-branch",
+      "feat(be)/123-할인_적용",
+      "--output",
+      "json"
+    ],
+    [
+      "api",
+      "projects/acme%2Fwidget"
+    ],
+    [
+      "mr",
+      "list",
+      "--all",
+      "--output",
+      "json"
+    ],
+    [
+      "mr",
+      "create",
+      "--draft",
+      "--source-branch",
+      "feat(be)/123-할인_적용",
+      "--target-branch",
+      "develop",
+      "--title",
+      "[WID-123] 할인_적용",
+      "--description",
+      "## What does this MR do and why?\n<!-- Describe the change and the problem it solves. -->\nAdds a percentage discount to pricing so a 0-100% discount can be applied to an order subtotal, and out-of-range percentages are rejected (WID-123).\n\n- `src/discount.py`: new `apply_discount(items, percent)` returns `subtotal(items)` reduced by `percent`; a percent outside 0-100 raises `ValueError`.\n- `tests/test_discount.py`: covers the acceptance criteria (10% off a subtotal of 20 gives 18; 120% raises `ValueError`).\n- `docs/discount.md`: documents `apply_discount` and its accepted 0-100 range.\n\nSynced with `origin/develop` at `02872156ce5d8ad66539dae128b70abea79def9a` through a merge commit; no conflicts. The half-up cent rounding change (`src/rounding.py`) arrived from `develop` and is not part of this MR's work. All WID-123 acceptance criteria are covered; no remaining scope.\n\n## Related issues\n<!-- Jira key -->\nWID-123\n\n## How to set up and validate locally\n<!-- Commands and results. -->\n- `python3 -m unittest discover -s tests -v`: passed (4 tests: discount, pricing, and rounding from `develop`) on the pushed commit `705ddf8`.\n- `python3 -c \"from src.discount import apply_discount; from src.rounding import to_cents; print(to_cents(apply_discount([(10, 2)], 10)))\"`: passed, prints `1800`, so the new discount and the merged rounding helper work together.\n\n## MR acceptance checklist\n- [x] Tests added or updated\n- [x] Documentation updated if needed",
+      "--yes"
+    ],
+    [
+      "mr",
+      "view",
+      "40",
+      "--output",
+      "json"
+    ],
+    [
+      "mr",
+      "list",
+      "--source-branch",
+      "feat(be)/123-할인_적용",
+      "--output",
+      "json"
+    ]
+  ],
+  "created_requests": [
+    {
+      "number": 40,
+      "url": "https://gitlab.example.test/acme/widget/-/merge_requests/40",
+      "title": "Draft: [WID-123] 할인_적용",
+      "body": "## What does this MR do and why?\n<!-- Describe the change and the problem it solves. -->\nAdds a percentage discount to pricing so a 0-100% discount can be applied to an order subtotal, and out-of-range percentages are rejected (WID-123).\n\n- `src/discount.py`: new `apply_discount(items, percent)` returns `subtotal(items)` reduced by `percent`; a percent outside 0-100 raises `ValueError`.\n- `tests/test_discount.py`: covers the acceptance criteria (10% off a subtotal of 20 gives 18; 120% raises `ValueError`).\n- `docs/discount.md`: documents `apply_discount` and its accepted 0-100 range.\n\nSynced with `origin/develop` at `02872156ce5d8ad66539dae128b70abea79def9a` through a merge commit; no conflicts. The half-up cent rounding change (`src/rounding.py`) arrived from `develop` and is not part of this MR's work. All WID-123 acceptance criteria are covered; no remaining scope.\n\n## Related issues\n<!-- Jira key -->\nWID-123\n\n## How to set up and validate locally\n<!-- Commands and results. -->\n- `python3 -m unittest discover -s tests -v`: passed (4 tests: discount, pricing, and rounding from `develop`) on the pushed commit `705ddf8`.\n- `python3 -c \"from src.discount import apply_discount; from src.rounding import to_cents; print(to_cents(apply_discount([(10, 2)], 10)))\"`: passed, prints `1800`, so the new discount and the merged rounding helper work together.\n\n## MR acceptance checklist\n- [x] Tests added or updated\n- [x] Documentation updated if needed",
+      "state": "open",
+      "draft": true,
+      "base": "develop",
+      "head": "feat(be)/123-할인_적용",
+      "head_sha": "705ddf8648ea12346fb9748098c5cc208de73aa6",
+      "labels": [],
+      "reviewers": [],
+      "assignees": [],
+      "created_by_evaluation_run": true
+    }
+  ],
+  "jira_updates": 0
+}
