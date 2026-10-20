@@ -55,10 +55,9 @@ Localize explanations, note content and section labels to the user's language; t
 
 ## Workspace location
 
-1. Use the folder the user names, or a learning workspace already identified in the conversation or in the user's agent instructions.
-2. Otherwise ask once and recommend a personal folder outside project repositories, such as `~/learn`. For an explanation only, no folder is needed.
-3. If the chosen folder is inside a Git work tree, tell the user whether it is tracked. Do not commit notes or edit ignore rules unless asked.
-4. When a location is first settled, offer once to record it where the runtime keeps the user's own instructions; write it only with consent.
+1. The workspace is always the `TIL/` folder directly under the root of the current Git work tree (`git rev-parse --show-toplevel`); outside a Git work tree, it is `TIL/` under the current working directory. Do not ask for or suggest another location. For an explanation only, no folder is needed.
+2. Create `TIL/` when it does not exist, then set it up as in step 1 of Note.
+3. Tell the user whether `TIL/` is tracked by Git. Do not commit notes or edit ignore rules unless asked.
 
 ## Return
 
