@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-merge"
+  short_description: "Merge a pushed PR/MR into the default branch"
+  default_prompt: "Use $coco-merge to merge the pushed branch's PR/MR into the default branch once the forge's checks pass, then confirm the merged state."
