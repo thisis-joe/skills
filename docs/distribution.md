@@ -6,7 +6,7 @@
 
 Node.js 22 이상과 Python 3.9 이상이 필요하다. 설치 사용자는 npm 로그인이 필요하지 않다. Node.js/npm이 없는 환경에서는 저장소를 clone하고 Python 설치기를 직접 실행할 수 있다. npm 설치와 Python 직접 설치는 같은 설치기를 사용한다.
 
-0.3.0은 원본 기법 보강(스킬별 고급 절차 읽기 조건, 멈춤 신호, clarify grill 모드, debug 전제 재검증)과 질의응답 학습 스킬 `coco-askme`를 포함한 영어 스킬 문서와 공통 자료를 Codex·Claude Code에 함께 배포한다. 두 런타임은 같은 27개 스킬과 `_coco-shared`를 사용하며, `agents/openai.yaml`은 Codex용 표시 메타데이터다. 설치 대상 에이전트 자체의 설치·인증은 별도다.
+0.3.0은 원본 기법 보강(스킬별 고급 절차 읽기 조건, 멈춤 신호, clarify grill 모드, debug 전제 재검증), `coco-document`를 나눈 `coco-docs`·`coco-learn`, PR/MR 머지 스킬 `coco-merge`, 질의응답 학습 스킬 `coco-askme`를 포함한 영어 스킬 문서와 공통 자료를 Codex·Claude Code에 함께 배포한다. 두 런타임은 같은 29개 스킬과 `_coco-shared`를 사용하며, `agents/openai.yaml`은 Codex용 표시 메타데이터다. 설치 대상 에이전트 자체의 설치·인증은 별도다.
 
 ```sh
 npx --yes @thisis-joe/coco-skills@latest install --runtime codex --dry-run

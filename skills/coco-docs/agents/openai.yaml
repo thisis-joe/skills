@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-docs"
+  short_description: "Purpose-led document with source-backed checks and evidence"
+  default_prompt: "Use $coco-docs for the current request and provide its required result."

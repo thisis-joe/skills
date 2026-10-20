@@ -74,14 +74,14 @@ TRIGGERS = {
         ('disposable prototype', 'design.md#Disposable prototype mode'),
         ('package-boundary', 'design.md#Optional TypeScript package-boundary recipe'),
     ],
-    'document': [
-        ('adr or glossary', 'document.md#Decision records and domain language'),
-        ('agent-facing instructions', 'document.md#Agent-facing instructions and reusable recipes'),
-        ('async discovery questionnaire', 'document.md#Async discovery questionnaire'),
-        ('teaching', 'document.md#Explain or teach now'),
-        ('learning workspace', 'document.md#Opt-in multi-session learning workspace'),
-        ('course-exercise scaffolding', 'document.md#Conditional course-exercise scaffolding'),
-        ('writing collaboration', 'document.md#Experimental writing collaboration'),
+    'docs': [
+        ('default skeletons', 'docs.md#Default skeletons'),
+        ('drift audit', 'docs.md#Drift audit'),
+        ('adr or glossary', 'docs.md#Decision records and domain language'),
+        ('agent-facing instructions', 'docs.md#Agent-facing instructions and reusable recipes'),
+        ('async discovery questionnaire', 'docs.md#Async discovery questionnaire'),
+        ('course-exercise scaffolding', 'docs.md#Conditional course-exercise scaffolding'),
+        ('writing collaboration', 'docs.md#Experimental writing collaboration'),
     ],
     'frontend': [
         ('new screen or open visual direction', 'frontend.md#Establish the design contract'),
@@ -90,6 +90,9 @@ TRIGGERS = {
         ('runtime finish gate', 'frontend.md#Runtime and finish gate'),
         ('visual parity', 'frontend.md#Conditional visual parity'),
         ('missing browser capability', 'frontend.md#Inputs and modes'),
+    ],
+    'learn': [
+        ('multi-session learning workspace', 'learn.md#Opt-in multi-session learning workspace'),
     ],
     'migrate': [
         ('independently deployed consumers', 'migrate.md#Choose the mode'),
