@@ -86,13 +86,23 @@ Use a dedicated test browser/profile when available and avoid credential inspect
 
 ## Conditional visual parity
 
-When exact visual equivalence is requested, capture a baseline across required states first.
-Freeze viewport, data, fonts and rendering conditions and define the comparison before migration.
-Migrate one owned component or safe dependency-ordered batch, then run the image comparison.
-An exact-parity target needs the agreed zero-delta result; a visual approximation is labeled separately.
-Investigate a nonzero delta rather than change baseline, masks or harness merely to pass.
-An incorrect baseline is a decision to resolve, not an artifact to silently overwrite.
-Without comparable before/after images and a functioning diff, parity remains unverified.
+Use when exact visual equivalence is requested, an existing rendering must survive an implementation change, or the result must match an agreed reference.
+Capture the baseline across required states before migration; no baseline means no parity claim.
+Freeze the reference/current revision, viewport/device scale, fonts, data, feature flags and interaction
+state, and define the comparison first. Capture both sides through the same supported real-browser path
+after readiness, not by editing images.
+Migrate one owned component or safe dependency-ordered batch, shared primitives first, then rerun the comparison.
+Compare hierarchy, geometry, typography, colors, responsive behavior and relevant loading/error/focus states.
+An exact-parity target needs the agreed zero-delta result: a nonzero delta fails until investigated.
+For an agreed-reference match, an image diff locates discrepancies; antialiasing noise is not a user defect.
+Label a visual approximation separately from exact parity.
+Do not change the baseline, masks or harness, or restructure the component, merely to pass.
+An incorrect-looking baseline is a decision to raise, not an artifact to silently overwrite.
+Exercise the same interactions and persistence on both sides; a matching screenshot alone cannot prove behavior parity.
+Record accepted intentional differences and their authorization separately.
+Fix differences in source through build and recapture the affected states.
+Preserve reference and proof artifacts outside teardown paths.
+Without comparable before/after images and a functioning diff, parity remains unverified; mark unavailable states/tools rather than substituting a score.
 
 ## Output and stop
 
@@ -101,15 +111,3 @@ Distinguish passed visual/behavior checks from unavailable browser or assistive 
 A green unit suite cannot certify layout, focus behavior or production rendering.
 Stop completion for a failed required state or missing required runtime evidence.
 Resolve findings through build, then recheck the affected current render.
-
-## Conditional visual parity
-
-Use when preserving an existing rendering while changing implementation or matching an agreed reference.
-Freeze the reference/current revision, viewport/device scale, fonts, data, feature flags and interaction
-state. Capture both through the same supported real-browser path after readiness, not by editing images.
-Compare hierarchy, geometry, typography, colors, responsive behavior and relevant loading/error/focus
-states. A pixel/image comparison can locate a discrepancy but antialiasing noise is not a user defect.
-Exercise the same interactions and persistence on both sides; a matching screenshot alone cannot
-prove behavior parity. Record accepted intentional differences and their authorization separately.
-Fix differences in source through build and recapture the affected states. Preserve reference and
-proof artifacts outside teardown paths; mark unavailable states/tools rather than substituting a score.

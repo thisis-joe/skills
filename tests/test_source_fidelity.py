@@ -349,6 +349,16 @@ def inspect_source_fidelity(root=ROOT):
         fail('grill-route', 'coco-clarify procedure')
     if 'Matt full-frontier grilling' not in decisions:
         fail('grill-decision', 'decisions.md')
+
+    # 6. A repeated heading splits one mode into competing rule sets, and its
+    # anchor silently resolves to the first copy only.
+    for path in sorted(skills.rglob('*.md')):
+        seen = set()
+        for line in path.read_text().splitlines():
+            if re.match(r'^#{1,6} ', line):
+                if line in seen:
+                    fail('duplicate-heading', '%s: %s' % (path.relative_to(skills), line))
+                seen.add(line)
     return failures
 
 
@@ -423,6 +433,12 @@ class SourceFidelityTests(unittest.TestCase):
         self.edit(root / 'skills/_coco-shared/advanced/clarify.md',
                   GRILL_MECHANICS[0], 'Ask one question at a time')
         self.assert_detected(root, 'grill-mechanics')
+
+    def test_repeated_mode_heading_is_detected(self):
+        root = self.isolated_package()
+        path = root / 'skills/_coco-shared/advanced/frontend.md'
+        path.write_text(path.read_text() + '\n## Conditional visual parity\n\nCompeting copy.\n')
+        self.assert_detected(root, 'duplicate-heading')
 
     def test_undiscoverable_grill_mode_is_detected(self):
         root = self.isolated_package()
