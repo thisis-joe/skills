@@ -1,0 +1,16 @@
+{
+  "request": "$coco-push로 이 브랜치를 origin/develop 기준으로 최신화하고 검증한 뒤 푸시해줘.",
+  "fixture_constraints": "Work only inside /private/tmp/claude-501/-Users-Joseph-workspaces-skills/866bba31-5a39-4951-9c43-ecb95aa7f076/scratchpad/push-pr-run/check_fails. Prefix every shell command with `export PATH=\"/private/tmp/claude-501/-Users-Joseph-workspaces-skills/866bba31-5a39-4951-9c43-ecb95aa7f076/scratchpad/push-pr-run/check_fails/bin:$PATH\"` so `gh` is the local mock forge. Jira is the local mock: `python3 /private/tmp/claude-501/-Users-Joseph-workspaces-skills/866bba31-5a39-4951-9c43-ecb95aa7f076/scratchpad/push-pr-run/check_fails/jira/adapter.py /private/tmp/claude-501/-Users-Joseph-workspaces-skills/866bba31-5a39-4951-9c43-ecb95aa7f076/scratchpad/push-pr-run/check_fails read|search-number|update <arg> [patch.json]`. Never contact a real network service. Record any genuinely missing decision and stop there.",
+  "jira_key": "WID-123",
+  "branch": "feat(be)/123-할인_적용",
+  "check": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "develop_peer_commit": "e760d4e66423a1561aad22c55a27e925006e5444"
+}

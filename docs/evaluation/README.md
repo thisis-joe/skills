@@ -12,6 +12,16 @@ unrelated files, regression checks, and native-client verification limits.
 
 이후 추가한 브랜치·Jira 작업요약 정리는 [별도 적용 5사례](push-summary/README.md)에 보존합니다. 실제 로컬 Git에서는 이름 변경·기존 이름 유지로 2개를 게시했고, 모의 Jira 쓰기 거절·티켓 모호성·이름 충돌 3개는 게시 전에 멈췄습니다. Jira는 파일 기반 모의 자료이며 실제 서비스 쓰기를 검증한 것은 아닙니다.
 
+푸시 후 draft PR/MR 생성은 [별도 적용 8사례](push-pr/README.md)에 보존합니다. 모의 `gh`/`glab`과 실제 로컬 Git으로 다음을 확인했습니다.
+
+- 저장소 템플릿·기본 양식·GitLab `Default.md`로 draft 생성 3건
+- 열린 요청이 있어 생성하지 않은 2건
+- 이름을 바꾼 뒤 옛 브랜치에 남은 PR 때문에 중복 생성 전에 질문한 경우
+- draft가 거절됐을 때 일반 PR로 대신 만들지 않은 경우
+- 검사 실패로 푸시도 PR 생성도 하지 않은 경우
+
+실제 GitHub·GitLab의 권한과 API 응답은 검증하지 않았습니다.
+
 `coco-updateskill`의 [팀 유지보수 적용 3사례](updateskill/README.md)는 원본·공통 규칙·출처를 함께 수정하는 경로, 제안 전용 요청, 개인 수정본 때문에 설치를 차단하는 경로를 기록합니다. 원본 수정과 실제 설치 결과를 구분했습니다.
 
 이후 시작 절차를 전체 목록·대상 선택·수정 내용 질문으로 분리했습니다. [시작 대화 점검](updateskill-selection.md)은 작성자의 단계별 검토와 실행한 패키지 검사를 구분합니다. 파일을 바꾸는 업데이트를 전용 브랜치·워크트리로 강제한 뒤의 [새 컨텍스트 적용 3사례](updateskill-worktree/README.md)는 시작 체크아웃 보존, 제안 전용 요청의 무변경, Git 원본이 아닐 때의 수정 전 중단을 기록합니다.

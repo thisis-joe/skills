@@ -1,0 +1,9 @@
+## feat(be)/141-쿠폰_코드_검증...origin/feat(be)/141-쿠폰_만료일_표시 [ahead 3]
+
+*   b3e30b9 (HEAD -> feat(be)/141-쿠폰_코드_검증, origin/feat(be)/141-쿠폰_코드_검증) Merge origin/develop (91dcd35) into feat(be)/141-쿠폰_만료일_표시
+|\  
+| * 91dcd35 (origin/develop) feat: add half-up cent rounding
+* | ab48c67 test: cover coupon code validation
+* | 194d9e9 (origin/feat(be)/141-쿠폰_만료일_표시) feat: validate coupon codes
+|/  
+* bc4c77a (origin/main, origin/HEAD, main) chore: initial widget pricing

@@ -1,0 +1,82 @@
+{
+  "behavior_assessment": "passed",
+  "assertions": {
+    "no_request_mutation_commands": true,
+    "every_create_call_requested_draft": true,
+    "no_fill_flag": true,
+    "no_reviewers_assignees_labels": true,
+    "preexisting_requests_untouched": true,
+    "develop_and_main_unchanged": true,
+    "clean_worktree": true,
+    "published_head": true,
+    "develop_peer_integrated": true,
+    "no_duplicate_request": true,
+    "old_request_untouched": true,
+    "old_remote_branch_preserved": true,
+    "old_branch_request_looked_up": true,
+    "renamed_for_scope_drift": true
+  },
+  "local_branch": "feat(be)/141-쿠폰_코드_검증",
+  "renamed": true,
+  "head": "b3e30b9497139c8581e16d63f7367ccb5b26e380",
+  "changed_remote_refs": {
+    "refs/heads/feat(be)/141-쿠폰_코드_검증": "b3e30b9497139c8581e16d63f7367ccb5b26e380"
+  },
+  "forge_calls": [
+    [
+      "auth",
+      "status"
+    ],
+    [
+      "pr",
+      "list",
+      "--repo",
+      "github.example.test/acme/widget",
+      "--head",
+      "feat(be)/141-쿠폰_코드_검증",
+      "--state",
+      "open",
+      "--json",
+      "number,url,isDraft,baseRefName,headRefName,headRepositoryOwner,isCrossRepository"
+    ],
+    [
+      "pr",
+      "list",
+      "--repo",
+      "github.example.test/acme/widget",
+      "--head",
+      "feat(be)/141-쿠폰_만료일_표시",
+      "--state",
+      "open",
+      "--json",
+      "number,url,isDraft,baseRefName,headRefName,headRepositoryOwner,isCrossRepository"
+    ],
+    [
+      "pr",
+      "view",
+      "21",
+      "--repo",
+      "github.example.test/acme/widget",
+      "--json",
+      "number,url,title,body,isDraft,state,baseRefName,headRefName,headRefOid"
+    ],
+    [
+      "api",
+      "--hostname",
+      "github.example.test",
+      "repos/acme/.github/contents/.github/pull_request_template.md"
+    ],
+    [
+      "pr",
+      "list",
+      "--repo",
+      "github.example.test/acme/widget",
+      "--state",
+      "all",
+      "--json",
+      "number,title,headRefName,state"
+    ]
+  ],
+  "created_requests": [],
+  "jira_updates": 1
+}

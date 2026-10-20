@@ -1,0 +1,91 @@
+{
+  "behavior_assessment": "passed",
+  "assertions": {
+    "no_request_mutation_commands": true,
+    "every_create_call_requested_draft": true,
+    "no_fill_flag": true,
+    "no_reviewers_assignees_labels": true,
+    "preexisting_requests_untouched": true,
+    "develop_and_main_unchanged": true,
+    "clean_worktree": true,
+    "published_head": true,
+    "develop_peer_integrated": true,
+    "no_request_created": true,
+    "draft_attempt_rejected": true
+  },
+  "local_branch": "feat(be)/123-할인_적용",
+  "renamed": false,
+  "head": "f1a5d903913deabba4913699420f6e4cfeeab407",
+  "changed_remote_refs": {
+    "refs/heads/feat(be)/123-할인_적용": "f1a5d903913deabba4913699420f6e4cfeeab407"
+  },
+  "forge_calls": [
+    [
+      "auth",
+      "status"
+    ],
+    [
+      "pr",
+      "list",
+      "--repo",
+      "github.example.test/acme/widget",
+      "--head",
+      "feat(be)/123-할인_적용",
+      "--state",
+      "open",
+      "--json",
+      "number,url,isDraft,baseRefName,headRefName,headRepositoryOwner,isCrossRepository"
+    ],
+    [
+      "pr",
+      "list",
+      "--repo",
+      "github.example.test/acme/widget",
+      "--state",
+      "all",
+      "--json",
+      "number,title,isDraft,state"
+    ],
+    [
+      "api",
+      "repos/acme/.github/contents/.github/pull_request_template.md"
+    ],
+    [
+      "api",
+      "repos/acme/.github/contents/pull_request_template.md"
+    ],
+    [
+      "api",
+      "repos/acme/.github/contents/docs/pull_request_template.md"
+    ],
+    [
+      "pr",
+      "create",
+      "--repo",
+      "github.example.test/acme/widget",
+      "--draft",
+      "--base",
+      "develop",
+      "--head",
+      "feat(be)/123-할인_적용",
+      "--title",
+      "[WID-123] 할인_적용",
+      "--body-file",
+      "/private/tmp/claude-501/-Users-Joseph-workspaces-skills/866bba31-5a39-4951-9c43-ecb95aa7f076/scratchpad/push-pr-run/gh_draft_unsupported/pr-body.md"
+    ],
+    [
+      "pr",
+      "list",
+      "--repo",
+      "github.example.test/acme/widget",
+      "--head",
+      "feat(be)/123-할인_적용",
+      "--state",
+      "all",
+      "--json",
+      "number,url,isDraft,baseRefName,headRefName,state"
+    ]
+  ],
+  "created_requests": [],
+  "jira_updates": 0
+}
