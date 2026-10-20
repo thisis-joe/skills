@@ -178,9 +178,12 @@ def main(argv):
     group, rest = argv[0], argv[1:]
     sub = rest[0] if rest else ''
     value_flags = {'--json', '--jq', '-q', '--template', '-t', '--head', '-H', '--base', '-B',
-                   '--state', '-s', '--title', '--body', '-b', '--body-file', '-F', '--repo', '-R',
-                   '--match-head-commit', '--subject', '--interval', '-i', '--hostname', '-h',
-                   '--limit', '-L', '--author'}
+                   '--state', '--title', '--body', '-b', '--body-file', '-F', '--repo', '-R',
+                   '--match-head-commit', '--subject', '--author-email', '-A', '--interval', '-i',
+                   '--hostname', '-h', '--limit', '-L', '--author'}
+    # Short flags differ by subcommand: `pr list -s` is --state, `pr merge -s` is --squash.
+    if sub == 'list':
+        value_flags.add('-s')
     positional, values, flags = options(rest[1:], value_flags)
     selector = positional[0] if positional else None
 
