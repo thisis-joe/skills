@@ -8,7 +8,7 @@ license: MIT
 
 Create scoped, resumable automation with explicit activation and effect boundaries.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for CI/deployment, sustained execution, webhook/bot work, report intake (setup/triage/fix), manual setup wizards, and workflow specifications. If any applies or is unclear, read the [advanced core and mode selection](../_coco-shared/advanced/automate.md) and all matching modules before dependent work.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Read the [automation core](../_coco-shared/advanced/automate.md) before preparing or changing anything that runs on a schedule or trigger, runs unattended, retries, or writes externally, or when any mode below applies; once read, the whole core applies even if no mode matches. A one-off local helper run by hand with no retries or external effects needs only this entrypoint. Initially and on new scope, risk, state, or missing prerequisites, check for CI/deployment, sustained execution, webhook/bot work, report intake (setup/triage/fix), manual setup wizards, and workflow specifications. If any applies or is unclear, read the core's mode selection and all matching modules before dependent work.
 
 ## Procedure and output
 
@@ -20,3 +20,13 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Initiall
 6. Test duplicates, crashes, malformed/untrusted input, missing tools, exhausted retries and resumption. Return the concrete artifact and activation requirements.
 
 Return: runnable automation artifacts, permissions/effects inventory, tests and recovery evidence, activation state and outstanding approvals.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "This change is trivial, skip CI" or "CI is too slow": optimize the pipeline; never skip it.
+- "The test is flaky, just rerun": fix the flakiness; flakes mask real defects.
+- Tests disabled or failures silenced to get a green pipeline.
+- Production deploys without staging verification or a rollback mechanism.
+- Secrets in code or CI configuration instead of the secret store.
