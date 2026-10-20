@@ -8,7 +8,7 @@ license: MIT
 
 Return execution evidence for the actual claim and its limits.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for standing-quality audits, runtime-helper or formal-verification creation/maintenance, requested workflow experiments, and pre-commit setup. If any applies or is unclear, read the [advanced core and mode selection](../_coco-shared/advanced/verify.md) and all matching modules before dependent work.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Read the [verification core](../_coco-shared/advanced/verify.md) before driving a UI, browser, live service, account or persistent state, designing behavioral checks, or when any mode below applies; once read, the whole core applies even if no mode matches. A single existing command or CLI check with known expected output needs only this entrypoint. Initially and on new scope, risk, state, or missing prerequisites, check for standing-quality audits, runtime-helper or formal-verification creation/maintenance, requested workflow experiments, and pre-commit setup. If any applies or is unclear, read the core's mode selection and all matching modules before dependent work.
 
 ## Procedure and output
 

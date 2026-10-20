@@ -8,7 +8,7 @@ license: MIT
 
 Produce one usable contract for behavior and completion.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/spec.md) only when the task needs their additional procedure.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for independently testable capabilities that need a capability map, revision of an existing agreement, missing project guidance or verification commands, vague quality targets that need measurable acceptance, and tracker publication or agent-ready handoff. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/spec.md) before dependent work.
 
 ## Procedure and output
 

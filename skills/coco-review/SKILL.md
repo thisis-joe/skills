@@ -8,7 +8,7 @@ license: MIT
 
 Assess the actual change without changing it or hiding a failed review axis.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/review.md) only when the task needs their additional procedure.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for freezing scope with the shared review-scope collector, dependency or lockfile changes, a suspicious diff, shared contract change or deletion that needs impact and safety facts, a requested or high-impact adversarial review, automated review comments, and comments or suppressions that encode constraints. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/review.md) before dependent work.
 
 ## Procedure and output
 

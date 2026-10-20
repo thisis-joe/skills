@@ -8,7 +8,7 @@ license: MIT
 
 Make real user failures diagnosable with bounded, privacy-conscious signals.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/observe.md) only when the task needs their additional procedure.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for one opaque failure path, a new production boundary or queue that needs full-path signals, metric-label cardinality decisions, distributed tracing, alert or runbook review, verification of the telemetry itself, and an unavailable sink or backend. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/observe.md) before dependent work.
 
 ## Procedure and output
 

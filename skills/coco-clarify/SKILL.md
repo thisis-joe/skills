@@ -8,7 +8,7 @@ license: MIT
 
 Reach a shared understanding of the behavior and decisions that matter.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/clarify.md) only when the task needs their additional procedure.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for a missing material decision that needs a focused interview, an open direction that needs divergent ideas, a request to grill or stress-test a plan, decision or idea, and a domain term with conflicting meanings. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/clarify.md) before dependent work.
 
 ## Procedure and output
 

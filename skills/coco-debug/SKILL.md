@@ -8,7 +8,7 @@ license: MIT
 
 Construct a red-capable feedback loop and establish the supported cause.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/debug.md) only when the task needs their additional procedure.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for a failure without an obvious red signal, an intermittent or nondeterministic fault, a regression that needs bisection, a second failed fix resting on one premise, verification of an existing PR or commit fix, performance or captured-artifact (profile, heap, trace) diagnosis, and configured report intake. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/debug.md) before dependent work.
 
 ## Procedure and output
 
