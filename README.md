@@ -1,6 +1,6 @@
 # COCO Skills
 
-[Matt Pocock의 skills](https://github.com/mattpocock/skills), [Addy Osmani의 agent-skills](https://github.com/addyosmani/agent-skills), [Lauren Tan의 pstack](https://github.com/cursor/plugins/tree/main/pstack)을 **목적별 27개 스킬**로 합친 개발 스킬 모음입니다. Codex와 Claude Code에서 같은 스킬을 씁니다.
+[Matt Pocock의 skills](https://github.com/mattpocock/skills), [Addy Osmani의 agent-skills](https://github.com/addyosmani/agent-skills), [Lauren Tan의 pstack](https://github.com/cursor/plugins/tree/main/pstack)을 **목적별 28개 스킬**로 합친 개발 스킬 모음입니다. Codex와 Claude Code에서 같은 스킬을 씁니다.
 
 ## 설치
 
@@ -73,7 +73,8 @@ Codex는 `$`, Claude Code는 `/`를 붙입니다.
 | 출시 | `coco-ship` | PR 준비, 출시 가능 판단, 롤아웃 |
 | | `coco-push` | dev/develop 반영 → 충돌 해결·검증 → 작업 브랜치 푸시 |
 | | `coco-automate` | CI·반복 작업·봇 자동화 |
-| 기록 | `coco-document` | ADR·API 문서·설명·교육 자료 |
+| 기록 | `coco-docs` | 공식 프로젝트 문서(README·ADR·API·가이드·런북) 작성·점검 |
+| | `coco-learn` | 개인 학습용 설명, 같은 양식·60줄 이내의 학습 노트 |
 | | `coco-context` | 인수인계, 중단 후 재개, 긴 작업 기록 |
 | | `coco-retro` | 회고, 반복 실패의 구조적 개선 |
 | | `coco-triage` | 이슈 분류·중복 확인·작업 준비 상태 |

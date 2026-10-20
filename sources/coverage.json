@@ -565,7 +565,7 @@
     },
     {
       "path": "skills/in-progress/writing-beats/SKILL.md",
-      "family": "document",
+      "family": "docs",
       "disposition": "reference",
       "essential_rules": [
         "Experimental exploit mode consumes a fixed raw-material pile to build a separate article as a journey; settle audience prerequisites before using any ungrounded concept.",
@@ -581,13 +581,13 @@
       "adaptation": "Keep conditional experimental MALJ document author-collaboration reference, distinct from ordinary autonomous drafting. Choice-per-beat pacing applies when the user requests this interactive writing mode; do not impose it on every documentation task.",
       "author": "matt",
       "implemented_references": [
-        "skills/coco-document/SKILL.md",
-        "skills/_coco-shared/advanced/document.md"
+        "skills/coco-docs/SKILL.md",
+        "skills/_coco-shared/advanced/docs.md"
       ]
     },
     {
       "path": "skills/in-progress/writing-fragments/SKILL.md",
-      "family": "document",
+      "family": "docs",
       "disposition": "reference",
       "essential_rules": [
         "Experimental explore mode interviews for raw writing fragments without imposing an outline, phases or article structure; capture useful material from the initial user prompt onward.",
@@ -603,13 +603,13 @@
       "adaptation": "Preserve as an experimental document ideation mode and optional reference. It is deliberately distinct from exploit/shaping; do not contaminate the raw pile with an imposed final article or replace the user’s current edits.",
       "author": "matt",
       "implemented_references": [
-        "skills/coco-document/SKILL.md",
-        "skills/_coco-shared/advanced/document.md"
+        "skills/coco-docs/SKILL.md",
+        "skills/_coco-shared/advanced/docs.md"
       ]
     },
     {
       "path": "skills/in-progress/writing-shape/SKILL.md",
-      "family": "document",
+      "family": "docs",
       "disposition": "reference",
       "essential_rules": [
         "Experimental exploit mode reads the complete fixed input pile and writes a separate article; the raw-material file remains read-only.",
@@ -626,8 +626,8 @@
       "adaptation": "Retain conditional experimental MALJ document shaping reference. It overlaps beats in grounding and incremental authorship but differs in paragraph/format argument rather than a branching next-beat menu; preserve both options without forcing interactive approval on routine docs.",
       "author": "matt",
       "implemented_references": [
-        "skills/coco-document/SKILL.md",
-        "skills/_coco-shared/advanced/document.md"
+        "skills/coco-docs/SKILL.md",
+        "skills/_coco-shared/advanced/docs.md"
       ]
     },
     {
@@ -673,7 +673,7 @@
     },
     {
       "path": "skills/misc/scaffold-exercises/SKILL.md",
-      "family": "document",
+      "family": "docs",
       "disposition": "reference",
       "essential_rules": [
         "For AI Hero course repos, preserve ordered exercises/XX-section/XX.YY-exercise dash-case naming and at least one problem/solution/explainer variant; default unspecified stubs to explainer.",
@@ -688,8 +688,8 @@
       "adaptation": "Preserve as a narrow conditional MALJ document/course-authoring reference when the AI Hero layout and linter are actually present. Do not impose this filesystem or unavailable private CLI on general learning/docs work; adapt scaffold checks to the target course tooling otherwise.",
       "author": "matt",
       "implemented_references": [
-        "skills/coco-document/SKILL.md",
-        "skills/_coco-shared/advanced/document.md"
+        "skills/coco-docs/SKILL.md",
+        "skills/_coco-shared/advanced/docs.md"
       ]
     },
     {
@@ -780,7 +780,7 @@
     },
     {
       "path": "skills/productivity/teach/SKILL.md",
-      "family": "document",
+      "family": "learn",
       "disposition": "reference",
       "essential_rules": [
         "Maintain a multi-session learning workspace grounded in one concise MISSION.md with real-world success/constraints; track curated annotated RESOURCES, learning records, canonical glossary, lessons, references, assets and user NOTES.",
@@ -799,8 +799,9 @@
       "adaptation": "Preserve as conditional MALJ document/learning reference, not a mandatory structure for ordinary explanations. Clarify source tension: lessons can be one HTML unit while linked shared assets require the workspace to travel with them. External resource/health-sensitive facts need current primary-source verification; joining or messaging a community is not authorized by a teaching request.",
       "author": "matt",
       "implemented_references": [
-        "skills/coco-document/SKILL.md",
-        "skills/_coco-shared/advanced/document.md"
+        "skills/coco-learn/SKILL.md",
+        "skills/_coco-shared/advanced/learn.md",
+        "skills/coco-learn/references/note-template.md"
       ]
     },
     {
@@ -845,7 +846,7 @@
     },
     {
       "path": "skills/productivity/writing-for-agents/SKILL.md",
-      "family": "document",
+      "family": "docs",
       "disposition": "merged",
       "essential_rules": [
         "Write context pointers that name the material and distinct trigger branches, front-load the leading concept, and sharpen a weak pointer before inlining must-read content into always-loaded context.",
@@ -861,8 +862,8 @@
       "adaptation": "Merge as MALJ document/skill-authoring guidance. Source Skill-tool invocation and disable-model-invocation reach claims are Claude-era mechanics, not universal truths; use the target harness’s actual metadata/lookup behavior. Preserve progressive disclosure without hiding required behavior or sacrificing explicit skill coverage.",
       "author": "matt",
       "implemented_references": [
-        "skills/coco-document/SKILL.md",
-        "skills/_coco-shared/advanced/document.md"
+        "skills/coco-docs/SKILL.md",
+        "skills/_coco-shared/advanced/docs.md"
       ]
     },
     {
@@ -1281,7 +1282,7 @@
     },
     {
       "path": "skills/documentation-and-adrs/SKILL.md",
-      "family": "document",
+      "family": "docs",
       "disposition": "merged",
       "essential_rules": [
         "Inspect existing ADR files, .adr-dir, tooling, format/location/heading and numbering conventions first; continue that convention and surface conflict, using docs/decisions defaults only when none exists.",
@@ -1295,9 +1296,9 @@
       "adaptation": "Merge existing-convention-first ADRs and evidence-preserving prose review. Resolve default docs/decisions versus other sources docs/adr lazily rather than introduce competing directories; document cleanup does not authorize unrelated code deletion.",
       "author": "addy",
       "implemented_references": [
-        "skills/coco-document/SKILL.md",
-        "skills/_coco-shared/advanced/document.md",
-        "skills/coco-document/SKILL.md#stop-signals",
+        "skills/coco-docs/SKILL.md",
+        "skills/_coco-shared/advanced/docs.md",
+        "skills/coco-docs/SKILL.md#stop-signals",
         "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
@@ -1941,7 +1942,7 @@
     },
     {
       "path": "pstack/skills/bro/SKILL.md",
-      "family": "document",
+      "family": "learn",
       "disposition": "merged",
       "essential_rules": [
         "Restate the immediately preceding answer in familiar everyday words without jargon.",
@@ -1951,8 +1952,7 @@
       "adaptation": "Plain-language rewrite mode in document; no separate top-level alias is necessary.",
       "author": "pstack",
       "implemented_references": [
-        "skills/coco-document/SKILL.md",
-        "skills/_coco-shared/advanced/document.md"
+        "skills/coco-learn/SKILL.md"
       ]
     },
     {
@@ -2939,7 +2939,7 @@
     },
     {
       "path": "pstack/skills/teach/SKILL.md",
-      "family": "document",
+      "family": "learn",
       "disposition": "adapted",
       "essential_rules": [
         "Choose what the user needs to understand from their purpose and known context; combine runtime mechanism and historical rationale while preserving evidence confidence.",
@@ -2955,13 +2955,12 @@
       "adaptation": "Concrete teaching mode in document backed by research; no mandatory how/why agent invocations or image generation. Preserve confidence qualifications instead of styling them away.",
       "author": "pstack",
       "implemented_references": [
-        "skills/coco-document/SKILL.md",
-        "skills/_coco-shared/advanced/document.md"
+        "skills/coco-learn/SKILL.md"
       ]
     },
     {
       "path": "pstack/skills/technical-writing/SKILL.md",
-      "family": "document",
+      "family": "docs",
       "disposition": "merged",
       "essential_rules": [
         "Choose tutorial, how-to, reference, or explanation by reader purpose and keep document modes separate; tutorials show visible results, how-tos solve a task, reference mirrors the system, explanation carries rationale.",
@@ -2976,8 +2975,8 @@
       "adaptation": "Document mode selection and sentence standard merge into one document family; preserve semantic precision over rigid source punctuation/tab preferences.",
       "author": "pstack",
       "implemented_references": [
-        "skills/coco-document/SKILL.md",
-        "skills/_coco-shared/advanced/document.md"
+        "skills/coco-docs/SKILL.md",
+        "skills/_coco-shared/advanced/docs.md"
       ]
     },
     {
@@ -3004,7 +3003,7 @@
     },
     {
       "path": "pstack/skills/unslop/SKILL.md",
-      "family": "document",
+      "family": "docs",
       "disposition": "merged",
       "essential_rules": [
         "Replace vague attribution with a real source or remove it; remove filler, excessive certainty/hedging, generic conclusions, sycophancy, and chatbot offers without removing meaningful uncertainty.",
@@ -3016,8 +3015,8 @@
       "adaptation": "Prose-editing mode in document with source catalog as a reference; avoid importing subjective punctuation bans as universal correctness requirements.",
       "author": "pstack",
       "implemented_references": [
-        "skills/coco-document/SKILL.md",
-        "skills/_coco-shared/advanced/document.md"
+        "skills/coco-docs/SKILL.md",
+        "skills/_coco-shared/advanced/docs.md"
       ]
     },
     {
