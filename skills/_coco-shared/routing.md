@@ -6,6 +6,7 @@ Read only the selected entrypoint and the conditional reference relevant to the 
 |---|---|---|
 | Browse all available skills or understand a selected skill | tellmeskill | Full current catalog, target/depth choices, source-based explanation using the common format |
 | Decide what to ask an already selected skill | whattosay | Contextual full invocation options, a recommended choice, then user-selected execution or prompt-only output |
+| Be quizzed on the current work or selected code to understand it | askme | Scope/topic choices, one grounded question at a time, answer feedback and a closing summary; no code changes |
 | Adapt an existing skill to team rules or change its workflow | updateskill | Scoped source changes, consistent references/provenance, checks and actual installation status |
 | Integrate remote dev/develop, resolve conflicts and publish the current branch | push | Verified integration commits, single-branch normal push and remote-ref readback |
 | Clear static color/copy edit | Direct lightweight edit; start only if routing is unclear | Requested edit and necessary visual/content check |
