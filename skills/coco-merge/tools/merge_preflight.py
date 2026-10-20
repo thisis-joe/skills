@@ -224,6 +224,7 @@ def preflight(path, remote=None, branch=None, target=None, integration=None,
         if carried:
             blockers.append('integration_commits_carried')
 
+    own = [row for row in own if row not in benign]
     merge = conflicts(repo, target_tip, head) if incoming else {'status': 'clean', 'paths': []}
     if merge['status'] == 'conflict':
         blockers.append('conflicts')

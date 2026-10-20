@@ -108,6 +108,7 @@ class MergePreflightTests(unittest.TestCase):
         self.assertEqual(report['local_head'], pushed)
         self.assertEqual(report['head'], updated)
         self.assertEqual(report['counts']['update_merges'], 1)
+        self.assertEqual([row['subject'] for row in report['own']], ['feature work'])
         self.assertEqual(report['unknown_remote_commits'], [])
 
     def test_forge_head_that_differs_from_the_pushed_head_blocks(self):
