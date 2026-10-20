@@ -84,6 +84,6 @@ Prove clean pass → temporary forbidden test deep-import failure → restored p
 
 ## Output and stopping conditions
 
-Return the chosen caller example, interfaces/types, ownership, dependency/test strategy, alternatives and reasons, compatibility/migration implications and unresolved decisions. Update domain terms or qualifying ADRs using [document](document.md), not a duplicate design checklist.
+Return the chosen caller example, interfaces/types, ownership, dependency/test strategy, alternatives and reasons, compatibility/migration implications and unresolved decisions. Update domain terms or qualifying ADRs using [docs](docs.md), not a duplicate design checklist.
 
 Stop when the design resolves the stated uncertainty and its contract can be implemented and verified. A requested design-only deliverable ends here. A missing material product decision or repeated structural contradiction requires that specific decision/re-grounding; routine implementation can proceed within existing authorization through build.

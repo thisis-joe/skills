@@ -189,7 +189,7 @@ Claude Code 호출 예시:
 | 로그·지표·추적·알림·런북 | `$coco-observe` | `/coco-observe` | 운영 질문에 답하는 신호와 계측 검증 |
 | CI·반복 작업·봇·검증 자동화 | `$coco-automate` | `/coco-automate` | 재시도·복구 가능한 자동화와 명시적 활성화 상태 |
 | PR·출시 준비·롤아웃 | `$coco-ship` | `/coco-ship` | 출시 가능/차단 판단, 복구 계획, 실제 배포 상태 |
-| ADR·API 문서·설명·교육·글쓰기 | `$coco-document` | `/coco-document` | 독자에게 필요한 문서·예제·교육 자료 |
+| ADR·API 문서·설명·교육·글쓰기 | `$coco-docs` | `/coco-docs` | 독자에게 필요한 문서·예제·교육 자료 |
 | 인수인계·긴 작업 기록·맥락 관리 | `$coco-context` | `/coco-context` | 근거를 따라 재개할 수 있는 간결한 인계 자료 |
 | 회고·실패 분석·스킬 평가 | `$coco-retro` | `/coco-retro` | 확인한 실패 패턴과 검증 가능한 개선 |
 | 들어온 이슈·중복·작업 준비 상태 분류 | `$coco-triage` | `/coco-triage` | 근거 있는 분류와 다음 준비된 작업 |

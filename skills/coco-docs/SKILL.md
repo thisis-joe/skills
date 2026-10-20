@@ -1,14 +1,14 @@
 ---
-name: coco-document
+name: coco-docs
 description: "Use when recording an ADR, documenting APIs or agent guidance, explaining technical material, teaching, preparing exercises or editing prose without changing meaning."
 license: MIT
 ---
 
-# coco-document
+# coco-docs
 
 Create the artifact the audience needs while preserving technical truth.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/document.md) only when the task needs their additional procedure.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/docs.md) only when the task needs their additional procedure.
 
 ## Procedure and output
 

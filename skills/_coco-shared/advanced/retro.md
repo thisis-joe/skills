@@ -25,7 +25,7 @@ Select a session retrospective, recurring-error prevention, agent-instruction/re
 - **Information access:** identify missing logs, read-only environments, runtime observability or test fixtures that caused guesswork.
 - **Instructions:** identify no-op, stale, contradictory, overbroad or misplaced rules, including global instructions that only reviewers need.
 
-Use [context](context.md) to repair loading/handoff and [document](document.md) to write a precise pointer or recipe.
+Use [context](context.md) to repair loading/handoff and [docs](docs.md) to write a precise pointer or recipe.
 
 ## Choose the strongest suitable intervention
 
