@@ -26,6 +26,8 @@ class NpmDistributionTests(unittest.TestCase):
                        npm_config_cache=str(cls.scratch / 'npm-cache'),
                        npm_config_offline='true', npm_config_audit='false',
                        npm_config_fund='false', npm_config_update_notifier='false')
+        # `npm publish --dry-run` exports this to prepack; it would stop our own pack writing an archive.
+        cls.env.pop('npm_config_dry_run', None)
         result = subprocess.run(
             [NPM, 'pack', '--ignore-scripts', '--json', '--pack-destination', str(cls.scratch)],
             cwd=ROOT, env=cls.env, capture_output=True, text=True, encoding='utf-8')
