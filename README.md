@@ -41,7 +41,7 @@ npx --yes @thisis-joe/coco-skills@latest install --runtime claude --dest "$HOME/
 npx --yes @thisis-joe/coco-skills@latest validate --installed "$HOME/workspaces/my-project/.claude/skills"
 ```
 
-`@0.1.2`처럼 버전을 고정하거나 `--dest ./my-skills`로 다른 설치 위치를 지정할 수도 있습니다. Python을 찾지 못하면 `COCO_PYTHON`에 인자 없이 Python 실행 파일 이름이나 경로를 지정합니다. 실제 게시와 로컬 패키지 검증 절차는 [배포 안내](https://github.com/thisis-joe/skills/blob/main/docs/distribution.md)에 있습니다.
+`@0.2.0`처럼 버전을 고정하거나 `--dest ./my-skills`로 다른 설치 위치를 지정할 수도 있습니다. Python을 찾지 못하면 `COCO_PYTHON`에 인자 없이 Python 실행 파일 이름이나 경로를 지정합니다. 실제 게시와 로컬 패키지 검증 절차는 [배포 안내](https://github.com/thisis-joe/skills/blob/main/docs/distribution.md)에 있습니다.
 
 ## 저장소에서 설치 (Python)
 
@@ -111,7 +111,7 @@ python3 scripts/install.py --runtime claude
 2. **중복 절차를 목적별로 묶었습니다.** 예를 들어 세 원본의 코드 리뷰 절차는 `coco-review`로 모으고, 명세 준수·팀 규칙·코드 품질을 나누어 판단하도록 정리했습니다.
 3. **충돌하는 규칙은 공통 기준으로 맞췄습니다.** 이미 합의한 요구는 재사용하고 빠진 결정만 질문합니다. 동작을 바꾸는 작업에는 실패를 확인하는 테스트부터 적용하고, 정적 문서 수정에는 그에 맞는 직접 검사를 사용합니다. 선택 이유는 [결정 기록](https://github.com/thisis-joe/skills/blob/main/skills/_coco-shared/decisions.md)에 남겼습니다.
 4. **공통 규칙과 전문 절차를 분리했습니다.** 검증 근거·완료 조건·작업별 커밋은 [공통 계약](https://github.com/thisis-joe/skills/blob/main/skills/_coco-shared/contracts.md)에 두고, 전문·실험 절차는 필요한 경우에 참조합니다. 특정 작성자의 도구·모델·개인 환경에 의존하는 부분은 사용 가능한 환경에 맞게 조정했습니다.
-5. **원문과 실행할 스킬을 구분했습니다.** 원문은 `.source` 자료로 보존하며 설치하거나 호출하지 않습니다. 설치되는 것은 `coco-*` 스킬과 공통 자료뿐입니다. 별도로 추가한 4개 팀 스킬도 원본에서 유래한 기능과 구분했습니다.
+5. **원문과 실행할 스킬을 구분했습니다.** 원문은 `.source` 자료로 보존하며 설치하거나 호출하지 않습니다. 설치되는 것은 `coco-*` 스킬과 공통 자료뿐입니다. 별도로 추가한 5개 팀 스킬도 원본에서 유래한 기능과 구분했습니다.
 
 ## 통합해서 얻는 장점
 
