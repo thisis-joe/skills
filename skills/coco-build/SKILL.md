@@ -8,7 +8,7 @@ license: MIT
 
 Own execution from the first ready task through evidence-backed work-unit completion.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/build.md) only when the task needs their additional procedure.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for resuming interrupted work or reconciling a commit missing from task state, strengthened work (uncertain contracts, irreversible effects, shared state or high blast radius), a new domain data or state shape, repeatable mechanical edits or migrations, a TypeScript surface, concurrent or delegated execution, and continuous multi-task execution. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/build.md) before dependent work.
 
 ## Feature branch preparation
 
@@ -39,3 +39,13 @@ Create the valid branch from the confirmed base commit. If it exists, verify it 
 6. Stop advancement on unresolved required failure, missing material decisions or authorization boundaries; use debug for bounded in-scope diagnosis. Continuous mode resumes at the first incomplete ready task.
 
 Return: task IDs, acceptance/check results, actual review scope, commit IDs, updated status, unresolved items and next ready task. Do not mark unavailable required checks as passed.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "I'll test it all at the end" or a large batch written without running a check: verify each slice; an early bug makes later slices wrong.
+- A new test that passes on its first run: it may not test what you think; see it fail for the intended reason.
+- "All tests pass" with no observed run, or a default command such as `npm test` the repository does not use.
+- "This refactor is small enough to include": mixed refactor and feature changes are harder to review and revert.
+- An abstraction or new utility file before a real repeated use demands it.

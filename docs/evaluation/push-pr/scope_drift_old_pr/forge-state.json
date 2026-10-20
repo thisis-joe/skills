@@ -1,0 +1,19 @@
+{
+  "requests": [
+    {
+      "number": 21,
+      "title": "[WID-141] 쿠폰_만료일_표시",
+      "body": "## 개요\n초안\n",
+      "draft": true,
+      "base": "develop",
+      "head": "feat(be)/141-쿠폰_만료일_표시",
+      "url": "https://github.example.test/acme/widget/pull/21",
+      "state": "open",
+      "head_sha": "194d9e9c4135e60154f583f7dc5a7b66ddb2188c",
+      "labels": [],
+      "reviewers": [],
+      "assignees": []
+    }
+  ],
+  "next_number": 40
+}

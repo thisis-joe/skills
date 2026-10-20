@@ -8,7 +8,7 @@ license: MIT
 
 Assess the actual change without changing it or hiding a failed review axis.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/review.md) only when the task needs their additional procedure.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for freezing scope with the shared review-scope collector, dependency or lockfile changes, a suspicious diff, shared contract change or deletion that needs impact and safety facts, a requested or high-impact adversarial review, automated review comments, and comments or suppressions that encode constraints. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/review.md) before dependent work.
 
 ## Procedure and output
 
@@ -20,3 +20,13 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Load [ad
 6. Return findings and verdicts to the execution owner. Do not modify files or commit during review. Any later code change invalidates the affected portion of this scope's approval.
 
 Return: frozen scope, per-axis verdicts/findings, checks actually examined and remaining limitations.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "It works" or "the tests pass, so it's good": tests miss architecture, security and readability; judge every axis.
+- "It's just a version bump": read the changelog; one dependency per change keeps cause and revert clean.
+- "We'll clean it up later" or a bare "LGTM": required fixes land before merge, with evidence of actual review.
+- A refactor that moves code without reducing concepts, or a change that grows an already-large file or duplicates a canonical helper.
+- Reviewer output trusted without rereading the artifact, the author's claim passed to the reviewer, or review rerun on an unchanged artifact.

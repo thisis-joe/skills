@@ -178,6 +178,55 @@ class PackageTests(unittest.TestCase):
         self.install()
         self.assertEqual(other.read_text(), 'unrelated')
 
+    def git(self, repo, *args, expect=0):
+        result = subprocess.run(['git', '-C', str(repo), *args], capture_output=True, text=True)
+        self.assertEqual(result.returncode, expect, result.stdout + result.stderr)
+        return result.stdout
+
+    def test_dedicated_worktree_installs_branch_version_and_preserves_starting_checkout(self):
+        self.git(self.root, 'init', '-q', '-b', 'main')
+        self.git(self.root, 'config', 'user.email', 'fixture@example.test')
+        self.git(self.root, 'config', 'user.name', 'Fixture')
+        self.git(self.root, 'add', '.')
+        self.git(self.root, 'commit', '-qm', 'baseline')
+        self.git(self.root, 'switch', '-qc', 'feat/unrelated-work')
+        skill = 'skills/coco-example/SKILL.md'
+        user_edit = (self.root / skill).read_text() + 'Personal uncommitted edit.\n'
+        self.write(skill, user_edit)
+        self.write('notes.txt', 'untracked user note\n')
+        starting = [self.git(self.root, *args) for args in
+                    (['branch', '--show-current'], ['rev-parse', 'HEAD'], ['status', '--porcelain'])]
+
+        worktree = Path(self.temp.name) / 'skill-update'
+        branch = 'feat/coco-example-team-rule'
+        self.git(self.root, 'check-ref-format', '--branch', branch)
+        self.git(self.root, 'worktree', 'add', '-q', '-b', branch, str(worktree), 'main')
+        listed = self.git(self.root, 'worktree', 'list', '--porcelain')
+        self.assertIn(f'worktree {worktree.resolve()}\n', listed)
+        self.assertIn(f'branch refs/heads/{branch}\n', listed)
+        self.assertNotIn('Personal uncommitted edit', (worktree / skill).read_text())
+        self.assertFalse((worktree / 'notes.txt').exists())
+
+        team_rule = (worktree / skill).read_text() + 'Team rule from the dedicated branch.\n'
+        (worktree / skill).write_text(team_rule)
+        self.git(worktree, 'commit', '-qam', 'feat: add team rule')
+        result = subprocess.run([sys.executable, str(ROOT / 'scripts/install.py'), '--root',
+                                 str(worktree), '--dest', str(self.dest)],
+                                capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertEqual((self.dest / 'coco-example/SKILL.md').read_text(), team_rule)
+
+        # Git itself refuses a second checkout of the branch and an occupied path.
+        self.git(self.root, 'worktree', 'add', '-q', str(Path(self.temp.name) / 'second'),
+                 branch, expect=128)
+        self.git(self.root, 'worktree', 'add', '-q', '-b', 'feat/other', str(self.dest),
+                 'main', expect=128)
+        self.assertEqual([self.git(self.root, *args) for args in
+                          (['branch', '--show-current'], ['rev-parse', 'HEAD'],
+                           ['status', '--porcelain'])], starting)
+        self.assertEqual((self.root / skill).read_text(), user_edit)
+        self.assertEqual((self.root / 'notes.txt').read_text(), 'untracked user note\n')
+
     def test_symlink_in_package_or_target_is_refused(self):
         secret = Path(self.temp.name) / 'outside.txt'
         secret.write_text('external')

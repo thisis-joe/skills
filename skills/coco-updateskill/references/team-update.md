@@ -8,6 +8,20 @@ First distinguish maintainers and source locations for installed system or exter
 
 Reuse agreed team commands, review standards, and execution modes. Apply conditional modes where repository rules differ. For example, do not copy one Node repository's `pnpm` commands into a Python repository or every team skill's common commands. Respect explicit user/team scope and ask only about missing material behavior.
 
+## Dedicated branch and worktree
+
+This team rule applies whenever the update will change any maintained file: skill sources, references, UI metadata, registration, decision records, evaluation evidence, or tests. A proposal-only, review, or explanation request changes no files and creates neither a branch nor a worktree.
+
+1. **Record the starting checkout.** Before creating anything, record its path, branch, HEAD, and dirty and untracked paths. It stays read-only for the whole update.
+2. **Confirm the base.** Use the repository's documented integration branch, such as `main`, unless the user or the established task names another base. If the change depends on commits that exist only on the starting branch, or on uncommitted edits there, ask which base to use. Never copy, stash, or move uncommitted user changes into the worktree.
+3. **Create a new branch.** Name it according to repository branch rules, for example `feat/<skill>-<change>`, and validate it with `git check-ref-format --branch`. Never reuse, reset, or rename a branch that belongs to other work. Git refuses a branch already checked out in another worktree; do not force it.
+4. **Create a new linked worktree.** Prefer the runtime's supported worktree feature when one exists; otherwise run `git worktree add -b <branch> <path> <base>`. Choose a path outside tracked content, such as an ignored worktree directory the repository designates or a sibling directory, rather than a guessed personal absolute path. Never overwrite an existing path. Confirm the new path, branch, and base with `git worktree list --porcelain` before the first edit.
+5. **Work only inside it.** Read the target source, edit, run checks, commit, and run the installer from the worktree path, for example `python3 <worktree>/scripts/install.py ...`, so the installed copy is the verified branch version. When installing, report that the installed copy comes from the unmerged dedicated branch.
+6. **Confirm isolation before reporting.** Compare the starting checkout's branch, HEAD, and dirty and untracked paths with the recorded state. Report any difference instead of hiding or reverting it.
+7. **Leave it in place.** Report the worktree path, branch, and base. Push, PR, merge, and worktree removal are separate scope; remove a worktree only on request through the [owned worktree cleanup](../../_coco-shared/advanced/context.md#conditional-owned-worktree-and-simulator-cleanup) procedure.
+
+A linked worktree counts as dedicated only when its branch was created for this update from the confirmed base and holds no unrelated commits or changes, such as a host-created session worktree for this request or the worktree of an interrupted run of the same update. Otherwise create a new one. If the source is not a Git repository or the worktree cannot be created because of permissions, an existing path, or Git support, stop before editing, report the blocker, and ask how to proceed. Editing in the starting checkout is never a fallback.
+
 ## Compare before/after and inspect effects
 
 Keep maintained COCO instruction documents and discovery descriptions in English. Localize actual replies to the user's language and preserve user-owned literals such as exact Jira Summaries.
@@ -28,7 +42,7 @@ When modifying `coco-updateskill` itself, retain the starting version and agreed
 
 ## Verification and installation
 
-Discover actual COCO check commands. Examples for the current package:
+Discover actual COCO check commands and run them from the dedicated worktree. Examples for the current package:
 
 ```text
 python3 scripts/validate.py
@@ -42,4 +56,4 @@ Use `codex` or `claude` for the confirmed runtime; retain an explicit destinatio
 
 Before installation, compare the ownership manifest with current files and use the supported installer's preflight. Preserve and show differences for conflicts involving personal edits, extra files, same-name external skills, or symbolic links. Do not delete the ownership manifest or manipulate hashes to manufacture installation success. If a supported preservation/migration procedure cannot be established, leave installation blocked separately from source changes.
 
-Reread relevant source/installed files, hashes, and references and confirm other skills and personal files survive. If installation fails after the source commit, do not recreate the existing commit. On resumption, inspect actual commit/change/installation state and continue from the remaining installation step. Distinguish the verified version from actual installation state in the report.
+Reread relevant source/installed files, hashes, and references and confirm other skills and personal files survive. If installation fails after the source commit, do not recreate the existing commit. On resumption, locate the dedicated worktree with `git worktree list --porcelain`, inspect its actual commit/change/installation state and continue from the remaining installation step. Distinguish the verified version from actual installation state in the report.

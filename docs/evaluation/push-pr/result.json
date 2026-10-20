@@ -1,0 +1,85 @@
+{
+  "type": "fresh-context forward application of coco-push draft PR/MR behavior",
+  "runs": [
+    {
+      "commit": "485d66180e563cd645eafc2a3c9a519618da0a8c",
+      "skill_hashes": {
+        "skills/coco-push/SKILL.md": "6ef454012455d13b9cd294ab6b7757860d994c65812b5c24cd075ce9eab1bf79",
+        "skills/coco-push/references/branch-and-ticket.md": "8f47579f5c7ec76a5f86a4a1d8a344db9edfc20c436df13dd0147734948f6cec",
+        "skills/coco-push/references/pull-request.md": "530807d5796adbc3c31d139169d90d38ff86473cb68e0b0e4bb60888d749ffce",
+        "skills/coco-push/references/sync-and-push.md": "150841ebff64ad22d3cae93f0a319115ce4d36f4b126ad175e2f1eaf7b50ea27",
+        "skills/_coco-shared/contracts.md": "bde500e0fe87c2ba12acbec14f45375ced68adbee2949860404a8ecbf6c3558b",
+        "skills/coco-build/SKILL.md": "67273ea375b22fb0992d42971933d0ec6974bc6194c0be92362bdf5e91f14a21"
+      },
+      "cases": [
+        "check_fails",
+        "gh_default",
+        "gh_draft_unsupported",
+        "gh_existing_open",
+        "gh_template",
+        "glab_default_template",
+        "renamed_with_old_pr"
+      ]
+    },
+    {
+      "commit": "485d66180e563cd645eafc2a3c9a519618da0a8c",
+      "skill_hashes": {
+        "skills/coco-push/SKILL.md": "6ef454012455d13b9cd294ab6b7757860d994c65812b5c24cd075ce9eab1bf79",
+        "skills/coco-push/references/branch-and-ticket.md": "8f47579f5c7ec76a5f86a4a1d8a344db9edfc20c436df13dd0147734948f6cec",
+        "skills/coco-push/references/pull-request.md": "530807d5796adbc3c31d139169d90d38ff86473cb68e0b0e4bb60888d749ffce",
+        "skills/coco-push/references/sync-and-push.md": "150841ebff64ad22d3cae93f0a319115ce4d36f4b126ad175e2f1eaf7b50ea27",
+        "skills/_coco-shared/contracts.md": "bde500e0fe87c2ba12acbec14f45375ced68adbee2949860404a8ecbf6c3558b",
+        "skills/coco-build/SKILL.md": "67273ea375b22fb0992d42971933d0ec6974bc6194c0be92362bdf5e91f14a21"
+      },
+      "cases": [
+        "scope_drift_old_pr"
+      ]
+    }
+  ],
+  "skill_files_match_evaluated_version": true,
+  "forge": "LOCAL MOCK gh/glab CLI (fake_forge.py); no external API",
+  "jira": "LOCAL MOCK file-backed adapter; no external API",
+  "real_git": true,
+  "results": {
+    "check_fails": {
+      "behavior_assessment": "passed",
+      "renamed": false,
+      "failed_assertions": []
+    },
+    "gh_default": {
+      "behavior_assessment": "passed",
+      "renamed": false,
+      "failed_assertions": []
+    },
+    "gh_draft_unsupported": {
+      "behavior_assessment": "passed",
+      "renamed": false,
+      "failed_assertions": []
+    },
+    "gh_existing_open": {
+      "behavior_assessment": "passed",
+      "renamed": false,
+      "failed_assertions": []
+    },
+    "gh_template": {
+      "behavior_assessment": "passed",
+      "renamed": false,
+      "failed_assertions": []
+    },
+    "glab_default_template": {
+      "behavior_assessment": "passed",
+      "renamed": false,
+      "failed_assertions": []
+    },
+    "renamed_with_old_pr": {
+      "behavior_assessment": "passed",
+      "renamed": false,
+      "failed_assertions": []
+    },
+    "scope_drift_old_pr": {
+      "behavior_assessment": "passed",
+      "renamed": true,
+      "failed_assertions": []
+    }
+  }
+}

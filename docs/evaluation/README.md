@@ -6,21 +6,35 @@ The [dual-runtime evaluation](dual-runtime/README.md) records additive Codex and
 Claude Code support, actual installation in both personal destinations, preserved
 unrelated files, regression checks, and native-client verification limits.
 
-추가한 `coco-tellmeskill`의 전체 목록·단계별 선택·공통 8항목 설명에 대한 제한된 적용은 [별도 기록](tellmeskill/README.md)에 보존합니다. 현재 패키지는 안내·동기화/푸시·팀 맞춤 유지보수·요청문 추천·질의응답 학습 스킬을 포함한 27개입니다.
+추가한 `coco-tellmeskill`의 전체 목록·단계별 선택·공통 8항목 설명에 대한 제한된 적용은 [별도 기록](tellmeskill/README.md)에 보존합니다. 현재 패키지는 안내·동기화/푸시·직접 머지·팀 맞춤 유지보수·요청문 추천·질의응답 학습 스킬을 포함한 29개입니다.
 
 `coco-push`의 [로컬 Git 적용 5사례](push/README.md)에서는 실제 충돌·동시 푸시 거절 후 재통합·기준 선택 대기·사용자 변경 보존·필수 검사 실패 시 미게시를 확인했습니다. 실제 서비스의 보호 정책이나 모든 충돌 해결을 인증한 것은 아닙니다.
 
 이후 추가한 브랜치·Jira 작업요약 정리는 [별도 적용 5사례](push-summary/README.md)에 보존합니다. 실제 로컬 Git에서는 이름 변경·기존 이름 유지로 2개를 게시했고, 모의 Jira 쓰기 거절·티켓 모호성·이름 충돌 3개는 게시 전에 멈췄습니다. Jira는 파일 기반 모의 자료이며 실제 서비스 쓰기를 검증한 것은 아닙니다.
 
+푸시 후 draft PR/MR 생성은 [별도 적용 8사례](push-pr/README.md)에 보존합니다. 모의 `gh`/`glab`과 실제 로컬 Git으로 다음을 확인했습니다.
+
+- 저장소 템플릿·기본 양식·GitLab `Default.md`로 draft 생성 3건
+- 열린 요청이 있어 생성하지 않은 2건
+- 이름을 바꾼 뒤 옛 브랜치에 남은 PR 때문에 중복 생성 전에 질문한 경우
+- draft가 거절됐을 때 일반 PR로 대신 만들지 않은 경우
+- 검사 실패로 푸시도 PR 생성도 하지 않은 경우
+
+실제 GitHub·GitLab의 권한과 API 응답은 검증하지 않았습니다.
+
 `coco-updateskill`의 [팀 유지보수 적용 3사례](updateskill/README.md)는 원본·공통 규칙·출처를 함께 수정하는 경로, 제안 전용 요청, 개인 수정본 때문에 설치를 차단하는 경로를 기록합니다. 원본 수정과 실제 설치 결과를 구분했습니다.
 
-이후 시작 절차를 전체 목록·대상 선택·수정 내용 질문으로 분리했습니다. [시작 대화 점검](updateskill-selection.md)은 작성자의 단계별 검토와 실행한 패키지 검사를 구분합니다.
+이후 시작 절차를 전체 목록·대상 선택·수정 내용 질문으로 분리했습니다. [시작 대화 점검](updateskill-selection.md)은 작성자의 단계별 검토와 실행한 패키지 검사를 구분합니다. 파일을 바꾸는 업데이트를 전용 브랜치·워크트리로 강제한 뒤의 [새 컨텍스트 적용 3사례](updateskill-worktree/README.md)는 시작 체크아웃 보존, 제안 전용 요청의 무변경, Git 원본이 아닐 때의 수정 전 중단을 기록합니다.
 
 `coco-whattosay`의 [독립 적용 2대화·7턴](whattosay/README.md)은 확정한 스킬의 요청문 추천과 선택 대기, 번호 선택 후 실제 리뷰, 문장 전용 상태의 수정·유효하지 않은 번호 처리, 명시적 실행 요청 후 결과 생성을 확인합니다. 임시 제품 파일·Git 상태의 보존과 실제 26개 스킬 설치도 기록합니다. `coco-whichskill` 자체의 실행 연동을 시험한 것은 아닙니다.
 
 요청 없이 이름만 호출한 스킬의 [빈 호출 처리 독립 적용 5대화·6턴](bare-invocation/README.md)은 대화 없는 `coco-review`·`coco-build`의 추천 흐름 전환과 번호 선택 후 실행을 확인합니다. 맥락이 정해진 `coco-debug`의 즉시 진행, 제외 대상인 `coco-askme`의 자체 선택 유지, `coco-push`의 절차 실행도 함께 확인합니다. 실제 `/` 메뉴 호출과 Codex 호출은 실행하지 않았습니다.
 
 `coco-askme`의 [독립 적용 3대화·15턴](askme/README.md)은 전체 작업 후보 제시, 부분 복수 선택, 대상 사전 지정, 모르는 답변, 사용자 역질문, 설계 대안 인정, 성능 근거 부족, 도중 범위 변경을 확인합니다. 대상 저장소의 상태 보존도 기록합니다.
+
+`coco-document`를 나눈 `coco-docs`·`coco-learn`의 [독립 적용 4대화·13턴](docs-learn/README.md)은 새 학습 작업 공간, 다른 개념의 노트 분리, 부분 정답의 상태 유지, 긴 노트 정리와 사용자 메모 보존, 복습, 문서 불일치 점검, 공식 how-to 작성과 두 스킬의 경계를 확인합니다. 평가에서 드러난 모호한 규칙을 보완한 뒤 같은 시드로 다시 확인했습니다.
+
+`coco-merge`의 [모의 forge 적용 4사례](merge/README.md)는 draft PR의 ready 전환 후 푸시한 head 고정 머지, `develop`의 미출시 커밋이 디폴트 브랜치로 딸려 들어가는 경우의 중단과 질문, 필수 체크 실패 시 미머지와 로컬 변경 보존, PR 생성 후 merge 방식 브랜치 업데이트와 새 head 고정 머지를 확인합니다. PR의 대상 브랜치로 머지하도록 바꾼 뒤의 2차 2사례는 `develop` 대상 PR을 묻지 않고 `develop`에 머지하고, `main` 대상 PR에 섞인 미출시 커밋에서는 멈추는 것을 확인합니다. GitHub CLI 일부를 흉내 낸 로컬 fixture이며 실제 서비스의 보호 규칙·병합 큐·GitLab 경로를 검증한 것은 아닙니다.
 
 `coco-build`의 [Jira 브랜치 규칙 확인](build-branches.md)은 한글·괄호가 있는 이름의 실제 생성, 유효하지 않은 후보와 중복 이름의 Git 거절, 사용자 파일 보존을 기록합니다. Jira 조회나 에이전트의 질문 행동을 실행 검증한 것은 아닙니다.
 
@@ -36,7 +50,7 @@ unrelated files, regression checks, and native-client verification limits.
 
 `python3 -m unittest discover -s tests -v`는 임시 실제 Git 저장소에서 리뷰 범위를 검증하고, 임시 스킬 폴더에서 설치 충돌·업데이트·참조·체크섬을 검증합니다. 원본과 통합 문장을 문자열로 맞추는 테스트가 아닙니다.
 
-`python3 scripts/validate.py`는 고정 원문 체크섬, 131개 원본 항목의 대응, 현재 27개 스킬의 형식·UI 이름·참조를 검사합니다. 이것은 의미와 행동의 완전한 증명이 아닙니다.
+`python3 scripts/validate.py`는 고정 원문 체크섬, 131개 원본 항목의 대응, 현재 29개 스킬의 형식·UI 이름·참조를 검사합니다. 이것은 의미와 행동의 완전한 증명이 아닙니다.
 
 최초 통합 시 자동 테스트 23개가 통과했습니다. [당시 공식 스킬 형식 검사](format-validation.json)는 진입점 22개 모두 통과했습니다. [당시 활성 파일 해시](final-bundle.json)는 재개 평가와 조건부 평가의 고정 대상과 일치하는 72개 설치 파일을 기록합니다.
 

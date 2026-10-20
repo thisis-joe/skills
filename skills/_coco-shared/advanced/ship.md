@@ -44,7 +44,7 @@ Do not lower the [standing quality bar](start.md) to obtain a release verdict.
 Keep one feature branch and atomic verified work-unit commits under repository rules.
 Lead a PR description with the concrete problem and resulting behavior.
 Add only review-relevant scope, verification, material risk and source/spec links.
-Use the repository template and avoid dumping the investigation transcript.
+Use the repository template, or coco-push's [default description](../../coco-push/references/pull-request.md#default-description) when none exists, and avoid dumping the investigation transcript.
 Verify the proposed diff contains the intended work and no unrelated user edits.
 Create/send the PR only within existing authorization and report its actual result.
 

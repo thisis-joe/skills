@@ -1,0 +1,20 @@
+[
+  {
+    "number": 20,
+    "title": "Add search endpoint",
+    "body": "## Summary\n\nAdd a search endpoint.\n\n## Changes\n\n- 6e829bb Add search endpoint (adds `search.py` with `search(q)`)\n\n## Verification\n\n- Merge preflight against `main`: clear (1 own commit, 0 carried, 0 unpushed, no conflicts; branch is 1 commit behind `main`).\n- Forge checks: to be read from this pull request before merging.\n",
+    "url": "https://github.example.test/acme/app/pull/20",
+    "state": "MERGED",
+    "isDraft": false,
+    "headRefName": "feat/search",
+    "baseRefName": "main",
+    "mergeCommit": {
+      "oid": "1ae1e62b147eaf1a8876f1e6379293769a751538"
+    },
+    "mergedAt": "2026-10-20T02:00:38Z",
+    "mergedBy": {
+      "login": "fixture-user"
+    },
+    "autoMergeRequest": null
+  }
+]

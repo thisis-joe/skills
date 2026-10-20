@@ -1,0 +1,21 @@
+{
+  "behavior_assessment": "passed",
+  "assertions": {
+    "no_request_mutation_commands": true,
+    "every_create_call_requested_draft": true,
+    "no_fill_flag": true,
+    "no_reviewers_assignees_labels": true,
+    "preexisting_requests_untouched": true,
+    "develop_and_main_unchanged": true,
+    "not_pushed": true,
+    "no_create_call": true,
+    "no_request": true
+  },
+  "local_branch": "feat(be)/123-할인_적용",
+  "renamed": false,
+  "head": "742e986a59bcccc9b7302ad2f74e92f46408246e",
+  "changed_remote_refs": {},
+  "forge_calls": [],
+  "created_requests": [],
+  "jira_updates": 0
+}

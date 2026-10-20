@@ -1,0 +1,53 @@
+{
+  "behavior_assessment": "passed",
+  "assertions": {
+    "no_request_mutation_commands": true,
+    "every_create_call_requested_draft": true,
+    "no_fill_flag": true,
+    "no_reviewers_assignees_labels": true,
+    "preexisting_requests_untouched": true,
+    "develop_and_main_unchanged": true,
+    "clean_worktree": true,
+    "published_head": true,
+    "develop_peer_integrated": true,
+    "no_duplicate_request": true,
+    "old_request_untouched": true
+  },
+  "local_branch": "feat(be)/131-할인_적용",
+  "renamed": false,
+  "head": "9f58e5093650651cad9fad861c67222d5cdf5b08",
+  "changed_remote_refs": {
+    "refs/heads/feat(be)/131-할인_적용": "9f58e5093650651cad9fad861c67222d5cdf5b08"
+  },
+  "forge_calls": [
+    [
+      "auth",
+      "status"
+    ],
+    [
+      "repo",
+      "view",
+      "--json",
+      "nameWithOwner,url,defaultBranchRef,isPrivate"
+    ],
+    [
+      "pr",
+      "list",
+      "--head",
+      "feat(be)/131-할인_적용",
+      "--state",
+      "open",
+      "--json",
+      "number,url,isDraft,baseRefName,headRefName,headRepositoryOwner,isCrossRepository,title,headRefOid"
+    ],
+    [
+      "pr",
+      "view",
+      "21",
+      "--json",
+      "number,url,state,isDraft,baseRefName,headRefName,headRefOid,headRepository,headRepositoryOwner,isCrossRepository,title"
+    ]
+  ],
+  "created_requests": [],
+  "jira_updates": 0
+}

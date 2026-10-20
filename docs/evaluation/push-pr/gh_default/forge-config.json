@@ -1,0 +1,9 @@
+{
+  "label": "LOCAL MOCK FORGE - NO EXTERNAL API",
+  "host": "github.example.test",
+  "repo": "acme/widget",
+  "remote_git": "/private/tmp/claude-501/-Users-Joseph-workspaces-skills/866bba31-5a39-4951-9c43-ecb95aa7f076/scratchpad/push-pr-run/gh_default/remote.git",
+  "default_branch": "main",
+  "draft_supported": true,
+  "authenticated": true
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "number": 10,
+    "title": "[APP-140] 프로필 페이지",
+    "body": "",
+    "state": "OPEN",
+    "isDraft": false,
+    "url": "https://github.example.test/acme/app/pull/10",
+    "headRefName": "feat/profile",
+    "baseRefName": "main",
+    "mergeCommit": null,
+    "mergedAt": null,
+    "mergedBy": null,
+    "autoMergeRequest": null
+  }
+]

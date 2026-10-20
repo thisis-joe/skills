@@ -1,0 +1,61 @@
+== <fixtures>/write
+-- starting checkout file diff (before vs after):
+identical
+-- installed diff:
+<  ./.coco-install.json
+>  ./.coco-install.json
+<  ./coco-askme/SKILL.md
+>  ./coco-askme/SKILL.md
+<  ./coco-askme/references/question-patterns.md
+>  ./coco-askme/references/question-patterns.md
+-- starting branch/HEAD/status diff:
+identical
+-- worktrees:
+worktree <fixtures>/write/repo
+HEAD b21f6faa390bfd2dfc69d731584fb73a7b437530
+branch refs/heads/feat/unrelated-work
+
+worktree <fixtures>/write/repo-coco-askme-quiz-limit
+HEAD b3ea63ba4dfb6a5bc190c722746cec9a8222702a
+branch refs/heads/feat/coco-askme-quiz-limit
+
+-- branches:
++ feat/coco-askme-quiz-limit b3ea63b (<fixtures>/write/repo-coco-askme-quiz-limit) docs(coco-askme): record session-limit change evidence
+* feat/unrelated-work        b21f6fa docs: unrelated work
+  main                       245df76 baseline package
+-- feat/coco-askme-quiz-limit vs main:
+b3ea63b docs(coco-askme): record session-limit change evidence
+cc17cfa feat(coco-askme): limit a quiz session to five questions by default
+ README.md                                         |  2 +-
+ docs/evaluation/README.md                         |  2 +-
+ docs/evaluation/askme/README.md                   | 19 +++++++++++++++++++
+ skills/coco-askme/SKILL.md                        | 12 +++++++-----
+ skills/coco-askme/references/question-patterns.md |  5 +++--
+ 5 files changed, 31 insertions(+), 9 deletions(-)
+-- merge-base == main? yes
+-- status in <fixtures>/write/repo-coco-askme-quiz-limit:
+## feat/coco-askme-quiz-limit
+-- other new paths under fixture:
+<fixtures>/write/logs
+== <fixtures>/proposal
+-- starting checkout file diff (before vs after):
+identical
+-- installed diff:
+identical
+-- starting branch/HEAD/status diff:
+identical
+-- worktrees:
+worktree <fixtures>/proposal/repo
+HEAD 7aa69441a3864ec256a26362fcee3cc2767c5b98
+branch refs/heads/feat/unrelated-work
+
+-- branches:
+* feat/unrelated-work 7aa6944 docs: unrelated work
+  main                81950dc baseline package
+-- other new paths under fixture:
+== <fixtures>/nogit
+-- starting checkout file diff (before vs after):
+identical
+-- installed diff:
+identical
+-- other new paths under fixture:

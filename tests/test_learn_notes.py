@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / 'skills/coco-learn'
 CHECKER = SKILL / 'tools/check_notes.py'
 FORMAT = SKILL / 'references/note-template.md'
+EXAMPLE = SKILL / 'references/example-note.md'
 LABELS = ('Key points', 'Example', 'Pitfalls', 'Self-check', 'Related')
 KOREAN = ('핵심', '예시', '함정', '셀프 체크', '관련')
 
@@ -92,7 +93,8 @@ class LearnNoteTests(unittest.TestCase):
         return result.stdout + result.stderr
 
     def test_documented_template_and_example_pass_together(self):
-        template, example = documented_blocks()
+        [template] = documented_blocks()
+        example = EXAMPLE.read_text(encoding='utf-8')
         self.write('TEMPLATE.md', template)
         for note in (self.root / 'notes').iterdir():
             note.unlink()
@@ -155,6 +157,12 @@ class LearnNoteTests(unittest.TestCase):
         self.write('INDEX.md', (self.root / 'INDEX.md').read_text(encoding='utf-8') +
                    '- [사본](notes/atomic-replace-copy.md) — 사본\n')
         self.assertIn('keep one note per concept', self.check(expect=1))
+
+    def test_title_ending_in_hash_is_not_a_closing_sequence(self):
+        self.edit('notes/atomic-replace.md', 'title: 원자적 파일 교체', 'title: C# 원자적 교체')
+        self.edit('notes/atomic-replace.md', '# 원자적 파일 교체', '# C# 원자적 교체')
+        self.edit('INDEX.md', '[원자적 파일 교체]', '[C# 원자적 교체]')
+        self.assertIn('OK: 2 notes', self.check())
 
     def test_missing_or_malformed_template_is_a_usage_error(self):
         self.edit('TEMPLATE.md', '## 관련\n', '')

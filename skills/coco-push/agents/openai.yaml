@@ -1,4 +1,4 @@
 interface:
   display_name: "coco-push"
-  short_description: "Sync, align branch and Jira summaries, verify, and push"
-  default_prompt: "Use $coco-push to integrate dev/develop, resolve conflicts, align the branch name and linked Jira summary/description with actual work if needed, verify, and push."
+  short_description: "Sync, align branch and Jira, verify, push, open draft PR"
+  default_prompt: "Use $coco-push to integrate dev/develop, resolve conflicts, align the branch name and linked Jira summary/description with actual work if needed, verify, push, and open a draft PR/MR if none is open."
