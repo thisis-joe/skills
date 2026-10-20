@@ -8,7 +8,7 @@ license: MIT
 
 Remove concepts and indirection while preserving the behavior that consumers rely on.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/simplify.md) only when the task needs their additional procedure.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for a structural responsibility change, deleting a legacy internal API after migrating its callers, external consumers that need the migration sequence, code whose purpose or history is unclear, and a broad mechanical change that needs a codemod. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/simplify.md) before dependent work.
 
 ## Procedure and output
 
@@ -20,3 +20,13 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Load [ad
 6. Run focused and required regression checks and compare relevant runtime behavior. Hand the scoped change through build/review; remove experiments that fail to buy simpler maintenance.
 
 Return: what complexity disappeared, preserved contracts, migrated/removed call sites and regression evidence.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "Fewer lines is simpler": simplicity is comprehension speed, not line count.
+- "This abstraction might be useful later": remove speculative abstraction; re-add it when needed.
+- "The original author must have had a reason": check history first, then decide; accumulated complexity often has none.
+- A simplification that needs tests changed to pass, or error handling removed to look cleaner.
+- Simplifying code you do not understand, or batching many simplifications into one hard-to-review commit.

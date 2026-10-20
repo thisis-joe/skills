@@ -8,7 +8,7 @@ license: MIT
 
 Choose an appropriate workflow and establish the project quality bar.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/start.md) only when the task needs their additional procedure.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for a missing standing quality bar (establish with a live user, floor only when unattended), quality-floor checks on a task diff, ratchets or check placement and cost, conflicting package-manager signals, and mapping a former pstack playbook to its COCO home. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/start.md) before dependent work.
 
 ## Procedure and output
 
@@ -19,3 +19,13 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Load [ad
 5. Hand off only the next needed purpose. A specialist adds checks to the route; it does not start every other specialist.
 
 Return: selected route and reason, authoritative artifacts, actual commands and remaining decisions. Setup output includes enforced versus measured-only thresholds and execution points.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "We'll add constraints once the code settles": code settles around whatever was allowed.
+- "The tests are the constraints": a suite agrees with itself; add an external or independently owned check where available.
+- "We can't hit that target": measure today's level and hold it as a ratchet.
+- A budget the codebase fails today with no plan, or a number with no tool enforcing it.
+- Slow checks in the edit loop that invite bypass flags, or an exception without an owner and review date.

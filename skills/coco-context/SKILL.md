@@ -8,7 +8,7 @@ license: MIT
 
 Preserve the minimum truthful context required to resume work safely.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/context.md) only when the task needs their additional procedure.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for task pickup after interruption, current-chat catchup, cross-chat recall, a portable handoff or phase-boundary choice, a long-run decision log, domain-language maintenance, profile-only workstyle capture, and owned worktree or simulator cleanup. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/context.md) before dependent work.
 
 ## Procedure and output
 
@@ -20,3 +20,12 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Load [ad
 6. Profile-only forensics uses derived metadata and citations without copying unrelated private content. Cross-tool handoff adapts to available capabilities rather than forcing a particular model or agent product.
 
 Return: compact resumable packet or evidence trail, current verification limits and next permitted action.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "More context is better" or "the window is huge": load only what the next action needs; focused context outperforms.
+- Quality drifting as the session grows: reduce failed attempts, superseded drafts and verbose output to conclusions plus pointers.
+- Invented APIs or imports, or reimplemented utilities that already exist: reread actual code and conventions before continuing.
+- The same correction repeated because a project convention is written nowhere agents read: propose the missing rule instead of fixing by hand each time.
