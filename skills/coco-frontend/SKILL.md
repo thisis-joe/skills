@@ -8,7 +8,7 @@ license: MIT
 
 Deliver the intended user experience within the existing visual and interaction system.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/frontend.md) only when the task needs their additional procedure.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for a new screen or open visual direction, component state ownership or optimistic updates, accessibility verification (focus order, modals, live announcements), the runtime finish gate across supported widths, exact visual parity, and missing browser capability. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/frontend.md) before dependent work.
 
 ## Procedure and output
 
@@ -20,3 +20,13 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Load [ad
 6. If browser evidence cannot be obtained, report that acceptance as unavailable and retain reproducible steps for the next check.
 
 Return: implemented states, relevant screenshots/runtime observations, accessibility checks and unresolved limitations.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "Accessibility is a nice-to-have" or "we'll make it responsive later": retrofitting costs far more; build both in now.
+- "The design isn't final" or "it's just a prototype": use the existing design system; prototypes become production.
+- Missing loading, empty or error states, or keyboard navigation never tested.
+- Color as the only status cue, or inline styles and arbitrary pixel values outside the token system.
+- A generic "AI look" (stock gradients, oversized cards, template layouts) instead of the product's visual language.

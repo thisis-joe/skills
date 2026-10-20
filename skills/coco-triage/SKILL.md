@@ -8,7 +8,7 @@ license: MIT
 
 Choose an evidence-backed disposition and an actually ready work item.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/triage.md) only when the task needs their additional procedure.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for label and state mapping or attention discovery, a ready agent or human brief, duplicate, rejection or already-built decisions, and an explicitly configured automated intake. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/triage.md) before dependent work.
 
 ## Procedure and output
 

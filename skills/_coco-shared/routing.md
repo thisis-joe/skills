@@ -11,7 +11,7 @@ Read only the selected entrypoint and the conditional reference relevant to the 
 | Integrate remote dev/develop, resolve conflicts and publish the current branch | push | Verified integration commits, single-branch normal push and remote-ref readback |
 | Clear static color/copy edit | Direct lightweight edit; start only if routing is unclear | Requested edit and necessary visual/content check |
 | Establish commands, standing quality bar or select a workflow | start | Project profile, checks with owners, chosen route |
-| Unsettled requirements, terms or idea | clarify | Settled decisions, explicit open items, glossary/ADR only when warranted |
+| Unsettled requirements, terms or idea, or a plan to grill/stress-test | clarify | Settled decisions, explicit open items, glossary/ADR only when warranted |
 | Understand runtime behavior, historical rationale or an external API | research | Cited explanation, verified facts versus inferences, preservation constraints |
 | Choose module/API boundaries or test an uncertain design | design | Compared alternatives, contract and test surface; disposable prototype evidence if needed |
 | Turn agreed behavior into a durable contract | spec | One authoritative spec with scope and observable acceptance |
