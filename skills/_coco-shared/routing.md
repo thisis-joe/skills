@@ -4,11 +4,12 @@ Read only the selected entrypoint and the conditional reference relevant to the 
 
 | Situation / desired output | Entry | Expected result |
 |---|---|---|
-| Browse all available skills or understand a selected skill | tellmeskill | Full current catalog, target/depth choices, source-based explanation using the common format |
+| Browse all available skills or understand a selected skill | tellmeskill | Recent skills first on a bare invocation, then the full current catalog grouped by purpose; target/depth choices and source-based explanation using the common format |
 | Decide what to ask an already selected skill | whattosay | Contextual full invocation options, a recommended choice, then user-selected execution or prompt-only output |
 | Be quizzed on the current work or selected code to understand it | askme | Scope/topic choices, one grounded question at a time, answer feedback and a closing summary; no code changes |
 | Adapt an existing skill to team rules or change its workflow | updateskill | Scoped source changes, consistent references/provenance, checks and actual installation status |
-| Integrate remote dev/develop, resolve conflicts and publish the current branch | push | Verified integration commits, single-branch normal push and remote-ref readback |
+| Integrate remote dev/develop, resolve conflicts and publish the current branch | push | Verified integration commits, single-branch normal push, remote-ref readback and a draft PR/MR into the development base when none is open |
+| Merge an already pushed PR/MR into its target branch without a readiness review | merge | Forge-gated merge of the pushed head, merged-state and target-branch readback; queued or blocked reported as such |
 | Clear static color/copy edit | Direct lightweight edit; start only if routing is unclear | Requested edit and necessary visual/content check |
 | Establish commands, standing quality bar or select a workflow | start | Project profile, checks with owners, chosen route |
 | Unsettled requirements, terms or idea, or a plan to grill/stress-test | clarify | Settled decisions, explicit open items, glossary/ADR only when warranted |
@@ -27,7 +28,8 @@ Read only the selected entrypoint and the conditional reference relevant to the 
 | Logs, metrics, traces or operational diagnosis | observe | Useful signals and alerts, bounded cardinality and verified incident visibility |
 | CI, recurring automation, bots or reusable verification helpers | automate | Idempotent scoped automation, tests and explicit activation boundary |
 | PR preparation or release readiness | ship | Evidence-backed ready/blocked decision, release/rollback steps; deployment state separately |
-| ADR, API documentation, explanation, teaching or prose | document | Audience-appropriate artifact preserving technical truth and uncertainty |
+| ADR, README, API reference, guide, runbook, agent instructions or prose for other readers | docs | Convention-following project document with verified commands, links and examples |
+| Explanation for the user's own understanding, personal study notes or a learning workspace | learn | Plain explanation or short uniform notes that pass the note checker |
 | Context window, handoff, recall or long-run decision trail | context | Compact resumable packet and resolvable evidence pointers |
 | Retrospective, evaluation or durable lessons | retro | Verified failure pattern, targeted structural improvement and a checking scenario |
 | Incoming report, issue prioritization or autonomous issue selection | triage | Evidence-backed disposition, deduplication and dependency/ownership-aware work choice |

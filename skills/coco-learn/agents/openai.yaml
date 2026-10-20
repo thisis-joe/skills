@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-learn"
+  short_description: "Explain, then keep short uniform study notes"
+  default_prompt: "Use $coco-learn to explain this for my own understanding and keep it as a short note in my learning workspace."

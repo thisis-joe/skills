@@ -86,7 +86,7 @@ When the user is actively changing the domain model, read its relevant glossary/
 
 Record a settled canonical term immediately in its owning glossary with a concise definition and avoided synonyms. Create a glossary lazily at the first actual term, use only project-context concepts and keep implementation notes out. Multi-context work follows an existing context map; ask only when the applicable domain is materially unclear.
 
-Use [document](document.md) for qualifying ADRs and record formats. A glossary is vocabulary, a spec is desired behavior, and neither owns task progress. Output the resolved terms, code/decision conflicts and any remaining modeling question; merely reading vocabulary is not a reason to rewrite it.
+Use [docs](docs.md) for qualifying ADRs and record formats. A glossary is vocabulary, a spec is desired behavior, and neither owns task progress. Output the resolved terms, code/decision conflicts and any remaining modeling question; merely reading vocabulary is not a reason to rewrite it.
 
 ## Profile-only workstyle capture
 

@@ -1,0 +1,20 @@
+[
+  {
+    "number": 8,
+    "title": "[APP-140] 프로필 페이지",
+    "body": "",
+    "state": "MERGED",
+    "isDraft": false,
+    "url": "https://github.example.test/acme/app/pull/8",
+    "headRefName": "feat/profile",
+    "baseRefName": "develop",
+    "mergeCommit": {
+      "oid": "1deb8dff28ddf38647960af74f0caf182e728e5c"
+    },
+    "mergedAt": "2026-10-20T02:09:11Z",
+    "mergedBy": {
+      "login": "fixture-user"
+    },
+    "autoMergeRequest": null
+  }
+]
