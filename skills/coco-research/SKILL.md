@@ -8,7 +8,7 @@ license: MIT
 
 Answer how or why with inspectable evidence and explicit uncertainty.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/research.md) only when the task needs their additional procedure.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for version-specific API facts, a runtime mechanism or state-ownership trace, historical rationale behind defensive code or thresholds, a bounded multi-source investigation, claim-confidence grading, and a durable cited findings artifact. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/research.md) before dependent work.
 
 ## Procedure and output
 
@@ -19,3 +19,12 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Load [ad
 5. Distinguish observed facts, supported inferences, competing explanations and unknowns. If preparing a change, turn the findings into preserve/change/avoid/risk constraints.
 
 Return: answer to the question, code/source locations, causal explanation, uncertainty and the cheapest useful next check. Explanation-only requests end here.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "I'm confident about this API": confidence is not evidence; check the installed version's primary documentation.
+- "I'll just mention it might be outdated": verify and cite, or mark it plainly unverified; hedging is the worst option.
+- "I believe" or "I think" about an API instead of a citation, or secondary posts cited over official sources.
+- Writing version-specific code before reading manifests and lockfiles, or fetching a whole documentation site for one page.

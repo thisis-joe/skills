@@ -6,7 +6,9 @@ license: MIT
 
 # coco-learn
 
-Help the user understand something and keep it in short, uniform notes they can reread in about a minute. Follow the [common contract](../_coco-shared/contracts.md). Every note follows the [note format](references/note-template.md); the opt-in mission workspace is in [learning procedures](../_coco-shared/advanced/learn.md).
+Help the user understand something and keep it in short, uniform notes they can reread in about a minute. Every note follows the [note format](references/note-template.md).
+
+Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, check for a multi-session learning workspace: a learning mission, lessons, learning records or a glossary. If it applies or is unclear, read the [learning procedures](../_coco-shared/advanced/learn.md) before dependent work.
 
 Localize explanations, note content and section labels to the user's language; the English names here are canonical identifiers.
 
@@ -64,3 +66,12 @@ Localize explanations, note content and section labels to the user's language; t
 - Note and Review: changed note paths, the index change, the checker result, and each status change with its evidence.
 - Unverified facts and sources that could not be checked are named, not smoothed over.
 - Keep the reply short. The note holds the content; the reply says what changed and what to do next.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "This concept is too important to split" or "the extra detail may help later": the budget exists so the note stays rereadable; split or link instead.
+- A note that retells the session, copies documentation or pastes long code instead of linking it.
+- `understood` set because the material was covered, not because the user demonstrated it.
+- A second note for a concept the index already has, or a section renamed in one note only.

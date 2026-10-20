@@ -8,7 +8,7 @@ license: MIT
 
 Keep only improvements supported by controlled measurement and correct behavior.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/performance.md) only when the task needs their additional procedure.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for a disputed or adoption-deciding benchmark, query-plan, index, connection-pool or cache decisions, page-load or interaction metrics, a requested one-run ballpark, source-only inspection without a runnable target, and a sustained tuning run. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/performance.md) before dependent work.
 
 ## Procedure and output
 
@@ -20,3 +20,13 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Load [ad
 6. Add an appropriate regression measurement and report unavailable real-user validation honestly. Hand retained changes to build for normal closure.
 
 Return: baseline/after data, method and variance, bottleneck evidence, keep/revert decision, trade-offs and regression guard.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "This optimization is obvious": unmeasured is unknown; profile first.
+- "Just add an index", "just cache it" or "raise the pool size": read the plan, prove the expensive reread, find what holds connections.
+- "It didn't help much but doesn't hurt" or "we already wrote it": a neutral change is a revert.
+- Several optimizations in one measurement, or a "win" that needed a test changed, skipped or deleted.
+- Repeating an attempt the experiment ledger already rejected.

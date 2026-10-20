@@ -8,7 +8,7 @@ license: MIT
 
 Produce one usable contract for behavior and completion.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/spec.md) only when the task needs their additional procedure.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for independently testable capabilities that need a capability map, revision of an existing agreement, missing project guidance or verification commands, vague quality targets that need measurable acceptance, and tracker publication or agent-ready handoff. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/spec.md) before dependent work.
 
 ## Procedure and output
 
@@ -20,3 +20,12 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Load [ad
 6. Record the spec reference/version for downstream work. Publication to a tracker follows the user's destination and authorization; local drafting does not imply posting permission.
 
 Return: authoritative spec and explicit open issues. A request only to write a spec ends after that output; existing implementation authorization may continue to the next appropriate step.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "This is simple, I don't need a spec": it still needs acceptance criteria; a two-line spec is fine.
+- "I'll write the spec after I code it": that is documentation; the value is clarity before code.
+- "I'll decompose during planning": capability boundaries and dependency direction come before an oversized spec.
+- Implementing behavior no spec or task mentions, or making architectural decisions without recording them.

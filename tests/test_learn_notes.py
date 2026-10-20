@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / 'skills/coco-learn'
 CHECKER = SKILL / 'tools/check_notes.py'
 FORMAT = SKILL / 'references/note-template.md'
+EXAMPLE = SKILL / 'references/example-note.md'
 LABELS = ('Key points', 'Example', 'Pitfalls', 'Self-check', 'Related')
 KOREAN = ('핵심', '예시', '함정', '셀프 체크', '관련')
 
@@ -92,7 +93,8 @@ class LearnNoteTests(unittest.TestCase):
         return result.stdout + result.stderr
 
     def test_documented_template_and_example_pass_together(self):
-        template, example = documented_blocks()
+        [template] = documented_blocks()
+        example = EXAMPLE.read_text(encoding='utf-8')
         self.write('TEMPLATE.md', template)
         for note in (self.root / 'notes').iterdir():
             note.unlink()
