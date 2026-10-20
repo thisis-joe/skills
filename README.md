@@ -1,6 +1,6 @@
 # COCO Skills
 
-[Matt Pocock의 skills](https://github.com/mattpocock/skills), [Addy Osmani의 agent-skills](https://github.com/addyosmani/agent-skills), [Lauren Tan의 pstack](https://github.com/cursor/plugins/tree/main/pstack)을 **목적별 28개 스킬**로 합친 개발 스킬 모음입니다. Codex와 Claude Code에서 같은 스킬을 씁니다.
+[Matt Pocock의 skills](https://github.com/mattpocock/skills), [Addy Osmani의 agent-skills](https://github.com/addyosmani/agent-skills), [Lauren Tan의 pstack](https://github.com/cursor/plugins/tree/main/pstack)을 **목적별 29개 스킬**로 합친 개발 스킬 모음입니다. Codex와 Claude Code에서 같은 스킬을 씁니다.
 
 ## 설치
 
@@ -48,6 +48,7 @@ Codex는 `$`, Claude Code는 `/`를 붙입니다.
 /coco-build 승인한 계획의 다음 작업 하나를 구현해줘
 /coco-review 미커밋 변경과 새 파일까지 포함해서 검토해줘
 /coco-push origin/develop 기준으로 최신화하고 검증 후 푸시해줘
+/coco-merge 푸시한 PR을 체크 통과 후 머지해줘
 ```
 
 ## 스킬 목록
@@ -72,6 +73,7 @@ Codex는 `$`, Claude Code는 `/`를 붙입니다.
 | | `coco-review` | 명세·팀 규칙·코드 품질 검토 |
 | 출시 | `coco-ship` | PR 준비, 출시 가능 판단, 롤아웃 |
 | | `coco-push` | dev/develop 반영 → 충돌 해결·검증 → 작업 브랜치 푸시 |
+| | `coco-merge` | 푸시한 PR/MR을 출시 판단 없이 그 대상 브랜치에 머지 |
 | | `coco-automate` | CI·반복 작업·봇 자동화 |
 | 기록 | `coco-docs` | 공식 프로젝트 문서(README·ADR·API·가이드·런북) 작성·점검 |
 | | `coco-learn` | 개인 학습용 설명, 같은 양식·60줄 이내의 학습 노트 |

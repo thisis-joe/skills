@@ -1,0 +1,16 @@
+[
+  {
+    "number": 9,
+    "title": "[APP-151] 사용자 조회 캐시",
+    "body": "",
+    "state": "OPEN",
+    "isDraft": false,
+    "url": "https://github.example.test/acme/app/pull/9",
+    "headRefName": "feat/cache",
+    "baseRefName": "main",
+    "mergeCommit": null,
+    "mergedAt": null,
+    "mergedBy": null,
+    "autoMergeRequest": null
+  }
+]

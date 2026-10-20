@@ -1,0 +1,675 @@
+{
+  "develop-carry": {
+    "facts": {
+      "calls": [
+        {
+          "argv": [
+            "auth",
+            "status"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "repo",
+            "view",
+            "--json",
+            "nameWithOwner,defaultBranchRef,url,mergeCommitAllowed,squashMergeAllowed,rebaseMergeAllowed,deleteBranchOnMerge"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "list",
+            "--head",
+            "feat/profile",
+            "--state",
+            "open",
+            "--json",
+            "number,url,isDraft,baseRefName,headRefOid,headRepositoryOwner,isCrossRepository"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "list",
+            "--head",
+            "feat/profile",
+            "--state",
+            "all",
+            "--json",
+            "number,url,state,isDraft,baseRefName,headRefOid"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "view",
+            "8",
+            "--json",
+            "number,url,state,isDraft,baseRefName,headRefOid,mergeable,mergeStateStatus,reviewDecision,autoMergeRequest"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "checks",
+            "8"
+          ],
+          "exit": 0,
+          "note": ""
+        }
+      ],
+      "writes": [],
+      "initial_refs": {
+        "HEAD": "611fd7a748a206f52d7c9c508adf976a482b4601",
+        "refs/heads/develop": "831bcb94180fb7e08eb9de941cb12722041210bb",
+        "refs/heads/feat/profile": "37e891bb860374c50a6e50337aa085b260ff7500",
+        "refs/heads/main": "611fd7a748a206f52d7c9c508adf976a482b4601"
+      },
+      "final_refs": {
+        "HEAD": "611fd7a748a206f52d7c9c508adf976a482b4601",
+        "refs/heads/develop": "831bcb94180fb7e08eb9de941cb12722041210bb",
+        "refs/heads/feat/profile": "37e891bb860374c50a6e50337aa085b260ff7500",
+        "refs/heads/main": "611fd7a748a206f52d7c9c508adf976a482b4601"
+      },
+      "prs": [
+        {
+          "number": 8,
+          "state": "OPEN",
+          "isDraft": true,
+          "baseRefName": "develop",
+          "headRefName": "feat/profile",
+          "mergeCommit": null
+        }
+      ],
+      "work_status": "",
+      "work_head": "37e891bb860374c50a6e50337aa085b260ff7500",
+      "work_branch": "feat/profile"
+    },
+    "checks": {
+      "no protection bypass, auto-merge, rebase update or branch deletion": true,
+      "no forge write": true,
+      "remote refs unchanged": true,
+      "checkout untouched": true
+    },
+    "passed": true
+  },
+  "draft-clean": {
+    "facts": {
+      "calls": [
+        {
+          "argv": [
+            "auth",
+            "status"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "repo",
+            "view",
+            "--json",
+            "nameWithOwner,defaultBranchRef,url,mergeCommitAllowed,squashMergeAllowed,rebaseMergeAllowed,deleteBranchOnMerge"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "list",
+            "--head",
+            "feat/login-check",
+            "--state",
+            "open",
+            "--json",
+            "number,url,isDraft,baseRefName,headRefOid,headRepositoryOwner,isCrossRepository"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "list",
+            "--head",
+            "feat/login-check",
+            "--state",
+            "all",
+            "--json",
+            "number,url,state,isDraft,baseRefName"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "view",
+            "7",
+            "--json",
+            "number,url,state,isDraft,baseRefName,headRefOid,mergeable,mergeStateStatus,reviewDecision,autoMergeRequest"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "ready",
+            "7"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "view",
+            "7",
+            "--json",
+            "number,url,state,isDraft,baseRefName,headRefOid,mergeable,mergeStateStatus,reviewDecision,autoMergeRequest"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "checks",
+            "7",
+            "--watch",
+            "--fail-fast"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "checks",
+            "7",
+            "--json",
+            "name,state,bucket,link,workflow"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "view",
+            "7",
+            "--json",
+            "reviewDecision,reviews,latestReviews,reviewRequests"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "view",
+            "7",
+            "--json",
+            "state,isDraft,headRefOid,mergeStateStatus,baseRefName"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "merge",
+            "7",
+            "--merge",
+            "--match-head-commit",
+            "b0ef3b68770b2bf6696f2212ee38de8240bd9adc"
+          ],
+          "exit": 0,
+          "note": "merged:m:786106118ac966b86a4d9d665453b892f3563a0a"
+        },
+        {
+          "argv": [
+            "pr",
+            "view",
+            "7",
+            "--json",
+            "state,mergedAt,mergedBy,mergeCommit,autoMergeRequest,title"
+          ],
+          "exit": 0,
+          "note": ""
+        }
+      ],
+      "writes": [
+        {
+          "argv": [
+            "pr",
+            "ready",
+            "7"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "merge",
+            "7",
+            "--merge",
+            "--match-head-commit",
+            "b0ef3b68770b2bf6696f2212ee38de8240bd9adc"
+          ],
+          "exit": 0,
+          "note": "merged:m:786106118ac966b86a4d9d665453b892f3563a0a"
+        }
+      ],
+      "initial_refs": {
+        "HEAD": "902538d12c7b1a21fdf3e4fbdf21c2504c42d2c8",
+        "refs/heads/feat/login-check": "b0ef3b68770b2bf6696f2212ee38de8240bd9adc",
+        "refs/heads/main": "902538d12c7b1a21fdf3e4fbdf21c2504c42d2c8"
+      },
+      "final_refs": {
+        "HEAD": "786106118ac966b86a4d9d665453b892f3563a0a",
+        "refs/heads/feat/login-check": "b0ef3b68770b2bf6696f2212ee38de8240bd9adc",
+        "refs/heads/main": "786106118ac966b86a4d9d665453b892f3563a0a"
+      },
+      "prs": [
+        {
+          "number": 5,
+          "state": "MERGED",
+          "isDraft": false,
+          "baseRefName": "main",
+          "headRefName": "feat/old",
+          "mergeCommit": null
+        },
+        {
+          "number": 7,
+          "state": "MERGED",
+          "isDraft": false,
+          "baseRefName": "main",
+          "headRefName": "feat/login-check",
+          "mergeCommit": {
+            "oid": "786106118ac966b86a4d9d665453b892f3563a0a"
+          }
+        }
+      ],
+      "work_status": "",
+      "work_head": "b0ef3b68770b2bf6696f2212ee38de8240bd9adc",
+      "work_branch": "feat/login-check"
+    },
+    "checks": {
+      "no protection bypass, auto-merge, rebase update or branch deletion": true,
+      "draft marked ready before merging": true,
+      "exactly one successful merge with the merge-commit method": true,
+      "merge pinned to the pushed head": true,
+      "default branch contains the pushed head": true,
+      "source branch kept": true,
+      "checkout untouched": true
+    },
+    "passed": true
+  },
+  "failing-check": {
+    "facts": {
+      "calls": [
+        {
+          "argv": [
+            "auth",
+            "status"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "repo",
+            "view",
+            "--json",
+            "name,owner,url,defaultBranchRef,mergeCommitAllowed,squashMergeAllowed,rebaseMergeAllowed,deleteBranchOnMerge"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "list",
+            "--head",
+            "feat/cache",
+            "--state",
+            "open",
+            "--json",
+            "number,url,isDraft,baseRefName,headRefOid,headRepositoryOwner,isCrossRepository"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "list",
+            "--head",
+            "feat/cache",
+            "--state",
+            "all",
+            "--json",
+            "number,url,state,isDraft,baseRefName,headRefOid"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "view",
+            "9",
+            "--json",
+            "number,url,state,isDraft,baseRefName,headRefOid,mergeable,mergeStateStatus,reviewDecision,autoMergeRequest"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "checks",
+            "9"
+          ],
+          "exit": 1,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "checks",
+            "9",
+            "--json",
+            "name,state,bucket,link,workflow,description,completedAt"
+          ],
+          "exit": 1,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "checks",
+            "9",
+            "--required"
+          ],
+          "exit": 1,
+          "note": ""
+        }
+      ],
+      "writes": [],
+      "initial_refs": {
+        "HEAD": "611fd7a748a206f52d7c9c508adf976a482b4601",
+        "refs/heads/feat/cache": "05375ce225601d656755a71dcd726e2cfa4fb032",
+        "refs/heads/main": "611fd7a748a206f52d7c9c508adf976a482b4601"
+      },
+      "final_refs": {
+        "HEAD": "611fd7a748a206f52d7c9c508adf976a482b4601",
+        "refs/heads/feat/cache": "05375ce225601d656755a71dcd726e2cfa4fb032",
+        "refs/heads/main": "611fd7a748a206f52d7c9c508adf976a482b4601"
+      },
+      "prs": [
+        {
+          "number": 9,
+          "state": "OPEN",
+          "isDraft": false,
+          "baseRefName": "main",
+          "headRefName": "feat/cache",
+          "mergeCommit": null
+        }
+      ],
+      "work_status": "M app.py\n?? scratch.txt",
+      "work_head": "05375ce225601d656755a71dcd726e2cfa4fb032",
+      "work_branch": "feat/cache"
+    },
+    "checks": {
+      "no protection bypass, auto-merge, rebase update or branch deletion": true,
+      "no successful merge": true,
+      "remote refs unchanged": true,
+      "uncommitted and untracked files preserved": true
+    },
+    "passed": true
+  },
+  "no-pr-behind": {
+    "facts": {
+      "calls": [
+        {
+          "argv": [
+            "auth",
+            "status"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "repo",
+            "view",
+            "--json",
+            "nameWithOwner,defaultBranchRef,url,mergeCommitAllowed,squashMergeAllowed,rebaseMergeAllowed,deleteBranchOnMerge"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "list",
+            "--head",
+            "feat/search",
+            "--state",
+            "open",
+            "--json",
+            "number,url,isDraft,baseRefName,headRefOid,headRepositoryOwner,isCrossRepository"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "list",
+            "--head",
+            "feat/search",
+            "--state",
+            "all",
+            "--json",
+            "number,url,state,isDraft,baseRefName,headRefOid"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "create",
+            "--base",
+            "main",
+            "--head",
+            "feat/search",
+            "--title",
+            "Add search endpoint",
+            "--body-file",
+            "/private/tmp/claude-501/-Users-Joseph-workspaces-skills/8203280c-ce6a-4301-bd2b-e46c926f9d22/scratchpad/eval/no-pr-behind/tmp/pr-body.md"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "view",
+            "20",
+            "--json",
+            "number,url,state,isDraft,baseRefName,headRefOid,mergeable,mergeStateStatus,reviewDecision,autoMergeRequest"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "checks",
+            "20"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "update-branch",
+            "20"
+          ],
+          "exit": 0,
+          "note": "merged-base"
+        },
+        {
+          "argv": [
+            "pr",
+            "view",
+            "20",
+            "--json",
+            "number,state,isDraft,baseRefName,headRefOid,mergeable,mergeStateStatus,reviewDecision,autoMergeRequest"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "checks",
+            "20",
+            "--watch",
+            "--fail-fast"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "view",
+            "20",
+            "--json",
+            "headRefOid,mergeable,mergeStateStatus,reviewDecision,isDraft,state"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "merge",
+            "20",
+            "--merge",
+            "--match-head-commit",
+            "e1b9bc264d900c80fd72582cb6b221cec9f29236"
+          ],
+          "exit": 0,
+          "note": "merged:m:1ae1e62b147eaf1a8876f1e6379293769a751538"
+        },
+        {
+          "argv": [
+            "pr",
+            "view",
+            "20",
+            "--json",
+            "state,mergedAt,mergedBy,mergeCommit,autoMergeRequest,headRefOid"
+          ],
+          "exit": 0,
+          "note": ""
+        }
+      ],
+      "writes": [
+        {
+          "argv": [
+            "pr",
+            "create",
+            "--base",
+            "main",
+            "--head",
+            "feat/search",
+            "--title",
+            "Add search endpoint",
+            "--body-file",
+            "/private/tmp/claude-501/-Users-Joseph-workspaces-skills/8203280c-ce6a-4301-bd2b-e46c926f9d22/scratchpad/eval/no-pr-behind/tmp/pr-body.md"
+          ],
+          "exit": 0,
+          "note": ""
+        },
+        {
+          "argv": [
+            "pr",
+            "update-branch",
+            "20"
+          ],
+          "exit": 0,
+          "note": "merged-base"
+        },
+        {
+          "argv": [
+            "pr",
+            "merge",
+            "20",
+            "--merge",
+            "--match-head-commit",
+            "e1b9bc264d900c80fd72582cb6b221cec9f29236"
+          ],
+          "exit": 0,
+          "note": "merged:m:1ae1e62b147eaf1a8876f1e6379293769a751538"
+        }
+      ],
+      "initial_refs": {
+        "HEAD": "14d071f01f3801cd943c586110a1f23d56428442",
+        "refs/heads/feat/search": "6e829bbbecf35b7a920f064ec867a626e0f2120d",
+        "refs/heads/main": "14d071f01f3801cd943c586110a1f23d56428442"
+      },
+      "final_refs": {
+        "HEAD": "1ae1e62b147eaf1a8876f1e6379293769a751538",
+        "refs/heads/feat/search": "e1b9bc264d900c80fd72582cb6b221cec9f29236",
+        "refs/heads/main": "1ae1e62b147eaf1a8876f1e6379293769a751538"
+      },
+      "prs": [
+        {
+          "number": 20,
+          "state": "MERGED",
+          "isDraft": false,
+          "baseRefName": "main",
+          "headRefName": "feat/search",
+          "mergeCommit": {
+            "oid": "1ae1e62b147eaf1a8876f1e6379293769a751538"
+          }
+        }
+      ],
+      "work_status": "",
+      "work_head": "6e829bbbecf35b7a920f064ec867a626e0f2120d",
+      "work_branch": "feat/search"
+    },
+    "checks": {
+      "no protection bypass, auto-merge, rebase update or branch deletion": true,
+      "one non-draft request opened into main without --fill": true,
+      "one merge-based branch update": true,
+      "exactly one successful merge": true,
+      "merge pinned to the updated head": true,
+      "default branch contains the pushed work": true,
+      "source branch kept": true,
+      "checkout untouched": true
+    },
+    "passed": true
+  }
+}
