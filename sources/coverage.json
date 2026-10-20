@@ -1344,13 +1344,14 @@
         "skills/deprecation-and-migration/SKILL.md",
         "skills/shipping-and-launch/SKILL.md"
       ],
-      "adaptation": "Preserve branch/commit granularity and release contracts. Replace the unqualified reset --hard save-point example with task-owned recovery that preserves unrelated edits/evidence, and replace raw secret grep output with redacted findings. Push/tag/merge/deploy authority must come from the actual task. The user's additional Jira branch naming convention is owned by coco-build; it is a team rule, not an upstream requirement, and preserves the actual task Summary subject to confirmed Git-compatible spelling. The later team-added coco-push step aligns an inadequate branch summary and linked Jira Summary/Description with the actual branch work while retaining requirements and old remote refs; this extension is also user policy rather than an upstream rule.",
+      "adaptation": "Preserve branch/commit granularity and release contracts. Replace the unqualified reset --hard save-point example with task-owned recovery that preserves unrelated edits/evidence, and replace raw secret grep output with redacted findings. Push/tag/merge/deploy authority must come from the actual task. The user's additional Jira branch naming convention is owned by coco-build; it is a team rule, not an upstream requirement, and preserves the actual task Summary subject to confirmed Git-compatible spelling. The later team-added coco-push step aligns an inadequate branch summary and linked Jira Summary/Description with the actual branch work while retaining requirements and old remote refs; this extension is also user policy rather than an upstream rule. The team-added coco-push draft PR/MR step fills the repository template or a researched default description that keeps the scoped change summary, verification and remaining concerns visible; it is likewise user policy.",
       "author": "addy",
       "implemented_references": [
         "skills/coco-ship/SKILL.md",
         "skills/_coco-shared/advanced/ship.md",
         "skills/coco-build/SKILL.md",
-        "skills/coco-push/references/branch-and-ticket.md"
+        "skills/coco-push/references/branch-and-ticket.md",
+        "skills/coco-push/references/pull-request.md"
       ]
     },
     {
