@@ -18,6 +18,8 @@ unrelated files, regression checks, and native-client verification limits.
 
 `coco-whattosay`의 [독립 적용 2대화·7턴](whattosay/README.md)은 확정한 스킬의 요청문 추천과 선택 대기, 번호 선택 후 실제 리뷰, 문장 전용 상태의 수정·유효하지 않은 번호 처리, 명시적 실행 요청 후 결과 생성을 확인합니다. 임시 제품 파일·Git 상태의 보존과 실제 26개 스킬 설치도 기록합니다. `coco-whichskill` 자체의 실행 연동을 시험한 것은 아닙니다.
 
+요청 없이 이름만 호출한 스킬의 [빈 호출 처리 독립 적용 5대화·6턴](bare-invocation/README.md)은 대화 없는 `coco-review`·`coco-build`의 추천 흐름 전환과 번호 선택 후 실행을 확인합니다. 맥락이 정해진 `coco-debug`의 즉시 진행, 제외 대상인 `coco-askme`의 자체 선택 유지, `coco-push`의 절차 실행도 함께 확인합니다. 실제 `/` 메뉴 호출과 Codex 호출은 실행하지 않았습니다.
+
 `coco-askme`의 [독립 적용 3대화·15턴](askme/README.md)은 전체 작업 후보 제시, 부분 복수 선택, 대상 사전 지정, 모르는 답변, 사용자 역질문, 설계 대안 인정, 성능 근거 부족, 도중 범위 변경을 확인합니다. 대상 저장소의 상태 보존도 기록합니다.
 
 `coco-build`의 [Jira 브랜치 규칙 확인](build-branches.md)은 한글·괄호가 있는 이름의 실제 생성, 유효하지 않은 후보와 중복 이름의 Git 거절, 사용자 파일 보존을 기록합니다. Jira 조회나 에이전트의 질문 행동을 실행 검증한 것은 아닙니다.
