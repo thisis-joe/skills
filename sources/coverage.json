@@ -139,7 +139,8 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-clarify/SKILL.md",
-        "skills/_coco-shared/advanced/clarify.md"
+        "skills/_coco-shared/advanced/clarify.md",
+        "skills/_coco-shared/advanced/clarify.md#grill-mode"
       ]
     },
     {
@@ -733,7 +734,8 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-clarify/SKILL.md",
-        "skills/_coco-shared/advanced/clarify.md"
+        "skills/_coco-shared/advanced/clarify.md",
+        "skills/_coco-shared/advanced/clarify.md#grill-mode"
       ]
     },
     {
@@ -752,7 +754,8 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-clarify/SKILL.md",
-        "skills/_coco-shared/advanced/clarify.md"
+        "skills/_coco-shared/advanced/clarify.md",
+        "skills/_coco-shared/advanced/clarify.md#grill-mode"
       ]
     },
     {
