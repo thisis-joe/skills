@@ -196,7 +196,14 @@ VERIFY_CORE_ENTRY = (
     'live service, account or persistent state, designing behavioral checks',
     'once read, the whole core applies even if no mode matches',
 )
-VERIFY_CORE_ROUTER = 'Once loaded, apply the entire core even without module matches.'
+AUTOMATE_CORE_ENTRY = (
+    'Read the [automation core](../_coco-shared/advanced/automate.md) before preparing or changing '
+    'anything that runs on a schedule or trigger, runs unattended, retries, or writes externally',
+    'once read, the whole core applies even if no mode matches',
+)
+CORE_ROUTER = 'Once loaded, apply the entire core even without module matches.'
+# Both routers' cores must load wherever their rules matter, not only on a module match.
+CORE_LOADING = {'verify': VERIFY_CORE_ENTRY, 'automate': AUTOMATE_CORE_ENTRY}
 
 PREMISE_ENTRY = ('two fixes sharing one premise fail the same gate', 'before any third fix',
                  '](../_coco-shared/advanced/debug.md#test-competing-causes)')
@@ -292,14 +299,15 @@ def inspect_source_fidelity(root=ROOT):
             elif heading and heading not in headings(module.read_text()):
                 fail('advanced-trigger-target', '%s: %s' % (name, target))
 
-    # 2. The verify core loads where its rules matter and applies once loaded.
-    verify_entry = loading_sentence(entry('verify'))
-    for phrase in VERIFY_CORE_ENTRY:
-        if phrase not in verify_entry:
-            fail('verify-core-entry', phrase)
-    selection = sections((advanced / 'verify.md').read_text()).get('Mode selection', '')
-    if VERIFY_CORE_ROUTER not in selection:
-        fail('verify-core-router', VERIFY_CORE_ROUTER)
+    # 2. Split-router cores load where their rules matter and apply once loaded.
+    for name, phrases in CORE_LOADING.items():
+        sentence = loading_sentence(entry(name))
+        for phrase in phrases:
+            if phrase not in sentence:
+                fail('core-entry', '%s: %s' % (name, phrase))
+        selection = sections((advanced / (name + '.md')).read_text()).get('Mode selection', '')
+        if CORE_ROUTER not in selection:
+            fail('core-router', name)
 
     # 3. pstack attack-the-premise is routed from the debug procedure.
     procedure = sections(entry('debug')).get('Procedure and output', '')
@@ -414,7 +422,18 @@ class SourceFidelityTests(unittest.TestCase):
     def test_conditional_only_verify_core_is_detected(self):
         root = self.isolated_package()
         self.edit(root / 'skills/coco-verify/SKILL.md', VERIFY_CORE_ENTRY[0], 'Read the core when needed')
-        self.assert_detected(root, 'verify-core-entry')
+        self.assert_detected(root, 'core-entry')
+
+    def test_conditional_only_automate_core_is_detected(self):
+        root = self.isolated_package()
+        self.edit(root / 'skills/coco-automate/SKILL.md', AUTOMATE_CORE_ENTRY[0], 'Read the core when needed')
+        self.assert_detected(root, 'core-entry')
+
+    def test_unqualified_core_claim_in_router_is_detected(self):
+        root = self.isolated_package()
+        self.edit(root / 'skills/_coco-shared/advanced/automate.md', CORE_ROUTER,
+                  'Apply the common contract and entire core even without matches.')
+        self.assert_detected(root, 'core-router')
 
     def test_unrouted_premise_rule_is_detected(self):
         root = self.isolated_package()

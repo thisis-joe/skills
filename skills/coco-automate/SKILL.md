@@ -8,7 +8,7 @@ license: MIT
 
 Create scoped, resumable automation with explicit activation and effect boundaries.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for CI/deployment, sustained execution, webhook/bot work, report intake (setup/triage/fix), manual setup wizards, and workflow specifications. If any applies or is unclear, read the [advanced core and mode selection](../_coco-shared/advanced/automate.md) and all matching modules before dependent work.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Read the [automation core](../_coco-shared/advanced/automate.md) before preparing or changing anything that runs on a schedule or trigger, runs unattended, retries, or writes externally, or when any mode below applies; once read, the whole core applies even if no mode matches. A one-off local helper run by hand with no retries or external effects needs only this entrypoint. Initially and on new scope, risk, state, or missing prerequisites, check for CI/deployment, sustained execution, webhook/bot work, report intake (setup/triage/fix), manual setup wizards, and workflow specifications. If any applies or is unclear, read the core's mode selection and all matching modules before dependent work.
 
 ## Procedure and output
 
