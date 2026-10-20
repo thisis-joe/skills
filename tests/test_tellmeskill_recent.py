@@ -190,7 +190,7 @@ class RecentSkillTests(unittest.TestCase):
             claude_command('model', stamp(0, 1)),
         ])
         argv = shlex.split(commands[0])[2:]
-        replacements = {'<claude|codex>': 'claude', '<current-directory>': str(self.workspace),
+        replacements = {'<claude|codex>': 'claude', '<project-directory>': str(self.workspace),
                         '<catalog-identifiers>': 'coco-build,coco-tellmeskill'}
         argv = [replacements.get(arg, arg) for arg in argv]
         self.assertFalse([arg for arg in argv if arg.startswith('<')], argv)

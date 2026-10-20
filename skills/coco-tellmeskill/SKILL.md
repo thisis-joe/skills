@@ -8,7 +8,7 @@ license: MIT
 
 Help the user find and select a skill, then explain it from its source in the user's language. The default flow is **recent skills → complete grouped list when none is chosen → explanation length → common explanation format**. Localize prompts, option names, and output labels; the wording below is in English for illustration.
 
-Every choice offered at any stage carries a concise description: one short line saying what that option is or does.
+Every choice offered at any stage carries a concise description: one short line saying what that option is or does. At every question, use an available question tool when all options fit it; otherwise ask in the final message and end the turn.
 
 ## 1. Target selection
 
@@ -20,7 +20,7 @@ An invocation that names a target skips to explanation length. One that asks to 
 
 ### Recent skills
 
-1. **Collect.** Take skills invoked earlier in the current conversation, latest first. Then run the [recent-skill helper](tools/recent_skills.py) from this skill's directory: `python3 tools/recent_skills.py --runtime <claude|codex> --workspace <current-directory> --exclude coco-tellmeskill --available <catalog-identifiers>`, passing the catalog identifiers comma-separated. It reads only skill-invocation markers in the current runtime's own session records for this workspace from the last 30 days, and prints identifiers with last-use times, never prompt text. Do not search other workspaces, runtimes, or files to fill a short result.
+1. **Collect.** Skills invoked earlier in the current conversation count as the latest uses. Then run the [recent-skill helper](tools/recent_skills.py) with this skill's directory as the working directory: `python3 tools/recent_skills.py --runtime <claude|codex> --workspace <project-directory> --exclude coco-tellmeskill --available <catalog-identifiers>`, where `<project-directory>` is the session's own working directory, not this skill's, and the catalog identifiers are comma-separated. It reads only skill-invocation markers in the current runtime's own session records for this workspace from the last 30 days, and prints identifiers with last-use times, never prompt text. Do not search other workspaces, runtimes, or files to fill a short result.
 2. **Offer.** Keep catalog identifiers only, without duplicates or this skill, latest use first, at most three. Offer each as an option: the exact identifier with a concise purpose. Add a last option, **Show all skills**, described as "Browse every available skill grouped by purpose." Ask, "Which skill would you like explained?" and wait.
 3. **Resolve.** A recent option or another exact catalog name selects that target. An ambiguous name gets matching candidates and the same question. **Show all skills**, "none of these," a reply that names no skill, or no choice moves to the complete grouped list; do not repeat the recent options.
 
@@ -32,9 +32,9 @@ Classify every catalog entry into one purpose group using the [skill groups](ref
 
 Then ask, "Which skill would you like explained? Choose its number or skill name," and wait.
 
-### At either question
+### Selection rules
 
-Use an available question tool when every option fits it, otherwise ask in the final message and end the turn. Do not ask about explanation length simultaneously or explain individual skills before target selection. Retain the most recently displayed number-to-name mapping across turns.
+Do not ask about explanation length simultaneously or explain individual skills before target selection. Retain the most recently displayed number-to-name mapping across turns.
 
 ## 2. Explanation length
 
