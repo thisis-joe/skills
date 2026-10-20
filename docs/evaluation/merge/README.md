@@ -10,7 +10,7 @@
 
 평가 대상은 커밋 `5bce59b`의 `SKILL.md`(sha256 `9e79866f…`), `references/forge-merge.md`(`b97f5d74…`), `tools/merge_preflight.py`(`37cff518…`)입니다.
 
-## 결과
+## 1차 결과
 
 | 사례 | 사용자 요청 | 확인한 사실 | 판정 |
 |---|---|---|---|
@@ -26,6 +26,17 @@
 - 사전 점검 도구가 forge의 브랜치 업데이트 머지 커밋을 막지는 않았지만 `own`(이 브랜치 작업) 목록에 넣었습니다. 새 PR 본문에 그 커밋이 작업처럼 적힐 수 있어 커밋 `4dff8b7`에서 제외하고 테스트를 추가했습니다. 위 결과는 수정 전 도구로 실행한 것입니다.
 - failing-check 에이전트는 가짜 `gh`의 체크 링크 번호가 호출마다 달라진다고 보고했습니다. 파이썬 `hash()` 무작위화 때문인 fixture 결함이라 `zlib.crc32`로 고정했습니다. 판정에는 영향이 없습니다.
 - 성공 사례의 확인 단계에서 `git fetch origin refs/heads/main`이 원격 추적 ref `origin/main`을 함께 갱신했습니다. 로컬 브랜치와 작업 트리는 바뀌지 않았고, 스킬이 허용한 확인 절차의 범위입니다.
+
+## 2차: PR의 대상 브랜치로 머지
+
+1차 이후 사용자 요청에 따라 대상 규칙을 바꿨습니다(커밋 `12ef727`). 이제 PR/MR의 base 브랜치가 머지 대상이고, `develop`처럼 디폴트가 아닌 대상도 묻지 않고 그대로 머지합니다. 디폴트 브랜치는 이 스킬이 PR/MR을 새로 열 때만 대상으로 씁니다. 그래서 1차 develop-carry의 "대상을 바꾸지 않고 질문" 판정은 이전 규칙에 대한 기록입니다. 같은 방식으로 새 에이전트 2개를 실행했고, 대상 문서는 `SKILL.md`(sha256 `da2b546e…`), `references/forge-merge.md`(`d01c17f7…`), `tools/merge_preflight.py`(`d55cd080…`)입니다. 원본은 [round2/](round2/)에 있습니다.
+
+| 사례 | 사용자 요청 | 확인한 사실 | 판정 |
+|---|---|---|---|
+| develop-target: 1차 develop-carry와 같은 저장소, draft PR #8이 `develop` 대상 | 푸시한 PR 머지해줘 | 질문 없이 `gh pr ready 8` 후 `gh pr merge 8 --merge --match-head-commit <푸시한 head>` 1회. `gh pr edit` 없음. `develop`이 head를 포함하고 `main`은 그대로라 미출시 커밋이 `main`에 들어가지 않음 | 통과 8/8 |
+| main-carry: 같은 브랜치의 PR #10이 `main` 대상, 체크·승인 통과 | 푸시한 PR 머지해줘 | forge 쓰기 0회, 원격 ref 불변. `integration_commits_carried`로 develop 미출시 커밋을 짚고 포함 머지·`coco-ship`·`coco-push` 재정리·develop 명시 중 선택을 질문 | 통과 4/4 |
+
+바뀐 규칙에서도 대상 브랜치에 다른 개발 브랜치의 미출시 커밋이 섞이면 멈추는 보호는 유지됩니다. 요청에 다른 대상 브랜치를 명시해 대상을 바꾸는 경로는 실행하지 않았습니다.
 
 ## 한계
 

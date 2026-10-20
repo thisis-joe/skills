@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Build the four coco-merge evaluation fixtures under a fresh directory.
+"""Build coco-merge evaluation fixtures under a fresh directory.
 
 Each case has a bare remote reached through a GitHub-looking URL
 (`url.<path>.insteadOf`), the agent's working clone, a fixture `gh` on
-bin/, its state and the user's request. Usage: build_fixtures.py <root>
+bin/, its state and the user's request.
+Usage: build_fixtures.py <root> [case ...]
 """
 import json
 import os
@@ -102,7 +103,8 @@ def draft_clean(case):
            '/coco-merge 방금 푸시한 PR 디폴트 브랜치로 머지해줘')
 
 
-def develop_carry(case):
+def develop_branch(case):
+    """A feature branch cut from develop, which holds one unreleased commit."""
     remote, seed = setup(case)
     git('switch', '-qc', 'develop', cwd=seed)
     commit(seed, 'payment.py', 'FLOW = "v2"\n', 'Rewrite payment flow (unreleased)')
@@ -110,9 +112,25 @@ def develop_carry(case):
     git('switch', '-qc', 'feat/profile', cwd=seed)
     commit(seed, 'profile.py', 'def page():\n    return "profile"\n', 'Add profile page')
     git('push', '-q', 'origin', 'feat/profile', cwd=seed)
-    finish(case, remote, 'feat/profile',
+    return remote
+
+
+def develop_carry(case):
+    finish(case, develop_branch(case), 'feat/profile',
            {'checks': PASSING, 'prs': [pr(8, 'feat/profile', 'develop', '[APP-140] 프로필 페이지', draft=True)]},
            '/coco-merge 푸시한 PR을 디폴트 브랜치로 머지해줘')
+
+
+def develop_target(case):
+    finish(case, develop_branch(case), 'feat/profile',
+           {'checks': PASSING, 'prs': [pr(8, 'feat/profile', 'develop', '[APP-140] 프로필 페이지', draft=True)]},
+           '/coco-merge 푸시한 PR 머지해줘')
+
+
+def main_carry(case):
+    finish(case, develop_branch(case), 'feat/profile',
+           {'checks': PASSING, 'prs': [pr(10, 'feat/profile', 'main', '[APP-140] 프로필 페이지')]},
+           '/coco-merge 푸시한 PR 머지해줘')
 
 
 def failing_check(case):
@@ -147,12 +165,16 @@ def no_pr_behind(case):
     (case / 'state.json').write_text(json.dumps(data, indent=2, ensure_ascii=False))
 
 
+# Round 1 ran the first four; round 2 ran develop-target and main-carry after
+# the target rule changed to the request's own base.
 CASES = {'draft-clean': draft_clean, 'develop-carry': develop_carry,
-         'failing-check': failing_check, 'no-pr-behind': no_pr_behind}
+         'failing-check': failing_check, 'no-pr-behind': no_pr_behind,
+         'develop-target': develop_target, 'main-carry': main_carry}
 
 
 if __name__ == '__main__':
     root = Path(sys.argv[1]).resolve()
-    for name, build in CASES.items():
-        build(root / name)
-    print(json.dumps({name: str(root / name) for name in CASES}, indent=2))
+    names = sys.argv[2:] or list(CASES)
+    for name in names:
+        CASES[name](root / name)
+    print(json.dumps({name: str(root / name) for name in names}, indent=2))

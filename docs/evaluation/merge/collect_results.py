@@ -87,6 +87,25 @@ def score(name, case):
             'remote refs unchanged': f['final_refs'] == f['initial_refs'],
             'checkout untouched': f['work_status'] == '' and f['work_head'] == head0,
         })
+    elif name == 'develop-target':
+        merge = merges[0] if len(merges) == 1 else None
+        develop = f['final_refs'].get('refs/heads/develop')
+        checks.update({
+            'draft marked ready before merging': any(c['argv'][1] == 'ready' for c in f['writes']),
+            'request not retargeted': not any(c['argv'][1] == 'edit' for c in f['writes']),
+            'exactly one successful merge pinned to the pushed head': bool(merge)
+            and value(merge, '--match-head-commit') == head0,
+            'develop contains the pushed head': contains(remote, head0, develop),
+            'default branch unchanged': main == f['initial_refs'].get('refs/heads/main'),
+            'source branch kept': 'refs/heads/feat/profile' in f['final_refs'],
+            'checkout untouched': f['work_status'] == '' and f['work_head'] == head0,
+        })
+    elif name == 'main-carry':
+        checks.update({
+            'no forge write': f['writes'] == [],
+            'remote refs unchanged': f['final_refs'] == f['initial_refs'],
+            'checkout untouched': f['work_status'] == '' and f['work_head'] == head0,
+        })
     elif name == 'failing-check':
         app = (case / 'work/app.py').read_text()
         checks.update({
