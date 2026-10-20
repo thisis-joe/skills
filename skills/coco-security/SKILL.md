@@ -20,3 +20,13 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Initiall
 6. Hand scoped implementation and regression criteria to build, and evidence to review/ship. Document residual risk and any unavailable assessment rather than issuing an unsupported safety claim.
 
 Return: threat/control/test matrix, concrete findings or defenses, verified abuse cases and residual risk.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "It's internal" or "no one would try this": internal tools get compromised and scanners find obscure paths.
+- "The framework handles it" or "the audit passed": frameworks need correct use; audits miss new malicious packages and unreviewed install scripts.
+- "It's just model output": treat it as untrusted input before queries, DOM, shell or eval.
+- "Collect it now, we might need it": data without purpose, retention and deletion path is breach scope.
+- User input reaching queries, shell or HTML; endpoints without authorization; wildcard CORS; per-instance rate limits; or a destructive target guarded only by a path-shape check.

@@ -20,3 +20,13 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Initiall
 6. Return findings and verdicts to the execution owner. Do not modify files or commit during review. Any later code change invalidates the affected portion of this scope's approval.
 
 Return: frozen scope, per-axis verdicts/findings, checks actually examined and remaining limitations.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "It works" or "the tests pass, so it's good": tests miss architecture, security and readability; judge every axis.
+- "It's just a version bump": read the changelog; one dependency per change keeps cause and revert clean.
+- "We'll clean it up later" or a bare "LGTM": required fixes land before merge, with evidence of actual review.
+- A refactor that moves code without reducing concepts, or a change that grows an already-large file or duplicates a canonical helper.
+- Reviewer output trusted without rereading the artifact, the author's claim passed to the reviewer, or review rerun on an unchanged artifact.

@@ -20,3 +20,12 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Initiall
 6. Record the spec reference/version for downstream work. Publication to a tracker follows the user's destination and authorization; local drafting does not imply posting permission.
 
 Return: authoritative spec and explicit open issues. A request only to write a spec ends after that output; existing implementation authorization may continue to the next appropriate step.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "This is simple, I don't need a spec": it still needs acceptance criteria; a two-line spec is fine.
+- "I'll write the spec after I code it": that is documentation; the value is clarity before code.
+- "I'll decompose during planning": capability boundaries and dependency direction come before an oversized spec.
+- Implementing behavior no spec or task mentions, or making architectural decisions without recording them.

@@ -20,3 +20,13 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Initiall
 6. Keep required specialist verdicts distinguishable. When independent reviewers cannot run, state degraded coverage rather than pretending a parallel review happened.
 
 Return: ready/blocked decision with reasons and residual risks, candidate ID, rollout/recovery plan, and actual publication/deployment state if performed.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "It works in staging, it'll work in production": production data and traffic differ; monitor after deploy.
+- "Rolling back is admitting failure": shipping a known-broken feature is the failure.
+- "The error rate looks fine": check budget burn rate against baseline, not only the current threshold.
+- "It's just a small fix, bump the patch": a behavior consumers rely on makes it a breaking change; write the consumer-facing changelog entry with the change.
+- Deploying without a tested rollback or monitoring, flags without owner or expiry, or force-pushing shared branches.

@@ -19,3 +19,13 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Initiall
 5. Hand off only the next needed purpose. A specialist adds checks to the route; it does not start every other specialist.
 
 Return: selected route and reason, authoritative artifacts, actual commands and remaining decisions. Setup output includes enforced versus measured-only thresholds and execution points.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "We'll add constraints once the code settles": code settles around whatever was allowed.
+- "The tests are the constraints": a suite agrees with itself; add an external or independently owned check where available.
+- "We can't hit that target": measure today's level and hold it as a ratchet.
+- A budget the codebase fails today with no plan, or a number with no tool enforcing it.
+- Slow checks in the edit loop that invite bypass flags, or an exception without an owner and review date.

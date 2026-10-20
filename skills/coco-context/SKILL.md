@@ -20,3 +20,12 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Initiall
 6. Profile-only forensics uses derived metadata and citations without copying unrelated private content. Cross-tool handoff adapts to available capabilities rather than forcing a particular model or agent product.
 
 Return: compact resumable packet or evidence trail, current verification limits and next permitted action.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "More context is better" or "the window is huge": load only what the next action needs; focused context outperforms.
+- Quality drifting as the session grows: reduce failed attempts, superseded drafts and verbose output to conclusions plus pointers.
+- Invented APIs or imports, or reimplemented utilities that already exist: reread actual code and conventions before continuing.
+- The same correction repeated because a project convention is written nowhere agents read: propose the missing rule instead of fixing by hand each time.

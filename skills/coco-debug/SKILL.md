@@ -20,3 +20,13 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Initiall
 6. If two fixes sharing one premise fail the same gate, write that premise down and test it with an observation that would differ if it were false before any third fix, following the [premise rule](../_coco-shared/advanced/debug.md#test-competing-causes). Remove owned temporary probes, preserve useful evidence and hand the verified fix to the build owner for review/commit/state. After repeated inconclusive attempts, report what is needed to proceed.
 
 Return: reproducible invocation and observed failure, supported cause, fix/regression evidence, cleanup result and remaining uncertainty.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "I know what the bug is, I'll just fix it": reproduce first; an unreproduced fix is a guess.
+- "The failing test is probably wrong": prove it, then fix the test; never skip it.
+- "It's flaky, ignore it": measure the failure rate and pin conditions; intermittency hides real defects.
+- "It works now" without a supported mechanism, or several unrelated edits made while debugging.
+- A third fix resting on a premise two fixes already failed on: test the premise first (step 6).

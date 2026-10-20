@@ -20,3 +20,13 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Initiall
 6. Run focused and required regression checks and compare relevant runtime behavior. Hand the scoped change through build/review; remove experiments that fail to buy simpler maintenance.
 
 Return: what complexity disappeared, preserved contracts, migrated/removed call sites and regression evidence.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "Fewer lines is simpler": simplicity is comprehension speed, not line count.
+- "This abstraction might be useful later": remove speculative abstraction; re-add it when needed.
+- "The original author must have had a reason": check history first, then decide; accumulated complexity often has none.
+- A simplification that needs tests changed to pass, or error handling removed to look cleaner.
+- Simplifying code you do not understand, or batching many simplifications into one hard-to-review commit.

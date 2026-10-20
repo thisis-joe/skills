@@ -19,3 +19,13 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Initiall
 5. For shared APIs, apply compatibility and idempotency modes from the advanced reference. For structural redesign, identify callers to migrate and obsolete APIs to remove.
 
 Return: selected interface, alternatives and trade-offs, test surface and implementation constraints. Material new product decisions remain explicit; design does not silently expand implementation scope.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "Nobody uses that undocumented behavior": observable behavior is a contract someone depends on.
+- "We'll add pagination, versioning or docs when needed": design list growth, error shape and extension now.
+- "Accepting an idempotency key is enough" or "the queue is exactly-once": store the key with its result and design for at-least-once delivery.
+- A check-then-insert key guard, a key regenerated per attempt, or a reused key with a different body silently returning the first response.
+- Response shapes or error formats that vary by endpoint or condition, or validation scattered through internal code instead of at boundaries.

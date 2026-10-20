@@ -20,3 +20,13 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Initiall
 6. If browser evidence cannot be obtained, report that acceptance as unavailable and retain reproducible steps for the next check.
 
 Return: implemented states, relevant screenshots/runtime observations, accessibility checks and unresolved limitations.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "Accessibility is a nice-to-have" or "we'll make it responsive later": retrofitting costs far more; build both in now.
+- "The design isn't final" or "it's just a prototype": use the existing design system; prototypes become production.
+- Missing loading, empty or error states, or keyboard navigation never tested.
+- Color as the only status cue, or inline styles and arbitrary pixel values outside the token system.
+- A generic "AI look" (stock gradients, oversized cards, template layouts) instead of the product's visual language.

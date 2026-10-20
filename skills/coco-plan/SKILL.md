@@ -20,3 +20,13 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Initiall
 6. State single-task or continuous execution and preserve approval already given. Surface new material decisions and task-state conflicts; publish tickets only within the authorized destination/scope.
 
 Return: task graph, acceptance and verification per task, risk/rollback checkpoints, plan reference and authoritative state location.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "The tasks are obvious" or "I can hold it in my head": write them; written plans survive sessions and compaction.
+- "The old plan is stale, I'll replace it": unchecked tasks may be in flight elsewhere; stop and ask.
+- Tasks without acceptance or verification, or no checkpoints between them.
+- Task status kept in a local file while an external tracker is designated, or split across both.
+- Every task oversized, or dependency order never considered.

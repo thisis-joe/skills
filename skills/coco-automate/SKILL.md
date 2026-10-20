@@ -20,3 +20,13 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Initiall
 6. Test duplicates, crashes, malformed/untrusted input, missing tools, exhausted retries and resumption. Return the concrete artifact and activation requirements.
 
 Return: runnable automation artifacts, permissions/effects inventory, tests and recovery evidence, activation state and outstanding approvals.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "This change is trivial, skip CI" or "CI is too slow": optimize the pipeline; never skip it.
+- "The test is flaky, just rerun": fix the flakiness; flakes mask real defects.
+- Tests disabled or failures silenced to get a green pipeline.
+- Production deploys without staging verification or a rollback mechanism.
+- Secrets in code or CI configuration instead of the secret store.

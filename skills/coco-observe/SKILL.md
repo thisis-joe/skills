@@ -20,3 +20,13 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Initiall
 6. Connect validated signals and release/rollback criteria to ship. Publishing alert rules or sending notifications follows existing authorization.
 
 Return: operational question-to-signal map, schema/cardinality/privacy decisions, verification evidence and runbook links.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "I'll add logging after it works": the first incident is the most expensive time to find you are blind.
+- "More logs means more observability" or "console.log for now": emit a few structured, queryable events instead.
+- User IDs, raw URLs or error text as metric labels.
+- Latency as an average without percentiles, or paging on causes such as CPU while user-facing errors go unwatched.
+- Alerts acknowledged daily without action, or secrets, tokens or full request bodies in logs.
