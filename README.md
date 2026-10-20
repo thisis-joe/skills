@@ -37,7 +37,7 @@ npx --yes @thisis-joe/coco-skills@latest install --runtime claude
 | 상황 | 호출 |
 |---|---|
 | 어떤 스킬을 써야 할지 모름 | `coco-start` + 하려는 일 |
-| 스킬 목록과 설명 보기 | `coco-tellmeskill` |
+| 최근 쓴 스킬이나 전체 스킬 목록에서 골라 설명 보기 | `coco-tellmeskill` |
 | 고른 스킬에 뭐라고 요청할지 추천받기 | `coco-whattosay coco-review` |
 
 Codex는 `$`, Claude Code는 `/`를 붙입니다.
@@ -77,7 +77,7 @@ Codex는 `$`, Claude Code는 `/`를 붙입니다.
 | | `coco-context` | 인수인계, 중단 후 재개, 긴 작업 기록 |
 | | `coco-retro` | 회고, 반복 실패의 구조적 개선 |
 | | `coco-triage` | 이슈 분류·중복 확인·작업 준비 상태 |
-| 도우미 | `coco-tellmeskill` | 스킬 목록과 간단/상세 설명 |
+| 도우미 | `coco-tellmeskill` | 최근 사용 스킬 3개 → 고르지 않으면 묶음별 전체 목록, 선택지마다 한 줄 설명, 간단/상세 설명 |
 | | `coco-whattosay` | 고른 스킬에 맞는 요청문 추천 후 선택 실행 |
 | | `coco-askme` | 작업한 코드를 질문으로 복습 |
 | | `coco-updateskill` | 기존 스킬을 팀 규칙에 맞게 수정·설치 |
