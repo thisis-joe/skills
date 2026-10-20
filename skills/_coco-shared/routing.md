@@ -27,7 +27,8 @@ Read only the selected entrypoint and the conditional reference relevant to the 
 | Logs, metrics, traces or operational diagnosis | observe | Useful signals and alerts, bounded cardinality and verified incident visibility |
 | CI, recurring automation, bots or reusable verification helpers | automate | Idempotent scoped automation, tests and explicit activation boundary |
 | PR preparation or release readiness | ship | Evidence-backed ready/blocked decision, release/rollback steps; deployment state separately |
-| ADR, API documentation, explanation, teaching or prose | docs | Audience-appropriate artifact preserving technical truth and uncertainty |
+| ADR, README, API reference, guide, runbook, agent instructions or prose for other readers | docs | Convention-following project document with verified commands, links and examples |
+| Explanation for the user's own understanding, personal study notes or a learning workspace | learn | Plain explanation or short uniform notes that pass the note checker |
 | Context window, handoff, recall or long-run decision trail | context | Compact resumable packet and resolvable evidence pointers |
 | Retrospective, evaluation or durable lessons | retro | Verified failure pattern, targeted structural improvement and a checking scenario |
 | Incoming report, issue prioritization or autonomous issue selection | triage | Evidence-backed disposition, deduplication and dependency/ownership-aware work choice |

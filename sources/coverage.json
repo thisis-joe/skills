@@ -777,7 +777,7 @@
     },
     {
       "path": "skills/productivity/teach/SKILL.md",
-      "family": "docs",
+      "family": "learn",
       "disposition": "reference",
       "essential_rules": [
         "Maintain a multi-session learning workspace grounded in one concise MISSION.md with real-world success/constraints; track curated annotated RESOURCES, learning records, canonical glossary, lessons, references, assets and user NOTES.",
@@ -796,8 +796,9 @@
       "adaptation": "Preserve as conditional MALJ document/learning reference, not a mandatory structure for ordinary explanations. Clarify source tension: lessons can be one HTML unit while linked shared assets require the workspace to travel with them. External resource/health-sensitive facts need current primary-source verification; joining or messaging a community is not authorized by a teaching request.",
       "author": "matt",
       "implemented_references": [
-        "skills/coco-docs/SKILL.md",
-        "skills/_coco-shared/advanced/docs.md"
+        "skills/coco-learn/SKILL.md",
+        "skills/_coco-shared/advanced/learn.md",
+        "skills/coco-learn/references/note-template.md"
       ]
     },
     {
@@ -1890,7 +1891,7 @@
     },
     {
       "path": "pstack/skills/bro/SKILL.md",
-      "family": "docs",
+      "family": "learn",
       "disposition": "merged",
       "essential_rules": [
         "Restate the immediately preceding answer in familiar everyday words without jargon.",
@@ -1900,8 +1901,7 @@
       "adaptation": "Plain-language rewrite mode in document; no separate top-level alias is necessary.",
       "author": "pstack",
       "implemented_references": [
-        "skills/coco-docs/SKILL.md",
-        "skills/_coco-shared/advanced/docs.md"
+        "skills/coco-learn/SKILL.md"
       ]
     },
     {
@@ -2886,7 +2886,7 @@
     },
     {
       "path": "pstack/skills/teach/SKILL.md",
-      "family": "docs",
+      "family": "learn",
       "disposition": "adapted",
       "essential_rules": [
         "Choose what the user needs to understand from their purpose and known context; combine runtime mechanism and historical rationale while preserving evidence confidence.",
@@ -2902,8 +2902,7 @@
       "adaptation": "Concrete teaching mode in document backed by research; no mandatory how/why agent invocations or image generation. Preserve confidence qualifications instead of styling them away.",
       "author": "pstack",
       "implemented_references": [
-        "skills/coco-docs/SKILL.md",
-        "skills/_coco-shared/advanced/docs.md"
+        "skills/coco-learn/SKILL.md"
       ]
     },
     {

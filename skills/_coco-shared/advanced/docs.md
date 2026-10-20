@@ -1,10 +1,10 @@
-# Documentation, writing and learning procedures
+# Documentation and writing procedures
 
 Apply the [common contract](../contracts.md). Use [research](research.md) for facts and [context](context.md) for state ownership. Choose a mode by the reader's purpose; do not make every writing request an interactive course or interview.
 
 ## Input and selection
 
-Retain audience, purpose, prior knowledge, source artifacts, required facts/uncertainty, destination and edit scope. Read the live target before every change and preserve user edits. Select technical documentation, decision record, prose repair, agent instructions, questionnaire, course exercises, learning workspace, or opt-in experimental writing collaboration.
+Retain audience, purpose, prior knowledge, source artifacts, required facts/uncertainty, destination and edit scope. Read the live target before every change and preserve user edits. Select technical documentation, decision record, prose repair, agent instructions, questionnaire, course exercises, or opt-in experimental writing collaboration. Explanations for the user's own understanding and personal learning notes belong to [learning procedures](learn.md).
 
 ## Technical documents and prose repair
 
@@ -13,8 +13,7 @@ Retain audience, purpose, prior knowledge, source artifacts, required facts/unce
 3. Verify symbols, flags, commands, paths, counts, units, links, conditions and examples against their landing revision. Provide a regeneration method for generated facts.
 4. Name the actor, place conditions before actions, use one stable term and split ambiguous compound instructions. Favor complete sentences over cryptic fragments.
 5. Remove filler, promotional certainty, vague attribution and repeated summaries while preserving necessary qualifiers, constraints and technical repetition.
-6. A plain-language repitch preserves the preceding answer's meaning, restores missing context and uses familiar domain language; it need not add more depth.
-7. Check the edited text against its sources and original: clearer prose must not introduce a stronger guarantee or invent an example to cover missing evidence.
+6. Check the edited text against its sources and original: clearer prose must not introduce a stronger guarantee or invent an example to cover missing evidence.
 
 For public interfaces document inputs, outputs, errors, ordering, compatibility and a real usage example. Update README setup/commands or changelog only where the behavior changed. Comments explain nonobvious intent or constraints; delete obsolete commented-out code instead of narrating self-explanatory code.
 
@@ -42,25 +41,6 @@ Use when someone else holds required knowledge. Establish who receives it, what 
 Write purpose, sender/recipient/use, short context, deadline/effort and answer guidance, then themed questions in importance order. Each question asks one idea and has an answer stub; explain why only when misreading is likely. Accept partial/unknown answers and end with a catch-all.
 
 Check every requested decision/fact has a question. Save and report the artifact; sending it requires separate direct authorization. Questionnaire completion is coverage of the knowledge gap, not receipt of answers.
-
-## Explain or teach now
-
-Start from the learner's purpose and known context. Explain the smallest complete definition, connect it to the actual system and combine mechanism with evidenced rationale. Reveal depth at the learner's pace; avoid obligatory quizzes or artificial pacing. Use code, debugger evidence or an incrementally built diagram only when it improves understanding.
-
-## Opt-in multi-session learning workspace
-
-Reuse existing learning files. With no convention, use `MISSION.md`, annotated `RESOURCES.md`, `NOTES.md`, sequential `learning-records/NNNN-slug.md`, short `lessons/*.html`, quick `reference/*.html`, shared `assets/` and a learned-term glossary. Keep one mission per workspace; unrelated subjects need separate state.
-
-1. Establish one concrete mission with observable success, constraints and exclusions; use existing knowledge records to find the next useful challenge.
-2. Curate annotated high-trust knowledge sources and optional practice communities. Respect a community opt-out; do not join or message one for the learner.
-3. Produce short lessons with one tangible win, only necessary prerequisite knowledge and immediate feedback for practice.
-4. Build retention through retrieval, spacing and interleaving where suitable; momentary fluency is not evidence of lasting understanding.
-5. Reuse shared lesson styles/widgets and maintain linked quick-reference sheets. A lesson plus its shared assets must travel together when exported.
-6. Record demonstrated understanding, stated prior knowledge/depth, corrected misconceptions and mission shifts. Covered material alone is not learned material.
-7. Add glossary terms once understood, revise definitions as understanding develops, and supersede conflicting learning records rather than erasing history.
-8. Make quiz options comparable in length and vary correct-answer position. Confirm a changed mission before letting it redirect future lessons.
-
-Output: mission-aligned lesson/reference and justified learning-state updates. Stop at the requested learning unit; a multi-session goal does not authorize scheduling reminders.
 
 ## Conditional course-exercise scaffolding
 
