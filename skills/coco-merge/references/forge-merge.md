@@ -9,12 +9,12 @@ Apply this only for an actual `coco-merge` execution request. Explaining, review
 ## Forge and target
 
 - Identify the forge from the push remote's host, repository rules and the CLI hosts already configured: `gh` for GitHub, `glab` for GitLab. Do not guess a self-managed host from its name. Use existing authentication only (`gh auth status`, `glab auth status`); never log in, create tokens, print credentials or change Git or forge configuration. Without usable tooling, report `unavailable` and stop.
-- The default branch is the forge's setting, confirmed by `git ls-remote --symref <remote> HEAD`. If the two disagree, report both and ask. The source is the pushed work branch in the push repository; a fork's request is cross-repository, so match the head owner too.
+- The merge target is the PR/MR's base branch, such as `develop`. Only a request this skill opens targets the default branch: the forge's setting, confirmed by `git ls-remote --symref <remote> HEAD`; if the two disagree, report both and ask. The source is the pushed work branch in the push repository; a fork's request is cross-repository, so match the head owner too.
 - Read repository rules (`AGENTS.md`, `CONTRIBUTING`, project docs) for merge method, title and description conventions before acting.
 
 ## Preflight results
 
-Run `python3 <skill-dir>/tools/merge_preflight.py --repo <repo> --remote <remote> --branch <branch> --target <default-branch>`. Pass `--integration-base <dev-or-develop>` when the branch was synchronized with one and both exist, `--integration-base none` when the branch never used one, and `--expect-head <forge-head>` once the PR/MR head is known. It reads the remote's current tips, fetches their objects without moving any ref or writing `FETCH_HEAD`, and prints JSON. Exit 0 is `clear`, 1 is `blocked` and 2 means it could not run. Never read 2 as clear.
+Run `python3 <skill-dir>/tools/merge_preflight.py --repo <repo> --remote <remote> --branch <branch> --target <target-branch>`. Pass `--integration-base <dev-or-develop>` when the branch was synchronized with one and both exist, `--integration-base none` when the branch never used one, and `--expect-head <forge-head>` once the PR/MR head is known. It reads the remote's current tips, fetches their objects without moving any ref or writing `FETCH_HEAD`, and prints JSON. Exit 0 is `clear`, 1 is `blocked` and 2 means it could not run. Never read 2 as clear.
 
 | Code | Meaning | Action |
 |---|---|---|
@@ -53,7 +53,7 @@ glab api projects/:id/merge_requests/<iid>
   ```
 
 - **Draft:** mark it ready with `gh pr ready <number>` or `glab mr update <iid> --ready`.
-- **Different target:** run the preflight for its current target too, report both results, and ask whether to merge into that target or retarget to the default branch. Never retarget when the default-branch preflight shows `integration_commits_carried`.
+- **Base other than the default branch:** merge into that base, such as `develop`, without asking. Retarget only when the request explicitly names another target branch and the preflight against that branch is clear; otherwise report its blockers and merge nowhere. Never retarget to get around a blocker.
 - **Several open requests for the branch, or a closed or merged one:** report them and ask; do not reopen or pick one by guess.
 
 ## Gate
@@ -84,7 +84,7 @@ Never pass `--admin`, never approve your own request, and never use `glab mr reb
 
 ## Merge
 
-Choose the method from repository rules; else the only one allowed (`gh repo view --json mergeCommitAllowed,squashMergeAllowed,rebaseMergeAllowed`, GitLab project `merge_method` and `squash_option`); else what recent default-branch history shows (`Merge pull request #N` commits versus `(#N)` squash subjects); else a merge commit.
+Choose the method from repository rules; else the only one allowed (`gh repo view --json mergeCommitAllowed,squashMergeAllowed,rebaseMergeAllowed`, GitLab project `merge_method` and `squash_option`); else what recent target-branch history shows (`Merge pull request #N` commits versus `(#N)` squash subjects); else a merge commit.
 
 ```text
 gh pr merge <number> --merge --match-head-commit <head>
@@ -100,14 +100,14 @@ A rejected merge (moved head, changed checks, a newly required approval) is not 
 ```text
 gh pr view <number> --json state,mergedAt,mergedBy,mergeCommit,autoMergeRequest
 glab api projects/:id/merge_requests/<iid>
-git fetch <remote> refs/heads/<default-branch>
+git fetch <remote> refs/heads/<target-branch>
 git merge-base --is-ancestor <resulting-commit> FETCH_HEAD
 ```
 
-`merged` requires the forge's merged state and the default branch containing the resulting commit: GitHub's `mergeCommit`, or GitLab's `merge_commit_sha`, `squash_commit_sha`, or the pinned head after a fast-forward. An enqueued request or armed auto-merge is `queued`; report what it waits for. A lost response is resolved by reading back, never by merging again. Report whether the source branch still exists, and do not delete it yourself.
+`merged` requires the forge's merged state and the target branch containing the resulting commit: GitHub's `mergeCommit`, or GitLab's `merge_commit_sha`, `squash_commit_sha`, or the pinned head after a fast-forward. An enqueued request or armed auto-merge is `queued`; report what it waits for. A lost response is resolved by reading back, never by merging again. Report whether the source branch still exists, and do not delete it yourself.
 
 ## Other forges and local merges
 
 For another forge, use its documented CLI or API with the same gate, head pinning and readback. If it cannot pin the head, re-read the head immediately before merging and report the remaining race.
 
-Merge locally only when the user explicitly asks for a merge without a forge request. Create a temporary worktree at the fetched default-branch tip so the user's checkout stays untouched, run `git merge --no-ff <head>` there, run the repository's required checks, and push the merge commit normally with one explicit refspec, `<merge-commit>:refs/heads/<default-branch>`. A protection rejection stops the merge; never force. Remove the temporary worktree afterwards.
+Merge locally only when the user explicitly asks for a merge without a forge request. The target is the branch the user named, otherwise the default branch. Create a temporary worktree at the fetched target tip so the user's checkout stays untouched, run `git merge --no-ff <head>` there, run the repository's required checks, and push the merge commit normally with one explicit refspec, `<merge-commit>:refs/heads/<target-branch>`. A protection rejection stops the merge; never force. Remove the temporary worktree afterwards.

@@ -1,4 +1,4 @@
-"""Report what merging a pushed branch into the default branch would land.
+"""Report what merging a pushed branch into its target branch would land.
 
 Fetches objects only: branches, tracking refs, FETCH_HEAD, the index and the
 working tree stay unchanged. Exit 0 clear, 1 blocked, 2 unable to run; never
@@ -153,7 +153,7 @@ def preflight(path, remote=None, branch=None, target=None, integration=None,
         raise PreflightError('invalid remote: %r' % remote)
     target = branch_name(target or remote_default(repo, remote))
     if target == branch:
-        raise PreflightError('the work branch is the default branch; nothing to merge into it')
+        raise PreflightError('the work branch is the target branch; nothing to merge into it')
     wanted = [branch, target]
     if integration not in (None, 'none'):
         wanted.append(branch_name(integration))
@@ -258,7 +258,7 @@ def main():
     parser.add_argument('--repo', default='.')
     parser.add_argument('--remote', help='push remote; default: pushRemote, pushDefault, upstream remote, origin')
     parser.add_argument('--branch', help='pushed work branch; default: current branch')
-    parser.add_argument('--target', help="branch to merge into; default: the remote's default branch")
+    parser.add_argument('--target', help="branch to merge into, normally the PR/MR base; default: the remote's default branch")
     parser.add_argument('--integration-base',
                         help='branch the work was synchronized with; default: remote dev/develop; "none" disables')
     parser.add_argument('--expect-head', help='PR/MR head commit reported by the forge')

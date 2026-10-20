@@ -30,7 +30,7 @@ For implementation work, completion requires acceptance, required checks, requir
 
 `coco-updateskill` owns team skill-maintenance files and their work-unit commits, including validated local installation updates when requested or part of the established workflow. This does not grant product completion-state writes, remote publication or distribution to other users.
 
-On an execution request, `coco-merge` owns landing an already pushed PR/MR in the default branch: opening a missing request, marking a draft ready, one merge-based branch update the forge requires, the merge pinned to the pushed head, and its readback. It applies the forge's checks and protection rules instead of a readiness review; it does not push work commits, resolve conflicts, bypass protection, change ticket state, delete branches unasked, release or deploy. Readiness decisions, dependent stacks and deployment stay with `coco-ship`.
+On an execution request, `coco-merge` owns landing an already pushed PR/MR in its target branch, which is the request's own base: opening a missing request to the default branch, marking a draft ready, one merge-based branch update the forge requires, the merge pinned to the pushed head, and its readback. It applies the forge's checks and protection rules instead of a readiness review; it does not push work commits, resolve conflicts, bypass protection, change ticket state, delete branches unasked, release or deploy. Readiness decisions, dependent stacks and deployment stay with `coco-ship`.
 
 ## Boundaries
 
