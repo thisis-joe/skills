@@ -1,6 +1,6 @@
 # 빈 호출 처리 적용 기록
 
-요청 없이 이름만 호출한 스킬을 `coco-whattosay` 추천 흐름으로 넘기는 규칙을 [공통 계약](../../../skills/_coco-shared/contracts.md#work-input-and-selection)에 추가했다. 대화에서 그 스킬로 할 일이 하나로 정해졌다면 추론한 요청을 밝히고 바로 진행한다. 자체 선택 단계가 있는 `coco-tellmeskill`·`coco-askme`·`coco-updateskill`·`coco-whattosay`와, 이름만 호출해도 단일 절차를 실행하는 `coco-push`는 제외했다. 팀 요청으로 만든 규칙이므로 고정 원문과 원본 대응은 변경하지 않았다.
+요청 없이 이름만 호출한 스킬을 `coco-whattosay` 추천 흐름으로 넘기는 규칙을 [공통 계약](../../../skills/_coco-shared/contracts.md#work-input-and-selection)에 추가했다. 대화에서 그 스킬로 할 일이 하나로 정해졌다면 추론한 요청을 밝히고 바로 진행한다. 자체 선택 단계가 있는 `coco-tellmeskill`·`coco-askme`·`coco-updateskill`·`coco-whattosay`와, 이름만 호출해도 단일 절차를 실행하는 `coco-push`는 제외했다. 이후 사용자 결정에 따라 `coco-merge`도 `coco-push`와 같은 제외 대상에 넣었다([2차 확인](#2차-coco-merge-제외-추가)). 팀 요청으로 만든 규칙이므로 고정 원문과 원본 대응은 변경하지 않았다.
 
 ## 대상과 방법
 
@@ -31,3 +31,16 @@
 ## 범위와 한계
 
 사례마다 한 번씩만 실행했고, 모두 같은 모델의 하위 에이전트였다. 슬래시 명령은 펼친 형태를 흉내 낸 것이다. 실제 Claude Code의 `/` 메뉴 호출이나 Codex의 `$` 호출을 실행한 것은 아니다. `coco-tellmeskill`·`coco-updateskill`·`coco-whattosay`의 빈 호출은 기존 흐름을 바꾸지 않았으므로 실행하지 않았고, 제외 대상의 대표로 `coco-askme`만 확인했다. 대화 맥락 사례는 한 가지 형태뿐이며, 목적이 모호하게 남은 대화는 시험하지 않았다. 개인 설치 폴더 반영은 이 기록에 포함하지 않는다.
+
+## 2차: coco-merge 제외 추가
+
+origin/main을 병합해 `coco-merge`가 들어온 뒤(`03f04a1`), 사용자가 이름만 호출한 `/coco-merge`도 바로 실행하도록 정했다. 규칙 커밋 `db5229d`는 공통 계약의 제외 문장에 `coco-merge`를 더하고, 결정 기록, `coco-merge` 1단계, README, 설계 문서를 같은 내용으로 맞췄다.
+
+방법은 1차와 같다. `db5229d`의 `skills/`를 `git archive`로 내보낸 스냅샷(파일 116개, [snapshot-merge-sha256.txt](snapshot-merge-sha256.txt))과 같은 고정 저장소를 썼다. 사례 두 개는 [setup.py](setup.py)의 `--work <폴더> f-merge-bare g-ship-bare`로 만들었다. 각 사례는 대화를 상속하지 않은 에이전트 하나가 맡았다. 대조군 `coco-ship`은 제외 대상이 아니면서 `coco-merge`와 가장 가까운 스킬이다.
+
+| 사례·입력 | 기대 | 관찰 결과 | 근거 |
+|---|---|---|---|
+| 머지: 대화 없이 `/coco-merge` | 메뉴 없이 절차 실행 | 첫 줄에 현재 브랜치 PR을 대상 브랜치에 머지하는 요청으로 받았다고 밝혔다. 사전 점검 도구를 실행했고 종료 코드 2를 통과로 보지 않았다. 원격·포지가 없어 `blocked`로 멈췄다. PR 생성, 푸시, Git 설정 변경은 없었다. | [응답](responses/f-merge-bare.md) |
+| 출시(대조군): 대화 없이 `/coco-ship` | 추천 흐름, 판정 미시작 | 공통 계약과 `coco-whattosay`를 읽었다. 출시 판정을 시작하지 않고 같은 스킬의 전체 호출문 3개와 추천 이유를 제시한 뒤 선택을 기다렸다. 테스트 실행과 파일 쓰기는 없었다. | [응답](responses/g-ship-bare.md) |
+
+두 저장소 모두 ` M pricing.py` 상태와 커밋 1개 그대로였고 원격 설정도 생기지 않았다. 원격과 포지가 없는 저장소였으므로, 열린 PR을 고르고 ready 전환·체크 대기·머지까지 이어지는 실제 머지 경로는 이번 확인 범위가 아니다. 그 경로는 [coco-merge 평가](../merge/README.md)가 다룬다. 사례마다 한 번씩만 실행했다는 1차의 한계도 그대로다.

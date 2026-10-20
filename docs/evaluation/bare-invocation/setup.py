@@ -1,10 +1,10 @@
 """Build isolated fixture repositories and agent prompts for bare-invocation cases."""
+import argparse
 import re
 import subprocess
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
-SKILLS = BASE / 'snapshot' / 'skills'
 
 README = """# Order pricing
 
@@ -80,17 +80,17 @@ def make_repo(path):
     (path / 'pricing.py').write_text(PRICING_CHANGED)
 
 
-def catalog():
+def catalog(skills):
     rows = []
-    for skill in sorted(SKILLS.glob('coco-*/SKILL.md')):
+    for skill in sorted(skills.glob('coco-*/SKILL.md')):
         text = skill.read_text()
         desc = re.search(r'^description: "(.*)"$', text, re.M).group(1)
         rows.append('- %s: %s' % (skill.parent.name, desc))
     return '\n'.join(rows)
 
 
-def body(name):
-    text = (SKILLS / name / 'SKILL.md').read_text()
+def body(skills, name):
+    text = (skills / name / 'SKILL.md').read_text()
     return text.split('---', 2)[2].lstrip('\n')
 
 
@@ -127,18 +127,29 @@ CASES = {
     'c-askme-bare': ('coco-askme', ''),
     'd-push-bare': ('coco-push', ''),
     'e-build-bare': ('coco-build', ''),
+    # Second round: merge joins push as a skill that runs directly; ship is the nearest non-exempt control.
+    'f-merge-bare': ('coco-merge', ''),
+    'g-ship-bare': ('coco-ship', ''),
 }
 
 
 def main():
-    cat = catalog()
-    for case, (name, history) in CASES.items():
-        repo = BASE / 'repos' / case
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--work', type=Path, default=BASE,
+                        help='folder holding snapshot/skills; repos/ and prompts/ are written here')
+    parser.add_argument('cases', nargs='*', help='cases to build (default: all)')
+    args = parser.parse_args()
+    work = args.work.resolve()
+    skills = work / 'snapshot' / 'skills'
+    cat = catalog(skills)
+    for case in args.cases or CASES:
+        name, history = CASES[case]
+        repo = work / 'repos' / case
         make_repo(repo)
-        prompt = TEMPLATE.format(repo=repo, skills=SKILLS, catalog=cat, history=history,
-                                 name=name, body=body(name))
-        (BASE / 'prompts').mkdir(exist_ok=True)
-        (BASE / 'prompts' / (case + '.md')).write_text(prompt)
+        prompt = TEMPLATE.format(repo=repo, skills=skills, catalog=cat, history=history,
+                                 name=name, body=body(skills, name))
+        (work / 'prompts').mkdir(exist_ok=True)
+        (work / 'prompts' / (case + '.md')).write_text(prompt)
         print(case, repo)
 
 
