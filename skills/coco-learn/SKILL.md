@@ -57,7 +57,7 @@ Localize explanations, note content and section labels to the user's language; t
 
 1. The workspace is always the `TIL/` folder directly under the root of the current Git work tree (`git rev-parse --show-toplevel`); outside a Git work tree, it is `TIL/` under the current working directory. Do not ask for or suggest another location. For an explanation only, no folder is needed.
 2. Create `TIL/` when it does not exist, then set it up as in step 1 of Note.
-3. Tell the user whether `TIL/` is tracked by Git. Do not commit notes or edit ignore rules unless asked.
+3. Inside a Git work tree, always make sure the root `.gitignore` contains a `TIL/` line: create the file or append the line when missing, and say so in one line. If notes under `TIL/` are already tracked, tell the user that ignoring does not untrack them and leave `git rm --cached` to them. Never commit notes.
 
 ## Return
 
