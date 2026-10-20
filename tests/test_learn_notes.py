@@ -156,6 +156,12 @@ class LearnNoteTests(unittest.TestCase):
                    '- [사본](notes/atomic-replace-copy.md) — 사본\n')
         self.assertIn('keep one note per concept', self.check(expect=1))
 
+    def test_title_ending_in_hash_is_not_a_closing_sequence(self):
+        self.edit('notes/atomic-replace.md', 'title: 원자적 파일 교체', 'title: C# 원자적 교체')
+        self.edit('notes/atomic-replace.md', '# 원자적 파일 교체', '# C# 원자적 교체')
+        self.edit('INDEX.md', '[원자적 파일 교체]', '[C# 원자적 교체]')
+        self.assertIn('OK: 2 notes', self.check())
+
     def test_missing_or_malformed_template_is_a_usage_error(self):
         self.edit('TEMPLATE.md', '## 관련\n', '')
         self.assertIn('template needs exactly 5 level-two sections, found 4',

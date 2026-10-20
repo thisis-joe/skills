@@ -18,7 +18,7 @@ STATUSES = ('learning', 'understood', 'review')
 SECTIONS = (('bullets', 2, 5), ('example', 1, 1), ('bullets', 1, 3),
             ('questions', 1, 3), ('links', 0, 5))
 SLUG = re.compile(r'[a-z0-9]+(?:-[a-z0-9]+)*\.md')
-HEADING = re.compile(r'(#{1,6})\s+(.+?)\s*#*\s*$')
+HEADING = re.compile(r'(#{1,6})\s+(.+?)(?:\s+#+)?\s*')
 BULLET = re.compile(r'[-*] (\S.*)')
 QUESTION = re.compile(r'<details><summary>.+</summary>.+</details>')
 LINK = re.compile(r'\[[^\]\n]+\]\(([^)\s]+)\)')

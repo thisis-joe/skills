@@ -63,14 +63,16 @@ sources: [<path:line or URL>]
 | Example | One concrete case: prose, one code block, or both | 1 code block, 15 code lines |
 | Pitfalls | Misconceptions, edge cases, look-alike concepts | 1–3 bullets, 160 characters each |
 | Self-check | One `<details><summary>question</summary>answer</details>` line per question | 1–3 questions |
-| Related | Bullets that each hold a link; relative links must resolve | 0–5 bullets |
+| Related | Bullets that each hold a link; relative and absolute local paths must exist | 0–5 bullets |
 | Whole note | Every line after the frontmatter, blank lines included | 60 lines |
+
+The limits are ceilings, not targets. Most notes need three key points, one or two pitfalls and one or two questions; a shorter note is easier to reread.
 
 `status` records evidence, not coverage:
 
 - `learning`: captured but not yet demonstrated.
-- `understood`: the learner explained it back or answered its self-check correctly.
-- `review`: a misconception surfaced or the note may be stale; reread it first.
+- `understood`: the learner explained the core idea back or answered its self-check questions correctly.
+- `review`: a misconception surfaced, the note may be stale or the learner marked it for another look; reread it first.
 
 ## When a note grows
 

@@ -13,7 +13,8 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. The [doc
 ## Boundary
 
 - The readers are others: teammates, users, operators, API callers, future maintainers or agents. The document lives in the project or is delivered to someone.
-- Explanations for the user's own understanding and personal study notes belong to `coco-learn`. Do not put learning notes, session narrative or a first-person learning diary into project documents.
+- Explanations for the user's own understanding and personal study notes belong to `coco-learn`. When a request is really that, say so in one line and continue with `coco-learn` (invoke it, or read its `SKILL.md`) instead of ending with a pointer.
+- Do not put learning notes, session narrative or a first-person learning diary into project documents.
 
 ## Procedure
 
