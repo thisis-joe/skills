@@ -6,7 +6,7 @@ license: MIT
 
 # coco-ship
 
-Produce an evidence-backed readiness decision and distinguish it from actual deployment.
+Produce an evidence-backed readiness decision and distinguish it from actual deployment. Merging an already pushed PR/MR into the default branch without a readiness decision is `coco-merge`.
 
 Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/ship.md) only when the task needs their additional procedure.
 

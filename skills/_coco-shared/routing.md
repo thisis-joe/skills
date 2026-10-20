@@ -9,6 +9,7 @@ Read only the selected entrypoint and the conditional reference relevant to the 
 | Be quizzed on the current work or selected code to understand it | askme | Scope/topic choices, one grounded question at a time, answer feedback and a closing summary; no code changes |
 | Adapt an existing skill to team rules or change its workflow | updateskill | Scoped source changes, consistent references/provenance, checks and actual installation status |
 | Integrate remote dev/develop, resolve conflicts and publish the current branch | push | Verified integration commits, single-branch normal push and remote-ref readback |
+| Merge an already pushed PR/MR into the default branch without a readiness review | merge | Forge-gated merge of the pushed head, merged-state and default-branch readback; queued or blocked reported as such |
 | Clear static color/copy edit | Direct lightweight edit; start only if routing is unclear | Requested edit and necessary visual/content check |
 | Establish commands, standing quality bar or select a workflow | start | Project profile, checks with owners, chosen route |
 | Unsettled requirements, terms or idea | clarify | Settled decisions, explicit open items, glossary/ADR only when warranted |

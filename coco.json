@@ -29,6 +29,7 @@
     "coco-simplify",
     "coco-tellmeskill",
     "coco-push",
+    "coco-merge",
     "coco-updateskill",
     "coco-whattosay",
     "coco-askme"
