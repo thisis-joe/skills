@@ -6,7 +6,7 @@ The [dual-runtime evaluation](dual-runtime/README.md) records additive Codex and
 Claude Code support, actual installation in both personal destinations, preserved
 unrelated files, regression checks, and native-client verification limits.
 
-추가한 `coco-tellmeskill`의 전체 목록·단계별 선택·공통 8항목 설명에 대한 제한된 적용은 [별도 기록](tellmeskill/README.md)에 보존합니다. 현재 패키지는 안내·동기화/푸시·팀 맞춤 유지보수·요청문 추천 스킬을 포함한 26개입니다.
+추가한 `coco-tellmeskill`의 전체 목록·단계별 선택·공통 8항목 설명에 대한 제한된 적용은 [별도 기록](tellmeskill/README.md)에 보존합니다. 현재 패키지는 안내·동기화/푸시·팀 맞춤 유지보수·요청문 추천·질의응답 학습 스킬을 포함한 27개입니다.
 
 `coco-push`의 [로컬 Git 적용 5사례](push/README.md)에서는 실제 충돌·동시 푸시 거절 후 재통합·기준 선택 대기·사용자 변경 보존·필수 검사 실패 시 미게시를 확인했습니다. 실제 서비스의 보호 정책이나 모든 충돌 해결을 인증한 것은 아닙니다.
 
@@ -32,7 +32,7 @@ unrelated files, regression checks, and native-client verification limits.
 
 `python3 -m unittest discover -s tests -v`는 임시 실제 Git 저장소에서 리뷰 범위를 검증하고, 임시 스킬 폴더에서 설치 충돌·업데이트·참조·체크섬을 검증합니다. 원본과 통합 문장을 문자열로 맞추는 테스트가 아닙니다.
 
-`python3 scripts/validate.py`는 고정 원문 체크섬, 131개 원본 항목의 대응, 현재 26개 스킬의 형식·UI 이름·참조를 검사합니다. 이것은 의미와 행동의 완전한 증명이 아닙니다.
+`python3 scripts/validate.py`는 고정 원문 체크섬, 131개 원본 항목의 대응, 현재 27개 스킬의 형식·UI 이름·참조를 검사합니다. 이것은 의미와 행동의 완전한 증명이 아닙니다.
 
 최초 통합 시 자동 테스트 23개가 통과했습니다. [당시 공식 스킬 형식 검사](format-validation.json)는 진입점 22개 모두 통과했습니다. [당시 활성 파일 해시](final-bundle.json)는 재개 평가와 조건부 평가의 고정 대상과 일치하는 72개 설치 파일을 기록합니다.
 

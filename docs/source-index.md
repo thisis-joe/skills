@@ -6,6 +6,8 @@
 
 팀 요청으로 추가한 [coco-whattosay](../skills/coco-whattosay/SKILL.md)는 선택된 스킬에 맞는 요청문을 추천하는 신규 절차입니다. 원본에서 유래한 동작이 아니므로 아래 원본 대응과 `sources/coverage.json`의 131개 항목은 추가·변경하지 않습니다. 선택과 실행의 경계는 [결정 기록](../skills/_coco-shared/decisions.md)에 남깁니다.
 
+팀 요청으로 추가한 [coco-askme](../skills/coco-askme/SKILL.md)는 선택한 작업·코드를 질의응답으로 학습하는 신규 절차입니다. 원본에서 유래한 동작이 아니므로 원본 대응과 `sources/coverage.json`은 변경하지 않습니다.
+
 | 출처 | 원본 | 통합 절차 | 처리 |
 |---|---|---|---|
 | matt | [skills/engineering/ask-matt](../sources/matt/skills/engineering/ask-matt/SKILL.md.source) | [coco-start](../skills/coco-start/SKILL.md) | adapted |
