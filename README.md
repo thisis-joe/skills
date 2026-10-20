@@ -13,6 +13,8 @@ Codex와 Claude Code에서 쓰는 **개발 작업 스킬 29개**(0.3.0 기준)�
 
 ### 1. 설치
 
+> **0.3.0은 아직 npm에 게시되지 않았습니다.** 지금 `@latest`로 설치하면 0.2.0이 설치되고, 이 문서의 일부 스킬(`coco-docs`, `coco-learn`, `coco-merge`, `coco-askme` 등)이 없습니다. 이 문서와 같은 버전을 쓰려면 [npm 없이 설치](#설치-관리)하세요.
+
 Claude Code:
 
 ```sh
@@ -31,7 +33,7 @@ npx --yes @thisis-joe/coco-skills@latest install --runtime codex
 {
   "status": "installed",
   "skills": 29,
-  "files": 115,
+  "files": 116,
   "destination": "/Users/me/.claude/skills"
 }
 ```
@@ -128,6 +130,15 @@ feat(be)/123-OAuth2.0_구글
 
 자세한 규칙: [coco-build 브랜치 준비](https://github.com/thisis-joe/skills/blob/main/skills/coco-build/SKILL.md#feature-branch-preparation)
 
+### `coco-learn`의 노트 위치
+
+학습 노트는 항상 현재 Git 저장소 루트 바로 아래 `TIL/` 폴더에 저장합니다. Git 저장소 밖이면 현재 작업 폴더 아래 `TIL/`을 씁니다. 위치를 따로 묻지 않습니다.
+
+- `TIL/`이 없으면 만들고, `INDEX.md`, `TEMPLATE.md`, `notes/`를 준비합니다.
+- Git 저장소 안이면 루트 `.gitignore`에 `TIL/` 줄이 항상 있도록 합니다. 파일이나 줄이 없으면 추가하고 알려 줍니다.
+- 노트는 커밋하지 않습니다. 이미 Git이 추적 중인 노트가 있으면 ignore만으로는 추적이 풀리지 않는다고 알려 주고, `git rm --cached`는 사용자에게 맡깁니다.
+- 설명만 요청하면 파일을 만들지 않습니다.
+
 ## 전체 스킬 목록
 
 | 분류 | 스킬 | 이럴 때 부르세요 |
@@ -157,7 +168,7 @@ feat(be)/123-OAuth2.0_구글
 | | `coco-automate` | CI/CD, 반복 작업, 이슈 봇, 재사용할 검증 도구를 만들 때 |
 | | `coco-observe` | 로그·지표·추적·알림·런북을 추가하거나 고칠 때 |
 | 지식·맥락 | `coco-docs` | README·ADR·API 문서·가이드·런북처럼 다른 사람이 읽을 문서를 쓰거나 점검할 때 |
-| | `coco-learn` | 코드나 개념을 나를 위해 쉽게 설명받거나, 같은 양식의 60줄 이내 학습 노트를 남길 때 |
+| | `coco-learn` | 코드나 개념을 나를 위해 쉽게 설명받거나, 같은 양식의 60줄 이내 학습 노트를 저장소 루트의 `TIL/`에 남길 때 |
 | | `coco-askme` | 작업한 코드나 기능을 한 번에 한 질문씩 복습하며 이해를 확인할 때 |
 | | `coco-context` | 인수인계, 중단 후 재개, 긴 작업의 결정 기록이 필요할 때 |
 | | `coco-retro` | 끝난 작업·장애·반복 실패를 돌아보고 재발을 막는 개선을 정할 때 |
