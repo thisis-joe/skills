@@ -8,12 +8,13 @@ license: MIT
 
 Produce official documents that their readers can rely on: true at the landing revision, consistent with the project's conventions, and owned by the project rather than by one session.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. The [documentation procedures](../_coco-shared/advanced/docs.md) hold the per-type rules, default skeletons and the optional modes; load the section the selected type needs.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for a document type the project has no convention for (default skeletons), a drift audit, an ADR or glossary change, agent-facing instructions or reusable recipes, an async discovery questionnaire, course-exercise scaffolding, and opt-in writing collaboration (fragments, article shaping, beats). If any applies or is unclear, read the [documentation procedures](../_coco-shared/advanced/docs.md) before dependent work.
 
 ## Boundary
 
 - The readers are others: teammates, users, operators, API callers, future maintainers or agents. The document lives in the project or is delivered to someone.
-- Explanations for the user's own understanding and personal study notes belong to `coco-learn`. Do not put learning notes, session narrative or a first-person learning diary into project documents.
+- Explanations for the user's own understanding and personal study notes belong to `coco-learn`. When a request is really that, say so in one line and continue with `coco-learn` (invoke it, or read its `SKILL.md`) instead of ending with a pointer.
+- Do not put learning notes, session narrative or a first-person learning diary into project documents.
 
 ## Procedure
 
@@ -34,3 +35,13 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. The [doc
 ## Return
 
 Changed paths with document type and reader; a verification list of claim, evidence and result (executed, read or unverified); preserved uncertainty; follow-ups such as undocumented behavior or a decision that needs an ADR. Never invent rationale.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "The code is self-documenting": code shows what, not why, rejected alternatives or constraints.
+- "ADRs are overhead": a short record prevents re-arguing a costly decision later.
+- Documentation that restates code instead of intent, commented-out code, or long-lived TODOs.
+- A public interface without its contract, or a README that does not say how to run the project.
+- A documented command, path or example you did not trace to evidence, presented as verified.

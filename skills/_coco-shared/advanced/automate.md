@@ -9,7 +9,7 @@ Never install another agent stack, invoke source skills, scan private transcript
 
 Evaluate each row independently; read all matches before dependent work. Re-evaluate on new scope, risk, state, or missing prerequisites. If uncertain, read relevant modes broadly; if unclassifiable, read all modes. Stop dependent work and report unavailable required guidance.
 
-Apply the common contract and entire core even without matches. Select internally from request/evidence; users need not learn source skills or mode names. Reading grants no wider scope or authority. For specification-only requests, read matching execution modes for constraints; return the specification without executing/activating.
+Once loaded, apply the entire core even without module matches. Select internally from request/evidence; users need not learn source skills or mode names. Reading grants no wider scope or authority. For specification-only requests, read matching execution modes for constraints; return the specification without executing/activating.
 
 | When | Read |
 | --- | --- |

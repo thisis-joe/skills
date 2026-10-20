@@ -8,7 +8,7 @@ Select only the mode needed by the claim; creating a helper or formal model is c
 
 Evaluate each row independently; read all matches before dependent work. Re-evaluate on new scope, risk, state, or missing prerequisites, including helper/proof/policy/experiment needs found in runtime checks. If uncertain, read relevant modes broadly; if unclassifiable, read all modes. Stop dependent work and report unavailable required guidance.
 
-Apply the common contract and entire core even without matches. Select internally from request/evidence; users need not learn source skills or mode names. Reading grants no wider scope or authority.
+Once loaded, apply the entire core even without module matches. Select internally from request/evidence; users need not learn source skills or mode names. Reading grants no wider scope or authority.
 
 | When | Read |
 | --- | --- |

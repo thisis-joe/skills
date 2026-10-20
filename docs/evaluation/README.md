@@ -20,6 +20,8 @@ unrelated files, regression checks, and native-client verification limits.
 
 `coco-askme`의 [독립 적용 3대화·15턴](askme/README.md)은 전체 작업 후보 제시, 부분 복수 선택, 대상 사전 지정, 모르는 답변, 사용자 역질문, 설계 대안 인정, 성능 근거 부족, 도중 범위 변경을 확인합니다. 대상 저장소의 상태 보존도 기록합니다.
 
+`coco-document`를 나눈 `coco-docs`·`coco-learn`의 [독립 적용 4대화·13턴](docs-learn/README.md)은 새 학습 작업 공간, 다른 개념의 노트 분리, 부분 정답의 상태 유지, 긴 노트 정리와 사용자 메모 보존, 복습, 문서 불일치 점검, 공식 how-to 작성과 두 스킬의 경계를 확인합니다. 평가에서 드러난 모호한 규칙을 보완한 뒤 같은 시드로 다시 확인했습니다.
+
 `coco-merge`의 [모의 forge 적용 4사례](merge/README.md)는 draft PR의 ready 전환 후 푸시한 head 고정 머지, `develop`의 미출시 커밋이 디폴트 브랜치로 딸려 들어가는 경우의 중단과 질문, 필수 체크 실패 시 미머지와 로컬 변경 보존, PR 생성 후 merge 방식 브랜치 업데이트와 새 head 고정 머지를 확인합니다. PR의 대상 브랜치로 머지하도록 바꾼 뒤의 2차 2사례는 `develop` 대상 PR을 묻지 않고 `develop`에 머지하고, `main` 대상 PR에 섞인 미출시 커밋에서는 멈추는 것을 확인합니다. GitHub CLI 일부를 흉내 낸 로컬 fixture이며 실제 서비스의 보호 규칙·병합 큐·GitLab 경로를 검증한 것은 아닙니다.
 
 `coco-build`의 [Jira 브랜치 규칙 확인](build-branches.md)은 한글·괄호가 있는 이름의 실제 생성, 유효하지 않은 후보와 중복 이름의 Git 거절, 사용자 파일 보존을 기록합니다. Jira 조회나 에이전트의 질문 행동을 실행 검증한 것은 아닙니다.

@@ -37,7 +37,7 @@ For public interfaces document inputs, outputs, errors, ordering, compatibility 
 ## Drift audit
 
 1. Inventory the checkable claims in the selected documents: commands and flags, paths, environment variables, defaults and limits, API signatures and examples, links and anchors, versions.
-2. Check each claim against the current code, configuration or command help. Execute safe read-only commands and examples; do not run state-changing commands only to audit prose.
+2. Check each claim against the current code, configuration or command help. Execute safe read-only commands and examples. Point commands that write at disposable temporary targets; never change real user or project state only to audit prose.
 3. Classify each claim as current, stale (with the contradicting evidence), broken (missing link, path or symbol) or unverifiable (with the missing access or environment).
 4. Report each finding with `path:line`, its evidence and a proposed replacement. Edit only within the requested scope; an audit request alone does not authorize rewriting documents.
 

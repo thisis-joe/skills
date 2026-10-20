@@ -8,7 +8,7 @@ license: MIT
 
 Turn the contract into small verifiable units with unambiguous ownership.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/plan.md) only when the task needs their additional procedure.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for a wide mechanical migration across callers, whole-spec integration or concurrent workers, a huge unclear effort that needs a decision map, and unfamiliar work that needs a bespoke investigation plan. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/plan.md) before dependent work.
 
 ## Procedure and output
 
@@ -20,3 +20,13 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Load [ad
 6. State single-task or continuous execution and preserve approval already given. Surface new material decisions and task-state conflicts; publish tickets only within the authorized destination/scope.
 
 Return: task graph, acceptance and verification per task, risk/rollback checkpoints, plan reference and authoritative state location.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "The tasks are obvious" or "I can hold it in my head": write them; written plans survive sessions and compaction.
+- "The old plan is stale, I'll replace it": unchecked tasks may be in flight elsewhere; stop and ask.
+- Tasks without acceptance or verification, or no checkpoints between them.
+- Task status kept in a local file while an external tracker is designated, or split across both.
+- Every task oversized, or dependency order never considered.

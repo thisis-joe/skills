@@ -139,7 +139,8 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-clarify/SKILL.md",
-        "skills/_coco-shared/advanced/clarify.md"
+        "skills/_coco-shared/advanced/clarify.md",
+        "skills/_coco-shared/advanced/clarify.md#grill-mode"
       ]
     },
     {
@@ -733,7 +734,8 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-clarify/SKILL.md",
-        "skills/_coco-shared/advanced/clarify.md"
+        "skills/_coco-shared/advanced/clarify.md",
+        "skills/_coco-shared/advanced/clarify.md#grill-mode"
       ]
     },
     {
@@ -752,7 +754,8 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-clarify/SKILL.md",
-        "skills/_coco-shared/advanced/clarify.md"
+        "skills/_coco-shared/advanced/clarify.md",
+        "skills/_coco-shared/advanced/clarify.md#grill-mode"
       ]
     },
     {
@@ -1071,7 +1074,9 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-design/SKILL.md",
-        "skills/_coco-shared/advanced/design.md"
+        "skills/_coco-shared/advanced/design.md",
+        "skills/coco-design/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1091,7 +1096,9 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-verify/SKILL.md",
-        "skills/_coco-shared/advanced/verify.md"
+        "skills/_coco-shared/advanced/verify.md",
+        "skills/coco-verify/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1114,7 +1121,9 @@
       "implemented_references": [
         "skills/coco-automate/SKILL.md",
         "skills/_coco-shared/advanced/automate.md",
-        "skills/_coco-shared/advanced/automate-ci.md"
+        "skills/_coco-shared/advanced/automate-ci.md",
+        "skills/coco-automate/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1140,7 +1149,9 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-review/SKILL.md",
-        "skills/_coco-shared/advanced/review.md"
+        "skills/_coco-shared/advanced/review.md",
+        "skills/coco-review/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1162,7 +1173,9 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-simplify/SKILL.md",
-        "skills/_coco-shared/advanced/simplify.md"
+        "skills/_coco-shared/advanced/simplify.md",
+        "skills/coco-simplify/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1192,7 +1205,9 @@
         "skills/coco-start/SKILL.md",
         "skills/_coco-shared/advanced/start.md#establish-a-standing-bar",
         "skills/_coco-shared/advanced/verify.md",
-        "skills/_coco-shared/advanced/verify-quality-audit.md#conditional-standing-quality-bar-audit"
+        "skills/_coco-shared/advanced/verify-quality-audit.md#conditional-standing-quality-bar-audit",
+        "skills/coco-start/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1212,7 +1227,9 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-context/SKILL.md",
-        "skills/_coco-shared/advanced/context.md"
+        "skills/_coco-shared/advanced/context.md",
+        "skills/coco-context/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1234,7 +1251,9 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-debug/SKILL.md",
-        "skills/_coco-shared/advanced/debug.md"
+        "skills/_coco-shared/advanced/debug.md",
+        "skills/coco-debug/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1256,7 +1275,9 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-migrate/SKILL.md",
-        "skills/_coco-shared/advanced/migrate.md"
+        "skills/_coco-shared/advanced/migrate.md",
+        "skills/coco-migrate/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1276,7 +1297,9 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-docs/SKILL.md",
-        "skills/_coco-shared/advanced/docs.md"
+        "skills/_coco-shared/advanced/docs.md",
+        "skills/coco-docs/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1302,7 +1325,9 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-review/SKILL.md",
-        "skills/_coco-shared/advanced/review.md"
+        "skills/_coco-shared/advanced/review.md",
+        "skills/coco-review/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1324,7 +1349,9 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-frontend/SKILL.md",
-        "skills/_coco-shared/advanced/frontend.md"
+        "skills/_coco-shared/advanced/frontend.md",
+        "skills/coco-frontend/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1351,7 +1378,9 @@
         "skills/coco-ship/SKILL.md",
         "skills/_coco-shared/advanced/ship.md",
         "skills/coco-build/SKILL.md",
-        "skills/coco-push/references/branch-and-ticket.md"
+        "skills/coco-push/references/branch-and-ticket.md",
+        "skills/coco-ship/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1378,7 +1407,9 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-clarify/SKILL.md",
-        "skills/_coco-shared/advanced/clarify.md"
+        "skills/_coco-shared/advanced/clarify.md",
+        "skills/coco-clarify/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1402,7 +1433,9 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-build/SKILL.md",
-        "skills/_coco-shared/advanced/build.md"
+        "skills/_coco-shared/advanced/build.md",
+        "skills/coco-build/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1428,7 +1461,9 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-clarify/SKILL.md",
-        "skills/_coco-shared/advanced/clarify.md"
+        "skills/_coco-shared/advanced/clarify.md",
+        "skills/coco-clarify/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1454,7 +1489,9 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-observe/SKILL.md",
-        "skills/_coco-shared/advanced/observe.md"
+        "skills/_coco-shared/advanced/observe.md",
+        "skills/coco-observe/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1477,7 +1514,9 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-performance/SKILL.md",
-        "skills/_coco-shared/advanced/performance.md"
+        "skills/_coco-shared/advanced/performance.md",
+        "skills/coco-performance/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1499,7 +1538,9 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-plan/SKILL.md",
-        "skills/_coco-shared/advanced/plan.md"
+        "skills/_coco-shared/advanced/plan.md",
+        "skills/coco-plan/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1524,7 +1565,9 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-security/SKILL.md",
-        "skills/_coco-shared/advanced/security.md"
+        "skills/_coco-shared/advanced/security.md",
+        "skills/coco-security/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1550,7 +1593,9 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-ship/SKILL.md",
-        "skills/_coco-shared/advanced/ship.md"
+        "skills/_coco-shared/advanced/ship.md",
+        "skills/coco-ship/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1572,7 +1617,9 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-research/SKILL.md",
-        "skills/_coco-shared/advanced/research.md"
+        "skills/_coco-shared/advanced/research.md",
+        "skills/coco-research/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1598,7 +1645,9 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-spec/SKILL.md",
-        "skills/_coco-shared/advanced/spec.md"
+        "skills/_coco-shared/advanced/spec.md",
+        "skills/coco-spec/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -1621,7 +1670,9 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-build/SKILL.md",
-        "skills/_coco-shared/advanced/build.md"
+        "skills/_coco-shared/advanced/build.md",
+        "skills/coco-build/SKILL.md#stop-signals",
+        "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
     {
@@ -2329,7 +2380,9 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-debug/SKILL.md",
-        "skills/_coco-shared/advanced/debug.md"
+        "skills/_coco-shared/advanced/debug.md",
+        "skills/_coco-shared/advanced/debug.md#test-competing-causes",
+        "skills/coco-debug/SKILL.md#stop-signals"
       ]
     },
     {

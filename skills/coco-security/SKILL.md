@@ -8,7 +8,7 @@ license: MIT
 
 Identify trust-boundary attacks and verify the required defenses.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Load [advanced modes](../_coco-shared/advanced/security.md) only when the task needs their additional procedure.
+Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for a new trust boundary, authentication or irreversible effect (full threat pass), dependency install scripts or lockfile policy, server fetches of user-influenced URLs, delete, move or overwrite targets derived from data, model output, tool arguments or retriable money/data effects, secrets or personal-data handling, and a requested Git command guard. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/security.md) before dependent work.
 
 ## Procedure and output
 
@@ -20,3 +20,13 @@ Read the [common contract](../_coco-shared/contracts.md) before acting. Load [ad
 6. Hand scoped implementation and regression criteria to build, and evidence to review/ship. Document residual risk and any unavailable assessment rather than issuing an unsupported safety claim.
 
 Return: threat/control/test matrix, concrete findings or defenses, verified abuse cases and residual risk.
+
+## Stop signals
+
+Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
+
+- "It's internal" or "no one would try this": internal tools get compromised and scanners find obscure paths.
+- "The framework handles it" or "the audit passed": frameworks need correct use; audits miss new malicious packages and unreviewed install scripts.
+- "It's just model output": treat it as untrusted input before queries, DOM, shell or eval.
+- "Collect it now, we might need it": data without purpose, retention and deletion path is breach scope.
+- User input reaching queries, shell or HTML; endpoints without authorization; wildcard CORS; per-instance rate limits; or a destructive target guarded only by a path-shape check.
