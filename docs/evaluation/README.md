@@ -14,7 +14,7 @@ unrelated files, regression checks, and native-client verification limits.
 
 `coco-updateskill`의 [팀 유지보수 적용 3사례](updateskill/README.md)는 원본·공통 규칙·출처를 함께 수정하는 경로, 제안 전용 요청, 개인 수정본 때문에 설치를 차단하는 경로를 기록합니다. 원본 수정과 실제 설치 결과를 구분했습니다.
 
-이후 시작 절차를 전체 목록·대상 선택·수정 내용 질문으로 분리했습니다. [시작 대화 점검](updateskill-selection.md)은 작성자의 단계별 검토와 실행한 패키지 검사를 구분합니다.
+이후 시작 절차를 전체 목록·대상 선택·수정 내용 질문으로 분리했습니다. [시작 대화 점검](updateskill-selection.md)은 작성자의 단계별 검토와 실행한 패키지 검사를 구분합니다. 파일을 바꾸는 업데이트를 전용 브랜치·워크트리로 강제한 뒤의 [새 컨텍스트 적용 3사례](updateskill-worktree/README.md)는 시작 체크아웃 보존, 제안 전용 요청의 무변경, Git 원본이 아닐 때의 수정 전 중단을 기록합니다.
 
 `coco-whattosay`의 [독립 적용 2대화·7턴](whattosay/README.md)은 확정한 스킬의 요청문 추천과 선택 대기, 번호 선택 후 실제 리뷰, 문장 전용 상태의 수정·유효하지 않은 번호 처리, 명시적 실행 요청 후 결과 생성을 확인합니다. 임시 제품 파일·Git 상태의 보존과 실제 26개 스킬 설치도 기록합니다. `coco-whichskill` 자체의 실행 연동을 시험한 것은 아닙니다.
 
