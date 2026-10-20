@@ -6,7 +6,7 @@ The [dual-runtime evaluation](dual-runtime/README.md) records additive Codex and
 Claude Code support, actual installation in both personal destinations, preserved
 unrelated files, regression checks, and native-client verification limits.
 
-추가한 `coco-tellmeskill`의 전체 목록·단계별 선택·공통 8항목 설명에 대한 제한된 적용은 [별도 기록](tellmeskill/README.md)에 보존합니다. 현재 패키지는 안내·동기화/푸시·팀 맞춤 유지보수·요청문 추천·질의응답 학습 스킬을 포함한 27개입니다.
+추가한 `coco-tellmeskill`의 전체 목록·단계별 선택·공통 8항목 설명에 대한 제한된 적용은 [별도 기록](tellmeskill/README.md)에 보존합니다. 현재 패키지는 안내·동기화/푸시·직접 머지·팀 맞춤 유지보수·요청문 추천·질의응답 학습 스킬을 포함한 29개입니다.
 
 `coco-push`의 [로컬 Git 적용 5사례](push/README.md)에서는 실제 충돌·동시 푸시 거절 후 재통합·기준 선택 대기·사용자 변경 보존·필수 검사 실패 시 미게시를 확인했습니다. 실제 서비스의 보호 정책이나 모든 충돌 해결을 인증한 것은 아닙니다.
 
@@ -19,6 +19,8 @@ unrelated files, regression checks, and native-client verification limits.
 `coco-whattosay`의 [독립 적용 2대화·7턴](whattosay/README.md)은 확정한 스킬의 요청문 추천과 선택 대기, 번호 선택 후 실제 리뷰, 문장 전용 상태의 수정·유효하지 않은 번호 처리, 명시적 실행 요청 후 결과 생성을 확인합니다. 임시 제품 파일·Git 상태의 보존과 실제 26개 스킬 설치도 기록합니다. `coco-whichskill` 자체의 실행 연동을 시험한 것은 아닙니다.
 
 `coco-askme`의 [독립 적용 3대화·15턴](askme/README.md)은 전체 작업 후보 제시, 부분 복수 선택, 대상 사전 지정, 모르는 답변, 사용자 역질문, 설계 대안 인정, 성능 근거 부족, 도중 범위 변경을 확인합니다. 대상 저장소의 상태 보존도 기록합니다.
+
+`coco-merge`의 [모의 forge 적용 4사례](merge/README.md)는 draft PR의 ready 전환 후 푸시한 head 고정 머지, `develop`의 미출시 커밋이 디폴트 브랜치로 딸려 들어가는 경우의 중단과 질문, 필수 체크 실패 시 미머지와 로컬 변경 보존, PR 생성 후 merge 방식 브랜치 업데이트와 새 head 고정 머지를 확인합니다. GitHub CLI 일부를 흉내 낸 로컬 fixture이며 실제 서비스의 보호 규칙·병합 큐·GitLab 경로를 검증한 것은 아닙니다.
 
 `coco-build`의 [Jira 브랜치 규칙 확인](build-branches.md)은 한글·괄호가 있는 이름의 실제 생성, 유효하지 않은 후보와 중복 이름의 Git 거절, 사용자 파일 보존을 기록합니다. Jira 조회나 에이전트의 질문 행동을 실행 검증한 것은 아닙니다.
 
@@ -34,7 +36,7 @@ unrelated files, regression checks, and native-client verification limits.
 
 `python3 -m unittest discover -s tests -v`는 임시 실제 Git 저장소에서 리뷰 범위를 검증하고, 임시 스킬 폴더에서 설치 충돌·업데이트·참조·체크섬을 검증합니다. 원본과 통합 문장을 문자열로 맞추는 테스트가 아닙니다.
 
-`python3 scripts/validate.py`는 고정 원문 체크섬, 131개 원본 항목의 대응, 현재 27개 스킬의 형식·UI 이름·참조를 검사합니다. 이것은 의미와 행동의 완전한 증명이 아닙니다.
+`python3 scripts/validate.py`는 고정 원문 체크섬, 131개 원본 항목의 대응, 현재 29개 스킬의 형식·UI 이름·참조를 검사합니다. 이것은 의미와 행동의 완전한 증명이 아닙니다.
 
 최초 통합 시 자동 테스트 23개가 통과했습니다. [당시 공식 스킬 형식 검사](format-validation.json)는 진입점 22개 모두 통과했습니다. [당시 활성 파일 해시](final-bundle.json)는 재개 평가와 조건부 평가의 고정 대상과 일치하는 72개 설치 파일을 기록합니다.
 
