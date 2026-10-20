@@ -1,6 +1,6 @@
 ---
 name: coco-whattosay
-description: "Use when a skill has been selected and the user wants contextual options for what to ask it, or help completing its invocation."
+description: "Use when a skill has been selected or invoked without a request and the user needs contextual options for what to ask it, or help completing its invocation."
 license: MIT
 ---
 
@@ -10,13 +10,13 @@ Suggest what to ask the selected skill in the current context. The default flow 
 
 ## 1. Confirm the selected skill and purpose
 
-Prefer an explicitly named skill; otherwise carry forward the confirmed choice from earlier conversation. Reuse the exact identifier, user purpose, and agreed scope from a `coco-whichskill` selection when present. A mere mention or recommended candidate is not a confirmed selection.
+Prefer an explicitly named skill; otherwise carry forward the confirmed choice from earlier conversation. Reuse the exact identifier, user purpose, and agreed scope from a `coco-whichskill` selection when present. A mere mention or recommended candidate is not a confirmed selection. A bare invocation of another skill handed over by the [common contract](../_coco-shared/contracts.md#work-input-and-selection) is a confirmed selection of that skill.
 
 Match the currently available catalog against the actual `SKILL.md` location and retain namespaces. Read only the selected body and necessary references as **material for composing requests**. Do not start the target's execution workflow or read all skill bodies at this stage.
 
 If no choice is established or several candidates remain, clarify only the target. Accept a directly named skill even where `coco-whichskill` is unavailable. Do not install a missing skill or substitute a similar one. If its body cannot be checked, state the limit and necessary location without presenting a recommendation as ready to execute.
 
-Read agreed purpose, scope, constraints, and currently relevant material without writing. Do not repeat settled questions. If the target is known but a missing purpose or required input prevents a valid request, ask only for that information and wait. Do not invent paths, tickets, or approved plans, or treat placeholders as filled.
+Read agreed purpose, scope, constraints, and currently relevant material without writing. Do not repeat settled questions. If the target is known but a missing purpose or required input prevents a valid request, ask only for that information and wait. After a bare invocation the purpose is missing by design: compose options from the target's supported scope and the current conversation and repository state instead of first asking for a purpose. Do not invent paths, tickets, or approved plans, or treat placeholders as filled.
 
 ## 2. Suggest requests
 
@@ -41,4 +41,4 @@ Briefly name the selected skill and current purpose, present options, explain th
 
 The recommendation stage ends with options and waiting for selection. The selected skill owns subsequent work and reports actual results and incomplete conditions under its procedure.
 
-Examples: `$coco-whattosay coco-review` in Codex or `/coco-whattosay coco-review` in Claude Code suggests review requests for the current work. Adding `Suggest request wording only` does not execute even after a number is selected. If the skill is already selected, invoking `coco-whattosay` carries it forward. Use `coco-tellmeskill` when discovery or explanation itself is the goal.
+Examples: `$coco-whattosay coco-review` in Codex or `/coco-whattosay coco-review` in Claude Code suggests review requests for the current work. Adding `Suggest request wording only` does not execute even after a number is selected. If the skill is already selected, invoking `coco-whattosay` carries it forward. A bare `/coco-review` with no purpose settled in the conversation opens this flow for `coco-review`. Use `coco-tellmeskill` when discovery or explanation itself is the goal.
