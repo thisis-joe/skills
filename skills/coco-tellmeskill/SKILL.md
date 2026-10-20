@@ -6,17 +6,35 @@ license: MIT
 
 # coco-tellmeskill
 
-Help the user find and select a skill, then explain it from its source in the user's language. The default flow is **complete list → skill selection → explanation length → common explanation format**. Localize prompts, option names, and output labels; the wording below is in English for illustration.
+Help the user find and select a skill, then explain it from its source in the user's language. The default flow is **recent skills → complete grouped list when none is chosen → explanation length → common explanation format**. Localize prompts, option names, and output labels; the wording below is in English for illustration.
 
-## 1. Complete list and target selection
+Every choice offered at any stage carries a concise description: one short line saying what that option is or does.
 
-Use names, descriptions, and source locations from the available-skills catalog in the current conversation. Include COCO, system, plugin, and this skill itself. Do not hardcode the list or select representative entries. Merge duplicates only for the same canonical identifier; distinguish same-name skills in different namespaces.
+## 1. Target selection
 
-Sort by name and show the **complete list** with unique consecutive numbers, exact names, and one-line purposes. Split a long list into categorized tables without omitting entries or requiring search/pagination. Summarize purposes in the user's language while retaining identifiers.
-
-Then ask, "Which skill would you like explained? Choose its number or skill name," and wait. Use an available question tool or ask in the final message and end the turn. Do not ask about explanation length simultaneously or explain individual skills before target selection. Retain the displayed number-to-name mapping across turns.
+Use names, descriptions, and source locations from the available-skills catalog in the current conversation. Include COCO, system, plugin, and this skill itself. Do not hardcode the list. Merge duplicates only for the same canonical identifier; distinguish same-name skills in different namespaces. Summarize purposes in the user's language while retaining identifiers.
 
 If the catalog is absent, use supported listing capability. If listing is unavailable, state the range you can confirm; do not guess what is installed or treat inert source archives as executable skills.
+
+An invocation that names a target skips to explanation length. One that asks to browse or list skills goes straight to the complete grouped list. A bare invocation, with no target or request, starts with recent skills.
+
+### Recent skills
+
+1. **Collect.** Take skills invoked earlier in the current conversation, latest first. Then run the [recent-skill helper](tools/recent_skills.py) from this skill's directory: `python3 tools/recent_skills.py --runtime <claude|codex> --workspace <current-directory> --exclude coco-tellmeskill --available <catalog-identifiers>`, passing the catalog identifiers comma-separated. It reads only skill-invocation markers in the current runtime's own session records for this workspace from the last 30 days, and prints identifiers with last-use times, never prompt text. Do not search other workspaces, runtimes, or files to fill a short result.
+2. **Offer.** Keep catalog identifiers only, without duplicates or this skill, latest use first, at most three. Offer each as an option: the exact identifier with a concise purpose. Add a last option, **Show all skills**, described as "Browse every available skill grouped by purpose." Ask, "Which skill would you like explained?" and wait.
+3. **Resolve.** A recent option or another exact catalog name selects that target. An ambiguous name gets matching candidates and the same question. **Show all skills**, "none of these," a reply that names no skill, or no choice moves to the complete grouped list; do not repeat the recent options.
+
+If no recent skill remains, or the helper is unavailable or fails, say so in one line and show the complete grouped list.
+
+### Complete grouped list
+
+Classify every catalog entry into one purpose group using the [skill groups](references/skill-groups.md). For each non-empty group, show its name with a one-line description of what the group covers, then its entries: a unique consecutive number continuing across groups, the exact identifier, and a concise purpose. Do not omit entries or require search/pagination.
+
+Then ask, "Which skill would you like explained? Choose its number or skill name," and wait.
+
+### At either question
+
+Use an available question tool when every option fits it, otherwise ask in the final message and end the turn. Do not ask about explanation length simultaneously or explain individual skills before target selection. Retain the most recently displayed number-to-name mapping across turns.
 
 ## 2. Explanation length
 
@@ -25,7 +43,7 @@ Confirm the exact selected target, offer both choices, and wait:
 1. **Simple explanation:** one line per item in the common format.
 2. **Detailed explanation:** the same format and order, with fuller procedure, judgments, examples, and constraints.
 
-Accept either a list number or exact name for target selection. While waiting for explanation length, accept `1` or the user's language equivalent of "simple explanation," and `2` or the equivalent of "detailed explanation." For an ambiguous name, show matching candidates and ask again. For an invalid choice, repeat that stage; do not select arbitrarily. Do not repeat the complete list when the target is already established. If the initial request specifies both target and length, skip the satisfied selection stages.
+Accept either a list number or exact name for target selection. While waiting for explanation length, accept `1` or the user's language equivalent of "simple explanation," and `2` or the equivalent of "detailed explanation." For an ambiguous name, show matching candidates and ask again. For an invalid choice at the complete list or explanation length, repeat that stage; do not select arbitrarily. Do not repeat the complete list when the target is already established. If the initial request specifies both target and length, skip the satisfied selection stages.
 
 ## 3. Explain from source using the common format
 
@@ -37,4 +55,4 @@ Distinguish behavior actually supported by the source from conditional/optional 
 
 Apply follow-up requests such as "more detail" or "briefly" to the selected target in the same format. For a different skill, ask for the new target's explanation length. Stop on cancellation. Explaining or selecting a skill does not authorize execution, installation, or configuration changes.
 
-Example: `$coco-tellmeskill` in Codex or `/coco-tellmeskill` in Claude Code → complete list → `coco-build` → "simple explanation." Appending `coco-build detailed explanation` goes straight to explanation after checking source and format.
+Example: `$coco-tellmeskill` in Codex or `/coco-tellmeskill` in Claude Code → up to three recent skills plus **Show all skills** → `coco-build` → "simple explanation." Choosing **Show all skills** or none of the recent skills shows the complete grouped list. `/coco-tellmeskill list all skills` starts at that list, and appending `coco-build detailed explanation` goes straight to explanation after checking source and format.
