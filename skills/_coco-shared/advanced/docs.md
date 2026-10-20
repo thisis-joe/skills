@@ -6,6 +6,23 @@ Apply the [common contract](../contracts.md). Use [research](research.md) for fa
 
 Retain audience, purpose, prior knowledge, source artifacts, required facts/uncertainty, destination and edit scope. Read the live target before every change and preserve user edits. Select technical documentation, decision record, prose repair, agent instructions, questionnaire, course exercises, or opt-in experimental writing collaboration. Explanations for the user's own understanding and personal learning notes belong to [learning procedures](learn.md).
 
+## Default skeletons
+
+Use these only when the project has no convention for the type. They fix the order of parts so readers find the same thing in the same place; drop an empty optional part rather than padding it.
+
+| Type | Parts in order |
+|---|---|
+| README | One-sentence purpose; quick start ending in a visible result; common commands; configuration; layout or architecture pointer; contributing and support |
+| Tutorial | What the reader will build; prerequisites; steps that each end in a visible result; next steps |
+| How-to | Goal; prerequisites; numbered steps with expected results; how to confirm success; troubleshooting |
+| Reference | One entry per item: signature or syntax, parameters and defaults, output, errors, example |
+| Explanation | The question it answers; mechanism; rationale and trade-offs; related decisions |
+| ADR | Number and title; status and date; context; decision; why or consequences; alternatives when useful, as in decision records below |
+| Runbook | Trigger or symptom; impact; diagnosis steps with commands and expected output; mitigation; escalation; how to confirm recovery |
+| Changelog entry | Version and date; added, changed, deprecated, removed, fixed and security items written as user-visible impact |
+
+Use [observe](observe.md) for runbook signals and alert design; this table only orders the document.
+
 ## Technical documents and prose repair
 
 1. Choose tutorial for a guided visible result, how-to for a specific task, reference for lookup, or explanation for mechanism/rationale. Keep these purposes distinct rather than building an unfocused hybrid.
@@ -16,6 +33,15 @@ Retain audience, purpose, prior knowledge, source artifacts, required facts/unce
 6. Check the edited text against its sources and original: clearer prose must not introduce a stronger guarantee or invent an example to cover missing evidence.
 
 For public interfaces document inputs, outputs, errors, ordering, compatibility and a real usage example. Update README setup/commands or changelog only where the behavior changed. Comments explain nonobvious intent or constraints; delete obsolete commented-out code instead of narrating self-explanatory code.
+
+## Drift audit
+
+1. Inventory the checkable claims in the selected documents: commands and flags, paths, environment variables, defaults and limits, API signatures and examples, links and anchors, versions.
+2. Check each claim against the current code, configuration or command help. Execute safe read-only commands and examples; do not run state-changing commands only to audit prose.
+3. Classify each claim as current, stale (with the contradicting evidence), broken (missing link, path or symbol) or unverifiable (with the missing access or environment).
+4. Report each finding with `path:line`, its evidence and a proposed replacement. Edit only within the requested scope; an audit request alone does not authorize rewriting documents.
+
+Output: the classified claim list and, when edits were in scope, the changed paths and rerun checks.
 
 ## Decision records and domain language
 
