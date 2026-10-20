@@ -52,7 +52,8 @@ Use an isolated checkout or fixture so bisection/replay cannot discard user chan
 5. Record eliminated hypotheses and revert edits motivated only by them.
 6. Confirm the surviving mechanism in runtime evidence before designing the product fix.
 
-When two fixes sharing a premise fail the same gate, write and test that premise before trying a third.
+When two fixes sharing a premise fail the same gate, write and test that premise before trying a third: state it in one sentence, then make a rerunnable observation that would differ if it were false.
+If the evidence contradicts it, follow what the failures share that the premise did not predict; if it holds, trace one why deeper and remove the causing condition rather than compensate for it.
 Look at the distribution/commonality of failures, not only the average magnitude.
 When a failure appears only after restart, inspect persisted config, caches, lockfiles, and serialized state first.
 Distinguish the first wrong decision from the later symptom: a legitimate exceptional state needs handling; an impossible state needs its producer fixed.

@@ -2329,7 +2329,8 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-debug/SKILL.md",
-        "skills/_coco-shared/advanced/debug.md"
+        "skills/_coco-shared/advanced/debug.md",
+        "skills/_coco-shared/advanced/debug.md#test-competing-causes"
       ]
     },
     {
