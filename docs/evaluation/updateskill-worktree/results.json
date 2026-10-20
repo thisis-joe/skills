@@ -1,0 +1,67 @@
+{
+  "scope": "Fresh-context subagents applied the candidate coco-updateskill to temporary fixture copies of this package; one run per case, not a benchmark",
+  "git_version": "git version 2.50.1 (Apple Git-155)",
+  "instruction_hashes": {
+    "fixture_SKILL.md": "6f78eee2541b0b821bd9e037b15d0eb05995cb1861bcbdf743616d00f7a748b1",
+    "final_SKILL.md": "6f78eee2541b0b821bd9e037b15d0eb05995cb1861bcbdf743616d00f7a748b1",
+    "fixture_team-update.md": "cbcfd81d439e0ded0d1cc4e7cfba2598afaf3c17c17fd939ca0a694788d19e33",
+    "final_team-update.md": "9f5ba74005f653b19a3654e87539f9c8c51fb37205440d54ee1f123609378853",
+    "difference": "Only step 5's last sentence was reworded after the fixtures were built; the rule and its conditions are unchanged"
+  },
+  "fixture_start": "Each Git fixture starts on feat/unrelated-work (one commit ahead of main) with an uncommitted README.md edit and an untracked scratch-notes.txt; nogit has no .git; every fixture has a baseline install in installed/",
+  "cases": [
+    {
+      "case": "write",
+      "request": "/coco-updateskill coco-askme 한 번의 퀴즈 세션은 사용자가 더 원하지 않는 한 최대 5문항으로 제한해줘",
+      "outcome": "source-and-install-complete-in-dedicated-worktree",
+      "branch": "feat/coco-askme-quiz-limit",
+      "base": "main",
+      "merge_base_equals_main": true,
+      "worktree": "<fixtures>/write/repo-coco-askme-quiz-limit (sibling, outside tracked content)",
+      "commits": [
+        "cc17cfa feat(coco-askme): limit a quiz session to five questions by default",
+        "b3ea63b docs(coco-askme): record session-limit change evidence"
+      ],
+      "starting_checkout_files_branch_head_status_unchanged": true,
+      "dedicated_worktree_clean": true,
+      "installed_files_changed": [
+        ".coco-install.json",
+        "coco-askme/SKILL.md",
+        "coco-askme/references/question-patterns.md"
+      ],
+      "installed_matches_dedicated_worktree": true
+    },
+    {
+      "case": "proposal",
+      "request": "/coco-updateskill coco-askme 한 세션을 최대 5문항으로 제한하는 개선안만 제안해줘. 파일은 바꾸지 마.",
+      "outcome": "proposal-only-no-branch-no-worktree",
+      "branches_after": [
+        "feat/unrelated-work",
+        "main"
+      ],
+      "worktrees_after": 1,
+      "starting_checkout_files_branch_head_status_unchanged": true,
+      "installed_unchanged": true,
+      "proposal_states_future_isolation": "new branch feat/coco-askme-quiz-limit and a sibling worktree from main if applied"
+    },
+    {
+      "case": "nogit",
+      "request": "/coco-updateskill coco-askme 한 번의 퀴즈 세션은 사용자가 더 원하지 않는 한 최대 5문항으로 제한해줘",
+      "outcome": "blocked-before-edit-source-not-git",
+      "observed": "git rev-parse --show-toplevel exit 128; agent stopped at the isolation step, did not git init or edit in place, and returned the question it would ask",
+      "source_files_unchanged": true,
+      "installed_unchanged": true
+    }
+  ],
+  "checks_in_this_repository": {
+    "validate": "python3 scripts/validate.py: 27 skills, checksums, coverage and references passed",
+    "unittest": "python3 -m unittest discover -s tests: 63 tests OK, including test_dedicated_worktree_installs_branch_version_and_preserves_starting_checkout",
+    "diff_check": "git diff --check passed",
+    "skill_creator_quick_validate": "unavailable: the local skill-creator script requires PyYAML, which is not installed"
+  },
+  "limits": [
+    "One run per case with the same model family; not a reliability measurement",
+    "Host-managed worktree features (Claude Code or Codex app worktrees) and the interrupted-run reuse path were reviewed, not executed",
+    "The write case's askme rule content is fixture output, not a change to this repository"
+  ]
+}
