@@ -111,6 +111,23 @@ class MergePreflightTests(unittest.TestCase):
         self.assertEqual([row['subject'] for row in report['own']], ['feature work'])
         self.assertEqual(report['unknown_remote_commits'], [])
 
+    def test_update_merge_that_carries_extra_edits_blocks(self):
+        self.feature()
+        other = self.clone('other')
+        self.commit(other, 'app.txt', 'line one\nmain moved\n', 'main moves on')
+        self.git(other, 'push', '-q', 'origin', 'main')
+        self.git(other, 'switch', '-q', 'feat/x')
+        self.git(other, 'merge', '-q', '--no-commit', 'origin/main')
+        (other / 'feature.txt').write_text('slipped in during the merge\n')
+        self.git(other, 'add', 'feature.txt')
+        self.git(other, 'commit', '-q', '--no-edit')
+        self.git(other, 'push', '-q', 'origin', 'feat/x')
+        report = self.preflight(expect=1)
+        self.assertEqual(report['blockers'], ['unknown_remote_commits'])
+        self.assertEqual(report['update_merges'], [])
+        self.assertEqual([row['oid'] for row in report['unknown_remote_commits']],
+                         [self.git(other, 'rev-parse', 'HEAD')])
+
     def test_forge_head_that_differs_from_the_pushed_head_blocks(self):
         self.feature()
         report = self.preflight('--expect-head', self.git(self.work, 'rev-parse', 'main'), expect=1)

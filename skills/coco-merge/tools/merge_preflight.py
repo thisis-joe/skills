@@ -125,14 +125,23 @@ def conflicts(repo, target, head):
     return {'status': 'conflict' if result.returncode else 'clean', 'paths': sorted(set(fields))}
 
 
+def clean_merge_tree(repo, first, second):
+    """Tree of a conflict-free merge of two commits, or None."""
+    result = repo.run('merge-tree', '--write-tree', '--no-messages', first, second, ok=(0, 1, 128, 129))
+    return os.fsdecode(result.stdout).split('\n', 1)[0].strip() if result.returncode == 0 else None
+
+
 def update_merges(repo, rows, pushed, target_tip):
-    """Forge "update branch" merges: own tip first, target history second."""
+    """Forge "update branch" merges: own tip first, target history second, and
+    exactly the tree a clean merge of those parents produces, so a merge that
+    carries extra edits stays unknown."""
     known = {pushed} if pushed else set()
     benign = []
     for row in rows:
         parents = row['parents']
         if (len(parents) == 2 and (parents[0] in known or (pushed and repo.is_ancestor(parents[0], pushed)))
-                and repo.is_ancestor(parents[1], target_tip)):
+                and repo.is_ancestor(parents[1], target_tip)
+                and clean_merge_tree(repo, *parents) == repo.text('rev-parse', row['oid'] + '^{tree}').strip()):
             known.add(row['oid'])
             benign.append(row)
     return benign

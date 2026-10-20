@@ -32,7 +32,7 @@ Run `python3 <skill-dir>/tools/merge_preflight.py --repo <repo> --remote <remote
 | `no_local_branch` | The branch exists only on the remote | Continue from the remote head; unpushed and remote-only checks do not apply |
 | `conflict_check_unavailable` | Git is older than 2.38 and cannot test the merge in memory | Rely on the forge's mergeability and say so |
 
-A forge "update branch" merge whose second parent is on the target is listed under `update_merges` and does not block. The `own` list is this branch's work; describe only that in a request you open.
+A forge "update branch" merge is listed under `update_merges` and does not block only when its second parent is on the target and its tree is exactly a clean merge of its parents; a merge that carries any extra edit is an unknown remote commit. The `own` list is this branch's work; describe only that in a request you open.
 
 ## Find or open the request
 
