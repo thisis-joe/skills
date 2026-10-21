@@ -6,7 +6,7 @@
 
 Node.js 22 이상과 Python 3.9 이상이 필요하다. 설치 사용자는 npm 로그인이 필요하지 않다. Node.js/npm이 없는 환경에서는 저장소를 clone하고 Python 설치기를 직접 실행할 수 있다. npm 설치와 Python 직접 설치는 같은 설치기를 사용한다.
 
-0.3.0은 원본 기법 보강(스킬별 고급 절차 읽기 조건, 멈춤 신호, clarify grill 모드, debug 전제 재검증), `coco-document`를 나눈 `coco-docs`·`coco-learn`, PR/MR 머지 스킬 `coco-merge`, 질의응답 학습 스킬 `coco-askme`를 포함한 영어 스킬 문서와 공통 자료를 Codex·Claude Code에 함께 배포한다. 두 런타임은 같은 29개 스킬과 `_coco-shared`를 사용하며, `agents/openai.yaml`은 Codex용 표시 메타데이터다. 설치 대상 에이전트 자체의 설치·인증은 별도다.
+1.0.0은 원본 기법 보강(스킬별 고급 절차 읽기 조건, 멈춤 신호, clarify grill 모드, debug 전제 재검증), `coco-document`를 나눈 `coco-docs`·`coco-learn`, PR/MR 머지 스킬 `coco-merge`를 포함한 영어 스킬 문서와 공통 자료를 Codex·Claude Code에 함께 배포한다. 두 런타임은 같은 29개 스킬과 `_coco-shared`를 사용하며, `agents/openai.yaml`은 Codex용 표시 메타데이터다. 설치 대상 에이전트 자체의 설치·인증은 별도다.
 
 ```sh
 npx --yes @thisis-joe/coco-skills@latest install --runtime codex --dry-run
@@ -25,7 +25,7 @@ npx --yes @thisis-joe/coco-skills@latest validate --installed "${CLAUDE_CONFIG_D
 npx --yes @thisis-joe/coco-skills@latest install --runtime claude --dest ./my-project/.claude/skills --dry-run
 npx --yes @thisis-joe/coco-skills@latest install --runtime claude --dest ./my-project/.claude/skills
 npx --yes @thisis-joe/coco-skills@latest validate --installed ./my-project/.claude/skills
-npx --yes @thisis-joe/coco-skills@0.3.0 install --runtime codex --dest ./my-skills
+npx --yes @thisis-joe/coco-skills@1.0.0 install --runtime codex --dest ./my-skills
 ```
 
 설치 후 Codex에서는 새 대화나 스킬 새로고침 후 `$coco-start`, Claude Code에서는 해당 프로젝트의 새 세션에서 `/` 메뉴를 확인한 뒤 `/coco-start`를 호출한다. 설치 파일 검증과 클라이언트가 실제 스킬을 읽는 확인은 구분한다. 읽기 전용 요청인 `$coco-tellmeskill coco-build 간단 설명` 또는 `/coco-tellmeskill coco-build 간단 설명`으로 인식과 호출을 확인할 수 있다. 경로·호출은 [Claude Code 스킬 문서](https://code.claude.com/docs/en/skills), 설정 경로는 [설정 문서](https://code.claude.com/docs/en/settings)를 따른다. 로컬 Claude Code 설치는 claude.ai·Cowork용 업로드 배포를 제공하지 않는다.
