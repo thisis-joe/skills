@@ -47,12 +47,12 @@ Discover actual COCO check commands and run them from the dedicated worktree. Ex
 ```text
 python3 scripts/validate.py
 python3 -m unittest discover -s tests -v
-python3 scripts/install.py --runtime <confirmed-runtime> --dry-run
-python3 scripts/install.py --runtime <confirmed-runtime>
+python3 scripts/install.py --runtime <confirmed-runtime> <confirmed-scope> --dry-run
+python3 scripts/install.py --runtime <confirmed-runtime> <confirmed-scope>
 python3 scripts/validate.py --installed <confirmed-installation-directory>
 ```
 
-Use `codex` or `claude` for the confirmed runtime; retain an explicit destination when updating a project-scoped or custom installation. Follow the [runtime guide](../../_coco-shared/runtimes.md) when both runtimes are installed. Do not assume another repository has these commands. Also run available skill-format checks. Format validation does not prove sound judgment: test actual cases for both changed and preserved paths. If required tools or independent review are unavailable, distinguish confirmed scope from unverified scope. Do not weaken checks or rewrite historical evaluation reports to hide failure.
+Use `codex` or `claude` for the confirmed runtime. The confirmed scope is the installation being updated: `--project <folder>` for a project install, `--dest <directory>` for a custom one, or `--global`. Pass it explicitly, because an agent shell is not a terminal and the installer falls back to the global folder without one, which would bring COCO back to every project for a user who moved to project installs. Follow the [runtime guide](../../_coco-shared/runtimes.md) when both runtimes are installed. Do not assume another repository has these commands. Also run available skill-format checks. Format validation does not prove sound judgment: test actual cases for both changed and preserved paths. If required tools or independent review are unavailable, distinguish confirmed scope from unverified scope. Do not weaken checks or rewrite historical evaluation reports to hide failure.
 
 Before installation, compare the ownership manifest with current files and use the supported installer's preflight. Preserve and show differences for conflicts involving personal edits, extra files, same-name external skills, or symbolic links. Do not delete the ownership manifest or manipulate hashes to manufacture installation success. If a supported preservation/migration procedure cannot be established, leave installation blocked separately from source changes.
 
