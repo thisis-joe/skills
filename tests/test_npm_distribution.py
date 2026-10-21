@@ -51,7 +51,7 @@ class NpmDistributionTests(unittest.TestCase):
 
     def run_cli(self, *args, expect=0, env=None):
         result = subprocess.run([NODE, str(self.cli), *map(str, args)],
-                                cwd=self.work, env=env or self.env,
+                                cwd=self.work, env=env or self.env, stdin=subprocess.DEVNULL,
                                 capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(result.returncode, expect, result.stdout + result.stderr)
         return result
@@ -77,7 +77,8 @@ class NpmDistributionTests(unittest.TestCase):
         preview = subprocess.run(
             [NPM, 'exec', '--yes', '--offline', '--ignore-scripts', '--',
              'file:' + str(self.archive), 'install', '--dry-run', '--dest', str(self.dest)],
-            cwd=self.work, env=self.env, capture_output=True, text=True, encoding='utf-8')
+            cwd=self.work, env=self.env, stdin=subprocess.DEVNULL,
+            capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(preview.returncode, 0, preview.stdout + preview.stderr)
         self.assertEqual(json.loads(preview.stdout)['status'], 'dry-run')
         self.assertFalse(self.dest.exists())
@@ -85,7 +86,8 @@ class NpmDistributionTests(unittest.TestCase):
             [NPM, 'exec', '--yes', '--offline', '--ignore-scripts',
              '--package=' + str(self.archive), '--', 'coco-skills',
              'install', '--dest', str(self.dest)],
-            cwd=self.work, env=self.env, capture_output=True, text=True, encoding='utf-8')
+            cwd=self.work, env=self.env, stdin=subprocess.DEVNULL,
+            capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         self.assertEqual(json.loads(result.stdout)['status'], 'installed')
         data = json.loads((self.package / 'coco.json').read_text(encoding='utf-8'))
@@ -122,7 +124,9 @@ class NpmDistributionTests(unittest.TestCase):
     def test_help_version_and_unknown_command_do_not_require_python(self):
         env = dict(self.env, COCO_PYTHON=str(self.work / 'missing-python'))
         package = json.loads((self.package / 'package.json').read_text(encoding='utf-8'))
-        self.assertIn('install', self.run_cli('--help', env=env).stdout)
+        usage = self.run_cli('--help', env=env).stdout
+        for word in ('install', 'uninstall', '--project', '--global', '--remove-global'):
+            self.assertIn(word, usage)
         self.assertIn('install', self.run_cli(env=env).stdout)
         self.assertEqual(self.run_cli('--version', env=env).stdout.strip(), package['version'])
         self.assertIn('Unknown command', self.run_cli('unknown', env=env, expect=2).stderr)
@@ -173,7 +177,7 @@ class NpmDistributionTests(unittest.TestCase):
             [NPM, 'exec', '--yes', '--offline', '--ignore-scripts',
              '--package=' + str(self.archive), '--', 'coco-skills',
              'install', '--runtime', 'claude'], cwd=self.work, env=env,
-            capture_output=True, text=True, encoding='utf-8')
+            stdin=subprocess.DEVNULL, capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         self.assertEqual(json.loads(result.stdout)['destination'], str(self.work / 'claude/skills'))
         self.assertFalse((self.work / 'codex').exists())
@@ -187,6 +191,29 @@ class NpmDistributionTests(unittest.TestCase):
         self.assertFalse((self.work / 'codex').exists())
         self.assertFalse((self.work / 'claude').exists())
 
+
+    def test_project_install_replaces_global_install_and_uninstall_reaches_python(self):
+        env = dict(self.env, CLAUDE_CONFIG_DIR=str(self.work / 'claude'),
+                   CODEX_HOME=str(self.work / 'codex'))
+        glob = self.work / 'claude/skills'
+        self.run_cli('install', '--runtime', 'claude', '--global', env=env)
+        project = self.work / '프로젝트 with spaces'
+        project.mkdir()
+        subprocess.run(['git', 'init', '-q', str(project)], check=True)
+        results = json.loads(self.run_cli('install', '--runtime', 'claude', '--project', project,
+                                          '--remove-global', env=env).stdout)
+        self.assertEqual([r['status'] for r in results], ['installed', 'removed'])
+        self.assertFalse((glob / '.coco-install.json').exists())
+        status = subprocess.run(['git', '-C', str(project), 'status', '--porcelain',
+                                 '--untracked-files=all'], capture_output=True, text=True,
+                                encoding='utf-8', check=True)
+        self.assertEqual(status.stdout, '')
+        self.assertIn('Validated installed bundle:', self.run_cli(
+            'validate', '--installed', project / '.claude/skills', env=env).stdout)
+        removed = json.loads(self.run_cli('uninstall', '--runtime', 'claude', '--project',
+                                          project, env=env).stdout)
+        self.assertEqual((removed['status'], removed['action']), ('removed', 'uninstall'))
+        self.assertFalse((project / '.claude/skills/coco-build').exists())
 
 if __name__ == '__main__':
     unittest.main()

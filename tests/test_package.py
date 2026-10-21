@@ -1,4 +1,6 @@
+from contextlib import redirect_stderr, redirect_stdout
 import hashlib
+import io
 import json
 import os
 from pathlib import Path
@@ -11,6 +13,7 @@ from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
+import install as installer
 from install import default_destination
 
 
@@ -39,7 +42,9 @@ class PackageTests(unittest.TestCase):
 
     def run_tool(self, name, *args, expect=0, env=None):
         command = [sys.executable, str(ROOT / 'scripts' / name), '--root', str(self.root), *args]
-        result = subprocess.run(command, capture_output=True, text=True, env=env)
+        # Without a terminal on stdin the installer never prompts, even when tests run in one.
+        result = subprocess.run(command, capture_output=True, text=True, env=env,
+                                stdin=subprocess.DEVNULL)
         self.assertEqual(result.returncode, expect, result.stdout + result.stderr)
         return result
 
@@ -226,6 +231,202 @@ class PackageTests(unittest.TestCase):
                            ['status', '--porcelain'])], starting)
         self.assertEqual((self.root / skill).read_text(), user_edit)
         self.assertEqual((self.root / 'notes.txt').read_text(), 'untracked user note\n')
+
+    def project(self, rel='project', git=True):
+        folder = Path(self.temp.name) / rel
+        folder.mkdir(parents=True, exist_ok=True)
+        if git:
+            self.git(folder, 'init', '-q')
+        return folder
+
+    def global_install(self, env):
+        self.run_tool('install.py', '--runtime', 'claude', '--global', env=env)
+        return Path(env['CLAUDE_CONFIG_DIR']) / 'skills'
+
+    def test_project_install_uses_each_runtime_folder_and_stays_out_of_git_status(self):
+        env = self.claude_env()
+        project = self.project()
+        result = json.loads(self.run_tool('install.py', '--runtime', 'claude', '--project',
+                                          str(project), env=env).stdout)
+        dest = project.resolve() / '.claude/skills'
+        self.assertEqual(result['destination'], str(dest))
+        self.assertEqual(result['project'], str(project.resolve()))
+        self.assertEqual(result['git_exclude']['added'], 3)
+        self.assertTrue((dest / 'coco-example/SKILL.md').is_file())
+        self.assertFalse(Path(env['CLAUDE_CONFIG_DIR']).exists())
+        self.assertEqual(self.git(project, 'status', '--porcelain', '--untracked-files=all'), '')
+        self.run_tool('validate.py', '--installed', str(dest))
+        again = json.loads(self.run_tool('install.py', '--runtime', 'claude', '--project',
+                                         str(project), env=env).stdout)
+        self.assertEqual((again['status'], again['git_exclude']['added']), ('unchanged', 0))
+        self.run_tool('install.py', '--runtime', 'codex', '--project', str(project), env=env)
+        self.assertTrue((project / '.agents/skills/coco-example/SKILL.md').is_file())
+        self.assertEqual(self.git(project, 'status', '--porcelain', '--untracked-files=all'), '')
+
+    def test_project_exclusions_are_repository_relative_and_leave_user_skills_visible(self):
+        repo = self.project('repo')
+        app = self.project('repo/apps/my app', git=False)
+        own = app / '.claude/skills/team-skill/SKILL.md'
+        own.parent.mkdir(parents=True)
+        own.write_text('team-owned skill')
+        self.run_tool('install.py', '--runtime', 'claude', '--project', str(app),
+                      env=self.claude_env())
+        exclude = (repo / '.git/info/exclude').read_text()
+        self.assertIn('/apps/my app/.claude/skills/coco-example/\n', exclude)
+        self.assertIn('/apps/my app/.claude/skills/.coco-install.*\n', exclude)
+        self.assertEqual(self.git(repo, 'status', '--porcelain', '--untracked-files=all'),
+                         '?? "apps/my app/.claude/skills/team-skill/SKILL.md"\n')
+
+    def test_project_outside_git_installs_without_exclusions(self):
+        project = self.project(git=False)
+        result = json.loads(self.run_tool('install.py', '--runtime', 'claude', '--project',
+                                          str(project), env=self.claude_env()).stdout)
+        self.assertIsNone(result['git_exclude'])
+        self.assertTrue((project / '.claude/skills/coco-example/SKILL.md').is_file())
+
+    def test_several_projects_install_in_one_run(self):
+        first, second = self.project('first'), self.project('second')
+        results = json.loads(self.run_tool('install.py', '--runtime', 'claude', '--project',
+                                           str(first), '--project', str(second),
+                                           env=self.claude_env()).stdout)
+        self.assertEqual([r['status'] for r in results], ['installed', 'installed'])
+        for project in (first, second):
+            self.assertTrue((project / '.claude/skills/coco-example/SKILL.md').is_file())
+
+    def test_project_dry_run_writes_neither_files_nor_exclusions(self):
+        env = self.claude_env()
+        glob = self.global_install(env)
+        project = self.project()
+        exclude = project / '.git/info/exclude'
+        before = exclude.read_text() if exclude.exists() else None
+        results = json.loads(self.run_tool('install.py', '--runtime', 'claude', '--project',
+                                           str(project), '--remove-global', '--dry-run',
+                                           env=env).stdout)
+        self.assertEqual([r['status'] for r in results], ['dry-run', 'dry-run'])
+        self.assertEqual(results[0]['git_exclude']['added'], 3)
+        self.assertEqual(results[1]['action'], 'uninstall')
+        self.assertFalse((project / '.claude').exists())
+        self.assertEqual(exclude.read_text() if exclude.exists() else None, before)
+        self.run_tool('validate.py', '--installed', str(glob))
+
+    def test_global_install_is_kept_with_a_warning_unless_removal_is_requested(self):
+        env = self.claude_env()
+        glob = self.global_install(env)
+        result = self.run_tool('install.py', '--runtime', 'claude', '--project',
+                               str(self.project()), env=env)
+        self.assertIn('--remove-global', result.stderr)
+        self.run_tool('validate.py', '--installed', str(glob))
+
+    def test_remove_global_moves_an_existing_install_into_the_project(self):
+        env = self.claude_env()
+        glob = self.global_install(env)
+        other = glob / 'unrelated/SKILL.md'
+        other.parent.mkdir()
+        other.write_text('user-owned unrelated skill')
+        project = self.project()
+        results = json.loads(self.run_tool('install.py', '--runtime', 'claude', '--project',
+                                           str(project), '--remove-global', env=env).stdout)
+        self.assertEqual([r['status'] for r in results], ['installed', 'removed'])
+        self.assertEqual(results[1]['destination'], str(glob))
+        self.assertEqual(sorted(p.name for p in glob.iterdir()), ['unrelated'])
+        self.assertEqual(other.read_text(), 'user-owned unrelated skill')
+        self.run_tool('validate.py', '--installed', str(project / '.claude/skills'))
+
+    def test_modified_global_install_stops_removal_before_any_project_write(self):
+        env = self.claude_env()
+        glob = self.global_install(env)
+        (glob / 'coco-example/SKILL.md').write_text('personal change')
+        project = self.project()
+        result = self.run_tool('install.py', '--runtime', 'claude', '--project', str(project),
+                               '--remove-global', env=env, expect=2)
+        self.assertIn('Cannot remove the global install', result.stderr)
+        self.assertFalse((project / '.claude').exists())
+        self.assertEqual((glob / 'coco-example/SKILL.md').read_text(), 'personal change')
+
+    def test_project_and_removal_arguments_are_checked_before_writing(self):
+        env = self.claude_env()
+        self.run_tool('install.py', '--runtime', 'claude', '--project',
+                      str(Path(self.temp.name) / 'missing'), env=env, expect=2)
+        self.run_tool('install.py', '--runtime', 'claude', '--global', '--remove-global',
+                      env=env, expect=2)
+        self.run_tool('install.py', '--runtime', 'claude', '--global', '--project',
+                      str(self.project()), env=env, expect=2)
+        glob = self.global_install(env)
+        self.run_tool('install.py', '--runtime', 'claude', '--dest', str(glob),
+                      '--remove-global', env=env, expect=2)
+        self.run_tool('install.py', '--uninstall', '--runtime', 'claude', '--remove-global',
+                      env=env, expect=2)
+        self.assertFalse((Path(self.temp.name) / 'missing').exists())
+        self.run_tool('validate.py', '--installed', str(glob))
+        with patch('install.Path.home', return_value=Path(self.temp.name)):
+            with self.assertRaisesRegex(installer.PackageError, 'home folder'):
+                installer.project_destination('claude', self.temp.name)
+
+    def test_uninstall_removes_only_unmodified_managed_files(self):
+        other = self.dest / 'unrelated/SKILL.md'
+        other.parent.mkdir(parents=True)
+        other.write_text('unrelated')
+        self.install()
+        preview = json.loads(self.install('--uninstall', '--dry-run').stdout)
+        self.assertEqual(preview['status'], 'dry-run')
+        self.assertTrue((self.dest / 'coco-example/SKILL.md').is_file())
+        (self.dest / 'coco-example/notes.txt').write_text('keep me')
+        self.install('--uninstall', expect=2)
+        self.assertTrue((self.dest / 'coco-example/SKILL.md').is_file())
+        (self.dest / 'coco-example/notes.txt').unlink()
+        removed = json.loads(self.install('--uninstall').stdout)
+        self.assertEqual((removed['status'], removed['files']), ('removed', 3))
+        self.assertEqual(sorted(p.name for p in self.dest.iterdir()), ['unrelated'])
+        self.assertEqual(json.loads(self.install('--uninstall').stdout)['status'], 'absent')
+
+    def run_interactive(self, answers, *args, env):
+        output = io.StringIO()
+        argv = ['install.py', '--root', str(self.root), '--runtime', 'claude', *args]
+        with patch.object(sys, 'argv', argv), patch.dict(os.environ, env), \
+                patch('install.sys.stdin') as stdin, \
+                patch('install.ask', side_effect=answers) as asked, redirect_stdout(output), \
+                redirect_stderr(io.StringIO()):
+            stdin.isatty.return_value = True
+            installer.main()
+        return json.loads(output.getvalue()), asked
+
+    def test_terminal_prompt_chooses_projects_and_confirms_global_removal(self):
+        env = self.claude_env()
+        glob = self.global_install(env)
+        first, second = self.project('first'), self.project('second')
+        results, asked = self.run_interactive(['1', str(first), str(second), '', 'y'], env=env)
+        self.assertEqual([r['status'] for r in results], ['installed', 'installed', 'removed'])
+        self.assertIn('Remove it after the project install?', asked.call_args_list[-1].args[0])
+        self.assertFalse((glob / '.coco-install.json').exists())
+        for project in (first, second):
+            self.run_tool('validate.py', '--installed', str(project / '.claude/skills'))
+
+    def test_terminal_prompt_asks_again_instead_of_failing_on_a_bad_answer(self):
+        env = self.claude_env()
+        home, project = self.project('home', git=False), self.project()
+        missing = Path(self.temp.name) / 'missing'
+        with patch('install.Path.home', return_value=home), \
+                patch('install.Path.cwd', return_value=home):
+            result, asked = self.run_interactive(
+                ['3', '1', '', str(home), str(missing), str(project), ''], env=env)
+        self.assertEqual(result['project'], str(project.resolve()))
+        prompts = [call.args[0] for call in asked.call_args_list]
+        self.assertEqual(prompts[:3], ['Choose [1]: ', 'Choose 1 or 2: ', 'Project folder: '])
+        self.assertEqual(prompts.count('Project folder: '), 4)
+        self.assertFalse(missing.exists())
+
+    def test_terminal_prompt_can_keep_or_choose_the_global_install(self):
+        env = self.claude_env()
+        glob = self.global_install(env)
+        result, _ = self.run_interactive(['', str(self.project()), '', 'n'], env=env)
+        self.assertEqual(result['status'], 'installed')
+        self.run_tool('validate.py', '--installed', str(glob))
+        result, asked = self.run_interactive(['2'], env=env)
+        self.assertEqual((result['status'], result['destination']), ('unchanged', str(glob)))
+        self.assertEqual(asked.call_count, 1)
+        result, asked = self.run_interactive([], '--global', env=env)
+        self.assertEqual(result['status'], 'unchanged')
+        self.assertEqual(asked.call_count, 0)
 
     def test_symlink_in_package_or_target_is_refused(self):
         secret = Path(self.temp.name) / 'outside.txt'
