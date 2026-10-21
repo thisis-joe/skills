@@ -6,7 +6,7 @@
 
 Node.js 22 이상과 Python 3.9 이상이 필요하다. 설치 사용자는 npm 로그인이 필요하지 않다. Node.js/npm이 없는 환경에서는 저장소를 clone하고 Python 설치기를 직접 실행할 수 있다. npm 설치와 Python 직접 설치는 같은 설치기를 사용한다.
 
-0.3.0은 원본 기법 보강(스킬별 고급 절차 읽기 조건, 멈춤 신호, clarify grill 모드, debug 전제 재검증), `coco-document`를 나눈 `coco-docs`·`coco-learn`, PR/MR 머지 스킬 `coco-merge`, 질의응답 학습 스킬 `coco-askme`를 포함한 영어 스킬 문서와 공통 자료를 Codex·Claude Code에 함께 배포한다. 두 런타임은 같은 29개 스킬과 `_coco-shared`를 사용하며, `agents/openai.yaml`은 Codex용 표시 메타데이터다. 설치 대상 에이전트 자체의 설치·인증은 별도다.
+1.0.0은 원본 기법 보강(스킬별 고급 절차 읽기 조건, 멈춤 신호, clarify grill 모드, debug 전제 재검증), `coco-document`를 나눈 `coco-docs`·`coco-learn`, PR/MR 머지 스킬 `coco-merge`를 포함한 영어 스킬 문서와 공통 자료를 Codex·Claude Code에 함께 배포한다. 두 런타임은 같은 29개 스킬과 `_coco-shared`를 사용하며, `agents/openai.yaml`은 Codex용 표시 메타데이터다. 설치 대상 에이전트 자체의 설치·인증은 별도다.
 
 ```sh
 npx --yes @thisis-joe/coco-skills@latest install --runtime codex --dry-run
@@ -29,7 +29,7 @@ npx --yes @thisis-joe/coco-skills@latest install --runtime claude --project ./my
 npx --yes @thisis-joe/coco-skills@latest validate --installed ./my-project/.claude/skills
 npx --yes @thisis-joe/coco-skills@latest install --runtime claude --project ./my-project --remove-global
 npx --yes @thisis-joe/coco-skills@latest uninstall --runtime claude --project ./my-project
-npx --yes @thisis-joe/coco-skills@0.3.0 install --runtime codex --dest ./my-skills
+npx --yes @thisis-joe/coco-skills@1.0.0 install --runtime codex --dest ./my-skills
 ```
 
 `--project` 설치는 설치한 폴더와 설치 기록을 해당 저장소의 `.git/info/exclude`에 저장소 루트 기준 경로로 추가한다. 공유되는 `.gitignore`는 바꾸지 않는다. Git 저장소가 아니면 이 단계를 건너뛰고 `git_exclude`를 `null`로 반환한다. 홈 폴더나 글로벌 경로와 같은 위치는 프로젝트로 받지 않는다.
