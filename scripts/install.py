@@ -201,22 +201,33 @@ def confirm(question):
 
 def ask_projects(runtime, global_dest):
     """Ask where to install; return the chosen project folders, or [] for a global install."""
-    name = RUNTIME_NAMES[runtime]
-    choice = ask(f'Where should COCO skills for {name} be installed?\n'
-                 f'  1) Project folders only: <project>/{PROJECT_SKILLS[runtime].as_posix()}\n'
-                 f'  2) Every project (global): {global_dest}\n'
-                 'Choose [1]: ')
+    sys.stderr.write(f'Where should COCO skills for {RUNTIME_NAMES[runtime]} be installed?\n'
+                     f'  1) Project folders only: <project>/{PROJECT_SKILLS[runtime].as_posix()}\n'
+                     f'  2) Every project (global): {global_dest}\n')
+    choice = ask('Choose [1]: ')
+    while choice not in ('', '1', '2'):
+        choice = ask('Choose 1 or 2: ')
     if choice == '2':
         return []
-    if choice not in ('', '1'):
-        raise PackageError('Unknown choice: ' + choice)
+    # Offer the current folder unless it is the home folder, which is never a project.
     cwd = Path.cwd()
-    projects = [ask(f'Project folder [{cwd}]: ') or str(cwd)]
+    default = '' if cwd.resolve() == Path.home().resolve() else str(cwd)
+    projects = []
     while True:
-        another = ask('Another project folder (blank to finish): ')
-        if not another:
-            return projects
-        projects.append(another)
+        if projects:
+            folder = ask('Another project folder (blank to finish): ')
+            if not folder:
+                return projects
+        else:
+            folder = ask(f'Project folder [{default}]: ' if default else 'Project folder: ') or default
+            if not folder:
+                continue
+        try:
+            project_destination(runtime, folder)
+        except PackageError as exc:
+            sys.stderr.write(str(exc) + '\n')
+            continue
+        projects.append(folder)
 
 
 def plan_global_removal(args, targets, global_dest, interactive):

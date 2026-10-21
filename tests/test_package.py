@@ -401,6 +401,20 @@ class PackageTests(unittest.TestCase):
         for project in (first, second):
             self.run_tool('validate.py', '--installed', str(project / '.claude/skills'))
 
+    def test_terminal_prompt_asks_again_instead_of_failing_on_a_bad_answer(self):
+        env = self.claude_env()
+        home, project = self.project('home', git=False), self.project()
+        missing = Path(self.temp.name) / 'missing'
+        with patch('install.Path.home', return_value=home), \
+                patch('install.Path.cwd', return_value=home):
+            result, asked = self.run_interactive(
+                ['3', '1', '', str(home), str(missing), str(project), ''], env=env)
+        self.assertEqual(result['project'], str(project.resolve()))
+        prompts = [call.args[0] for call in asked.call_args_list]
+        self.assertEqual(prompts[:3], ['Choose [1]: ', 'Choose 1 or 2: ', 'Project folder: '])
+        self.assertEqual(prompts.count('Project folder: '), 4)
+        self.assertFalse(missing.exists())
+
     def test_terminal_prompt_can_keep_or_choose_the_global_install(self):
         env = self.claude_env()
         glob = self.global_install(env)
