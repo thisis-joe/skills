@@ -13,7 +13,9 @@ Codex와 Claude Code에서 쓰는 **개발 작업 스킬 29개**(0.3.0 기준)�
 
 ### 1. 설치
 
-> **0.3.0은 아직 npm에 게시되지 않았습니다.** 지금 `@latest`로 설치하면 0.2.0이 설치되고, 이 문서의 일부 스킬(`coco-docs`, `coco-learn`, `coco-merge`, `coco-askme` 등)이 없습니다. 이 문서와 같은 버전을 쓰려면 [npm 없이 설치](#설치-관리)하세요.
+> **0.3.0은 아직 npm에 게시되지 않았습니다.** 지금 `@latest`로 설치하면 0.2.0이 설치되고, 이 문서의 일부 스킬(`coco-docs`, `coco-learn`, `coco-merge`, `coco-askme` 등)과 프로젝트별 설치(`--project`)·`uninstall`이 없습니다. 이 문서와 같은 버전을 쓰려면 [npm 없이 설치](#설치-관리)하세요.
+
+COCO를 쓸 프로젝트 폴더로 이동해서 실행합니다.
 
 Claude Code:
 
@@ -27,24 +29,61 @@ Codex:
 npx --yes @thisis-joe/coco-skills@latest install --runtime codex
 ```
 
-설치가 끝나면 결과가 출력됩니다. `status`가 `installed`(새로 설치하거나 업데이트함) 또는 `unchanged`(설치된 내용과 같아 바꿀 것이 없음)이면 성공입니다.
+터미널에서 실행하면 설치할 위치를 묻습니다.
+
+1. **프로젝트 폴더에만 (기본):** 입력한 프로젝트에서만 coco 스킬이 보입니다. 처음 묻는 폴더의 기본값은 지금 폴더이고, 이어서 다른 프로젝트 폴더를 더 입력할 수 있습니다. 빈 줄을 입력하면 끝납니다.
+2. **모든 프로젝트 (글로벌):** 이 컴퓨터의 모든 프로젝트에서 보입니다.
+
+질문 없이 바로 설치하려면 위치를 옵션으로 지정합니다. `--project`는 여러 번 쓸 수 있습니다.
+
+```sh
+npx --yes @thisis-joe/coco-skills@latest install --runtime claude --project ~/work/my-app
+npx --yes @thisis-joe/coco-skills@latest install --runtime claude --global
+```
+
+설치가 끝나면 결과가 출력됩니다. `status`가 `installed`(새로 설치하거나 업데이트함) 또는 `unchanged`(설치된 내용과 같아 바꿀 것이 없음)이면 성공입니다. 여러 곳에 설치하면 결과가 목록으로 나옵니다.
 
 ```json
 {
   "status": "installed",
   "skills": 29,
   "files": 116,
-  "destination": "/Users/me/.claude/skills"
+  "destination": "/Users/me/work/my-app/.claude/skills",
+  "project": "/Users/me/work/my-app",
+  "git_exclude": {
+    "file": "/Users/me/work/my-app/.git/info/exclude",
+    "added": 31
+  }
 }
 ```
 
-| 런타임 | 설치 폴더 | 스킬 호출 |
-|---|---|---|
-| Claude Code | `~/.claude/skills` (`CLAUDE_CONFIG_DIR`가 있으면 그 아래 `skills`) | `/coco-start` |
-| Codex | `~/.codex/skills` (`CODEX_HOME`이 있으면 그 아래 `skills`) | `$coco-start` |
+| 런타임 | 프로젝트 설치 폴더 | 글로벌 설치 폴더 | 스킬 호출 |
+|---|---|---|---|
+| Claude Code | `<프로젝트>/.claude/skills` | `~/.claude/skills` (`CLAUDE_CONFIG_DIR`가 있으면 그 아래 `skills`) | `/coco-start` |
+| Codex | `<프로젝트>/.agents/skills` | `~/.codex/skills` (`CODEX_HOME`이 있으면 그 아래 `skills`) | `$coco-start` |
 
+- 프로젝트에 설치한 COCO 파일은 그 저장소의 `.git/info/exclude`에 등록되어 Git 변경 목록에 나타나지 않습니다. 팀 저장소에 커밋되지 않으므로, 쓰려는 사람이 각자 설치합니다.
+- 프로젝트 하위 폴더에 설치하면 그 폴더에서 세션을 시작할 때 보입니다. 두 런타임 모두 시작한 폴더부터 저장소 루트까지의 스킬 폴더를 읽습니다.
+- 스크립트·CI처럼 질문할 수 없는 환경에서 위치 옵션 없이 실행하면 이전처럼 글로벌로 설치합니다.
 - `--runtime`을 생략하면 Codex에 설치합니다.
 - 두 런타임을 모두 쓰면 두 명령을 각각 실행합니다. 한쪽을 업데이트해도 다른 쪽은 바뀌지 않습니다.
+
+#### 글로벌 설치에서 프로젝트 설치로 옮기기
+
+이전 버전을 글로벌로 설치했다면, 업데이트할 때 프로젝트 설치를 고르세요. 기존 글로벌 설치가 있으면 지울지 묻습니다. **지우는 것을 권장합니다.** 글로벌 설치가 남아 있으면 coco 스킬이 계속 모든 프로젝트에 보입니다. Claude Code는 같은 이름의 스킬이 개인 폴더와 프로젝트에 모두 있으면 개인 폴더 쪽을 실행하므로, 프로젝트에 설치한 새 버전도 가려집니다. Codex는 둘 다 목록에 보여 줍니다.
+
+```sh
+cd ~/work/my-app
+npx --yes @thisis-joe/coco-skills@latest install --runtime claude
+```
+
+질문 없이 하려면 `--remove-global`을 붙입니다.
+
+```sh
+npx --yes @thisis-joe/coco-skills@latest install --runtime claude --project ~/work/my-app --remove-global
+```
+
+글로벌 설치는 프로젝트 설치가 끝난 뒤에 지웁니다. 지우는 대상은 설치기가 설치한 파일 중 바뀌지 않은 파일뿐이고, 같은 폴더의 다른 스킬은 그대로 둡니다. 글로벌 설치의 파일을 직접 고쳤다면 프로젝트 설치를 포함해 아무것도 바꾸기 전에 멈춥니다.
 - 이 문서는 0.3.0 기준입니다. 버전마다 스킬 수가 다를 수 있으니, `@latest`로 설치되는 버전은 `npx --yes @thisis-joe/coco-skills@latest --version`으로 확인하세요.
 
 ### 2. 새 세션 열기
@@ -177,24 +216,36 @@ feat(be)/123-OAuth2.0_구글
 
 | 하고 싶은 것 | 방법 |
 |---|---|
-| 업데이트 | 같은 `install` 명령을 다시 실행합니다. 이미 최신이면 `unchanged`를 출력합니다. |
-| 설치하지 않고 확인만 하기 | 명령 끝에 `--dry-run`을 붙입니다. 파일은 바꾸지 않고, 설치할 수 있으면 `dry-run`, 이미 같으면 `unchanged`, 충돌이 있으면 오류 메시지를 출력합니다. |
-| 한 프로젝트에만 설치 (Claude Code) | `--dest ./my-project/.claude/skills`를 붙입니다. `--dest`는 런타임 기본 폴더보다 우선합니다. |
+| 업데이트 | 같은 `install` 명령을 다시 실행합니다. 프로젝트에 설치했다면 같은 프로젝트 폴더를 고르거나 `--project <폴더>`를 붙입니다. 이미 최신이면 `unchanged`를 출력합니다. |
+| 설치하지 않고 확인만 하기 | 명령 끝에 `--dry-run`을 붙입니다. 파일과 `.git/info/exclude`는 바꾸지 않고, 설치할 수 있으면 `dry-run`, 이미 같으면 `unchanged`, 충돌이 있으면 오류 메시지를 출력합니다. |
+| 특정 프로젝트에만 설치 | `--project <프로젝트 폴더>`를 붙입니다. 여러 프로젝트는 `--project`를 반복합니다. |
+| 모든 프로젝트에 설치 | `--global`을 붙입니다. |
+| 기존 글로벌 설치 지우기 | 프로젝트 설치 명령에 `--remove-global`을 붙입니다. 터미널에서는 옵션 없이도 묻습니다. |
+| 설치 폴더를 직접 지정 | `--dest <스킬 폴더>`를 붙입니다. 런타임 기본 폴더보다 우선하며, `.git/info/exclude`에는 등록하지 않습니다. |
 | 특정 버전 설치·되돌리기 | `@latest` 대신 버전을 적습니다. 예: `@thisis-joe/coco-skills@0.2.0` |
 | 게시된 버전 목록 보기 | `npm view @thisis-joe/coco-skills versions` |
 | `@latest`가 가리키는 버전 보기 | `npx --yes @thisis-joe/coco-skills@latest --version` |
 | 설치된 파일 검사 | `npx --yes @thisis-joe/coco-skills@latest validate --installed <설치 폴더>`. 설치 폴더는 설치 결과의 `destination`입니다. |
 | Python 실행 파일 지정 | 환경 변수 `COCO_PYTHON`에 실행 파일 경로를 넣습니다. 기본은 `python3` → `python` → `py -3` 순서로 찾습니다. |
-| npm 없이 설치 | 저장소를 clone하고 `python3 scripts/install.py --runtime claude`(또는 `codex`)를 실행합니다. |
+| npm 없이 설치 | 저장소를 clone하고 `python3 scripts/install.py --runtime claude`(또는 `codex`)를 실행합니다. `--project`·`--global`·`--remove-global`도 같습니다. |
 
 업데이트할 때 새 버전에서 빠지거나 이름이 바뀐 스킬은 함께 정리됩니다. 예를 들어 0.2.0의 `coco-document`는 0.3.0으로 업데이트하면 `coco-docs`로 바뀝니다. 설치 폴더에 있는 다른 스킬은 건드리지 않습니다.
 
 ### 제거
 
-설치 폴더(설치 결과의 `destination`)에서 COCO가 설치한 폴더와 설치 기록 파일을 지웁니다. 아래는 Claude Code 기본 폴더의 예입니다.
+`uninstall`에 설치할 때와 같은 위치를 지정합니다. 설치기가 설치한 파일 중 바뀌지 않은 파일과 설치 기록만 지우고, 같은 폴더의 다른 스킬은 그대로 둡니다. `--dry-run`을 붙이면 지우지 않고 확인만 합니다.
 
 ```sh
-cd ~/.claude/skills    # Codex 기본: ~/.codex/skills
+npx --yes @thisis-joe/coco-skills@latest uninstall --runtime claude --project ~/work/my-app
+npx --yes @thisis-joe/coco-skills@latest uninstall --runtime claude --global
+```
+
+`uninstall`은 위치 옵션이 없으면 글로벌 설치를 지웁니다. 이미 없으면 `absent`를 출력합니다. 프로젝트 `.git/info/exclude`에 추가된 줄은 남지만 동작에는 영향이 없습니다.
+
+설치된 파일을 직접 고쳤거나 추가해서 `uninstall`이 멈추면, 보관할 파일을 옮긴 뒤 설치 폴더(설치 결과의 `destination`)에서 직접 지웁니다. 아래는 Claude Code 글로벌 폴더의 예입니다.
+
+```sh
+cd ~/.claude/skills    # Codex 글로벌: ~/.codex/skills, 프로젝트: <프로젝트>/.claude/skills 또는 .agents/skills
 rm -rf coco-* _coco-shared .coco-install.json .coco-install.lock
 ```
 
@@ -211,7 +262,11 @@ rm -rf coco-* _coco-shared .coco-install.json .coco-install.lock
 | `Managed file changed or missing: <경로>` | 설치된 파일이나 스킬 폴더를 지움 | 위 '제거' 방법으로 지우고 다시 설치합니다. |
 | `Foreign skill directory already exists: <이름>` | COCO가 설치하지 않은 같은 이름의 폴더가 있음. 또는 설치 기록 파일 `.coco-install.json`만 지움 | 다른 스킬이면 그 폴더를 옮기거나 `--dest`로 다른 폴더에 설치합니다. 설치 기록만 지웠다면 위 '제거' 방법으로 나머지도 지우고 다시 설치합니다. |
 | `Another installation owns .coco-install.lock` | 다른 설치가 실행 중이거나 중간에 끊김 | 실행 중인 설치가 없는지 확인하고 설치 폴더의 `.coco-install.lock`을 지운 뒤 다시 실행합니다. |
-| `/` 메뉴에 `coco-` 스킬이 없음 | 세션이 스킬 목록을 다시 읽지 않았거나 다른 폴더에 설치함 | 새 세션을 엽니다. 설치 결과의 `destination`이 런타임의 설치 폴더인지 확인합니다. 조직 설정이 로컬 스킬을 막을 수도 있습니다. |
+| `Project folder not found: <경로>` | `--project`에 적은 폴더가 없음 | 프로젝트 폴더 경로를 확인합니다. 설치기는 프로젝트 폴더를 새로 만들지 않습니다. |
+| `Cannot remove the global install at <경로>: ...` | 글로벌 설치의 파일을 직접 고쳤거나 추가함 | 아무것도 바뀌지 않았습니다. 고친 파일을 보관하고 위 '제거' 방법으로 글로벌 설치를 지운 뒤 다시 실행하거나, `--remove-global` 없이 프로젝트에만 설치합니다. |
+| `Warning: the global COCO install at <경로> still applies to every project` | 프로젝트에 설치했지만 글로벌 설치가 남아 있음 | 프로젝트 설치는 끝났습니다. 다른 프로젝트에서 coco 스킬을 숨기려면 `--remove-global`을 붙여 다시 실행합니다. |
+| `/` 메뉴에 `coco-` 스킬이 없음 | 세션이 스킬 목록을 다시 읽지 않았거나 다른 폴더에 설치함 | 새 세션을 엽니다. 설치 결과의 `destination`이 런타임의 설치 폴더인지, 프로젝트 설치라면 그 프로젝트(또는 하위 폴더)에서 세션을 시작했는지 확인합니다. 조직 설정이 로컬 스킬을 막을 수도 있습니다. |
+| 다른 프로젝트에도 `coco-` 스킬이 보임 | 글로벌 설치가 남아 있음 | 위 '글로벌 설치에서 프로젝트 설치로 옮기기'를 따릅니다. |
 
 ## 공통 원칙
 
