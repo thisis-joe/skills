@@ -195,3 +195,4 @@
 - 기록 분석: `python3 docs/evaluation/latency/measure_sessions.py --project <폴더> --since <시각> --until <시각>`이 지정한 범위의 스킬 호출별 실행 시간, 모델 호출 수, 출력 토큰, 도구 시간을 계산합니다. 본문, 인자, 경로는 출력하지 않고 세션은 해시로만 표시합니다. 위 표는 2026-10-20~21 범위를 4개 프로젝트에 대해 실행한 결과입니다.
 - 비교 실험과 동작 확인: [protocol.md](protocol.md)에 과제, 실행 조건, 격리 방법, 판정 기준을 고정합니다.
 - 1차 조정 후 동작 확인과 시간 비교: [results.md](results.md).
+- build, review, debug, verify 진단과 조정 후 비교: [heavy.md](heavy.md), [heavy-results.md](heavy-results.md).

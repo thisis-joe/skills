@@ -12,14 +12,14 @@ Read the [common contract](../_coco-shared/contracts.md) before acting; when the
 
 ## Procedure and output
 
-1. Freeze the task's base/HEAD, selected paths, staged/unstaged/untracked files and snapshot. Run the [review-scope collector](../_coco-shared/tools/review_scope.py) in the same batch as your first reads, `python3 <skill-dir>/../_coco-shared/tools/review_scope.py --repo <repo> --base <base-ref>` with `--path <task-path>` per task path; it compares from the merge-base with HEAD, so use a direct Git diff for an exact revision range. Inspect actual content including new files. An empty HEAD diff does not mean there is no work to review.
+1. Freeze the task's base/HEAD, selected paths, staged/unstaged/untracked files and snapshot. For an exact commit or revision range, `git diff <range>` with `git status --porcelain` is that scope. Otherwise run the [review-scope collector](../_coco-shared/tools/review_scope.py) in the same batch as your first reads, `python3 <skill-dir>/../_coco-shared/tools/review_scope.py --repo <repo> --base <base-ref>` with `--path <task-path>` per task path; it compares from the merge-base with HEAD and prints JSON with the comparison commit, HEAD, a snapshot hash and each file's Git layers, so its source need not be read. Inspect actual content including new files. An empty HEAD diff does not mean there is no work to review.
 2. Read the originating requirement and repository standards. Missing spec means spec comparison is unavailable, not automatically passed. Read tests and evidence alongside implementation.
 3. Keep three independent verdicts: spec/acceptance, standards, and quality/risk (correctness, readability, structure, security, performance). Check threshold reductions, weakened tests, dead code and dependency changes. Distinguish real defects from preference.
 4. Write one actionable finding per defect with severity, location, failure mechanism and supporting evidence. Link all affected axes instead of duplicating the same fix or letting one passing axis mask another.
-5. For a consequential in-flight claim, give a fresh reviewer the smallest artifact plus contract, not the author's reasoning. Reconcile findings against the code; stop adversarial cycles after three or when only resolved/trivial issues remain. Report degraded independence where applicable.
+5. For a consequential in-flight claim, give a fresh reviewer the smallest artifact plus contract, not the author's reasoning. Reconcile findings against the code; stop adversarial cycles after three or when only resolved/trivial issues remain. When a required fresh review was unavailable, say so in one line.
 6. Return findings and verdicts to the execution owner. Do not modify files or commit during review. Any later code change invalidates the affected portion of this scope's approval.
 
-Return: frozen scope, per-axis verdicts/findings, checks actually examined and remaining limitations.
+Return findings first, most severe first; then the frozen scope, one line per axis verdict, the checks actually examined, and only limitations that change how the verdict can be used.
 
 ## Stop signals
 

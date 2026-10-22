@@ -14,7 +14,7 @@ Review returns findings on a frozen artifact. It does not edit product code, sta
 
 The [scope collector](../tools/review_scope.py) inventories all four Git layers and hashes the current selection without changing it.
 Its `--base` comparison uses the merge-base with HEAD; supply repeated `--path` filters for literal task files/directories.
-Use the matching direct Git comparison separately if the user's requested review is an exact revision/commit rather than merge-base scope.
+Use the matching direct Git comparison instead of the collector if the user's requested review is an exact revision/commit rather than merge-base scope, adding `git status --porcelain` when uncommitted work could be in scope.
 Do not treat its metadata inventory as a substitute for reading the diff and untracked contents.
 An invalid base is an input error; an empty committed range may still contain staged, unstaged, or untracked work.
 Exclude unrelated user work explicitly, without deleting it. A later edit invalidates findings/approval on affected code.
@@ -114,7 +114,7 @@ Ambiguity is not evidence to erase a safety constraint. Report the unresolved co
 
 ## Return findings
 
-Give separate spec, standards, and quality verdicts for the exact snapshot, including unavailable axes and independence limitations.
+Give separate spec, standards, and quality verdicts for the exact snapshot, one line each, including unavailable axes and any required independence that was missing.
 Lead with blocking correctness/security issues; each finding names severity, location, concrete trigger/impact, evidence, and remedy/check.
 Distinguish required fixes, considerations, informational notes, and dismissed claims with reasons.
 Report cleared conditions and residual risks concisely; no invented nits to fill a review and no “approved” claim beyond the inspected scope.
