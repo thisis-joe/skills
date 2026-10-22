@@ -12,7 +12,7 @@ Read the [common contract](../_coco-shared/contracts.md) before acting; when the
 
 ## Procedure and output
 
-1. Freeze the task's base/HEAD, selected paths, staged/unstaged/untracked files and snapshot. Use the shared review-scope tool when available; inspect actual content including new files. An empty HEAD diff does not mean there is no work to review.
+1. Freeze the task's base/HEAD, selected paths, staged/unstaged/untracked files and snapshot. Run the [review-scope collector](../_coco-shared/tools/review_scope.py) in the same batch as your first reads, `python3 <skill-dir>/../_coco-shared/tools/review_scope.py --repo <repo> --base <base-ref>` with `--path <task-path>` per task path; it compares from the merge-base with HEAD, so use a direct Git diff for an exact revision range. Inspect actual content including new files. An empty HEAD diff does not mean there is no work to review.
 2. Read the originating requirement and repository standards. Missing spec means spec comparison is unavailable, not automatically passed. Read tests and evidence alongside implementation.
 3. Keep three independent verdicts: spec/acceptance, standards, and quality/risk (correctness, readability, structure, security, performance). Check threshold reductions, weakened tests, dead code and dependency changes. Distinguish real defects from preference.
 4. Write one actionable finding per defect with severity, location, failure mechanism and supporting evidence. Link all affected axes instead of duplicating the same fix or letting one passing axis mask another.
