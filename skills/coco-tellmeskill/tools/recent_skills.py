@@ -163,6 +163,9 @@ def default_config(runtime):
 
 
 def main(argv=None):
+    # Korean branch names and note sections must print on Windows consoles and pipes too.
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8')
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--runtime', choices=('claude', 'codex'), required=True)
     parser.add_argument('--workspace', default=os.getcwd(),

@@ -31,7 +31,7 @@ class ReviewScopeTests(unittest.TestCase):
     def write(self, name, content):
         p = self.repo / name
         p.parent.mkdir(parents=True, exist_ok=True)
-        p.write_text(content)
+        p.write_text(content, encoding='utf-8')
 
     def run_scope(self, *args, expect=0):
         result = subprocess.run([sys.executable, str(SCRIPT), '--repo', str(self.repo),
@@ -74,7 +74,7 @@ class ReviewScopeTests(unittest.TestCase):
         self.run_scope()
         self.assertEqual(self.git('status', '--porcelain=v1', '-z'), before)
         self.assertEqual(self.git('rev-parse', 'HEAD'), head)
-        self.assertEqual((self.repo / 'new.txt').read_text(), 'not staged\n')
+        self.assertEqual((self.repo / 'new.txt').read_text(encoding='utf-8'), 'not staged\n')
 
     def test_fingerprint_changes_when_reviewed_content_changes(self):
         self.write('tracked.txt', 'first\n')

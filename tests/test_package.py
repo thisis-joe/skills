@@ -38,7 +38,7 @@ class PackageTests(unittest.TestCase):
     def write(self, rel, value):
         p = self.root / rel
         p.parent.mkdir(parents=True, exist_ok=True)
-        p.write_text(value)
+        p.write_text(value, encoding='utf-8')
 
     def run_tool(self, name, *args, expect=0, env=None):
         command = [sys.executable, str(ROOT / 'scripts' / name), '--root', str(self.root), *args]
@@ -122,15 +122,15 @@ class PackageTests(unittest.TestCase):
         dest = Path(env['CLAUDE_CONFIG_DIR']) / 'skills'
         other = dest / 'unrelated/SKILL.md'
         other.parent.mkdir(parents=True)
-        other.write_text('user-owned unrelated skill')
+        other.write_text('user-owned unrelated skill', encoding='utf-8')
         self.run_tool('install.py', '--runtime', 'claude', env=env)
         managed = dest / 'coco-example/SKILL.md'
-        managed.write_text('personal change')
+        managed.write_text('personal change', encoding='utf-8')
         self.write('skills/_coco-shared/contracts.md', 'new version\n')
         self.run_tool('install.py', '--runtime', 'claude', env=env, expect=2)
-        self.assertEqual(managed.read_text(), 'personal change')
-        self.assertEqual(other.read_text(), 'user-owned unrelated skill')
-        self.assertEqual((dest / '_coco-shared/contracts.md').read_text(), '# Common contract\n')
+        self.assertEqual(managed.read_text(encoding='utf-8'), 'personal change')
+        self.assertEqual(other.read_text(encoding='utf-8'), 'user-owned unrelated skill')
+        self.assertEqual((dest / '_coco-shared/contracts.md').read_text(encoding='utf-8'), '# Common contract\n')
 
     def test_unknown_runtime_is_rejected_before_writing(self):
         self.install('--runtime', 'unsupported', expect=2)
@@ -148,40 +148,40 @@ class PackageTests(unittest.TestCase):
     def test_foreign_skill_conflict_prevents_all_writes(self):
         folder = self.dest / 'coco-example'
         folder.mkdir(parents=True)
-        (folder / 'SKILL.md').write_text('user-owned')
+        (folder / 'SKILL.md').write_text('user-owned', encoding='utf-8')
         self.install(expect=2)
-        self.assertEqual((folder / 'SKILL.md').read_text(), 'user-owned')
+        self.assertEqual((folder / 'SKILL.md').read_text(encoding='utf-8'), 'user-owned')
         self.assertFalse((self.dest / '_coco-shared').exists())
 
     def test_modified_managed_file_is_preserved_on_update(self):
         self.install()
         target = self.dest / 'coco-example/SKILL.md'
-        target.write_text('user modification')
+        target.write_text('user modification', encoding='utf-8')
         self.write('skills/_coco-shared/contracts.md', 'new version\n')
         self.install(expect=2)
-        self.assertEqual(target.read_text(), 'user modification')
-        self.assertEqual((self.dest / '_coco-shared/contracts.md').read_text(), '# Common contract\n')
+        self.assertEqual(target.read_text(encoding='utf-8'), 'user modification')
+        self.assertEqual((self.dest / '_coco-shared/contracts.md').read_text(encoding='utf-8'), '# Common contract\n')
 
     def test_unmodified_managed_install_can_update(self):
         self.install()
         self.write('skills/_coco-shared/contracts.md', '# Updated contract\n')
         self.install()
-        self.assertEqual((self.dest / '_coco-shared/contracts.md').read_text(), '# Updated contract\n')
+        self.assertEqual((self.dest / '_coco-shared/contracts.md').read_text(encoding='utf-8'), '# Updated contract\n')
 
     def test_extra_user_file_in_managed_directory_prevents_update(self):
         self.install()
         extra = self.dest / 'coco-example/notes.txt'
-        extra.write_text('do not delete')
+        extra.write_text('do not delete', encoding='utf-8')
         self.write('skills/_coco-shared/contracts.md', 'new version\n')
         self.install(expect=2)
-        self.assertEqual(extra.read_text(), 'do not delete')
+        self.assertEqual(extra.read_text(encoding='utf-8'), 'do not delete')
 
     def test_other_installed_skills_are_untouched(self):
         other = self.dest / 'unrelated/SKILL.md'
         other.parent.mkdir(parents=True)
-        other.write_text('unrelated')
+        other.write_text('unrelated', encoding='utf-8')
         self.install()
-        self.assertEqual(other.read_text(), 'unrelated')
+        self.assertEqual(other.read_text(encoding='utf-8'), 'unrelated')
 
     def git(self, repo, *args, expect=0):
         result = subprocess.run(['git', '-C', str(repo), *args], capture_output=True, text=True)
@@ -196,7 +196,7 @@ class PackageTests(unittest.TestCase):
         self.git(self.root, 'commit', '-qm', 'baseline')
         self.git(self.root, 'switch', '-qc', 'feat/unrelated-work')
         skill = 'skills/coco-example/SKILL.md'
-        user_edit = (self.root / skill).read_text() + 'Personal uncommitted edit.\n'
+        user_edit = (self.root / skill).read_text(encoding='utf-8') + 'Personal uncommitted edit.\n'
         self.write(skill, user_edit)
         self.write('notes.txt', 'untracked user note\n')
         starting = [self.git(self.root, *args) for args in
@@ -209,17 +209,17 @@ class PackageTests(unittest.TestCase):
         listed = self.git(self.root, 'worktree', 'list', '--porcelain')
         self.assertIn(f'worktree {worktree.resolve()}\n', listed)
         self.assertIn(f'branch refs/heads/{branch}\n', listed)
-        self.assertNotIn('Personal uncommitted edit', (worktree / skill).read_text())
+        self.assertNotIn('Personal uncommitted edit', (worktree / skill).read_text(encoding='utf-8'))
         self.assertFalse((worktree / 'notes.txt').exists())
 
-        team_rule = (worktree / skill).read_text() + 'Team rule from the dedicated branch.\n'
-        (worktree / skill).write_text(team_rule)
+        team_rule = (worktree / skill).read_text(encoding='utf-8') + 'Team rule from the dedicated branch.\n'
+        (worktree / skill).write_text(team_rule, encoding='utf-8')
         self.git(worktree, 'commit', '-qam', 'feat: add team rule')
         result = subprocess.run([sys.executable, str(ROOT / 'scripts/install.py'), '--root',
                                  str(worktree), '--dest', str(self.dest)],
                                 capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-        self.assertEqual((self.dest / 'coco-example/SKILL.md').read_text(), team_rule)
+        self.assertEqual((self.dest / 'coco-example/SKILL.md').read_text(encoding='utf-8'), team_rule)
 
         # Git itself refuses a second checkout of the branch and an occupied path.
         self.git(self.root, 'worktree', 'add', '-q', str(Path(self.temp.name) / 'second'),
@@ -229,8 +229,8 @@ class PackageTests(unittest.TestCase):
         self.assertEqual([self.git(self.root, *args) for args in
                           (['branch', '--show-current'], ['rev-parse', 'HEAD'],
                            ['status', '--porcelain'])], starting)
-        self.assertEqual((self.root / skill).read_text(), user_edit)
-        self.assertEqual((self.root / 'notes.txt').read_text(), 'untracked user note\n')
+        self.assertEqual((self.root / skill).read_text(encoding='utf-8'), user_edit)
+        self.assertEqual((self.root / 'notes.txt').read_text(encoding='utf-8'), 'untracked user note\n')
 
     def project(self, rel='project', git=True):
         folder = Path(self.temp.name) / rel
@@ -268,10 +268,10 @@ class PackageTests(unittest.TestCase):
         app = self.project('repo/apps/my app', git=False)
         own = app / '.claude/skills/team-skill/SKILL.md'
         own.parent.mkdir(parents=True)
-        own.write_text('team-owned skill')
+        own.write_text('team-owned skill', encoding='utf-8')
         self.run_tool('install.py', '--runtime', 'claude', '--project', str(app),
                       env=self.claude_env())
-        exclude = (repo / '.git/info/exclude').read_text()
+        exclude = (repo / '.git/info/exclude').read_text(encoding='utf-8')
         self.assertIn('/apps/my app/.claude/skills/coco-example/\n', exclude)
         self.assertIn('/apps/my app/.claude/skills/.coco-install.*\n', exclude)
         self.assertEqual(self.git(repo, 'status', '--porcelain', '--untracked-files=all'),
@@ -298,7 +298,7 @@ class PackageTests(unittest.TestCase):
         glob = self.global_install(env)
         project = self.project()
         exclude = project / '.git/info/exclude'
-        before = exclude.read_text() if exclude.exists() else None
+        before = exclude.read_text(encoding='utf-8') if exclude.exists() else None
         results = json.loads(self.run_tool('install.py', '--runtime', 'claude', '--project',
                                            str(project), '--remove-global', '--dry-run',
                                            env=env).stdout)
@@ -306,7 +306,7 @@ class PackageTests(unittest.TestCase):
         self.assertEqual(results[0]['git_exclude']['added'], 3)
         self.assertEqual(results[1]['action'], 'uninstall')
         self.assertFalse((project / '.claude').exists())
-        self.assertEqual(exclude.read_text() if exclude.exists() else None, before)
+        self.assertEqual(exclude.read_text(encoding='utf-8') if exclude.exists() else None, before)
         self.run_tool('validate.py', '--installed', str(glob))
 
     def test_global_install_is_kept_with_a_warning_unless_removal_is_requested(self):
@@ -322,26 +322,26 @@ class PackageTests(unittest.TestCase):
         glob = self.global_install(env)
         other = glob / 'unrelated/SKILL.md'
         other.parent.mkdir()
-        other.write_text('user-owned unrelated skill')
+        other.write_text('user-owned unrelated skill', encoding='utf-8')
         project = self.project()
         results = json.loads(self.run_tool('install.py', '--runtime', 'claude', '--project',
                                            str(project), '--remove-global', env=env).stdout)
         self.assertEqual([r['status'] for r in results], ['installed', 'removed'])
         self.assertEqual(results[1]['destination'], str(glob))
         self.assertEqual(sorted(p.name for p in glob.iterdir()), ['unrelated'])
-        self.assertEqual(other.read_text(), 'user-owned unrelated skill')
+        self.assertEqual(other.read_text(encoding='utf-8'), 'user-owned unrelated skill')
         self.run_tool('validate.py', '--installed', str(project / '.claude/skills'))
 
     def test_modified_global_install_stops_removal_before_any_project_write(self):
         env = self.claude_env()
         glob = self.global_install(env)
-        (glob / 'coco-example/SKILL.md').write_text('personal change')
+        (glob / 'coco-example/SKILL.md').write_text('personal change', encoding='utf-8')
         project = self.project()
         result = self.run_tool('install.py', '--runtime', 'claude', '--project', str(project),
                                '--remove-global', env=env, expect=2)
         self.assertIn('Cannot remove the global install', result.stderr)
         self.assertFalse((project / '.claude').exists())
-        self.assertEqual((glob / 'coco-example/SKILL.md').read_text(), 'personal change')
+        self.assertEqual((glob / 'coco-example/SKILL.md').read_text(encoding='utf-8'), 'personal change')
 
     def test_project_and_removal_arguments_are_checked_before_writing(self):
         env = self.claude_env()
@@ -365,12 +365,12 @@ class PackageTests(unittest.TestCase):
     def test_uninstall_removes_only_unmodified_managed_files(self):
         other = self.dest / 'unrelated/SKILL.md'
         other.parent.mkdir(parents=True)
-        other.write_text('unrelated')
+        other.write_text('unrelated', encoding='utf-8')
         self.install()
         preview = json.loads(self.install('--uninstall', '--dry-run').stdout)
         self.assertEqual(preview['status'], 'dry-run')
         self.assertTrue((self.dest / 'coco-example/SKILL.md').is_file())
-        (self.dest / 'coco-example/notes.txt').write_text('keep me')
+        (self.dest / 'coco-example/notes.txt').write_text('keep me', encoding='utf-8')
         self.install('--uninstall', expect=2)
         self.assertTrue((self.dest / 'coco-example/SKILL.md').is_file())
         (self.dest / 'coco-example/notes.txt').unlink()
@@ -430,7 +430,7 @@ class PackageTests(unittest.TestCase):
 
     def test_symlink_in_package_or_target_is_refused(self):
         secret = Path(self.temp.name) / 'outside.txt'
-        secret.write_text('external')
+        secret.write_text('external', encoding='utf-8')
         (self.root / 'skills/coco-example/link').symlink_to(secret)
         self.install(expect=2)
         self.assertFalse(self.dest.exists())
@@ -439,7 +439,7 @@ class PackageTests(unittest.TestCase):
         self.install(expect=2)
 
     def test_manifest_cannot_escape_destination(self):
-        config = json.loads((self.root / 'coco.json').read_text())
+        config = json.loads((self.root / 'coco.json').read_text(encoding='utf-8'))
         config['skills'] = ['../outside']
         self.write('coco.json', json.dumps(config))
         self.install(expect=2)
@@ -450,12 +450,12 @@ class PackageTests(unittest.TestCase):
         self.run_tool('validate.py', expect=2)
         self.write('skills/_coco-shared/contracts.md', '# Restored\n')
         p = self.root / 'skills/coco-example/SKILL.md'
-        p.write_text(p.read_text().replace('name: coco-example', 'name: wrong-name'))
+        p.write_text(p.read_text(encoding='utf-8').replace('name: coco-example', 'name: wrong-name'))
         self.run_tool('validate.py', expect=2)
 
     def test_installed_tampering_is_detected(self):
         self.install()
-        (self.dest / '_coco-shared/contracts.md').write_text('tampered')
+        (self.dest / '_coco-shared/contracts.md').write_text('tampered', encoding='utf-8')
         self.run_tool('validate.py', '--installed', str(self.dest), expect=2)
 
     def test_source_checksum_and_coverage_are_verified(self):

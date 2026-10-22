@@ -108,7 +108,7 @@ def install(root, dest, dry_run=False):
                         os.replace(str(incoming / folder), str(current))
                         activated.append(folder)
                 staged_manifest = stage / 'manifest.json'
-                staged_manifest.write_text(json.dumps(info, ensure_ascii=False, indent=2) + '\n')
+                staged_manifest.write_text(json.dumps(info, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
                 os.replace(str(staged_manifest), str(dest / '.coco-install.json'))
             except BaseException:
                 for folder in reversed(activated):
