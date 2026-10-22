@@ -12,10 +12,10 @@ LOCAL_FRAGMENT = re.compile(r'\]\(([^):\s]+\.md)#([^\s)]+)\)')
 
 def hangul_locations(skills):
     failures = []
-    for path in sorted(Path(skills).rglob('*')):
+    for path in sorted(Path(skills).rglob('*'), key=lambda item: item.as_posix()):
         if path.is_file() and path.suffix in ('.md', '.yaml', '.yml'):
             failures.extend(
-                f'{path.relative_to(skills)}:{number}'
+                f'{path.relative_to(skills).as_posix()}:{number}'
                 for number, line in enumerate(path.read_text(encoding='utf-8').splitlines(), 1)
                 if HANGUL.search(line))
     return failures

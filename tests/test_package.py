@@ -38,7 +38,7 @@ class PackageTests(unittest.TestCase):
     def write(self, rel, value):
         p = self.root / rel
         p.parent.mkdir(parents=True, exist_ok=True)
-        p.write_text(value, encoding='utf-8')
+        p.write_bytes(value.encode('utf-8'))
 
     def run_tool(self, name, *args, expect=0, env=None):
         command = [sys.executable, str(ROOT / 'scripts' / name), '--root', str(self.root), *args]

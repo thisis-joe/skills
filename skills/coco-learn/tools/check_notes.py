@@ -240,7 +240,7 @@ def check_workspace(root):
     for note in notes:
         count = listed[note.resolve()]
         if count != 1:
-            problems.append(f'{index}:1: {note.relative_to(root)} is listed {count} times; '
+            problems.append(f'{index}:1: {note.relative_to(root).as_posix()} is listed {count} times; '
                             'list every note exactly once')
     return problems, checked
 

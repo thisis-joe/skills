@@ -1,4 +1,5 @@
 import json
+import os
 from pathlib import Path
 import runpy
 import subprocess
@@ -54,10 +55,12 @@ class ReviewScopeTests(unittest.TestCase):
 
     def test_deleted_and_unusual_filenames_are_not_lost(self):
         (self.repo / 'deleted.txt').unlink()
-        self.write('line\nbreak.txt', 'new\n')
+        # Windows forbids control characters in names; keep the newline case elsewhere.
+        unusual = 'line\nbreak.txt' if os.name != 'nt' else 'space and \u00fc.txt'
+        self.write(unusual, 'new\n')
         files = {f['path']: f for f in self.run_scope()['files']}
         self.assertEqual(files['deleted.txt']['statuses']['worktree'], 'D')
-        self.assertIn('line\nbreak.txt', files)
+        self.assertIn(unusual, files)
 
     def test_task_paths_are_literal_and_directory_scopes_work(self):
         self.write('[x].txt', 'literal\n')
