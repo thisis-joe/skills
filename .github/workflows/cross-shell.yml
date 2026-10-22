@@ -96,14 +96,38 @@ jobs:
           test "$(printf '%s' "$remote" | cut -f1)" = "$oid"
           test "$(printf '%s' "$remote" | cut -f2)" = "refs/heads/${branch}"
 
-      - name: Push and read back (PowerShell 7 and Windows PowerShell 5.1)
-        if: matrix.shell == 'pwsh' || matrix.shell == 'powershell'
-        shell: ${{ matrix.shell }}
+      - name: Push and read back (PowerShell 7)
+        if: matrix.shell == 'pwsh'
+        shell: pwsh
         run: |
           [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
           $PSVersionTable.PSVersion.ToString()
           git config --global user.name ci; git config --global user.email ci@example.invalid
-          $base = Join-Path $env:RUNNER_TEMP 'shell-${{ matrix.shell }}'
+          $base = Join-Path $env:RUNNER_TEMP 'shell-pwsh'
+          git init -q --bare -b main "$base/remote.git"; if ($LASTEXITCODE -ne 0) { exit 1 }
+          git clone -q "$base/remote.git" "$base/work"; if ($LASTEXITCODE -ne 0) { exit 1 }
+          Set-Location "$base/work"
+          $branch = $env:BRANCH
+          git switch -q -c $branch; if ($LASTEXITCODE -ne 0) { exit 1 }
+          Set-Content -Path note.txt -Value note
+          git add note.txt; git commit -q -m 'test: shell refspec'; if ($LASTEXITCODE -ne 0) { exit 1 }
+          $oid = (git rev-parse HEAD).Trim()
+          echo status:
+          git push -q origin "${oid}:refs/heads/${branch}"; if ($LASTEXITCODE -ne 0) { exit 1 }
+          $remote = git -c core.quotepath=false ls-remote --heads origin "refs/heads/${branch}"
+          $remote
+          $parts = "$remote" -split "`t"
+          if ($parts[0] -ne $oid) { Write-Error "remote OID differs"; exit 1 }
+          if ($parts[1] -ne "refs/heads/$branch") { Write-Error "remote ref name differs: $($parts[1])"; exit 1 }
+
+      - name: Push and read back (Windows PowerShell 5.1)
+        if: matrix.shell == 'powershell'
+        shell: powershell
+        run: |
+          [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+          $PSVersionTable.PSVersion.ToString()
+          git config --global user.name ci; git config --global user.email ci@example.invalid
+          $base = Join-Path $env:RUNNER_TEMP 'shell-powershell'
           git init -q --bare -b main "$base/remote.git"; if ($LASTEXITCODE -ne 0) { exit 1 }
           git clone -q "$base/remote.git" "$base/work"; if ($LASTEXITCODE -ne 0) { exit 1 }
           Set-Location "$base/work"
