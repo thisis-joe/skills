@@ -16,8 +16,9 @@ HOT_PATHS = {
     'merge': ['skills/coco-merge/SKILL.md', CONTRACT, 'skills/coco-merge/references/forge-merge.md'],
     'ship': ['skills/coco-ship/SKILL.md', CONTRACT],
 }
-# Measured after the first latency changes plus 2%; raising one needs a decisions.md row.
-MAX_CHARACTERS = {'push': 33500, 'merge': 26800, 'ship': 12000}
+# Measured after the latency changes and the bare-invocation rule, plus 2%; raising one
+# needs a decisions.md row.
+MAX_CHARACTERS = {'push': 34100, 'merge': 27400, 'ship': 12550}
 
 
 def characters(paths, root=ROOT):

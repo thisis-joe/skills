@@ -114,6 +114,9 @@ npx --yes @thisis-joe/coco-skills@latest install --runtime claude --project ~/wo
 | 할 일은 있는데 진행 순서를 모름 | `/coco-start <하려는 일>` | 알맞은 스킬 순서와 필요한 검사 |
 | 어떤 스킬이 있는지 보고 싶음 | `/coco-tellmeskill` | 최근 쓴 스킬 최대 3개 → 고르지 않으면 목적별 전체 목록 → 고른 스킬 설명 |
 | 스킬은 정했는데 뭐라고 요청할지 모름 | `/coco-whattosay coco-review` | 지금 상황에 맞는 요청문 최대 3개와 추천. 번호를 고르면 그 요청을 실행 |
+| 요청 없이 스킬 이름만 호출 | `/coco-review` | 대화에서 할 일이 이미 하나로 정해졌으면 추론한 요청을 한 줄로 밝히고 진행. 아니면 위 요청문 추천이 열림 |
+
+`coco-tellmeskill`·`coco-askme`·`coco-updateskill`·`coco-whattosay`는 이름만 호출하면 각자의 선택 단계로 시작합니다. `coco-push`와 `coco-merge`는 이름만 호출해도 현재 브랜치 기준으로 바로 실행합니다. `coco-push`는 동기화·푸시와 draft PR/MR 생성을, `coco-merge`는 현재 브랜치의 PR/MR을 체크 통과 후 대상 브랜치에 머지합니다.
 
 할 일과 쓸 스킬이 정해졌으면 `coco-start`를 거치지 말고 그 스킬을 `/coco-<이름>`으로 바로 부르세요. 자연어로 부탁하면 에이전트가 스킬을 고르는 단계를 한 번 더 거치므로 시작이 늦어집니다.
 
