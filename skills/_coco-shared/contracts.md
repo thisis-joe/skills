@@ -18,6 +18,8 @@ Record the target/version or code snapshot, command or interaction, relevant inp
 
 Commands may run in bash, zsh, PowerShell or cmd: brace a variable before a colon (`"${oid}:refs/heads/${branch}"`), pass each ref as one quoted argument, and follow the [shell rules](runtimes.md#shell-commands) for joining commands, Python and non-ASCII output.
 
+Report the outcome first: the final state, then what the user must decide or do. Add only facts that changed the outcome or that the user cannot see elsewhere, and point to commits, requests and logs instead of restating them. Keep every distinction the selected procedure names, such as partial success or unverified scope, and give each blocker one plain sentence on its consequence.
+
 Discover project commands from its files and CI. Run focused checks during edits and the required regression/build/runtime checks at task closure. Do not invent npm commands for another stack. Reuse a passing check on unchanged relevant code/environment; rerun checks affected by subsequent edits. A changed acceptance condition requires re-evaluation. Do not weaken thresholds, skip/delete a failing test or silence a checker just to obtain green.
 
 ## Ownership, Git and recovery

@@ -104,7 +104,7 @@ git fetch <remote> refs/heads/<target-branch>
 git merge-base --is-ancestor <resulting-commit> FETCH_HEAD
 ```
 
-`merged` requires the forge's merged state and the target branch containing the resulting commit: GitHub's `mergeCommit`, or GitLab's `merge_commit_sha`, `squash_commit_sha`, or the pinned head after a fast-forward. An enqueued request or armed auto-merge is `queued`; report what it waits for. A lost response is resolved by reading back, never by merging again. Report whether the source branch still exists, and do not delete it yourself.
+`merged` requires the forge's merged state and the target branch containing the resulting commit: GitHub's `mergeCommit`, or GitLab's `merge_commit_sha`, `squash_commit_sha`, or the pinned head after a fast-forward. An enqueued request or armed auto-merge is `queued`; report what it waits for. A lost response is resolved by reading back, never by merging again. Report the source branch only if it was deleted, and do not delete it yourself.
 
 ## Other forges and local merges
 

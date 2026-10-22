@@ -30,7 +30,7 @@ If the invocation or preceding conversation already establishes the target, do n
 
 ## Output
 
-Report the target and source/installation locations, dedicated branch, worktree path and base, starting-checkout preservation, team requirements and changed rules, rationale, shared effects and files, attribution handling, checks and cases, commit, actual installation state, and remaining decisions. Distinguish source modification, completed installation, and remote publication.
+Lead with three separate states: the source change (commit, branch and worktree path), installation (where, or why it is blocked) and remote publication (not done unless requested). Then give the changed rules and shared files, the verification tier with its checks and any unverified scope, attribution changes and remaining decisions. Mention the starting checkout only if it changed.
 
 This skill owns maintenance files and their work-unit commits. Leave the dedicated worktree and branch in place after completion. Marking product work complete, remote push, PR creation/merge, worktree removal, distribution, and messages to teammates are separate scope. For additionally requested publication, reuse existing authorization and hand off to the appropriate procedure.
 

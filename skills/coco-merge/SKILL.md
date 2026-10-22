@@ -29,7 +29,7 @@ Lighter than ship means fewer gates, not fewer protections. Never bypass branch 
 
 ## Output
 
-Report the PR/MR number and URL, whether it was opened or existing and whether draft state changed; source, target and merged head; preflight counts and any waived check; checks and approvals observed; merge method; final state as `merged`, `queued` or `blocked`, with the merge commit and target-branch readback; whether the source branch still exists; and, for each blocker, the evidence and the skill that resolves it.
+Lead with the final state, `merged`, `queued` or `blocked`, and the PR/MR URL. For `merged`, give the merge commit and target-branch readback; for `queued`, what it waits for; for `blocked`, each blocker's evidence, one plain sentence on its consequence and the skill that resolves it. Mention a request this skill opened or marked ready, a waived check, a merge method other than the repository default, and a source branch that was deleted.
 
 `coco-merge` owns, on an execution request, opening a missing PR/MR to the default branch, marking it ready, the forge's merge-based update, the merge and its readback. Product fixes stay with `coco-build`, integration and pushes with `coco-push`, and release decisions with `coco-ship`.
 
