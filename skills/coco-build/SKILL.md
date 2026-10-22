@@ -32,20 +32,20 @@ Create the valid branch from the confirmed base commit. If it exists, verify it 
 ## Procedure and output
 
 1. Read the agreed brief/spec and authoritative task state. Check dependencies and existing dirty paths, then complete the branch preparation above before implementation. Select one dependency-ready task; continuous mode repeats the same closure standard.
-2. Discover actual test/build commands and reuse agreed observable test boundaries. For a behavior change, write one test for the desired behavior, run it and confirm the relevant failure, implement minimal green, and repeat in vertical slices. Static changes use appropriate direct checks.
+2. Discover actual test/build commands and reuse agreed observable test boundaries. For a behavior change, write one test for the desired behavior, run it and confirm the relevant failure, implement minimal green, and repeat in vertical slices. Run the slice's test file in the loop and the full suite once at closure. Keep tests fast: lower deliberate costs such as hash rounds, sleeps and timeouts through a parameter, keeping one check of the production value. Static changes use appropriate direct checks.
 3. After green, permit only small local cleanup inside the task and recheck it. Structural refactoring is separate scoped work. Avoid implementation-coupled mocks and expected values copied from the implementation.
-4. Run required regression/build and actual UI/API/CLI acceptance checks. Obtain scoped review findings. Review includes current unstaged/staged/new files, not just HEAD; freeze that scope with the [review-scope collector](../_coco-shared/tools/review_scope.py), `python3 <skill-dir>/../_coco-shared/tools/review_scope.py --repo <repo> --base <base-commit>`. Resolve required findings and rerun affected checks; keep unchanged valid evidence.
+4. Run required regression/build checks and the actual UI/API/CLI path; ad-hoc commands with their output in the report are the evidence unless someone must rerun them later. The acceptance check must show the new behavior taking effect on default or real input; if it never triggers there, the work is unmet, not a footnote. Then self-review the whole task diff, including staged, unstaged and untracked files (`git status --porcelain --untracked-files=all` and `git diff <base-commit>`), for correctness, boundary safety and tests that would fail if the behavior broke. For a fresh-context or requested review, a dependency or shared-contract change, or strengthened work, use coco-review, which freezes scope with the [review-scope collector](../_coco-shared/tools/review_scope.py). Resolve required findings and rerun affected checks; keep unchanged valid evidence.
 5. Commit only this task's owned changes and state update on its feature branch. Record the commit and evidence in authoritative status; reconcile a commit that succeeded before an interrupted status update instead of implementing twice.
 6. Stop advancement on unresolved required failure, missing material decisions or authorization boundaries; use debug for bounded in-scope diagnosis. Continuous mode resumes at the first incomplete ready task.
 
-Return: task IDs, acceptance/check results, actual review scope, commit IDs, updated status, unresolved items and next ready task. Do not mark unavailable required checks as passed.
+Return: task IDs, acceptance/check results, actual review scope, commit IDs, updated status, unresolved items and next ready task; omit fields that do not apply, such as task state when no tracker exists. Do not mark unavailable required checks as passed.
 
 ## Stop signals
 
 Stop and correct course on any of these, in addition to the [common stop signals](../_coco-shared/contracts.md#stop-signals):
 
 - "I'll test it all at the end" or a large batch written without running a check: verify each slice; an early bug makes later slices wrong.
-- A new test that passes on its first run: it may not test what you think; see it fail for the intended reason.
+- A new test that passes on its first run: it may not test what you think; see it fail for the intended reason, checking all such tests in one scratch run at closure.
 - "All tests pass" with no observed run, or a default command such as `npm test` the repository does not use.
 - "This refactor is small enough to include": mixed refactor and feature changes are harder to review and revert.
 - An abstraction or new utility file before a real repeated use demands it.

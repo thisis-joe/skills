@@ -32,6 +32,7 @@ Run the loop at least once and retain the invocation/action, target, input, obse
 “Does not crash” is insufficient when the report concerns wrong state, output, timing, or duplicate effects.
 Control time, randomness, filesystem, account/fixtures, and network inputs where feasible.
 For intermittent failures measure a reproducible rate and independent attempts; pinned stress may sharpen the signal.
+Size before/after loops to that rate p, not a fixed count: n clean runs leave a (1-p)^n chance of a lucky pass, so 13 runs at 30% fall under 1%. Rerun a loop only after a change that could affect it.
 Do not hide intermittency behind a single lucky pass or manufacture a symptom using internal state setters.
 If no red-capable loop is possible, report attempts and the specific missing environment/capture/access rather than author a speculative fix.
 
@@ -70,7 +71,7 @@ If a useful new test would be brittle or expensive, retain a meaningful executab
 Make the smallest cause-level change; do not retain compensating edits merely because they might help.
 Run the focused regression after the fix, then repeat the original full scenario on the same surface.
 Exercise nearby inputs, failure paths, permissions, persistence, concurrency, and states implicated by the actual change.
-Use [verification](verify.md) for real-artifact receipts and [review](review.md) for impact and contract checks.
+Use [verification](verify.md) when the proof needs a UI, browser, account or persistent-state journey and [review](review.md) for shared-contract impact; otherwise the build entrypoint's closure checks and self-review apply.
 Remove tagged debug instrumentation and disposable prototypes; retain safe useful production diagnostics only when in scope.
 The final commit/report explains the mechanism and failing-before/passing-after evidence, not just “fixed.”
 
