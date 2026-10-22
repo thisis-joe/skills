@@ -17,7 +17,7 @@ HOT_PATHS = {
     'ship': ['skills/coco-ship/SKILL.md', CONTRACT],
 }
 # Measured after the first latency changes plus 2%; raising one needs a decisions.md row.
-MAX_CHARACTERS = {'push': 35500, 'merge': 26800, 'ship': 12000}
+MAX_CHARACTERS = {'push': 33500, 'merge': 26800, 'ship': 12000}
 
 
 def characters(paths, root=ROOT):
