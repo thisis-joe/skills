@@ -207,7 +207,10 @@ class PackageTests(unittest.TestCase):
         self.git(self.root, 'check-ref-format', '--branch', branch)
         self.git(self.root, 'worktree', 'add', '-q', '-b', branch, str(worktree), 'main')
         listed = self.git(self.root, 'worktree', 'list', '--porcelain')
-        self.assertIn(f'worktree {worktree.resolve()}\n', listed)
+        # Git prints C:/ paths on Windows, so compare resolved paths rather than text.
+        listed_paths = [Path(line[len('worktree '):]).resolve()
+                        for line in listed.splitlines() if line.startswith('worktree ')]
+        self.assertIn(worktree.resolve(), listed_paths)
         self.assertIn(f'branch refs/heads/{branch}\n', listed)
         self.assertNotIn('Personal uncommitted edit', (worktree / skill).read_text(encoding='utf-8'))
         self.assertFalse((worktree / 'notes.txt').exists())
@@ -383,12 +386,18 @@ class PackageTests(unittest.TestCase):
         output = io.StringIO()
         argv = ['install.py', '--root', str(self.root), '--runtime', 'claude', *args]
         with patch.object(sys, 'argv', argv), patch.dict(os.environ, env), \
-                patch('install.sys.stdin') as stdin, \
+                patch('install.stdin_is_terminal', return_value=True), \
                 patch('install.ask', side_effect=answers) as asked, redirect_stdout(output), \
                 redirect_stderr(io.StringIO()):
-            stdin.isatty.return_value = True
             installer.main()
         return json.loads(output.getvalue()), asked
+
+    def test_null_device_input_is_not_a_terminal(self):
+        # Windows reports NUL as a character device, so isatty() alone would prompt here.
+        probe = 'import install; print(install.stdin_is_terminal())'
+        result = subprocess.run([sys.executable, '-c', probe], cwd=ROOT / 'scripts', stdin=subprocess.DEVNULL,
+                                capture_output=True, text=True, encoding='utf-8')
+        self.assertEqual(result.stdout.strip(), 'False', result.stderr)
 
     def test_terminal_prompt_chooses_projects_and_confirms_global_removal(self):
         env = self.claude_env()
