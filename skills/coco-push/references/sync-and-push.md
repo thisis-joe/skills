@@ -47,6 +47,8 @@ git push <confirmed-single-push-destination> <verified-commit-OID>:refs/heads/<f
 git ls-remote --heads <same-push-destination> refs/heads/<final-work-branch>
 ```
 
+When filling the refspec from shell variables, brace them, `"${oid}:refs/heads/${branch}"`, and quote the branch as one argument ([shell rules](../../_coco-shared/runtimes.md#shell-commands)).
+
 Push and fetch URLs may differ. Query/fetch refs at the write destination and use that same destination for push and readback. Do not apply the example directly to a remote with multiple push URLs. Specify one confirmed destination and read results there. `--force`, `--force-with-lease`, `--mirror`, `--all`, and protection-policy bypass are not this skill's default behavior.
 
 After a non-fast-forward rejection caused by remote work advancing, refetch the development-base and push-target refs, integrate and verify required new commits, then retry. Limit total push attempts to three. Distinguish protection-policy, authentication, and check-hook failures from races; do not retry indefinitely or bypass checks.

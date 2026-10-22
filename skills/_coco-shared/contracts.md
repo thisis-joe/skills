@@ -16,6 +16,8 @@ Choose lightweight work for clear, low-impact static edits; standard work for be
 
 Record the target/version or code snapshot, command or interaction, relevant input, exit/result, observation and artifact pointer. Distinguish `passed`, `failed`, `unavailable`, and `not-applicable` (with reason). Missing required runtime/proof evidence remains unavailable even if unit tests pass. A focused green test is not proof of an entire user flow. Redact secret values; use evidence pointers instead of copied private transcripts.
 
+Commands may run in bash, zsh, PowerShell or cmd: brace a variable before a colon (`"${oid}:refs/heads/${branch}"`), pass each ref as one quoted argument, and follow the [shell rules](runtimes.md#shell-commands) for joining commands, Python and non-ASCII output.
+
 Discover project commands from its files and CI. Run focused checks during edits and the required regression/build/runtime checks at task closure. Do not invent npm commands for another stack. Reuse a passing check on unchanged relevant code/environment; rerun checks affected by subsequent edits. A changed acceptance condition requires re-evaluation. Do not weaken thresholds, skip/delete a failing test or silence a checker just to obtain green.
 
 ## Ownership, Git and recovery
