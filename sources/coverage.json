@@ -1199,7 +1199,7 @@
         "skills/performance-optimization/SKILL.md",
         "skills/constraint-driven-development/references/floor-guard.md"
       ],
-      "adaptation": "Preserve the complete lifecycle and floor reference contract, not just numeric defaults. Stage/budget and 80%/60%/90-day defaults are project choices, not universal gates. The regex guard does not implement secrets scanning, exact line locations, exception approval matching or expiry enforcement; compose scanners and retain heuristics/false-positive caveats. COCO routes standing-bar setup to start; verify links to that owner for a requested quality-bar audit.",
+      "adaptation": "Preserve the complete lifecycle and floor reference contract, not just numeric defaults. Stage/budget and 80%/60%/90-day defaults are project choices, not universal gates. The regex guard does not implement secrets scanning, exact line locations, exception approval matching or expiry enforcement; compose scanners and retain heuristics/false-positive caveats. COCO routes standing-bar setup to start; verify links to that owner for a requested quality-bar audit. A route-only start request reports a missing bar in one line and offers setup instead of establishing it.",
       "author": "addy",
       "implemented_references": [
         "skills/coco-start/SKILL.md",
