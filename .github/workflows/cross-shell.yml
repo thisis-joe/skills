@@ -1,5 +1,5 @@
-# Run the package checks and the shell rules from skills/_coco-shared/runtimes.md
-# on Windows and Linux shells that teammates use.
+# Run the package checks on Windows (check.yml covers Linux) and the shell rules from
+# skills/_coco-shared/runtimes.md in every shell teammates use.
 name: cross-shell
 
 on:
@@ -10,27 +10,32 @@ permissions:
   contents: read
 
 jobs:
-  tests:
+  windows-tests:
+    name: Windows tests (Python ${{ matrix.python }})
+    runs-on: windows-latest
+    timeout-minutes: 15
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest]
-        python: ['3.9', '3.12']
-    runs-on: ${{ matrix.os }}
+        python: ['3.9', '3.x']
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: ${{ matrix.python }}
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          node-version: '22'
+          node-version: 22
       - name: Validate package
         run: python scripts/validate.py
       - name: Unit tests
         run: python -m unittest discover -s tests -v
 
   shells:
+    name: Shell rules (${{ matrix.os }}, ${{ matrix.shell }})
+    timeout-minutes: 10
     strategy:
       fail-fast: false
       matrix:
