@@ -6,22 +6,34 @@ together. Resolve relative links from the file containing them, not from the
 project's working directory. `_coco-shared` is supporting material without a
 `SKILL.md`; do not present it as an invocable skill.
 
-| Runtime | Personal destination | Invocation |
-| --- | --- | --- |
-| Codex | `~/.codex/skills`, or `$CODEX_HOME/skills` when configured | `$coco-build <request>` |
-| Claude Code | `~/.claude/skills`, or `$CLAUDE_CONFIG_DIR/skills` when configured | `/coco-build <request>` |
+| Runtime | Project destination | Global destination | Invocation |
+| --- | --- | --- | --- |
+| Codex | `<project>/.agents/skills` | `~/.codex/skills`, or `$CODEX_HOME/skills` when configured | `$coco-build <request>` |
+| Claude Code | `<project>/.claude/skills` | `~/.claude/skills`, or `$CLAUDE_CONFIG_DIR/skills` when configured | `/coco-build <request>` |
 
-For Claude Code project scope, install the whole bundle in the target project's
-`.claude/skills/`. Explicit `--dest` overrides the personal destination. Install
-each runtime separately when both are used; updating one directory does not
-update the other. The installer's default remains Codex for existing callers.
+Each runtime reads project skills from the folder a session starts in up to the
+repository root, so `--project <folder>` limits COCO to that project. The
+installer adds the installed folders to the project's `.git/info/exclude`
+rather than the shared `.gitignore`. A global install applies to every project:
+Claude Code runs a personal skill over a same-named project skill, and Codex
+lists both, so a project install offers to remove an existing global install,
+or does so with `--remove-global`. Explicit `--dest` overrides both
+destinations. Install each runtime separately when both are used; updating one
+directory does not update the other. The installer's default runtime remains
+Codex for existing callers.
+
+A terminal run without `--project`, `--global`, or `--dest` asks where to
+install; any other run without them installs globally. An agent's shell is not
+a terminal, so always pass the confirmed scope.
 
 ```sh
-python3 scripts/install.py --runtime codex --dry-run
-python3 scripts/install.py --runtime codex
-python3 scripts/install.py --runtime claude --dry-run
-python3 scripts/install.py --runtime claude
-python3 scripts/install.py --runtime claude --dest /project/.claude/skills
+python3 scripts/install.py --runtime codex --project <project> --dry-run
+python3 scripts/install.py --runtime codex --project <project>
+python3 scripts/install.py --runtime claude --project <project> --dry-run
+python3 scripts/install.py --runtime claude --project <project>
+python3 scripts/install.py --runtime claude --global
+python3 scripts/install.py --runtime claude --project <project> --remove-global
+python3 scripts/install.py --runtime claude --uninstall --project <project>
 python3 scripts/validate.py --installed <confirmed-skills-directory>
 ```
 
@@ -55,3 +67,4 @@ bundle for claude.ai uploads or promise Claude Cowork/cloud session support.
 Official Claude Code references:
 [skill discovery, invocation, and supporting files](https://code.claude.com/docs/en/skills)
 and [configuration directories](https://code.claude.com/docs/en/settings).
+Codex reference: [where Codex loads local skills](https://learn.chatgpt.com/docs/build-skills).
