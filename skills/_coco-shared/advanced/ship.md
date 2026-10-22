@@ -16,7 +16,7 @@ Ready/blocked is a decision; deployed/healthy is a separately evidenced state.
 | Prepare a reviewable change | PR preparation | Concrete diff, description and verification |
 | Assess launch readiness | Readiness | Evidence-backed ready/blocked decision |
 | Execute release/deployment | Authorized rollout | Actual deployment and monitored state |
-| Routine tiny low-risk change | Lightweight readiness | Applicable evidence without forced fanout |
+| Routine tiny low-risk change (limits in the entrypoint) | Lightweight readiness | Applicable evidence without forced fanout |
 
 Do not infer merge, publish, tag, push or deployment authority from selecting this reference.
 Prepare all authorized reviewable work before an action requiring a new approval.
@@ -103,7 +103,7 @@ A failed deployment remains failed even if the readiness review was positive.
 
 ## Output and stop
 
-Return ready/blocked, blockers, accepted risks, evidence links and rollback plan.
+Return ready/blocked, blockers, accepted risks, evidence links and the revert path or rollback plan.
 For executed releases separately report deployment ID/version and current monitored state.
 Do not call a multi-day rollout complete while observations remain uncollected.
 Stop advancement at failed checks, exceeded budget, missing required authority or unknown data state.

@@ -991,7 +991,7 @@
         "skills/shipping-and-launch/SKILL.md",
         "references/orchestration-patterns.md"
       ],
-      "adaptation": "Retain independent specialist checks and main-owned merge; explicitly report sequential/degraded mode instead of pretending independent parallel execution. Persona definitions are referenced but absent from this selected source export; harness capability and authorization are prerequisites.",
+      "adaptation": "Retain independent specialist checks and main-owned merge; explicitly report sequential/degraded mode instead of pretending independent parallel execution. Persona definitions are referenced but absent from this selected source export; harness capability and authorization are prerequisites. The two-file, fifty-line fan-out skip applies only to specialist fan-out, never to required or runtime checks; COCO adds migrations or schema, dependencies and lockfiles to the exclusions as a team rule, and a non-deploying PR check keeps a one-line revert path as its rollback.",
       "author": "addy",
       "implemented_references": [
         "skills/coco-ship/SKILL.md",
@@ -1199,7 +1199,7 @@
         "skills/performance-optimization/SKILL.md",
         "skills/constraint-driven-development/references/floor-guard.md"
       ],
-      "adaptation": "Preserve the complete lifecycle and floor reference contract, not just numeric defaults. Stage/budget and 80%/60%/90-day defaults are project choices, not universal gates. The regex guard does not implement secrets scanning, exact line locations, exception approval matching or expiry enforcement; compose scanners and retain heuristics/false-positive caveats. COCO routes standing-bar setup to start; verify links to that owner for a requested quality-bar audit.",
+      "adaptation": "Preserve the complete lifecycle and floor reference contract, not just numeric defaults. Stage/budget and 80%/60%/90-day defaults are project choices, not universal gates. The regex guard does not implement secrets scanning, exact line locations, exception approval matching or expiry enforcement; compose scanners and retain heuristics/false-positive caveats. COCO routes standing-bar setup to start; verify links to that owner for a requested quality-bar audit. A route-only start request reports a missing bar in one line and offers setup instead of establishing it.",
       "author": "addy",
       "implemented_references": [
         "skills/coco-start/SKILL.md",
@@ -1590,7 +1590,7 @@
         "references/accessibility-checklist.md",
         "skills/observability-and-instrumentation/SKILL.md"
       ],
-      "adaptation": "Preserve rollout/error-budget/flag cleanup and data recovery details with project-specific thresholds and authorized deploy scope. Its audit checklist says no high advisories while security allows documented nonreachable deferrals; choose policy explicitly. Long monitoring windows remain pending evidence, not silently complete.",
+      "adaptation": "Preserve rollout/error-budget/flag cleanup and data recovery details with project-specific thresholds and authorized deploy scope. Its audit checklist says no high advisories while security allows documented nonreachable deferrals; choose policy explicitly. Long monitoring windows remain pending evidence, not silently complete. Rollout, error-budget and recovery planning apply to an authorized deployment or staged release; PR preparation gives a one-line revert path, and data recovery is planned whenever data or schema changes.",
       "author": "addy",
       "implemented_references": [
         "skills/coco-ship/SKILL.md",

@@ -8,7 +8,7 @@ license: MIT
 
 Own execution from the first ready task through evidence-backed work-unit completion.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for resuming interrupted work or reconciling a commit missing from task state, strengthened work (uncertain contracts, irreversible effects, shared state or high blast radius), a new domain data or state shape, repeatable mechanical edits or migrations, a TypeScript surface, concurrent or delegated execution, and continuous multi-task execution. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/build.md) before dependent work.
+Read the [common contract](../_coco-shared/contracts.md) before acting; when the request already shows that the file below applies, read both in one call. Initially and on new scope, risk, state, or missing prerequisites, check for resuming interrupted work or reconciling a commit missing from task state, strengthened work (uncertain contracts, irreversible effects, shared state or high blast radius), a new domain data or state shape, repeatable mechanical edits or migrations, a TypeScript surface, concurrent or delegated execution, and continuous multi-task execution. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/build.md) before dependent work.
 
 ## Feature branch preparation
 
@@ -34,7 +34,7 @@ Create the valid branch from the confirmed base commit. If it exists, verify it 
 1. Read the agreed brief/spec and authoritative task state. Check dependencies and existing dirty paths, then complete the branch preparation above before implementation. Select one dependency-ready task; continuous mode repeats the same closure standard.
 2. Discover actual test/build commands and reuse agreed observable test boundaries. For a behavior change, write one test for the desired behavior, run it and confirm the relevant failure, implement minimal green, and repeat in vertical slices. Static changes use appropriate direct checks.
 3. After green, permit only small local cleanup inside the task and recheck it. Structural refactoring is separate scoped work. Avoid implementation-coupled mocks and expected values copied from the implementation.
-4. Run required regression/build and actual UI/API/CLI acceptance checks. Obtain scoped review findings. Review includes current unstaged/staged/new files, not just HEAD. Resolve required findings and rerun affected checks; keep unchanged valid evidence.
+4. Run required regression/build and actual UI/API/CLI acceptance checks. Obtain scoped review findings. Review includes current unstaged/staged/new files, not just HEAD; freeze that scope with the [review-scope collector](../_coco-shared/tools/review_scope.py), `python3 <skill-dir>/../_coco-shared/tools/review_scope.py --repo <repo> --base <base-commit>`. Resolve required findings and rerun affected checks; keep unchanged valid evidence.
 5. Commit only this task's owned changes and state update on its feature branch. Record the commit and evidence in authoritative status; reconcile a commit that succeeded before an interrupted status update instead of implementing twice.
 6. Stop advancement on unresolved required failure, missing material decisions or authorization boundaries; use debug for bounded in-scope diagnosis. Continuous mode resumes at the first incomplete ready task.
 

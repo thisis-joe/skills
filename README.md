@@ -118,6 +118,8 @@ npx --yes @thisis-joe/coco-skills@latest install --runtime claude --project ~/wo
 
 `coco-tellmeskill`·`coco-askme`·`coco-updateskill`·`coco-whattosay`는 이름만 호출하면 각자의 선택 단계로 시작합니다. `coco-push`와 `coco-merge`는 이름만 호출해도 현재 브랜치 기준으로 바로 실행합니다. `coco-push`는 동기화·푸시와 draft PR/MR 생성을, `coco-merge`는 현재 브랜치의 PR/MR을 체크 통과 후 대상 브랜치에 머지합니다.
 
+할 일과 쓸 스킬이 정해졌으면 `coco-start`를 거치지 말고 그 스킬을 `/coco-<이름>`으로 바로 부르세요. 자연어로 부탁하면 에이전트가 스킬을 고르는 단계를 한 번 더 거치므로 시작이 늦어집니다.
+
 ## 기능 하나를 끝까지 진행하는 흐름
 
 보통 아래 순서로 진행합니다. 이미 끝난 단계는 건너뛰고, 범위가 분명한 작은 수정은 `coco-build`부터 시작해도 됩니다.

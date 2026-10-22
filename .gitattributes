@@ -5,3 +5,5 @@ docs/evaluation/** -text
 docs/evaluation/**/*.diff -whitespace
 docs/evaluation/**/*.porcelain -whitespace
 docs/evaluation/**/evidence/*.txt -whitespace
+# Skill files are hashed and parsed byte for byte; keep LF on every OS.
+skills/** text eol=lf
