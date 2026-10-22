@@ -6,7 +6,7 @@ license: MIT
 
 # coco-merge
 
-Land the pushed work branch's pull request or merge request in its target branch, then read the merged result back. The target is the request's own base, such as `develop`; only a request this skill opens targets the repository's default branch. This is the light path after `coco-push`: no readiness verdict, independent review, rollout plan or deployment. The bar is the forge's own gate (passing checks, required approvals, mergeability) applied to exactly the commit the user pushed. Follow the [common contract](../_coco-shared/contracts.md) and the [forge procedure](references/forge-merge.md). Localize questions and reports to the user's language.
+Land the pushed work branch's pull request or merge request in its target branch, then read the merged result back. The target is the request's own base, such as `develop`; only a request this skill opens targets the repository's default branch. This is the light path after `coco-push`: no readiness verdict, independent review, rollout plan or deployment. The bar is the forge's own gate (passing checks, required approvals, mergeability) applied to exactly the commit the user pushed. Follow the [common contract](../_coco-shared/contracts.md) and the [forge procedure](references/forge-merge.md). Read the files this request needs together in one call. Localize questions and reports to the user's language.
 
 ## Boundary
 

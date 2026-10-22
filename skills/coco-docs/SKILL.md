@@ -8,7 +8,7 @@ license: MIT
 
 Produce official documents that their readers can rely on: true at the landing revision, consistent with the project's conventions, and owned by the project rather than by one session.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for a document type the project has no convention for (default skeletons), a drift audit, an ADR or glossary change, agent-facing instructions or reusable recipes, an async discovery questionnaire, course-exercise scaffolding, and opt-in writing collaboration (fragments, article shaping, beats). If any applies or is unclear, read the [documentation procedures](../_coco-shared/advanced/docs.md) before dependent work.
+Read the [common contract](../_coco-shared/contracts.md) before acting; when the request already shows that the file below applies, read both in one call. Initially and on new scope, risk, state, or missing prerequisites, check for a document type the project has no convention for (default skeletons), a drift audit, an ADR or glossary change, agent-facing instructions or reusable recipes, an async discovery questionnaire, course-exercise scaffolding, and opt-in writing collaboration (fragments, article shaping, beats). If any applies, read the [documentation procedures](../_coco-shared/advanced/docs.md) before dependent work.
 
 ## Boundary
 

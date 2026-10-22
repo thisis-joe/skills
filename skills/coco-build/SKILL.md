@@ -8,7 +8,7 @@ license: MIT
 
 Own execution from the first ready task through evidence-backed work-unit completion.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for resuming interrupted work or reconciling a commit missing from task state, strengthened work (uncertain contracts, irreversible effects, shared state or high blast radius), a new domain data or state shape, repeatable mechanical edits or migrations, a TypeScript surface, concurrent or delegated execution, and continuous multi-task execution. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/build.md) before dependent work.
+Read the [common contract](../_coco-shared/contracts.md) before acting; when the request already shows that the file below applies, read both in one call. Initially and on new scope, risk, state, or missing prerequisites, check for resuming interrupted work or reconciling a commit missing from task state, strengthened work (uncertain contracts, irreversible effects, shared state or high blast radius), a new domain data or state shape, repeatable mechanical edits or migrations, a TypeScript surface, concurrent or delegated execution, and continuous multi-task execution. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/build.md) before dependent work.
 
 ## Feature branch preparation
 

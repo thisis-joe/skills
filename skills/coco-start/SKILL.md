@@ -8,7 +8,7 @@ license: MIT
 
 Choose an appropriate workflow and establish the project quality bar.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for a missing standing quality bar (establish with a live user, floor only when unattended), quality-floor checks on a task diff, ratchets or check placement and cost, conflicting package-manager signals, and mapping a former pstack playbook to its COCO home. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/start.md) before dependent work.
+Read the [common contract](../_coco-shared/contracts.md) before acting; when the request already shows that the file below applies, read both in one call. Initially and on new scope, risk, state, or missing prerequisites, check for a missing standing quality bar (establish with a live user, floor only when unattended), quality-floor checks on a task diff, ratchets or check placement and cost, conflicting package-manager signals, and mapping a former pstack playbook to its COCO home. If any applies, read the [advanced modes](../_coco-shared/advanced/start.md) before dependent work.
 
 ## Procedure and output
 

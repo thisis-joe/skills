@@ -8,7 +8,7 @@ license: MIT
 
 Change consumers and persisted state in a verifiable compatibility sequence.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for external or independently deployed consumers, a coordinated internal refactor, a production schema or data change (expand, dual-write, backfill, contract), a destructive phase or recovery plan, a replacement that is not yet production-proven, an integration-only branch, and the TypeScript test-fixture migration. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/migrate.md) before dependent work.
+Read the [common contract](../_coco-shared/contracts.md) before acting; when the request already shows that the file below applies, read both in one call. Initially and on new scope, risk, state, or missing prerequisites, check for external or independently deployed consumers, a coordinated internal refactor, a production schema or data change (expand, dual-write, backfill, contract), a destructive phase or recovery plan, a replacement that is not yet production-proven, an integration-only branch, and the TypeScript test-fixture migration. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/migrate.md) before dependent work.
 
 ## Procedure and output
 

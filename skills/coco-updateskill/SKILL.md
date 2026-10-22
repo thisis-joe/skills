@@ -6,7 +6,7 @@ license: MIT
 
 # coco-updateskill
 
-Adapt an existing skill to the team's actual development practices, check related rules and references for consistency, and install the verified changes. Follow the [common contract](../_coco-shared/contracts.md) and [team update procedure](references/team-update.md). Localize questions, examples, and reports to the user's language; the prompts below are English examples.
+Adapt an existing skill to the team's actual development practices, check related rules and references for consistency, and install the verified changes. Follow the [common contract](../_coco-shared/contracts.md) and [team update procedure](references/team-update.md). Read the files this request needs together in one call. Localize questions, examples, and reports to the user's language; the prompts below are English examples.
 
 ## Opening conversation
 
