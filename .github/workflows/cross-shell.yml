@@ -1,0 +1,147 @@
+# Run the package checks and the shell rules from skills/_coco-shared/runtimes.md
+# on Windows and Linux shells that teammates use.
+name: cross-shell
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ['3.9', '3.12']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate package
+        run: python scripts/validate.py
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+
+  shells:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { os: ubuntu-latest, shell: bash }
+          - { os: ubuntu-latest, shell: zsh }
+          - { os: windows-latest, shell: bash }
+          - { os: windows-latest, shell: pwsh }
+          - { os: windows-latest, shell: powershell }
+          - { os: windows-latest, shell: cmd }
+    runs-on: ${{ matrix.os }}
+    env:
+      # A Jira-style branch name with parentheses and Korean text.
+      BRANCH: feat(be)/1-로그인_테스트
+    steps:
+      - name: Install zsh
+        if: matrix.shell == 'zsh'
+        run: sudo apt-get update -q && sudo apt-get install -y -q zsh
+
+      - name: Push and read back (bash)
+        if: matrix.shell == 'bash'
+        shell: bash -e {0}
+        run: |
+          git config --global user.name ci
+          git config --global user.email ci@example.invalid
+          base="$RUNNER_TEMP/shell-${{ matrix.shell }}"
+          git init -q --bare -b main "$base/remote.git"
+          git clone -q "$base/remote.git" "$base/work"
+          cd "$base/work"
+          git switch -q -c "$BRANCH"
+          echo note > note.txt
+          git add note.txt
+          git commit -q -m 'test: shell refspec'
+          oid=$(git rev-parse HEAD)
+          branch="$BRANCH"
+          echo status:
+          git push -q origin "${oid}:refs/heads/${branch}"
+          remote=$(git -c core.quotepath=false ls-remote --heads origin "refs/heads/${branch}")
+          echo "$remote"
+          test "$(printf '%s' "$remote" | cut -f1)" = "$oid"
+          test "$(printf '%s' "$remote" | cut -f2)" = "refs/heads/${branch}"
+
+      - name: Push and read back (zsh)
+        if: matrix.shell == 'zsh'
+        shell: zsh -e {0}
+        run: |
+          git config --global user.name ci
+          git config --global user.email ci@example.invalid
+          base="$RUNNER_TEMP/shell-${{ matrix.shell }}"
+          git init -q --bare -b main "$base/remote.git"
+          git clone -q "$base/remote.git" "$base/work"
+          cd "$base/work"
+          git switch -q -c "$BRANCH"
+          echo note > note.txt
+          git add note.txt
+          git commit -q -m 'test: shell refspec'
+          oid=$(git rev-parse HEAD)
+          branch="$BRANCH"
+          echo status:
+          git push -q origin "${oid}:refs/heads/${branch}"
+          remote=$(git -c core.quotepath=false ls-remote --heads origin "refs/heads/${branch}")
+          echo "$remote"
+          test "$(printf '%s' "$remote" | cut -f1)" = "$oid"
+          test "$(printf '%s' "$remote" | cut -f2)" = "refs/heads/${branch}"
+
+      - name: Push and read back (PowerShell 7 and Windows PowerShell 5.1)
+        if: matrix.shell == 'pwsh' || matrix.shell == 'powershell'
+        shell: ${{ matrix.shell }}
+        run: |
+          [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+          $PSVersionTable.PSVersion.ToString()
+          git config --global user.name ci; git config --global user.email ci@example.invalid
+          $base = Join-Path $env:RUNNER_TEMP 'shell-${{ matrix.shell }}'
+          git init -q --bare -b main "$base/remote.git"; if ($LASTEXITCODE -ne 0) { exit 1 }
+          git clone -q "$base/remote.git" "$base/work"; if ($LASTEXITCODE -ne 0) { exit 1 }
+          Set-Location "$base/work"
+          $branch = $env:BRANCH
+          git switch -q -c $branch; if ($LASTEXITCODE -ne 0) { exit 1 }
+          Set-Content -Path note.txt -Value note
+          git add note.txt; git commit -q -m 'test: shell refspec'; if ($LASTEXITCODE -ne 0) { exit 1 }
+          $oid = (git rev-parse HEAD).Trim()
+          echo status:
+          git push -q origin "${oid}:refs/heads/${branch}"; if ($LASTEXITCODE -ne 0) { exit 1 }
+          $remote = git -c core.quotepath=false ls-remote --heads origin "refs/heads/${branch}"
+          $remote
+          $parts = "$remote" -split "`t"
+          if ($parts[0] -ne $oid) { Write-Error "remote OID differs"; exit 1 }
+          if ($parts[1] -ne "refs/heads/$branch") { Write-Error "remote ref name differs: $($parts[1])"; exit 1 }
+
+      - name: Push and read back (cmd)
+        if: matrix.shell == 'cmd'
+        shell: cmd
+        run: |
+          chcp 65001 >nul
+          git config --global user.name ci & git config --global user.email ci@example.invalid
+          set "BASE=%RUNNER_TEMP%\shell-cmd"
+          git init -q --bare -b main "%BASE%\remote.git" || exit /b 1
+          git clone -q "%BASE%\remote.git" "%BASE%\work" || exit /b 1
+          cd /d "%BASE%\work" || exit /b 1
+          git switch -q -c "%BRANCH%" || exit /b 1
+          echo note> note.txt
+          git add note.txt && git commit -q -m "test: shell refspec" || exit /b 1
+          for /f %%i in ('git rev-parse HEAD') do set "OID=%%i"
+          echo status:
+          git push -q origin "%OID%:refs/heads/%BRANCH%" || exit /b 1
+          git -c core.quotepath=false ls-remote --heads origin "refs/heads/%BRANCH%" > "%BASE%\remote.txt" || exit /b 1
+          type "%BASE%\remote.txt"
+          findstr /b /c:"%OID%" "%BASE%\remote.txt" >nul || exit /b 1
+
+      - name: Python interpreters available (informational)
+        if: runner.os == 'Windows' && matrix.shell == 'cmd'
+        shell: cmd
+        run: |
+          where python3 & where python & py -3 --version & exit /b 0
