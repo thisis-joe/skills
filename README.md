@@ -8,9 +8,9 @@ Codex와 Claude Code에서 쓰는 개발 스킬 29개. 요구 정리부터 구�
 
 Node.js 22 이상과 Python 3.9 이상이 필요합니다. 사용할 에이전트는 별도로 설치하고 로그인하세요.
 
-> 이 저장소는 **1.0.0 기준**입니다. npm의 `latest`는 아직 **0.2.0**이며 프로젝트 설치와 일부 스킬을 지원하지 않습니다. 1.0.0 게시 전에는 아래 **소스에서 설치**를 이용하세요.
+이 문서는 **1.0.0 기준**입니다.
 
-**1.0.0 게시 후**, 사용할 프로젝트 폴더에서 런타임에 맞는 명령을 실행합니다.
+사용할 프로젝트 폴더에서 런타임에 맞는 명령을 실행합니다.
 
 ```sh
 # Claude Code
@@ -30,7 +30,7 @@ $coco-start 주문 취소 기능을 만들려고 해. 진행 순서를 정해줘
 스킬을 둘러보려면 `/coco-tellmeskill`, 특정 스킬을 알아보려면 `/coco-tellmeskill coco-build 간단 설명`을 입력하세요. Codex에서는 앞의 `/`를 `$`로 바꿉니다.
 
 <details>
-<summary>소스에서 설치 — npm 게시 전에도 1.0.0 사용</summary>
+<summary>소스에서 설치 — npm 없이 사용</summary>
 
 ```sh
 git clone https://github.com/thisis-joe/skills.git
@@ -46,7 +46,7 @@ python3 scripts/install.py --runtime claude --project /path/to/your-project
 <details>
 <summary>설치 위치 · 업데이트 · 제거</summary>
 
-아래 npm 명령은 **1.0.0 게시 후** 사용할 수 있습니다. `claude` 대신 `codex`를 지정하면 Codex에 적용됩니다.
+아래 명령은 **1.0.0 기준**입니다. `claude` 대신 `codex`를 지정하면 Codex에 적용됩니다.
 
 ```sh
 # 현재 프로젝트에 설치하거나 업데이트
