@@ -46,7 +46,7 @@ For a consequential novel design compare distinct shapes before committing; a sm
 5. Implement only enough to satisfy that behavior, without speculative features or unrelated cleanup.
 6. Run the focused check to green, then relevant nearby checks and the real user path when required.
 7. After green, allow small in-scope naming/duplication cleanup only; recheck affected behavior after changing it.
-8. Obtain the required [review](review.md), resolve findings through this owner, and close the work unit below.
+8. Self-review as the build entrypoint describes, or obtain a [review](review.md) where it calls for one; resolve findings through this owner, and close the work unit below.
 
 Do not write a whole imagined test suite followed by a whole implementation; each slice uses what the previous one taught.
 Tests use public behavior and independent expected values, real local implementations, and controlled external boundaries.
@@ -92,7 +92,7 @@ For sustained queue/recovery bookkeeping use [automation modes](automate.md), wi
 
 ## Close a work unit
 
-1. Run project-required regression/build/runtime checks at closure; [verify](verify.md) distinguishes pass from unavailable evidence.
+1. Run project-required regression/build/runtime checks at closure and report each as passed, failed or unavailable; read the [verification core](verify.md) before driving a UI, browser, account or persistent state beyond a disposable local fixture.
 2. Reuse unaffected passing receipts and rerun checks whose relevant code, environment, or acceptance changed.
 3. Review the actual task changes, including committed/index/worktree/untracked layers, before the work-unit commit.
 4. Resolve blocking findings or retain an explicit authorized disposition; a pass on one review axis cannot mask another failure.

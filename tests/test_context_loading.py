@@ -58,7 +58,7 @@ def inspect_context_loading(root=ROOT, baseline=None):
     """Return structured failures; callers can inject an isolated package root."""
     root = Path(root)
     if baseline is None:
-        baseline = json.loads(BASELINE.read_text())
+        baseline = json.loads(BASELINE.read_text(encoding='utf-8'))
     advanced = root / 'skills/_coco-shared/advanced'
     documents = {
         path.name: (path, *split_sections(path.read_bytes().decode('utf-8')))
@@ -182,7 +182,7 @@ class ContextLoadingTests(unittest.TestCase):
 
     def test_original_sections_are_preserved_once_and_reassemble_exactly(self):
         result = self.assert_valid()
-        baseline = json.loads(BASELINE.read_text())
+        baseline = json.loads(BASELINE.read_text(encoding='utf-8'))
         self.assertEqual(result['reconstructed_sha256'], {
             family: original['original_sha256']
             for family, original in baseline['families'].items()

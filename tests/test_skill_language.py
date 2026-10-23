@@ -12,11 +12,11 @@ LOCAL_FRAGMENT = re.compile(r'\]\(([^):\s]+\.md)#([^\s)]+)\)')
 
 def hangul_locations(skills):
     failures = []
-    for path in sorted(Path(skills).rglob('*')):
+    for path in sorted(Path(skills).rglob('*'), key=lambda item: item.as_posix()):
         if path.is_file() and path.suffix in ('.md', '.yaml', '.yml'):
             failures.extend(
-                f'{path.relative_to(skills)}:{number}'
-                for number, line in enumerate(path.read_text().splitlines(), 1)
+                f'{path.relative_to(skills).as_posix()}:{number}'
+                for number, line in enumerate(path.read_text(encoding='utf-8').splitlines(), 1)
                 if HANGUL.search(line))
     return failures
 
@@ -24,12 +24,12 @@ def hangul_locations(skills):
 def fragment_failures(skills):
     failures = []
     for path in Path(skills).rglob('*.md'):
-        for target, fragment in LOCAL_FRAGMENT.findall(path.read_text()):
+        for target, fragment in LOCAL_FRAGMENT.findall(path.read_text(encoding='utf-8')):
             destination = (path.parent / target).resolve()
             if not destination.is_file():
                 failures.append(f'{path}: missing {target}')
                 continue
-            headings = re.findall(r'^#{1,6}\s+(.+)$', destination.read_text(), re.M)
+            headings = re.findall(r'^#{1,6}\s+(.+)$', destination.read_text(encoding='utf-8'), re.M)
             slugs = {re.sub(r'[^\w\s-]', '', heading).lower().replace(' ', '-')
                      for heading in headings}
             if fragment not in slugs:
@@ -46,9 +46,9 @@ class SkillLanguageTests(unittest.TestCase):
     def test_detection_includes_discovery_metadata_and_references(self):
         with tempfile.TemporaryDirectory() as directory:
             skills = Path(directory)
-            (skills / 'SKILL.md').write_text('description: "English \ud55c\uae00"\n')
-            (skills / 'reference.md').write_text('# English\n\u1100\n')
-            (skills / 'LICENSE').write_text('\ud55c\uae00 legal attribution\n')
+            (skills / 'SKILL.md').write_text('description: "English \ud55c\uae00"\n', encoding='utf-8')
+            (skills / 'reference.md').write_text('# English\n\u1100\n', encoding='utf-8')
+            (skills / 'LICENSE').write_text('\ud55c\uae00 legal attribution\n', encoding='utf-8')
             self.assertEqual(hangul_locations(skills), ['SKILL.md:1', 'reference.md:2'])
 
     def test_local_document_heading_links_resolve(self):

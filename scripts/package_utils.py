@@ -16,7 +16,7 @@ def sha(path):
 
 def read_json(path):
     try:
-        return json.loads(path.read_text())
+        return json.loads(path.read_text(encoding='utf-8'))
     except (OSError, ValueError) as exc:
         raise PackageError('Cannot read JSON: ' + str(path)) from exc
 
@@ -72,7 +72,7 @@ def validate_payload(base, data):
         if not path.is_file():
             errors.append('Missing SKILL.md: ' + name)
             continue
-        text = path.read_text()
+        text = path.read_text(encoding='utf-8')
         parts = text.split('---\n', 2)
         try:
             if not text.startswith('---\n') or len(parts) != 3:
@@ -94,7 +94,7 @@ def validate_payload(base, data):
             if not ui.is_file():
                 raise PackageError('Missing UI metadata')
             values = {}
-            for line in ui.read_text().splitlines():
+            for line in ui.read_text(encoding='utf-8').splitlines():
                 if line.startswith('  ') and ': ' in line:
                     key, value = line.strip().split(': ', 1)
                     values[key] = scalar(value)
@@ -116,7 +116,7 @@ def validate_payload(base, data):
                 continue
             if not path.is_file() or path.suffix != '.md':
                 continue
-            for target in re.findall(r'\[[^\]\n]*\]\(([^)\n]+)\)', path.read_text()):
+            for target in re.findall(r'\[[^\]\n]*\]\(([^)\n]+)\)', path.read_text(encoding='utf-8')):
                 target = unquote(target.strip('<>').split('#', 1)[0])
                 if not target or re.match(r'^[a-zA-Z][a-zA-Z0-9+.-]*:', target):
                     continue

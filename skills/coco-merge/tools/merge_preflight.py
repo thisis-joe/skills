@@ -263,6 +263,9 @@ def finish(report, blockers, warnings):
 
 
 def main():
+    # Korean branch names and note sections must print on Windows consoles and pipes too.
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8')
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument('--repo', default='.')
     parser.add_argument('--remote', help='push remote; default: pushRemote, pushDefault, upstream remote, origin')

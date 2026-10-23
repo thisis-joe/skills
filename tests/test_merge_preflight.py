@@ -38,7 +38,7 @@ class MergePreflightTests(unittest.TestCase):
     def commit(self, repo, name, content, message):
         path = repo / name
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(content)
+        path.write_text(content, encoding='utf-8')
         self.git(repo, 'add', name)
         self.git(repo, 'commit', '-qm', message)
         return self.git(repo, 'rev-parse', 'HEAD')
@@ -64,7 +64,7 @@ class MergePreflightTests(unittest.TestCase):
         head = self.feature()
         self.commit(self.clone('other'), 'app.txt', 'line one\nmain moved\n', 'main moves on')
         self.git(Path(self.temp.name) / 'other', 'push', '-q', 'origin', 'main')
-        (self.work / 'notes.txt').write_text('user draft\n')
+        (self.work / 'notes.txt').write_text('user draft\n', encoding='utf-8')
         refs = self.git(self.work, 'for-each-ref')
         status = self.git(self.work, 'status', '--porcelain=v1')
         report = self.preflight(expect=0)
@@ -118,7 +118,7 @@ class MergePreflightTests(unittest.TestCase):
         self.git(other, 'push', '-q', 'origin', 'main')
         self.git(other, 'switch', '-q', 'feat/x')
         self.git(other, 'merge', '-q', '--no-commit', 'origin/main')
-        (other / 'feature.txt').write_text('slipped in during the merge\n')
+        (other / 'feature.txt').write_text('slipped in during the merge\n', encoding='utf-8')
         self.git(other, 'add', 'feature.txt')
         self.git(other, 'commit', '-q', '--no-edit')
         self.git(other, 'push', '-q', 'origin', 'feat/x')

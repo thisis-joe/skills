@@ -240,7 +240,7 @@ def check_workspace(root):
     for note in notes:
         count = listed[note.resolve()]
         if count != 1:
-            problems.append(f'{index}:1: {note.relative_to(root)} is listed {count} times; '
+            problems.append(f'{index}:1: {note.relative_to(root).as_posix()} is listed {count} times; '
                             'list every note exactly once')
     return problems, checked
 
@@ -259,6 +259,9 @@ def summary(checked):
 
 
 def main(argv=None):
+    # Korean branch names and note sections must print on Windows consoles and pipes too.
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8')
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('path', type=Path, help='workspace directory or one note file')
     parser.add_argument('--template', type=Path,

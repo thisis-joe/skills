@@ -45,7 +45,7 @@
         "skills/engineering/setup-matt-pocock-skills/SKILL.md",
         "skills/engineering/pr/SKILL.md"
       ],
-      "adaptation": "Retain two independent review passes within MALJ review, using isolated reviewers when delegation is authorized/available and sequential passes otherwise. Establish a justified base from context instead of demanding redundant user input; explicitly accommodate unstaged changes if those are the requested review surface. Existing repo standards and output requirements override source formatting.",
+      "adaptation": "Retain two independent review passes within MALJ review, using isolated reviewers when delegation is authorized/available and sequential passes otherwise. Establish a justified base from context instead of demanding redundant user input; explicitly accommodate unstaged changes if those are the requested review surface. Existing repo standards and output requirements override source formatting. Its single captured diff command is the frozen scope for an exact range without the scope collector, which serves merge-base and uncommitted scopes.",
       "author": "matt",
       "implemented_references": [
         "skills/coco-review/SKILL.md",
@@ -92,7 +92,7 @@
         "skills/engineering/improve-codebase-architecture/SKILL.md",
         "skills/engineering/retro/SKILL.md"
       ],
-      "adaptation": "Merge into MALJ debug; keep human-loop helper conditional and observational (the template echoes captured values, so sign-in/secrets stay outside capture). A missing reproduction is an explicit evidence/access limit, not permission to fabricate causality. Honor high-priority task scope before production instrumentation.",
+      "adaptation": "Merge into MALJ debug; keep human-loop helper conditional and observational (the template echoes captured values, so sign-in/secrets stay outside capture). A missing reproduction is an explicit evidence/access limit, not permission to fabricate causality. Honor high-priority task scope before production instrumentation. After reproduction the fix follows the build entrypoint without its advanced modes unless their conditions apply, closer to the source's in-place fix. A hypothesis the code rules out gets a cited line instead of a probe; the 100x loop raises a reproduction rate, while before/after loops are sized to the measured rate.",
       "author": "matt",
       "implemented_references": [
         "skills/coco-debug/SKILL.md",
@@ -183,7 +183,7 @@
         "skills/engineering/tdd/SKILL.md",
         "skills/engineering/code-review/SKILL.md"
       ],
-      "adaptation": "Merge as scoped MALJ build execution; it is not permission to automatically orchestrate every ticket in a parent spec. Apply user feature-branch and task-unit-commit instructions in place of blindly committing to whichever branch happens to be current.",
+      "adaptation": "Merge as scoped MALJ build execution; it is not permission to automatically orchestrate every ticket in a parent spec. Apply user feature-branch and task-unit-commit instructions in place of blindly committing to whichever branch happens to be current. Its single-test-file loop and once-at-the-end full suite are kept; its one code-review call before the commit becomes build's self-review of the whole diff, escalating to coco-review only for fresh-context, requested, dependency, shared-contract or strengthened work.",
       "author": "matt",
       "implemented_references": [
         "skills/coco-build/SKILL.md",
@@ -991,7 +991,7 @@
         "skills/shipping-and-launch/SKILL.md",
         "references/orchestration-patterns.md"
       ],
-      "adaptation": "Retain independent specialist checks and main-owned merge; explicitly report sequential/degraded mode instead of pretending independent parallel execution. Persona definitions are referenced but absent from this selected source export; harness capability and authorization are prerequisites.",
+      "adaptation": "Retain independent specialist checks and main-owned merge; explicitly report sequential/degraded mode instead of pretending independent parallel execution. Persona definitions are referenced but absent from this selected source export; harness capability and authorization are prerequisites. The two-file, fifty-line fan-out skip applies only to specialist fan-out, never to required or runtime checks; COCO adds migrations or schema, dependencies and lockfiles to the exclusions as a team rule, and a non-deploying PR check keeps a one-line revert path as its rollback.",
       "author": "addy",
       "implemented_references": [
         "skills/coco-ship/SKILL.md",
@@ -1145,7 +1145,7 @@
         "references/security-checklist.md",
         "references/performance-checklist.md"
       ],
-      "adaptation": "Keep five axes, severity and mutation evidence alongside any other review axes rather than flattening them. Mutation experiments must preserve unrelated edits. The cleanup-before-submission rule and separate-refactor rule need scoped task ownership, not unsolicited cleanup.",
+      "adaptation": "Keep five axes, severity and mutation evidence alongside any other review axes rather than flattening them. Mutation experiments must preserve unrelated edits. The cleanup-before-submission rule and separate-refactor rule need scoped task ownership, not unsolicited cleanup. Reports lead with findings by severity and state each COCO verdict in one line, following the source's preference for a few high-conviction comments over a long list.",
       "author": "addy",
       "implemented_references": [
         "skills/coco-review/SKILL.md",
@@ -1199,7 +1199,7 @@
         "skills/performance-optimization/SKILL.md",
         "skills/constraint-driven-development/references/floor-guard.md"
       ],
-      "adaptation": "Preserve the complete lifecycle and floor reference contract, not just numeric defaults. Stage/budget and 80%/60%/90-day defaults are project choices, not universal gates. The regex guard does not implement secrets scanning, exact line locations, exception approval matching or expiry enforcement; compose scanners and retain heuristics/false-positive caveats. COCO routes standing-bar setup to start; verify links to that owner for a requested quality-bar audit.",
+      "adaptation": "Preserve the complete lifecycle and floor reference contract, not just numeric defaults. Stage/budget and 80%/60%/90-day defaults are project choices, not universal gates. The regex guard does not implement secrets scanning, exact line locations, exception approval matching or expiry enforcement; compose scanners and retain heuristics/false-positive caveats. COCO routes standing-bar setup to start; verify links to that owner for a requested quality-bar audit. A route-only start request reports a missing bar in one line and offers setup instead of establishing it.",
       "author": "addy",
       "implemented_references": [
         "skills/coco-start/SKILL.md",
@@ -1590,7 +1590,7 @@
         "references/accessibility-checklist.md",
         "skills/observability-and-instrumentation/SKILL.md"
       ],
-      "adaptation": "Preserve rollout/error-budget/flag cleanup and data recovery details with project-specific thresholds and authorized deploy scope. Its audit checklist says no high advisories while security allows documented nonreachable deferrals; choose policy explicitly. Long monitoring windows remain pending evidence, not silently complete.",
+      "adaptation": "Preserve rollout/error-budget/flag cleanup and data recovery details with project-specific thresholds and authorized deploy scope. Its audit checklist says no high advisories while security allows documented nonreachable deferrals; choose policy explicitly. Long monitoring windows remain pending evidence, not silently complete. Rollout, error-budget and recovery planning apply to an authorized deployment or staged release; PR preparation gives a one-line revert path, and data recovery is planned whenever data or schema changes.",
       "author": "addy",
       "implemented_references": [
         "skills/coco-ship/SKILL.md",
@@ -1667,7 +1667,7 @@
         "skills/browser-testing-with-devtools/SKILL.md",
         "references/testing-patterns.md"
       ],
-      "adaptation": "Retain repository-tool discovery and explicit static exemptions. In-loop refactoring directly conflicts with Matts loop; scope one loop owner. The original broad unit-heavy pyramid must be reconciled with pre-agreed public seams rather than imposing internal tests.",
+      "adaptation": "Retain repository-tool discovery and explicit static exemptions. In-loop refactoring directly conflicts with Matts loop; scope one loop owner. The original broad unit-heavy pyramid must be reconciled with pre-agreed public seams rather than imposing internal tests. A first-run pass, the source's red flag, is checked in one scratch run at closure rather than by a mutation per test; tests stay small and fast, and lowering deliberate cost factors through a parameter with one production-value check is a team addition.",
       "author": "addy",
       "implemented_references": [
         "skills/coco-build/SKILL.md",
@@ -2673,7 +2673,7 @@
       "dependencies": [
         "pstack/skills/show-me-your-work/SKILL.md"
       ],
-      "adaptation": "Core verification contract; simple reversible edits use proportionate real-artifact inspection.",
+      "adaptation": "Core verification contract; simple reversible edits use proportionate real-artifact inspection. A one-off check keeps its ad-hoc commands and output as evidence; a reusable driver or evidence file is written when asked, when the check must be rerun or in runtime-helper mode, in line with the source committing scripts only for large work.",
       "author": "pstack",
       "implemented_references": [
         "skills/coco-verify/SKILL.md",

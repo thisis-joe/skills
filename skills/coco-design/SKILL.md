@@ -8,7 +8,7 @@ license: MIT
 
 Select a small understandable interface that earns its implementation complexity.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for a shared or public API contract, retry-sensitive or idempotent effects, type-discipline choices, deepening shallow modules or an architecture opportunity survey, comparing structurally different alternatives, a disposable prototype, and the opt-in TypeScript package-boundary recipe. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/design.md) before dependent work.
+Read the [common contract](../_coco-shared/contracts.md) before acting; when the request already shows that the file below applies, read both in one call. Initially and on new scope, risk, state, or missing prerequisites, check for a shared or public API contract, retry-sensitive or idempotent effects, type-discipline choices, deepening shallow modules or an architecture opportunity survey, comparing structurally different alternatives, a disposable prototype, and the opt-in TypeScript package-boundary recipe. If any applies, read the [advanced modes](../_coco-shared/advanced/design.md) before dependent work.
 
 ## Procedure and output
 

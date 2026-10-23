@@ -257,11 +257,11 @@ def loading_sentence(text):
 
 def addy_table_families(root):
     """Families whose Addy sources carry rationalization or red-flag tables."""
-    coverage = json.loads((root / 'sources/coverage.json').read_text())
+    coverage = json.loads((root / 'sources/coverage.json').read_text(encoding='utf-8'))
     family = {(row['author'], row['path']): row for row in coverage['entries']}
     found = {}
     for source in sorted((root / 'sources/addy/skills').glob('*/SKILL.md.source')):
-        if any(marker in source.read_text() for marker in ADDY_TABLES):
+        if any(marker in source.read_text(encoding='utf-8') for marker in ADDY_TABLES):
             row = family[('addy', 'skills/%s/SKILL.md' % source.parent.name)]
             found[source.parent.name] = row
     return found
@@ -277,11 +277,11 @@ def inspect_source_fidelity(root=ROOT):
         failures.append((code, detail))
 
     def entry(name):
-        return (skills / ('coco-' + name) / 'SKILL.md').read_text()
+        return (skills / ('coco-' + name) / 'SKILL.md').read_text(encoding='utf-8')
 
     # 1. Advanced reachability: no vague pointer; named triggers with live targets.
     for path in sorted(skills.glob('coco-*/SKILL.md')):
-        text = path.read_text()
+        text = path.read_text(encoding='utf-8')
         if VAGUE_POINTER in text:
             fail('vague-advanced-pointer', path.parent.name)
         sentence = loading_sentence(text)
@@ -299,7 +299,7 @@ def inspect_source_fidelity(root=ROOT):
             module = advanced / filename
             if not module.is_file():
                 fail('advanced-trigger-target', '%s: %s' % (name, target))
-            elif heading and heading not in headings(module.read_text()):
+            elif heading and heading not in headings(module.read_text(encoding='utf-8')):
                 fail('advanced-trigger-target', '%s: %s' % (name, target))
 
     # 2. Split-router cores load where their rules matter and apply once loaded.
@@ -308,7 +308,7 @@ def inspect_source_fidelity(root=ROOT):
         for phrase in phrases:
             if phrase not in sentence:
                 fail('core-entry', '%s: %s' % (name, phrase))
-        selection = sections((advanced / (name + '.md')).read_text()).get('Mode selection', '')
+        selection = sections((advanced / (name + '.md')).read_text(encoding='utf-8')).get('Mode selection', '')
         if CORE_ROUTER not in selection:
             fail('core-router', name)
 
@@ -318,13 +318,13 @@ def inspect_source_fidelity(root=ROOT):
     for phrase in PREMISE_ENTRY:
         if phrase not in step:
             fail('premise-route', phrase)
-    causes = sections((advanced / 'debug.md').read_text()).get('Test competing causes', '')
+    causes = sections((advanced / 'debug.md').read_text(encoding='utf-8')).get('Test competing causes', '')
     for phrase in PREMISE_RULE:
         if phrase not in causes:
             fail('premise-rule', phrase)
 
     # 4. Addy's rationalization/red-flag tables survive as stop signals.
-    contract = sections((skills / '_coco-shared/contracts.md').read_text())
+    contract = sections((skills / '_coco-shared/contracts.md').read_text(encoding='utf-8'))
     if len(bullets(contract.get('Stop signals', ''))) < 5:
         fail('common-stop-signals', 'contracts.md')
     for source, row in sorted(addy_table_families(root).items()):
@@ -337,12 +337,12 @@ def inspect_source_fidelity(root=ROOT):
         reference = 'skills/coco-%s/SKILL.md#stop-signals' % name
         if reference not in row['implemented_references']:
             fail('stop-signals-coverage', '%s: %s' % (source, reference))
-    decisions = (skills / '_coco-shared/decisions.md').read_text()
+    decisions = (skills / '_coco-shared/decisions.md').read_text(encoding='utf-8')
     if 'Addy rationalization and red-flag tables' not in decisions:
         fail('stop-signals-decision', 'decisions.md')
 
     # 5. Matt's grilling keeps its mechanics in an explicit, discoverable mode.
-    clarify = (advanced / 'clarify.md').read_text()
+    clarify = (advanced / 'clarify.md').read_text(encoding='utf-8')
     grill = sections(clarify).get('Grill mode', '')
     for phrase in GRILL_MECHANICS:
         if phrase not in grill:
@@ -365,7 +365,7 @@ def inspect_source_fidelity(root=ROOT):
     # anchor silently resolves to the first copy only.
     for path in sorted(skills.rglob('*.md')):
         seen = set()
-        for line in path.read_text().splitlines():
+        for line in path.read_text(encoding='utf-8').splitlines():
             if re.match(r'^#{1,6} ', line):
                 if line in seen:
                     fail('duplicate-heading', '%s: %s' % (path.relative_to(skills), line))
@@ -394,9 +394,9 @@ class SourceFidelityTests(unittest.TestCase):
         self.assertIn(code, [kind for kind, _ in failures], failures)
 
     def edit(self, path, old, new):
-        text = path.read_text()
+        text = path.read_text(encoding='utf-8')
         self.assertIn(old, text, 'Fixture must contain the text this mutation changes')
-        path.write_text(text.replace(old, new))
+        path.write_text(text.replace(old, new), encoding='utf-8')
 
     def test_active_text_retains_audited_source_rules(self):
         self.assert_clean()
@@ -410,7 +410,7 @@ class SourceFidelityTests(unittest.TestCase):
     def test_vague_advanced_pointer_is_detected(self):
         root = self.isolated_package()
         path = root / 'skills/coco-design/SKILL.md'
-        sentence = loading_sentence(path.read_text())
+        sentence = loading_sentence(path.read_text(encoding='utf-8'))
         self.edit(path, sentence, 'Read the [common contract](../_coco-shared/contracts.md) before acting. '
                   'Load [advanced modes](../_coco-shared/advanced/design.md) ' + VAGUE_POINTER + '.')
         self.assert_detected(root, 'vague-advanced-pointer')
@@ -446,8 +446,8 @@ class SourceFidelityTests(unittest.TestCase):
     def test_dropped_family_stop_signals_are_detected(self):
         root = self.isolated_package()
         path = root / 'skills/coco-security/SKILL.md'
-        text = path.read_text()
-        path.write_text(text[:text.index('\n## Stop signals')] + '\n')
+        text = path.read_text(encoding='utf-8')
+        path.write_text(text[:text.index('\n## Stop signals')] + '\n', encoding='utf-8')
         self.assert_detected(root, 'family-stop-signals')
 
     def test_softened_grill_mode_is_detected(self):
@@ -459,7 +459,7 @@ class SourceFidelityTests(unittest.TestCase):
     def test_repeated_mode_heading_is_detected(self):
         root = self.isolated_package()
         path = root / 'skills/_coco-shared/advanced/frontend.md'
-        path.write_text(path.read_text() + '\n## Conditional visual parity\n\nCompeting copy.\n')
+        path.write_text(path.read_text(encoding='utf-8') + '\n## Conditional visual parity\n\nCompeting copy.\n')
         self.assert_detected(root, 'duplicate-heading')
 
     def test_undiscoverable_grill_mode_is_detected(self):

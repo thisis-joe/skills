@@ -108,7 +108,7 @@ def install(root, dest, dry_run=False):
                         os.replace(str(incoming / folder), str(current))
                         activated.append(folder)
                 staged_manifest = stage / 'manifest.json'
-                staged_manifest.write_text(json.dumps(info, ensure_ascii=False, indent=2) + '\n')
+                staged_manifest.write_text(json.dumps(info, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
                 os.replace(str(staged_manifest), str(dest / '.coco-install.json'))
             except BaseException:
                 for folder in reversed(activated):
@@ -184,6 +184,19 @@ def exclude_from_git(project, dest, folders, dry_run=False):
         exclude.write_text(text + prefix + '# coco-skills install\n' + '\n'.join(missing) + '\n',
                            encoding='utf-8')
     return {'file': str(exclude), 'added': len(missing)}
+
+
+def stdin_is_terminal():
+    """isatty() is true for the NUL device on Windows, so ask the console itself there."""
+    if not sys.stdin.isatty():
+        return False
+    if os.name != 'nt':
+        return True
+    import ctypes
+    import msvcrt
+    mode = ctypes.c_uint32()
+    handle = msvcrt.get_osfhandle(sys.stdin.fileno())
+    return bool(ctypes.windll.kernel32.GetConsoleMode(handle, ctypes.byref(mode)))
 
 
 def ask(prompt):
@@ -278,7 +291,7 @@ def main():
                         help='Remove the COCO install from the selected destination instead')
     parser.add_argument('--dry-run', action='store_true')
     args = parser.parse_args()
-    interactive = sys.stdin.isatty()
+    interactive = stdin_is_terminal()
     try:
         global_dest = default_destination(args.runtime)
         projects = args.project

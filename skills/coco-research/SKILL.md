@@ -8,7 +8,7 @@ license: MIT
 
 Answer how or why with inspectable evidence and explicit uncertainty.
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, risk, state, or missing prerequisites, check for version-specific API facts, a runtime mechanism or state-ownership trace, historical rationale behind defensive code or thresholds, a bounded multi-source investigation, claim-confidence grading, and a durable cited findings artifact. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/research.md) before dependent work.
+Read the [common contract](../_coco-shared/contracts.md) before acting; when the request already shows that the file below applies, read both in one call. Initially and on new scope, risk, state, or missing prerequisites, check for version-specific API facts, a runtime mechanism or state-ownership trace, historical rationale behind defensive code or thresholds, a bounded multi-source investigation, claim-confidence grading, and a durable cited findings artifact. If any applies, read the [advanced modes](../_coco-shared/advanced/research.md) before dependent work.
 
 ## Procedure and output
 

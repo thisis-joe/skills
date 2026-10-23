@@ -21,7 +21,7 @@ def loading_guidance_characters(root=ROOT):
     is used. The original 23 operational sections are checked separately.
     """
     root = Path(root)
-    manifest = json.loads(BASELINE.read_text())
+    manifest = json.loads(BASELINE.read_text(encoding='utf-8'))
     advanced = root / 'skills/_coco-shared/advanced'
     measured = {}
     for family, original in manifest['families'].items():
@@ -72,7 +72,7 @@ class GuidanceCompactionTests(unittest.TestCase):
         return root
 
     def test_loading_guidance_reduces_frozen_overhead_by_at_least_half(self):
-        baseline = json.loads(COMPACTION_BASELINE.read_text())
+        baseline = json.loads(COMPACTION_BASELINE.read_text(encoding='utf-8'))
         self.assertEqual(baseline['total_characters'], 9001)
         self.assertEqual(sum(
             family['selection_characters'] + family['module_guard_characters']
@@ -96,8 +96,8 @@ class GuidanceCompactionTests(unittest.TestCase):
     def test_removing_a_direct_entry_guard_cannot_pass_the_budget_gate(self):
         root = self.isolated_package()
         path = root / 'skills/_coco-shared/advanced/automate-ci.md'
-        _, blocks = split_sections(path.read_text())
-        path.write_text(''.join(block for _, block in blocks))
+        _, blocks = split_sections(path.read_text(encoding='utf-8'))
+        path.write_text(''.join(block for _, block in blocks), encoding='utf-8')
         result = inspect_guidance_budget(root)
         self.assertIn('module-core-link', [code for code, _ in result['failures']])
         self.assertIsNone(result['measurement'])

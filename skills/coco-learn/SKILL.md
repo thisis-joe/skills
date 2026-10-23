@@ -8,7 +8,7 @@ license: MIT
 
 Help the user understand something and keep it in short, uniform notes they can reread in about a minute. Every note follows the [note format](references/note-template.md).
 
-Read the [common contract](../_coco-shared/contracts.md) before acting. Initially and on new scope, check for a multi-session learning workspace: a learning mission, lessons, learning records or a glossary. If it applies or is unclear, read the [learning procedures](../_coco-shared/advanced/learn.md) before dependent work.
+Read the [common contract](../_coco-shared/contracts.md) before acting; when the request already shows that the file below applies, read both in one call. Initially and on new scope, check for a multi-session learning workspace: a learning mission, lessons, learning records or a glossary. If it applies, read the [learning procedures](../_coco-shared/advanced/learn.md) before dependent work.
 
 Localize explanations, note content and section labels to the user's language; the English names here are canonical identifiers.
 

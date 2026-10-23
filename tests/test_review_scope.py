@@ -1,4 +1,5 @@
 import json
+import os
 from pathlib import Path
 import runpy
 import subprocess
@@ -31,7 +32,7 @@ class ReviewScopeTests(unittest.TestCase):
     def write(self, name, content):
         p = self.repo / name
         p.parent.mkdir(parents=True, exist_ok=True)
-        p.write_text(content)
+        p.write_text(content, encoding='utf-8')
 
     def run_scope(self, *args, expect=0):
         result = subprocess.run([sys.executable, str(SCRIPT), '--repo', str(self.repo),
@@ -54,10 +55,12 @@ class ReviewScopeTests(unittest.TestCase):
 
     def test_deleted_and_unusual_filenames_are_not_lost(self):
         (self.repo / 'deleted.txt').unlink()
-        self.write('line\nbreak.txt', 'new\n')
+        # Windows forbids control characters in names; keep the newline case elsewhere.
+        unusual = 'line\nbreak.txt' if os.name != 'nt' else 'space and \u00fc.txt'
+        self.write(unusual, 'new\n')
         files = {f['path']: f for f in self.run_scope()['files']}
         self.assertEqual(files['deleted.txt']['statuses']['worktree'], 'D')
-        self.assertIn('line\nbreak.txt', files)
+        self.assertIn(unusual, files)
 
     def test_task_paths_are_literal_and_directory_scopes_work(self):
         self.write('[x].txt', 'literal\n')
@@ -74,7 +77,7 @@ class ReviewScopeTests(unittest.TestCase):
         self.run_scope()
         self.assertEqual(self.git('status', '--porcelain=v1', '-z'), before)
         self.assertEqual(self.git('rev-parse', 'HEAD'), head)
-        self.assertEqual((self.repo / 'new.txt').read_text(), 'not staged\n')
+        self.assertEqual((self.repo / 'new.txt').read_text(encoding='utf-8'), 'not staged\n')
 
     def test_fingerprint_changes_when_reviewed_content_changes(self):
         self.write('tracked.txt', 'first\n')

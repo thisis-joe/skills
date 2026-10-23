@@ -33,7 +33,7 @@ Reuse approval for the defined scope; continuous mode adds no deployment or dele
 3. Read CI and existing scripts for focused tests, full tests, build, types and lint.
 4. Inspect the current branch, base and pre-existing dirty paths without changing them.
 5. Find the existing spec/plan and task-state owner; preserve incomplete other work.
-6. Run only the baseline checks needed to establish a missing fact.
+6. For a setup request, run only the baseline checks needed to establish a missing fact; a route-only request runs none.
 7. State the findings briefly and ask only for material policy still missing.
 
 If manager signals disagree, use the [security installation gate](security.md) before installs.

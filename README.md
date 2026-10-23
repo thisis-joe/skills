@@ -82,7 +82,9 @@ npx --yes @thisis-joe/coco-skills@1.0.0 uninstall --runtime claude --project .
 <details>
 <summary>전체 스킬과 작업 흐름</summary>
 
-필요한 단계부터 시작하세요. 모든 작업에 전체 절차가 필요한 것은 아닙니다.
+필요한 단계부터 시작하세요. 모든 작업에 전체 절차가 필요한 것은 아닙니다. 할 일과 스킬이 정해졌다면 `coco-start`를 거치지 않고 바로 호출하세요.
+
+이름만 호출했을 때 대화에서 할 일이 하나로 정해져 있으면 그 요청으로 진행하고, 그렇지 않으면 요청문 선택을 안내합니다. `coco-tellmeskill`, `coco-askme`, `coco-updateskill`, `coco-whattosay`는 각자의 선택 단계로 시작합니다. **`coco-push`와 `coco-merge`는 이름만 호출해도 현재 브랜치 기준으로 실행**하므로, 설명만 원하면 요청에 명시하세요.
 
 ```text
 coco-clarify → coco-spec → coco-plan → coco-build → coco-review → coco-push → coco-merge

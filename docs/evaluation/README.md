@@ -28,6 +28,8 @@ unrelated files, regression checks, and native-client verification limits.
 
 `coco-whattosay`의 [독립 적용 2대화·7턴](whattosay/README.md)은 확정한 스킬의 요청문 추천과 선택 대기, 번호 선택 후 실제 리뷰, 문장 전용 상태의 수정·유효하지 않은 번호 처리, 명시적 실행 요청 후 결과 생성을 확인합니다. 임시 제품 파일·Git 상태의 보존과 실제 26개 스킬 설치도 기록합니다. `coco-whichskill` 자체의 실행 연동을 시험한 것은 아닙니다.
 
+요청 없이 이름만 호출한 스킬의 [빈 호출 처리 독립 적용 7대화·8턴](bare-invocation/README.md)은 대화 없는 `coco-review`·`coco-build`의 추천 흐름 전환과 번호 선택 후 실행을 확인합니다. 맥락이 정해진 `coco-debug`의 즉시 진행, 제외 대상인 `coco-askme`의 자체 선택 유지, `coco-push`의 절차 실행도 함께 확인합니다. 2차로 제외 대상에 추가한 `coco-merge`의 즉시 실행과, 대조군 `coco-ship`의 추천 흐름 유지도 확인했습니다. 실제 `/` 메뉴 호출과 Codex 호출은 실행하지 않았습니다.
+
 `coco-askme`의 [독립 적용 3대화·15턴](askme/README.md)은 전체 작업 후보 제시, 부분 복수 선택, 대상 사전 지정, 모르는 답변, 사용자 역질문, 설계 대안 인정, 성능 근거 부족, 도중 범위 변경을 확인합니다. 대상 저장소의 상태 보존도 기록합니다.
 
 `coco-document`를 나눈 `coco-docs`·`coco-learn`의 [독립 적용 4대화·13턴](docs-learn/README.md)은 새 학습 작업 공간, 다른 개념의 노트 분리, 부분 정답의 상태 유지, 긴 노트 정리와 사용자 메모 보존, 복습, 문서 불일치 점검, 공식 how-to 작성과 두 스킬의 경계를 확인합니다. 평가에서 드러난 모호한 규칙을 보완한 뒤 같은 시드로 다시 확인했습니다.
@@ -35,6 +37,8 @@ unrelated files, regression checks, and native-client verification limits.
 `coco-merge`의 [모의 forge 적용 4사례](merge/README.md)는 draft PR의 ready 전환 후 푸시한 head 고정 머지, `develop`의 미출시 커밋이 디폴트 브랜치로 딸려 들어가는 경우의 중단과 질문, 필수 체크 실패 시 미머지와 로컬 변경 보존, PR 생성 후 merge 방식 브랜치 업데이트와 새 head 고정 머지를 확인합니다. PR의 대상 브랜치로 머지하도록 바꾼 뒤의 2차 2사례는 `develop` 대상 PR을 묻지 않고 `develop`에 머지하고, `main` 대상 PR에 섞인 미출시 커밋에서는 멈추는 것을 확인합니다. GitHub CLI 일부를 흉내 낸 로컬 fixture이며 실제 서비스의 보호 규칙·병합 큐·GitLab 경로를 검증한 것은 아닙니다.
 
 `coco-build`의 [Jira 브랜치 규칙 확인](build-branches.md)은 한글·괄호가 있는 이름의 실제 생성, 유효하지 않은 후보와 중복 이름의 Git 거절, 사용자 파일 보존을 기록합니다. Jira 조회나 에이전트의 질문 행동을 실행 검증한 것은 아닙니다.
+
+스킬 실행 시간의 [진단](latency/README.md)은 실제 세션 기록 11회와 스킬 사용·미사용 비교 3과제로 시간이 쓰이는 곳, 원인 다섯 가지, 지킬 규칙과 줄일 규칙을 기록합니다. [측정 스크립트](latency/measure_sessions.py)는 지정한 프로젝트와 기간의 실행 시간·모델 호출 수·출력 토큰만 집계하고, [실험 조건](latency/protocol.md)은 조정 후 동작 확인과 재측정 기준을 고정합니다. 1차 조정의 [동작 확인 결과](latency/results.md)는 안전 조건을 잃은 사례 없이 start와 ship의 시간이 30~40% 줄었음을 기록합니다. build, review, debug, verify의 [진단](latency/heavy.md)은 늘어난 시간을 원인 지시문과 원저자 요구에 대응시키고, [조정 후 비교](latency/heavy-results.md)는 debug와 verify가 각각 33%, 26% 줄고 나머지는 오차 범위였으며 결함 검출이 유지됐음을 기록합니다. 한 사람의 기록과 과제당 1회 비교이므로 시간 비율은 모델·부하·네트워크에 따라 달라지며, 품질이 같다는 증명은 아닙니다.
 
 이 모음은 스킬 문서와 공통 계약을 통해 에이전트의 판단을 안내합니다. 형식 검사나 한 번의 에이전트 시나리오 통과가 모든 모델·제품·프로젝트에서의 준수를 보장하지는 않습니다.
 
