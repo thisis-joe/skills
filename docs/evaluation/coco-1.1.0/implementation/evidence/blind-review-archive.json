@@ -1,0 +1,22 @@
+{
+  "created_at_utc": "2026-10-26T09:20:47.269604+00:00",
+  "archive": "blind-review-evidence.tar.gz",
+  "sha256": "589f87cb0eed8d6ff0b502d4e7c20a949979dd7c1ee6b61c33874c974a6bc3a7",
+  "bytes": 215542,
+  "members": 620,
+  "packet_regular_files": 392,
+  "packet_exact_bytes_and_modes_preserved": true,
+  "grade_sha256": "0c82d72a345daa42208266a51df9493263665935dfd30480e656dfb5853ff891",
+  "copied_grade_bytes_equal": true,
+  "mapping_sha256": "7cf669dfd94cfce8b7a2d4f4f5caef6295235dbf5b6960db6144f4965454442e",
+  "pre_grade_packet_manifest_sha256": "5ae2853f272d8d9006d59c39dfb9acdcbddbdd8f10ac8921934a1f87ce0908c1",
+  "original_native_archive_sha256_before": "c18dc1d370f94d88e785b386e727ddb98b322c387daba64af3eb1a379903f198",
+  "original_native_archive_sha256_after": "c18dc1d370f94d88e785b386e727ddb98b322c387daba64af3eb1a379903f198",
+  "graded_entries": 14,
+  "unstarted_project_entries": 10,
+  "false_completion_controls": 2,
+  "completed_five_pair_comparison": false,
+  "candidate_measurement_valid": false,
+  "regrading_performed": false,
+  "additional_actors_run": false
+}
