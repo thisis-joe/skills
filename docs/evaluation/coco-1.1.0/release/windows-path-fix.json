@@ -1,0 +1,54 @@
+{
+  "candidate_before": "3a866db71ab8d05993de95ac161f22a74b1154ca",
+  "actual_failure": {
+    "url": "https://github.com/thisis-joe/skills/actions/runs/40319030905/job/121558902807",
+    "platform": "windows-latest",
+    "python": "3.15.1",
+    "test": "test_invalid_workspace_paths_are_ignored_without_losing_valid_uses",
+    "subcases": [
+      "claude",
+      "codex"
+    ],
+    "expected": [
+      "coco-build"
+    ],
+    "actual": [
+      "coco-ship",
+      "coco-build"
+    ],
+    "suite_tests": 200,
+    "suite_seconds": 292.216
+  },
+  "cause": "The metadata cwd contains NUL. Non-strict path resolution need not raise for malformed strings, so containment alone can admit the malformed descendant. The helper relied on Path.resolve raising. Both runtime readers use inside().",
+  "fix": "Reject non-string or NUL-containing session cwd before filesystem path resolution. Keep existing absolute-path, canonical-resolution and containment checks.",
+  "unchanged_test_sha256": "9c915a5bebe204f49df8f933b8e9d454b5a4f94a1abf0257b2843b43557bb3cc",
+  "regression": "Existing test and expected output unchanged; no tests or thresholds weakened.",
+  "controlled_replay": {
+    "condition": "For NUL-containing paths only, substitute a permissive Path.resolve returning the same Path; all other paths use original resolve. Run the existing test through the real helper CLI on runtime-shaped JSONL files.",
+    "before": "The same two runtime subcases fail with the same unexpected coco-ship result.",
+    "after": "One test, both runtime subcases pass in 0.062 seconds.",
+    "limit": "Controlled resolver-boundary replay on macOS, not a native Windows execution. The actual Windows CI result remains separately required.",
+    "before_log": "windows-path-replay-before.log"
+  },
+  "focused_tests": {
+    "command": "python3 -m unittest discover -s tests -p test_tellmeskill_recent.py -v",
+    "tests": 17,
+    "seconds": 0.72,
+    "result": "passed"
+  },
+  "validator": {
+    "command": "python3 scripts/validate.py",
+    "result": "passed"
+  },
+  "native_windows_after": "pending final pushed-head CI",
+  "global_installs_changed": false,
+  "remote_write_performed_by_this_fix": false,
+  "full_tests": {
+    "command": "python3 -m unittest discover -s tests -v",
+    "tests": 200,
+    "seconds": 61.52,
+    "result": "passed",
+    "log": "windows-path-tests.log"
+  },
+  "fixed_helper_sha256": "d8b6d617e6867b80e37c916f6f4199e2b3b5876cdf979522102ff23d6a57f48d"
+}

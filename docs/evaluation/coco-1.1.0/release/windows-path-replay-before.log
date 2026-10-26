@@ -1,0 +1,43 @@
+test_invalid_workspace_paths_are_ignored_without_losing_valid_uses (recent_tests.RecentSkillTests) ... 
+======================================================================
+FAIL: test_invalid_workspace_paths_are_ignored_without_losing_valid_uses (recent_tests.RecentSkillTests) (runtime='claude')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Joseph/.codex/worktrees/coco-1-1-0/skills/tests/test_tellmeskill_recent.py", line 213, in test_invalid_workspace_paths_are_ignored_without_losing_valid_uses
+    self.assertEqual(self.names(report), ['coco-build'])
+AssertionError: Lists differ: ['coco-ship', 'coco-build'] != ['coco-build']
+
+First differing element 0:
+'coco-ship'
+'coco-build'
+
+First list contains 1 additional elements.
+First extra element 1:
+'coco-build'
+
+- ['coco-ship', 'coco-build']
++ ['coco-build']
+
+======================================================================
+FAIL: test_invalid_workspace_paths_are_ignored_without_losing_valid_uses (recent_tests.RecentSkillTests) (runtime='codex')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Joseph/.codex/worktrees/coco-1-1-0/skills/tests/test_tellmeskill_recent.py", line 213, in test_invalid_workspace_paths_are_ignored_without_losing_valid_uses
+    self.assertEqual(self.names(report), ['coco-build'])
+AssertionError: Lists differ: ['coco-ship', 'coco-build'] != ['coco-build']
+
+First differing element 0:
+'coco-ship'
+'coco-build'
+
+First list contains 1 additional elements.
+First extra element 1:
+'coco-build'
+
+- ['coco-ship', 'coco-build']
++ ['coco-build']
+
+----------------------------------------------------------------------
+Ran 1 test in 0.065s
+
+FAILED (failures=2)

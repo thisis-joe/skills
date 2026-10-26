@@ -113,6 +113,9 @@ def claude_events(config, workspaces, cutoff):
 
 
 def inside(path, workspaces):
+    # Non-strict resolution need not reject malformed filesystem strings.
+    if not isinstance(path, str) or '\x00' in path:
+        return False
     try:
         candidate = Path(path)
         if not candidate.is_absolute():
