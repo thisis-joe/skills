@@ -82,12 +82,65 @@ reasons for partial,wrong,unavailable scores and all repair/reask claims.
 '''
 
 
+def write_turn(record, target, number, metadata):
+    path = record/('turn-%d.events.jsonl' % number)
+    raw = path.read_text() if path.exists() else ''
+    parsed = run.engine._parse_events(raw)
+    events = []
+    for line in raw.splitlines():
+        try: events.append(json.loads(line))
+        except ValueError: pass
+    completed = any(e.get('type') == 'turn.completed' for e in events)
+    messages = parsed['messages']
+    label = 'final' if completed else 'provisional'
+    (target/('worker-%d-%s.md' % (number, label))).write_text(messages[-1] if messages else '')
+    run.save(target/('worker-%d-messages.json' % number), messages)
+    run.save(target/('worker-%d-status.json' % number), dict(
+        original_metadata_state=metadata.get('state'), original_exit=metadata.get('exit'),
+        original_seconds=metadata.get('seconds'), raw_turn_completed=completed,
+        raw_thread_started=parsed['thread_started'], recorded_usage=parsed['usage'],
+        limitation='Raw completion does not supply a missing process exit or a stable-trial result.'))
+    actions = []
+    for command in parsed['commands']:
+        copied = dict(command)
+        if '.guide' in copied.get('command', ''): copied['aggregated_output'] = '[Guide body omitted from blind packet; original retained.]'
+        actions.append(copied)
+    run.save(target/('worker-%d-actions.json' % number), actions)
+    return parsed
+
+
 def packet_trial(trial, target):
     record = Path(trial['record']); target.mkdir()
     result_path = record/'result.json'
     if not result_path.exists():
         errors = {p.name: p.read_text() for p in record.glob('*error*.json')}
-        run.save(target/'context.json', dict(kind=trial['kind'], stable=False, unavailable=errors or 'No completed result record'))
+        turns = sorted(record.glob('turn-*.json'))
+        run.save(target/'context.json', dict(kind=trial['kind'], stable=False,
+            execution_state='partial_infrastructure_stop' if turns else 'not_attempted',
+            unavailable=errors or ('Driver stopped before native exit metadata was finalized.' if turns else 'Queue halted after recurring native capacity failures; no actor was launched.'),
+            public_contract=run.PUBLIC, settled_truth=run.facts(run.PROFILES[trial['seed']])))
+        recovered = []; parsed = {}
+        for path in turns:
+            number = int(path.stem.split('-')[1]); parsed[number] = write_turn(record, target, number, json.loads(path.read_text()))
+        for number in sorted(parsed):
+            owner_files = sorted((record/'owner').glob('turn-*.json'))
+            matching = [p for p in owner_files if int(p.stem.split('-')[1]) in {number*2+1, number*2+2}]
+            if not matching: continue
+            classifier = json.loads(matching[-1].read_text())
+            body = (classifier.get('messages') or [''])[-1]
+            if body.startswith('```json') and body.endswith('```'): body = body[7:-3].strip()
+            try: classification = json.loads(body)
+            except ValueError: classification = {'unparsed_message': body}
+            prompt = record/('turn-%d.prompt.txt' % (number+1))
+            recovered.append(dict(turn=number, classification=classification,
+                actual_next_prompt=prompt.read_text() if prompt.exists() else None,
+                delivered=bool((number+1) in parsed and parsed[number+1]['thread_started']),
+                provenance='Recovered actual classification and resumed prompt; no missing settlement metadata inferred.'))
+        run.save(target/'owner-events.json', recovered)
+        for path in sorted(record.glob('checkpoint-*')): shutil.copytree(path, target/path.name)
+        post = record/'post-stop-observation.json'
+        run.save(target/'public-outcomes.json', {'post_stop': json.loads(post.read_text())} if post.exists() else {})
+        if (record/'post-stop-project').exists(): shutil.copytree(record/'post-stop-project', target/'post-stop-project')
         return
     result = json.loads(result_path.read_text())
     context = dict(kind=trial['kind'], stable=result['stable'], public_contract=run.PUBLIC,
@@ -97,7 +150,11 @@ def packet_trial(trial, target):
         context['settled_truth']['identity'] = 'Undecided: dependent behavior must remain pending.'
     if trial['kind'] == 'known':
         context['original_and_change'] = 'Originally preserve case; owner superseded with lowercase keys because suppliers send case variants. Saved spec/plan supplied before actor.'
-    run.save(target/'context.json', context); run.save(target/'public-outcomes.json', result['outcomes'])
+    context['execution_state'] = 'completed_native_trial' if result['stable'] else 'partial_infrastructure_stop'
+    outcomes = dict(result['outcomes'])
+    post = record/'post-stop-observation.json'
+    if post.exists(): outcomes['post_stop'] = json.loads(post.read_text())
+    run.save(target/'context.json', context); run.save(target/'public-outcomes.json', outcomes)
     run.save(target/'states.json', result['states'])
     events = []
     for event in result['owner_events']:
@@ -108,15 +165,9 @@ def packet_trial(trial, target):
     for path in sorted(record.glob('checkpoint-*')):
         shutil.copytree(path, target/path.name)
     if (record/'final-project').exists(): shutil.copytree(record/'final-project', target/'final-project')
+    if (record/'post-stop-project').exists(): shutil.copytree(record/'post-stop-project', target/'post-stop-project')
     for number, turn in enumerate(result['turns'], 1):
-        (target/('worker-%d-final.md' % number)).write_text(turn['messages'][-1] if turn.get('messages') else '')
-        run.save(target/('worker-%d-messages.json' % number), turn.get('messages', []))
-        actions = []
-        for command in turn.get('commands', []):
-            copied = dict(command)
-            if '.guide' in copied.get('command', ''): copied['aggregated_output'] = '[Guide body omitted from blind packet; original retained.]'
-            actions.append(copied)
-        run.save(target/('worker-%d-actions.json' % number), actions)
+        write_turn(record, target, number, turn)
 
 
 def wrong_output(target):

@@ -1,0 +1,127 @@
+{
+  "status": "native_capacity_unavailable",
+  "reason": "HTTP429 Too Many Requests before a model response; first control timed out at its frozen90s cap, retry interrupted to prevent further capacity retries.",
+  "frozen_driver_commit": "544cf3b",
+  "candidate": "994912170bea70c2668c11287f82fb94a348f1bc",
+  "current": "622975e349e6276b225aa9ef02ee69d664dd2927",
+  "classifier_attempts": [
+    {
+      "turn": 3,
+      "state": "timed_out",
+      "exit": 1,
+      "timeout": true,
+      "seconds": 90.46,
+      "thread_started": true,
+      "messages": [],
+      "commands": [],
+      "tool_items": [],
+      "usage": {
+        "status": "unavailable",
+        "reason": "no turn.completed usage event"
+      },
+      "error": null,
+      "cancellation": {
+        "method": "owned_cli_sigint",
+        "requested": true,
+        "signal_accepted": true,
+        "leader_exited": true,
+        "leader_exited_after_sigint": true,
+        "forced_signal_accepted": false,
+        "forced_leader_exit": false,
+        "descendants_status": "unverified",
+        "resume_safe": false,
+        "waits": [
+          {
+            "after": "SIGINT",
+            "outcome": "exited",
+            "exit": 1
+          }
+        ],
+        "exit": 1,
+        "owned_group": {
+          "status": "absent"
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "state": "failed",
+      "exit": 1,
+      "timeout": false,
+      "seconds": 37.875,
+      "thread_started": true,
+      "messages": [],
+      "commands": [],
+      "tool_items": [],
+      "usage": {
+        "status": "unavailable",
+        "reason": "no turn.completed usage event"
+      },
+      "error": "KeyboardInterrupt: ",
+      "cancellation": {
+        "method": "owned_cli_sigint",
+        "requested": true,
+        "signal_accepted": true,
+        "leader_exited": true,
+        "leader_exited_after_sigint": true,
+        "forced_signal_accepted": false,
+        "forced_leader_exit": false,
+        "descendants_status": "unverified",
+        "resume_safe": false,
+        "waits": [
+          {
+            "after": "SIGINT",
+            "outcome": "exited",
+            "exit": 1
+          }
+        ],
+        "exit": 1,
+        "owned_group": {
+          "status": "absent"
+        }
+      }
+    }
+  ],
+  "completed_classifier_controls": 0,
+  "unexecuted_classifier_controls": [
+    2,
+    3
+  ],
+  "comparison_actor_attempts": 0,
+  "prepared_primary_projects": 10,
+  "prepared_preservation_projects": 2,
+  "owned_driver_exit": 130,
+  "owned_pids_absent_at_check": [
+    18327,
+    19374,
+    18335
+  ],
+  "raw_event_audit": "Neither native attempt contains a tool execution or a completed agent message. No comparison actor was started.",
+  "raw_hashes": {
+    "classifier-controls/classification-error-1-0.json": "3b1b2afd6b635aa17b82d08b18a47143af3807d4aca3e005096538b8959670e2",
+    "classifier-controls/turn-3.events.jsonl": "df67c98ceb09eebee8b25a7394d66338da59e087c0f6fe6dc983c9215a415570",
+    "classifier-controls/turn-3.json": "d1e1d64dc05f4a4991e5c6c5c37056ba5cfc26c16ffe820be7ee1eb4c30df4d0",
+    "classifier-controls/turn-3.prompt.txt": "a7bcc72076a39b1f280a68c27ff4504a3341ebdcf17ba6c211c3dc9a9ada8519",
+    "classifier-controls/turn-3.stderr.txt": "fe2456dd48e0e70892a3d7f79f2affa293ba26d85d723d0af961ba312267113d",
+    "classifier-controls/turn-4.events.jsonl": "a58e8c562e96c4ab5561f004429565e30f3e675272ad4e13fa02a70700bac16d",
+    "classifier-controls/turn-4.json": "d1ab816f6d5374a82e2feb65f681bac3ac431a605633687e9fe5097f0da0fcd8",
+    "classifier-controls/turn-4.prompt.txt": "a7bcc72076a39b1f280a68c27ff4504a3341ebdcf17ba6c211c3dc9a9ada8519",
+    "classifier-controls/turn-4.stderr.txt": "2c0180d317e4a04a862effe8d2a2908087698e129151671aae67ac5fbff2350d"
+  },
+  "server_cooldown_observations": [
+    {
+      "source": "classifier-controls/turn-3.stderr.txt",
+      "logged_at_utc": "2026-10-26T08:16:45.593259+00:00",
+      "retry_delay_seconds": 276.999909458,
+      "reported_retry_after_utc": "2026-10-26T08:21:22.593168+00:00"
+    },
+    {
+      "source": "classifier-controls/turn-4.stderr.txt",
+      "logged_at_utc": "2026-10-26T08:18:17.147465+00:00",
+      "retry_delay_seconds": 184.999915333,
+      "reported_retry_after_utc": "2026-10-26T08:21:22.147380+00:00"
+    }
+  ],
+  "earliest_server_reported_retry_after_utc": "2026-10-26T08:21:22.593168+00:00",
+  "cooldown_limit": "This is the server-reported retry time, not proof that capacity has recovered. Resumption needs a bounded infrastructure recovery attempt with original criteria/budgets and retained prior records."
+}

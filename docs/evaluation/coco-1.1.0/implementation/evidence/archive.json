@@ -1,0 +1,24 @@
+{
+  "created_at_utc": "2026-10-26T08:55:19.823720+00:00",
+  "status": "incomplete_native_comparison",
+  "archive": "native-partial-evidence.tar.gz",
+  "sha256": "c18dc1d370f94d88e785b386e727ddb98b322c387daba64af3eb1a379903f198",
+  "bytes": 773586,
+  "members": 911,
+  "refs": {
+    "current": "622975e349e6276b225aa9ef02ee69d664dd2927",
+    "candidate": "17e342556cb3465780bff18bd358c262d6f47736"
+  },
+  "frozen_actor_driver_commit": "027e5c3",
+  "projects_started": 2,
+  "actor_invocations_started": 5,
+  "trial_owner_classifier_invocations_started": 3,
+  "not_attempted_projects": 10,
+  "preflight_classifier_calls": 5,
+  "preflight_capacity_failed_calls": 2,
+  "preflight_recovery_passed_calls": 3,
+  "native_five_pair_gate": "unavailable; no valid complete five-pair cohort",
+  "post_stop_limit": "Independent public observations from quiescent copies do not replace native process exits, stable completion or the frozen comparison.",
+  "collector_change": "Partial raw-event preservation and not-attempted labeling only; no actor source, owner facts, criteria or budgets changed after exposure.",
+  "unstarted_fixture_storage": "Unstarted projects are listed in control.json; unchanged source fixture code reconstructs them. No nonexistent outputs are fabricated."
+}

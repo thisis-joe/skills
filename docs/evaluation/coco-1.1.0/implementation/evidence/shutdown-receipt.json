@@ -1,0 +1,57 @@
+{
+  "recorded_at_utc": "2026-10-26T08:52:06.853017+00:00",
+  "reason": "Recurring HTTP429 after reported cooldown; root directed halt of unstarted queue. ThreadPoolExecutor.map shutdown does not cancel pending futures.",
+  "driver_pid": 28857,
+  "driver_signals": [
+    "SIGSTOP to prevent queue advancement",
+    "SIGTERM then SIGCONT after active CLI36685 was observed defunct"
+  ],
+  "driver_exit_observed": 143,
+  "active_cli_pid": 36685,
+  "active_cli_before_driver_termination": "Z/defunct; original process-exit metadata not finalized",
+  "no_synthetic_exit_metadata": true,
+  "verified_owned_pids": [
+    28857,
+    28868,
+    30486,
+    30694,
+    32151,
+    32358,
+    35353,
+    36139,
+    36685
+  ],
+  "ps_exit": 1,
+  "ps_stdout": "",
+  "ps_stderr": "",
+  "all_verified_leaders_absent": true,
+  "actor_invocations_started": 5,
+  "owner_classifier_invocations_started": 3,
+  "projects_started": 2,
+  "planned_projects_not_attempted": 10,
+  "unstarted_ids": [
+    "1062c21ee284",
+    "0e5a43408c7e",
+    "0ab8e57ca381",
+    "6e0e02055567",
+    "dc409227e5b9",
+    "53572f1d3451",
+    "1940a0e52906",
+    "0961b2ff52cb",
+    "1de3de7e067a",
+    "16bdcfc6218c"
+  ],
+  "observations": [
+    {
+      "id": "2ae072d58840",
+      "quiescent": true,
+      "public_pass": false
+    },
+    {
+      "id": "2e16871143e1",
+      "quiescent": true,
+      "public_pass": true
+    }
+  ],
+  "limitation": "Absent leaders and a five-second quiescent snapshot do not establish child-tool cancellation or native-trial completion. Post-stop outcomes cannot fill the frozen five-pair comparison."
+}
