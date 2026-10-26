@@ -36,7 +36,7 @@ class ProcedureRefinement(unittest.TestCase):
         for seed,logic in enumerate(REFERENCE):
             with self.subTest(seed=seed),tempfile.TemporaryDirectory() as directory:
                 path=Path(directory)
-                (path/'personal-notes.txt').write_text('unrelated project notes: preserve\n')
+                (path/'personal-notes.txt').write_bytes(b'unrelated project notes: preserve\n')
                 original="import json,sys\nif sys.argv[1]=='--version':print('0.1');raise SystemExit\nrows=json.load(open(sys.argv[1]))\n"+logic+"\nprint(json.dumps(result))\n"
                 (path/'app.py').write_text(original)
                 self.assertTrue(refinement_fixtures.observe_discovery(path,seed)['passed'])

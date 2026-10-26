@@ -339,3 +339,16 @@ metadata parser was corrected and the identical installation sequence recorded.
 `npm whoami` returned E401. A browser login attempt fell back to an interactive
 username prompt and was cancelled without collecting credentials; user login in
 their own terminal is pending. This does not block preparation or draft review.
+
+
+Release branch `8689721` was normally pushed and read back, and draft
+[PR #28](https://github.com/thisis-joe/skills/pull/28) targets `main`. Its two
+required Linux checks and six shell checks passed, but both Windows test jobs
+failed five subcases in a historical oracle test. The test setup wrote CRLF on
+Windows where the fixed preserved-note fixture requires LF bytes. The fixture now
+writes explicit bytes; the historical observer and archived experiment remain
+unchanged. A controlled CRLF/LF reproduction distinguishes this cause in all five
+profiles, and the validator plus all 179 local tests pass after the fix. The actual
+Windows CI recheck remains pending the next pushed head. The already tested npm
+artifact still exactly matches all 465 included source files; this test-only fix
+cannot alter its payload. [Failure and repair receipt](../evaluation/coco-1.1.0/release/windows-fixture-fix.json).
