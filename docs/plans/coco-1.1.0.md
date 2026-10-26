@@ -159,3 +159,11 @@ because workflow.md was absent; after the port both tests pass. This is packagin
 and structure evidence, not native behavioral proof. The validator and existing
 hot-path size caps pass without raising thresholds. Native fixture and comparison
 results remain pending until their actual execution and independent review.
+
+A real F1 static-edit fixture at candidate `9949121` completed the authorized
+work but its final report said only the correction and no departure from the
+spec, without an explicit original expectation. Before primary F4 actors, move
+the existing mandatory comparison into common's actual final-report paragraph
+and remove its ownership-summary duplicate. Keep the original observation;
+recheck a fresh equivalent static task and freeze the adjusted candidate. This
+does not change C7 or the comparison rubric. No primary actor used `9949121`.

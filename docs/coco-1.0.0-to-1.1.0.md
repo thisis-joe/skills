@@ -154,7 +154,7 @@ clarify도 기존 답을 먼저 복구하도록 연결했다.
 
 ## 6. 처음 예상과 달라진 이유가 최종 보고에 남게 한다
 
-**수정 위치:** [workflow의 질문·위임·보고](../skills/_coco-shared/workflow.md#questions-delegation-and-reports), [coco-build의 결과 보고](../skills/coco-build/SKILL.md#procedure-and-output), [상세 spec의 변경 처리](../skills/_coco-shared/advanced/spec.md#output-and-stopping-conditions). 기존 명세와 계획을 사용하며 새 기록 파일을 의무화하지 않는다.
+**수정 위치:** [공통 완료 보고](../skills/_coco-shared/contracts.md#evidence-and-completion), [workflow의 질문·위임·보고](../skills/_coco-shared/workflow.md#questions-delegation-and-reports), [coco-build의 결과 보고](../skills/coco-build/SKILL.md#procedure-and-output), [상세 spec의 변경 처리](../skills/_coco-shared/advanced/spec.md#output-and-stopping-conditions). 기존 명세와 계획을 사용하며 새 기록 파일을 의무화하지 않는다.
 
 1.0.0의 공통 보고 지침은 결과·필요한 결정·확인한 근거를 우선한다.
 
@@ -171,6 +171,10 @@ clarify도 기존 답을 먼저 복구하도록 연결했다.
 **변경 후 보고 예:** “처음에는 코드를 그대로 비교할 것으로 예상했습니다. 실제로는 앞뒤 공백과 대소문자를 무시하도록 바꿨습니다. 사용자가 같은 상품으로 취급한다고 결정했기 때문입니다. 첫 행의 원래 표기는 유지하며, 두 입력이 하나로 처리되는 것을 확인했습니다.” 처음부터 이 선택이 정해져 있었다면 “최초 예상과 실제 동작이 같고 중요한 변경은 없습니다”라고 보고한다.
 
 **이유:** 현재 코드가 최신 명세와 일치하는지와, 개발 중 어떤 선택이 달라졌는지는 다른 정보다. 둘 다 있어야 사용자가 결과를 이해하고 다음 작업자도 변경 이유를 알 수 있다.
+
+임시 프로젝트의 첫 실행에서는 “오타를 고쳤고 명세에서 달라진 점 없음”까지 말했지만 최초 기대를 따로 밝히지 않았다. 그래서 공통 지침의 **최종 보고를 작성하는 문단**에도 아래 조건을 넣고 같은 유형의 결과 보고를 다시 확인한다. 기존 실행의 부족한 결과는 그대로 남긴다.
+
+> In every development final reply state the original expectation, actual choice and departure reason/effect (or none); a spec link or "matches spec" alone is insufficient.
 
 **검증 V6:** 최초 선택 → 변경된 선택 → 새 작업자 인수인계 → 최종 보고를 확인한다. 현재 명세만 읽어 과거 변경을 없앤 보고, 선택을 지어낸 보고, 최종 답변 대신 내부 기록에만 비교를 남긴 보고를 실패로 구분한다.
 
