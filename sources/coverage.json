@@ -408,7 +408,7 @@
         "skills/engineering/setup-matt-pocock-skills/SKILL.md",
         "skills/engineering/prototype/SKILL.md"
       ],
-      "adaptation": "Merge into MALJ plan, retaining both vertical-slice and expand-contract branches. Publishing approved work is conditional on user-authorized tracker writes/authentication; previously approved breakdowns need no repeated approval cycle. Preserve feature-branch and task-commit conventions.",
+      "adaptation": "Merge into MALJ plan, retaining both vertical-slice and expand-contract branches. Publishing approved work is conditional on user-authorized tracker writes/authentication; previously approved breakdowns need no repeated approval cycle. Preserve feature-branch and task-commit conventions. Ordinary tracker publication loads the advanced procedure. COCO additionally binds stable effort/task correlation to the authorized destination and reconciles unknown creates, dependency failures and partial publication before retrying.",
       "author": "matt",
       "implemented_references": [
         "skills/coco-plan/SKILL.md",
@@ -1221,7 +1221,7 @@
       "dependencies": [
         "skills/code-review-and-quality/SKILL.md"
       ],
-      "adaptation": "Merge as a distinct behavior-preserving pass. The source says confirm dead code is truly dead while review asks before deletion; require scoped authorization and avoid inferring that any unused-looking symbol may be deleted.",
+      "adaptation": "Merge as a distinct behavior-preserving pass. The source says confirm dead code is truly dead while review asks before deletion; require scoped authorization and avoid inferring that any unused-looking symbol may be deleted. COCO preserves public-behavior checks unchanged but permits retiring or replacing verified obsolete private-structure assertions with independent public-contract and sensitivity evidence. This explicitly adapts the source's blanket unchanged-test rule; original essential_rules remain source facts.",
       "author": "addy",
       "implemented_references": [
         "skills/coco-simplify/SKILL.md",

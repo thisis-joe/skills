@@ -34,7 +34,7 @@ Do not simplify code that will be discarded or replace a known fast path without
 
 Protect observable outputs, errors, state transitions, side effects and execution order.
 Preserve external interfaces unless a contract change is explicitly in scope.
-Passing unchanged tests is required evidence, not proof of every unknown behavior.
+Passing unchanged public-behavior tests is required evidence, not proof of every unknown behavior.
 Add a missing public-boundary characterization when it protects a real uncertainty.
 Do not copy the implementation into expected assertions or freeze irrelevant internals.
 
@@ -59,8 +59,8 @@ Make one coherent change against the recorded current state.
 Run the affected behavior checks and required build/types/lint after relevant changes.
 If a check fails, preserve failure evidence and revert only the owned attempted edit or debug it.
 Keep unrelated working-tree/index changes intact; never reset the entire workspace as cleanup.
-When tests must change, explain whether their contract or irrelevant implementation coupling changed.
-A test change solely to hide a behavior regression is forbidden by the standing floor.
+Do not change a public contract or weaken its regression checks to make a refactor pass.
+If a test only imports, spies on or asserts removed private structure, preserve its failing-before evidence and explain why that coupling is irrelevant to the accepted contract. Retire or replace only that internal assertion, retaining unchanged public output/error/side-effect checks; add a missing public-boundary characterization first when needed. Verify that those checks detect a representative contract violation in scratch, then restore and rerun them. A required contract change is separate authorized behavior work, not this exception.
 
 After each green step compare comprehension and resulting structure with the original.
 If the same complexity merely moved files or gained another wrapper, reconsider/revert.
