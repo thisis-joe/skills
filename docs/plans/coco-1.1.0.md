@@ -312,7 +312,7 @@ not an invented coco-push development base. Preserve work-unit history by merge.
 
 | Release unit | Acceptance | State |
 | --- | --- | --- |
-| R1 Complete prospective recovery | Freeze new candidate and necessary instrument repair; all five matched profiles and two preservation probes, actual owner routing, independent public outcomes and blinded controls; retain the old incomplete cohort | prior attempts sealed; waited cohort frozen at 7582101; actual Sol/high native controls started, first passed without 429 |
+| R1 Complete prospective recovery | Freeze new candidate and necessary instrument repair; all five matched profiles and two preservation probes, actual owner routing, independent public outcomes and blinded controls; retain the old incomplete cohort | prior cohorts sealed; final 900-second cohort frozen at 0d80f5c, first current trial running; no complete pair yet |
 | R2 Prepare consumer artifact | Package 1.1.0, concrete README/distribution notes, exact packed payload, required checks, rollback install and scoped independent review | corrected cd728cd artifact passed: 200 tests, 466 packed/118 active files, eight exact-baseline install/rollback steps |
 | R3 Land release branch | Secret/provenance inspection, verified normal push, one PR attached to this chat, all forge checks/review gates, pinned-head merge and target readback | corrected source pushed as 2f8b11d; all ten CI jobs passed; final evidence head checks and R1 remain |
 | R4 Publish and install | Annotated release tag, npm exact artifact and registry integrity/readback; install to existing managed Codex/Claude locations and verify source agreement/other skills; preserve a tested rollback path | npm authentication recovered; pending readiness |
@@ -525,3 +525,68 @@ closed the timing, cancelled-success, partial-collector and stale-model-context
 findings before dispatch. The first native control then passed without 429 and
 verified a fresh `gpt-6.1-sol`/`high` turn context. This is availability/model
 evidence only; it is not a completed development pair or a release verdict.
+
+All four native controls passed with fresh Sol/high metadata and no 429. The first
+development admission then stopped before launching an actor: on this macOS
+Python 3.9.6 runtime, separate processes' monotonic values had different origins.
+The original stopped root and four controls were preserved. A separate
+[clock-fixed adapter](../evaluation/coco-1.1.0/implementation/recovery/waited/clock-fixed-protocol.md)
+uses UTC for cross-process admission and a local monotonic deadline for waiting.
+The root reviewed the limited diff; a real two-process test observed a 30.005325-
+second start gap. Its 19 inputs were frozen and rechecked unchanged at `a6addd7`.
+The four unchanged controls are reused with exact-byte provenance and counted
+once; twelve fresh projects are separate from the preimplementation failure.
+
+The first actual development actor started at 12:33 UTC and completed its first
+turn. A subsequent owner call received a roughly 78-second provider cooldown;
+the same process was allowed to wait rather than being cancelled solely for 429.
+Development outcomes and a release verdict remain pending; preparation and control
+success are not completed comparison pairs.
+
+### Sol-only direction and one bounded execution-budget correction
+
+The user's later instruction forbids Astra as well as Luna. Use Sol only for new
+work: retain `gpt-6.1-sol`/`high` for both development arms and owner calls, and use
+`gpt-6.1-sol`/`xhigh` for the independent blind judgment. The completed Astra model-
+pin review remains a truthful historical record; no further Astra work is scheduled.
+No native actor or owner model changes mid-cohort.
+
+The clock-fixed cohort demonstrated that waiting works: its first owner call
+completed after 99.647 seconds, including about 77.999 seconds of announced
+cooldown. The current actor then completed turn 2 in 416.706 seconds. Independent
+CLI observation found identity/collision, emitted SKU and wide-integer defects;
+the predeclared one corrective reply supplied the actual contract. Turn 3 ran
+421.163 seconds and was interrupted at the unchanged 420-second non-cooldown cap.
+Its owned process group exited. Remaining files passed the public CLI checks on
+a separate copy, but no final message/completed-turn event existed, so neither
+the trial nor a pair is counted as completed. Candidate and eleven other projects
+were not started. This is an execution-budget stop, not another server-capacity stop.
+
+Preserve that cohort and its deadline failure unchanged. A separate prospective
+cohort raises the actor budget equally to 900 seconds for current and candidate,
+keeps classifiers at 90 seconds, and retains the same model, five-turn limit,
+questions, owner facts, observer, grading and acceptance criteria. Provider waiting
+remains separately capped at 1800 seconds per call and 5400 seconds per cohort.
+This operational adjustment lets the requested complete procedure be observed;
+it is not a quality pass or a revised grade for the earlier deadline failure.
+Prepare fresh projects, reuse only unchanged successful controls with exact-byte
+provenance, and never resume a stopped actor. Do not pool time/cost outcomes across
+the different execution budgets. If this fixed 900-second cohort stops, record
+the cause and incomplete result rather than automatically extending it again.
+
+The final [900-second protocol](../evaluation/coco-1.1.0/implementation/recovery/waited/budget900-protocol.md)
+was frozen at `0d80f5c`. Root review confirmed the thin adapter changes only actor
+420 to 900, retains classifier 90, and binds both arms and resumed calls identically;
+two focused tests passed and all 22 frozen hashes matched. The first fresh actor
+started at 13:00:47 UTC. No stopped actor was resumed. Prior stopped evidence passed
+[independent Sol/high inspection](../evaluation/coco-1.1.0/implementation/recovery/waited/evidence/stopped-evidence-review.json)
+and is retained as [incomplete observations](../evaluation/coco-1.1.0/implementation/recovery/waited/observations.md).
+
+The user raised the remaining usage budget. The account returned 74% weekly usage,
+26% remaining, shared across the account; this is not a per-thread token allowance.
+Full completion within it cannot yet be promised. Source, README, required local
+tests, corrected-source CI, exact package/rollback checks and npm login are ready;
+native comparison and independent judgment are the major remaining usage. Do not
+start extra cohorts or ancillary reviews. Reassess actual account usage after the
+first completed case, preserving all work rather than silently reducing the
+comparison or calling unfinished verification complete.
