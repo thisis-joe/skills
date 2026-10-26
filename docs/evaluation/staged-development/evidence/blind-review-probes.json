@@ -1,0 +1,737 @@
+{
+  "0d90922aa538": {
+    "[]": {
+      "code": 0,
+      "stdout": "[\"amber\", \"birch\", \"cedar\"]",
+      "stderr": ""
+    },
+    "['--offset', 0, '--limit', 3]": {
+      "code": 0,
+      "stdout": "[\"amber\", \"birch\", \"cedar\"]",
+      "stderr": ""
+    },
+    "['--offset', 3, '--limit', 3]": {
+      "code": 0,
+      "stdout": "[\"dawn\", \"elm\", \"fern\"]",
+      "stderr": ""
+    },
+    "['--offset', 6, '--limit', 3]": {
+      "code": 0,
+      "stdout": "[\"gold\"]",
+      "stderr": ""
+    },
+    "['--offset', 100]": {
+      "code": 0,
+      "stdout": "[]",
+      "stderr": ""
+    },
+    "['--offset', -1]": {
+      "code": 2,
+      "stdout": "",
+      "stderr": "usage: catalog.py [-h] [--offset OFFSET] [--limit LIMIT]\ncatalog.py: error: --offset must be >= 0"
+    },
+    "['--limit', 0]": {
+      "code": 2,
+      "stdout": "",
+      "stderr": "usage: catalog.py [-h] [--offset OFFSET] [--limit LIMIT]\ncatalog.py: error: --limit must be > 0"
+    },
+    "['--limit', -1]": {
+      "code": 2,
+      "stdout": "",
+      "stderr": "usage: catalog.py [-h] [--offset OFFSET] [--limit LIMIT]\ncatalog.py: error: --limit must be > 0"
+    }
+  },
+  "0eaee907c28a": {
+    "0['list']": {
+      "code": 0,
+      "stdout": "[]",
+      "stderr": ""
+    },
+    "1['total']": {
+      "code": 0,
+      "stdout": "0",
+      "stderr": ""
+    },
+    "2['add', 'z', 12]": {
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "3['add', 'a', -7]": {
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "4['add', 'zero', 0]": {
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "5['add', 'z', 12]": {
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "6['list']": {
+      "code": 0,
+      "stdout": "[{\"key\": \"a\", \"amount\": -7}, {\"key\": \"z\", \"amount\": 12}, {\"key\": \"zero\", \"amount\": 0}]",
+      "stderr": ""
+    },
+    "7['add', 'a', 99]": {
+      "code": 2,
+      "stdout": "",
+      "stderr": "usage: ledger.py [-h] --db DB {list,total,add} ...\nledger.py: error: key already exists with a different amount"
+    },
+    "8['list']": {
+      "code": 0,
+      "stdout": "[{\"key\": \"a\", \"amount\": -7}, {\"key\": \"z\", \"amount\": 12}, {\"key\": \"zero\", \"amount\": 0}]",
+      "stderr": ""
+    },
+    "9['total']": {
+      "code": 0,
+      "stdout": "5",
+      "stderr": ""
+    },
+    "10['add', 'max', 9223372036854775807]": {
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "11['total']": {
+      "code": 0,
+      "stdout": "9223372036854775812",
+      "stderr": ""
+    }
+  },
+  "124e9e188f53": {
+    "signed[]": {
+      "code": 0,
+      "stdout": "count=3 total=8",
+      "stderr": ""
+    },
+    "signed['--format', 'json']": {
+      "code": 0,
+      "stdout": "{\"count\": 3, \"total\": 8}",
+      "stderr": ""
+    },
+    "empty[]": {
+      "code": 0,
+      "stdout": "count=0 total=0",
+      "stderr": ""
+    },
+    "empty['--format', 'json']": {
+      "code": 0,
+      "stdout": "{\"count\": 0, \"total\": 0}",
+      "stderr": ""
+    },
+    "bad[]": {
+      "code": 1,
+      "stdout": "",
+      "stderr": "error: line 2: invalid integer amount 'oops'"
+    },
+    "bad['--format', 'json']": {
+      "code": 1,
+      "stdout": "",
+      "stderr": "error: line 2: invalid integer amount 'oops'"
+    },
+    "missing[]": {
+      "code": 1,
+      "stdout": "",
+      "stderr": "error: missing required 'amount' header"
+    },
+    "missing['--format', 'json']": {
+      "code": 1,
+      "stdout": "",
+      "stderr": "error: missing required 'amount' header"
+    },
+    "missing_cell[]": {
+      "code": 1,
+      "stdout": "",
+      "stderr": "error: line 2: invalid integer amount None"
+    },
+    "missing_cell['--format', 'json']": {
+      "code": 1,
+      "stdout": "",
+      "stderr": "error: line 2: invalid integer amount None"
+    }
+  },
+  "13862b0fdf92": {
+    "source": "<!doctype html><html><body><button id=\"save\">Save changes</button><p>Saved records</p></body></html>\n",
+    "exact_expected": true
+  },
+  "4d037be24a01": {
+    "[]": {
+      "code": 0,
+      "stdout": "[\"amber\", \"birch\"]",
+      "stderr": ""
+    },
+    "['--offset', 0, '--limit', 3]": {
+      "code": 0,
+      "stdout": "[\"amber\", \"birch\"]",
+      "stderr": ""
+    },
+    "['--offset', 3, '--limit', 3]": {
+      "code": 0,
+      "stdout": "[\"dawn\", \"elm\"]",
+      "stderr": ""
+    },
+    "['--offset', 6, '--limit', 3]": {
+      "code": 0,
+      "stdout": "[\"gold\"]",
+      "stderr": ""
+    },
+    "['--offset', 100]": {
+      "code": 0,
+      "stdout": "[]",
+      "stderr": ""
+    },
+    "['--offset', -1]": {
+      "code": 0,
+      "stdout": "[]",
+      "stderr": ""
+    },
+    "['--limit', 0]": {
+      "code": 0,
+      "stdout": "[\"amber\", \"birch\", \"cedar\", \"dawn\", \"elm\", \"fern\"]",
+      "stderr": ""
+    },
+    "['--limit', -1]": {
+      "code": 0,
+      "stdout": "[\"amber\", \"birch\", \"cedar\", \"dawn\", \"elm\"]",
+      "stderr": ""
+    }
+  },
+  "52364296b9eb": {
+    "signed[]": {
+      "code": 0,
+      "stdout": "count=3 total=8",
+      "stderr": ""
+    },
+    "signed['--format', 'json']": {
+      "code": 0,
+      "stdout": "{\"count\": 3, \"total\": 8}",
+      "stderr": ""
+    },
+    "empty[]": {
+      "code": 0,
+      "stdout": "count=0 total=0",
+      "stderr": ""
+    },
+    "empty['--format', 'json']": {
+      "code": 0,
+      "stdout": "{\"count\": 0, \"total\": 0}",
+      "stderr": ""
+    },
+    "bad[]": {
+      "code": 1,
+      "stdout": "",
+      "stderr": "error: invalid integer amount 'oops' at CSV line 2"
+    },
+    "bad['--format', 'json']": {
+      "code": 1,
+      "stdout": "",
+      "stderr": "error: invalid integer amount 'oops' at CSV line 2"
+    },
+    "missing[]": {
+      "code": 1,
+      "stdout": "",
+      "stderr": "error: missing required 'amount' header"
+    },
+    "missing['--format', 'json']": {
+      "code": 1,
+      "stdout": "",
+      "stderr": "error: missing required 'amount' header"
+    },
+    "missing_cell[]": {
+      "code": 1,
+      "stdout": "",
+      "stderr": "error: invalid integer amount None at CSV line 2"
+    },
+    "missing_cell['--format', 'json']": {
+      "code": 1,
+      "stdout": "",
+      "stderr": "error: invalid integer amount None at CSV line 2"
+    }
+  },
+  "5eef4fc7c0a7": {
+    "signed[]": {
+      "code": 0,
+      "stdout": "count=3 total=8",
+      "stderr": ""
+    },
+    "signed['--format', 'json']": {
+      "code": 0,
+      "stdout": "{\"count\": 3, \"total\": 8}",
+      "stderr": ""
+    },
+    "empty[]": {
+      "code": 0,
+      "stdout": "count=0 total=0",
+      "stderr": ""
+    },
+    "empty['--format', 'json']": {
+      "code": 0,
+      "stdout": "{\"count\": 0, \"total\": 0}",
+      "stderr": ""
+    },
+    "bad[]": {
+      "code": 2,
+      "stdout": "",
+      "stderr": "usage: totals.py [-h] [--format {text,json}] path\ntotals.py: error: invalid integer amount at line 2: 'oops'"
+    },
+    "bad['--format', 'json']": {
+      "code": 2,
+      "stdout": "",
+      "stderr": "usage: totals.py [-h] [--format {text,json}] path\ntotals.py: error: invalid integer amount at line 2: 'oops'"
+    },
+    "missing[]": {
+      "code": 2,
+      "stdout": "",
+      "stderr": "usage: totals.py [-h] [--format {text,json}] path\ntotals.py: error: missing required 'amount' header"
+    },
+    "missing['--format', 'json']": {
+      "code": 2,
+      "stdout": "",
+      "stderr": "usage: totals.py [-h] [--format {text,json}] path\ntotals.py: error: missing required 'amount' header"
+    },
+    "missing_cell[]": {
+      "code": 2,
+      "stdout": "",
+      "stderr": "usage: totals.py [-h] [--format {text,json}] path\ntotals.py: error: invalid integer amount at line 2: None"
+    },
+    "missing_cell['--format', 'json']": {
+      "code": 2,
+      "stdout": "",
+      "stderr": "usage: totals.py [-h] [--format {text,json}] path\ntotals.py: error: invalid integer amount at line 2: None"
+    }
+  },
+  "86350d3a8caf": {
+    "source": "<!doctype html>\n<html>\n<body>\n<button id=\"toggle\" type=\"button\" aria-controls=\"details\" aria-expanded=\"false\">Details</button>\n<div id=\"details\" hidden>Order details</div>\n<script>\nconst toggle = document.getElementById('toggle');\nconst details = document.getElementById('details');\ntoggle.addEventListener('click', () => {\n  details.hidden = !details.hidden;\n  toggle.setAttribute('aria-expanded', String(!details.hidden));\n});\n</script>\n</body>\n</html>\n"
+  },
+  "96d0abc80ba4": {
+    "[]": {
+      "code": 0,
+      "stdout": "[\"amber\", \"birch\", \"cedar\"]",
+      "stderr": ""
+    },
+    "['--offset', 0, '--limit', 3]": {
+      "code": 0,
+      "stdout": "[\"amber\", \"birch\", \"cedar\"]",
+      "stderr": ""
+    },
+    "['--offset', 3, '--limit', 3]": {
+      "code": 0,
+      "stdout": "[\"dawn\", \"elm\", \"fern\"]",
+      "stderr": ""
+    },
+    "['--offset', 6, '--limit', 3]": {
+      "code": 0,
+      "stdout": "[\"gold\"]",
+      "stderr": ""
+    },
+    "['--offset', 100]": {
+      "code": 0,
+      "stdout": "[]",
+      "stderr": ""
+    },
+    "['--offset', -1]": {
+      "code": 2,
+      "stdout": "",
+      "stderr": "usage: catalog.py [-h] [--offset OFFSET] [--limit LIMIT]\ncatalog.py: error: --offset must be >= 0"
+    },
+    "['--limit', 0]": {
+      "code": 2,
+      "stdout": "",
+      "stderr": "usage: catalog.py [-h] [--offset OFFSET] [--limit LIMIT]\ncatalog.py: error: --limit must be > 0"
+    },
+    "['--limit', -1]": {
+      "code": 2,
+      "stdout": "",
+      "stderr": "usage: catalog.py [-h] [--offset OFFSET] [--limit LIMIT]\ncatalog.py: error: --limit must be > 0"
+    }
+  },
+  "98957598b8cd": {
+    "0['list']": {
+      "code": 0,
+      "stdout": "[]",
+      "stderr": ""
+    },
+    "1['total']": {
+      "code": 0,
+      "stdout": "0",
+      "stderr": ""
+    },
+    "2['add', 'z', 12]": {
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "3['add', 'a', -7]": {
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "4['add', 'zero', 0]": {
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "5['add', 'z', 12]": {
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "6['list']": {
+      "code": 0,
+      "stdout": "[{\"key\": \"a\", \"amount\": -7}, {\"key\": \"z\", \"amount\": 12}, {\"key\": \"zero\", \"amount\": 0}]",
+      "stderr": ""
+    },
+    "7['add', 'a', 99]": {
+      "code": 2,
+      "stdout": "",
+      "stderr": "usage: ledger.py [-h] --db DB {list,add,total} ...\nledger.py: error: key already exists with a different amount"
+    },
+    "8['list']": {
+      "code": 0,
+      "stdout": "[{\"key\": \"a\", \"amount\": -7}, {\"key\": \"z\", \"amount\": 12}, {\"key\": \"zero\", \"amount\": 0}]",
+      "stderr": ""
+    },
+    "9['total']": {
+      "code": 0,
+      "stdout": "5",
+      "stderr": ""
+    },
+    "10['add', 'max', 9223372036854775807]": {
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "11['total']": {
+      "code": 0,
+      "stdout": "9223372036854775812",
+      "stderr": ""
+    }
+  },
+  "a1ac03f84e1f": {
+    "health": {
+      "status": 200,
+      "body": "{\"status\": \"ok\"}"
+    },
+    "signed": {
+      "status": 200,
+      "body": "{\"total\": 5}"
+    },
+    "empty": {
+      "status": 200,
+      "body": "{\"total\": 0}"
+    },
+    "bool": {
+      "status": 400,
+      "body": "{\"error\": \"invalid amounts\"}"
+    },
+    "float": {
+      "status": 400,
+      "body": "{\"error\": \"invalid amounts\"}"
+    },
+    "bad_json": {
+      "status": 400,
+      "body": "{\"error\": \"invalid JSON\"}"
+    },
+    "shape": {
+      "status": 400,
+      "body": "{\"error\": \"invalid amounts\"}"
+    },
+    "missing": {
+      "status": 400,
+      "body": "{\"error\": \"invalid amounts\"}"
+    },
+    "utf8": {
+      "status": 400,
+      "body": "{\"error\": \"invalid JSON\"}"
+    },
+    "auth None": {
+      "status": 401,
+      "body": "{\"error\": \"unauthorized\"}"
+    },
+    "auth Bearer wrong": {
+      "status": 401,
+      "body": "{\"error\": \"unauthorized\"}"
+    },
+    "auth bearer review-token": {
+      "status": 401,
+      "body": "{\"error\": \"unauthorized\"}"
+    },
+    "auth Bearer review-token ": {
+      "status": 401,
+      "body": "{\"error\": \"unauthorized\"}"
+    },
+    "1024": {
+      "status": 200,
+      "body": "{\"total\": 0}"
+    },
+    "1025": {
+      "status": 413,
+      "body": "{\"error\": \"body too large\"}"
+    },
+    "other_post": {
+      "status": 404,
+      "body": "{\"error\": \"not found\"}"
+    },
+    "server_stderr": ""
+  },
+  "ab258d7e16aa": {
+    "source": "<!doctype html><html><body><button id=\"save\">Save changes</button><p>Saved records</p></body></html>\n",
+    "exact_expected": true
+  },
+  "b27ed580ad92": {
+    "source": "<!doctype html>\n<html>\n<body>\n<button id=\"toggle\" aria-expanded=\"false\" aria-controls=\"details\">Details</button>\n<div id=\"details\" hidden>Order details</div>\n<script>\nconst toggle = document.getElementById('toggle');\nconst details = document.getElementById('details');\ntoggle.addEventListener('click', () => {\n  details.hidden = !details.hidden;\n  toggle.setAttribute('aria-expanded', String(!details.hidden));\n});\n</script>\n</body>\n</html>\n"
+  },
+  "cc0ee010a6a0": {
+    "health": {
+      "status": 200,
+      "body": "{\"status\": \"ok\"}"
+    },
+    "signed": {
+      "status": 200,
+      "body": "{\"total\": 5}"
+    },
+    "empty": {
+      "status": 200,
+      "body": "{\"total\": 0}"
+    },
+    "bool": {
+      "status": 400,
+      "body": "{\"error\": \"invalid amounts\"}"
+    },
+    "float": {
+      "status": 400,
+      "body": "{\"error\": \"invalid amounts\"}"
+    },
+    "bad_json": {
+      "status": 400,
+      "body": "{\"error\": \"invalid JSON\"}"
+    },
+    "shape": {
+      "status": 400,
+      "body": "{\"error\": \"invalid amounts\"}"
+    },
+    "missing": {
+      "status": 400,
+      "body": "{\"error\": \"invalid amounts\"}"
+    },
+    "utf8": {
+      "status": 400,
+      "body": "{\"error\": \"invalid JSON\"}"
+    },
+    "auth None": {
+      "status": 401,
+      "body": "{\"error\": \"unauthorized\"}"
+    },
+    "auth Bearer wrong": {
+      "status": 401,
+      "body": "{\"error\": \"unauthorized\"}"
+    },
+    "auth bearer review-token": {
+      "status": 401,
+      "body": "{\"error\": \"unauthorized\"}"
+    },
+    "auth Bearer review-token ": {
+      "status": 401,
+      "body": "{\"error\": \"unauthorized\"}"
+    },
+    "1024": {
+      "status": 200,
+      "body": "{\"total\": 0}"
+    },
+    "1025": {
+      "status": 413,
+      "body": "{\"error\": \"body too large\"}"
+    },
+    "other_post": {
+      "status": 404,
+      "body": "{\"error\": \"not found\"}"
+    },
+    "server_stderr": ""
+  },
+  "dbb885878b95": {
+    "[]": {
+      "code": 0,
+      "stdout": "[\"amber\", \"birch\", \"cedar\"]",
+      "stderr": ""
+    },
+    "['--offset', 0, '--limit', 3]": {
+      "code": 0,
+      "stdout": "[\"amber\", \"birch\", \"cedar\"]",
+      "stderr": ""
+    },
+    "['--offset', 3, '--limit', 3]": {
+      "code": 0,
+      "stdout": "[\"dawn\", \"elm\", \"fern\"]",
+      "stderr": ""
+    },
+    "['--offset', 6, '--limit', 3]": {
+      "code": 0,
+      "stdout": "[\"gold\"]",
+      "stderr": ""
+    },
+    "['--offset', 100]": {
+      "code": 0,
+      "stdout": "[]",
+      "stderr": ""
+    },
+    "['--offset', -1]": {
+      "code": 2,
+      "stdout": "",
+      "stderr": "usage: catalog.py [-h] [--offset OFFSET] [--limit LIMIT]\ncatalog.py: error: offset must be nonnegative (zero or greater)"
+    },
+    "['--limit', 0]": {
+      "code": 2,
+      "stdout": "",
+      "stderr": "usage: catalog.py [-h] [--offset OFFSET] [--limit LIMIT]\ncatalog.py: error: limit must be greater than zero"
+    },
+    "['--limit', -1]": {
+      "code": 2,
+      "stdout": "",
+      "stderr": "usage: catalog.py [-h] [--offset OFFSET] [--limit LIMIT]\ncatalog.py: error: limit must be greater than zero"
+    }
+  },
+  "e0c111ebd0df": {
+    "source": "<!doctype html><html><body><button id=\"save\">Save changes</button><p>Saved records</p></body></html>\n",
+    "exact_expected": true
+  },
+  "e71aad981454": {
+    "health": {
+      "status": 200,
+      "body": "{\"status\":\"ok\"}"
+    },
+    "signed": {
+      "status": 200,
+      "body": "{\"total\": 5}"
+    },
+    "empty": {
+      "status": 200,
+      "body": "{\"total\": 0}"
+    },
+    "bool": {
+      "status": 400,
+      "body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\n        \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 400</p>\n        <p>Message: Bad Request.</p>\n        <p>Error code explanation: 400 - Bad request syntax or unsupported method.</p>\n    </body>\n</html>\n"
+    },
+    "float": {
+      "status": 400,
+      "body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\n        \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 400</p>\n        <p>Message: Bad Request.</p>\n        <p>Error code explanation: 400 - Bad request syntax or unsupported method.</p>\n    </body>\n</html>\n"
+    },
+    "bad_json": {
+      "status": 400,
+      "body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\n        \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 400</p>\n        <p>Message: Bad Request.</p>\n        <p>Error code explanation: 400 - Bad request syntax or unsupported method.</p>\n    </body>\n</html>\n"
+    },
+    "shape": {
+      "status": 400,
+      "body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\n        \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 400</p>\n        <p>Message: Bad Request.</p>\n        <p>Error code explanation: 400 - Bad request syntax or unsupported method.</p>\n    </body>\n</html>\n"
+    },
+    "missing": {
+      "status": 400,
+      "body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\n        \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 400</p>\n        <p>Message: Bad Request.</p>\n        <p>Error code explanation: 400 - Bad request syntax or unsupported method.</p>\n    </body>\n</html>\n"
+    },
+    "utf8": {
+      "status": 400,
+      "body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\n        \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 400</p>\n        <p>Message: Bad Request.</p>\n        <p>Error code explanation: 400 - Bad request syntax or unsupported method.</p>\n    </body>\n</html>\n"
+    },
+    "auth None": {
+      "status": 401,
+      "body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\n        \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 401</p>\n        <p>Message: Unauthorized.</p>\n        <p>Error code explanation: 401 - No permission -- see authorization schemes.</p>\n    </body>\n</html>\n"
+    },
+    "auth Bearer wrong": {
+      "status": 401,
+      "body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\n        \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 401</p>\n        <p>Message: Unauthorized.</p>\n        <p>Error code explanation: 401 - No permission -- see authorization schemes.</p>\n    </body>\n</html>\n"
+    },
+    "auth bearer review-token": {
+      "status": 401,
+      "body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\n        \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 401</p>\n        <p>Message: Unauthorized.</p>\n        <p>Error code explanation: 401 - No permission -- see authorization schemes.</p>\n    </body>\n</html>\n"
+    },
+    "auth Bearer review-token ": {
+      "status": 401,
+      "body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\n        \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 401</p>\n        <p>Message: Unauthorized.</p>\n        <p>Error code explanation: 401 - No permission -- see authorization schemes.</p>\n    </body>\n</html>\n"
+    },
+    "1024": {
+      "status": 200,
+      "body": "{\"total\": 0}"
+    },
+    "1025": {
+      "status": 413,
+      "body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\n        \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 413</p>\n        <p>Message: Request Entity Too Large.</p>\n        <p>Error code explanation: 413 - Entity is too large.</p>\n    </body>\n</html>\n"
+    },
+    "other_post": {
+      "status": 404,
+      "body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\n        \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 404</p>\n        <p>Message: Not Found.</p>\n        <p>Error code explanation: 404 - Nothing matches the given URI.</p>\n    </body>\n</html>\n"
+    },
+    "server_stderr": ""
+  },
+  "f12881047855": {
+    "0['list']": {
+      "code": 0,
+      "stdout": "[]",
+      "stderr": ""
+    },
+    "1['total']": {
+      "code": 0,
+      "stdout": "0",
+      "stderr": ""
+    },
+    "2['add', 'z', 12]": {
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "3['add', 'a', -7]": {
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "4['add', 'zero', 0]": {
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "5['add', 'z', 12]": {
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "6['list']": {
+      "code": 0,
+      "stdout": "[{\"key\": \"a\", \"amount\": -7}, {\"key\": \"z\", \"amount\": 12}, {\"key\": \"zero\", \"amount\": 0}]",
+      "stderr": ""
+    },
+    "7['add', 'a', 99]": {
+      "code": 2,
+      "stdout": "",
+      "stderr": "usage: ledger.py [-h] --db DB {list,total,add} ...\nledger.py: error: key already exists with a different amount"
+    },
+    "8['list']": {
+      "code": 0,
+      "stdout": "[{\"key\": \"a\", \"amount\": -7}, {\"key\": \"z\", \"amount\": 12}, {\"key\": \"zero\", \"amount\": 0}]",
+      "stderr": ""
+    },
+    "9['total']": {
+      "code": 0,
+      "stdout": "5",
+      "stderr": ""
+    },
+    "10['add', 'max', 9223372036854775807]": {
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "11['total']": {
+      "code": 0,
+      "stdout": "9223372036854775812",
+      "stderr": ""
+    }
+  },
+  "f20ecbd62e21": {
+    "source": "<!doctype html>\n<html>\n<body>\n<button id=\"toggle\" type=\"button\" aria-controls=\"details\" aria-expanded=\"false\">Details</button>\n<div id=\"details\" hidden>Order details</div>\n<script>\nconst toggle = document.getElementById('toggle');\nconst details = document.getElementById('details');\ntoggle.addEventListener('click', () => {\n  details.hidden = !details.hidden;\n  toggle.setAttribute('aria-expanded', String(!details.hidden));\n});\n</script>\n</body>\n</html>\n"
+  },
+  "f58ebbae85e3": {
+    "source": "<!doctype html>\n<html>\n<body>\n<button id=\"toggle\" aria-expanded=\"false\" aria-controls=\"details\">Details</button>\n<div id=\"details\" hidden>Order details</div>\n<script>\nconst toggle = document.getElementById('toggle');\nconst details = document.getElementById('details');\ntoggle.addEventListener('click', () => {\n  details.hidden = !details.hidden;\n  toggle.setAttribute('aria-expanded', String(!details.hidden));\n});\n</script>\n</body>\n</html>\n"
+  }
+}

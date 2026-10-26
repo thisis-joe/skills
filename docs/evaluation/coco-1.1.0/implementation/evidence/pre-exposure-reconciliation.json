@@ -1,0 +1,17 @@
+{
+  "original_prepared_root": "/private/tmp/coco-v110-implementation-20261026",
+  "new_prepared_root": "/private/tmp/coco-v110-implementation-20261026-final",
+  "original_candidate": "9949121",
+  "final_candidate": "17e3425",
+  "final_harness_commit": "027e5c3",
+  "original_comparison_actors_started": 0,
+  "reason": "A source reporting repair and pre-exposure settlement-bookkeeping fix preceded all comparison actors.",
+  "reused_controls": "Same exact question strings, classifier prompt/schema, answer strings, native runner and90-second limits; controls load no candidate skill bodies. The bookkeeping change adds settled_topics to trial state only. All original failed and successful infrastructure-control attempts retained.",
+  "execution_workers": 1,
+  "control_hashes": {
+    "classifier-controls.json": "e6271e454c26312cdc80757b1d0a3d7014171d9877480837544acc2930c941d3",
+    "classifier-controls-recovery.json": "593bd43496fa339979f882e80983c4b04f86b3c87152659f91ac70123f777b88",
+    "capacity-unavailable.json": "e413577f7b717b21c7ee6b07e229feb680d11fbde30b26b9b7e8f2ffc257f5c1",
+    "control-recovery-runner.py": "38a4f3c659285a5d2919dee691f6dbb4bbb572a44c553aabfd3236d21215fafc"
+  }
+}

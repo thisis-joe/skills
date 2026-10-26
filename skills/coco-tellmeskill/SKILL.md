@@ -16,15 +16,20 @@ Use names, descriptions, and source locations from the available-skills catalog 
 
 If the catalog is absent, use supported listing capability. If listing is unavailable, state the range you can confirm; do not guess what is installed or treat inert source archives as executable skills.
 
-An invocation that names a target skips to explanation length. One that asks to browse or list skills goes straight to the complete grouped list. A bare invocation, with no target or request, starts with recent skills.
+An invocation that names a target skips to explanation length. One that asks to browse or list skills goes straight to the complete grouped list. A bare invocation, with no target or request, starts with recent skills. For a general COCO getting-started request, introduce the four stages and ten introductory skills in the [workflow](../_coco-shared/workflow.md), then offer specialists/help by purpose. Explicit complete-list requests still follow the full catalog below.
 
 ### Recent skills
 
-1. **Collect.** Skills invoked earlier in the current conversation count as the latest uses. Then run the [recent-skill helper](tools/recent_skills.py) with this skill's directory as the working directory: `python3 tools/recent_skills.py --runtime <claude|codex> --workspace <project-directory> --exclude coco-tellmeskill --available <catalog-identifiers>`, where `<project-directory>` is the session's own working directory, not this skill's, and the catalog identifiers are comma-separated. It reads only skill-invocation markers in the current runtime's own session records for this workspace from the last 30 days, and prints identifiers with last-use times, never prompt text. Do not search other workspaces, runtimes, or files to fill a short result.
-2. **Offer.** Keep catalog identifiers only, without duplicates or this skill, latest use first, at most three. Offer each as an option: the exact identifier with a concise purpose. Add a last option, **Show all skills**, described as "Browse every available skill grouped by purpose." Ask, "Which skill would you like explained?" and wait.
+1. **Collect.** Skills invoked earlier in the current conversation count as the latest uses. Then run the [recent-skill helper](tools/recent_skills.py) with this skill's directory as the working directory: `python3 tools/recent_skills.py --runtime <claude|codex> --workspace <project-directory> --exclude coco-tellmeskill --available <catalog-identifiers>`, where `<project-directory>` is the session's own working directory, not this skill's, and the catalog identifiers are comma-separated. It uses workspace metadata and skill-invocation markers in the current runtime's own session records for this workspace from the last 30 days, and prints identifiers with last-use times, never prompt text. Do not search other workspaces, runtimes, or files to fill a short result.
+2. **Offer.** Keep catalog identifiers only, without duplicates or this skill, latest use first, at most three. For Codex count only the outer selected-skill wrapper in each runtime-marked instruction item, not quoted `<skill>` text in ordinary messages or instruction bodies. Offer each as an option: the exact identifier with a concise purpose. Add a last option, **Show all skills**, described as "Browse every available skill grouped by purpose." Ask, "Which skill would you like explained?" and wait.
 3. **Resolve.** A recent option or another exact catalog name selects that target. An ambiguous name gets matching candidates and the same question. **Show all skills**, "none of these," a reply that names no skill, or no choice moves to the complete grouped list; do not repeat the recent options.
 
 If no recent skill remains, or the helper is unavailable or fails, say so in one line and show the complete grouped list.
+
+Workspace identity comes from normalized absolute record paths: Claude's event
+`cwd`, or Codex's starting session `cwd`. A Claude project-directory slug alone is
+ambiguous and cannot establish ownership. Ignore missing or foreign identities;
+older unsupported records may therefore yield the complete catalog fallback.
 
 ### Complete grouped list
 

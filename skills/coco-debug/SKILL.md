@@ -6,7 +6,7 @@ license: MIT
 
 # coco-debug
 
-Construct a red-capable feedback loop and establish the supported cause.
+Construct a red-capable feedback loop and establish the supported cause. Diagnosis-only work ends with findings; before implementing changed behavior ensure the saved spec/plan pair exists and apply the [transition contract](../_coco-shared/workflow.md) for build.
 
 Read the [common contract](../_coco-shared/contracts.md) before acting; when the request already shows that the file below applies, read both in one call. Initially and on new scope, risk, state, or missing prerequisites, check for a failure without an obvious red signal, an intermittent or nondeterministic fault, a regression that needs bisection, a second failed fix resting on one premise, verification of an existing PR or commit fix, performance or captured-artifact (profile, heap, trace) diagnosis, and configured report intake. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/debug.md) before dependent work.
 

@@ -24,10 +24,18 @@ Choose scoped breakdown for known work, a decision map for a huge unclear effort
 4. Give each task a stable ID/title, delivered behavior, acceptance conditions, verification method, blockers, expected scope, branch/base and required environment.
 5. Size work to one focused context and independently reviewable commit. File counts and elapsed-time estimates are warnings, not hard universal limits.
 6. Add integration checkpoints where contracts, persistence or shared workflows meet. Each checkpoint names actual tests/build/runtime evidence rather than a vague green label.
-7. Publish blocker-first only when tracker writes are authorized; use native dependencies when supported. A local tracker uses one feature-scoped ticket file per task with explicit blocker IDs.
+7. Publish blocker-first only when tracker writes are authorized; follow the [publication protocol](#tracker-publication-and-recovery). A local tracker uses one feature-scoped ticket file per task with explicit blocker IDs.
 8. Keep durable tickets behavioral; current file estimates belong in the plan as navigation hints, not immutable acceptance requirements.
 
 The **frontier** is pending tasks whose blockers are all satisfied. Completion uses acceptance, required checks/review and a recorded work-unit commit, not merely a worker's report.
+
+## Tracker publication and recovery
+
+1. Confirm the authorized tracker/project, effort, stable task IDs, required fields and dependency direction. Save the plan before writes. Give each task a durable correlation value scoped to that effort and destination, in a supported external field or ticket body; a title alone is not identity. Inspect available search/readback, native dependencies and idempotency support before creating anything.
+2. Search within that destination for each correlation value and read matching tickets. Reuse only a uniquely verified same-effort task; leave unrelated work intact. Multiple matches or an identity/acceptance conflict stop that task's publication for a decision, never merge or delete tickets by guess.
+3. Create missing blockers before dependents, passing a stable idempotency key when supported. Read back each returned ID and verify its destination, correlation and task contents before using it. A timeout or lost response is an unknown outcome: reconcile through that key or exact scoped search and readback before any retry. If readback cannot resolve the result, hold that task and its dependents; never blindly repeat create.
+4. Once both IDs are verified, wire native blocking relationships when supported; otherwise record explicit blocker IDs in the designated tracker. Verify the direction and persisted edge. After a failed/uncertain link, inspect current dependencies before a bounded retry; an existing verified edge needs no second write. A created ticket with a missing edge is partial publication, not success.
+5. Keep the plan as an index of verified tracker references, not a second mutable status list. Report created/reused tickets, confirmed and missing edges, unknown outcomes and the exact resume step. Preserve partial results for reconciliation; deleting tickets or compensating elsewhere needs its own authorization. Leave parent issues unchanged; publication grants no implementation authority. Do not claim publication complete while required tickets/edges remain unverified.
 
 ## Wide mechanical migrations
 
@@ -76,4 +84,4 @@ Record each unit as verified, not verified or inconclusive with evidence. Repair
 
 Return the plan pointer, authoritative task target, dependency graph/frontier, integration strategy, evidence gates, unresolved decisions and next executable task. Preserve user branch and task-commit conventions.
 
-Planning is ready when tasks are implementable, blockers acyclic/resolved as appropriate, checks runnable or explicitly unavailable, and material scope decisions settled. A planning-only request stops here. Continuous authorized work can proceed through build; required failed checks or a new material decision stop dependent advancement, not independent permitted work.
+Planning is ready when tasks are implementable, blockers acyclic/resolved as appropriate, checks runnable or explicitly unavailable, and material scope decisions settled. A planning-only request stops here. Before build, apply the [transition contract](../workflow.md); continuous task scheduling alone never selects automatic skill transitions. Required failed checks or a new material decision stop dependent advancement, not independent permitted work.

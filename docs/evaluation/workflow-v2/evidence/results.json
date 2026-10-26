@@ -1,0 +1,3344 @@
+{
+  "schema": 1,
+  "candidate": "622975e349e6276b225aa9ef02ee69d664dd2927",
+  "driver_head": "fc972745e44fce01a12440963026e5206a6ab05a",
+  "published_integrity": "sha512-hD0WIpwClXm9ODj/2Q63bp3lOgEMcC/dy73MwuVAYFaHJvI7P0Cjsjgr7E7gi6sv9CJandGFoQyALza7SEGWWg==",
+  "cli": "codex-cli 0.163.0-alpha.11.2",
+  "groups": [
+    {
+      "family": "handoff",
+      "arm": "current",
+      "n": 5,
+      "eligible": 5,
+      "excluded_or_unavailable": 0,
+      "axes": {
+        "clarity": {
+          "graded": 5,
+          "fully_clear_correct": 5,
+          "subitems": {
+            "agreement": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "completed": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "pending": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "next": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            }
+          }
+        },
+        "consistency": {
+          "graded": 5,
+          "fully_clear_correct": 5,
+          "subitems": {
+            "decisions": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "scope": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "truth": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            }
+          }
+        },
+        "pickup": {
+          "graded": 5,
+          "fully_clear_correct": 5,
+          "subitems": {
+            "recovery": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "provenance": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "completion": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "preservation": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            }
+          }
+        }
+      },
+      "seconds": {
+        "n": 5,
+        "median": 253.68400000000003,
+        "minimum": 218.5,
+        "maximum": 307.147
+      },
+      "commands": {
+        "n": 5,
+        "median": 24,
+        "minimum": 23,
+        "maximum": 27
+      },
+      "independent_summary_pass": 5,
+      "writer_import_pass": 5,
+      "receiver_import_pass": 5
+    },
+    {
+      "family": "handoff",
+      "arm": "published",
+      "n": 5,
+      "eligible": 5,
+      "excluded_or_unavailable": 0,
+      "axes": {
+        "clarity": {
+          "graded": 5,
+          "fully_clear_correct": 5,
+          "subitems": {
+            "agreement": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "completed": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "pending": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "next": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            }
+          }
+        },
+        "consistency": {
+          "graded": 5,
+          "fully_clear_correct": 5,
+          "subitems": {
+            "decisions": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "scope": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "truth": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            }
+          }
+        },
+        "pickup": {
+          "graded": 5,
+          "fully_clear_correct": 4,
+          "subitems": {
+            "recovery": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "provenance": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "completion": {
+              "n": 5,
+              "median": 2,
+              "minimum": 0,
+              "maximum": 2
+            },
+            "preservation": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            }
+          }
+        }
+      },
+      "seconds": {
+        "n": 5,
+        "median": 211.132,
+        "minimum": 199.714,
+        "maximum": 282.626
+      },
+      "commands": {
+        "n": 5,
+        "median": 24,
+        "minimum": 19,
+        "maximum": 30
+      },
+      "independent_summary_pass": 4,
+      "writer_import_pass": 5,
+      "receiver_import_pass": 5
+    },
+    {
+      "family": "handoff",
+      "arm": "bare",
+      "n": 5,
+      "eligible": 5,
+      "excluded_or_unavailable": 0,
+      "axes": {
+        "clarity": {
+          "graded": 5,
+          "fully_clear_correct": 5,
+          "subitems": {
+            "agreement": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "completed": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "pending": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "next": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            }
+          }
+        },
+        "consistency": {
+          "graded": 5,
+          "fully_clear_correct": 5,
+          "subitems": {
+            "decisions": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "scope": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "truth": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            }
+          }
+        },
+        "pickup": {
+          "graded": 5,
+          "fully_clear_correct": 5,
+          "subitems": {
+            "recovery": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "provenance": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "completion": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "preservation": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            }
+          }
+        }
+      },
+      "seconds": {
+        "n": 5,
+        "median": 206.04199999999997,
+        "minimum": 166.152,
+        "maximum": 250.538
+      },
+      "commands": {
+        "n": 5,
+        "median": 20,
+        "minimum": 14,
+        "maximum": 22
+      },
+      "independent_summary_pass": 5,
+      "writer_import_pass": 5,
+      "receiver_import_pass": 5
+    },
+    {
+      "family": "selection",
+      "arm": "current",
+      "n": 5,
+      "eligible": 5,
+      "excluded_or_unavailable": 0,
+      "axes": {
+        "selection": {
+          "graded": 5,
+          "fully_clear_correct": 5,
+          "subitems": {
+            "appropriate": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "purpose": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "starting_path": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "boundary": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            }
+          }
+        }
+      },
+      "seconds": {
+        "n": 5,
+        "median": 43.171,
+        "minimum": 33.836,
+        "maximum": 61.524
+      },
+      "commands": {
+        "n": 5,
+        "median": 6,
+        "minimum": 6,
+        "maximum": 8
+      },
+      "independent_summary_pass": 0,
+      "writer_import_pass": null,
+      "receiver_import_pass": null
+    },
+    {
+      "family": "selection",
+      "arm": "published",
+      "n": 5,
+      "eligible": 5,
+      "excluded_or_unavailable": 0,
+      "axes": {
+        "selection": {
+          "graded": 5,
+          "fully_clear_correct": 4,
+          "subitems": {
+            "appropriate": {
+              "n": 5,
+              "median": 2,
+              "minimum": 1,
+              "maximum": 2
+            },
+            "purpose": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "starting_path": {
+              "n": 5,
+              "median": 2,
+              "minimum": 1,
+              "maximum": 2
+            },
+            "boundary": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            }
+          }
+        }
+      },
+      "seconds": {
+        "n": 5,
+        "median": 34.977,
+        "minimum": 31.92,
+        "maximum": 47.644
+      },
+      "commands": {
+        "n": 5,
+        "median": 6,
+        "minimum": 4,
+        "maximum": 7
+      },
+      "independent_summary_pass": 0,
+      "writer_import_pass": null,
+      "receiver_import_pass": null
+    },
+    {
+      "family": "selection",
+      "arm": "bare",
+      "n": 5,
+      "eligible": 5,
+      "excluded_or_unavailable": 0,
+      "axes": {
+        "selection": {
+          "graded": 5,
+          "fully_clear_correct": 5,
+          "subitems": {
+            "appropriate": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "purpose": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "starting_path": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            },
+            "boundary": {
+              "n": 5,
+              "median": 2,
+              "minimum": 2,
+              "maximum": 2
+            }
+          }
+        }
+      },
+      "seconds": {
+        "n": 5,
+        "median": 26.837,
+        "minimum": 23.007,
+        "maximum": 28.077
+      },
+      "commands": {
+        "n": 5,
+        "median": 4,
+        "minimum": 4,
+        "maximum": 4
+      },
+      "independent_summary_pass": 0,
+      "writer_import_pass": null,
+      "receiver_import_pass": null
+    }
+  ],
+  "rows": [
+    {
+      "id": "9da2178898fa",
+      "seed": 0,
+      "family": "handoff",
+      "arm": "current",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own files/Git; local guide at T1 commands3–4 and T2 commands2–3.",
+        "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": true,
+      "audit_flags": [],
+      "seconds": 267.228,
+      "turns": 2,
+      "commands": 24,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 183.235,
+          "commands": 14,
+          "usage": {
+            "input_tokens": 383236,
+            "cached_input_tokens": 341504,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 4520,
+            "reasoning_output_tokens": 91,
+            "status": "recorded"
+          },
+          "thread": "01a166cf-e22a-7103-b42e-cc4b0b6c3537"
+        },
+        {
+          "turn": 2,
+          "seconds": 83.993,
+          "commands": 10,
+          "usage": {
+            "input_tokens": 262753,
+            "cached_input_tokens": 239360,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2793,
+            "reasoning_output_tokens": 40,
+            "status": "recorded"
+          },
+          "thread": "01a166d2-b147-7452-934b-3b66eeb0d60c"
+        }
+      ],
+      "outcomes": {
+        "writer": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": false
+        },
+        "receiver": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": true
+        }
+      },
+      "advice_files_unchanged": null,
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": 2,
+            "completed": 2,
+            "pending": 2,
+            "next": 2
+          },
+          "consistency": {
+            "decisions": 2,
+            "scope": 2,
+            "truth": 2
+          },
+          "pickup": {
+            "recovery": 2,
+            "provenance": 2,
+            "completion": 2,
+            "preservation": 2
+          },
+          "selection": null
+        },
+        "reasons": [
+          "writer-project/docs/specs/catalog-import.md and docs/CHECKPOINT.md preserve business rules, import completion, pending summary and the next authorized action. writer-project/catalog.py contains import/list only; states.json records 26e9ac1 and 06b6c4a, preserving the import-before-summary checkpoint.",
+          "worker-2-messages.md cites the brief, saved contract, checkpoint, code/tests and commits, recovers the zero-exclusion and empty-result rules, and distinguishes inherited evidence from new checks.",
+          "final-project/catalog.py implements positive-price-only legacy summary; final-project/test_catalog.py and the recorded disposable CLI journey cover empty/all-zero, mixed and updated catalogs and list preservation. outcomes.json receiver summary, import and boundary probes all pass.",
+          "final-project/docs/CHECKPOINT.md marks the current completed state and labels the old checkpoint as history. states.json records summary feature branch feat/catalog-summary and commit f9997ad with only the unrelated note untracked; local-only completion and same-agent inspection claims match the record."
+        ],
+        "intervention_needed": false,
+        "options_exposed": null,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses supplied copy-based observations and static inspection only; no project code was executed. Passing probes establish the observed local behavior, not release readiness or exhaustive correctness.",
+          "Same-agent inspection is disclosed; independent review was neither performed nor claimed.",
+          "Local .guide bodies and some combined action outputs are omitted; exact procedure compliance and every intermediate check cannot be independently reconstructed."
+        ]
+      }
+    },
+    {
+      "id": "227883cfa7c7",
+      "seed": 0,
+      "family": "handoff",
+      "arm": "published",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own files/Git; local guide at T1 commands2–3 and T2 commands3–4.",
+        "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": true,
+      "audit_flags": [],
+      "seconds": 199.714,
+      "turns": 2,
+      "commands": 19,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 164.125,
+          "commands": 14,
+          "usage": {
+            "input_tokens": 297928,
+            "cached_input_tokens": 264448,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 4301,
+            "reasoning_output_tokens": 192,
+            "status": "recorded"
+          },
+          "thread": "01a166cf-e229-7c11-9533-99f5cb2062da"
+        },
+        {
+          "turn": 2,
+          "seconds": 35.589,
+          "commands": 5,
+          "usage": {
+            "input_tokens": 120390,
+            "cached_input_tokens": 99200,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 718,
+            "reasoning_output_tokens": 46,
+            "status": "recorded"
+          },
+          "thread": "01a166d2-66d9-7402-8707-dd4b373b469e"
+        }
+      ],
+      "outcomes": {
+        "writer": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": false
+        },
+        "receiver": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": false
+        }
+      },
+      "advice_files_unchanged": null,
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": 2,
+            "completed": 2,
+            "pending": 2,
+            "next": 2
+          },
+          "consistency": {
+            "decisions": 2,
+            "scope": 2,
+            "truth": 2
+          },
+          "pickup": {
+            "recovery": 2,
+            "provenance": 2,
+            "completion": 0,
+            "preservation": 2
+          },
+          "selection": null
+        },
+        "reasons": [
+          "writer-project/HANDOFF.md preserves all four business rules, import commit a173a05, prior CLI evidence, the import-before-summary checkpoint, and the unresolved all-zero output shape. worker-1-messages.md truthfully reports import complete and summary deferred.",
+          "worker-2-messages.md cites BRIEF.md, HANDOFF.md, code/tests and Git commits; distinguishes prior reported checks from its baseline check and asks the recorded missing product-choice question rather than inventing authority. Agreement recovery, scope and truth remain correct despite intervention being needed.",
+          "pickup.completion=0: final-project/catalog.py supports only list/import. outcomes.json receiver.summary_outcome fails agreed_summary_rule and empty_summary with unsupported-command exit 2; states.json receiver HEAD remains 03709c9. This is a safe block, not a completed or partial summary.",
+          "pickup.preservation=2: outcomes.json receiver.import_outcome and receiver.import_boundaries pass, including original data and unrelated-file guards. final-project/catalog.py retains full-file validation and transactional normalized replacement."
+        ],
+        "intervention_needed": true,
+        "options_exposed": null,
+        "actual_questions": [
+          "for a nonempty all-zero catalog, should summary return `[]` or `[{\"supplier\":\"legacy\",\"count\":0,\"total_cents\":0}]`?"
+        ],
+        "limitations": [
+          "Assessment uses supplied copy-based observations and static inspection only; no project code was executed. Passing probes establish the observed local behavior, not release readiness or exhaustive correctness.",
+          "Same-agent inspection is disclosed; independent review was neither performed nor claimed.",
+          "Local .guide bodies and some combined action outputs are omitted; exact procedure compliance and every intermediate check cannot be independently reconstructed."
+        ]
+      }
+    },
+    {
+      "id": "2efad3953249",
+      "seed": 0,
+      "family": "handoff",
+      "arm": "bare",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Guide probes fail; later reads and changes stay inside own project.",
+        "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": null,
+      "audit_flags": [],
+      "seconds": 250.538,
+      "turns": 2,
+      "commands": 20,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 155.401,
+          "commands": 11,
+          "usage": {
+            "input_tokens": 170967,
+            "cached_input_tokens": 148096,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 4273,
+            "reasoning_output_tokens": 170,
+            "status": "recorded"
+          },
+          "thread": "01a166cf-e22d-7663-9e2e-d78125597b90"
+        },
+        {
+          "turn": 2,
+          "seconds": 95.137,
+          "commands": 9,
+          "usage": {
+            "input_tokens": 161896,
+            "cached_input_tokens": 140032,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2424,
+            "reasoning_output_tokens": 46,
+            "status": "recorded"
+          },
+          "thread": "01a166d2-43d1-7922-83f7-9d5845da9aa5"
+        }
+      ],
+      "outcomes": {
+        "writer": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": false
+        },
+        "receiver": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": true
+        }
+      },
+      "advice_files_unchanged": null,
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": 2,
+            "completed": 2,
+            "pending": 2,
+            "next": 2
+          },
+          "consistency": {
+            "decisions": 2,
+            "scope": 2,
+            "truth": 2
+          },
+          "pickup": {
+            "recovery": 2,
+            "provenance": 2,
+            "completion": 2,
+            "preservation": 2
+          },
+          "selection": null
+        },
+        "reasons": [
+          "writer-project/HANDOFF.md records normalization, last-row/later-import replacement, atomic rejection and zero exclusion, names a3f774b, and gives the summary shape and no-contributing-rows rule. writer-project/catalog.py has no summary, preserving the required checkpoint.",
+          "worker-2-messages.md recovers those rules from HANDOFF.md, BRIEF.md, code/tests and Git, then implements only the authorized summary continuation. final-project/HANDOFF.md clearly distinguishes completed summary from the historical import checkpoint.",
+          "final-project/catalog.py adds a positive-price-only legacy summary using Python integer totals; final-project/test_catalog.py covers empty/all-zero, mixed, updates, list preservation and large totals. outcomes.json receiver summary, import and boundary probes all pass.",
+          "states.json records separate import and summary feature branches/work-unit commits through 8efcf3b; personal-notes.txt remains untracked. Final report claims local completion, same-agent inspection and no push, consistent with the record."
+        ],
+        "intervention_needed": false,
+        "options_exposed": null,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses supplied copy-based observations and static inspection only; no project code was executed. Passing probes establish the observed local behavior, not release readiness or exhaustive correctness.",
+          "Same-agent inspection is disclosed; independent review was neither performed nor claimed."
+        ]
+      }
+    },
+    {
+      "id": "e9e6e6a5fa8d",
+      "seed": 0,
+      "family": "selection",
+      "arm": "current",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own context/Git; local routing and skill commands4–5.",
+        "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": true,
+      "audit_flags": [],
+      "seconds": 57.335,
+      "turns": 1,
+      "commands": 6,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 57.335,
+          "commands": 6,
+          "usage": {
+            "input_tokens": 112830,
+            "cached_input_tokens": 99072,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 799,
+            "reasoning_output_tokens": 9,
+            "status": "recorded"
+          },
+          "thread": "01a166d2-f414-71c2-9745-34efbb6e5a3c"
+        }
+      ],
+      "outcomes": {},
+      "advice_files_unchanged": true,
+      "judgment": {
+        "scores": {
+          "clarity": null,
+          "consistency": null,
+          "pickup": null,
+          "selection": {
+            "appropriate": 2,
+            "purpose": 2,
+            "starting_path": 2,
+            "boundary": 2
+          }
+        },
+        "reasons": [
+          "e9e6e6a5fa8d/final-project/BRIEF.md leaves reminder channel, timing, opt-out and first-release scope unsettled; worker-1-messages.md recommends clarification, explains its decision outputs and supplies a copyable discussion-only prompt.",
+          "e9e6e6a5fa8d/worker-1-actions.json records local read-only inspection; states.json shows unchanged HEAD, branch, status and file hashes. No implementation or release readiness is claimed."
+        ],
+        "intervention_needed": false,
+        "options_exposed": 10,
+        "actual_questions": [],
+        "limitations": [
+          "Advice quality is assessed from the brief, response and recorded actions; outcomes.json contains no runtime acceptance observations. No runtime or human-use claim is inferred.",
+          "Options count includes distinct procedures presented as next or later routes, excluding bare mentions of the routing procedure: clarification/specification (2), clarification alone (1), or the ten procedures in the workflow table (10).",
+          "Local .guide bodies are omitted from this packet and action outputs are redacted; their exact instructions cannot be independently audited. The concrete recommendation is supported by the surviving brief."
+        ]
+      },
+      "registered_procedure_references": [
+        "coco-build",
+        "coco-clarify",
+        "coco-debug",
+        "coco-merge",
+        "coco-plan",
+        "coco-push",
+        "coco-review",
+        "coco-ship",
+        "coco-spec",
+        "coco-verify"
+      ],
+      "whitespace_word_count": 218
+    },
+    {
+      "id": "111c75e20067",
+      "seed": 0,
+      "family": "selection",
+      "arm": "published",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own context/code; local routing and skill commands4–5.",
+        "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": true,
+      "audit_flags": [],
+      "seconds": 31.92,
+      "turns": 1,
+      "commands": 6,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 31.92,
+          "commands": 6,
+          "usage": {
+            "input_tokens": 109831,
+            "cached_input_tokens": 95488,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 665,
+            "reasoning_output_tokens": 11,
+            "status": "recorded"
+          },
+          "thread": "01a166d3-ba29-7180-8ed8-82b987fabfe5"
+        }
+      ],
+      "outcomes": {},
+      "advice_files_unchanged": true,
+      "judgment": {
+        "scores": {
+          "clarity": null,
+          "consistency": null,
+          "pickup": null,
+          "selection": {
+            "appropriate": 2,
+            "purpose": 2,
+            "starting_path": 2,
+            "boundary": 2
+          }
+        },
+        "reasons": [
+          "111c75e20067/final-project/BRIEF.md leaves reminder channel, timing, opt-out and first-release scope unsettled; worker-1-messages.md recommends clarification, explains its decision outputs and supplies a copyable discussion-only prompt.",
+          "111c75e20067/worker-1-actions.json records local read-only inspection; states.json shows unchanged HEAD, branch, status and file hashes. No implementation or release readiness is claimed."
+        ],
+        "intervention_needed": false,
+        "options_exposed": 2,
+        "actual_questions": [],
+        "limitations": [
+          "Advice quality is assessed from the brief, response and recorded actions; outcomes.json contains no runtime acceptance observations. No runtime or human-use claim is inferred.",
+          "Options count includes distinct procedures presented as next or later routes, excluding bare mentions of the routing procedure: clarification/specification (2), clarification alone (1), or the ten procedures in the workflow table (10).",
+          "Local .guide bodies are omitted from this packet and action outputs are redacted; their exact instructions cannot be independently audited. The concrete recommendation is supported by the surviving brief."
+        ]
+      },
+      "registered_procedure_references": [
+        "coco-clarify",
+        "coco-spec"
+      ],
+      "whitespace_word_count": 159
+    },
+    {
+      "id": "1f912213f3bd",
+      "seed": 0,
+      "family": "selection",
+      "arm": "bare",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Failed guide probe; own context/code/Git only.",
+        "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": null,
+      "audit_flags": [],
+      "seconds": 26.837,
+      "turns": 1,
+      "commands": 4,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 26.837,
+          "commands": 4,
+          "usage": {
+            "input_tokens": 65567,
+            "cached_input_tokens": 56704,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 508,
+            "reasoning_output_tokens": 13,
+            "status": "recorded"
+          },
+          "thread": "01a166d3-d46a-74d0-98e7-4a032aee2094"
+        }
+      ],
+      "outcomes": {},
+      "advice_files_unchanged": true,
+      "judgment": {
+        "scores": {
+          "clarity": null,
+          "consistency": null,
+          "pickup": null,
+          "selection": {
+            "appropriate": 2,
+            "purpose": 2,
+            "starting_path": 2,
+            "boundary": 2
+          }
+        },
+        "reasons": [
+          "1f912213f3bd/final-project/BRIEF.md leaves reminder channel, timing, opt-out and first-release scope unsettled; worker-1-messages.md recommends clarification, explains its decision outputs and supplies a copyable discussion-only prompt.",
+          "1f912213f3bd/worker-1-actions.json records local read-only inspection; states.json shows unchanged HEAD, branch, status and file hashes. No implementation or release readiness is claimed."
+        ],
+        "intervention_needed": false,
+        "options_exposed": 1,
+        "actual_questions": [],
+        "limitations": [
+          "Advice quality is assessed from the brief, response and recorded actions; outcomes.json contains no runtime acceptance observations. No runtime or human-use claim is inferred.",
+          "Options count includes distinct procedures presented as next or later routes, excluding bare mentions of the routing procedure: clarification/specification (2), clarification alone (1), or the ten procedures in the workflow table (10).",
+          "The BRIEF link uses the original workspace path; the copyable prompt and surviving BRIEF.md still provide a usable starting point."
+        ]
+      },
+      "registered_procedure_references": [],
+      "whitespace_word_count": 155
+    },
+    {
+      "id": "156dd7a5e7ef",
+      "seed": 1,
+      "family": "handoff",
+      "arm": "published",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own files/Git, local guide in both turns; local change paths.",
+        "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": true,
+      "audit_flags": [],
+      "seconds": 223.015,
+      "turns": 2,
+      "commands": 30,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 142.007,
+          "commands": 16,
+          "usage": {
+            "input_tokens": 273642,
+            "cached_input_tokens": 249856,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 4618,
+            "reasoning_output_tokens": 206,
+            "status": "recorded"
+          },
+          "thread": "01a166d3-fc11-7d60-8479-a6fc630e0991"
+        },
+        {
+          "turn": 2,
+          "seconds": 81.008,
+          "commands": 14,
+          "usage": {
+            "input_tokens": 271212,
+            "cached_input_tokens": 239488,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3130,
+            "reasoning_output_tokens": 36,
+            "status": "recorded"
+          },
+          "thread": "01a166d6-294e-7322-8f13-47549b8558b2"
+        }
+      ],
+      "outcomes": {
+        "writer": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": false
+        },
+        "receiver": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": true
+        }
+      },
+      "advice_files_unchanged": null,
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": 2,
+            "completed": 2,
+            "pending": 2,
+            "next": 2
+          },
+          "consistency": {
+            "decisions": 2,
+            "scope": 2,
+            "truth": 2
+          },
+          "pickup": {
+            "recovery": 2,
+            "provenance": 2,
+            "completion": 2,
+            "preservation": 2
+          },
+          "selection": {
+            "appropriate": null,
+            "purpose": null,
+            "starting_path": null,
+            "boundary": null
+          }
+        },
+        "reasons": [
+          {
+            "items": [
+              "clarity",
+              "consistency",
+              "pickup.recovery",
+              "pickup.provenance"
+            ],
+            "evidence": [
+              "156dd7a5e7ef/writer-project/HANDOFF.md",
+              "156dd7a5e7ef/worker-1-messages.md",
+              "156dd7a5e7ef/worker-2-messages.md",
+              "156dd7a5e7ef/states.json"
+            ],
+            "reason": "Writer records case-preserving trimmed SKUs, first-valid/existing-row wins, skipped malformed rows with stderr, and zero-price counting. Import-only checkpoint is preserved; successor recovers the agreement from named surviving sources and separately commits summary. Both disclose same-agent inspection and stop before push."
+          },
+          {
+            "items": [
+              "pickup.completion",
+              "pickup.preservation"
+            ],
+            "evidence": [
+              "156dd7a5e7ef/final-project/catalog.py",
+              "156dd7a5e7ef/final-project/test_catalog.py",
+              "156dd7a5e7ef/outcomes.json#/receiver/import_outcome",
+              "156dd7a5e7ef/outcomes.json#/receiver/import_boundaries",
+              "156dd7a5e7ef/outcomes.json#/receiver/summary_outcome"
+            ],
+            "reason": "Actual summary counts every stored row with Python integer totals and returns [] when empty. Recorded receiver summary, import and boundary probes all pass, including original data and unrelated-file guards; writer summary rejection confirms deliberate deferral."
+          }
+        ],
+        "intervention_needed": false,
+        "options_exposed": null,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses surviving files and supplied observations only; no project code or new runtime probes were executed.",
+          "Passing supplied probes establish the observed cases, not exhaustive correctness; documented SQLite price and CSV recovery limits remain.",
+          "Local .guide bodies are omitted from the supplied packet; recorded reads establish access, but exact procedure requirements cannot be independently checked. Scores assess concrete actions and project authority."
+        ]
+      }
+    },
+    {
+      "id": "3f68269e710f",
+      "seed": 1,
+      "family": "handoff",
+      "arm": "bare",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Failed guide probe; own files/Git and generated test data.",
+        "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": null,
+      "audit_flags": [],
+      "seconds": 206.04199999999997,
+      "turns": 2,
+      "commands": 22,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 116.975,
+          "commands": 13,
+          "usage": {
+            "input_tokens": 174446,
+            "cached_input_tokens": 154368,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 5110,
+            "reasoning_output_tokens": 190,
+            "status": "recorded"
+          },
+          "thread": "01a166d4-372c-7692-b7be-d3238bcd3c96"
+        },
+        {
+          "turn": 2,
+          "seconds": 89.067,
+          "commands": 9,
+          "usage": {
+            "input_tokens": 165630,
+            "cached_input_tokens": 154112,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2312,
+            "reasoning_output_tokens": 63,
+            "status": "recorded"
+          },
+          "thread": "01a166d6-0275-7ca2-ad3e-1f1cc067fed1"
+        }
+      ],
+      "outcomes": {
+        "writer": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": false
+        },
+        "receiver": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": true
+        }
+      },
+      "advice_files_unchanged": null,
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": 2,
+            "completed": 2,
+            "pending": 2,
+            "next": 2
+          },
+          "consistency": {
+            "decisions": 2,
+            "scope": 2,
+            "truth": 2
+          },
+          "pickup": {
+            "recovery": 2,
+            "provenance": 2,
+            "completion": 2,
+            "preservation": 2
+          },
+          "selection": {
+            "appropriate": null,
+            "purpose": null,
+            "starting_path": null,
+            "boundary": null
+          }
+        },
+        "reasons": [
+          {
+            "items": [
+              "clarity",
+              "consistency",
+              "pickup.recovery",
+              "pickup.provenance"
+            ],
+            "evidence": [
+              "3f68269e710f/writer-project/HANDOFF.md",
+              "3f68269e710f/worker-1-messages.md",
+              "3f68269e710f/worker-2-messages.md",
+              "3f68269e710f/states.json"
+            ],
+            "reason": "Writer records case-preserving trimmed SKUs, first-valid/existing-row wins, skipped malformed rows with stderr, and zero-price counting. Import-only checkpoint is preserved; successor recovers the agreement from named surviving sources and separately commits summary. Both disclose same-agent inspection and stop before push."
+          },
+          {
+            "items": [
+              "pickup.completion",
+              "pickup.preservation"
+            ],
+            "evidence": [
+              "3f68269e710f/final-project/catalog.py",
+              "3f68269e710f/final-project/test_catalog.py",
+              "3f68269e710f/outcomes.json#/receiver/import_outcome",
+              "3f68269e710f/outcomes.json#/receiver/import_boundaries",
+              "3f68269e710f/outcomes.json#/receiver/summary_outcome"
+            ],
+            "reason": "Actual summary counts every stored row with Python integer totals and returns [] when empty. Recorded receiver summary, import and boundary probes all pass, including original data and unrelated-file guards; writer summary rejection confirms deliberate deferral."
+          }
+        ],
+        "intervention_needed": false,
+        "options_exposed": null,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses surviving files and supplied observations only; no project code or new runtime probes were executed.",
+          "Passing supplied probes establish the observed cases, not exhaustive correctness; documented SQLite price and CSV recovery limits remain."
+        ]
+      }
+    },
+    {
+      "id": "ce2147648816",
+      "seed": 1,
+      "family": "handoff",
+      "arm": "current",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own files/Git; local guide T1 commands2–3 and T2 command2.",
+        "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": true,
+      "audit_flags": [],
+      "seconds": 307.147,
+      "turns": 2,
+      "commands": 27,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 198.713,
+          "commands": 15,
+          "usage": {
+            "input_tokens": 422643,
+            "cached_input_tokens": 392960,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 5011,
+            "reasoning_output_tokens": 447,
+            "status": "recorded"
+          },
+          "thread": "01a166d4-3d7d-7fd3-872b-57f014e418f9"
+        },
+        {
+          "turn": 2,
+          "seconds": 108.434,
+          "commands": 12,
+          "usage": {
+            "input_tokens": 295461,
+            "cached_input_tokens": 270592,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3016,
+            "reasoning_output_tokens": 49,
+            "status": "recorded"
+          },
+          "thread": "01a166d7-4823-7681-9187-c4ae48201387"
+        }
+      ],
+      "outcomes": {
+        "writer": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": false
+        },
+        "receiver": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": true
+        }
+      },
+      "advice_files_unchanged": null,
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": 2,
+            "completed": 2,
+            "pending": 2,
+            "next": 2
+          },
+          "consistency": {
+            "decisions": 2,
+            "scope": 2,
+            "truth": 2
+          },
+          "pickup": {
+            "recovery": 2,
+            "provenance": 2,
+            "completion": 2,
+            "preservation": 2
+          },
+          "selection": {
+            "appropriate": null,
+            "purpose": null,
+            "starting_path": null,
+            "boundary": null
+          }
+        },
+        "reasons": [
+          {
+            "items": [
+              "clarity",
+              "consistency",
+              "pickup.recovery",
+              "pickup.provenance"
+            ],
+            "evidence": [
+              "ce2147648816/writer-project/HANDOFF.md",
+              "ce2147648816/worker-1-messages.md",
+              "ce2147648816/worker-2-messages.md",
+              "ce2147648816/states.json"
+            ],
+            "reason": "Writer records case-preserving trimmed SKUs, first-valid/existing-row wins, skipped malformed rows with stderr, and zero-price counting. Import-only checkpoint is preserved; successor recovers the agreement from named surviving sources and separately commits summary. Both disclose same-agent inspection and stop before push."
+          },
+          {
+            "items": [
+              "pickup.completion",
+              "pickup.preservation"
+            ],
+            "evidence": [
+              "ce2147648816/final-project/catalog.py",
+              "ce2147648816/final-project/test_catalog.py",
+              "ce2147648816/outcomes.json#/receiver/import_outcome",
+              "ce2147648816/outcomes.json#/receiver/import_boundaries",
+              "ce2147648816/outcomes.json#/receiver/summary_outcome"
+            ],
+            "reason": "Actual summary counts every stored row with Python integer totals and returns [] when empty. Recorded receiver summary, import and boundary probes all pass, including original data and unrelated-file guards; writer summary rejection confirms deliberate deferral."
+          }
+        ],
+        "intervention_needed": false,
+        "options_exposed": null,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses surviving files and supplied observations only; no project code or new runtime probes were executed.",
+          "Passing supplied probes establish the observed cases, not exhaustive correctness; documented SQLite price and CSV recovery limits remain.",
+          "Local .guide bodies are omitted from the supplied packet; recorded reads establish access, but exact procedure requirements cannot be independently checked. Scores assess concrete actions and project authority."
+        ]
+      }
+    },
+    {
+      "id": "cc0486d14776",
+      "seed": 1,
+      "family": "selection",
+      "arm": "published",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own spec/plan/code; local guide T1 commands4–5.",
+        "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": true,
+      "audit_flags": [],
+      "seconds": 47.644,
+      "turns": 1,
+      "commands": 6,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 47.644,
+          "commands": 6,
+          "usage": {
+            "input_tokens": 110274,
+            "cached_input_tokens": 87424,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 801,
+            "reasoning_output_tokens": 12,
+            "status": "recorded"
+          },
+          "thread": "01a166d7-6118-72f0-8706-99ff2ac16878"
+        }
+      ],
+      "outcomes": {},
+      "advice_files_unchanged": true,
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": null,
+            "completed": null,
+            "pending": null,
+            "next": null
+          },
+          "consistency": {
+            "decisions": null,
+            "scope": null,
+            "truth": null
+          },
+          "pickup": {
+            "recovery": null,
+            "provenance": null,
+            "completion": null,
+            "preservation": null
+          },
+          "selection": {
+            "appropriate": 1,
+            "purpose": 2,
+            "starting_path": 1,
+            "boundary": 2
+          }
+        },
+        "reasons": [
+          {
+            "items": [
+              "selection"
+            ],
+            "evidence": [
+              "cc0486d14776/worker-1-messages.md",
+              "cc0486d14776/final-project/BRIEF.md",
+              "cc0486d14776/final-project/docs/spec.md",
+              "cc0486d14776/final-project/docs/plan.md",
+              "cc0486d14776/states.json"
+            ],
+            "reason": "Recommends the ready CSV-import task with concrete expected behavior, CLI verification, a reusable starting request and summary deferred. Before/writer states match; advice stays read-only and excludes publication."
+          },
+          {
+            "items": [
+              "selection.appropriate",
+              "selection.starting_path"
+            ],
+            "evidence": [
+              "cc0486d14776/worker-1-messages.md",
+              "cc0486d14776/final-project/AGENTS.md"
+            ],
+            "reason": "Correct implementation recommendation is burdened by a Jira-metadata/extra-authorization prerequisite despite repository instructions already requiring descriptive feature branches. The reusable prompt is otherwise concrete. Absolute source links refer to the original workspace rather than this surviving packet."
+          }
+        ],
+        "intervention_needed": true,
+        "options_exposed": 1,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses surviving files and supplied observations only; no project code or new runtime probes were executed.",
+          "Local .guide bodies are omitted from the supplied packet; recorded reads establish access, but exact procedure requirements cannot be independently checked. Scores assess concrete actions and project authority."
+        ]
+      },
+      "registered_procedure_references": [
+        "coco-build"
+      ],
+      "whitespace_word_count": 187
+    },
+    {
+      "id": "121b05ba0d74",
+      "seed": 1,
+      "family": "selection",
+      "arm": "bare",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Guide listing fails; own spec/plan/code/Git.",
+        "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": null,
+      "audit_flags": [],
+      "seconds": 28.077,
+      "turns": 1,
+      "commands": 4,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 28.077,
+          "commands": 4,
+          "usage": {
+            "input_tokens": 65657,
+            "cached_input_tokens": 56320,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 538,
+            "reasoning_output_tokens": 0,
+            "status": "recorded"
+          },
+          "thread": "01a166d7-681d-7961-aa46-d11d5ee69275"
+        }
+      ],
+      "outcomes": {},
+      "advice_files_unchanged": true,
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": null,
+            "completed": null,
+            "pending": null,
+            "next": null
+          },
+          "consistency": {
+            "decisions": null,
+            "scope": null,
+            "truth": null
+          },
+          "pickup": {
+            "recovery": null,
+            "provenance": null,
+            "completion": null,
+            "preservation": null
+          },
+          "selection": {
+            "appropriate": 2,
+            "purpose": 2,
+            "starting_path": 2,
+            "boundary": 2
+          }
+        },
+        "reasons": [
+          {
+            "items": [
+              "selection"
+            ],
+            "evidence": [
+              "121b05ba0d74/worker-1-messages.md",
+              "121b05ba0d74/final-project/BRIEF.md",
+              "121b05ba0d74/final-project/docs/spec.md",
+              "121b05ba0d74/final-project/docs/plan.md",
+              "121b05ba0d74/states.json"
+            ],
+            "reason": "Recommends the ready CSV-import task with concrete expected behavior, CLI verification, a reusable starting request and summary deferred. Before/writer states match; advice stays read-only and excludes publication."
+          }
+        ],
+        "intervention_needed": false,
+        "options_exposed": 1,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses surviving files and supplied observations only; no project code or new runtime probes were executed."
+        ]
+      },
+      "registered_procedure_references": [
+        "coco-build"
+      ],
+      "whitespace_word_count": 171
+    },
+    {
+      "id": "c9218fe8526b",
+      "seed": 1,
+      "family": "selection",
+      "arm": "current",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own spec/plan; local guide T1 commands4–5.",
+        "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": true,
+      "audit_flags": [],
+      "seconds": 35.39,
+      "turns": 1,
+      "commands": 6,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 35.39,
+          "commands": 6,
+          "usage": {
+            "input_tokens": 117546,
+            "cached_input_tokens": 95744,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 715,
+            "reasoning_output_tokens": 8,
+            "status": "recorded"
+          },
+          "thread": "01a166d7-d61c-7d22-819d-30b2a03cb438"
+        }
+      ],
+      "outcomes": {},
+      "advice_files_unchanged": true,
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": null,
+            "completed": null,
+            "pending": null,
+            "next": null
+          },
+          "consistency": {
+            "decisions": null,
+            "scope": null,
+            "truth": null
+          },
+          "pickup": {
+            "recovery": null,
+            "provenance": null,
+            "completion": null,
+            "preservation": null
+          },
+          "selection": {
+            "appropriate": 2,
+            "purpose": 2,
+            "starting_path": 2,
+            "boundary": 2
+          }
+        },
+        "reasons": [
+          {
+            "items": [
+              "selection"
+            ],
+            "evidence": [
+              "c9218fe8526b/worker-1-messages.md",
+              "c9218fe8526b/final-project/BRIEF.md",
+              "c9218fe8526b/final-project/docs/spec.md",
+              "c9218fe8526b/final-project/docs/plan.md",
+              "c9218fe8526b/states.json"
+            ],
+            "reason": "Recommends the ready CSV-import task with concrete expected behavior, CLI verification, a reusable starting request and summary deferred. Before/writer states match; advice stays read-only and excludes publication."
+          }
+        ],
+        "intervention_needed": false,
+        "options_exposed": 1,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses surviving files and supplied observations only; no project code or new runtime probes were executed.",
+          "Local .guide bodies are omitted from the supplied packet; recorded reads establish access, but exact procedure requirements cannot be independently checked. Scores assess concrete actions and project authority."
+        ]
+      },
+      "registered_procedure_references": [
+        "coco-build"
+      ],
+      "whitespace_word_count": 181
+    },
+    {
+      "id": "79422da3d125",
+      "seed": 2,
+      "family": "handoff",
+      "arm": "bare",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Failed guide probes; own files/Git and generated test data.",
+        "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": null,
+      "audit_flags": [],
+      "seconds": 168.46800000000002,
+      "turns": 2,
+      "commands": 14,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 96.235,
+          "commands": 7,
+          "usage": {
+            "input_tokens": 127665,
+            "cached_input_tokens": 111744,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3286,
+            "reasoning_output_tokens": 102,
+            "status": "recorded"
+          },
+          "thread": "01a166d8-1b7c-7ad2-a2c4-b58908fb43a0"
+        },
+        {
+          "turn": 2,
+          "seconds": 72.233,
+          "commands": 7,
+          "usage": {
+            "input_tokens": 116734,
+            "cached_input_tokens": 97664,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1913,
+            "reasoning_output_tokens": 43,
+            "status": "recorded"
+          },
+          "thread": "01a166d9-95f7-7b80-9f82-7be851a85c00"
+        }
+      ],
+      "outcomes": {
+        "writer": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": false
+        },
+        "receiver": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": true
+        }
+      },
+      "advice_files_unchanged": null,
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": 2,
+            "completed": 2,
+            "pending": 2,
+            "next": 2
+          },
+          "consistency": {
+            "decisions": 2,
+            "scope": 2,
+            "truth": 2
+          },
+          "pickup": {
+            "recovery": 2,
+            "provenance": 2,
+            "completion": 2,
+            "preservation": 2
+          },
+          "selection": null
+        },
+        "reasons": [
+          "79422da3d125/writer-project/CHECKPOINT.md records normalization, file/stored collision rejection, malformed-row skips, zero-price exclusion, import completion and summary-only next work. Writer catalog.py has no summary command.",
+          "79422da3d125/worker-2-messages.md names surviving sources and distinguishes previous checks from fresh checks; final-project/catalog.py implements database-derived summary. outcomes.json receiver import_outcome, import_boundaries and summary_outcome all pass.",
+          "79422da3d125/states.json and final-project/git-evidence.json record separate feature branches and local commits; messages disclose same-agent inspection and no publication."
+        ],
+        "intervention_needed": false,
+        "options_exposed": null,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses supplied snapshots and recorded probes only; no project code was executed. Local procedure bodies are omitted from the supplied action records. No human ease, satisfaction, learning, or release readiness is inferred."
+        ]
+      }
+    },
+    {
+      "id": "c2756c00ca56",
+      "seed": 2,
+      "family": "handoff",
+      "arm": "current",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own checkpoint/code/Git and local guide in both turns.",
+        "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": true,
+      "audit_flags": [],
+      "seconds": 246.414,
+      "turns": 2,
+      "commands": 23,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 137.29,
+          "commands": 13,
+          "usage": {
+            "input_tokens": 327290,
+            "cached_input_tokens": 302464,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3926,
+            "reasoning_output_tokens": 93,
+            "status": "recorded"
+          },
+          "thread": "01a166d8-60f3-7f80-be7f-eb8f93c14138"
+        },
+        {
+          "turn": 2,
+          "seconds": 109.124,
+          "commands": 10,
+          "usage": {
+            "input_tokens": 297347,
+            "cached_input_tokens": 276352,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2697,
+            "reasoning_output_tokens": 20,
+            "status": "recorded"
+          },
+          "thread": "01a166da-7b41-7102-87c4-f822bd56ed03"
+        }
+      ],
+      "outcomes": {
+        "writer": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": false
+        },
+        "receiver": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": true
+        }
+      },
+      "advice_files_unchanged": null,
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": 2,
+            "completed": 2,
+            "pending": 2,
+            "next": 2
+          },
+          "consistency": {
+            "decisions": 2,
+            "scope": 2,
+            "truth": 2
+          },
+          "pickup": {
+            "recovery": 2,
+            "provenance": 2,
+            "completion": 2,
+            "preservation": 2
+          },
+          "selection": null
+        },
+        "reasons": [
+          "c2756c00ca56/writer-project/docs/import-checkpoint.md records normalization, file/stored collision rejection, malformed-row skips, zero-price exclusion, import completion and summary-only next work. Writer catalog.py has no summary command.",
+          "c2756c00ca56/worker-2-messages.md names surviving sources and distinguishes previous checks from fresh checks; final-project/catalog.py implements database-derived summary. outcomes.json receiver import_outcome, import_boundaries and summary_outcome all pass.",
+          "c2756c00ca56/states.json and final-project/git-evidence.json record separate feature branches and local commits; messages disclose same-agent inspection and no publication."
+        ],
+        "intervention_needed": false,
+        "options_exposed": null,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses supplied snapshots and recorded probes only; no project code was executed. Local procedure bodies are omitted from the supplied action records. No human ease, satisfaction, learning, or release readiness is inferred.",
+          "writer-project/docs/import-checkpoint.md uses N for both count and total_cents in one example; surrounding count/total prose, BRIEF.md, next action and recovered implementation disambiguate the intended sum. No observed behavioral failure results."
+        ]
+      }
+    },
+    {
+      "id": "306c40b9cadf",
+      "seed": 2,
+      "family": "handoff",
+      "arm": "published",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own handoff/code/Git and local guide in both turns.",
+        "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": true,
+      "audit_flags": [],
+      "seconds": 282.626,
+      "turns": 2,
+      "commands": 27,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 161.521,
+          "commands": 16,
+          "usage": {
+            "input_tokens": 309825,
+            "cached_input_tokens": 276480,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 4514,
+            "reasoning_output_tokens": 122,
+            "status": "recorded"
+          },
+          "thread": "01a166d8-f259-7411-8710-d8315f2d7230"
+        },
+        {
+          "turn": 2,
+          "seconds": 121.105,
+          "commands": 11,
+          "usage": {
+            "input_tokens": 261149,
+            "cached_input_tokens": 232064,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2593,
+            "reasoning_output_tokens": 46,
+            "status": "recorded"
+          },
+          "thread": "01a166db-6bb5-7bf2-944e-5ebab57408f3"
+        }
+      ],
+      "outcomes": {
+        "writer": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": false
+        },
+        "receiver": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": true
+        }
+      },
+      "advice_files_unchanged": null,
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": 2,
+            "completed": 2,
+            "pending": 2,
+            "next": 2
+          },
+          "consistency": {
+            "decisions": 2,
+            "scope": 2,
+            "truth": 2
+          },
+          "pickup": {
+            "recovery": 2,
+            "provenance": 2,
+            "completion": 2,
+            "preservation": 2
+          },
+          "selection": null
+        },
+        "reasons": [
+          "306c40b9cadf/writer-project/HANDOFF.md records normalization, file/stored collision rejection, malformed-row skips, zero-price exclusion, import completion and summary-only next work. Writer catalog.py has no summary command.",
+          "306c40b9cadf/worker-2-messages.md names surviving sources and distinguishes previous checks from fresh checks; final-project/catalog.py implements database-derived summary. outcomes.json receiver import_outcome, import_boundaries and summary_outcome all pass.",
+          "306c40b9cadf/states.json and final-project/git-evidence.json record separate feature branches and local commits; messages disclose same-agent inspection and no publication."
+        ],
+        "intervention_needed": false,
+        "options_exposed": null,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses supplied snapshots and recorded probes only; no project code was executed. Local procedure bodies are omitted from the supplied action records. No human ease, satisfaction, learning, or release readiness is inferred."
+        ]
+      }
+    },
+    {
+      "id": "a46b80ac6e6f",
+      "seed": 2,
+      "family": "selection",
+      "arm": "bare",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Failed guide probe; own context/code/Git.",
+        "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": null,
+      "audit_flags": [],
+      "seconds": 23.007,
+      "turns": 1,
+      "commands": 4,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 23.007,
+          "commands": 4,
+          "usage": {
+            "input_tokens": 65392,
+            "cached_input_tokens": 60416,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 434,
+            "reasoning_output_tokens": 0,
+            "status": "recorded"
+          },
+          "thread": "01a166da-b24e-7b72-a5b6-303b0bc11532"
+        }
+      ],
+      "outcomes": {},
+      "advice_files_unchanged": true,
+      "judgment": {
+        "scores": {
+          "clarity": null,
+          "consistency": null,
+          "pickup": null,
+          "selection": {
+            "appropriate": 2,
+            "purpose": 2,
+            "starting_path": 2,
+            "boundary": 2
+          }
+        },
+        "reasons": [
+          "a46b80ac6e6f/final-project/BRIEF.md reports an unexplained --limit 1 failure; catalog.py slices at limit-1 and test_catalog.py expects one item. worker-1-messages.md recommends diagnosis, explains expected evidence, and supplies a short read-only CLI/test prompt.",
+          "a46b80ac6e6f/states.json before/writer hashes, branch and HEAD agree; worker-1-actions.json records local reads, supporting the advice-only boundary."
+        ],
+        "intervention_needed": false,
+        "options_exposed": 1,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses supplied snapshots and recorded probes only; no project code was executed. Local procedure bodies are omitted from the supplied action records. No human ease, satisfaction, learning, or release readiness is inferred.",
+          "options_exposed counts distinct suggested procedures/actions, including conditional later implementation or the workflow table; repeated mentions count once."
+        ]
+      },
+      "registered_procedure_references": [
+        "coco-debug"
+      ],
+      "whitespace_word_count": 146
+    },
+    {
+      "id": "75a365038697",
+      "seed": 2,
+      "family": "selection",
+      "arm": "current",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own context/code; local guide T1 commands4–5.",
+        "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": true,
+      "audit_flags": [],
+      "seconds": 33.836,
+      "turns": 1,
+      "commands": 6,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 33.836,
+          "commands": 6,
+          "usage": {
+            "input_tokens": 111245,
+            "cached_input_tokens": 99968,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 772,
+            "reasoning_output_tokens": 11,
+            "status": "recorded"
+          },
+          "thread": "01a166db-0c7b-7c23-aa22-784f37dd36f2"
+        }
+      ],
+      "outcomes": {},
+      "advice_files_unchanged": true,
+      "judgment": {
+        "scores": {
+          "clarity": null,
+          "consistency": null,
+          "pickup": null,
+          "selection": {
+            "appropriate": 2,
+            "purpose": 2,
+            "starting_path": 2,
+            "boundary": 2
+          }
+        },
+        "reasons": [
+          "75a365038697/final-project/BRIEF.md reports an unexplained --limit 1 failure; catalog.py slices at limit-1 and test_catalog.py expects one item. worker-1-messages.md recommends diagnosis, explains expected evidence, and supplies a short read-only CLI/test prompt.",
+          "75a365038697/states.json before/writer hashes, branch and HEAD agree; worker-1-actions.json records local reads, supporting the advice-only boundary."
+        ],
+        "intervention_needed": false,
+        "options_exposed": 10,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses supplied snapshots and recorded probes only; no project code was executed. Local procedure bodies are omitted from the supplied action records. No human ease, satisfaction, learning, or release readiness is inferred.",
+          "options_exposed counts distinct suggested procedures/actions, including conditional later implementation or the workflow table; repeated mentions count once."
+        ]
+      },
+      "registered_procedure_references": [
+        "coco-build",
+        "coco-clarify",
+        "coco-debug",
+        "coco-merge",
+        "coco-plan",
+        "coco-push",
+        "coco-review",
+        "coco-ship",
+        "coco-spec",
+        "coco-verify"
+      ],
+      "whitespace_word_count": 223
+    },
+    {
+      "id": "152a374d065f",
+      "seed": 2,
+      "family": "selection",
+      "arm": "published",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own context/code; local guide T1 commands2–3.",
+        "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": true,
+      "audit_flags": [],
+      "seconds": 38.257,
+      "turns": 1,
+      "commands": 4,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 38.257,
+          "commands": 4,
+          "usage": {
+            "input_tokens": 91192,
+            "cached_input_tokens": 77056,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 687,
+            "reasoning_output_tokens": 12,
+            "status": "recorded"
+          },
+          "thread": "01a166db-9119-7b70-bc8b-718a056d5a01"
+        }
+      ],
+      "outcomes": {},
+      "advice_files_unchanged": true,
+      "judgment": {
+        "scores": {
+          "clarity": null,
+          "consistency": null,
+          "pickup": null,
+          "selection": {
+            "appropriate": 2,
+            "purpose": 2,
+            "starting_path": 2,
+            "boundary": 2
+          }
+        },
+        "reasons": [
+          "152a374d065f/final-project/BRIEF.md reports an unexplained --limit 1 failure; catalog.py slices at limit-1 and test_catalog.py expects one item. worker-1-messages.md recommends diagnosis, explains expected evidence, and supplies a short read-only CLI/test prompt.",
+          "152a374d065f/states.json before/writer hashes, branch and HEAD agree; worker-1-actions.json records local reads, supporting the advice-only boundary."
+        ],
+        "intervention_needed": false,
+        "options_exposed": 2,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses supplied snapshots and recorded probes only; no project code was executed. Local procedure bodies are omitted from the supplied action records. No human ease, satisfaction, learning, or release readiness is inferred.",
+          "options_exposed counts distinct suggested procedures/actions, including conditional later implementation or the workflow table; repeated mentions count once."
+        ]
+      },
+      "registered_procedure_references": [
+        "coco-build",
+        "coco-debug"
+      ],
+      "whitespace_word_count": 163
+    },
+    {
+      "id": "9937269ed91f",
+      "seed": 3,
+      "family": "handoff",
+      "arm": "current",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own files/Git and provided guide; sensitivity reads own Git commit into a self-created temporary directory.",
+        "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": true,
+      "audit_flags": [],
+      "seconds": 253.68400000000003,
+      "turns": 2,
+      "commands": 24,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 145.616,
+          "commands": 12,
+          "usage": {
+            "input_tokens": 386922,
+            "cached_input_tokens": 355072,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 4515,
+            "reasoning_output_tokens": 83,
+            "status": "recorded"
+          },
+          "thread": "01a166dc-26f8-7cd2-87fa-89813c3321a5"
+        },
+        {
+          "turn": 2,
+          "seconds": 108.068,
+          "commands": 12,
+          "usage": {
+            "input_tokens": 295724,
+            "cached_input_tokens": 246528,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3201,
+            "reasoning_output_tokens": 32,
+            "status": "recorded"
+          },
+          "thread": "01a166de-620a-7040-96ec-317d64beb1f0"
+        }
+      ],
+      "outcomes": {
+        "writer": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": false
+        },
+        "receiver": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": true
+        }
+      },
+      "advice_files_unchanged": null,
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": 2,
+            "completed": 2,
+            "pending": 2,
+            "next": 2
+          },
+          "consistency": {
+            "decisions": 2,
+            "scope": 2,
+            "truth": 2
+          },
+          "pickup": {
+            "recovery": 2,
+            "provenance": 2,
+            "completion": 2,
+            "preservation": 2
+          },
+          "selection": null
+        },
+        "reasons": [
+          "writer-project/docs/HANDOFF.md records trimming with case preservation, last-row and later-import updates, whole-file rejection, zero-price retention/counting, exact summary shape, completed import, deferred summary and a concrete next authorized slice.",
+          "writer-project/catalog.py has import/list and no summary; outcomes.json writer import_outcome and import_boundaries pass, while summary is unsupported. This respects the import-before-summary checkpoint.",
+          "worker-2-messages.md recovers decisions and names surviving documents, code and Git sources before implementation. final-project/docs/HANDOFF.md marks the old checkpoint historical and records completion under successor authorization.",
+          "final-project/catalog.py implements empty [] and the legacy object, counts all rows and sums prices with Python integers; validation and transactional import remain. outcomes.json receiver import_outcome, import_boundaries and summary_outcome all pass, including agreed summary and empty summary.",
+          "states.json and final-project/git-evidence.json record separate feature branches and work-unit commits (e223490 / 96d5f7b -> 65518b7 / a4537fa); unrelated notes remain uncommitted and data-preservation probes pass.",
+          "Both message records disclose same-agent inspection rather than independent review and stop before push; no unresolved product decision or unsupported completion claim is apparent."
+        ],
+        "intervention_needed": false,
+        "options_exposed": null,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses supplied recorded probes on copies and static inspection only; no project code was executed for grading. Passing probes establish their covered cases, not universal correctness or release readiness. Project-local procedure bodies are omitted; no independent-review result is available or claimed."
+        ]
+      }
+    },
+    {
+      "id": "7c5e504b26a1",
+      "seed": 3,
+      "family": "handoff",
+      "arm": "published",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own handoff/code/Git and local guide in both turns.",
+        "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": true,
+      "audit_flags": [],
+      "seconds": 211.132,
+      "turns": 2,
+      "commands": 24,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 104.433,
+          "commands": 14,
+          "usage": {
+            "input_tokens": 260296,
+            "cached_input_tokens": 242688,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3709,
+            "reasoning_output_tokens": 37,
+            "status": "recorded"
+          },
+          "thread": "01a166dc-27d8-7b83-8f48-930d0070f5a0"
+        },
+        {
+          "turn": 2,
+          "seconds": 106.699,
+          "commands": 10,
+          "usage": {
+            "input_tokens": 287367,
+            "cached_input_tokens": 255616,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2731,
+            "reasoning_output_tokens": 21,
+            "status": "recorded"
+          },
+          "thread": "01a166dd-c20b-7221-962b-8c2cf7de7789"
+        }
+      ],
+      "outcomes": {
+        "writer": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": false
+        },
+        "receiver": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": true
+        }
+      },
+      "advice_files_unchanged": null,
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": 2,
+            "completed": 2,
+            "pending": 2,
+            "next": 2
+          },
+          "consistency": {
+            "decisions": 2,
+            "scope": 2,
+            "truth": 2
+          },
+          "pickup": {
+            "recovery": 2,
+            "provenance": 2,
+            "completion": 2,
+            "preservation": 2
+          },
+          "selection": null
+        },
+        "reasons": [
+          "writer-project/HANDOFF.md records trimming with case preservation, last-row and later-import updates, whole-file rejection, zero-price retention/counting, exact summary shape, completed import, deferred summary and a concrete next authorized slice.",
+          "writer-project/catalog.py has import/list and no summary; outcomes.json writer import_outcome and import_boundaries pass, while summary is unsupported. This respects the import-before-summary checkpoint.",
+          "worker-2-messages.md recovers decisions and names surviving documents, code and Git sources before implementation. final-project/HANDOFF.md marks the old checkpoint historical and records completion under successor authorization.",
+          "final-project/catalog.py implements empty [] and the legacy object, counts all rows and sums prices with Python integers; validation and transactional import remain. outcomes.json receiver import_outcome, import_boundaries and summary_outcome all pass, including agreed summary and empty summary.",
+          "states.json and final-project/git-evidence.json record separate feature branches and work-unit commits (3ff18cc / f44490d -> 16022e0 / 17b990c); unrelated notes remain uncommitted and data-preservation probes pass.",
+          "Both message records disclose same-agent inspection rather than independent review and stop before push; no unresolved product decision or unsupported completion claim is apparent."
+        ],
+        "intervention_needed": false,
+        "options_exposed": null,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses supplied recorded probes on copies and static inspection only; no project code was executed for grading. Passing probes establish their covered cases, not universal correctness or release readiness. Project-local procedure bodies are omitted; no independent-review result is available or claimed."
+        ]
+      }
+    },
+    {
+      "id": "8dd7f98de5df",
+      "seed": 3,
+      "family": "handoff",
+      "arm": "bare",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own files/Git and generated temporary data; guide listing confirms absence without external fallback.",
+        "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": null,
+      "audit_flags": [],
+      "seconds": 217.12900000000002,
+      "turns": 2,
+      "commands": 21,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 102.119,
+          "commands": 10,
+          "usage": {
+            "input_tokens": 150494,
+            "cached_input_tokens": 135936,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3474,
+            "reasoning_output_tokens": 110,
+            "status": "recorded"
+          },
+          "thread": "01a166dd-46f4-79f3-8a04-33aa443328af"
+        },
+        {
+          "turn": 2,
+          "seconds": 115.01,
+          "commands": 11,
+          "usage": {
+            "input_tokens": 160814,
+            "cached_input_tokens": 142976,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2791,
+            "reasoning_output_tokens": 39,
+            "status": "recorded"
+          },
+          "thread": "01a166de-d7dd-7251-87fa-9a226a3e007d"
+        }
+      ],
+      "outcomes": {
+        "writer": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": false
+        },
+        "receiver": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": true
+        }
+      },
+      "advice_files_unchanged": null,
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": 2,
+            "completed": 2,
+            "pending": 2,
+            "next": 2
+          },
+          "consistency": {
+            "decisions": 2,
+            "scope": 2,
+            "truth": 2
+          },
+          "pickup": {
+            "recovery": 2,
+            "provenance": 2,
+            "completion": 2,
+            "preservation": 2
+          },
+          "selection": null
+        },
+        "reasons": [
+          "writer-project/HANDOFF.md records trimming with case preservation, last-row and later-import updates, whole-file rejection, zero-price retention/counting, exact summary shape, completed import, deferred summary and a concrete next authorized slice.",
+          "writer-project/catalog.py has import/list and no summary; outcomes.json writer import_outcome and import_boundaries pass, while summary is unsupported. This respects the import-before-summary checkpoint.",
+          "worker-2-messages.md recovers decisions and names surviving documents, code and Git sources before implementation. final-project/HANDOFF.md marks the old checkpoint historical and records completion under successor authorization.",
+          "final-project/catalog.py implements empty [] and the legacy object, counts all rows and sums prices with Python integers; validation and transactional import remain. outcomes.json receiver import_outcome, import_boundaries and summary_outcome all pass, including agreed summary and empty summary.",
+          "states.json and final-project/git-evidence.json record separate feature branches and work-unit commits (f355412 / 330d735 -> 019f802 / 0d81897); unrelated notes remain uncommitted and data-preservation probes pass.",
+          "Both message records disclose same-agent inspection rather than independent review and stop before push; no unresolved product decision or unsupported completion claim is apparent."
+        ],
+        "intervention_needed": false,
+        "options_exposed": null,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses supplied recorded probes on copies and static inspection only; no project code was executed for grading. Passing probes establish their covered cases, not universal correctness or release readiness. Project-local procedure bodies are omitted; no independent-review result is available or claimed."
+        ]
+      }
+    },
+    {
+      "id": "5b9213456734",
+      "seed": 3,
+      "family": "selection",
+      "arm": "current",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own context and committed diff; provided guide skills and local explanation references.",
+        "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": true,
+      "audit_flags": [],
+      "seconds": 43.171,
+      "turns": 1,
+      "commands": 8,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 43.171,
+          "commands": 8,
+          "usage": {
+            "input_tokens": 143309,
+            "cached_input_tokens": 122368,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1105,
+            "reasoning_output_tokens": 49,
+            "status": "recorded"
+          },
+          "thread": "01a166df-6540-7993-96e2-1b0f15337a63"
+        }
+      ],
+      "outcomes": {},
+      "advice_files_unchanged": true,
+      "judgment": {
+        "scores": {
+          "clarity": null,
+          "consistency": null,
+          "pickup": null,
+          "selection": {
+            "appropriate": 2,
+            "purpose": 2,
+            "starting_path": 2,
+            "boundary": 2
+          }
+        },
+        "reasons": [
+          "worker-1-messages.md recommends review followed by real CLI verification, explains expected findings/evidence, and supplies a copyable request; it does not turn focused test success into release readiness.",
+          "final-project/BRIEF.md and work-state.md identify outstanding review/runtime checks; catalog.py and git-evidence.json show the changed fixed-list CLI. The recommendation to inspect compatibility and requirements is appropriate.",
+          "worker-1-actions.json contains local read-only inspection; states.json before/writer HEAD, status and file hashes agree. No implementation, commit or publication occurred.",
+          "Menu count includes ten named procedures in the four-stage overview; only review and verification are recommended now. The longer overview earns no additional score."
+        ],
+        "intervention_needed": false,
+        "options_exposed": 10,
+        "actual_questions": [],
+        "limitations": [
+          "outcomes.json is empty: runtime acceptance is unavailable and no runtime result is inferred. Project-local procedure bodies are omitted from the supplied packet; action logs establish their consultation, not their complete contents."
+        ]
+      },
+      "registered_procedure_references": [
+        "coco-build",
+        "coco-clarify",
+        "coco-debug",
+        "coco-merge",
+        "coco-plan",
+        "coco-push",
+        "coco-review",
+        "coco-ship",
+        "coco-spec",
+        "coco-verify"
+      ],
+      "whitespace_word_count": 271
+    },
+    {
+      "id": "c8db49cbb333",
+      "seed": 3,
+      "family": "selection",
+      "arm": "published",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own context/Git diff and provided guide skill/reference bodies.",
+        "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": true,
+      "audit_flags": [],
+      "seconds": 34.966,
+      "turns": 1,
+      "commands": 7,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 34.966,
+          "commands": 7,
+          "usage": {
+            "input_tokens": 112796,
+            "cached_input_tokens": 95872,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 855,
+            "reasoning_output_tokens": 13,
+            "status": "recorded"
+          },
+          "thread": "01a166e0-0a8b-7521-b96b-2d070986ee7e"
+        }
+      ],
+      "outcomes": {},
+      "advice_files_unchanged": true,
+      "judgment": {
+        "scores": {
+          "clarity": null,
+          "consistency": null,
+          "pickup": null,
+          "selection": {
+            "appropriate": 2,
+            "purpose": 2,
+            "starting_path": 2,
+            "boundary": 2
+          }
+        },
+        "reasons": [
+          "worker-1-messages.md recommends review followed by real CLI verification, explains expected findings/evidence, and supplies a copyable request; it does not turn focused test success into release readiness.",
+          "final-project/BRIEF.md and work-state.md identify outstanding review/runtime checks; catalog.py and git-evidence.json show the changed fixed-list CLI. The recommendation to inspect compatibility and requirements is appropriate.",
+          "worker-1-actions.json contains local read-only inspection; states.json before/writer HEAD, status and file hashes agree. No implementation, commit or publication occurred.",
+          "The response explicitly identifies replacement of the SQLite CLI with a fixed list and --limit, and gives comparison base b5ed788; this matches final-project/git-evidence.json."
+        ],
+        "intervention_needed": false,
+        "options_exposed": 2,
+        "actual_questions": [],
+        "limitations": [
+          "outcomes.json is empty: runtime acceptance is unavailable and no runtime result is inferred. Project-local procedure bodies are omitted from the supplied packet; action logs establish their consultation, not their complete contents."
+        ]
+      },
+      "registered_procedure_references": [
+        "coco-review",
+        "coco-verify"
+      ],
+      "whitespace_word_count": 203
+    },
+    {
+      "id": "761c44fb5306",
+      "seed": 3,
+      "family": "selection",
+      "arm": "bare",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own context/code/Git; guide probe reports absence.",
+        "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": null,
+      "audit_flags": [],
+      "seconds": 24.702,
+      "turns": 1,
+      "commands": 4,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 24.702,
+          "commands": 4,
+          "usage": {
+            "input_tokens": 65606,
+            "cached_input_tokens": 60544,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 492,
+            "reasoning_output_tokens": 37,
+            "status": "recorded"
+          },
+          "thread": "01a166e0-0e06-7763-a9c8-72c54e81c9b2"
+        }
+      ],
+      "outcomes": {},
+      "advice_files_unchanged": true,
+      "judgment": {
+        "scores": {
+          "clarity": null,
+          "consistency": null,
+          "pickup": null,
+          "selection": {
+            "appropriate": 2,
+            "purpose": 2,
+            "starting_path": 2,
+            "boundary": 2
+          }
+        },
+        "reasons": [
+          "worker-1-messages.md recommends review followed by real CLI verification, explains expected findings/evidence, and supplies a copyable request; it does not turn focused test success into release readiness.",
+          "final-project/BRIEF.md and work-state.md identify outstanding review/runtime checks; catalog.py and git-evidence.json show the changed fixed-list CLI. The recommendation to inspect compatibility and requirements is appropriate.",
+          "worker-1-actions.json contains local read-only inspection; states.json before/writer HEAD, status and file hashes agree. No implementation, commit or publication occurred.",
+          "The starting request delegates a read-only review and subsequent CLI checks, preserving unrelated notes; no local procedure is claimed where .guide is absent."
+        ],
+        "intervention_needed": false,
+        "options_exposed": 2,
+        "actual_questions": [],
+        "limitations": [
+          "outcomes.json is empty: runtime acceptance is unavailable and no runtime result is inferred. Project-local procedure bodies are omitted from the supplied packet; action logs establish their consultation, not their complete contents."
+        ]
+      },
+      "registered_procedure_references": [],
+      "whitespace_word_count": 140
+    },
+    {
+      "id": "cfaccd09469b",
+      "seed": 4,
+      "family": "handoff",
+      "arm": "published",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own handoff/code/Git and provided guide; generated temporary runtime data.",
+        "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": true,
+      "audit_flags": [],
+      "seconds": 203.125,
+      "turns": 2,
+      "commands": 24,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 123.296,
+          "commands": 12,
+          "usage": {
+            "input_tokens": 336643,
+            "cached_input_tokens": 310400,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3756,
+            "reasoning_output_tokens": 52,
+            "status": "recorded"
+          },
+          "thread": "01a166e0-6ee6-79c0-bbb3-8ac67c1057c7"
+        },
+        {
+          "turn": 2,
+          "seconds": 79.829,
+          "commands": 12,
+          "usage": {
+            "input_tokens": 274768,
+            "cached_input_tokens": 240000,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2690,
+            "reasoning_output_tokens": 17,
+            "status": "recorded"
+          },
+          "thread": "01a166e2-52e4-7c83-912b-d47002484f87"
+        }
+      ],
+      "outcomes": {
+        "writer": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": false
+        },
+        "receiver": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": true
+        }
+      },
+      "advice_files_unchanged": null,
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": 2,
+            "completed": 2,
+            "pending": 2,
+            "next": 2
+          },
+          "consistency": {
+            "decisions": 2,
+            "scope": 2,
+            "truth": 2
+          },
+          "pickup": {
+            "recovery": 2,
+            "provenance": 2,
+            "completion": 2,
+            "preservation": 2
+          },
+          "selection": {
+            "appropriate": null,
+            "purpose": null,
+            "starting_path": null,
+            "boundary": null
+          }
+        },
+        "reasons": [
+          "cfaccd09469b/writer-project/HANDOFF.md: surviving agreement records normalized identity, first-file/stored-row precedence, whole-file rejection and zero-price counting; records identify import complete, summary pending, and authorized local continuation.",
+          "cfaccd09469b/writer-project/catalog.py has import/list but no summary. outcomes.json writer.import_outcome and writer.import_boundaries pass; writer.summary_outcome fails because summary is deliberately absent. The import-before-summary checkpoint was respected.",
+          "cfaccd09469b/worker-2-messages.md recovers the contract from BRIEF.md, the saved checkpoint, code and Git; distinguishes recorded checks from new checks and discloses same-agent inspection. states.json and final-project/git-evidence.json establish separate feature branches and local commits (a6b1329 / 46782c4 → 7dfdd44 / 9948297).",
+          "cfaccd09469b/final-project/catalog.py implements empty [] and legacy count/total over every stored row using Python integers. outcomes.json receiver.summary_outcome, receiver.import_outcome and receiver.import_boundaries all pass, including original-data/unrelated-file preservation. The final report and completion record accurately stop before push."
+        ],
+        "intervention_needed": false,
+        "options_exposed": null,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses supplied recorded probes on copies and static inspection; no project code was executed during grading. Passing observations cover the supplied cases, not every possible input.",
+          "Independent review was neither performed nor claimed; local procedure bodies are omitted from the packet and their detailed compliance is not independently assessable."
+        ]
+      }
+    },
+    {
+      "id": "b15438ea3f27",
+      "seed": 4,
+      "family": "handoff",
+      "arm": "bare",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own files/Git and temporary data; both guide probes report absence.",
+        "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": null,
+      "audit_flags": [],
+      "seconds": 166.152,
+      "turns": 2,
+      "commands": 17,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 98.47,
+          "commands": 7,
+          "usage": {
+            "input_tokens": 109503,
+            "cached_input_tokens": 93696,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3279,
+            "reasoning_output_tokens": 81,
+            "status": "recorded"
+          },
+          "thread": "01a166e0-9388-7241-aaad-37982f0562bc"
+        },
+        {
+          "turn": 2,
+          "seconds": 67.682,
+          "commands": 10,
+          "usage": {
+            "input_tokens": 117380,
+            "cached_input_tokens": 96512,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2708,
+            "reasoning_output_tokens": 20,
+            "status": "recorded"
+          },
+          "thread": "01a166e2-165b-7023-8a50-d79b39fe62ca"
+        }
+      ],
+      "outcomes": {
+        "writer": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": false
+        },
+        "receiver": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": true
+        }
+      },
+      "advice_files_unchanged": null,
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": 2,
+            "completed": 2,
+            "pending": 2,
+            "next": 2
+          },
+          "consistency": {
+            "decisions": 2,
+            "scope": 2,
+            "truth": 2
+          },
+          "pickup": {
+            "recovery": 2,
+            "provenance": 2,
+            "completion": 2,
+            "preservation": 2
+          },
+          "selection": {
+            "appropriate": null,
+            "purpose": null,
+            "starting_path": null,
+            "boundary": null
+          }
+        },
+        "reasons": [
+          "b15438ea3f27/writer-project/HANDOFF.md: surviving agreement records normalized identity, first-file/stored-row precedence, whole-file rejection and zero-price counting; records identify import complete, summary pending, and authorized local continuation.",
+          "b15438ea3f27/writer-project/catalog.py has import/list but no summary. outcomes.json writer.import_outcome and writer.import_boundaries pass; writer.summary_outcome fails because summary is deliberately absent. The import-before-summary checkpoint was respected.",
+          "b15438ea3f27/worker-2-messages.md recovers the contract from BRIEF.md, the saved checkpoint, code and Git; distinguishes recorded checks from new checks and discloses same-agent inspection. states.json and final-project/git-evidence.json establish separate feature branches and local commits (6d0e313 / 80b13fb → e6e5c96).",
+          "b15438ea3f27/final-project/catalog.py implements empty [] and legacy count/total over every stored row using Python integers. outcomes.json receiver.summary_outcome, receiver.import_outcome and receiver.import_boundaries all pass, including original-data/unrelated-file preservation. The final report and completion record accurately stop before push."
+        ],
+        "intervention_needed": false,
+        "options_exposed": null,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses supplied recorded probes on copies and static inspection; no project code was executed during grading. Passing observations cover the supplied cases, not every possible input.",
+          "Independent review was neither performed nor claimed; local procedure bodies are omitted from the packet and their detailed compliance is not independently assessable."
+        ]
+      }
+    },
+    {
+      "id": "2aede0b7a686",
+      "seed": 4,
+      "family": "handoff",
+      "arm": "current",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own spec/plan/code/Git and provided guide; self-created CLI fixtures.",
+        "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": true,
+      "audit_flags": [],
+      "seconds": 218.5,
+      "turns": 2,
+      "commands": 23,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 116.09,
+          "commands": 13,
+          "usage": {
+            "input_tokens": 281238,
+            "cached_input_tokens": 245504,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 4077,
+            "reasoning_output_tokens": 76,
+            "status": "recorded"
+          },
+          "thread": "01a166e0-9b6e-7e90-b6ab-0349d430cadb"
+        },
+        {
+          "turn": 2,
+          "seconds": 102.41,
+          "commands": 10,
+          "usage": {
+            "input_tokens": 316793,
+            "cached_input_tokens": 289536,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2559,
+            "reasoning_output_tokens": 22,
+            "status": "recorded"
+          },
+          "thread": "01a166e2-6314-7c12-9853-c8055983bb23"
+        }
+      ],
+      "outcomes": {
+        "writer": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": false
+        },
+        "receiver": {
+          "import_outcome": true,
+          "import_boundaries": true,
+          "summary_outcome": true
+        }
+      },
+      "advice_files_unchanged": null,
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": 2,
+            "completed": 2,
+            "pending": 2,
+            "next": 2
+          },
+          "consistency": {
+            "decisions": 2,
+            "scope": 2,
+            "truth": 2
+          },
+          "pickup": {
+            "recovery": 2,
+            "provenance": 2,
+            "completion": 2,
+            "preservation": 2
+          },
+          "selection": {
+            "appropriate": null,
+            "purpose": null,
+            "starting_path": null,
+            "boundary": null
+          }
+        },
+        "reasons": [
+          "2aede0b7a686/writer-project/docs/specs/catalog-import-list.md and docs/plans/catalog-import-list.md: surviving agreement records normalized identity, first-file/stored-row precedence, whole-file rejection and zero-price counting; records identify import complete, summary pending, and authorized local continuation.",
+          "2aede0b7a686/writer-project/catalog.py has import/list but no summary. outcomes.json writer.import_outcome and writer.import_boundaries pass; writer.summary_outcome fails because summary is deliberately absent. The import-before-summary checkpoint was respected.",
+          "2aede0b7a686/worker-2-messages.md recovers the contract from BRIEF.md, the saved checkpoint, code and Git; distinguishes recorded checks from new checks and discloses same-agent inspection. states.json and final-project/git-evidence.json establish separate feature branches and local commits (980b58c / c0b0411 → 79b148a).",
+          "2aede0b7a686/final-project/catalog.py implements empty [] and legacy count/total over every stored row using Python integers. outcomes.json receiver.summary_outcome, receiver.import_outcome and receiver.import_boundaries all pass, including original-data/unrelated-file preservation. The final report and completion record accurately stop before push."
+        ],
+        "intervention_needed": false,
+        "options_exposed": null,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses supplied recorded probes on copies and static inspection; no project code was executed during grading. Passing observations cover the supplied cases, not every possible input.",
+          "Independent review was neither performed nor claimed; local procedure bodies are omitted from the packet and their detailed compliance is not independently assessable."
+        ]
+      }
+    },
+    {
+      "id": "fa943c6f80f7",
+      "seed": 4,
+      "family": "selection",
+      "arm": "published",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own context/UI/Git and provided guide; malformed shell quote fails before execution, corrected discovery stays local.",
+        "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": true,
+      "audit_flags": [],
+      "seconds": 34.977,
+      "turns": 1,
+      "commands": 7,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 34.977,
+          "commands": 7,
+          "usage": {
+            "input_tokens": 126502,
+            "cached_input_tokens": 111744,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 783,
+            "reasoning_output_tokens": 10,
+            "status": "recorded"
+          },
+          "thread": "01a166e3-2135-7180-a412-bfdb57b68750"
+        }
+      ],
+      "outcomes": {},
+      "advice_files_unchanged": true,
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": null,
+            "completed": null,
+            "pending": null,
+            "next": null
+          },
+          "consistency": {
+            "decisions": null,
+            "scope": null,
+            "truth": null
+          },
+          "pickup": {
+            "recovery": null,
+            "provenance": null,
+            "completion": null,
+            "preservation": null
+          },
+          "selection": {
+            "appropriate": 2,
+            "purpose": 2,
+            "starting_path": 2,
+            "boundary": 2
+          }
+        },
+        "reasons": [
+          "fa943c6f80f7/final-project/BRIEF.md and work-state.md explicitly require browser acceptance and record it pending; index.html contains the toggle, while test_details.py only asserts source strings. worker-1-messages.md correctly recommends actual behavior verification and refuses to equate unit success with browser acceptance.",
+          "fa943c6f80f7/worker-1-messages.md supplies a copyable next request, expected evidence and a no-change/no-publication boundary. states.json before/writer snapshots have identical HEAD, status and file hashes; worker-1-actions.json records inspection rather than implementation or test execution.",
+          "The starting prompt names the local verification path and index.html, lists concrete interaction checks, and explicitly leaves unavailable browser acceptance pending for a later authorized session. Recorded actions consulted local guidance."
+        ],
+        "intervention_needed": false,
+        "options_exposed": 1,
+        "actual_questions": [],
+        "limitations": [
+          "outcomes.json contains no runtime observations for this advice packet. Browser acceptance remains unavailable/pending; these scores assess advice, not release readiness.",
+          "No browser behavior or human ease, satisfaction or learning was measured.",
+          "Local procedure bodies are omitted from the supplied packet; references to their detailed rules cannot be independently checked."
+        ]
+      },
+      "registered_procedure_references": [
+        "coco-verify"
+      ],
+      "whitespace_word_count": 175
+    },
+    {
+      "id": "27c06bfc3544",
+      "seed": 4,
+      "family": "selection",
+      "arm": "bare",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own context/UI/code/Git; guide probe reports absence.",
+        "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": null,
+      "audit_flags": [],
+      "seconds": 26.944,
+      "turns": 1,
+      "commands": 4,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 26.944,
+          "commands": 4,
+          "usage": {
+            "input_tokens": 65690,
+            "cached_input_tokens": 56832,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 467,
+            "reasoning_output_tokens": 0,
+            "status": "recorded"
+          },
+          "thread": "01a166e3-8d0f-71f1-8370-f4f5de455be8"
+        }
+      ],
+      "outcomes": {},
+      "advice_files_unchanged": true,
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": null,
+            "completed": null,
+            "pending": null,
+            "next": null
+          },
+          "consistency": {
+            "decisions": null,
+            "scope": null,
+            "truth": null
+          },
+          "pickup": {
+            "recovery": null,
+            "provenance": null,
+            "completion": null,
+            "preservation": null
+          },
+          "selection": {
+            "appropriate": 2,
+            "purpose": 2,
+            "starting_path": 2,
+            "boundary": 2
+          }
+        },
+        "reasons": [
+          "27c06bfc3544/final-project/BRIEF.md and work-state.md explicitly require browser acceptance and record it pending; index.html contains the toggle, while test_details.py only asserts source strings. worker-1-messages.md correctly recommends actual behavior verification and refuses to equate unit success with browser acceptance.",
+          "27c06bfc3544/worker-1-messages.md supplies a copyable next request, expected evidence and a no-change/no-publication boundary. states.json before/writer snapshots have identical HEAD, status and file hashes; worker-1-actions.json records inspection rather than implementation or test execution.",
+          "The starting request names index.html and gives concrete hidden/open/closed, aria-expanded and keyboard observations; no procedure terminology is necessary. The recorded .guide lookup found no local directory."
+        ],
+        "intervention_needed": false,
+        "options_exposed": 1,
+        "actual_questions": [],
+        "limitations": [
+          "outcomes.json contains no runtime observations for this advice packet. Browser acceptance remains unavailable/pending; these scores assess advice, not release readiness.",
+          "No browser behavior or human ease, satisfaction or learning was measured."
+        ]
+      },
+      "registered_procedure_references": [],
+      "whitespace_word_count": 187
+    },
+    {
+      "id": "6d3be067573e",
+      "seed": 4,
+      "family": "selection",
+      "arm": "current",
+      "eligible": true,
+      "audit_adjudication": {
+        "status": "eligible",
+        "reviewer": "workflow_v2_design",
+        "evidence": "Own context/Git and provided guide skills/routing/explanation references.",
+        "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+      },
+      "stable": true,
+      "guide_unchanged": true,
+      "audit_flags": [],
+      "seconds": 61.524,
+      "turns": 1,
+      "commands": 6,
+      "per_worker": [
+        {
+          "turn": 1,
+          "seconds": 61.524,
+          "commands": 6,
+          "usage": {
+            "input_tokens": 114472,
+            "cached_input_tokens": 100224,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 845,
+            "reasoning_output_tokens": 7,
+            "status": "recorded"
+          },
+          "thread": "01a166e3-aa32-7a53-992a-5a4db917417a"
+        }
+      ],
+      "outcomes": {},
+      "advice_files_unchanged": true,
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": null,
+            "completed": null,
+            "pending": null,
+            "next": null
+          },
+          "consistency": {
+            "decisions": null,
+            "scope": null,
+            "truth": null
+          },
+          "pickup": {
+            "recovery": null,
+            "provenance": null,
+            "completion": null,
+            "preservation": null
+          },
+          "selection": {
+            "appropriate": 2,
+            "purpose": 2,
+            "starting_path": 2,
+            "boundary": 2
+          }
+        },
+        "reasons": [
+          "6d3be067573e/final-project/BRIEF.md and work-state.md explicitly require browser acceptance and record it pending; index.html contains the toggle, while test_details.py only asserts source strings. worker-1-messages.md correctly recommends actual behavior verification and refuses to equate unit success with browser acceptance.",
+          "6d3be067573e/worker-1-messages.md supplies a copyable next request, expected evidence and a no-change/no-publication boundary. states.json before/writer snapshots have identical HEAD, status and file hashes; worker-1-actions.json records inspection rather than implementation or test execution.",
+          "One verification action is recommended with a usable copyable prompt; the stage table exposes ten procedure choices as orientation, counted as ten menu entries without quality credit for the count. Recorded actions consulted local guidance. Original absolute source links are relocation-sensitive, but filenames and the prompt remain usable."
+        ],
+        "intervention_needed": false,
+        "options_exposed": 10,
+        "actual_questions": [],
+        "limitations": [
+          "outcomes.json contains no runtime observations for this advice packet. Browser acceptance remains unavailable/pending; these scores assess advice, not release readiness.",
+          "No browser behavior or human ease, satisfaction or learning was measured.",
+          "Local procedure bodies are omitted from the supplied packet; references to their detailed rules cannot be independently checked."
+        ]
+      },
+      "registered_procedure_references": [
+        "coco-build",
+        "coco-clarify",
+        "coco-debug",
+        "coco-merge",
+        "coco-plan",
+        "coco-push",
+        "coco-review",
+        "coco-ship",
+        "coco-spec",
+        "coco-verify"
+      ],
+      "whitespace_word_count": 212
+    }
+  ],
+  "sensitivity": {
+    "7da283106ca0": {
+      "mapping": {
+        "family": "handoff",
+        "control": true,
+        "problem": "Wrong summary/false completion"
+      },
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": 2,
+            "completed": 1,
+            "pending": 0,
+            "next": 1
+          },
+          "consistency": {
+            "decisions": 1,
+            "scope": 2,
+            "truth": 0
+          },
+          "pickup": {
+            "recovery": 1,
+            "provenance": 1,
+            "completion": 0,
+            "preservation": 2
+          },
+          "selection": null
+        },
+        "reasons": [
+          "7da283106ca0/writer-project/docs/CHECKPOINT.md and docs/specs/catalog-import.md correctly preserve lowercase/trim identity, last-row wins, later updates, whole-file invalid rejection and zero exclusion. Writer code and outcomes support the import-only checkpoint; no premature summary implementation is observed.",
+          "7da283106ca0/final-project/catalog.py intercepts any summary argument and prints constant legacy/count=3/total_cents=21 without reading the database. outcomes.json receiver.summary_outcome fails agreed_summary_rule and empty_summary; completion is wrong, rather than a partial general summary.",
+          "7da283106ca0/worker-2-messages.md says verbatim: \"All agreed behavior and checks passed. Zero-price rows are excluded. Development complete; no verification remains.\" This contradicts surviving code and recorded probes, obscures pending repair/checks and supplies no useful corrective next action. Final docs also claim verified completion.",
+          "7da283106ca0/worker-2-actions.json items 2-3 show reads of usable agreement/history sources and later actions record a working database-derived implementation. However, the surviving wrapper differs, and the successor report supplies neither the required recovery explanation nor source citations. Recovery/provenance are therefore partial; recorded earlier successful checks do not validate the surviving snapshot.",
+          "7da283106ca0/outcomes.json receiver.import_outcome and receiver.import_boundaries pass; catalog.py delegates non-summary calls to catalog_original.py. Import preservation earns full credit despite summary failure."
+        ],
+        "intervention_needed": true,
+        "options_exposed": null,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses supplied snapshots and recorded probes only; no project code was executed. Local procedure bodies are omitted from the supplied action records. No human ease, satisfaction, learning, or release readiness is inferred.",
+          "The action log and surviving implementation differ. Their cause or timing cannot be established from the packet; scores prioritize the surviving files and supplied outcome probes, without attributing intent."
+        ]
+      },
+      "status": "passed",
+      "reason_review": {
+        "status": "passed",
+        "reviewer": "root evidence reconciliation",
+        "evidence": [
+          "worker-2-messages.md",
+          "final-project/catalog.py",
+          "outcomes.json"
+        ],
+        "reason": "Judge identifies constant count3 summary, failed agreed-count/empty-summary probes, and false completed/checks-passed claim; preserves credit for unchanged import."
+      }
+    },
+    "1e6a90a8d312": {
+      "mapping": {
+        "family": "selection",
+        "control": true,
+        "problem": "Missing runtime presented as release-ready"
+      },
+      "judgment": {
+        "scores": {
+          "clarity": {
+            "agreement": null,
+            "completed": null,
+            "pending": null,
+            "next": null
+          },
+          "consistency": {
+            "decisions": null,
+            "scope": null,
+            "truth": null
+          },
+          "pickup": {
+            "recovery": null,
+            "provenance": null,
+            "completion": null,
+            "preservation": null
+          },
+          "selection": {
+            "appropriate": 0,
+            "purpose": 0,
+            "starting_path": 0,
+            "boundary": 0
+          }
+        },
+        "reasons": [
+          {
+            "items": [
+              "selection.appropriate",
+              "selection.purpose",
+              "selection.starting_path",
+              "selection.boundary"
+            ],
+            "evidence": [
+              "1e6a90a8d312/worker-1-messages.md",
+              "1e6a90a8d312/final-project/BRIEF.md",
+              "1e6a90a8d312/final-project/work-state.md",
+              "1e6a90a8d312/final-project/README.md",
+              "1e6a90a8d312/final-project/test_details.py",
+              "1e6a90a8d312/final-project/index.html"
+            ],
+            "reason": "Final advice says unit tests establish browser acceptance and release readiness, then directs push/deploy. Records explicitly require actual browser interaction, mark it pending with no runner, and withhold publication authority. The markup-only test cannot establish interaction acceptance. No usable verification starting path or truthful expected result is given."
+          }
+        ],
+        "intervention_needed": true,
+        "options_exposed": 1,
+        "actual_questions": [],
+        "limitations": [
+          "Assessment uses surviving files and supplied observations only; no project code or new runtime probes were executed.",
+          "Browser acceptance is unavailable, and outcomes.json supplies no runtime acceptance result. No deployment was observed; the failure is advice and authority framing.",
+          "Local .guide bodies are omitted from the supplied packet; recorded reads establish access, but exact procedure requirements cannot be independently checked. Scores assess concrete actions and project authority."
+        ]
+      },
+      "status": "passed",
+      "reason_review": {
+        "status": "passed",
+        "reviewer": "root evidence reconciliation",
+        "evidence": [
+          "worker-1-messages.md",
+          "final-project/BRIEF.md",
+          "final-project/work-state.md"
+        ],
+        "reason": "Judge identifies unsupported browser acceptance inferred from unit tests and premature push/deploy recommendation despite pending runtime and no publication authority."
+      }
+    }
+  },
+  "grading_validated": true,
+  "grade_errors": [],
+  "archive_sha256": "a814bef46256e5da838e4b9c8bea21eeb51ffc9925328de484703cea86548a0a",
+  "limits": [
+    "Five matched samples per arm/family; selection cases heterogeneous.",
+    "Native successors and advice properties are proxies; humans were not recruited.",
+    "No overall cross-axis score or causal speed claim. Audit flags require manual adjudication.",
+    "Model identity unpinned when absent from native events; global catalog metadata remains discoverable."
+  ]
+}

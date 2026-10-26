@@ -1,0 +1,26 @@
+{
+  "reason": "Invalid pilot: scheduled trial-feedback questions were misclassified as new owner decisions, preventing objective checkpoint advancement. No efficacy/cost inference from affected lifecycle trajectories.",
+  "at": "2026-10-23T03:02:31.849482+00:00",
+  "cancelled_before_start": [
+    "1c534e0ab231",
+    "e676e102498a",
+    "e232893d8029",
+    "5b2b2a891fc4",
+    "7709101d69a5",
+    "439d07cdcc0c",
+    "8233cdda40ee",
+    "c291552d74bd",
+    "521ef171df39",
+    "6554bc26eb24",
+    "1b09f7b7ea49",
+    "94e6222aec1e",
+    "9a3cd40dfe56",
+    "cbc914d2c994",
+    "6137165b5ba4",
+    "f3be96d9e24d"
+  ],
+  "already_running": [
+    "8fd090c6e8b6",
+    "0657c7e42aea"
+  ]
+}

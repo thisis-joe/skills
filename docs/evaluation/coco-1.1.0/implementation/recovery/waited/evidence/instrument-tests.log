@@ -1,0 +1,15 @@
+test_cancelled_malformed_or_incomplete_native_success_is_invalid (__main__.WaitBudgets) ... ok
+test_classifier_can_wait_longer_than_its_active_budget_but_not_compute_longer (__main__.WaitBudgets) ... ok
+test_completion_between_polls_cannot_hide_an_exhausted_budget (__main__.WaitBudgets) ... ok
+test_cumulative_wait_cap_includes_prior_calls_without_extra_compute (__main__.WaitBudgets) ... ok
+test_duplicates_overlaps_and_future_notices_cannot_inflate_credit (__main__.WaitBudgets) ... ok
+test_explicit_model_binding_for_initial_and_resumed_native_calls (__main__.WaitBudgets) ... ok
+test_missing_or_malformed_notice_gives_no_credit_and_hard_cap_survives (__main__.WaitBudgets) ... ok
+test_model_verification_requires_current_invocation_context (__main__.WaitBudgets) ... ok
+test_partial_collection_ignores_admission_and_cooldown_receipts (__main__.WaitBudgets) ... ok
+test_strict_range_and_owner_instrument_still_passes (__main__.WaitBudgets) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 9.353s
+
+OK

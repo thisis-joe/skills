@@ -79,7 +79,7 @@ It keeps the source decision-tree mechanics in place of the focused interview's 
 3. Number each question with a short title, its body and choices, then your recommended answer. Word each question so "yes" accepts that recommendation.
 4. Finding facts is your job: use the repository, tools, authorized research or optional authorized sub-agents. A pending lookup blocks only the questions downstream of it; ask the rest now. Decisions are the user's: put each to them and wait.
 5. After each round recompute the frontier: settled answers unblock dependents and resolved branches stay closed. Probe consequences, hidden coupling and counterexamples rather than asking for generic approval.
-6. End only when the frontier is empty, every branch visited and nothing silently assumed, and the user confirms the shared understanding. Do not act on the result before that confirmation.
+6. Once current behavior and failure handling are settled, preview further questions with recommended answers and effects. The user may continue or adopt displayed defaults. End only when the frontier is empty (answered or explicitly delegated to displayed defaults), every branch visited and nothing silently assumed, and the user confirms the shared understanding. Do not act on the result before that confirmation.
 
 ```text
 Q1 - <title>: <question, with choices when useful>

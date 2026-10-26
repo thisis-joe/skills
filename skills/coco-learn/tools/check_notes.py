@@ -23,7 +23,8 @@ BULLET = re.compile(r'[-*] (\S.*)')
 QUESTION = re.compile(r'<details><summary>.+</summary>.+</details>')
 LINK = re.compile(r'\[[^\]\n]+\]\(([^)\s]+)\)')
 SCHEME = re.compile(r'[a-zA-Z][a-zA-Z0-9+.-]*:')
-FENCE = re.compile(r'\s*(```|~~~)')
+FENCE = re.compile(r' {0,3}(`{3,}|~{3,})(.*)')
+BACKTICKS = re.compile(r'`+')
 
 
 class CheckError(Exception):
@@ -41,19 +42,54 @@ def split_note(text):
 
 
 def outside_fences(lines):
-    """Yield (index, line, in_code) so headings inside code are not sections."""
-    in_code = False
+    """Yield (index, line, in_code, boundary) for top-level fenced examples."""
+    fence = None
     for index, line in enumerate(lines):
-        if FENCE.match(line):
-            in_code = not in_code
-            yield index, line, True
+        match = FENCE.fullmatch(line)
+        if fence:
+            closing = (match and match.group(1)[0] == fence[0] and
+                       len(match.group(1)) >= fence[1] and not match.group(2).strip())
+            yield index, line, True, 'close' if closing else None
+            if closing:
+                fence = None
+        elif match and not (match.group(1)[0] == '`' and '`' in match.group(2)):
+            fence = (match.group(1)[0], len(match.group(1)))
+            yield index, line, True, 'open'
+        else:
+            yield index, line, False, None
+
+
+def rendered_links(lines):
+    """Yield same-line link targets, excluding fenced examples and code spans."""
+    for index, line, in_code, _ in outside_fences(lines):
+        if in_code:
             continue
-        yield index, line, in_code
+        position = 0
+        while position < len(line):
+            preceding = position - 1
+            while preceding >= 0 and line[preceding] == '\\':
+                preceding -= 1
+            escaped = (position - preceding - 1) % 2
+            if not escaped:
+                # A real link owns its raw destination, including any backticks.
+                link = LINK.match(line, position)
+                if link:
+                    yield index, link.group(1)
+                    position = link.end()
+                    continue
+                opening = BACKTICKS.match(line, position)
+                if opening:
+                    closing = next((run for run in BACKTICKS.finditer(line, opening.end())
+                                    if len(run.group()) == len(opening.group())), None)
+                    # Inside a code span backslashes do not escape its closer.
+                    position = closing.end() if closing else opening.end()
+                    continue
+            position += 1
 
 
 def headings(lines):
     found = []
-    for index, line, in_code in outside_fences(lines):
+    for index, line, in_code, _ in outside_fences(lines):
         match = None if in_code else HEADING.fullmatch(line)
         if match:
             found.append((index, len(match.group(1)), match.group(2)))
@@ -106,15 +142,15 @@ def check_frontmatter(front, problem):
 def check_section(kind, low, high, lines, first, problem):
     """Check one section's raw lines; first is the line number of lines[0]."""
     if kind == 'example':
-        fences = code_lines = 0
-        for _, line, in_code in outside_fences(lines):
-            if FENCE.match(line):
-                fences += 1
-            elif in_code:
+        blocks = code_lines = 0
+        for _, _, in_code, boundary in outside_fences(lines):
+            if boundary == 'open':
+                blocks += 1
+            elif in_code and not boundary:
                 code_lines += 1
         if not any(line.strip() for line in lines):
             problem(first, 'example is empty')
-        if fences > 2:
+        if blocks > 1:
             problem(first, 'example holds more than one code block')
         if code_lines > MAX_CODE_LINES:
             problem(first, f'example code has {code_lines} lines; limit is {MAX_CODE_LINES}')
@@ -136,7 +172,7 @@ def check_section(kind, low, high, lines, first, problem):
             problem(number, 'use one top-level bullet per line')
             continue
         items += 1
-        if kind == 'links' and not LINK.search(line):
+        if kind == 'links' and not any(rendered_links([line])):
             problem(number, 'related bullet needs a link')
         if kind == 'bullets' and len(match.group(1)) > MAX_ITEM_CHARS:
             problem(number, f'bullet has {len(match.group(1))} characters; '
@@ -190,11 +226,10 @@ def check_note(path, sections):
         ends = [index for index, _, _ in parts[1:]] + [len(body)]
         for (index, _, _), (kind, low, high), end in zip(parts, SECTIONS, ends):
             check_section(kind, low, high, body[index + 1:end], start + index + 1, problem)
-    for offset, line in enumerate(body):
-        for target in LINK.findall(line):
-            relative = target.split('#', 1)[0]
-            if relative and not SCHEME.match(target) and not (path.parent / relative).exists():
-                problem(start + offset, f'broken link: {target}')
+    for offset, target in rendered_links(body):
+        relative = target.split('#', 1)[0]
+        if relative and not SCHEME.match(target) and not (path.parent / relative).exists():
+            problem(start + offset, f'broken link: {target}')
     return problems, fields
 
 
@@ -228,15 +263,14 @@ def check_workspace(root):
         problems.append(f'{index}:1: missing INDEX.md')
         return problems, checked
     listed = Counter()
-    for number, line in enumerate(index.read_text(encoding='utf-8').splitlines(), 1):
-        for target in LINK.findall(line):
-            relative = target.split('#', 1)[0]
-            if SCHEME.match(target) or not relative:
-                continue
-            resolved = (root / relative).resolve()
-            if not resolved.exists():
-                problems.append(f'{index}:{number}: broken link: {target}')
-            listed[resolved] += 1
+    for offset, target in rendered_links(index.read_text(encoding='utf-8').splitlines()):
+        relative = target.split('#', 1)[0]
+        if SCHEME.match(target) or not relative:
+            continue
+        resolved = (root / relative).resolve()
+        if not resolved.exists():
+            problems.append(f'{index}:{offset + 1}: broken link: {target}')
+        listed[resolved] += 1
     for note in notes:
         count = listed[note.resolve()]
         if count != 1:

@@ -12,7 +12,7 @@ Reuse an existing spec, plan, test-boundary agreement, and execution grant inste
 4. Reconcile a commit already made but not reflected in task state before selecting new work.
 5. Choose one task whose dependencies are actually satisfied; continuous mode repeats this after each completed unit.
 
-Use a feature branch and record pre-existing user changes. Apply the [build entrypoint's Jira branch naming and preparation rules](../../coco-build/SKILL.md#feature-branch-preparation); the entrypoint owns that team convention. Reuse a suitable authorized branch rather than resetting it.
+Use a feature branch and record pre-existing user changes. Apply the [build entrypoint's project-first branch preparation rules](../../coco-build/SKILL.md#feature-branch-preparation); the entrypoint owns that team convention. Reuse a suitable authorized branch rather than resetting it.
 Isolate overlapping hunks; do not stage user work, reset unrelated files, or create a new base merely for procedural neatness.
 A blocked dependency does not become ready because a summary or stale checkbox says it is done.
 
@@ -21,7 +21,7 @@ A blocked dependency does not become ready because a summary or stale checkbox s
 - Lightweight: a clear low-impact static edit; inspect the actual result and run applicable project checks.
 - Standard: behavior change; use the red-to-green loop and required runtime/regression evidence.
 - Strengthened: uncertain contracts, irreversible consequences, shared state, or high blast radius; settle design and add impact/specialist review.
-- Single-task versus continuous execution is separate from rigor. A continuous grant changes scheduling, not permissions or evidence.
+- Single-task versus continuous execution is separate from rigor. A continuous grant changes scheduling, not permissions or evidence. Reuse an explicit same-spec request covering implementation, review, verification and fixes as selection of those named stages under the workflow; do not infer them from scheduling alone.
 
 If a material decision remains unresolved, ask only that decision while continuing independent authorized work.
 Scope, glossary, ADRs, and established quality thresholds constrain implementation; source heuristics are not universal quotas.
@@ -46,7 +46,7 @@ For a consequential novel design compare distinct shapes before committing; a sm
 5. Implement only enough to satisfy that behavior, without speculative features or unrelated cleanup.
 6. Run the focused check to green, then relevant nearby checks and the real user path when required.
 7. After green, allow small in-scope naming/duplication cleanup only; recheck affected behavior after changing it.
-8. Self-review as the build entrypoint describes, or obtain a [review](review.md) where it calls for one; resolve findings through this owner, and close the work unit below.
+8. Self-inspect as the build entrypoint describes, commit the tested implementation below, and hand off to formal [review](review.md) using the [transition contract](../workflow.md). Accepted findings return here for follow-up commits.
 
 Do not write a whole imagined test suite followed by a whole implementation; each slice uses what the previous one taught.
 Tests use public behavior and independent expected values, real local implementations, and controlled external boundaries.
@@ -94,12 +94,12 @@ For sustained queue/recovery bookkeeping use [automation modes](automate.md), wi
 
 1. Run project-required regression/build/runtime checks at closure and report each as passed, failed or unavailable; read the [verification core](verify.md) before driving a UI, browser, account or persistent state beyond a disposable local fixture.
 2. Reuse unaffected passing receipts and rerun checks whose relevant code, environment, or acceptance changed.
-3. Review the actual task changes, including committed/index/worktree/untracked layers, before the work-unit commit.
-4. Resolve blocking findings or retain an explicit authorized disposition; a pass on one review axis cannot mask another failure.
+3. Self-inspect actual task changes, including committed/index/worktree/untracked layers, before the implementation commit; formal review follows that commit.
+4. Resolve implementation defects. Formal findings remain pending until separate review and accepted fixes; one passing axis cannot mask another failure.
 5. Inspect the final diff for unrelated work, secrets, obsolete instrumentation, and broken references.
 6. Stage only task-owned paths or hunks and create the coherent work-unit commit required by repository policy.
-7. Record the actual commit and evidence in the authoritative task state; mark done only after all required conditions hold.
-8. In continuous mode refresh the dependency-ready frontier and proceed to the next authorized unit.
+7. Record the implementation commit and evidence as implementation complete/review pending. Mark development complete only after separate review/resolutions, required runtime checks and follow-up commits.
+8. Apply manual/spec-local automatic handoffs for review/verify and the next authorized unit. Stop automatic basic flow before push.
 
 Do not commit a speculative fix to make a check quieter, disable failures, or broaden scope to resolve unrelated debt.
 After a check fails stop dependent advancement and use [debug](debug.md); repeated unresolved blockers follow the common retry bound.

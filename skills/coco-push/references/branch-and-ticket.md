@@ -2,6 +2,12 @@
 
 Apply after synchronization, conflict resolution, and required checks, before the final push. This procedure is part of an actual `coco-push` execution request. A request to explain, modify, or review the skill does not authorize changes to a user repository or Jira.
 
+Follow project instructions first. The Jira steps below apply only to an actual
+linked Jira task or an explicitly selected Jira team convention. With neither,
+do not request or invent a ticket, impose Jira-shaped names, or block publication
+on Jira access. Keep an adequate descriptive project branch name; any needed
+summary correction follows that project's naming rules without a Jira write.
+
 ## Compare actual work with the name
 
 Read the diff between the fetched development-base commit and final HEAD, branch-specific commits, and the linked task's requirements and acceptance criteria together. Do not summarize from commit titles or only the last changed file. Do not count others' changes arriving from the development base as this branch's new work, or describe reverted changes or unfinished requirements as implemented. Keep uncommitted user files out of the work being pushed.

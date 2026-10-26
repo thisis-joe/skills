@@ -1,0 +1,2189 @@
+{
+  "schema": 2,
+  "candidate": "622975e349e6276b225aa9ef02ee69d664dd2927",
+  "driver_head": "4c7ede8dc78535019a2472c9ff3969b0efedaa78",
+  "groups": [
+    {
+      "family": "lifecycle",
+      "arm": "coco",
+      "scope": "all_attempts",
+      "n": 5,
+      "metrics": {
+        "actor_seconds": {
+          "n": 5,
+          "median": 674.91,
+          "minimum": 491.343,
+          "maximum": 882.627,
+          "total": 3389.8489999999997
+        },
+        "actor_turns": {
+          "n": 5,
+          "median": 6,
+          "minimum": 5,
+          "maximum": 6,
+          "total": 29
+        },
+        "actor_commands": {
+          "n": 5,
+          "median": 44,
+          "minimum": 39,
+          "maximum": 59,
+          "total": 234
+        },
+        "owner_messages_delivered": {
+          "n": 5,
+          "median": 3,
+          "minimum": 3,
+          "maximum": 3,
+          "total": 15
+        },
+        "correction_messages": {
+          "n": 5,
+          "median": 1,
+          "minimum": 1,
+          "maximum": 1,
+          "total": 5
+        },
+        "synthetic_owner_seconds": {
+          "n": 5,
+          "median": 41.717,
+          "minimum": 38.209,
+          "maximum": 60.197,
+          "total": 223.14
+        },
+        "synthetic_owner_calls": {
+          "n": 5,
+          "median": 5,
+          "minimum": 4,
+          "maximum": 5,
+          "total": 24
+        },
+        "private_choices_requested": {
+          "n": 5,
+          "median": 3,
+          "minimum": 2,
+          "maximum": 3,
+          "total": 14
+        },
+        "settled_private_topic_requests": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "resumed_settled_private_requests": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "public_contract_topic_requests": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 1,
+          "total": 1
+        },
+        "resumed_public_contract_requests": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 1,
+          "total": 1
+        },
+        "procedure_questions": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 1,
+          "total": 1
+        },
+        "input_tokens": {
+          "n": 5,
+          "median": 2703768,
+          "minimum": 1780911,
+          "maximum": 4260270,
+          "total": 14878279
+        },
+        "cached_input_tokens": {
+          "n": 5,
+          "median": 2467584,
+          "minimum": 1627136,
+          "maximum": 4033408,
+          "total": 13848832
+        },
+        "output_tokens": {
+          "n": 5,
+          "median": 28065,
+          "minimum": 20070,
+          "maximum": 40897,
+          "total": 151394
+        }
+      },
+      "lifecycle_boolean_counts": {
+        "initial_first_pass": {
+          "true": 0,
+          "false": 5,
+          "unknown": 0
+        },
+        "initial_final_pass": {
+          "true": 5,
+          "false": 0,
+          "unknown": 0
+        },
+        "changed_checkpoint_pass": {
+          "true": 4,
+          "false": 0,
+          "unknown": 1
+        },
+        "resumed_first_pass": {
+          "true": 4,
+          "false": 0,
+          "unknown": 1
+        },
+        "resumed_final_pass": {
+          "true": 4,
+          "false": 0,
+          "unknown": 1
+        },
+        "pending_summary_exposure": {
+          "true": 4,
+          "false": 0,
+          "unknown": 1
+        },
+        "stable": {
+          "true": 4,
+          "false": 1,
+          "unknown": 0
+        },
+        "owned_work_committed": {
+          "true": 4,
+          "false": 0,
+          "unknown": 1
+        },
+        "feature_branch": {
+          "true": 4,
+          "false": 0,
+          "unknown": 1
+        }
+      },
+      "lifecycle_completion": {
+        "demonstrated": 4,
+        "not_demonstrated": 1
+      },
+      "review_quality": null,
+      "usage_coverage": {
+        "recorded_turns": 28,
+        "unavailable_turns": 1,
+        "complete_projects": 4
+      }
+    },
+    {
+      "family": "lifecycle",
+      "arm": "bare",
+      "scope": "all_attempts",
+      "n": 5,
+      "metrics": {
+        "actor_seconds": {
+          "n": 5,
+          "median": 397.667,
+          "minimum": 344.194,
+          "maximum": 454.653,
+          "total": 2024.002
+        },
+        "actor_turns": {
+          "n": 5,
+          "median": 6,
+          "minimum": 5,
+          "maximum": 7,
+          "total": 30
+        },
+        "actor_commands": {
+          "n": 5,
+          "median": 30,
+          "minimum": 27,
+          "maximum": 39,
+          "total": 155
+        },
+        "owner_messages_delivered": {
+          "n": 5,
+          "median": 3,
+          "minimum": 2,
+          "maximum": 4,
+          "total": 15
+        },
+        "correction_messages": {
+          "n": 5,
+          "median": 1,
+          "minimum": 1,
+          "maximum": 1,
+          "total": 5
+        },
+        "synthetic_owner_seconds": {
+          "n": 5,
+          "median": 40.677,
+          "minimum": 34.988,
+          "maximum": 45.852,
+          "total": 203.998
+        },
+        "synthetic_owner_calls": {
+          "n": 5,
+          "median": 5,
+          "minimum": 4,
+          "maximum": 6,
+          "total": 25
+        },
+        "private_choices_requested": {
+          "n": 5,
+          "median": 3,
+          "minimum": 2,
+          "maximum": 3,
+          "total": 14
+        },
+        "settled_private_topic_requests": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "resumed_settled_private_requests": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "public_contract_topic_requests": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 1,
+          "total": 2
+        },
+        "resumed_public_contract_requests": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 1,
+          "total": 2
+        },
+        "procedure_questions": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "input_tokens": {
+          "n": 5,
+          "median": 1706958,
+          "minimum": 1376672,
+          "maximum": 1948276,
+          "total": 8600357
+        },
+        "cached_input_tokens": {
+          "n": 5,
+          "median": 1556480,
+          "minimum": 1223552,
+          "maximum": 1779200,
+          "total": 7760512
+        },
+        "output_tokens": {
+          "n": 5,
+          "median": 22374,
+          "minimum": 16665,
+          "maximum": 31673,
+          "total": 115994
+        }
+      },
+      "lifecycle_boolean_counts": {
+        "initial_first_pass": {
+          "true": 0,
+          "false": 5,
+          "unknown": 0
+        },
+        "initial_final_pass": {
+          "true": 5,
+          "false": 0,
+          "unknown": 0
+        },
+        "changed_checkpoint_pass": {
+          "true": 5,
+          "false": 0,
+          "unknown": 0
+        },
+        "resumed_first_pass": {
+          "true": 5,
+          "false": 0,
+          "unknown": 0
+        },
+        "resumed_final_pass": {
+          "true": 5,
+          "false": 0,
+          "unknown": 0
+        },
+        "pending_summary_exposure": {
+          "true": 5,
+          "false": 0,
+          "unknown": 0
+        },
+        "stable": {
+          "true": 5,
+          "false": 0,
+          "unknown": 0
+        },
+        "owned_work_committed": {
+          "true": 5,
+          "false": 0,
+          "unknown": 0
+        },
+        "feature_branch": {
+          "true": 5,
+          "false": 0,
+          "unknown": 0
+        }
+      },
+      "lifecycle_completion": {
+        "demonstrated": 5,
+        "not_demonstrated": 0
+      },
+      "review_quality": null,
+      "usage_coverage": {
+        "recorded_turns": 30,
+        "unavailable_turns": 0,
+        "complete_projects": 5
+      }
+    },
+    {
+      "family": "review",
+      "arm": "coco",
+      "scope": "all_attempts",
+      "n": 5,
+      "metrics": {
+        "actor_seconds": {
+          "n": 5,
+          "median": 62.88,
+          "minimum": 45.084,
+          "maximum": 72.669,
+          "total": 294.637
+        },
+        "actor_turns": {
+          "n": 5,
+          "median": 1,
+          "minimum": 1,
+          "maximum": 1,
+          "total": 5
+        },
+        "actor_commands": {
+          "n": 5,
+          "median": 6,
+          "minimum": 6,
+          "maximum": 7,
+          "total": 32
+        },
+        "owner_messages_delivered": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "correction_messages": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "synthetic_owner_seconds": {
+          "n": 5,
+          "median": 8.15,
+          "minimum": 7.308,
+          "maximum": 10.769,
+          "total": 42.687000000000005
+        },
+        "synthetic_owner_calls": {
+          "n": 5,
+          "median": 1,
+          "minimum": 1,
+          "maximum": 1,
+          "total": 5
+        },
+        "private_choices_requested": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "settled_private_topic_requests": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "resumed_settled_private_requests": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "public_contract_topic_requests": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "resumed_public_contract_requests": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "procedure_questions": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "input_tokens": {
+          "n": 5,
+          "median": 143097,
+          "minimum": 108049,
+          "maximum": 170864,
+          "total": 716841
+        },
+        "cached_input_tokens": {
+          "n": 5,
+          "median": 125312,
+          "minimum": 86528,
+          "maximum": 140544,
+          "total": 597632
+        },
+        "output_tokens": {
+          "n": 5,
+          "median": 1657,
+          "minimum": 1487,
+          "maximum": 2035,
+          "total": 8627
+        }
+      },
+      "lifecycle_boolean_counts": null,
+      "lifecycle_completion": null,
+      "review_quality": "Separate blinded judge required",
+      "usage_coverage": {
+        "recorded_turns": 5,
+        "unavailable_turns": 0,
+        "complete_projects": 5
+      }
+    },
+    {
+      "family": "review",
+      "arm": "bare",
+      "scope": "all_attempts",
+      "n": 5,
+      "metrics": {
+        "actor_seconds": {
+          "n": 5,
+          "median": 47.854,
+          "minimum": 34.35,
+          "maximum": 58.782,
+          "total": 237.06
+        },
+        "actor_turns": {
+          "n": 5,
+          "median": 1,
+          "minimum": 1,
+          "maximum": 1,
+          "total": 5
+        },
+        "actor_commands": {
+          "n": 5,
+          "median": 4,
+          "minimum": 3,
+          "maximum": 5,
+          "total": 21
+        },
+        "owner_messages_delivered": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "correction_messages": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "synthetic_owner_seconds": {
+          "n": 5,
+          "median": 7.336,
+          "minimum": 6.791,
+          "maximum": 7.717,
+          "total": 36.379999999999995
+        },
+        "synthetic_owner_calls": {
+          "n": 5,
+          "median": 1,
+          "minimum": 1,
+          "maximum": 1,
+          "total": 5
+        },
+        "private_choices_requested": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "settled_private_topic_requests": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "resumed_settled_private_requests": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "public_contract_topic_requests": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "resumed_public_contract_requests": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "procedure_questions": {
+          "n": 5,
+          "median": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "input_tokens": {
+          "n": 5,
+          "median": 93939,
+          "minimum": 75198,
+          "maximum": 118993,
+          "total": 483057
+        },
+        "cached_input_tokens": {
+          "n": 5,
+          "median": 80384,
+          "minimum": 58752,
+          "maximum": 107904,
+          "total": 391936
+        },
+        "output_tokens": {
+          "n": 5,
+          "median": 1308,
+          "minimum": 1128,
+          "maximum": 1431,
+          "total": 6392
+        }
+      },
+      "lifecycle_boolean_counts": null,
+      "lifecycle_completion": null,
+      "review_quality": "Separate blinded judge required",
+      "usage_coverage": {
+        "recorded_turns": 5,
+        "unavailable_turns": 0,
+        "complete_projects": 5
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "family": "lifecycle",
+      "seed": 0,
+      "complete": true,
+      "ids": {
+        "coco": "e126f1774c0b",
+        "bare": "18e3c6759fae"
+      },
+      "actor_seconds": {
+        "coco": 882.627,
+        "bare": 391.605
+      },
+      "actor_seconds_ratio": 2.2538706094150993,
+      "actor_seconds_difference": 491.02199999999993,
+      "actor_commands": {
+        "coco": 52,
+        "bare": 30
+      },
+      "statuses": {
+        "coco": {
+          "initial": "ready",
+          "change": "checkpoint-stop",
+          "resumed": "ready"
+        },
+        "bare": {
+          "initial": "ready",
+          "change": "checkpoint-stop",
+          "resumed": "ready"
+        }
+      },
+      "stable": {
+        "coco": true,
+        "bare": true
+      },
+      "interventions": {
+        "coco": {
+          "owner_messages_delivered": 3,
+          "correction_messages": 1
+        },
+        "bare": {
+          "owner_messages_delivered": 3,
+          "correction_messages": 1
+        }
+      },
+      "question_metrics": {
+        "coco": {
+          "private_topics_requested": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "private_choices_requested": 3,
+          "private_topics_delivered_in_question_answers": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "private_new_topics_requested": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "settled_private_topic_requests": 0,
+          "resumed_settled_private_requests": 0,
+          "public_contract_topic_requests": 0,
+          "resumed_public_contract_requests": 0,
+          "procedure_questions": 0
+        },
+        "bare": {
+          "private_topics_requested": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "private_choices_requested": 3,
+          "private_topics_delivered_in_question_answers": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "private_new_topics_requested": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "settled_private_topic_requests": 0,
+          "resumed_settled_private_requests": 0,
+          "public_contract_topic_requests": 0,
+          "resumed_public_contract_requests": 0,
+          "procedure_questions": 0
+        }
+      },
+      "acceptance": {
+        "initial_first_pass": {
+          "coco": false,
+          "bare": false
+        },
+        "initial_final_pass": {
+          "coco": true,
+          "bare": true
+        },
+        "changed_checkpoint_pass": {
+          "coco": true,
+          "bare": true
+        },
+        "resumed_first_pass": {
+          "coco": true,
+          "bare": true
+        },
+        "resumed_final_pass": {
+          "coco": true,
+          "bare": true
+        },
+        "pending_summary_exposure": {
+          "coco": true,
+          "bare": true
+        }
+      },
+      "completion_demonstrated": {
+        "coco": true,
+        "bare": true
+      }
+    },
+    {
+      "family": "lifecycle",
+      "seed": 1,
+      "complete": true,
+      "ids": {
+        "coco": "909f1629c2ae",
+        "bare": "30583ca77dc8"
+      },
+      "actor_seconds": {
+        "coco": 581.743,
+        "bare": 454.653
+      },
+      "actor_seconds_ratio": 1.2795318627612708,
+      "actor_seconds_difference": 127.09000000000003,
+      "actor_commands": {
+        "coco": 40,
+        "bare": 29
+      },
+      "statuses": {
+        "coco": {
+          "initial": "ready",
+          "change": "checkpoint-stop",
+          "resumed": "ready"
+        },
+        "bare": {
+          "initial": "ready",
+          "change": "checkpoint-stop",
+          "resumed": "ready"
+        }
+      },
+      "stable": {
+        "coco": true,
+        "bare": true
+      },
+      "interventions": {
+        "coco": {
+          "owner_messages_delivered": 3,
+          "correction_messages": 1
+        },
+        "bare": {
+          "owner_messages_delivered": 2,
+          "correction_messages": 1
+        }
+      },
+      "question_metrics": {
+        "coco": {
+          "private_topics_requested": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "private_choices_requested": 3,
+          "private_topics_delivered_in_question_answers": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "private_new_topics_requested": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "settled_private_topic_requests": 0,
+          "resumed_settled_private_requests": 0,
+          "public_contract_topic_requests": 1,
+          "resumed_public_contract_requests": 1,
+          "procedure_questions": 0
+        },
+        "bare": {
+          "private_topics_requested": [
+            "collision",
+            "invalid"
+          ],
+          "private_choices_requested": 2,
+          "private_topics_delivered_in_question_answers": [
+            "collision",
+            "invalid"
+          ],
+          "private_new_topics_requested": [
+            "collision",
+            "invalid"
+          ],
+          "settled_private_topic_requests": 0,
+          "resumed_settled_private_requests": 0,
+          "public_contract_topic_requests": 0,
+          "resumed_public_contract_requests": 0,
+          "procedure_questions": 0
+        }
+      },
+      "acceptance": {
+        "initial_first_pass": {
+          "coco": false,
+          "bare": false
+        },
+        "initial_final_pass": {
+          "coco": true,
+          "bare": true
+        },
+        "changed_checkpoint_pass": {
+          "coco": true,
+          "bare": true
+        },
+        "resumed_first_pass": {
+          "coco": true,
+          "bare": true
+        },
+        "resumed_final_pass": {
+          "coco": true,
+          "bare": true
+        },
+        "pending_summary_exposure": {
+          "coco": true,
+          "bare": true
+        }
+      },
+      "completion_demonstrated": {
+        "coco": true,
+        "bare": true
+      }
+    },
+    {
+      "family": "lifecycle",
+      "seed": 2,
+      "complete": true,
+      "ids": {
+        "coco": "f226fa0a5d81",
+        "bare": "400c6ab73961"
+      },
+      "actor_seconds": {
+        "coco": 759.226,
+        "bare": 397.667
+      },
+      "actor_seconds_ratio": 1.9092004113994876,
+      "actor_seconds_difference": 361.559,
+      "actor_commands": {
+        "coco": 44,
+        "bare": 30
+      },
+      "statuses": {
+        "coco": {
+          "initial": "ready",
+          "change": "execution-failed"
+        },
+        "bare": {
+          "initial": "ready",
+          "change": "checkpoint-stop",
+          "resumed": "ready"
+        }
+      },
+      "stable": {
+        "coco": false,
+        "bare": true
+      },
+      "interventions": {
+        "coco": {
+          "owner_messages_delivered": 3,
+          "correction_messages": 1
+        },
+        "bare": {
+          "owner_messages_delivered": 4,
+          "correction_messages": 1
+        }
+      },
+      "question_metrics": {
+        "coco": {
+          "private_topics_requested": [
+            "collision",
+            "invalid"
+          ],
+          "private_choices_requested": 2,
+          "private_topics_delivered_in_question_answers": [
+            "collision",
+            "invalid"
+          ],
+          "private_new_topics_requested": [
+            "collision",
+            "invalid"
+          ],
+          "settled_private_topic_requests": 0,
+          "resumed_settled_private_requests": 0,
+          "public_contract_topic_requests": 0,
+          "resumed_public_contract_requests": 0,
+          "procedure_questions": 1
+        },
+        "bare": {
+          "private_topics_requested": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "private_choices_requested": 3,
+          "private_topics_delivered_in_question_answers": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "private_new_topics_requested": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "settled_private_topic_requests": 0,
+          "resumed_settled_private_requests": 0,
+          "public_contract_topic_requests": 1,
+          "resumed_public_contract_requests": 1,
+          "procedure_questions": 0
+        }
+      },
+      "acceptance": {
+        "initial_first_pass": {
+          "coco": false,
+          "bare": false
+        },
+        "initial_final_pass": {
+          "coco": true,
+          "bare": true
+        },
+        "changed_checkpoint_pass": {
+          "coco": null,
+          "bare": true
+        },
+        "resumed_first_pass": {
+          "coco": null,
+          "bare": true
+        },
+        "resumed_final_pass": {
+          "coco": null,
+          "bare": true
+        },
+        "pending_summary_exposure": {
+          "coco": null,
+          "bare": true
+        }
+      },
+      "completion_demonstrated": {
+        "coco": false,
+        "bare": true
+      }
+    },
+    {
+      "family": "lifecycle",
+      "seed": 3,
+      "complete": true,
+      "ids": {
+        "coco": "15169f7554d2",
+        "bare": "13616f4d9925"
+      },
+      "actor_seconds": {
+        "coco": 491.343,
+        "bare": 344.194
+      },
+      "actor_seconds_ratio": 1.4275176208765987,
+      "actor_seconds_difference": 147.149,
+      "actor_commands": {
+        "coco": 39,
+        "bare": 27
+      },
+      "statuses": {
+        "coco": {
+          "initial": "ready",
+          "change": "checkpoint-stop",
+          "resumed": "ready"
+        },
+        "bare": {
+          "initial": "ready",
+          "change": "checkpoint-stop",
+          "resumed": "ready"
+        }
+      },
+      "stable": {
+        "coco": true,
+        "bare": true
+      },
+      "interventions": {
+        "coco": {
+          "owner_messages_delivered": 3,
+          "correction_messages": 1
+        },
+        "bare": {
+          "owner_messages_delivered": 3,
+          "correction_messages": 1
+        }
+      },
+      "question_metrics": {
+        "coco": {
+          "private_topics_requested": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "private_choices_requested": 3,
+          "private_topics_delivered_in_question_answers": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "private_new_topics_requested": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "settled_private_topic_requests": 0,
+          "resumed_settled_private_requests": 0,
+          "public_contract_topic_requests": 0,
+          "resumed_public_contract_requests": 0,
+          "procedure_questions": 0
+        },
+        "bare": {
+          "private_topics_requested": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "private_choices_requested": 3,
+          "private_topics_delivered_in_question_answers": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "private_new_topics_requested": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "settled_private_topic_requests": 0,
+          "resumed_settled_private_requests": 0,
+          "public_contract_topic_requests": 1,
+          "resumed_public_contract_requests": 1,
+          "procedure_questions": 0
+        }
+      },
+      "acceptance": {
+        "initial_first_pass": {
+          "coco": false,
+          "bare": false
+        },
+        "initial_final_pass": {
+          "coco": true,
+          "bare": true
+        },
+        "changed_checkpoint_pass": {
+          "coco": true,
+          "bare": true
+        },
+        "resumed_first_pass": {
+          "coco": true,
+          "bare": true
+        },
+        "resumed_final_pass": {
+          "coco": true,
+          "bare": true
+        },
+        "pending_summary_exposure": {
+          "coco": true,
+          "bare": true
+        }
+      },
+      "completion_demonstrated": {
+        "coco": true,
+        "bare": true
+      }
+    },
+    {
+      "family": "lifecycle",
+      "seed": 4,
+      "complete": true,
+      "ids": {
+        "coco": "841aba34ded2",
+        "bare": "62589328086d"
+      },
+      "actor_seconds": {
+        "coco": 674.91,
+        "bare": 435.883
+      },
+      "actor_seconds_ratio": 1.548374219687393,
+      "actor_seconds_difference": 239.027,
+      "actor_commands": {
+        "coco": 59,
+        "bare": 39
+      },
+      "statuses": {
+        "coco": {
+          "initial": "ready",
+          "change": "checkpoint-stop",
+          "resumed": "ready"
+        },
+        "bare": {
+          "initial": "ready",
+          "change": "checkpoint-stop",
+          "resumed": "ready"
+        }
+      },
+      "stable": {
+        "coco": true,
+        "bare": true
+      },
+      "interventions": {
+        "coco": {
+          "owner_messages_delivered": 3,
+          "correction_messages": 1
+        },
+        "bare": {
+          "owner_messages_delivered": 3,
+          "correction_messages": 1
+        }
+      },
+      "question_metrics": {
+        "coco": {
+          "private_topics_requested": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "private_choices_requested": 3,
+          "private_topics_delivered_in_question_answers": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "private_new_topics_requested": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "settled_private_topic_requests": 0,
+          "resumed_settled_private_requests": 0,
+          "public_contract_topic_requests": 0,
+          "resumed_public_contract_requests": 0,
+          "procedure_questions": 0
+        },
+        "bare": {
+          "private_topics_requested": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "private_choices_requested": 3,
+          "private_topics_delivered_in_question_answers": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "private_new_topics_requested": [
+            "collision",
+            "invalid",
+            "report"
+          ],
+          "settled_private_topic_requests": 0,
+          "resumed_settled_private_requests": 0,
+          "public_contract_topic_requests": 0,
+          "resumed_public_contract_requests": 0,
+          "procedure_questions": 0
+        }
+      },
+      "acceptance": {
+        "initial_first_pass": {
+          "coco": false,
+          "bare": false
+        },
+        "initial_final_pass": {
+          "coco": true,
+          "bare": true
+        },
+        "changed_checkpoint_pass": {
+          "coco": true,
+          "bare": true
+        },
+        "resumed_first_pass": {
+          "coco": true,
+          "bare": true
+        },
+        "resumed_final_pass": {
+          "coco": true,
+          "bare": true
+        },
+        "pending_summary_exposure": {
+          "coco": true,
+          "bare": true
+        }
+      },
+      "completion_demonstrated": {
+        "coco": true,
+        "bare": true
+      }
+    },
+    {
+      "family": "review",
+      "seed": 0,
+      "complete": true,
+      "ids": {
+        "coco": "d55f9b3d3f54",
+        "bare": "a9a53be98a8a"
+      },
+      "actor_seconds": {
+        "coco": 72.669,
+        "bare": 46.827
+      },
+      "actor_seconds_ratio": 1.5518611057723108,
+      "actor_seconds_difference": 25.842,
+      "actor_commands": {
+        "coco": 7,
+        "bare": 4
+      },
+      "statuses": {
+        "coco": {
+          "review": "reported"
+        },
+        "bare": {
+          "review": "reported"
+        }
+      },
+      "stable": {
+        "coco": true,
+        "bare": true
+      },
+      "interventions": {
+        "coco": {
+          "owner_messages_delivered": 0,
+          "correction_messages": 0
+        },
+        "bare": {
+          "owner_messages_delivered": 0,
+          "correction_messages": 0
+        }
+      },
+      "question_metrics": {
+        "coco": {
+          "private_topics_requested": [],
+          "private_choices_requested": 0,
+          "private_topics_delivered_in_question_answers": [],
+          "private_new_topics_requested": [],
+          "settled_private_topic_requests": 0,
+          "resumed_settled_private_requests": 0,
+          "public_contract_topic_requests": 0,
+          "resumed_public_contract_requests": 0,
+          "procedure_questions": 0
+        },
+        "bare": {
+          "private_topics_requested": [],
+          "private_choices_requested": 0,
+          "private_topics_delivered_in_question_answers": [],
+          "private_new_topics_requested": [],
+          "settled_private_topic_requests": 0,
+          "resumed_settled_private_requests": 0,
+          "public_contract_topic_requests": 0,
+          "resumed_public_contract_requests": 0,
+          "procedure_questions": 0
+        }
+      }
+    },
+    {
+      "family": "review",
+      "seed": 1,
+      "complete": true,
+      "ids": {
+        "coco": "e9287625a91b",
+        "bare": "df301b5ecfad"
+      },
+      "actor_seconds": {
+        "coco": 62.88,
+        "bare": 47.854
+      },
+      "actor_seconds_ratio": 1.3139967400844235,
+      "actor_seconds_difference": 15.026000000000003,
+      "actor_commands": {
+        "coco": 6,
+        "bare": 4
+      },
+      "statuses": {
+        "coco": {
+          "review": "reported"
+        },
+        "bare": {
+          "review": "reported"
+        }
+      },
+      "stable": {
+        "coco": true,
+        "bare": true
+      },
+      "interventions": {
+        "coco": {
+          "owner_messages_delivered": 0,
+          "correction_messages": 0
+        },
+        "bare": {
+          "owner_messages_delivered": 0,
+          "correction_messages": 0
+        }
+      },
+      "question_metrics": {
+        "coco": {
+          "private_topics_requested": [],
+          "private_choices_requested": 0,
+          "private_topics_delivered_in_question_answers": [],
+          "private_new_topics_requested": [],
+          "settled_private_topic_requests": 0,
+          "resumed_settled_private_requests": 0,
+          "public_contract_topic_requests": 0,
+          "resumed_public_contract_requests": 0,
+          "procedure_questions": 0
+        },
+        "bare": {
+          "private_topics_requested": [],
+          "private_choices_requested": 0,
+          "private_topics_delivered_in_question_answers": [],
+          "private_new_topics_requested": [],
+          "settled_private_topic_requests": 0,
+          "resumed_settled_private_requests": 0,
+          "public_contract_topic_requests": 0,
+          "resumed_public_contract_requests": 0,
+          "procedure_questions": 0
+        }
+      }
+    },
+    {
+      "family": "review",
+      "seed": 2,
+      "complete": true,
+      "ids": {
+        "coco": "76f5fe45dc3f",
+        "bare": "720a9cfb72f9"
+      },
+      "actor_seconds": {
+        "coco": 48.803,
+        "bare": 58.782
+      },
+      "actor_seconds_ratio": 0.8302371474260828,
+      "actor_seconds_difference": -9.979,
+      "actor_commands": {
+        "coco": 6,
+        "bare": 5
+      },
+      "statuses": {
+        "coco": {
+          "review": "reported"
+        },
+        "bare": {
+          "review": "reported"
+        }
+      },
+      "stable": {
+        "coco": true,
+        "bare": true
+      },
+      "interventions": {
+        "coco": {
+          "owner_messages_delivered": 0,
+          "correction_messages": 0
+        },
+        "bare": {
+          "owner_messages_delivered": 0,
+          "correction_messages": 0
+        }
+      },
+      "question_metrics": {
+        "coco": {
+          "private_topics_requested": [],
+          "private_choices_requested": 0,
+          "private_topics_delivered_in_question_answers": [],
+          "private_new_topics_requested": [],
+          "settled_private_topic_requests": 0,
+          "resumed_settled_private_requests": 0,
+          "public_contract_topic_requests": 0,
+          "resumed_public_contract_requests": 0,
+          "procedure_questions": 0
+        },
+        "bare": {
+          "private_topics_requested": [],
+          "private_choices_requested": 0,
+          "private_topics_delivered_in_question_answers": [],
+          "private_new_topics_requested": [],
+          "settled_private_topic_requests": 0,
+          "resumed_settled_private_requests": 0,
+          "public_contract_topic_requests": 0,
+          "resumed_public_contract_requests": 0,
+          "procedure_questions": 0
+        }
+      }
+    },
+    {
+      "family": "review",
+      "seed": 3,
+      "complete": true,
+      "ids": {
+        "coco": "4aadd71cd013",
+        "bare": "15e4e6ece481"
+      },
+      "actor_seconds": {
+        "coco": 65.201,
+        "bare": 34.35
+      },
+      "actor_seconds_ratio": 1.8981368267831147,
+      "actor_seconds_difference": 30.850999999999992,
+      "actor_commands": {
+        "coco": 7,
+        "bare": 3
+      },
+      "statuses": {
+        "coco": {
+          "review": "reported"
+        },
+        "bare": {
+          "review": "reported"
+        }
+      },
+      "stable": {
+        "coco": true,
+        "bare": true
+      },
+      "interventions": {
+        "coco": {
+          "owner_messages_delivered": 0,
+          "correction_messages": 0
+        },
+        "bare": {
+          "owner_messages_delivered": 0,
+          "correction_messages": 0
+        }
+      },
+      "question_metrics": {
+        "coco": {
+          "private_topics_requested": [],
+          "private_choices_requested": 0,
+          "private_topics_delivered_in_question_answers": [],
+          "private_new_topics_requested": [],
+          "settled_private_topic_requests": 0,
+          "resumed_settled_private_requests": 0,
+          "public_contract_topic_requests": 0,
+          "resumed_public_contract_requests": 0,
+          "procedure_questions": 0
+        },
+        "bare": {
+          "private_topics_requested": [],
+          "private_choices_requested": 0,
+          "private_topics_delivered_in_question_answers": [],
+          "private_new_topics_requested": [],
+          "settled_private_topic_requests": 0,
+          "resumed_settled_private_requests": 0,
+          "public_contract_topic_requests": 0,
+          "resumed_public_contract_requests": 0,
+          "procedure_questions": 0
+        }
+      }
+    },
+    {
+      "family": "review",
+      "seed": 4,
+      "complete": true,
+      "ids": {
+        "coco": "68f6adea10b2",
+        "bare": "09f08c634b2e"
+      },
+      "actor_seconds": {
+        "coco": 45.084,
+        "bare": 49.247
+      },
+      "actor_seconds_ratio": 0.9154669319958577,
+      "actor_seconds_difference": -4.162999999999997,
+      "actor_commands": {
+        "coco": 6,
+        "bare": 5
+      },
+      "statuses": {
+        "coco": {
+          "review": "reported"
+        },
+        "bare": {
+          "review": "reported"
+        }
+      },
+      "stable": {
+        "coco": true,
+        "bare": true
+      },
+      "interventions": {
+        "coco": {
+          "owner_messages_delivered": 0,
+          "correction_messages": 0
+        },
+        "bare": {
+          "owner_messages_delivered": 0,
+          "correction_messages": 0
+        }
+      },
+      "question_metrics": {
+        "coco": {
+          "private_topics_requested": [],
+          "private_choices_requested": 0,
+          "private_topics_delivered_in_question_answers": [],
+          "private_new_topics_requested": [],
+          "settled_private_topic_requests": 0,
+          "resumed_settled_private_requests": 0,
+          "public_contract_topic_requests": 0,
+          "resumed_public_contract_requests": 0,
+          "procedure_questions": 0
+        },
+        "bare": {
+          "private_topics_requested": [],
+          "private_choices_requested": 0,
+          "private_topics_delivered_in_question_answers": [],
+          "private_new_topics_requested": [],
+          "settled_private_topic_requests": 0,
+          "resumed_settled_private_requests": 0,
+          "public_contract_topic_requests": 0,
+          "resumed_public_contract_requests": 0,
+          "procedure_questions": 0
+        }
+      }
+    }
+  ],
+  "paired_costs": [
+    {
+      "family": "lifecycle",
+      "n": 5,
+      "scope": "all_available_pairs_including_unfinished_attempts",
+      "cost_increase_pairs": 5,
+      "actor_seconds_ratio": {
+        "n": 5,
+        "median": 1.548374219687393,
+        "minimum": 1.2795318627612708,
+        "maximum": 2.2538706094150993,
+        "total": 8.41849472413985
+      },
+      "actor_seconds_difference": {
+        "n": 5,
+        "median": 239.027,
+        "minimum": 127.09000000000003,
+        "maximum": 491.02199999999993,
+        "total": 1365.8470000000002
+      },
+      "procedure_screen": "Not decided: requires acceptance, blinded review and source/rework audit; cost alone is not a causal rule attribution."
+    },
+    {
+      "family": "review",
+      "n": 5,
+      "scope": "all_available_pairs_including_unfinished_attempts",
+      "cost_increase_pairs": 3,
+      "actor_seconds_ratio": {
+        "n": 5,
+        "median": 1.3139967400844235,
+        "minimum": 0.8302371474260828,
+        "maximum": 1.8981368267831147,
+        "total": 6.509698752061789
+      },
+      "actor_seconds_difference": {
+        "n": 5,
+        "median": 15.026000000000003,
+        "minimum": -9.979,
+        "maximum": 30.850999999999992,
+        "total": 57.577
+      },
+      "procedure_screen": "Not decided: requires acceptance, blinded review and source/rework audit; cost alone is not a causal rule attribution."
+    }
+  ],
+  "jointly_completed": {
+    "family": "lifecycle",
+    "n": 4,
+    "seeds": [
+      0,
+      1,
+      3,
+      4
+    ],
+    "scope": "Same matched seeds with demonstrated completion in both arms; failures remain in all-attempt results.",
+    "groups": [
+      {
+        "family": "lifecycle",
+        "arm": "coco",
+        "scope": "jointly_completed_pairs",
+        "n": 4,
+        "metrics": {
+          "actor_seconds": {
+            "n": 4,
+            "median": 628.3265,
+            "minimum": 491.343,
+            "maximum": 882.627,
+            "total": 2630.623
+          },
+          "actor_turns": {
+            "n": 4,
+            "median": 6.0,
+            "minimum": 6,
+            "maximum": 6,
+            "total": 24
+          },
+          "actor_commands": {
+            "n": 4,
+            "median": 46.0,
+            "minimum": 39,
+            "maximum": 59,
+            "total": 190
+          },
+          "owner_messages_delivered": {
+            "n": 4,
+            "median": 3.0,
+            "minimum": 3,
+            "maximum": 3,
+            "total": 12
+          },
+          "correction_messages": {
+            "n": 4,
+            "median": 1.0,
+            "minimum": 1,
+            "maximum": 1,
+            "total": 4
+          },
+          "synthetic_owner_seconds": {
+            "n": 4,
+            "median": 42.512,
+            "minimum": 38.209,
+            "maximum": 60.197,
+            "total": 183.43
+          },
+          "synthetic_owner_calls": {
+            "n": 4,
+            "median": 5.0,
+            "minimum": 5,
+            "maximum": 5,
+            "total": 20
+          },
+          "private_choices_requested": {
+            "n": 4,
+            "median": 3.0,
+            "minimum": 3,
+            "maximum": 3,
+            "total": 12
+          },
+          "settled_private_topic_requests": {
+            "n": 4,
+            "median": 0.0,
+            "minimum": 0,
+            "maximum": 0,
+            "total": 0
+          },
+          "resumed_settled_private_requests": {
+            "n": 4,
+            "median": 0.0,
+            "minimum": 0,
+            "maximum": 0,
+            "total": 0
+          },
+          "public_contract_topic_requests": {
+            "n": 4,
+            "median": 0.0,
+            "minimum": 0,
+            "maximum": 1,
+            "total": 1
+          },
+          "resumed_public_contract_requests": {
+            "n": 4,
+            "median": 0.0,
+            "minimum": 0,
+            "maximum": 1,
+            "total": 1
+          },
+          "procedure_questions": {
+            "n": 4,
+            "median": 0.0,
+            "minimum": 0,
+            "maximum": 0,
+            "total": 0
+          },
+          "input_tokens": {
+            "n": 4,
+            "median": 3293945.0,
+            "minimum": 2249208,
+            "maximum": 4260270,
+            "total": 13097368
+          },
+          "cached_input_tokens": {
+            "n": 4,
+            "median": 3036352.0,
+            "minimum": 2115584,
+            "maximum": 4033408,
+            "total": 12221696
+          },
+          "output_tokens": {
+            "n": 4,
+            "median": 32725.5,
+            "minimum": 24976,
+            "maximum": 40897,
+            "total": 131324
+          }
+        },
+        "lifecycle_boolean_counts": {
+          "initial_first_pass": {
+            "true": 0,
+            "false": 4,
+            "unknown": 0
+          },
+          "initial_final_pass": {
+            "true": 4,
+            "false": 0,
+            "unknown": 0
+          },
+          "changed_checkpoint_pass": {
+            "true": 4,
+            "false": 0,
+            "unknown": 0
+          },
+          "resumed_first_pass": {
+            "true": 4,
+            "false": 0,
+            "unknown": 0
+          },
+          "resumed_final_pass": {
+            "true": 4,
+            "false": 0,
+            "unknown": 0
+          },
+          "pending_summary_exposure": {
+            "true": 4,
+            "false": 0,
+            "unknown": 0
+          },
+          "stable": {
+            "true": 4,
+            "false": 0,
+            "unknown": 0
+          },
+          "owned_work_committed": {
+            "true": 4,
+            "false": 0,
+            "unknown": 0
+          },
+          "feature_branch": {
+            "true": 4,
+            "false": 0,
+            "unknown": 0
+          }
+        },
+        "lifecycle_completion": {
+          "demonstrated": 4,
+          "not_demonstrated": 0
+        },
+        "review_quality": null,
+        "usage_coverage": {
+          "recorded_turns": 24,
+          "unavailable_turns": 0,
+          "complete_projects": 4
+        }
+      },
+      {
+        "family": "lifecycle",
+        "arm": "bare",
+        "scope": "jointly_completed_pairs",
+        "n": 4,
+        "metrics": {
+          "actor_seconds": {
+            "n": 4,
+            "median": 413.744,
+            "minimum": 344.194,
+            "maximum": 454.653,
+            "total": 1626.335
+          },
+          "actor_turns": {
+            "n": 4,
+            "median": 6.0,
+            "minimum": 5,
+            "maximum": 6,
+            "total": 23
+          },
+          "actor_commands": {
+            "n": 4,
+            "median": 29.5,
+            "minimum": 27,
+            "maximum": 39,
+            "total": 125
+          },
+          "owner_messages_delivered": {
+            "n": 4,
+            "median": 3.0,
+            "minimum": 2,
+            "maximum": 3,
+            "total": 11
+          },
+          "correction_messages": {
+            "n": 4,
+            "median": 1.0,
+            "minimum": 1,
+            "maximum": 1,
+            "total": 4
+          },
+          "synthetic_owner_seconds": {
+            "n": 4,
+            "median": 40.015,
+            "minimum": 34.988,
+            "maximum": 43.128,
+            "total": 158.14600000000002
+          },
+          "synthetic_owner_calls": {
+            "n": 4,
+            "median": 5.0,
+            "minimum": 4,
+            "maximum": 5,
+            "total": 19
+          },
+          "private_choices_requested": {
+            "n": 4,
+            "median": 3.0,
+            "minimum": 2,
+            "maximum": 3,
+            "total": 11
+          },
+          "settled_private_topic_requests": {
+            "n": 4,
+            "median": 0.0,
+            "minimum": 0,
+            "maximum": 0,
+            "total": 0
+          },
+          "resumed_settled_private_requests": {
+            "n": 4,
+            "median": 0.0,
+            "minimum": 0,
+            "maximum": 0,
+            "total": 0
+          },
+          "public_contract_topic_requests": {
+            "n": 4,
+            "median": 0.0,
+            "minimum": 0,
+            "maximum": 1,
+            "total": 1
+          },
+          "resumed_public_contract_requests": {
+            "n": 4,
+            "median": 0.0,
+            "minimum": 0,
+            "maximum": 1,
+            "total": 1
+          },
+          "procedure_questions": {
+            "n": 4,
+            "median": 0.0,
+            "minimum": 0,
+            "maximum": 0,
+            "total": 0
+          },
+          "input_tokens": {
+            "n": 4,
+            "median": 1784225.5,
+            "minimum": 1376672,
+            "maximum": 1948276,
+            "total": 6893399
+          },
+          "cached_input_tokens": {
+            "n": 4,
+            "median": 1600640.0,
+            "minimum": 1223552,
+            "maximum": 1779200,
+            "total": 6204032
+          },
+          "output_tokens": {
+            "n": 4,
+            "median": 22641.0,
+            "minimum": 16665,
+            "maximum": 31673,
+            "total": 93620
+          }
+        },
+        "lifecycle_boolean_counts": {
+          "initial_first_pass": {
+            "true": 0,
+            "false": 4,
+            "unknown": 0
+          },
+          "initial_final_pass": {
+            "true": 4,
+            "false": 0,
+            "unknown": 0
+          },
+          "changed_checkpoint_pass": {
+            "true": 4,
+            "false": 0,
+            "unknown": 0
+          },
+          "resumed_first_pass": {
+            "true": 4,
+            "false": 0,
+            "unknown": 0
+          },
+          "resumed_final_pass": {
+            "true": 4,
+            "false": 0,
+            "unknown": 0
+          },
+          "pending_summary_exposure": {
+            "true": 4,
+            "false": 0,
+            "unknown": 0
+          },
+          "stable": {
+            "true": 4,
+            "false": 0,
+            "unknown": 0
+          },
+          "owned_work_committed": {
+            "true": 4,
+            "false": 0,
+            "unknown": 0
+          },
+          "feature_branch": {
+            "true": 4,
+            "false": 0,
+            "unknown": 0
+          }
+        },
+        "lifecycle_completion": {
+          "demonstrated": 4,
+          "not_demonstrated": 0
+        },
+        "review_quality": null,
+        "usage_coverage": {
+          "recorded_turns": 23,
+          "unavailable_turns": 0,
+          "complete_projects": 4
+        }
+      }
+    ],
+    "paired_distributions": {
+      "actor_seconds": {
+        "coco_minus_bare": {
+          "n": 4,
+          "median": 193.088,
+          "minimum": 127.09000000000003,
+          "maximum": 491.02199999999993,
+          "total": 1004.288
+        },
+        "coco_divided_by_bare": {
+          "n": 4,
+          "median": 1.4879459202819958,
+          "minimum": 1.2795318627612708,
+          "maximum": 2.2538706094150993,
+          "total": 6.509294312740362
+        }
+      },
+      "actor_turns": {
+        "coco_minus_bare": {
+          "n": 4,
+          "median": 0.0,
+          "minimum": 0,
+          "maximum": 1,
+          "total": 1
+        },
+        "coco_divided_by_bare": {
+          "n": 4,
+          "median": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.2,
+          "total": 4.2
+        }
+      },
+      "actor_commands": {
+        "coco_minus_bare": {
+          "n": 4,
+          "median": 16.0,
+          "minimum": 11,
+          "maximum": 22,
+          "total": 65
+        },
+        "coco_divided_by_bare": {
+          "n": 4,
+          "median": 1.4786324786324787,
+          "minimum": 1.3793103448275863,
+          "maximum": 1.7333333333333334,
+          "total": 6.069908635425877
+        }
+      },
+      "owner_messages_delivered": {
+        "coco_minus_bare": {
+          "n": 4,
+          "median": 0.0,
+          "minimum": 0,
+          "maximum": 1,
+          "total": 1
+        },
+        "coco_divided_by_bare": {
+          "n": 4,
+          "median": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.5,
+          "total": 4.5
+        }
+      },
+      "correction_messages": {
+        "coco_minus_bare": {
+          "n": 4,
+          "median": 0.0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "coco_divided_by_bare": {
+          "n": 4,
+          "median": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "total": 4.0
+        }
+      },
+      "synthetic_owner_seconds": {
+        "coco_minus_bare": {
+          "n": 4,
+          "median": 3.587500000000002,
+          "minimum": -1.4110000000000014,
+          "maximum": 19.520000000000003,
+          "total": 25.284000000000006
+        },
+        "coco_divided_by_bare": {
+          "n": 4,
+          "median": 1.0962676605195707,
+          "minimum": 0.9672834353552217,
+          "maximum": 1.4798780637706812,
+          "total": 4.639696820165044
+        }
+      },
+      "synthetic_owner_calls": {
+        "coco_minus_bare": {
+          "n": 4,
+          "median": 0.0,
+          "minimum": 0,
+          "maximum": 1,
+          "total": 1
+        },
+        "coco_divided_by_bare": {
+          "n": 4,
+          "median": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.25,
+          "total": 4.25
+        }
+      },
+      "private_choices_requested": {
+        "coco_minus_bare": {
+          "n": 4,
+          "median": 0.0,
+          "minimum": 0,
+          "maximum": 1,
+          "total": 1
+        },
+        "coco_divided_by_bare": {
+          "n": 4,
+          "median": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.5,
+          "total": 4.5
+        }
+      },
+      "settled_private_topic_requests": {
+        "coco_minus_bare": {
+          "n": 4,
+          "median": 0.0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "coco_divided_by_bare": {
+          "n": 0,
+          "median": null,
+          "minimum": null,
+          "maximum": null,
+          "total": null
+        }
+      },
+      "resumed_settled_private_requests": {
+        "coco_minus_bare": {
+          "n": 4,
+          "median": 0.0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "coco_divided_by_bare": {
+          "n": 0,
+          "median": null,
+          "minimum": null,
+          "maximum": null,
+          "total": null
+        }
+      },
+      "public_contract_topic_requests": {
+        "coco_minus_bare": {
+          "n": 4,
+          "median": 0.0,
+          "minimum": -1,
+          "maximum": 1,
+          "total": 0
+        },
+        "coco_divided_by_bare": {
+          "n": 1,
+          "median": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "total": 0.0
+        }
+      },
+      "resumed_public_contract_requests": {
+        "coco_minus_bare": {
+          "n": 4,
+          "median": 0.0,
+          "minimum": -1,
+          "maximum": 1,
+          "total": 0
+        },
+        "coco_divided_by_bare": {
+          "n": 1,
+          "median": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "total": 0.0
+        }
+      },
+      "procedure_questions": {
+        "coco_minus_bare": {
+          "n": 4,
+          "median": 0.0,
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "coco_divided_by_bare": {
+          "n": 0,
+          "median": null,
+          "minimum": null,
+          "maximum": null,
+          "total": null
+        }
+      }
+    },
+    "cost_increase_pairs": 4
+  },
+  "incomplete": [],
+  "question_records_unavailable": [],
+  "limits": [
+    "Five paired projects per family when complete; lifecycle stages are not independent samples.",
+    "All-attempt costs include unfinished work. Lower intervention on an unfinished attempt is not completion efficiency.",
+    "Jointly completed distributions use the same matched seeds in both arms and condition on observed completion; they are descriptive, not a causal success-adjusted estimate.",
+    "Completion requires stable observation, final resume acceptance, ready resume status, committed owned work and a feature branch. Unknown evidence cannot demonstrate completion.",
+    "Descriptive observations only: no significance test, overall quality score or causal speedup claim.",
+    "Actor elapsed time is not human effort or monetary price; synthetic owner costs remain separate.",
+    "Unavailable usage is not zero. Partially recorded token totals are lower bounds; inspect coverage.",
+    "Private elicitation uses actual questions only, excluding corrective fact disclosure. Raw records are required.",
+    "Public contract requests and already-settled private requests are separate; neither automatically proves waste.",
+    "Review quality requires separate blinded grading; report status and source checks are not defect recall.",
+    "Procedure reduction requires the frozen quality/rework screen and later single-rule ablation."
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "reviewer": "fresh-context collaboration agent /root/source_review",
+  "mode": "read-only; no source edits or actor execution",
+  "scope": {
+    "initial": "84a59a2..9949121",
+    "followup": "9949121..17e3425"
+  },
+  "verdicts": {
+    "specification": "no blocking static defect found for C1-C8",
+    "standards": "29 registrations/frontmatter retained; 131 source entries preserved; 64 reference/override additions only",
+    "quality": "no blocking static defect; native adherence and comparative outcome require separate evidence"
+  },
+  "optional_findings": [
+    "Old integration-decision rows are explicitly superseded later; row-local pointers would improve readability but do not conflict with current execution ownership."
+  ],
+  "resolved_document_finding": "Spec concrete-acceptance text now names workflow as material-choice owner, common as link and build/clarify as explicit triggers.",
+  "report_semantic_adjudication": [
+    {
+      "case": "copy-edit at9949121",
+      "grade": "partial",
+      "original": "only indirectly inferred through from the spec",
+      "actual": "Corrected guied → guide",
+      "departure": "no material departure from the spec",
+      "limit": "Not absent comparison; original vs latest spec expectation remains ambiguous."
+    },
+    {
+      "case": "static-c7 at17e3425",
+      "grade": "clear",
+      "original": "preserving all other wording as agreed supplies agreed scope",
+      "actual": "Corrected README Welcom → Welcome",
+      "departure": "No departure",
+      "limit": "Semantic content suffices; literal Expected/Actual labels are not required."
+    }
+  ],
+  "limitations": [
+    "Two static cases do not prove a comparative quality gain or universal report adherence.",
+    "This review does not approve release publication or complete the native comparison."
+  ],
+  "constraint_followup_review": {
+    "reviewer": "fresh-context independent /root/source_review; read-only follow-up",
+    "base_head": "f6336e0",
+    "scope": [
+      "skills/_coco-shared/workflow.md",
+      "skills/coco-build/SKILL.md",
+      "skills/_coco-shared/decisions.md",
+      "docs/specs/coco-1.1.0.md",
+      "docs/plans/coco-1.1.0.md",
+      "docs/coco-1.0.0-to-1.1.0.md"
+    ],
+    "verdict": "No actionable static defect: scope-limited recheck preserves delegated implementation; original 38 decisions and English execution guidance retained; plan distinguishes incomplete F4 and supplemental probes.",
+    "excluded": "Concurrent observations archive changes, active SQLite follow-up runtime outcome and comparative gain not included."
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "reviewer": "waited_evidence_audit",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "mode": "independent read-only",
+  "scope": "Stopped waited cohorts only; no live budget900 evidence or outcomes read",
+  "reviewed_head": "a6addd72ca776d13f097423ac04ac96515618a7d",
+  "archives": [
+    {
+      "name": "waited-clock-failure-native.tar.gz",
+      "sha256": "9a1a7f9862c9fe753ec3ef948252d735edc09d8dc0dfbd64929df623240a002f",
+      "files": 2252,
+      "git_objects": 158
+    },
+    {
+      "name": "waited-budget-stop-native.tar.gz",
+      "sha256": "d4e1afd14de2c730053a47657984d0945cbcf42ccc03c6b76dd500faa2bbdca6",
+      "files": 2467,
+      "git_objects": 254
+    },
+    {
+      "name": "waited-budget-stop-blind-ungraded.tar.gz",
+      "sha256": "cd891ac3ffa3011e508ba83293544871c9fb2b1e8097293970735a2e506c9c32",
+      "files": 290,
+      "git_objects": 99
+    }
+  ],
+  "all_entry_hashes_and_modes_match": true,
+  "credential_pattern_hits": 0,
+  "sensitive_filenames": 0,
+  "unsafe_paths_symlinks_special_files_or_git_packs": 0,
+  "source_guide_hashes_verified": 235,
+  "previous_committed_archive_and_manifest_files_unchanged": 10,
+  "report_matches_evidence": true,
+  "findings": [],
+  "limitations": [
+    "Bounded privacy scan, not an absolute guarantee",
+    "No completed matched pair or quality/no-regression/speed conclusion",
+    "Partial blind packet remains ungraded"
+  ]
+}

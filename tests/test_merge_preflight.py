@@ -184,6 +184,95 @@ class MergePreflightTests(unittest.TestCase):
         self.commit(self.work, 'local.txt', 'local\n', 'never pushed')
         self.assertEqual(self.preflight(expect=1)['blockers'], ['branch_not_on_remote'])
 
+    def upstream(self):
+        """A distinct PR base repository, initially at the shared baseline."""
+        upstream = Path(self.temp.name) / 'upstream.git'
+        subprocess.run(['git', 'clone', '-q', '--bare', str(self.remote), str(upstream)],
+                       check=True, capture_output=True)
+        self.git(self.work, 'remote', 'add', 'upstream', str(upstream))
+        return upstream
+
+    def test_fork_same_named_target_cannot_hide_unreleased_source_commits(self):
+        upstream = self.upstream()
+        actual_target = self.git(self.work, 'rev-parse', 'main')
+        self.git(self.work, 'switch', '-qc', 'develop')
+        unreleased = self.commit(self.work, 'unreleased.txt', 'later\n', 'unreleased fork work')
+        self.git(self.work, 'push', '-q', 'origin', 'develop', 'HEAD:main')
+        head = self.feature(start='develop')
+        # The fork's main contains the integration work; the actual PR base does not.
+        self.assertEqual(self.preflight(expect=0)['status'], 'clear')
+        report = self.preflight('--target-remote', 'upstream', '--target', 'main',
+                                '--expect-head', head, expect=1)
+        self.assertEqual(report['remote'], 'origin')
+        self.assertEqual(report['target_remote'], 'upstream')
+        self.assertEqual(report['target_tip'], actual_target)
+        self.assertEqual(report['head'], head)
+        self.assertEqual(report['blockers'], ['integration_commits_carried'])
+        self.assertEqual([row['oid'] for row in report['carried']], [unreleased])
+        self.assertEqual(self.git(upstream, 'rev-parse', 'main'), actual_target)
+
+    def test_distinct_target_that_already_contains_integration_work_is_clear(self):
+        self.upstream()
+        self.git(self.work, 'switch', '-qc', 'develop')
+        integrated = self.commit(self.work, 'integrated.txt', 'landed\n', 'already landed upstream')
+        self.git(self.work, 'push', '-q', 'origin', 'develop')
+        self.git(self.work, 'push', '-q', 'upstream', 'HEAD:main')
+        head = self.feature(start='develop')
+        # The fork's stale main would incorrectly classify this as carried work.
+        self.assertEqual(self.preflight(expect=1)['blockers'], ['integration_commits_carried'])
+        report = self.preflight('--target-remote', 'upstream', '--expect-head', head, expect=0)
+        self.assertEqual((report['head'], report['target_tip']), (head, integrated))
+        self.assertEqual([row['subject'] for row in report['own']], ['feature work'])
+        self.assertEqual(report['carried'], [])
+
+    def test_upstream_only_integration_branch_still_protects_fork_merge(self):
+        self.upstream()
+        self.git(self.work, 'switch', '-qc', 'develop')
+        unreleased = self.commit(self.work, 'unreleased.txt', 'later\n', 'upstream develop work')
+        self.git(self.work, 'push', '-q', 'upstream', 'develop')
+        self.git(self.work, 'push', '-q', 'origin', 'HEAD:main')
+        self.feature(start='develop')
+        report = self.preflight('--target-remote', 'upstream', expect=1)
+        self.assertEqual(report['blockers'], ['integration_commits_carried'])
+        self.assertEqual([row['oid'] for row in report['carried']], [unreleased])
+
+    def test_unavailable_distinct_target_leaves_refs_checkout_and_index_unchanged(self):
+        upstream = self.upstream()
+        self.feature()
+        (self.work / 'notes.txt').write_text('user draft\n', encoding='utf-8')
+        before = (self.git(self.work, 'for-each-ref'),
+                  self.git(self.work, 'status', '--porcelain=v1'),
+                  (self.work / '.git/index').read_bytes(),
+                  self.git(self.remote, 'show-ref'), self.git(upstream, 'show-ref'))
+        for arguments, message in (
+                (('--target-remote', 'upstream', '--target', 'missing'), 'not on upstream'),
+                (('--target-remote', str(Path(self.temp.name) / 'absent.git')), 'ls-remote failed')):
+            with self.subTest(arguments=arguments):
+                self.assertIn(message, self.preflight(*arguments, expect=2).stderr)
+                self.assertEqual((self.git(self.work, 'for-each-ref'),
+                                  self.git(self.work, 'status', '--porcelain=v1'),
+                                  (self.work / '.git/index').read_bytes(),
+                                  self.git(self.remote, 'show-ref'), self.git(upstream, 'show-ref')),
+                                 before)
+                self.assertFalse((self.work / '.git/FETCH_HEAD').exists())
+
+    def test_target_remote_default_preserves_same_repository_result(self):
+        self.feature()
+        implicit = self.preflight(expect=0)
+        explicit = self.preflight('--target-remote', 'origin', expect=0)
+        self.assertEqual(implicit, explicit)
+        self.assertEqual(implicit['target_remote'], 'origin')
+
+    def test_same_branch_name_across_distinct_repositories_uses_source_head(self):
+        self.upstream()
+        target = self.git(self.work, 'rev-parse', 'main')
+        head = self.commit(self.work, 'feature.txt', 'feature\n', 'feature on fork main')
+        self.git(self.work, 'push', '-q', 'origin', 'main')
+        report = self.preflight('--target-remote', 'upstream', '--expect-head', head, expect=0)
+        self.assertEqual((report['branch'], report['target']), ('main', 'main'))
+        self.assertEqual((report['head'], report['target_tip']), (head, target))
+        self.assertEqual([row['subject'] for row in report['own']], ['feature on fork main'])
+
     def test_unusable_inputs_exit_two_rather_than_clear(self):
         self.feature()
         self.assertIn('not on origin', self.preflight('--target', 'release', expect=2).stderr)

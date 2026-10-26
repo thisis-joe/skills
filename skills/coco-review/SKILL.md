@@ -6,7 +6,7 @@ license: MIT
 
 # coco-review
 
-Assess the actual change without changing it or hiding a failed review axis.
+Assess the actual change without changing it or hiding a failed review axis. The normal build handoff is formal review after implementation commits; a direct request can review work in progress or an exact revision range without requiring a new commit. Prefer a fresh reviewer seeing requirements/artifacts rather than the author conversation; disclose missing independence for the user's decision. Apply the [transition contract](../_coco-shared/workflow.md) before sending fixes to build.
 
 Read the [common contract](../_coco-shared/contracts.md) before acting; when the request already shows that the file below applies, read both in one call. Initially and on new scope, risk, state, or missing prerequisites, check for freezing scope with the shared review-scope collector, dependency or lockfile changes, a suspicious diff, shared contract change or deletion that needs impact and safety facts, a requested or high-impact adversarial review, automated review comments, and comments or suppressions that encode constraints. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/review.md) before dependent work.
 

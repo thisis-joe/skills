@@ -1,0 +1,502 @@
+{
+  "source_candidate": "17e3425",
+  "execution": "two fresh-context collaboration actors; supplementary, not paired native cohort",
+  "records": {
+    "known": {
+      "project": "/private/tmp/coco-v110-pickup-j7qft5zf/known",
+      "before": {
+        "head": "dc76130c36a8fa301df01d620f77b42ef4a95a94",
+        "branch": "main",
+        "status": "?? personal-notes.txt",
+        "files": {
+          ".gitignore": "17232d43b05b0e36e6aed928aae2c0c87efdc088efdb3a9b6b3da954e5263b57",
+          "AGENTS.md": "7bd207a840b1a5f295c58ee1bf5108afd47b4b34d377581be7952a2f8a44a939",
+          "BRIEF.md": "819f9630c5c02c2053b239e94b46898cf8457836633239f4f5b119c6b54c9948",
+          "README.md": "057ecc3856bda7f4c1914eb239e1fbc8b55e9f6bc40f85b992a4fdec0fa4480d",
+          "catalog.py": "28224766c8afb310291546667a435264613b285a8dfb082f98a878e55ce01f08",
+          "docs/plan.md": "cdae00e69c672b5b7248e49f80896788821b24ab37191d0e0498d1f892b869e2",
+          "docs/spec.md": "94b79a9a05f6ae6c91624e32767b187662adb704e774bb4414bd06ba803a03be",
+          "personal-notes.txt": "7921c77aaec7ea4d762a266132d13810d9dee5386ae81cab1dd7d8c2a01ed635",
+          "store.sqlite": "ca327a2f34a38b6976be30f9ba5ab5f49a2cf5f26447ff27c2ca6cd8b5db12fa",
+          "test_catalog.py": "cdce1dd577ce10f5e0e2d1a5fa9ac86347d9ae7fc03bcc4a14e2536eb521fa9b"
+        }
+      },
+      "after": {
+        "head": "0f09d70e6fbf50afef971e35ba3a1ee0fbe1b7be",
+        "branch": "feat/catalog-csv-import",
+        "status": "?? personal-notes.txt",
+        "files": {
+          ".gitignore": "17232d43b05b0e36e6aed928aae2c0c87efdc088efdb3a9b6b3da954e5263b57",
+          "AGENTS.md": "7bd207a840b1a5f295c58ee1bf5108afd47b4b34d377581be7952a2f8a44a939",
+          "BRIEF.md": "819f9630c5c02c2053b239e94b46898cf8457836633239f4f5b119c6b54c9948",
+          "README.md": "7053d85a786bd1fe9607eccb518265afb79afb424ab5f2db7ab59011a4ac007b",
+          "catalog.py": "958c884ac8fc6f170e8ce09d22444974adff995132a90d76f32b1457c32e92cb",
+          "docs/evidence/cli-check.txt": "db2a1fe03166c9acd2d159638dbff8b505258f656dc402dbce544b74706e8179",
+          "docs/evidence/test-sensitivity.txt": "c25d6630be1f2d5c93bc7b93930f64b89b1f76bf18504aeb0efe7f3efee765d4",
+          "docs/plan.md": "f4b2b5d6c498a75f82c8d5512ffae9535739753b00fa98c7ccbce2bf593609e4",
+          "docs/spec.md": "94b79a9a05f6ae6c91624e32767b187662adb704e774bb4414bd06ba803a03be",
+          "personal-notes.txt": "7921c77aaec7ea4d762a266132d13810d9dee5386ae81cab1dd7d8c2a01ed635",
+          "store.sqlite": "ca327a2f34a38b6976be30f9ba5ab5f49a2cf5f26447ff27c2ca6cd8b5db12fa",
+          "test_catalog.py": "d974b3b9e21af42e2f18c51aa7f5e29cee2a7bda515273887405ab3f9144c73e"
+        }
+      },
+      "public_observer": {
+        "passed": true,
+        "checks": [
+          {
+            "id": "runnable_unique_import",
+            "passed": true
+          },
+          {
+            "id": "chosen_identity_and_file_collision",
+            "passed": true
+          },
+          {
+            "id": "chosen_stored_collision",
+            "passed": true
+          },
+          {
+            "id": "chosen_malformed_policy",
+            "passed": true
+          },
+          {
+            "id": "malformed_readable",
+            "passed": true
+          },
+          {
+            "id": "skipped_rows_explained",
+            "passed": true
+          },
+          {
+            "id": "unrelated_file_preserved",
+            "passed": true
+          },
+          {
+            "id": "unrelated_file_uncommitted",
+            "passed": true
+          },
+          {
+            "id": "original_user_data_preserved",
+            "passed": true
+          },
+          {
+            "id": "chosen_emitted_sku",
+            "passed": true,
+            "expected": [
+              {
+                "sku": "mixed",
+                "name": "Single",
+                "price_cents": 8
+              }
+            ],
+            "actual": [
+              {
+                "sku": "mixed",
+                "name": "Single",
+                "price_cents": 8
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-fcbu5sz9/db1.sqlite",
+              "import",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-fcbu5sz9/input1.csv"
+            ],
+            "exit": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-fcbu5sz9/db1.sqlite",
+              "list"
+            ],
+            "exit": 0,
+            "stdout": "[{\"sku\": \"unique\", \"name\": \"Unique\", \"price_cents\": 9}]\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-fcbu5sz9/db2.sqlite",
+              "import",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-fcbu5sz9/input2.csv"
+            ],
+            "exit": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-fcbu5sz9/db2.sqlite",
+              "list"
+            ],
+            "exit": 0,
+            "stdout": "[{\"sku\": \"abc\", \"name\": \"two\", \"price_cents\": 7}]\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-fcbu5sz9/existing.sqlite",
+              "import",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-fcbu5sz9/input3.csv"
+            ],
+            "exit": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-fcbu5sz9/existing.sqlite",
+              "import",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-fcbu5sz9/input4.csv"
+            ],
+            "exit": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-fcbu5sz9/existing.sqlite",
+              "list"
+            ],
+            "exit": 0,
+            "stdout": "[{\"sku\": \"fixed\", \"name\": \"new\", \"price_cents\": 8}, {\"sku\": \"fresh\", \"name\": \"fresh\", \"price_cents\": 1}]\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-fcbu5sz9/db5.sqlite",
+              "import",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-fcbu5sz9/input5.csv"
+            ],
+            "exit": 1,
+            "stdout": "",
+            "stderr": "catalog import failed: CSV line 3: price_cents must be a nonnegative integer\n"
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-fcbu5sz9/db5.sqlite",
+              "list"
+            ],
+            "exit": 0,
+            "stdout": "[]\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/v110-observer-e_j52rhf/project/store.sqlite",
+              "list"
+            ],
+            "exit": 0,
+            "stdout": "[{\"sku\": \"keep\", \"name\": \"Legacy item 0\", \"price_cents\": 41}]\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/v110-observer-e_j52rhf/unique.sqlite",
+              "import",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/v110-observer-e_j52rhf/unique.csv"
+            ],
+            "exit": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/v110-observer-e_j52rhf/unique.sqlite",
+              "list"
+            ],
+            "exit": 0,
+            "stdout": "[{\"sku\": \"mixed\", \"name\": \"Single\", \"price_cents\": 8}]\n",
+            "stderr": ""
+          }
+        ],
+        "implemented": true,
+        "policy_passed": true
+      },
+      "unrelated_preserved": true,
+      "git_log": "0f09d70 docs: record import review and CLI verification completion\n9e132b3 feat: import catalog CSV with canonical keys and atomic validation\ndc76130 Record import task and public interface\nb3c986b Existing purchasing catalog",
+      "task_diff": "diff --git a/README.md b/README.md\nindex 38daa11..6165dbf 100644\n--- a/README.md\n+++ b/README.md\n@@ -11,3 +11,21 @@ No summary or multi-supplier feature is requested. Use the existing unittest\n command and exercise the real CLI. Choices outside this contract remain undecided.\n \n Checks: python3 -m unittest discover -v.\n+\n+The agreed import policy is recorded in [the spec](docs/spec.md). Import trims\n+SKU and name whitespace and stores SKU keys in lowercase. Case variants refer\n+to the same item. The last row for a key wins within a file; a later import\n+updates that key while preserving other stored items. Any malformed row rejects\n+the entire import and leaves the catalog unchanged.\n+\n+Example:\n+\n+```sh\n+python3 catalog.py --db catalog.sqlite import daily.csv\n+python3 catalog.py --db catalog.sqlite list\n+```\n+\n+The CSV header is `sku,name,price_cents`. Quoted names and UTF-8 text are\n+supported. Successful import is silent. Errors are written to stderr and\n+return a nonzero exit status without a traceback. Empty and header-only files\n+make no item changes.\ndiff --git a/catalog.py b/catalog.py\nindex f87e5d1..179fd3d 100644\n--- a/catalog.py\n+++ b/catalog.py\n@@ -1,9 +1,76 @@\n-import argparse, json, sqlite3\n+import argparse\n+from contextlib import closing\n+import csv\n+import json\n+import sqlite3\n+import sys\n+\n+\n+def read_rows(path):\n+    with open(path, encoding=\"utf-8\", newline=\"\") as source:\n+        reader = csv.reader(source, strict=True)\n+        header = next(reader, None)\n+        if header is None:\n+            return []\n+        if header != [\"sku\", \"name\", \"price_cents\"]:\n+            raise ValueError(\"expected CSV header: sku,name,price_cents\")\n+        rows = []\n+        for row in reader:\n+            location = f\"CSV line {reader.line_num}\"\n+            if len(row) != 3:\n+                raise ValueError(f\"{location}: expected 3 fields\")\n+            sku, name, price = (value.strip() for value in row)\n+            if not sku or not name:\n+                raise ValueError(f\"{location}: SKU and name must not be empty\")\n+            try:\n+                price = int(price)\n+            except ValueError:\n+                raise ValueError(f\"{location}: price_cents must be a nonnegative integer\") from None\n+            if price < 0:\n+                raise ValueError(f\"{location}: price_cents must be a nonnegative integer\")\n+            rows.append((sku.lower(), name, price))\n+        return rows\n+\n+\n def main():\n-    p=argparse.ArgumentParser();p.add_argument('--db',required=True)\n-    s=p.add_subparsers(dest='command',required=True);s.add_parser('list')\n-    a=p.parse_args();c=sqlite3.connect(a.db)\n-    c.execute('CREATE TABLE IF NOT EXISTS catalog (sku TEXT PRIMARY KEY, name TEXT NOT NULL, price_cents INTEGER NOT NULL)')\n-    print(json.dumps([dict(sku=k,name=n,price_cents=v) for k,n,v in c.execute('SELECT sku,name,price_cents FROM catalog ORDER BY sku')]))\n-    c.close()\n-if __name__=='__main__':main()\n+    parser = argparse.ArgumentParser()\n+    parser.add_argument(\"--db\", required=True)\n+    commands = parser.add_subparsers(dest=\"command\", required=True)\n+    commands.add_parser(\"list\")\n+    importer = commands.add_parser(\"import\")\n+    importer.add_argument(\"csv_path\")\n+    args = parser.parse_args()\n+    try:\n+        rows = read_rows(args.csv_path) if args.command == \"import\" else None\n+        with closing(sqlite3.connect(args.db)) as connection:\n+            with connection:\n+                connection.execute(\n+                    \"CREATE TABLE IF NOT EXISTS catalog \"\n+                    \"(sku TEXT PRIMARY KEY, name TEXT NOT NULL, price_cents INTEGER NOT NULL)\"\n+                )\n+                if args.command == \"import\":\n+                    # Bytes preserve integers beyond SQLite's 64-bit range without REAL rounding.\n+                    connection.executemany(\n+                        \"INSERT INTO catalog (sku, name, price_cents) VALUES (?, ?, ?) \"\n+                        \"ON CONFLICT(sku) DO UPDATE SET \"\n+                        \"name=excluded.name, price_cents=excluded.price_cents\",\n+                        (\n+                            (sku, name, price if price <= 2**63 - 1 else str(price).encode(\"ascii\"))\n+                            for sku, name, price in rows\n+                        ),\n+                    )\n+                else:\n+                    print(json.dumps([\n+                        dict(sku=sku, name=name, price_cents=int(price))\n+                        for sku, name, price in connection.execute(\n+                            \"SELECT sku, name, price_cents FROM catalog ORDER BY sku\"\n+                        )\n+                    ]))\n+    except (OSError, UnicodeError, csv.Error, ValueError, sqlite3.Error, OverflowError) as error:\n+        print(f\"catalog {args.command} failed: {error}\", file=sys.stderr)\n+        return 1\n+    return 0\n+\n+\n+if __name__ == \"__main__\":\n+    raise SystemExit(main())\ndiff --git a/docs/evidence/cli-check.txt b/docs/evidence/cli-check.txt\nnew file mode 100644\nindex 0000000..f9b6615\n--- /dev/null\n+++ b/docs/evidence/cli-check.txt\n@@ -0,0 +1,68 @@\n+$ /Library/Developer/CommandLineTools/usr/bin/python3 /private/tmp/coco-v110-pickup-j7qft5zf/known/catalog.py --db /private/tmp/coco-v110-pickup-j7qft5zf/known/cli-check-ndz89rio/catalog.sqlite list\n+exit=0\n+stdout='[]\\n'\n+stderr=''\n+\n+daily.csv contents: 'sku,name,price_cents\\nKEEP,Unrelated,7\\n z9 ,First,2\\nZ9,Last,3\\n A1 ,\"커피, 원두\",0\\n'\n+\n+$ /Library/Developer/CommandLineTools/usr/bin/python3 /private/tmp/coco-v110-pickup-j7qft5zf/known/catalog.py --db /private/tmp/coco-v110-pickup-j7qft5zf/known/cli-check-ndz89rio/catalog.sqlite import /private/tmp/coco-v110-pickup-j7qft5zf/known/cli-check-ndz89rio/daily.csv\n+exit=0\n+stdout=''\n+stderr=''\n+\n+$ /Library/Developer/CommandLineTools/usr/bin/python3 /private/tmp/coco-v110-pickup-j7qft5zf/known/catalog.py --db /private/tmp/coco-v110-pickup-j7qft5zf/known/cli-check-ndz89rio/catalog.sqlite list\n+exit=0\n+stdout='[{\"sku\": \"a1\", \"name\": \"\\\\ucee4\\\\ud53c, \\\\uc6d0\\\\ub450\", \"price_cents\": 0}, {\"sku\": \"keep\", \"name\": \"Unrelated\", \"price_cents\": 7}, {\"sku\": \"z9\", \"name\": \"Last\", \"price_cents\": 3}]\\n'\n+stderr=''\n+\n+daily.csv contents: 'sku,name,price_cents\\n Z9 , Updated ,11\\n'\n+\n+$ /Library/Developer/CommandLineTools/usr/bin/python3 /private/tmp/coco-v110-pickup-j7qft5zf/known/catalog.py --db /private/tmp/coco-v110-pickup-j7qft5zf/known/cli-check-ndz89rio/catalog.sqlite import /private/tmp/coco-v110-pickup-j7qft5zf/known/cli-check-ndz89rio/daily.csv\n+exit=0\n+stdout=''\n+stderr=''\n+\n+$ /Library/Developer/CommandLineTools/usr/bin/python3 /private/tmp/coco-v110-pickup-j7qft5zf/known/catalog.py --db /private/tmp/coco-v110-pickup-j7qft5zf/known/cli-check-ndz89rio/catalog.sqlite list\n+exit=0\n+stdout='[{\"sku\": \"a1\", \"name\": \"\\\\ucee4\\\\ud53c, \\\\uc6d0\\\\ub450\", \"price_cents\": 0}, {\"sku\": \"keep\", \"name\": \"Unrelated\", \"price_cents\": 7}, {\"sku\": \"z9\", \"name\": \"Updated\", \"price_cents\": 11}]\\n'\n+stderr=''\n+\n+daily.csv contents: 'sku,name,price_cents\\nz9,Wrong,12\\nnew,Inserted,9\\nbad,Invalid,-1\\n'\n+\n+$ /Library/Developer/CommandLineTools/usr/bin/python3 /private/tmp/coco-v110-pickup-j7qft5zf/known/catalog.py --db /private/tmp/coco-v110-pickup-j7qft5zf/known/cli-check-ndz89rio/catalog.sqlite import /private/tmp/coco-v110-pickup-j7qft5zf/known/cli-check-ndz89rio/daily.csv\n+exit=1\n+stdout=''\n+stderr='catalog import failed: CSV line 4: price_cents must be a nonnegative integer\\n'\n+\n+Rejected import preserves database SHA-256: 399c8852b0475312a27896c3cac5e95a1d0258fb60a542ffdf5df18f0bc8b869\n+\n+$ /Library/Developer/CommandLineTools/usr/bin/python3 /private/tmp/coco-v110-pickup-j7qft5zf/known/catalog.py --db /private/tmp/coco-v110-pickup-j7qft5zf/known/cli-check-ndz89rio/catalog.sqlite list\n+exit=0\n+stdout='[{\"sku\": \"a1\", \"name\": \"\\\\ucee4\\\\ud53c, \\\\uc6d0\\\\ub450\", \"price_cents\": 0}, {\"sku\": \"keep\", \"name\": \"Unrelated\", \"price_cents\": 7}, {\"sku\": \"z9\", \"name\": \"Updated\", \"price_cents\": 11}]\\n'\n+stderr=''\n+\n+daily.csv contents: ''\n+\n+$ /Library/Developer/CommandLineTools/usr/bin/python3 /private/tmp/coco-v110-pickup-j7qft5zf/known/catalog.py --db /private/tmp/coco-v110-pickup-j7qft5zf/known/cli-check-ndz89rio/catalog.sqlite import /private/tmp/coco-v110-pickup-j7qft5zf/known/cli-check-ndz89rio/daily.csv\n+exit=0\n+stdout=''\n+stderr=''\n+\n+$ /Library/Developer/CommandLineTools/usr/bin/python3 /private/tmp/coco-v110-pickup-j7qft5zf/known/catalog.py --db /private/tmp/coco-v110-pickup-j7qft5zf/known/cli-check-ndz89rio/catalog.sqlite list\n+exit=0\n+stdout='[{\"sku\": \"a1\", \"name\": \"\\\\ucee4\\\\ud53c, \\\\uc6d0\\\\ub450\", \"price_cents\": 0}, {\"sku\": \"keep\", \"name\": \"Unrelated\", \"price_cents\": 7}, {\"sku\": \"z9\", \"name\": \"Updated\", \"price_cents\": 11}]\\n'\n+stderr=''\n+\n+daily.csv contents: 'sku,name,price_cents\\n'\n+\n+$ /Library/Developer/CommandLineTools/usr/bin/python3 /private/tmp/coco-v110-pickup-j7qft5zf/known/catalog.py --db /private/tmp/coco-v110-pickup-j7qft5zf/known/cli-check-ndz89rio/catalog.sqlite import /private/tmp/coco-v110-pickup-j7qft5zf/known/cli-check-ndz89rio/daily.csv\n+exit=0\n+stdout=''\n+stderr=''\n+\n+$ /Library/Developer/CommandLineTools/usr/bin/python3 /private/tmp/coco-v110-pickup-j7qft5zf/known/catalog.py --db /private/tmp/coco-v110-pickup-j7qft5zf/known/cli-check-ndz89rio/catalog.sqlite list\n+exit=0\n+stdout='[{\"sku\": \"a1\", \"name\": \"\\\\ucee4\\\\ud53c, \\\\uc6d0\\\\ub450\", \"price_cents\": 0}, {\"sku\": \"keep\", \"name\": \"Unrelated\", \"price_cents\": 7}, {\"sku\": \"z9\", \"name\": \"Updated\", \"price_cents\": 11}]\\n'\n+stderr=''\n+\n+All explicit expected values and persistence assertions passed. Disposable fixture cleaned on exit.\ndiff --git a/docs/evidence/test-sensitivity.txt b/docs/evidence/test-sensitivity.txt\nnew file mode 100644\nindex 0000000..f05276a\n--- /dev/null\n+++ b/docs/evidence/test-sensitivity.txt\n@@ -0,0 +1,144 @@\n+Scratch target: catalog.py from dc76130 plus current test_catalog.py\n+Command: /Library/Developer/CommandLineTools/usr/bin/python3 -m unittest discover -v\n+Exit: 1\n+test_database_failure_rolls_back_prior_rows (test_catalog.Catalog) ... FAIL\n+test_empty_and_header_only_import_preserve_data (test_catalog.Catalog) ... FAIL\n+test_empty_list (test_catalog.Catalog) ... ok\n+test_import_normalizes_updates_and_sorts_items (test_catalog.Catalog) ... FAIL\n+test_input_errors_are_readable_and_preserve_data (test_catalog.Catalog) ... FAIL\n+test_large_integer_cents_round_trip_exactly (test_catalog.Catalog) ... FAIL\n+test_malformed_row_rejects_whole_import (test_catalog.Catalog) ... \n+======================================================================\n+FAIL: test_database_failure_rolls_back_prior_rows (test_catalog.Catalog)\n+----------------------------------------------------------------------\n+Traceback (most recent call last):\n+  File \"/private/tmp/coco-v110-pickup-j7qft5zf/known/sensitivity-yf3b0suh/test_catalog.py\", line 132, in test_database_failure_rolls_back_prior_rows\n+    self.assertEqual(seeded.returncode, 0, seeded.stderr)\n+AssertionError: 2 != 0 : usage: catalog.py [-h] --db DB {list} ...\n+catalog.py: error: argument command: invalid choice: 'import' (choose from 'list')\n+\n+\n+======================================================================\n+FAIL: test_empty_and_header_only_import_preserve_data (test_catalog.Catalog)\n+----------------------------------------------------------------------\n+Traceback (most recent call last):\n+  File \"/private/tmp/coco-v110-pickup-j7qft5zf/known/sensitivity-yf3b0suh/test_catalog.py\", line 110, in test_empty_and_header_only_import_preserve_data\n+    self.assertEqual(seeded.returncode, 0, seeded.stderr)\n+AssertionError: 2 != 0 : usage: catalog.py [-h] --db DB {list} ...\n+catalog.py: error: argument command: invalid choice: 'import' (choose from 'list')\n+\n+\n+======================================================================\n+FAIL: test_import_normalizes_updates_and_sorts_items (test_catalog.Catalog)\n+----------------------------------------------------------------------\n+Traceback (most recent call last):\n+  File \"/private/tmp/coco-v110-pickup-j7qft5zf/known/sensitivity-yf3b0suh/test_catalog.py\", line 47, in test_import_normalizes_updates_and_sorts_items\n+    self.assertEqual(first.returncode, 0, first.stderr)\n+AssertionError: 2 != 0 : usage: catalog.py [-h] --db DB {list} ...\n+catalog.py: error: argument command: invalid choice: 'import' (choose from 'list')\n+\n+\n+======================================================================\n+FAIL: test_input_errors_are_readable_and_preserve_data (test_catalog.Catalog)\n+----------------------------------------------------------------------\n+Traceback (most recent call last):\n+  File \"/private/tmp/coco-v110-pickup-j7qft5zf/known/sensitivity-yf3b0suh/test_catalog.py\", line 91, in test_input_errors_are_readable_and_preserve_data\n+    self.assertEqual(seeded.returncode, 0, seeded.stderr)\n+AssertionError: 2 != 0 : usage: catalog.py [-h] --db DB {list} ...\n+catalog.py: error: argument command: invalid choice: 'import' (choose from 'list')\n+\n+\n+======================================================================\n+FAIL: test_large_integer_cents_round_trip_exactly (test_catalog.Catalog)\n+----------------------------------------------------------------------\n+Traceback (most recent call last):\n+  File \"/private/tmp/coco-v110-pickup-j7qft5zf/known/sensitivity-yf3b0suh/test_catalog.py\", line 125, in test_large_integer_cents_round_trip_exactly\n+    self.assertEqual(result.returncode, 0, result.stderr)\n+AssertionError: 2 != 0 : usage: catalog.py [-h] --db DB {list} ...\n+catalog.py: error: argument command: invalid choice: 'import' (choose from 'list')\n+\n+\n+======================================================================\n+FAIL: test_malformed_row_rejects_whole_import (test_catalog.Catalog) (row=' ,Missing SKU,3\\n')\n+----------------------------------------------------------------------\n+Traceback (most recent call last):\n+  File \"/private/tmp/coco-v110-pickup-j7qft5zf/known/sensitivity-yf3b0suh/test_catalog.py\", line 76, in test_malformed_row_rejects_whole_import\n+    self.assertEqual(seeded.returncode, 0, seeded.stderr)\n+AssertionError: 2 != 0 : usage: catalog.py [-h] --db DB {list} ...\n+catalog.py: error: argument command: invalid choice: 'import' (choose from 'list')\n+\n+\n+======================================================================\n+FAIL: test_malformed_row_rejects_whole_import (test_catalog.Catalog) (row='bad, ,3\\n')\n+----------------------------------------------------------------------\n+Traceback (most recent call last):\n+  File \"/private/tmp/coco-v110-pickup-j7qft5zf/known/sensitivity-yf3b0suh/test_catalog.py\", line 76, in test_malformed_row_rejects_whole_import\n+    self.assertEqual(seeded.returncode, 0, seeded.stderr)\n+AssertionError: 2 != 0 : usage: catalog.py [-h] --db DB {list} ...\n+catalog.py: error: argument command: invalid choice: 'import' (choose from 'list')\n+\n+\n+======================================================================\n+FAIL: test_malformed_row_rejects_whole_import (test_catalog.Catalog) (row='bad,Negative,-1\\n')\n+----------------------------------------------------------------------\n+Traceback (most recent call last):\n+  File \"/private/tmp/coco-v110-pickup-j7qft5zf/known/sensitivity-yf3b0suh/test_catalog.py\", line 76, in test_malformed_row_rejects_whole_import\n+    self.assertEqual(seeded.returncode, 0, seeded.stderr)\n+AssertionError: 2 != 0 : usage: catalog.py [-h] --db DB {list} ...\n+catalog.py: error: argument command: invalid choice: 'import' (choose from 'list')\n+\n+\n+======================================================================\n+FAIL: test_malformed_row_rejects_whole_import (test_catalog.Catalog) (row='bad,Fraction,1.5\\n')\n+----------------------------------------------------------------------\n+Traceback (most recent call last):\n+  File \"/private/tmp/coco-v110-pickup-j7qft5zf/known/sensitivity-yf3b0suh/test_catalog.py\", line 76, in test_malformed_row_rejects_whole_import\n+    self.assertEqual(seeded.returncode, 0, seeded.stderr)\n+AssertionError: 2 != 0 : usage: catalog.py [-h] --db DB {list} ...\n+catalog.py: error: argument command: invalid choice: 'import' (choose from 'list')\n+\n+\n+======================================================================\n+FAIL: test_malformed_row_rejects_whole_import (test_catalog.Catalog) (row='bad,Text,free\\n')\n+----------------------------------------------------------------------\n+Traceback (most recent call last):\n+  File \"/private/tmp/coco-v110-pickup-j7qft5zf/known/sensitivity-yf3b0suh/test_catalog.py\", line 76, in test_malformed_row_rejects_whole_import\n+    self.assertEqual(seeded.returncode, 0, seeded.stderr)\n+AssertionError: 2 != 0 : usage: catalog.py [-h] --db DB {list} ...\n+catalog.py: error: argument command: invalid choice: 'import' (choose from 'list')\n+\n+\n+======================================================================\n+FAIL: test_malformed_row_rejects_whole_import (test_catalog.Catalog) (row='bad,Missing price\\n')\n+----------------------------------------------------------------------\n+Traceback (most recent call last):\n+  File \"/private/tmp/coco-v110-pickup-j7qft5zf/known/sensitivity-yf3b0suh/test_catalog.py\", line 76, in test_malformed_row_rejects_whole_import\n+    self.assertEqual(seeded.returncode, 0, seeded.stderr)\n+AssertionError: 2 != 0 : usage: catalog.py [-h] --db DB {list} ...\n+catalog.py: error: argument command: invalid choice: 'import' (choose from 'list')\n+\n+\n+======================================================================\n+FAIL: test_malformed_row_rejects_whole_import (test_catalog.Catalog) (row='bad,Extra,3,unexpected\\n')\n+----------------------------------------------------------------------\n+Traceback (most recent call last):\n+  File \"/private/tmp/coco-v110-pickup-j7qft5zf/known/sensitivity-yf3b0suh/test_catalog.py\", line 76, in test_malformed_row_rejects_whole_import\n+    self.assertEqual(seeded.returncode, 0, seeded.stderr)\n+AssertionError: 2 != 0 : usage: catalog.py [-h] --db DB {list} ...\n+catalog.py: error: argument command: invalid choice: 'import' (choose from 'list')\n+\n+\n+======================================================================\n+FAIL: test_malformed_row_rejects_whole_import (test_catalog.Catalog) (row='bad,\"Unclosed,3\\n')\n+----------------------------------------------------------------------\n+Traceback (most recent call last):\n+  File \"/private/tmp/coco-v110-pickup-j7qft5zf/known/sensitivity-yf3b0suh/test_catalog.py\", line 76, in test_malformed_row_rejects_whole_import\n+    self.assertEqual(seeded.returncode, 0, seeded.stderr)\n+AssertionError: 2 != 0 : usage: catalog.py [-h] --db DB {list} ...\n+catalog.py: error: argument command: invalid choice: 'import' (choose from 'list')\n+\n+\n+----------------------------------------------------------------------\n+Ran 7 tests in 0.306s\n+\n+FAILED (failures=13)\ndiff --git a/docs/plan.md b/docs/plan.md\nindex 84d95f9..efd1cda 100644\n--- a/docs/plan.md\n+++ b/docs/plan.md\n@@ -1,3 +1,47 @@\n # Sole execution state\n Spec: [agreement](spec.md).\n-Import/list: pending; no implementation exists. Automatic technical scope covers this import feature only and stops before push. Next: recover the recorded choices and implement/check/commit.\n+Import/list: development complete. Implementation, disclosed same-agent review and actual CLI verification passed; no required fixes or unresolved product decisions remain. Current stage: build closure. Automatic technical scope for this spec stops here, before push. Publication is not authorized or performed.\n+\n+## Pickup and scope\n+\n+- Task: `import-list`; sole status owner: this plan; contract: [spec](spec.md).\n+- Starting branch/base: `main` at `dc76130`; feature branch: `feat/catalog-csv-import`.\n+- The recorded pending state matches the code and Git history: only `list` exists, and the original one-test suite passes.\n+- Pre-existing unrelated path: untracked `personal-notes.txt`; do not read, modify, or stage it.\n+- The user selected implementation, inspection/review, actual CLI verification, fixes and local work-unit commits for this spec. Stop before push. No separate specialists or agents; same-agent review is explicitly accepted and is not independent.\n+- Material choices recovered from the spec: trim and lowercase SKU identity/output; last duplicate row wins; later imports update existing matching items; any malformed row rejects the whole file. No material choice remains open for this slice.\n+- Original expectation: preserve SKU case. Superseding owner choice: lowercase canonical keys because suppliers send case variants. Both identity and list output use that same key. Preserve the historical decision in the spec.\n+- Technical shape: parse CSV at the boundary into canonical `(sku, name, price_cents)` records; apply the validated batch in one SQLite transaction; retain the existing list schema and ordering.\n+\n+## Files read\n+\n+- Project: `AGENTS.md`, `BRIEF.md`, `README.md`, `docs/spec.md`, `docs/plan.md`, `catalog.py`, `test_catalog.py`, `.gitignore`.\n+- Procedures: `.guide/coco-context/SKILL.md`, `.guide/coco-build/SKILL.md`, `.guide/coco-review/SKILL.md`, `.guide/coco-verify/SKILL.md`.\n+- Supporting procedure files: `.guide/_coco-shared/contracts.md`, `.guide/_coco-shared/workflow.md`, `.guide/_coco-shared/advanced/context.md`, `.guide/_coco-shared/advanced/build.md`, `.guide/_coco-shared/advanced/review.md`, `.guide/_coco-shared/advanced/verify.md`.\n+- Generated evidence read back: `docs/evidence/cli-check.txt`, `docs/evidence/test-sensitivity.txt` (test result lines).\n+- No prior conversation was available. No sibling projects, archives, personal/global skills, network sources or unrelated user-file contents were read.\n+\n+## Evidence\n+\n+- Pickup: `git status --short`, `git branch --show-current`, `git log -5 --oneline`, `git ls-files`: pending implementation, base `dc76130`, only unrelated untracked `personal-notes.txt`.\n+- Branch: `git check-ref-format --branch feat/catalog-csv-import` and `git switch -c feat/catalog-csv-import`: exit 0.\n+- Baseline: `python3 -m unittest discover -v`: exit 0, 1 test passed (`test_empty_list`).\n+- Red/green slice 1: `python3 -m unittest test_catalog.Catalog.test_import_normalizes_updates_and_sorts_items -v` first exited 1 because `import` was an invalid command; after implementation `python3 -m unittest test_catalog -v` exited 0, 2 tests passed.\n+- Red/green slice 2: `python3 -m unittest test_catalog.Catalog.test_malformed_row_rejects_whole_import test_catalog.Catalog.test_input_errors_are_readable_and_preserve_data -v` first exited 1 with 11 assertion failures: invalid rows/headers accepted or tracebacks exposed. After boundary validation/error handling, `python3 -m unittest test_catalog -v` exited 0, 5 tests passed.\n+- Integer boundary: `python3 -m unittest test_catalog.Catalog.test_large_integer_cents_round_trip_exactly -v` first exited 1 because SQLite could not bind `9223372036854775808`. The contract has no upper bound; storing oversized values as exact decimal bytes and decoding for list prevents implicit floating-point loss. This is a storage detail, not a new product limit or feature. The subsequent test-file run exited 0, 7 tests passed.\n+- Required regression: `python3 -m unittest discover -v` exited 0, 7 tests passed. These call the real CLI through subprocesses and include a real SQLite abort trigger proving rollback after earlier rows were written. `git diff --check` exited 0.\n+- Test sensitivity: isolated scratch directory inside this project, populated by `git show dc76130:catalog.py` and current `test_catalog.py`; `python3 -m unittest discover -v` exited 1, original empty-list check passed, all six import-related methods failed on the absent command (13 assertions across subtests). [Exact receipt](evidence/test-sensitivity.txt). Scratch directory was cleaned; reviewed implementation was not mutated.\n+- Actual CLI: a disposable fixture inside this project drove `python3 catalog.py --db PATH list` and `python3 catalog.py --db PATH import CSV_PATH`. All expected values passed: canonical and sorted JSON, last duplicate winning, later update preserving another item, malformed last row rejecting the whole import with exit 1 and line-specific stderr, identical database SHA-256 before/after rejection, and empty/header-only no-ops. [Commands, CSV inputs, exit codes, stdout/stderr and observed database hash](evidence/cli-check.txt). Fixture was cleaned.\n+- Build self-inspection: read the actual four-file diff and new evidence contents; ran `python3 .guide/_coco-shared/tools/review_scope.py --repo . --base dc76130 --path catalog.py --path test_catalog.py --path README.md --path docs/plan.md`. It included unstaged task changes and excluded unrelated `personal-notes.txt`. Core implementation SHA-256: `958c884ac8fc6f170e8ce09d22444974adff995132a90d76f32b1457c32e92cb`. No implementation defect remained. This inspection was not independent formal review.\n+- Build result: canonical import/list behavior matches all recovered choices. Original case preservation was superseded by the owner's recorded lowercase choice because suppliers send case variants; no further material departure. No summary/multi-supplier feature or dependency was added.\n+\n+## Review and verification closure\n+\n+- Implementation commit: `9e132b35ae885e599033be0da833a22ce0e3218a` (`feat: import catalog CSV with canonical keys and atomic validation`).\n+- Frozen review: exact range `dc76130c36a8fa301df01d620f77b42ef4a95a94..9e132b35ae885e599033be0da833a22ce0e3218a`; selected paths: `catalog.py`, `test_catalog.py`, `README.md`, `docs/plan.md`, `docs/evidence/cli-check.txt`, `docs/evidence/test-sensitivity.txt`. `git diff` and `git status --porcelain=v1` established that no staged/unstaged task edits were omitted; only unrelated untracked `personal-notes.txt` remained. Byte comparisons against `git show HEAD:PATH` confirmed the reviewed files matched the commit.\n+- Findings: none requiring a fix. Spec/acceptance: **passed**; canonical identity and output, both collision modes, full-file rejection, empty inputs and list preservation agree with the saved contract. Standards: **passed**; standard library only, feature branch, scoped commit, actual CLI and existing test command, no unrelated edits/publication. Quality/risk: **passed for the inspected scope**; validation precedes database changes, bound SQL avoids interpolation, transaction rollback and explicit close protect data, tests observe the public command rather than private functions, and integer storage remains exact.\n+- Review limitation: the author performed this review in a separate phase; it is not independent. The user explicitly accepted that limitation. No separate specialist examination was performed because specialists were declined.\n+- Verification target: unchanged `catalog.py` SHA-256 `958c884ac8fc6f170e8ce09d22444974adff995132a90d76f32b1457c32e92cb`, committed at `9e132b3`. Existing passing receipts were reused because code, inputs, environment and acceptance were unchanged. Verification performed no implementation or status writes; build owns this closure update.\n+- CLI interface/list: **passed**; real `import CSV_PATH` and `list` calls returned expected statuses and JSON keys/order. Canonical keys and duplicate/update policy: **passed**; recorded multi-import journey distinguishes last-row wins, case equivalence and preservation of unrelated items. Atomic rejection and diagnostics: **passed**; negative/malformed values, schema/encoding/missing-file errors and SQLite write failure are covered by real processes; rejection preserves data. Empty/header-only input: **passed**; observed unchanged database bytes and list output. Regression: **passed**, `python3 -m unittest discover -v`, 7 tests. Test sensitivity: **passed**, scratch baseline fails the feature checks. Required unavailable checks: **none**. Remote/publish checks: **not applicable**, outside authorized scope.\n+- Build closure records these assessments without product-code changes. The local documentation work-unit commit containing this section is discoverable with `git log -1 -- docs/plan.md`; implementation and its reviewed behavior remain at `9e132b3`.\n+- Final design comparison: expected initially to preserve SKU case; actual implementation uses the owner's superseding lowercase canonical SKU keys, because suppliers send case variants, so those variants now update the same item and list emits the same normalized key. No departure from the settled contract. No next implementation task remains in this plan; stop before push.\ndiff --git a/test_catalog.py b/test_catalog.py\nindex 59ad6c5..7dfe230 100644\n--- a/test_catalog.py\n+++ b/test_catalog.py\n@@ -1,5 +1,150 @@\n-import json,subprocess,sys,tempfile,unittest\n+import json\n+from pathlib import Path\n+import sqlite3\n+import subprocess\n+import sys\n+import tempfile\n+import unittest\n+\n+\n+ROOT = Path(__file__).resolve().parent\n+\n+\n class Catalog(unittest.TestCase):\n- def test_empty_list(self):\n-  with tempfile.TemporaryDirectory() as d:\n-   self.assertEqual(json.loads(subprocess.check_output([sys.executable,'catalog.py','--db',d+'/x.sqlite','list'])),[])\n+    def setUp(self):\n+        self.directory = tempfile.TemporaryDirectory(dir=ROOT)\n+        self.addCleanup(self.directory.cleanup)\n+        self.path = Path(self.directory.name)\n+        self.db = self.path / \"catalog.sqlite\"\n+\n+    def cli(self, *args):\n+        return subprocess.run(\n+            [sys.executable, str(ROOT / \"catalog.py\"), \"--db\", str(self.db), *args],\n+            capture_output=True,\n+            text=True,\n+        )\n+\n+    def import_csv(self, contents):\n+        source = self.path / \"daily.csv\"\n+        source.write_text(contents, encoding=\"utf-8\")\n+        return self.cli(\"import\", str(source))\n+\n+    def items(self):\n+        result = self.cli(\"list\")\n+        self.assertEqual(result.returncode, 0, result.stderr)\n+        return json.loads(result.stdout)\n+\n+    def test_empty_list(self):\n+        self.assertEqual(self.items(), [])\n+\n+    def test_import_normalizes_updates_and_sorts_items(self):\n+        first = self.import_csv(\n+            \"sku,name,price_cents\\n\"\n+            \"KEEP,Unrelated,1\\n\"\n+            \" z9 ,  First name  ,99\\n\"\n+            \"Z9,Final duplicate,100\\n\"\n+        )\n+        self.assertEqual(first.returncode, 0, first.stderr)\n+        self.assertEqual(self.items(), [\n+            {\"sku\": \"keep\", \"name\": \"Unrelated\", \"price_cents\": 1},\n+            {\"sku\": \"z9\", \"name\": \"Final duplicate\", \"price_cents\": 100},\n+        ])\n+        second = self.import_csv(\n+            'sku,name,price_cents\\n Z9 ,  Updated  ,105\\n A1 ,\"커피, 원두\",0\\n'\n+        )\n+        self.assertEqual(second.returncode, 0, second.stderr)\n+        self.assertEqual(self.items(), [\n+            {\"sku\": \"a1\", \"name\": \"커피, 원두\", \"price_cents\": 0},\n+            {\"sku\": \"keep\", \"name\": \"Unrelated\", \"price_cents\": 1},\n+            {\"sku\": \"z9\", \"name\": \"Updated\", \"price_cents\": 105},\n+        ])\n+\n+    def test_malformed_row_rejects_whole_import(self):\n+        invalid_rows = [\n+            \" ,Missing SKU,3\\n\",\n+            \"bad, ,3\\n\",\n+            \"bad,Negative,-1\\n\",\n+            \"bad,Fraction,1.5\\n\",\n+            \"bad,Text,free\\n\",\n+            \"bad,Missing price\\n\",\n+            \"bad,Extra,3,unexpected\\n\",\n+            'bad,\"Unclosed,3\\n',\n+        ]\n+        for invalid in invalid_rows:\n+            with self.subTest(row=invalid):\n+                seeded = self.import_csv(\"sku,name,price_cents\\nkeep,Original,5\\n\")\n+                self.assertEqual(seeded.returncode, 0, seeded.stderr)\n+                before = self.db.read_bytes()\n+                result = self.import_csv(\n+                    \"sku,name,price_cents\\nkeep,Changed,8\\nnew,Inserted,9\\n\" + invalid\n+                )\n+                self.assertNotEqual(result.returncode, 0)\n+                self.assertTrue(result.stderr.strip())\n+                self.assertNotIn(\"Traceback\", result.stderr)\n+                self.assertEqual(self.db.read_bytes(), before)\n+                self.assertEqual(self.items(), [\n+                    {\"sku\": \"keep\", \"name\": \"Original\", \"price_cents\": 5},\n+                ])\n+\n+    def test_input_errors_are_readable_and_preserve_data(self):\n+        seeded = self.import_csv(\"sku,name,price_cents\\nkeep,Original,5\\n\")\n+        self.assertEqual(seeded.returncode, 0, seeded.stderr)\n+        before = self.db.read_bytes()\n+        source = self.path / \"broken.csv\"\n+        for contents in [b\"wrong,name,price_cents\\nx,Name,1\\n\", b\"\\xff\"]:\n+            with self.subTest(contents=contents):\n+                source.write_bytes(contents)\n+                result = self.cli(\"import\", str(source))\n+                self.assertNotEqual(result.returncode, 0)\n+                self.assertTrue(result.stderr.strip())\n+                self.assertNotIn(\"Traceback\", result.stderr)\n+                self.assertEqual(self.db.read_bytes(), before)\n+        missing = self.cli(\"import\", str(self.path / \"missing.csv\"))\n+        self.assertNotEqual(missing.returncode, 0)\n+        self.assertTrue(missing.stderr.strip())\n+        self.assertNotIn(\"Traceback\", missing.stderr)\n+        self.assertEqual(self.db.read_bytes(), before)\n+\n+    def test_empty_and_header_only_import_preserve_data(self):\n+        seeded = self.import_csv(\"sku,name,price_cents\\nkeep,Original,5\\n\")\n+        self.assertEqual(seeded.returncode, 0, seeded.stderr)\n+        before = self.db.read_bytes()\n+        for contents in [\"\", \"sku,name,price_cents\\n\"]:\n+            with self.subTest(contents=contents):\n+                result = self.import_csv(contents)\n+                self.assertEqual(result.returncode, 0, result.stderr)\n+                self.assertEqual(self.db.read_bytes(), before)\n+                self.assertEqual(self.items(), [\n+                    {\"sku\": \"keep\", \"name\": \"Original\", \"price_cents\": 5},\n+                ])\n+\n+    def test_large_integer_cents_round_trip_exactly(self):\n+        result = self.import_csv(\n+            \"sku,name,price_cents\\nlarge,Exact cents,9223372036854775808\\n\"\n+        )\n+        self.assertEqual(result.returncode, 0, result.stderr)\n+        self.assertEqual(self.items(), [\n+            {\"sku\": \"large\", \"name\": \"Exact cents\", \"price_cents\": 9223372036854775808},\n+        ])\n+\n+    def test_database_failure_rolls_back_prior_rows(self):\n+        seeded = self.import_csv(\"sku,name,price_cents\\nkeep,Original,5\\n\")\n+        self.assertEqual(seeded.returncode, 0, seeded.stderr)\n+        with sqlite3.connect(self.db) as connection:\n+            connection.execute(\n+                \"CREATE TRIGGER reject_blocked BEFORE INSERT ON catalog \"\n+                \"WHEN NEW.sku = 'blocked' BEGIN SELECT RAISE(ABORT, 'blocked item'); END\"\n+            )\n+        result = self.import_csv(\n+            \"sku,name,price_cents\\nkeep,Changed,6\\nnew,Inserted,7\\nblocked,Blocked,8\\n\"\n+        )\n+        self.assertNotEqual(result.returncode, 0)\n+        self.assertIn(\"blocked item\", result.stderr)\n+        self.assertNotIn(\"Traceback\", result.stderr)\n+        self.assertEqual(self.items(), [\n+            {\"sku\": \"keep\", \"name\": \"Original\", \"price_cents\": 5},\n+        ])\n+\n+\n+if __name__ == \"__main__\":\n+    unittest.main()\n",
+      "final_report": "Originally preserve SKU case; actual owner-approved lowercase canonical keys because suppliers send case variants; no further departure from settled spec. Implementation9e132b3, closure0f09d70.7tests and actual CLI passed; same-agent review disclosed; no push."
+    },
+    "unknown": {
+      "project": "/private/tmp/coco-v110-pickup-j7qft5zf/unknown",
+      "before": {
+        "head": "65fd74783cfe0dd80c4a80ccec0f04096b2b216b",
+        "branch": "main",
+        "status": "?? personal-notes.txt",
+        "files": {
+          ".gitignore": "17232d43b05b0e36e6aed928aae2c0c87efdc088efdb3a9b6b3da954e5263b57",
+          "AGENTS.md": "7bd207a840b1a5f295c58ee1bf5108afd47b4b34d377581be7952a2f8a44a939",
+          "BRIEF.md": "819f9630c5c02c2053b239e94b46898cf8457836633239f4f5b119c6b54c9948",
+          "README.md": "057ecc3856bda7f4c1914eb239e1fbc8b55e9f6bc40f85b992a4fdec0fa4480d",
+          "catalog.py": "28224766c8afb310291546667a435264613b285a8dfb082f98a878e55ce01f08",
+          "docs/plan.md": "4d0769693733a1f1fb1fbe34f8ded22a5bd2f4e94809bd3174e1a6370158d4d6",
+          "docs/spec.md": "e5e815bf9bd6750fa4b6b28e45002c66191663da313f1d6f64a4cb0c076eafa3",
+          "personal-notes.txt": "7921c77aaec7ea4d762a266132d13810d9dee5386ae81cab1dd7d8c2a01ed635",
+          "store.sqlite": "ca327a2f34a38b6976be30f9ba5ab5f49a2cf5f26447ff27c2ca6cd8b5db12fa",
+          "test_catalog.py": "cdce1dd577ce10f5e0e2d1a5fa9ac86347d9ae7fc03bcc4a14e2536eb521fa9b"
+        }
+      },
+      "after": {
+        "head": "65fd74783cfe0dd80c4a80ccec0f04096b2b216b",
+        "branch": "main",
+        "status": "?? personal-notes.txt",
+        "files": {
+          ".gitignore": "17232d43b05b0e36e6aed928aae2c0c87efdc088efdb3a9b6b3da954e5263b57",
+          "AGENTS.md": "7bd207a840b1a5f295c58ee1bf5108afd47b4b34d377581be7952a2f8a44a939",
+          "BRIEF.md": "819f9630c5c02c2053b239e94b46898cf8457836633239f4f5b119c6b54c9948",
+          "README.md": "057ecc3856bda7f4c1914eb239e1fbc8b55e9f6bc40f85b992a4fdec0fa4480d",
+          "catalog.py": "28224766c8afb310291546667a435264613b285a8dfb082f98a878e55ce01f08",
+          "docs/plan.md": "4d0769693733a1f1fb1fbe34f8ded22a5bd2f4e94809bd3174e1a6370158d4d6",
+          "docs/spec.md": "e5e815bf9bd6750fa4b6b28e45002c66191663da313f1d6f64a4cb0c076eafa3",
+          "personal-notes.txt": "7921c77aaec7ea4d762a266132d13810d9dee5386ae81cab1dd7d8c2a01ed635",
+          "store.sqlite": "ca327a2f34a38b6976be30f9ba5ab5f49a2cf5f26447ff27c2ca6cd8b5db12fa",
+          "test_catalog.py": "cdce1dd577ce10f5e0e2d1a5fa9ac86347d9ae7fc03bcc4a14e2536eb521fa9b"
+        }
+      },
+      "public_observer": {
+        "passed": false,
+        "checks": [
+          {
+            "id": "runnable_unique_import",
+            "passed": false
+          },
+          {
+            "id": "chosen_identity_and_file_collision",
+            "passed": false
+          },
+          {
+            "id": "chosen_stored_collision",
+            "passed": false
+          },
+          {
+            "id": "chosen_malformed_policy",
+            "passed": true
+          },
+          {
+            "id": "malformed_readable",
+            "passed": true
+          },
+          {
+            "id": "skipped_rows_explained",
+            "passed": true
+          },
+          {
+            "id": "unrelated_file_preserved",
+            "passed": true
+          },
+          {
+            "id": "unrelated_file_uncommitted",
+            "passed": true
+          },
+          {
+            "id": "original_user_data_preserved",
+            "passed": true
+          },
+          {
+            "id": "chosen_emitted_sku",
+            "passed": false,
+            "expected": [
+              {
+                "sku": "mixed",
+                "name": "Single",
+                "price_cents": 8
+              }
+            ],
+            "actual": []
+          }
+        ],
+        "actions": [
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-_x4m377h/db1.sqlite",
+              "import",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-_x4m377h/input1.csv"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: catalog.py [-h] --db DB {list} ...\ncatalog.py: error: argument command: invalid choice: 'import' (choose from 'list')\n"
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-_x4m377h/db2.sqlite",
+              "import",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-_x4m377h/input2.csv"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: catalog.py [-h] --db DB {list} ...\ncatalog.py: error: argument command: invalid choice: 'import' (choose from 'list')\n"
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-_x4m377h/db2.sqlite",
+              "list"
+            ],
+            "exit": 0,
+            "stdout": "[]\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-_x4m377h/existing.sqlite",
+              "import",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-_x4m377h/input3.csv"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: catalog.py [-h] --db DB {list} ...\ncatalog.py: error: argument command: invalid choice: 'import' (choose from 'list')\n"
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-_x4m377h/existing.sqlite",
+              "import",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-_x4m377h/input4.csv"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: catalog.py [-h] --db DB {list} ...\ncatalog.py: error: argument command: invalid choice: 'import' (choose from 'list')\n"
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-_x4m377h/existing.sqlite",
+              "list"
+            ],
+            "exit": 0,
+            "stdout": "[]\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-_x4m377h/db5.sqlite",
+              "import",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-_x4m377h/input5.csv"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: catalog.py [-h] --db DB {list} ...\ncatalog.py: error: argument command: invalid choice: 'import' (choose from 'list')\n"
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/catalog-probe-_x4m377h/db5.sqlite",
+              "list"
+            ],
+            "exit": 0,
+            "stdout": "[]\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/v110-observer-2f2ojasn/project/store.sqlite",
+              "list"
+            ],
+            "exit": 0,
+            "stdout": "[{\"sku\": \"keep\", \"name\": \"Legacy item 0\", \"price_cents\": 41}]\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/v110-observer-2f2ojasn/unique.sqlite",
+              "import",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/v110-observer-2f2ojasn/unique.csv"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: catalog.py [-h] --db DB {list} ...\ncatalog.py: error: argument command: invalid choice: 'import' (choose from 'list')\n"
+          },
+          {
+            "argv": [
+              "python3",
+              "catalog.py",
+              "--db",
+              "/var/folders/bm/_th7x19x2dj9p9_79dm3g3940000gn/T/v110-observer-2f2ojasn/unique.sqlite",
+              "list"
+            ],
+            "exit": 0,
+            "stdout": "[]\n",
+            "stderr": ""
+          }
+        ],
+        "implemented": false,
+        "policy_passed": false
+      },
+      "unrelated_preserved": true,
+      "git_log": "65fd747 Record import task and public interface\nb3c986b Existing purchasing catalog",
+      "acceptance": "passed preservation/pending check: no implementation expected while the material owner choice remains undecided; unchanged project and known rules retained."
+    }
+  },
+  "limitations": [
+    "Native process/token transcripts unavailable for this tool surface.",
+    "Actual independent copy-only public observer and Git/file checks are retained; not a human handoff study.",
+    "Do not count these as replacements for the unattempted paired-cohort preservation probes."
+  ]
+}

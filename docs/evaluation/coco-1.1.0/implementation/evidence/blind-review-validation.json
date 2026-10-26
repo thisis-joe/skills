@@ -1,0 +1,22 @@
+{
+  "recorded_at_utc": "2026-10-26T09:20:47.143791+00:00",
+  "command": [
+    "python3",
+    "docs/evaluation/coco-1.1.0/implementation/collect.py",
+    "validate",
+    "--root",
+    "/private/tmp/coco-v110-implementation-20261026-final",
+    "--packet",
+    "/private/tmp/coco-v110-implementation-blind-20261026"
+  ],
+  "cwd": "/Users/Joseph/.codex/worktrees/coco-1-1-0/skills",
+  "exit": 0,
+  "stdout": "{\"schema_valid\": true, \"evidence_unchanged\": true, \"controls_rejected\": true, \"cases\": 14}\n",
+  "result": {
+    "schema_valid": true,
+    "evidence_unchanged": true,
+    "controls_rejected": true,
+    "cases": 14
+  },
+  "scope": "Schema, immutable packet bytes/modes and grounded false-completion control rejection. This does not validate a completed cohort or alter any grade."
+}

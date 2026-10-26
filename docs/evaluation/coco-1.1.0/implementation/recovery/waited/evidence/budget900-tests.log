@@ -1,0 +1,7 @@
+test_actor_and_owner_budgets_are_identical_between_arms (__main__.BudgetBindings) ... ok
+test_unknown_budget_is_not_silently_reinterpreted (__main__.BudgetBindings) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+OK

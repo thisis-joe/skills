@@ -91,6 +91,12 @@ python3 <coco-learn folder>/tools/check_notes.py <workspace>/notes/<slug>.md
 
 A conforming workspace exits 0 and prints the status counts and the notes to reread next. Otherwise each problem prints as `path:line: problem` and the exit code is 1; a missing or malformed `TEMPLATE.md` exits 2.
 
+Code examples are literal text: link checks and index counts ignore fenced code
+and same-line code spans. Fences close only with the same marker and at least the
+opening length, so a longer fence can show shorter fences inside one example.
+Real note links outside code still need valid targets. This is a note-layout
+checker, not a complete Markdown parser.
+
 ## Example note
 
 [example-note.md](example-note.md) is a complete note in the canonical labels; it passes the checker.

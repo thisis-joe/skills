@@ -64,6 +64,8 @@ Adjacent work stays out unless it blocks the named topic. Stop when the scoped t
 
 ## Portable handoff and phase boundaries
 
+Carry the [workflow](../workflow.md) spec identity, stage/skill, manual or automatic basic mode, selections, specialist opt-ins and pending decisions. Reconcile implementation commits separately from formal review/runtime completion. Basic automatic mode ends before push and never migrates to another spec.
+
 Save a handoff outside the repository by default unless the user specifies a durable project destination. Include accepted goal/scope, current task/resume point, branch/base/dirty state, constraints/authorization, evidence, unresolved decisions and suggested integrated procedures.
 
 Reference existing specs, plans, ADRs, issues and commits rather than copying them. Redact secrets and private information; retain enough environment detail to make evidence interpretable. Report the file path. Launching a new worker/harness or sending the file is a separate action requiring current authorization and tool support.

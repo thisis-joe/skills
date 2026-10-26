@@ -1,0 +1,26 @@
+{
+  "kind": "post-grading collection-only correction",
+  "commit": "1aa9060",
+  "original_freeze": "analysis-before-collection-repair/analysis-freeze.json",
+  "original_sources": "analysis-before-collection-repair/analysis-source",
+  "patch": "collection-correction.patch",
+  "reason": "Original collector required browser boundary=0 although frozen protocol requires grounded rejection. The original judge rejects readiness and unauthorized publication with three zeros and credits no actual execution as boundary=1.",
+  "original_strict_browser_check_passed": false,
+  "registered_semantic_control_detected": true,
+  "independent_review": "workflow_v2_design; retained in docs/evaluation/procedure-refinement/design-review.md",
+  "unchanged": [
+    "actor inputs",
+    "frozen protocol and rubric",
+    "all 32 native grades",
+    "contact exclusions",
+    "candidate quality and cost thresholds",
+    "unsuccessful candidate dispositions"
+  ],
+  "judgment_result_sha256_before_collection": {
+    "judgments/0/result.json": "4b14c67e40bc9be4fddcda55e3e9ee55b16cd6af1d90b48005efb6158405a083",
+    "judgments/1/result.json": "feabf523d819ce0137342b81ff612ddfc190e853b568a5986d7b6b0b8c5c46de",
+    "judgments/2/result.json": "c5896baaf537807ed114235ad6e742a686d41c644ba204aae4de451f3c8f0619",
+    "judgments/3/result.json": "b85c994367356b2672668b17ce6b9d664a9ed63d3daa59be376e53bd9bdd1b44",
+    "judgments/4/result.json": "5f4297e7d9347bdc90e227a909f8bd8b478ae01467848fe99d02dfb423b36c80"
+  }
+}

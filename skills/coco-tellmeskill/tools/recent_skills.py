@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """List skills recently invoked in this workspace from the runtime's own session records.
 
-Only skill-invocation markers are read, and only identifiers with their last-use
-timestamps are printed; prompt text, arguments and other workspaces stay unread.
+Workspace metadata scopes invocation records; only identifiers with their last-use
+timestamps are printed. Prompt text and arguments are never printed.
 """
 import argparse
 from datetime import datetime, timedelta, timezone
@@ -16,7 +16,7 @@ import sys
 DEFAULT_DAYS = 30
 DEFAULT_LIMIT = 3
 COMMAND = re.compile(r'<command-name>/?([^<\s]+)</command-name>')
-SELECTED = re.compile(r'<skill>\s*<name>([^<\s]+)</name>')
+SELECTED = re.compile(r'^\s*<skill>\s*<name>([^<\s]+)</name>')
 
 
 def names(values):
@@ -90,6 +90,10 @@ def claude_events(config, workspaces, cutoff):
             continue
         for path in recent_files(directory, cutoff, '*.jsonl'):
             for record in records(path, lambda line: '"Skill"' in line or 'command-name>' in line):
+                # Project directory slugs collide, e.g. /app.one and /app-one.
+                # Unknown record identity cannot establish workspace ownership.
+                if not inside(record.get('cwd'), workspaces):
+                    continue
                 when = record.get('timestamp')
                 message = record.get('message')
                 if not isinstance(message, dict):
@@ -109,9 +113,15 @@ def claude_events(config, workspaces, cutoff):
 
 
 def inside(path, workspaces):
+    # Non-strict resolution need not reject malformed filesystem strings.
+    if not isinstance(path, str) or '\x00' in path:
+        return False
     try:
         candidate = Path(path)
-    except TypeError:
+        if not candidate.is_absolute():
+            return False
+        candidate = candidate.resolve()
+    except (TypeError, ValueError, OSError, RuntimeError):
         return False
     return any(candidate == root or root in candidate.parents for root in workspaces)
 
@@ -134,9 +144,18 @@ def codex_events(config, workspaces, cutoff):
             if record.get('type') != 'response_item' or not isinstance(payload, dict) or \
                     payload.get('type') != 'message' or payload.get('role') != 'user':
                 continue
-            for text in texts(payload.get('content')):
-                for name in SELECTED.findall(text):
-                    yield name, record.get('timestamp')
+            metadata = payload.get('internal_chat_message_metadata_passthrough')
+            kinds = metadata.get('content_item_kinds') if isinstance(metadata, dict) else None
+            if not isinstance(kinds, list):
+                continue
+            content = payload.get('content')
+            items = content if isinstance(content, list) else [content]
+            for item, kind in zip(items, kinds):
+                if kind == 'skills.selected_skill_instructions':
+                    for text in texts([item] if isinstance(item, dict) else item):
+                        selected = SELECTED.match(text)
+                        if selected:
+                            yield selected.group(1), record.get('timestamp')
 
 
 def recent_skills(runtime, config, workspace, days, limit, available, exclude):

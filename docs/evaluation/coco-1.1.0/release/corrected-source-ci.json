@@ -1,0 +1,68 @@
+{
+  "head": "2f8b11d4df9bf8a6e31f2be9ad305fb624db41a1",
+  "active_payload_commit": "cd728cd1cbf8afe4740f68a8bf91a924fee574c4",
+  "checks": [
+    {
+      "name": "Windows tests (Python 3.x)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/thisis-joe/skills/actions/runs/40320774555/job/121564839919"
+    },
+    {
+      "name": "Shell rules (ubuntu-latest, bash)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/thisis-joe/skills/actions/runs/40320774555/job/121564840115"
+    },
+    {
+      "name": "Shell rules (windows-latest, pwsh)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/thisis-joe/skills/actions/runs/40320774555/job/121564840118"
+    },
+    {
+      "name": "Shell rules (ubuntu-latest, zsh)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/thisis-joe/skills/actions/runs/40320774555/job/121564840204"
+    },
+    {
+      "name": "Windows tests (Python 3.9)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/thisis-joe/skills/actions/runs/40320774555/job/121564840262"
+    },
+    {
+      "name": "Shell rules (windows-latest, bash)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/thisis-joe/skills/actions/runs/40320774555/job/121564840416"
+    },
+    {
+      "name": "Shell rules (windows-latest, cmd)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/thisis-joe/skills/actions/runs/40320774555/job/121564840425"
+    },
+    {
+      "name": "Shell rules (windows-latest, powershell)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/thisis-joe/skills/actions/runs/40320774555/job/121564840431"
+    },
+    {
+      "name": "Check (Python 3.9)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/thisis-joe/skills/actions/runs/40320774794/job/121564841158"
+    },
+    {
+      "name": "Check (Python 3.x)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/thisis-joe/skills/actions/runs/40320774794/job/121564841432"
+    }
+  ],
+  "all_passed": true,
+  "limitation": "Checks cover the named commit. Later evidence-only commits still need forge checks before merge."
+}

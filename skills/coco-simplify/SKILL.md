@@ -28,5 +28,5 @@ Stop and correct course on any of these, in addition to the [common stop signals
 - "Fewer lines is simpler": simplicity is comprehension speed, not line count.
 - "This abstraction might be useful later": remove speculative abstraction; re-add it when needed.
 - "The original author must have had a reason": check history first, then decide; accumulated complexity often has none.
-- A simplification that needs tests changed to pass, or error handling removed to look cleaner.
+- Weakening public-behavior checks to hide a regression, or removing error handling to look cleaner. A check coupled only to removed private structure may be retired or replaced only with independent public-contract evidence, unchanged behavior checks and a recorded reason; follow the [test boundary](../_coco-shared/advanced/simplify.md#execute-in-verifiable-steps) before doing so.
 - Simplifying code you do not understand, or batching many simplifications into one hard-to-review commit.

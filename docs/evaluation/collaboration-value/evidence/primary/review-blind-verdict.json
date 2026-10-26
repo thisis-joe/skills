@@ -1,0 +1,233 @@
+{
+  "packets": [
+    {
+      "id": "0f24126093",
+      "root_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "valid_manifestations": [
+        "Cross-tenant cached reads and refunds",
+        "Conflicting invoice or amount replays succeed",
+        "Rejected over-refunds persist balances and request keys",
+        "Oversized integer refunds crash the CLI"
+      ],
+      "unsupported_findings": [],
+      "actor_evidence": "Report supplies concrete CLI sequences, persisted values, restart observations, and the oversized-integer failure.",
+      "actionable_remedies": true,
+      "unsupported_approval": false,
+      "reason": "Identifies all three mechanisms and proposes ownership checks, full payload comparison, and refund bounds validation before writes."
+    },
+    {
+      "id": "1ff4aed0d2",
+      "root_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "valid_manifestations": [
+        "Cross-tenant cached reads and refunds",
+        "Conflicting invoice or amount replays succeed",
+        "Rejected over-refunds persist balances and request keys",
+        "Oversized integer refunds crash the CLI"
+      ],
+      "unsupported_findings": [],
+      "actor_evidence": "Report describes CLI reproductions, rejected refund persistence after restart, conflicting replays, and process termination.",
+      "actionable_remedies": true,
+      "unsupported_approval": false,
+      "reason": "Explains each root mechanism and gives targeted repairs. Integer overflow is valid additional boundary evidence."
+    },
+    {
+      "id": "3132d8e7ce",
+      "root_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "valid_manifestations": [
+        "Cross-tenant cached reads and refunds",
+        "Conflicting invoice or amount replays succeed",
+        "Rejected over-refunds persist balances and request keys",
+        "Oversized integer refunds crash the CLI"
+      ],
+      "unsupported_findings": [],
+      "actor_evidence": "Report gives specific inputs and outcomes, including a 1008-cent rejected refund against 1007 cents and successful replay after restart.",
+      "actionable_remedies": true,
+      "unsupported_approval": false,
+      "reason": "Correctly connects cache authorization, unchecked replay payloads, and post-commit bounds checking to contract violations."
+    },
+    {
+      "id": "4a526b54ab",
+      "root_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "valid_manifestations": [
+        "Cross-tenant cached reads and refunds",
+        "Conflicting invoice or amount replays succeed",
+        "Rejected over-refunds persist balances and request keys",
+        "Oversized integer refunds crash the CLI"
+      ],
+      "unsupported_findings": [],
+      "actor_evidence": "Report supplies concrete CLI examples, restart persistence, conflicting replay results, and the uncaught SQLite conversion error.",
+      "actionable_remedies": true,
+      "unsupported_approval": false,
+      "reason": "All reported defects match source behavior; remedies directly address the three roots."
+    },
+    {
+      "id": "4b99871099",
+      "root_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "valid_manifestations": [
+        "Cross-tenant cached reads and refunds",
+        "Conflicting invoice or amount replays succeed",
+        "Rejected over-refunds persist balances and request keys",
+        "Oversized integer refunds crash the CLI"
+      ],
+      "unsupported_findings": [],
+      "actor_evidence": "Report describes tenant-switch reproduction, rejected 1005-cent refund persistence, conflicting key reuse, and oversized-integer termination.",
+      "actionable_remedies": true,
+      "unsupported_approval": false,
+      "reason": "Recognizes all three roots and supplies appropriate checks before cache returns, replay acceptance, and database writes."
+    },
+    {
+      "id": "730f3d1614",
+      "root_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "valid_manifestations": [
+        "Cross-tenant cached reads and refunds",
+        "Conflicting invoice or amount replays succeed",
+        "Rejected over-refunds persist balances and request keys",
+        "Oversized integer refunds crash the CLI"
+      ],
+      "unsupported_findings": [],
+      "actor_evidence": "Report provides specific CLI scenarios and explicitly explains that the refund transaction commits before limit validation.",
+      "actionable_remedies": true,
+      "unsupported_approval": false,
+      "reason": "Correctly identifies all three mechanisms; the integer crash supplements D3 rather than adding another root."
+    },
+    {
+      "id": "76d2a79350",
+      "root_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "valid_manifestations": [
+        "Cross-tenant cached reads and refunds",
+        "Conflicting replay targeting a missing invoice succeeds",
+        "Rejected over-refunds persist balances and request keys",
+        "Oversized integer refunds crash the CLI"
+      ],
+      "unsupported_findings": [],
+      "actor_evidence": "Report describes a persisted million-cent rejected refund, a changed invoice and amount replay, tenant isolation failure, and integer overflow.",
+      "actionable_remedies": true,
+      "unsupported_approval": false,
+      "reason": "Explains late validation and mutation explicitly, identifies missing replay comparisons, and proposes concrete repairs."
+    },
+    {
+      "id": "89f5c9dd4d",
+      "root_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "valid_manifestations": [
+        "Cross-tenant cached reads and refunds",
+        "Conflicting invoice or amount replays succeed",
+        "Rejected over-refunds persist balances and request keys",
+        "Oversized integer refunds crash the CLI"
+      ],
+      "unsupported_findings": [],
+      "actor_evidence": "Report supplies concrete amounts, changed-payload replay examples, restart observations, and an oversized integer causing SQLite-binding overflow.",
+      "actionable_remedies": true,
+      "unsupported_approval": false,
+      "reason": "Findings and proposed repairs align with all three root mechanisms and the CLI contract."
+    },
+    {
+      "id": "91681996e8",
+      "root_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "valid_manifestations": [
+        "Cross-tenant cached reads and refunds",
+        "Conflicting invoice or amount replays succeed",
+        "Rejected over-refunds persist balances and request keys",
+        "Oversized integer refunds crash the CLI"
+      ],
+      "unsupported_findings": [],
+      "actor_evidence": "Report describes tenant-switch access, rejected 1029-cent refund persistence, consumed keys, conflicting replays, and process termination.",
+      "actionable_remedies": true,
+      "unsupported_approval": false,
+      "reason": "Identifies mutation before bounds checking and gives actionable remedies for each root."
+    },
+    {
+      "id": "ac1bcebb10",
+      "root_ids": [],
+      "valid_manifestations": [],
+      "unsupported_findings": [
+        {
+          "claim": "The f-string ORDER BY permits arbitrary caller SQL injection.",
+          "reason": "The order value must match a fixed allowlist, and only its mapped constant enters SQL. An injection-shaped order is rejected while subsequent queries remain operational."
+        }
+      ],
+      "actor_evidence": "Report asserts injection solely from f-string use and provides no bypass or reproduction.",
+      "actionable_remedies": false,
+      "unsupported_approval": false,
+      "reason": "Its sole finding is false; it identifies none of the actual root mechanisms."
+    },
+    {
+      "id": "effe65588d",
+      "root_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "valid_manifestations": [
+        "Cross-tenant cached reads and refunds",
+        "Conflicting invoice or amount replays succeed, including a missing invoice",
+        "Rejected over-refunds persist balances and request keys",
+        "Oversized integer refunds crash the CLI"
+      ],
+      "unsupported_findings": [],
+      "actor_evidence": "Report gives concrete CLI results, restart replay behavior, committed rejected totals, and the SQLite-binding overflow.",
+      "actionable_remedies": true,
+      "unsupported_approval": false,
+      "reason": "Explains all three roots and recommends ownership enforcement, payload binding, and bounds checking before writes."
+    },
+    {
+      "id": "fa21179084",
+      "root_ids": [],
+      "valid_manifestations": [],
+      "unsupported_findings": [],
+      "actor_evidence": "Report cites only a passing smoke test and approves the patch.",
+      "actionable_remedies": false,
+      "unsupported_approval": true,
+      "reason": "The smoke test does not establish the required isolation, replay conflict handling, or rejection atomicity; the approved patch contains all three defects."
+    }
+  ],
+  "judge_checks": [
+    "Compared supplied source, contract, and proposed diff across all twelve packets; these files are identical across packets, while seed amounts vary.",
+    "Ran actual CLI probes for every packet using disposable temporary databases and disabled bytecode writes.",
+    "Confirmed cached cross-tenant disclosure and unauthorized refunds in every packet.",
+    "Confirmed changed amount and changed invoice replays return the original successful receipt.",
+    "Confirmed rejected over-refunds persist excessive totals and request keys across restart; retrying with a valid amount returns the rejected receipt.",
+    "Confirmed amount 9223372036854775808 causes uncaught OverflowError, exit status 1, and no response or processing of the following request.",
+    "Confirmed injection-shaped ordering is rejected and the next valid list request succeeds.",
+    "Judge probes were used for validation only, not credited as actor-supplied evidence."
+  ],
+  "limitations": [
+    "Actor execution histories and claimed repository metadata were not supplied; assessment credits the semantic evidence in review.txt against the supplied artifacts.",
+    "Concurrency and remote authentication were not tested and are outside the supplied contract."
+  ]
+}

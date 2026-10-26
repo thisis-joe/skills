@@ -1,0 +1,9 @@
+{
+  "evidence_unchanged": true,
+  "grade_status": "ungraded; independent grading not requested because no matched pair completed",
+  "collect_validate_status": "not run: no grades exist; packet bytes/modes separately matched its frozen manifest",
+  "cases": 14,
+  "partial_projects": 1,
+  "unstarted_projects": 11,
+  "negative_controls": 2
+}

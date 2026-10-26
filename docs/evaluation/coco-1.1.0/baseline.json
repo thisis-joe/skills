@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-25",
+  "purpose": "Planning provenance; no new actor experiment or active implementation",
+  "planning_branch": "plan/coco-1.1.0",
+  "planning_base": {
+    "commit": "a19c5fb832ce3d2c758ee68d057532c36511dd29",
+    "tree": "f47005356da204c89b1a162f6c03b16bcadbafa4",
+    "skills_tree": "ba4b08ef100fb754d5cadfe23c923009dc979c4e",
+    "sources_tree": "69bc146deab371c1eb61c49591b2e53dbc586772",
+    "skill_file_count": 117
+  },
+  "release_tag": {
+    "name": "v1.0.0",
+    "tag_object": "e536a1f62fc41d68742b7af0982e239aa3234fa4",
+    "commit": "84a59a2f0c0a581156e7e10ea011461f88d6b2a3",
+    "tree": "2bce4a83e688254cba66df1a917a2df448b64828",
+    "skills_tree": "6936cb5945f39b1f5d3e5bf18046ef42d160b48a",
+    "sources_tree": "ab59a0920cc44f6f928f75a360e4c5a5fd69d8e2",
+    "skill_file_count": 116
+  },
+  "equivalent_release_tree": {
+    "commit": "88d1c84f999e12dfda8d75b07e7599d7792e2339",
+    "tree": "2bce4a83e688254cba66df1a917a2df448b64828",
+    "skills_tree": "6936cb5945f39b1f5d3e5bf18046ef42d160b48a",
+    "sources_tree": "ab59a0920cc44f6f928f75a360e4c5a5fd69d8e2",
+    "skill_file_count": 116
+  },
+  "experimental_candidate": {
+    "commit": "622975e349e6276b225aa9ef02ee69d664dd2927",
+    "tree": "54478a51ce8eedb37c2e832e6307ed3347cc1cd9",
+    "skills_tree": "ba4b08ef100fb754d5cadfe23c923009dc979c4e",
+    "sources_tree": "69bc146deab371c1eb61c49591b2e53dbc586772",
+    "skill_file_count": 117
+  },
+  "release_to_experiment_skill_paths": [
+    "skills/_coco-shared/advanced/build.md",
+    "skills/_coco-shared/advanced/clarify.md",
+    "skills/_coco-shared/advanced/context.md",
+    "skills/_coco-shared/advanced/plan.md",
+    "skills/_coco-shared/advanced/spec.md",
+    "skills/_coco-shared/contracts.md",
+    "skills/_coco-shared/decisions.md",
+    "skills/_coco-shared/routing.md",
+    "skills/_coco-shared/workflow.md",
+    "skills/coco-build/SKILL.md",
+    "skills/coco-clarify/SKILL.md",
+    "skills/coco-debug/SKILL.md",
+    "skills/coco-plan/SKILL.md",
+    "skills/coco-push/references/branch-and-ticket.md",
+    "skills/coco-review/SKILL.md",
+    "skills/coco-spec/SKILL.md",
+    "skills/coco-start/SKILL.md",
+    "skills/coco-tellmeskill/SKILL.md",
+    "skills/coco-verify/SKILL.md"
+  ],
+  "release_to_experiment_source_paths": [
+    "sources/coverage.json"
+  ],
+  "handoff_source_commits": [
+    "90edb555db0c828e33d92ee9e1659be87c60deb8",
+    "5164cd49574200de4f0f3fca1f5f29e90289ba85"
+  ],
+  "handoff_integration_commit": "ebffb8c64f102588cc33b4cd6c12a21391d5aa9d",
+  "protected_paths": [
+    "skills",
+    "sources",
+    "scripts",
+    "tests",
+    "bin",
+    "package.json",
+    "coco.json",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "phase_limit": "Documentation only; preserve protected tracked/untracked paths against planning_base; future implementation starts from a release-based branch after a user implementation request.",
+  "limits": [
+    "Local tag/tree provenance only; no new registry lookup or published-package execution.",
+    "Both release and experimental package metadata declare1.0.0; compare content hashes, not the version string.",
+    "1.1.0 is provisional until consumer-visible compatibility is audited."
+  ]
+}

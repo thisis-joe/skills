@@ -1,0 +1,184 @@
+[
+  {
+    "runtime": "codex",
+    "source": "baseline",
+    "command": [
+      "node",
+      "/private/tmp/coco-release-1.1.0-ofdjvclh/baseline/extracted/package/bin/coco-skills.cjs",
+      "install",
+      "--runtime",
+      "codex",
+      "--project",
+      "/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-codex"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 29,\n  \"files\": 116,\n  \"destination\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-codex/.agents/skills\",\n  \"project\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-codex\",\n  \"git_exclude\": {\n    \"file\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-codex/.git/info/exclude\",\n    \"added\": 0\n  }\n}\n",
+    "stderr": "Warning: the global COCO install at /Users/Joseph/.codex/skills still applies to every project; remove it with --remove-global.\n",
+    "validation": {
+      "exit": 0,
+      "stdout": "Validated installed bundle: 29 skills, 116 files\n",
+      "stderr": ""
+    },
+    "all_bytes_match": true,
+    "unrelated_preserved": true
+  },
+  {
+    "runtime": "codex",
+    "source": "candidate",
+    "command": [
+      "node",
+      "/private/tmp/coco-release-1.1.0-ofdjvclh/candidate/extracted/package/bin/coco-skills.cjs",
+      "install",
+      "--runtime",
+      "codex",
+      "--project",
+      "/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-codex"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 29,\n  \"files\": 117,\n  \"destination\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-codex/.agents/skills\",\n  \"project\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-codex\",\n  \"git_exclude\": {\n    \"file\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-codex/.git/info/exclude\",\n    \"added\": 0\n  }\n}\n",
+    "stderr": "Warning: the global COCO install at /Users/Joseph/.codex/skills still applies to every project; remove it with --remove-global.\n",
+    "validation": {
+      "exit": 0,
+      "stdout": "Validated installed bundle: 29 skills, 117 files\n",
+      "stderr": ""
+    },
+    "all_bytes_match": true,
+    "unrelated_preserved": true
+  },
+  {
+    "runtime": "codex",
+    "source": "baseline",
+    "command": [
+      "node",
+      "/private/tmp/coco-release-1.1.0-ofdjvclh/baseline/extracted/package/bin/coco-skills.cjs",
+      "install",
+      "--runtime",
+      "codex",
+      "--project",
+      "/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-codex"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 29,\n  \"files\": 116,\n  \"destination\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-codex/.agents/skills\",\n  \"project\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-codex\",\n  \"git_exclude\": {\n    \"file\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-codex/.git/info/exclude\",\n    \"added\": 0\n  }\n}\n",
+    "stderr": "Warning: the global COCO install at /Users/Joseph/.codex/skills still applies to every project; remove it with --remove-global.\n",
+    "validation": {
+      "exit": 0,
+      "stdout": "Validated installed bundle: 29 skills, 116 files\n",
+      "stderr": ""
+    },
+    "all_bytes_match": true,
+    "unrelated_preserved": true
+  },
+  {
+    "runtime": "codex",
+    "source": "candidate",
+    "command": [
+      "node",
+      "/private/tmp/coco-release-1.1.0-ofdjvclh/candidate/extracted/package/bin/coco-skills.cjs",
+      "install",
+      "--runtime",
+      "codex",
+      "--project",
+      "/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-codex"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 29,\n  \"files\": 117,\n  \"destination\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-codex/.agents/skills\",\n  \"project\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-codex\",\n  \"git_exclude\": {\n    \"file\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-codex/.git/info/exclude\",\n    \"added\": 0\n  }\n}\n",
+    "stderr": "Warning: the global COCO install at /Users/Joseph/.codex/skills still applies to every project; remove it with --remove-global.\n",
+    "validation": {
+      "exit": 0,
+      "stdout": "Validated installed bundle: 29 skills, 117 files\n",
+      "stderr": ""
+    },
+    "all_bytes_match": true,
+    "unrelated_preserved": true
+  },
+  {
+    "runtime": "claude",
+    "source": "baseline",
+    "command": [
+      "node",
+      "/private/tmp/coco-release-1.1.0-ofdjvclh/baseline/extracted/package/bin/coco-skills.cjs",
+      "install",
+      "--runtime",
+      "claude",
+      "--project",
+      "/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-claude"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 29,\n  \"files\": 116,\n  \"destination\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-claude/.claude/skills\",\n  \"project\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-claude\",\n  \"git_exclude\": {\n    \"file\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-claude/.git/info/exclude\",\n    \"added\": 0\n  }\n}\n",
+    "stderr": "Warning: the global COCO install at /Users/Joseph/.claude/skills still applies to every project; remove it with --remove-global.\n",
+    "validation": {
+      "exit": 0,
+      "stdout": "Validated installed bundle: 29 skills, 116 files\n",
+      "stderr": ""
+    },
+    "all_bytes_match": true,
+    "unrelated_preserved": true
+  },
+  {
+    "runtime": "claude",
+    "source": "candidate",
+    "command": [
+      "node",
+      "/private/tmp/coco-release-1.1.0-ofdjvclh/candidate/extracted/package/bin/coco-skills.cjs",
+      "install",
+      "--runtime",
+      "claude",
+      "--project",
+      "/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-claude"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 29,\n  \"files\": 117,\n  \"destination\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-claude/.claude/skills\",\n  \"project\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-claude\",\n  \"git_exclude\": {\n    \"file\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-claude/.git/info/exclude\",\n    \"added\": 0\n  }\n}\n",
+    "stderr": "Warning: the global COCO install at /Users/Joseph/.claude/skills still applies to every project; remove it with --remove-global.\n",
+    "validation": {
+      "exit": 0,
+      "stdout": "Validated installed bundle: 29 skills, 117 files\n",
+      "stderr": ""
+    },
+    "all_bytes_match": true,
+    "unrelated_preserved": true
+  },
+  {
+    "runtime": "claude",
+    "source": "baseline",
+    "command": [
+      "node",
+      "/private/tmp/coco-release-1.1.0-ofdjvclh/baseline/extracted/package/bin/coco-skills.cjs",
+      "install",
+      "--runtime",
+      "claude",
+      "--project",
+      "/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-claude"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 29,\n  \"files\": 116,\n  \"destination\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-claude/.claude/skills\",\n  \"project\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-claude\",\n  \"git_exclude\": {\n    \"file\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-claude/.git/info/exclude\",\n    \"added\": 0\n  }\n}\n",
+    "stderr": "Warning: the global COCO install at /Users/Joseph/.claude/skills still applies to every project; remove it with --remove-global.\n",
+    "validation": {
+      "exit": 0,
+      "stdout": "Validated installed bundle: 29 skills, 116 files\n",
+      "stderr": ""
+    },
+    "all_bytes_match": true,
+    "unrelated_preserved": true
+  },
+  {
+    "runtime": "claude",
+    "source": "candidate",
+    "command": [
+      "node",
+      "/private/tmp/coco-release-1.1.0-ofdjvclh/candidate/extracted/package/bin/coco-skills.cjs",
+      "install",
+      "--runtime",
+      "claude",
+      "--project",
+      "/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-claude"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 29,\n  \"files\": 117,\n  \"destination\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-claude/.claude/skills\",\n  \"project\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-claude\",\n  \"git_exclude\": {\n    \"file\": \"/private/tmp/coco-release-1.1.0-ofdjvclh/rollback-claude/.git/info/exclude\",\n    \"added\": 0\n  }\n}\n",
+    "stderr": "Warning: the global COCO install at /Users/Joseph/.claude/skills still applies to every project; remove it with --remove-global.\n",
+    "validation": {
+      "exit": 0,
+      "stdout": "Validated installed bundle: 29 skills, 117 files\n",
+      "stderr": ""
+    }
+  }
+]

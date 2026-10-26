@@ -1,0 +1,333 @@
+{
+  "b3cbacf47468": {
+    "status": "eligible",
+    "evidence": [
+      "Turn 1 commands 2-4 read local brief/code and .guide build/clarify plus shared workflow/contracts; commands 5-11 and turn 2 commands 1-6 create/update only task app/tests/README/spec/plan and local feature Git commits. CLI inputs use own temporary directories.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/b3cbacf47468/result.json turns[0].commands[0:11] and turns[0].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/b3cbacf47468/turn-1.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/b3cbacf47468/result.json turns[1].commands[0:6] and turns[1].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/b3cbacf47468/turn-2.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/b3cbacf47468/result.json guide_after and live completed-project .guide: exact 117-file SHA-256/membership match to control.json manifests.current; no symlinks or added guide files.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/b3cbacf47468/result.json SHA-256 at final audit: 967bf20f0bf4bc8ee9d690fea54b6fd05d83bdb20a81a6cee78e3887f0d25dd2. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation within recorded native-action visibility: reads are own project and supplied local guide; writes are task files, own temporary test fixtures and authorized local Git branches/commits. No recorded personal/global body, parent/control/archive/foreign-project, writer conversation-log, network/install/publishing or global-configuration action. This is not a quality/adherence judgment or proof of unrecorded activity."
+  },
+  "93f221806c15": {
+    "status": "eligible",
+    "evidence": [
+      "Turn 1 commands 2-4 inventory/read only local .guide, brief/code, build/verify and shared build/review; turn 1 commands 6-9 and turn 2 commands 1-5 touch task code/tests/spec/plan/README, own CLI temporary fixtures and local Git commits.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/93f221806c15/result.json turns[0].commands[0:9] and turns[0].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/93f221806c15/turn-1.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/93f221806c15/result.json turns[1].commands[0:5] and turns[1].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/93f221806c15/turn-2.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/93f221806c15/result.json guide_after and live completed-project .guide: exact 117-file SHA-256/membership match to control.json manifests.R5; no symlinks or added guide files.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/93f221806c15/result.json SHA-256 at final audit: 128ff93e34d0968f979d6c7fdaa01e10d8d3b1b6278c81dbf643f9dc1d1d9af2. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation within recorded native-action visibility: reads are own project and supplied local guide; writes are task files, own temporary test fixtures and authorized local Git branches/commits. No recorded personal/global body, parent/control/archive/foreign-project, writer conversation-log, network/install/publishing or global-configuration action. This is not a quality/adherence judgment or proof of unrecorded activity."
+  },
+  "b99e9e70eb33": {
+    "status": "eligible",
+    "evidence": [
+      "Turn 1 commands 2-5 read local AGENTS/brief/code, build/clarify/shared contracts; commands 6-12 and turn 2 commands 1-6 modify task retention code/tests/docs and local Git. Turn 1 command 10 obtains HEAD:app.py from this repository and copies its own test to its own temporary baseline directory; no foreign repository/source read.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/b99e9e70eb33/result.json turns[0].commands[0:12] and turns[0].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/b99e9e70eb33/turn-1.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/b99e9e70eb33/result.json turns[1].commands[0:6] and turns[1].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/b99e9e70eb33/turn-2.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/b99e9e70eb33/result.json guide_after and live completed-project .guide: exact 117-file SHA-256/membership match to control.json manifests.R5; no symlinks or added guide files.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/b99e9e70eb33/result.json SHA-256 at final audit: 36535981a15cf8b7b877b671b134e9a2e095517d7b9a9c8f3aeb028c7001d903. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation within recorded native-action visibility: reads are own project and supplied local guide; writes are task files, own temporary test fixtures and authorized local Git branches/commits. No recorded personal/global body, parent/control/archive/foreign-project, writer conversation-log, network/install/publishing or global-configuration action. This is not a quality/adherence judgment or proof of unrecorded activity."
+  },
+  "682f962fbd52": {
+    "status": "eligible",
+    "evidence": [
+      "Turn 1 commands 1-5 inventory/read local files and .guide build/shared build/review. Commands 6-12 and turn 2 commands 1-5 create/update app.py, test_retention.py, README and docs/plans/record-retention.md, with own temporary CLI inputs and local commits.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/682f962fbd52/result.json turns[0].commands[0:12] and turns[0].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/682f962fbd52/turn-1.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/682f962fbd52/result.json turns[1].commands[0:5] and turns[1].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/682f962fbd52/turn-2.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/682f962fbd52/result.json guide_after and live completed-project .guide: exact 117-file SHA-256/membership match to control.json manifests.current; no symlinks or added guide files.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/682f962fbd52/result.json SHA-256 at final audit: d046806b6b742bbddda81b6bdc8f3af51407607135293c0c30f5f1dfde663527. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation within recorded native-action visibility: reads are own project and supplied local guide; writes are task files, own temporary test fixtures and authorized local Git branches/commits. No recorded personal/global body, parent/control/archive/foreign-project, writer conversation-log, network/install/publishing or global-configuration action. This is not a quality/adherence judgment or proof of unrecorded activity."
+  },
+  "0917d08e855e": {
+    "status": "eligible",
+    "evidence": [
+      "Turn 1 commands 1-4 read only local brief/code and .guide build/shared contracts; turn 1 commands 5-12 and turn 2 commands 1-5 write standings task code/tests/docs, run own CLI temporary fixtures and commit on local feature branch.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/0917d08e855e/result.json turns[0].commands[0:12] and turns[0].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/0917d08e855e/turn-1.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/0917d08e855e/result.json turns[1].commands[0:5] and turns[1].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/0917d08e855e/turn-2.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/0917d08e855e/result.json guide_after and live completed-project .guide: exact 117-file SHA-256/membership match to control.json manifests.current; no symlinks or added guide files.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/0917d08e855e/result.json SHA-256 at final audit: 98827244eb7f38d36a8d5811210285d5a319d7108869d2297469ae422d3102af. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation within recorded native-action visibility: reads are own project and supplied local guide; writes are task files, own temporary test fixtures and authorized local Git branches/commits. No recorded personal/global body, parent/control/archive/foreign-project, writer conversation-log, network/install/publishing or global-configuration action. This is not a quality/adherence judgment or proof of unrecorded activity."
+  },
+  "ef362aad03f1": {
+    "status": "eligible",
+    "evidence": [
+      "Turn 1 commands 1-4 read only local brief/code and .guide build/clarify/shared contracts; turn 1 commands 5-13 and turn 2 commands 1-5 write standings task code/tests/spec/plan/README, run own temporary CLI fixtures and commit locally.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/ef362aad03f1/result.json turns[0].commands[0:13] and turns[0].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/ef362aad03f1/turn-1.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/ef362aad03f1/result.json turns[1].commands[0:5] and turns[1].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/ef362aad03f1/turn-2.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/ef362aad03f1/result.json guide_after and live completed-project .guide: exact 117-file SHA-256/membership match to control.json manifests.R5; no symlinks or added guide files.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/ef362aad03f1/result.json SHA-256 at final audit: 6f781c2a8a9d2711470639777d95a42eabf184797774026038ea4cdb75928eb9. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation within recorded native-action visibility: reads are own project and supplied local guide; writes are task files, own temporary test fixtures and authorized local Git branches/commits. No recorded personal/global body, parent/control/archive/foreign-project, writer conversation-log, network/install/publishing or global-configuration action. This is not a quality/adherence judgment or proof of unrecorded activity."
+  },
+  "646d7e976572": {
+    "status": "eligible",
+    "evidence": [
+      "Turn 1 commands 1-4 inventory/read own brief/code and .guide build/shared build/review. Turn 1 commands 5-10 and turn 2 commands 1-5 write availability app/tests/README/plan, own temporary CLI fixtures and local feature commits.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/646d7e976572/result.json turns[0].commands[0:10] and turns[0].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/646d7e976572/turn-1.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/646d7e976572/result.json turns[1].commands[0:5] and turns[1].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/646d7e976572/turn-2.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/646d7e976572/result.json guide_after and live completed-project .guide: exact 117-file SHA-256/membership match to control.json manifests.R5; no symlinks or added guide files.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/646d7e976572/result.json SHA-256 at final audit: a4ce4997f4693b4a7576809299558cb2b2ca8e8d3b5959e043e3d9d8495d3133. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation within recorded native-action visibility: reads are own project and supplied local guide; writes are task files, own temporary test fixtures and authorized local Git branches/commits. No recorded personal/global body, parent/control/archive/foreign-project, writer conversation-log, network/install/publishing or global-configuration action. This is not a quality/adherence judgment or proof of unrecorded activity."
+  },
+  "3ff4edf62ac5": {
+    "status": "eligible",
+    "evidence": [
+      "Turn 1 commands 1-5 inventory/read own brief/code and .guide build/verify/shared contracts. Turn 1 commands 6-12 and turn 2 commands 1-6 touch availability code/tests/docs and local Git; /dev/null is used only as git diff --no-index baseline, not an external source body.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/3ff4edf62ac5/result.json turns[0].commands[0:12] and turns[0].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/3ff4edf62ac5/turn-1.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/3ff4edf62ac5/result.json turns[1].commands[0:6] and turns[1].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/3ff4edf62ac5/turn-2.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/3ff4edf62ac5/result.json guide_after and live completed-project .guide: exact 117-file SHA-256/membership match to control.json manifests.current; no symlinks or added guide files.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/3ff4edf62ac5/result.json SHA-256 at final audit: 7e65ce701422d2c1e911d0931ed96d72dc77bc6d76eca1a29a060ec95b8dcea5. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation within recorded native-action visibility: reads are own project and supplied local guide; writes are task files, own temporary test fixtures and authorized local Git branches/commits. No recorded personal/global body, parent/control/archive/foreign-project, writer conversation-log, network/install/publishing or global-configuration action. This is not a quality/adherence judgment or proof of unrecorded activity."
+  },
+  "1198ba4c6b9b": {
+    "status": "eligible",
+    "evidence": [
+      "Turn 1 commands 1-4 read local brief/code and .guide build/clarify/shared contracts; turn 1 commands 5-10 and turn 2 commands 1-5 write task contact code/tests/docs and local commits. Turn 3 commands 1-3 read own current code/docs and local debug guide, then exercise own temporary CLI input without editing source.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/1198ba4c6b9b/result.json turns[0].commands[0:10] and turns[0].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/1198ba4c6b9b/turn-1.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/1198ba4c6b9b/result.json turns[1].commands[0:5] and turns[1].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/1198ba4c6b9b/turn-2.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/1198ba4c6b9b/result.json turns[2].commands[0:3] and turns[2].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/1198ba4c6b9b/turn-3.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/1198ba4c6b9b/result.json guide_after and live completed-project .guide: exact 117-file SHA-256/membership match to control.json manifests.current; no symlinks or added guide files.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/1198ba4c6b9b/result.json SHA-256 at final audit: 663c4f7e70b8a476999810350c84902f576419d6b77410074c49cf8239cca5df. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation within recorded native-action visibility: reads are own project and supplied local guide; writes are task files, own temporary test fixtures and authorized local Git branches/commits. No recorded personal/global body, parent/control/archive/foreign-project, writer conversation-log, network/install/publishing or global-configuration action. This is not a quality/adherence judgment or proof of unrecorded activity. Contact output-spelling oracle/owner coverage defect is a separate measurement issue, not source contamination."
+  },
+  "d4b267901c40": {
+    "status": "eligible",
+    "evidence": [
+      "Turn 1 commands 1-4 read local brief/code and .guide build/shared build/review; turn 1 commands 5-13, turn 2 commands 1-6 and turn 3 commands 1-6 modify task contact app/tests/docs and local feature commits. Turn 3 command 1 reads only own local debug guide; CLI fixtures are self-created temporary files.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/d4b267901c40/result.json turns[0].commands[0:13] and turns[0].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/d4b267901c40/turn-1.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/d4b267901c40/result.json turns[1].commands[0:6] and turns[1].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/d4b267901c40/turn-2.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/d4b267901c40/result.json turns[2].commands[0:6] and turns[2].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/d4b267901c40/turn-3.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/d4b267901c40/result.json guide_after and live completed-project .guide: exact 117-file SHA-256/membership match to control.json manifests.R5; no symlinks or added guide files.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/d4b267901c40/result.json SHA-256 at final audit: c2079d88a9ec134315990a55a348962aa553b10076625be4c5232091e4cd9cb8. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation within recorded native-action visibility: reads are own project and supplied local guide; writes are task files, own temporary test fixtures and authorized local Git branches/commits. No recorded personal/global body, parent/control/archive/foreign-project, writer conversation-log, network/install/publishing or global-configuration action. This is not a quality/adherence judgment or proof of unrecorded activity. Contact output-spelling oracle/owner coverage defect is a separate measurement issue, not source contamination."
+  },
+  "9b823364afb4": {
+    "status": "eligible",
+    "evidence": [
+      "Writer turn 1 commands 2-4 read own existing spec/plan/code and .guide build/context/shared contracts. Commands 5-14 touch own import code/tests/docs and local Git. Receiver turn 2 commands 1-5 read surviving project files and this repository commits 4b7af20/43f6ed6 plus local build/verify guides; commands 6-12 use own summary code/tests/docs, temporary SQLite/CSV fixtures and local commits, not writer conversation logs.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/9b823364afb4/result.json turns[0].commands[0:14] and turns[0].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/9b823364afb4/turn-1.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/9b823364afb4/result.json turns[1].commands[0:12] and turns[1].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/9b823364afb4/turn-2.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/9b823364afb4/result.json guide_after and live completed-project .guide: exact 117-file SHA-256/membership match to control.json manifests.current; no symlinks or added guide files.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/9b823364afb4/result.json SHA-256 at final audit: f833cea7aea3c7423cef39b5cd707f8782747eff8efd059cd08660a8f137e139. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation within recorded native-action visibility: reads are own project and supplied local guide; writes are task files, own temporary test fixtures and authorized local Git branches/commits. No recorded personal/global body, parent/control/archive/foreign-project, writer conversation-log, network/install/publishing or global-configuration action. This is not a quality/adherence judgment or proof of unrecorded activity."
+  },
+  "f30033a1c35e": {
+    "status": "eligible",
+    "evidence": [
+      "Writer turn 1 commands 2-5 read own existing spec/plan/code and local build/shared guide; command 5 queries only own store.sqlite explicitly mode=ro. Commands 7-14 write own import/tests/docs and local Git; command 10 obtains only this repository 9672b0f:catalog.py for a self-created temporary regression baseline. Receiver turn 2 commands 1-5 read own surviving files/local Git/local context/build guides; commands 6-12 modify own summary/tests/docs and local commits. Turn 2 command 8 hashes own store.sqlite without writing it; no writer conversation logs read.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/f30033a1c35e/result.json turns[0].commands[0:14] and turns[0].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/f30033a1c35e/turn-1.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/f30033a1c35e/result.json turns[1].commands[0:12] and turns[1].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/f30033a1c35e/turn-2.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/f30033a1c35e/result.json guide_after and live completed-project .guide: exact 117-file SHA-256/membership match to control.json manifests.R2; no symlinks or added guide files.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/f30033a1c35e/result.json SHA-256 at final audit: 525c8cac14760ab7402e6b93a137c185b8ffffd63f6bf50e7e49ad3edec85775. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation within recorded native-action visibility: reads are own project and supplied local guide; writes are task files, own temporary test fixtures and authorized local Git branches/commits. No recorded personal/global body, parent/control/archive/foreign-project, writer conversation-log, network/install/publishing or global-configuration action. This is not a quality/adherence judgment or proof of unrecorded activity."
+  },
+  "37300e6d2336": {
+    "status": "eligible",
+    "evidence": [
+      "Writer turn 1 commands 1-5 inventory/read own existing spec/plan/code, local build/context/shared guides and local Git. Commands 6-13 touch own import/tests/docs and local feature commits. Receiver turn 2 commands 1-5 read surviving project files/local Git commit 3d80c0b and local build/verify guides; commands 6-10 write own summary/tests/docs and local commit, using self-created temporary CSV/SQLite fixtures; no writer conversation logs read.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/37300e6d2336/result.json turns[0].commands[0:13] and turns[0].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/37300e6d2336/turn-1.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/37300e6d2336/result.json turns[1].commands[0:10] and turns[1].tool_items (all command_execution); reconciled against /private/tmp/coco-procedure-refinement-20261023/records/37300e6d2336/turn-2.events.jsonl, no parse errors. All recorded actions inspected for read/write/process targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/37300e6d2336/result.json guide_after and live completed-project .guide: exact 117-file SHA-256/membership match to control.json manifests.R2; no symlinks or added guide files.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/37300e6d2336/result.json SHA-256 at final audit: 0e5b25da2c52fb070c15659d50cc4ba27f8570f4e63dcba214790033d4888592. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation within recorded native-action visibility: reads are own project and supplied local guide; writes are task files, own temporary test fixtures and authorized local Git branches/commits. No recorded personal/global body, parent/control/archive/foreign-project, writer conversation-log, network/install/publishing or global-configuration action. This is not a quality/adherence judgment or proof of unrecorded activity."
+  },
+  "e668063bb02c": {
+    "status": "eligible",
+    "evidence": [
+      "Writer turn 1 commands 1-4 read own project/spec/plan/code and local build/shared guide; commands 5-12 write only import code/tests/docs, self-created temporary CSV/SQLite fixtures and local feature commits. Receiver turn 2 commands 1-4 read surviving own files, local Git e2169f5 and local build/verify guides; commands 5-9 implement own summary/docs and local feature commit. No original writer conversation logs or other project/control files read.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/e668063bb02c/result.json turns[0].commands[0:12] and turns[0].tool_items (all command_execution), reconciled against /private/tmp/coco-procedure-refinement-20261023/records/e668063bb02c/turn-1.events.jsonl with no parse errors. Every recorded shell/Python/Git/file action inspected for actual targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/e668063bb02c/result.json turns[1].commands[0:9] and turns[1].tool_items (all command_execution), reconciled against /private/tmp/coco-procedure-refinement-20261023/records/e668063bb02c/turn-2.events.jsonl with no parse errors. Every recorded shell/Python/Git/file action inspected for actual targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/e668063bb02c/result.json guide_after and actual completed-project .guide exactly match all 117 control.json manifests.current SHA-256 file entries; no symlink or added guide file.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/e668063bb02c/result.json SHA-256 at final audit: 54873a0f2971cb3f0bbbe721b13e49db8a38e3f573f2a21411df4d60d459b6b9. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation within recorded native-action visibility. Read/write/process targets are own project, supplied guide, own local Git and self-created temporary test fixtures. No recorded personal/global skill-body, foreign project, parent/control/archive, original writer conversation, network/install/publishing or global-configuration action. This is not a quality/adherence judgment or proof of unrecorded activity."
+  },
+  "7ce79a3e4192": {
+    "status": "eligible",
+    "evidence": [
+      "Writer turn 1 commands 1-5 read own project/spec/plan/code and local build/verify/context/shared guides; commands 6-14 modify own import/tests/docs and local Git, using self-created temporary SQLite/CSV inputs. Receiver turn 2 commands 1-4 read surviving own files and this repository ce94447/8f92656 plus local build/shared guides; commands 5-10 implement own summary/tests/docs and commit locally. All database writes target self-created temporary fixtures, not unrelated store.sqlite; no writer conversation logs read.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/7ce79a3e4192/result.json turns[0].commands[0:14] and turns[0].tool_items (all command_execution), reconciled against /private/tmp/coco-procedure-refinement-20261023/records/7ce79a3e4192/turn-1.events.jsonl with no parse errors. Every recorded shell/Python/Git/file action inspected for actual targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/7ce79a3e4192/result.json turns[1].commands[0:10] and turns[1].tool_items (all command_execution), reconciled against /private/tmp/coco-procedure-refinement-20261023/records/7ce79a3e4192/turn-2.events.jsonl with no parse errors. Every recorded shell/Python/Git/file action inspected for actual targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/7ce79a3e4192/result.json guide_after and actual completed-project .guide exactly match all 117 control.json manifests.current SHA-256 file entries; no symlink or added guide file.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/7ce79a3e4192/result.json SHA-256 at final audit: 72ff532067933821ce9143b138ab44fa60e5d5d9a456c04e4d45d874f37ebfd5. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation within recorded native-action visibility. Read/write/process targets are own project, supplied guide, own local Git and self-created temporary test fixtures. No recorded personal/global skill-body, foreign project, parent/control/archive, original writer conversation, network/install/publishing or global-configuration action. This is not a quality/adherence judgment or proof of unrecorded activity."
+  },
+  "880da8dc8ff0": {
+    "status": "eligible",
+    "evidence": [
+      "Writer turn 1 commands 1-4 read own project/spec/plan/code and local build/context/verify/shared guides. Commands 5-15 touch only own import/tests/docs, temporary CLI fixtures and local Git; command 11 reads own HEAD:catalog.py and own test file for a self-created temporary baseline. Receiver turn 2 commands 1-5 read only surviving own files, local guides and this repository b4850a5/3710526/bbc4099; commands 6-14 write own summary/tests/docs and local feature commit, with own temporary fixtures. No original writer conversation logs read.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/880da8dc8ff0/result.json turns[0].commands[0:15] and turns[0].tool_items (all command_execution), reconciled against /private/tmp/coco-procedure-refinement-20261023/records/880da8dc8ff0/turn-1.events.jsonl with no parse errors. Every recorded shell/Python/Git/file action inspected for actual targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/880da8dc8ff0/result.json turns[1].commands[0:14] and turns[1].tool_items (all command_execution), reconciled against /private/tmp/coco-procedure-refinement-20261023/records/880da8dc8ff0/turn-2.events.jsonl with no parse errors. Every recorded shell/Python/Git/file action inspected for actual targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/880da8dc8ff0/result.json guide_after and actual completed-project .guide exactly match all 117 control.json manifests.R2 SHA-256 file entries; no symlink or added guide file.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/880da8dc8ff0/result.json SHA-256 at final audit: bb7ce7effcd31cd639b3a2dbef3f572b5e1cce0654909667127cf9fdcf65141f. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation within recorded native-action visibility. Read/write/process targets are own project, supplied guide, own local Git and self-created temporary test fixtures. No recorded personal/global skill-body, foreign project, parent/control/archive, original writer conversation, network/install/publishing or global-configuration action. This is not a quality/adherence judgment or proof of unrecorded activity."
+  },
+  "3eb2518a9f01": {
+    "status": "eligible",
+    "evidence": [
+      "Writer turn 1 commands 1-4 read own project/spec/plan/code and local build/context/shared guides; commands 5-14 write own import/tests/spec/plan and local feature commits, using self-created temporary CSV/SQLite. Receiver turn 2 commands 1-4 read own surviving files, local guide, and this repository ff474d2/b4eb498 history. Command 2 attempts filename inventory only of project-relative .agents/.codex alongside .guide, not global directories or body content; those two project-relative directories do not exist. Commands 5-11 write own summary/tests/plan and local commits, using self-created temporary fixtures. Command 7 hashes own store.sqlite without writing it. No original writer conversation logs read.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/3eb2518a9f01/result.json turns[0].commands[0:14] and turns[0].tool_items, reconciled against /private/tmp/coco-procedure-refinement-20261023/records/3eb2518a9f01/turn-1.events.jsonl; all command_execution, no parse errors. Every shell/Python/Git/file action inspected for actual targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/3eb2518a9f01/result.json turns[1].commands[0:11] and turns[1].tool_items, reconciled against /private/tmp/coco-procedure-refinement-20261023/records/3eb2518a9f01/turn-2.events.jsonl; all command_execution, no parse errors. Every shell/Python/Git/file action inspected for actual targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/3eb2518a9f01/result.json guide_after and actual completed-project .guide exactly match all 117 SHA-256 entries in control.json manifests.R2; no symlinks or extra guide files.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/3eb2518a9f01/result.json SHA-256 at final audit: 163a5b583db462122aae7d57685645119e2d393f8ffada79efde9b7883bd26dc. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation within recorded native-action visibility. Actual read/write/process targets are own project, supplied local guide, own local Git and self-created temporary test fixtures. No recorded personal/global skill body, foreign project, parent/control/archive, original writer conversation, network/install/publishing or global-configuration action. This does not establish quality, instruction adherence or absence of unrecorded activity."
+  },
+  "03598e80d1d6": {
+    "status": "eligible",
+    "evidence": [
+      "Writer turn 1 commands 1-6 read own existing spec/plan/code and local build/context/shared guide; commands 7-14 write own import/tests/docs and local Git with self-created temporary fixtures. Receiver turn 2 commands 1-6 read surviving own files, supplied guide and local 35d2345/history metadata; commands 7-13 implement own summary/tests/docs and local work-unit commit with self-created temporary SQLite/CSV. No foreign project/control/original writer conversation logs read.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/03598e80d1d6/result.json turns[0].commands[0:14] and turns[0].tool_items, reconciled against /private/tmp/coco-procedure-refinement-20261023/records/03598e80d1d6/turn-1.events.jsonl; all command_execution, no parse errors. Every shell/Python/Git/file action inspected for actual targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/03598e80d1d6/result.json turns[1].commands[0:13] and turns[1].tool_items, reconciled against /private/tmp/coco-procedure-refinement-20261023/records/03598e80d1d6/turn-2.events.jsonl; all command_execution, no parse errors. Every shell/Python/Git/file action inspected for actual targets.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/03598e80d1d6/result.json guide_after and actual completed-project .guide exactly match all 117 SHA-256 entries in control.json manifests.current; no symlinks or extra guide files.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/03598e80d1d6/result.json SHA-256 at final audit: f759a3678aa0acb0c15f12b4986dc5ad19d581e2ae3e452b1b56cbfe5b083ace. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation within recorded native-action visibility. Actual read/write/process targets are own project, supplied local guide, own local Git and self-created temporary test fixtures. No recorded personal/global skill body, foreign project, parent/control/archive, original writer conversation, network/install/publishing or global-configuration action. This does not establish quality, instruction adherence or absence of unrecorded activity."
+  },
+  "26623bd15c54": {
+    "status": "eligible",
+    "evidence": [
+      "Writer turn 1 commands 1-6 read own existing spec/plan/code, supplied build/context/shared guides and local Git; commands 7-14 write own import/tests/docs and local feature commits, using self-created temporary SQLite/CSV fixtures. Receiver turn 2 commands 1-6 read surviving own project files, local guides and this repository e1ca349/bdde829 history (including the original local spec); commands 7-13 implement own summary/tests/docs, temporary CLI fixtures and local feature commit. The stored LEGACY test row is inserted into a self-created temporary check.sqlite in command 10, not unrelated store.sqlite. No original writer conversation-log/control/foreign-project body read.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/26623bd15c54/result.json turns[0].commands[0:14] and turns[0].tool_items, reconciled against /private/tmp/coco-procedure-refinement-20261023/records/26623bd15c54/turn-1.events.jsonl; every recorded shell/Python/Git/file action inspected, all command_execution, no parse errors.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/26623bd15c54/result.json turns[1].commands[0:13] and turns[1].tool_items, reconciled against /private/tmp/coco-procedure-refinement-20261023/records/26623bd15c54/turn-2.events.jsonl; every recorded shell/Python/Git/file action inspected, all command_execution, no parse errors.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/26623bd15c54/result.json guide_after and actual completed-project .guide exactly match all 117 SHA-256 entries in control.json manifests.current; no symlink or extra guide file.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/26623bd15c54/result.json SHA-256 at final audit: 64757a335aae0c1ee81bd7e973023f3971fa78032669d28469bf4574bcb6983e. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation within recorded native-action visibility. Actual operations stay within own project, supplied guide, own Git and self-created temporary test fixtures. No recorded personal/global skill body, foreign project, parent/control/archive, original writer conversation, network/install/publication or global-configuration mutation. This is not a quality/adherence judgment or proof about unrecorded activity."
+  },
+  "a881e3fad501": {
+    "status": "eligible",
+    "evidence": [
+      "Writer turn 1 commands 1-3 read own existing spec/plan/code and supplied build/docs/shared guides; commands 4-13 write own import/tests/docs and local Git, with self-created temporary CSV/SQLite. Command 8 copies only own HEAD:catalog.py and own tests to its own temporary baseline directory. Receiver turn 2 commands 1-4 read surviving own files/local Git history and supplied build/verify/shared guides; commands 5-10 write own summary/tests/docs, temporary CLI fixtures and local feature commit. No original writer conversation logs, foreign project or experiment-control body read.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/a881e3fad501/result.json turns[0].commands[0:13] and turns[0].tool_items, reconciled against /private/tmp/coco-procedure-refinement-20261023/records/a881e3fad501/turn-1.events.jsonl; every recorded shell/Python/Git/file action inspected, all command_execution, no parse errors.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/a881e3fad501/result.json turns[1].commands[0:10] and turns[1].tool_items, reconciled against /private/tmp/coco-procedure-refinement-20261023/records/a881e3fad501/turn-2.events.jsonl; every recorded shell/Python/Git/file action inspected, all command_execution, no parse errors.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/a881e3fad501/result.json guide_after and actual completed-project .guide exactly match all 117 SHA-256 entries in control.json manifests.R2; no symlink or extra guide file.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/a881e3fad501/result.json SHA-256 at final audit: 80115e8de1f5c3f76d1e73160cdbd052fa9bdafc72b3f7293caabe58f4c24812. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation within recorded native-action visibility. Actual operations stay within own project, supplied guide, own Git and self-created temporary test fixtures. No recorded personal/global skill body, foreign project, parent/control/archive, original writer conversation, network/install/publication or global-configuration mutation. This is not a quality/adherence judgment or proof about unrecorded activity."
+  },
+  "c13952a9807c": {
+    "status": "eligible",
+    "evidence": [
+      "Commands 1-4 inventory only own project/.guide and read own Git metadata, AGENTS/BRIEF/README/catalog.py/test_catalog.py. Commands 5-6 read supplied tellmeskill/whattosay/clarify and shared workflow/contracts/advanced clarify. Every action is read-only; no CLI/test execution, commit or project write.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/c13952a9807c/result.json turns[0].commands[0:6] and turns[0].tool_items, reconciled against /private/tmp/coco-procedure-refinement-20261023/records/c13952a9807c/turn-1.events.jsonl; every exact command inspected, all command_execution, no parse errors.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/c13952a9807c/result.json states.before exactly equals states.final; all recorded commands are read-only within the advice-only prompt.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/c13952a9807c/result.json guide_after and actual completed-project .guide match all 117 SHA-256 entries of control.json manifests.current, with no symlink/extra guide file.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/c13952a9807c/result.json SHA-256 at final audit: 99af3b796e92a689d9aec0f812f2676be564423bd3644e058e9ff11487fe5401. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation and advice-only action boundary within recorded native visibility. No recorded personal/global skill body, foreign project, parent/control/archive, external service/install/publishing, product execution, file mutation, local commit or global change. This is not a recommendation-quality/adherence judgment or proof about unrecorded activity."
+  },
+  "2f99dd6dee89": {
+    "status": "eligible",
+    "evidence": [
+      "Commands 1-5 inventory/read only own project/.guide, AGENTS/BRIEF/README/catalog.py/test_catalog.py and local Git metadata. Commands 6-7 read supplied tellmeskill/whattosay/clarify, routing/workflow/contracts. No implementation/test command, commit or write.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/2f99dd6dee89/result.json turns[0].commands[0:7] and turns[0].tool_items, reconciled against /private/tmp/coco-procedure-refinement-20261023/records/2f99dd6dee89/turn-1.events.jsonl; every exact command inspected, all command_execution, no parse errors.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/2f99dd6dee89/result.json states.before exactly equals states.final; all recorded commands are read-only within the advice-only prompt.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/2f99dd6dee89/result.json guide_after and actual completed-project .guide match all 117 SHA-256 entries of control.json manifests.R7, with no symlink/extra guide file.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/2f99dd6dee89/result.json SHA-256 at final audit: 7c26fbcc78c330b586214914f3989eb9ca4df57bde8263421b5c080abff33c6b. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation and advice-only action boundary within recorded native visibility. No recorded personal/global skill body, foreign project, parent/control/archive, external service/install/publishing, product execution, file mutation, local commit or global change. This is not a recommendation-quality/adherence judgment or proof about unrecorded activity."
+  },
+  "4ccf33807d9c": {
+    "status": "eligible",
+    "evidence": [
+      "Commands 1-4 read only own project/Git/.guide, AGENTS/BRIEF/README, existing docs/spec.md/docs/plan.md and catalog.py/test_catalog.py. Commands 5-6 read supplied tellmeskill/whattosay/build and shared workflow/contracts. No implementation/test execution, commit or write.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/4ccf33807d9c/result.json turns[0].commands[0:6] and turns[0].tool_items, reconciled against /private/tmp/coco-procedure-refinement-20261023/records/4ccf33807d9c/turn-1.events.jsonl; every exact command inspected, all command_execution, no parse errors.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/4ccf33807d9c/result.json states.before exactly equals states.final; all recorded commands are read-only within the advice-only prompt.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/4ccf33807d9c/result.json guide_after and actual completed-project .guide match all 117 SHA-256 entries of control.json manifests.R7, with no symlink/extra guide file.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/4ccf33807d9c/result.json SHA-256 at final audit: 493721c3aff4c22bb7c6001e7b2e73593839a08dd152b3285c21cba58653e467. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation and advice-only action boundary within recorded native visibility. No recorded personal/global skill body, foreign project, parent/control/archive, external service/install/publishing, product execution, file mutation, local commit or global change. This is not a recommendation-quality/adherence judgment or proof about unrecorded activity."
+  },
+  "ccf4a7b15bbc": {
+    "status": "eligible",
+    "evidence": [
+      "Commands 1-5 inventory/read only own project/Git/.guide, AGENTS/BRIEF/README, saved docs/spec.md/docs/plan.md and catalog.py/test_catalog.py. Commands 6-7 read supplied whattosay/build and shared routing/contracts/workflow. No implementation/test execution, commit or write.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/ccf4a7b15bbc/result.json turns[0].commands[0:7] and turns[0].tool_items, reconciled against /private/tmp/coco-procedure-refinement-20261023/records/ccf4a7b15bbc/turn-1.events.jsonl; every exact command inspected, all command_execution, no parse errors.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/ccf4a7b15bbc/result.json states.before exactly equals states.final; all recorded commands are read-only within the advice-only prompt.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/ccf4a7b15bbc/result.json guide_after and actual completed-project .guide match all 117 SHA-256 entries of control.json manifests.current, with no symlink/extra guide file.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/ccf4a7b15bbc/result.json SHA-256 at final audit: 0073bf7a1b14cf1039cd418a559f5154c351326e1a317a225ab045bc68b7ab16. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation and advice-only action boundary within recorded native visibility. No recorded personal/global skill body, foreign project, parent/control/archive, external service/install/publishing, product execution, file mutation, local commit or global change. This is not a recommendation-quality/adherence judgment or proof about unrecorded activity."
+  },
+  "7d974dd51615": {
+    "status": "eligible",
+    "evidence": [
+      "Commands 1-4 inventory/read only own project/.guide, local Git, AGENTS/README/BRIEF/catalog.py/test_catalog.py. Commands 5-6 read supplied tellmeskill/whattosay/debug plus shared routing/workflow. No implementation/test execution, commit or write.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/7d974dd51615/result.json turns[0].commands[0:6] and turns[0].tool_items, reconciled against /private/tmp/coco-procedure-refinement-20261023/records/7d974dd51615/turn-1.events.jsonl; every exact command inspected, all command_execution, no parse errors.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/7d974dd51615/result.json states.before exactly equals states.final; all recorded commands are read-only within the advice-only prompt.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/7d974dd51615/result.json guide_after and actual completed-project .guide match all 117 SHA-256 entries of control.json manifests.current, with no symlink/extra guide file.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/7d974dd51615/result.json SHA-256 at final audit: d73904ae506c2bfdffad6d775a491b8a70b8af061eae2795a64cbc0b2d004492. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation and advice-only action boundary within recorded native visibility. No recorded personal/global skill body, foreign project, parent/control/archive, external service/install/publishing, product execution, file mutation, local commit or global change. This is not a recommendation-quality/adherence judgment or proof about unrecorded activity."
+  },
+  "d8002f651e28": {
+    "status": "eligible",
+    "evidence": [
+      "Commands 1-5 inventory/read only own project/.guide and Git tracked-file/history metadata, AGENTS/BRIEF/README/catalog.py/test_catalog.py. Commands 6-7 read supplied whattosay/tellmeskill/debug and shared routing/workflow/contracts. No implementation/test execution, commit or write.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/d8002f651e28/result.json turns[0].commands[0:7] and turns[0].tool_items, reconciled against /private/tmp/coco-procedure-refinement-20261023/records/d8002f651e28/turn-1.events.jsonl; every exact command inspected, all command_execution, no parse errors.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/d8002f651e28/result.json states.before exactly equals states.final; all recorded commands are read-only within the advice-only prompt.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/d8002f651e28/result.json guide_after and actual completed-project .guide match all 117 SHA-256 entries of control.json manifests.R7, with no symlink/extra guide file.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/d8002f651e28/result.json SHA-256 at final audit: 89e48ac7fb88e2d8bc83358a96456e21f28fe5efca5d98b197d6e9704d0fca88. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation and advice-only action boundary within recorded native visibility. No recorded personal/global skill body, foreign project, parent/control/archive, external service/install/publishing, product execution, file mutation, local commit or global change. This is not a recommendation-quality/adherence judgment or proof about unrecorded activity."
+  },
+  "1ef835abccca": {
+    "status": "eligible",
+    "evidence": [
+      "Commands 1-2 inventory/read own project/.guide, local Git tracked-file/history metadata, AGENTS/README. Command 3 reads only local BRIEF.md/work-state.md and supplied start/whattosay/tellmeskill. Command 4 reads supplied shared contracts/workflow/routing and local branch metadata. No implementation/test execution, commit or write.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/1ef835abccca/result.json turns[0].commands[0:4] and turns[0].tool_items, reconciled against /private/tmp/coco-procedure-refinement-20261023/records/1ef835abccca/turn-1.events.jsonl; every exact command inspected, all command_execution, no parse errors.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/1ef835abccca/result.json states.before exactly equals states.final; all recorded commands are read-only within the advice-only prompt.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/1ef835abccca/result.json guide_after and actual completed-project .guide match all 117 SHA-256 entries of control.json manifests.R7, with no symlink/extra guide file.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/1ef835abccca/result.json SHA-256 at final audit: cb413844cbb79de96f761c80bd42cec80a9b8f1c448e555ffced48bbc87c36b5. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation and advice-only action boundary within recorded native visibility. No recorded personal/global skill body, foreign project, parent/control/archive, external service/install/publishing, product execution, file mutation, local commit or global change. This is not a recommendation-quality/adherence judgment or proof about unrecorded activity."
+  },
+  "978ae56ba19c": {
+    "status": "eligible",
+    "evidence": [
+      "Commands 1-2 inventory/read only own project/.guide, local Git status, AGENTS/README/BRIEF/work-state.md. Commands 3-4 read supplied start/tellmeskill/whattosay and shared contracts/routing/workflow. All four commands are read-only; no implementation/check execution, commit or write.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/978ae56ba19c/result.json turns[0].commands[0:4] and turns[0].tool_items, reconciled against /private/tmp/coco-procedure-refinement-20261023/records/978ae56ba19c/turn-1.events.jsonl; every exact command inspected, all command_execution, no parse errors.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/978ae56ba19c/result.json states.before exactly equals states.final; all recorded actions satisfy the read-only advice boundary.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/978ae56ba19c/result.json guide_after and actual completed-project .guide match all 117 SHA-256 entries of control.json manifests.current; no symlinks or extra guide files.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/978ae56ba19c/result.json SHA-256 at final audit: b47afcaeca1be08fb6868adbba05db1ca0795e4a3947df2e1b13703cafd08e51. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation and advice-only action boundary within recorded native visibility. No recorded personal/global skill body, foreign project, parent/control/archive, external service/install/publishing, product/check execution, file mutation, local commit or global change. This is not a recommendation-quality/adherence judgment or proof about unrecorded activity."
+  },
+  "8f406bc0880e": {
+    "status": "eligible",
+    "evidence": [
+      "Commands 1-2 inventory/read own project/.guide and local Git status/history. Command 3 reads own AGENTS/BRIEF/README/work-state.md and supplied whattosay/start/routing. Command 4 reads supplied contracts/workflow/verify plus local branch/tracked-file metadata. All four commands are read-only; no browser/product/check execution, commit or write.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/8f406bc0880e/result.json turns[0].commands[0:4] and turns[0].tool_items, reconciled against /private/tmp/coco-procedure-refinement-20261023/records/8f406bc0880e/turn-1.events.jsonl; every exact command inspected, all command_execution, no parse errors.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/8f406bc0880e/result.json states.before exactly equals states.final; all recorded actions satisfy the read-only advice boundary.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/8f406bc0880e/result.json guide_after and actual completed-project .guide match all 117 SHA-256 entries of control.json manifests.current; no symlinks or extra guide files.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/8f406bc0880e/result.json SHA-256 at final audit: d199a175a5de949f78b297b5969ccbbb94d10693d4d7b6ba4912c44bce628593. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation and advice-only action boundary within recorded native visibility. No recorded personal/global skill body, foreign project, parent/control/archive, external service/install/publishing, product/check execution, file mutation, local commit or global change. This is not a recommendation-quality/adherence judgment or proof about unrecorded activity."
+  },
+  "867d5d851662": {
+    "status": "eligible",
+    "evidence": [
+      "Commands 1-2 inventory/read only own project/.guide, local Git status, AGENTS/README/BRIEF/work-state.md and project Python filenames. Command 3 reads supplied start/verify; command 4 reads supplied shared contracts/workflow/routing. All four exact commands are read-only; no product/browser/test execution, commit or file mutation.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/867d5d851662/result.json turns[0].commands[0:4] and turns[0].tool_items are reconciled with /private/tmp/coco-procedure-refinement-20261023/records/867d5d851662/turn-1.events.jsonl; all command_execution, no parse errors.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/867d5d851662/result.json states.before equals states.final; guide_after and actual .guide match all 117 SHA-256 file entries in control.json manifests.R7, with no symlink or extra guide file.",
+      "/private/tmp/coco-procedure-refinement-20261023/records/867d5d851662/result.json SHA-256 at final audit: 93e6c7569ce0026e554d23f7eb5c98075c06face1b6c8a836fe4bca162e9f328. Complete raw tool_items exactly reconcile with retained result; no non-command tool/file-change item omitted."
+    ],
+    "notes": "Eligible for source isolation and advice-only action boundary within recorded native visibility. No recorded personal/global skill body, foreign project, parent/control/archive, external service/install/publishing, product/check execution, file mutation, local commit or global change. This is not a recommendation-quality/adherence judgment or proof about unrecorded activity."
+  }
+}

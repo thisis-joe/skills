@@ -1,0 +1,123 @@
+{
+  "source_commit": "544cf3b3c148d99f61af4aba38f6a31bb0df684e",
+  "source_candidate": "9949121",
+  "temporary_root": "/private/tmp/coco-v110-install-8vmohp50",
+  "records": [
+    {
+      "runtime": "codex",
+      "project": "/private/tmp/coco-v110-install-8vmohp50/codex",
+      "dry_run": {
+        "command": [
+          "node",
+          "bin/coco-skills.cjs",
+          "install",
+          "--runtime",
+          "codex",
+          "--project",
+          "/private/tmp/coco-v110-install-8vmohp50/codex",
+          "--dry-run"
+        ],
+        "exit": 0,
+        "stdout": "{\n  \"status\": \"dry-run\",\n  \"skills\": 29,\n  \"files\": 117,\n  \"destination\": \"/private/tmp/coco-v110-install-8vmohp50/codex/.agents/skills\",\n  \"project\": \"/private/tmp/coco-v110-install-8vmohp50/codex\",\n  \"git_exclude\": {\n    \"file\": \"/private/tmp/coco-v110-install-8vmohp50/codex/.git/info/exclude\",\n    \"added\": 31\n  }\n}\n",
+        "stderr": "Warning: the global COCO install at /Users/Joseph/.codex/skills still applies to every project; remove it with --remove-global.\n"
+      },
+      "install": {
+        "command": [
+          "node",
+          "bin/coco-skills.cjs",
+          "install",
+          "--runtime",
+          "codex",
+          "--project",
+          "/private/tmp/coco-v110-install-8vmohp50/codex"
+        ],
+        "exit": 0,
+        "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 29,\n  \"files\": 117,\n  \"destination\": \"/private/tmp/coco-v110-install-8vmohp50/codex/.agents/skills\",\n  \"project\": \"/private/tmp/coco-v110-install-8vmohp50/codex\",\n  \"git_exclude\": {\n    \"file\": \"/private/tmp/coco-v110-install-8vmohp50/codex/.git/info/exclude\",\n    \"added\": 31\n  }\n}\n",
+        "stderr": "Warning: the global COCO install at /Users/Joseph/.codex/skills still applies to every project; remove it with --remove-global.\n"
+      },
+      "validation": {
+        "command": [
+          "python3",
+          "scripts/validate.py",
+          "--installed",
+          "/private/tmp/coco-v110-install-8vmohp50/codex/.agents/skills"
+        ],
+        "exit": 0,
+        "stdout": "Validated installed bundle: 29 skills, 117 files\n",
+        "stderr": ""
+      },
+      "all_skill_bytes_match": true,
+      "unrelated_preserved": true,
+      "git_status": {
+        "command": [
+          "git",
+          "status",
+          "--porcelain"
+        ],
+        "exit": 0,
+        "stdout": "?? .agents/\n",
+        "stderr": ""
+      },
+      "excluded": true
+    },
+    {
+      "runtime": "claude",
+      "project": "/private/tmp/coco-v110-install-8vmohp50/claude",
+      "dry_run": {
+        "command": [
+          "node",
+          "bin/coco-skills.cjs",
+          "install",
+          "--runtime",
+          "claude",
+          "--project",
+          "/private/tmp/coco-v110-install-8vmohp50/claude",
+          "--dry-run"
+        ],
+        "exit": 0,
+        "stdout": "{\n  \"status\": \"dry-run\",\n  \"skills\": 29,\n  \"files\": 117,\n  \"destination\": \"/private/tmp/coco-v110-install-8vmohp50/claude/.claude/skills\",\n  \"project\": \"/private/tmp/coco-v110-install-8vmohp50/claude\",\n  \"git_exclude\": {\n    \"file\": \"/private/tmp/coco-v110-install-8vmohp50/claude/.git/info/exclude\",\n    \"added\": 31\n  }\n}\n",
+        "stderr": "Warning: the global COCO install at /Users/Joseph/.claude/skills still applies to every project; remove it with --remove-global.\n"
+      },
+      "install": {
+        "command": [
+          "node",
+          "bin/coco-skills.cjs",
+          "install",
+          "--runtime",
+          "claude",
+          "--project",
+          "/private/tmp/coco-v110-install-8vmohp50/claude"
+        ],
+        "exit": 0,
+        "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 29,\n  \"files\": 117,\n  \"destination\": \"/private/tmp/coco-v110-install-8vmohp50/claude/.claude/skills\",\n  \"project\": \"/private/tmp/coco-v110-install-8vmohp50/claude\",\n  \"git_exclude\": {\n    \"file\": \"/private/tmp/coco-v110-install-8vmohp50/claude/.git/info/exclude\",\n    \"added\": 31\n  }\n}\n",
+        "stderr": "Warning: the global COCO install at /Users/Joseph/.claude/skills still applies to every project; remove it with --remove-global.\n"
+      },
+      "validation": {
+        "command": [
+          "python3",
+          "scripts/validate.py",
+          "--installed",
+          "/private/tmp/coco-v110-install-8vmohp50/claude/.claude/skills"
+        ],
+        "exit": 0,
+        "stdout": "Validated installed bundle: 29 skills, 117 files\n",
+        "stderr": ""
+      },
+      "all_skill_bytes_match": true,
+      "unrelated_preserved": true,
+      "git_status": {
+        "command": [
+          "git",
+          "status",
+          "--porcelain"
+        ],
+        "exit": 0,
+        "stdout": "?? .claude/\n",
+        "stderr": ""
+      },
+      "excluded": true
+    }
+  ],
+  "passed": true,
+  "personal_installation_changed": false
+}

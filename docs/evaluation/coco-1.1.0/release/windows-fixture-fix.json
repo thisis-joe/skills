@@ -1,0 +1,61 @@
+{
+  "failed_head": "8689721c4d5dada3cb00acb442b3fe810aee50ea",
+  "workflow": "https://github.com/thisis-joe/skills/actions/runs/40304759036",
+  "windows_jobs": [
+    "https://github.com/thisis-joe/skills/actions/runs/40304759036/job/121511014971",
+    "https://github.com/thisis-joe/skills/actions/runs/40304759036/job/121511014577"
+  ],
+  "original_failure": "Both Windows jobs:179tests, five failing subcases at test_procedure_refinement.py:42. Other required checks and six shell checks passed.",
+  "cause": "Test fixture write_text translated LF to CRLF on Windows, violating the fixed sentinel-byte setup consumed by the unchanged historical observer.",
+  "reproduction": [
+    {
+      "profile": 0,
+      "crlf_failed_checks": [
+        "preserved_unrelated_notes"
+      ],
+      "lf_all_passed": true
+    },
+    {
+      "profile": 1,
+      "crlf_failed_checks": [
+        "preserved_unrelated_notes"
+      ],
+      "lf_all_passed": true
+    },
+    {
+      "profile": 2,
+      "crlf_failed_checks": [
+        "preserved_unrelated_notes"
+      ],
+      "lf_all_passed": true
+    },
+    {
+      "profile": 3,
+      "crlf_failed_checks": [
+        "preserved_unrelated_notes"
+      ],
+      "lf_all_passed": true
+    },
+    {
+      "profile": 4,
+      "crlf_failed_checks": [
+        "preserved_unrelated_notes"
+      ],
+      "lf_all_passed": true
+    }
+  ],
+  "fix": "Write the sentinel as explicit LF bytes in test fixture only. No observer, outcome policy or archived study changed.",
+  "focused_tests": {
+    "passed": true,
+    "count": 6,
+    "seconds": 2.688
+  },
+  "actual_windows_recheck": "pending next CI head",
+  "local_after_fix": {
+    "validator": "passed",
+    "tests": 179,
+    "seconds": 54.553,
+    "log": "windows-fix-tests.log"
+  },
+  "tested_release_archive_all_465_files_unchanged": true
+}

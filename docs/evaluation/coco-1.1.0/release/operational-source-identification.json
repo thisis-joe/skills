@@ -1,0 +1,32 @@
+{
+  "runtime": "codex",
+  "matches": [
+    "refs/heads/fix/skill-runtime-evidence"
+  ],
+  "nearest": [
+    [
+      0,
+      "refs/heads/fix/skill-runtime-evidence"
+    ],
+    [
+      7,
+      "refs/heads/fix/skill-flow-coverage"
+    ],
+    [
+      13,
+      "refs/heads/fix/skill-flow-boundaries"
+    ],
+    [
+      17,
+      "refs/heads/fix/coco-start-bare-routing"
+    ],
+    [
+      18,
+      "refs/heads/docs/concise-readme"
+    ]
+  ],
+  "extra_to_registry100": [
+    "skills/_coco-shared/advanced/intake-recovery.md"
+  ],
+  "note": "No operational overwrite occurred. Existing managed files are intact; this is a source-version difference, not installer conflict."
+}

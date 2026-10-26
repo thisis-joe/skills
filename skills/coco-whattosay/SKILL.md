@@ -30,7 +30,7 @@ For each option, provide:
 
 Mark one best fit as **Recommended** and explain why. Include the necessary target, work, scope, and expected result while preserving agreed constraints. If the user wants one task, keep every option within it; do not add continuous execution or external publication. Do not present unresolved policy as settled fact in a suggested request.
 
-Briefly name the selected skill and current purpose, present options, explain that **choosing a number executes that request**, and wait. Use an available question tool or final response to obtain the choice. A recommendation is not a user selection.
+Briefly name the selected skill and current purpose, present options, and explain the active mode: **choosing a number returns request text in wording-only mode; otherwise it executes that request**. Then wait. Use an available question tool or final response to obtain the choice. A recommendation is not a user selection.
 
 ## 3. Select, revise, and execute
 

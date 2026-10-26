@@ -1,0 +1,511 @@
+{
+  "calls": [
+    {
+      "root": "coco-v110-waited-20261026T122433Z",
+      "record": "waited-classifier-controls/turn-3.json",
+      "phase": "control",
+      "pid": 33300,
+      "pid_status": "absent",
+      "exit": 0,
+      "seconds": 7.548,
+      "state": "completed",
+      "started_at": "2026-10-26T12:25:16.045396+00:00",
+      "finished_at": "2026-10-26T12:25:23.594070+00:00",
+      "usage": {
+        "input_tokens": 16063,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 58,
+        "reasoning_output_tokens": 12,
+        "status": "recorded"
+      },
+      "cancellation": null,
+      "model": {
+        "verified": true,
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "high",
+        "observed": {
+          "model": "gpt-6.1-sol",
+          "effort": "high"
+        },
+        "thread": "01a1782c-1156-7483-a5c2-29cec07e820f",
+        "matched_context_timestamp": "2026-10-26T12:25:19.096Z",
+        "matched_turn_id": "01a1782c-1416-7d42-b79b-45171b704195",
+        "source": "fresh turn_context within this invocation started_at/finished_at, returned native session only"
+      },
+      "cooldown": {
+        "wall_seconds": 7.588,
+        "announced_cooldown_overlap_seconds": 0,
+        "credited_cooldown_estimate_seconds": 0,
+        "charged_remainder_seconds": 7.588,
+        "non_cooldown_budget_seconds": 90,
+        "cooldown_allowance_seconds": 1800.0,
+        "cohort_cooldown_estimate_seconds": 0,
+        "cohort_cooldown_allowance_seconds": 5400.0,
+        "hard_wall_budget_seconds": 1890.0,
+        "stop_reason": null,
+        "retry_notices": [],
+        "limitation": "Announced retry-window overlap is an estimate, not measured model compute time.",
+        "native_original_exit": 0,
+        "native_seconds": 7.548,
+        "effective_native_valid": true
+      }
+    },
+    {
+      "root": "coco-v110-waited-20261026T122433Z",
+      "record": "waited-classifier-controls/turn-5.json",
+      "phase": "control",
+      "pid": 33617,
+      "pid_status": "absent",
+      "exit": 0,
+      "seconds": 8.754,
+      "state": "completed",
+      "started_at": "2026-10-26T12:25:46.267835+00:00",
+      "finished_at": "2026-10-26T12:25:55.022605+00:00",
+      "usage": {
+        "input_tokens": 16058,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 55,
+        "reasoning_output_tokens": 15,
+        "status": "recorded"
+      },
+      "cancellation": null,
+      "model": {
+        "verified": true,
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "high",
+        "observed": {
+          "model": "gpt-6.1-sol",
+          "effort": "high"
+        },
+        "thread": "01a1782c-86af-7f52-a9a6-fa6dadab5c60",
+        "matched_context_timestamp": "2026-10-26T12:25:49.091Z",
+        "matched_turn_id": "01a1782c-88a6-7c13-b0d3-0a46ad65a119",
+        "source": "fresh turn_context within this invocation started_at/finished_at, returned native session only"
+      },
+      "cooldown": {
+        "wall_seconds": 8.834,
+        "announced_cooldown_overlap_seconds": 0,
+        "credited_cooldown_estimate_seconds": 0,
+        "charged_remainder_seconds": 8.834,
+        "non_cooldown_budget_seconds": 90,
+        "cooldown_allowance_seconds": 1800.0,
+        "cohort_cooldown_estimate_seconds": 0,
+        "cohort_cooldown_allowance_seconds": 5400.0,
+        "hard_wall_budget_seconds": 1890.0,
+        "stop_reason": null,
+        "retry_notices": [],
+        "limitation": "Announced retry-window overlap is an estimate, not measured model compute time.",
+        "native_original_exit": 0,
+        "native_seconds": 8.754,
+        "effective_native_valid": true
+      }
+    },
+    {
+      "root": "coco-v110-waited-20261026T122433Z",
+      "record": "waited-classifier-controls/turn-7.json",
+      "phase": "control",
+      "pid": 33872,
+      "pid_status": "absent",
+      "exit": 0,
+      "seconds": 7.56,
+      "state": "completed",
+      "started_at": "2026-10-26T12:26:16.385969+00:00",
+      "finished_at": "2026-10-26T12:26:23.946638+00:00",
+      "usage": {
+        "input_tokens": 16051,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 50,
+        "reasoning_output_tokens": 16,
+        "status": "recorded"
+      },
+      "cancellation": null,
+      "model": {
+        "verified": true,
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "high",
+        "observed": {
+          "model": "gpt-6.1-sol",
+          "effort": "high"
+        },
+        "thread": "01a1782c-fc5b-7521-9c8a-3ccaab33333c",
+        "matched_context_timestamp": "2026-10-26T12:26:19.763Z",
+        "matched_turn_id": "01a1782c-fde6-7692-b54e-12d95a4e87ef",
+        "source": "fresh turn_context within this invocation started_at/finished_at, returned native session only"
+      },
+      "cooldown": {
+        "wall_seconds": 7.641,
+        "announced_cooldown_overlap_seconds": 0,
+        "credited_cooldown_estimate_seconds": 0,
+        "charged_remainder_seconds": 7.641,
+        "non_cooldown_budget_seconds": 90,
+        "cooldown_allowance_seconds": 1800.0,
+        "cohort_cooldown_estimate_seconds": 0,
+        "cohort_cooldown_allowance_seconds": 5400.0,
+        "hard_wall_budget_seconds": 1890.0,
+        "stop_reason": null,
+        "retry_notices": [],
+        "limitation": "Announced retry-window overlap is an estimate, not measured model compute time.",
+        "native_original_exit": 0,
+        "native_seconds": 7.56,
+        "effective_native_valid": true
+      }
+    },
+    {
+      "root": "coco-v110-waited-20261026T122433Z",
+      "record": "waited-classifier-controls/turn-9.json",
+      "phase": "control",
+      "pid": 34119,
+      "pid_status": "absent",
+      "exit": 0,
+      "seconds": 7.563,
+      "state": "completed",
+      "started_at": "2026-10-26T12:26:46.615070+00:00",
+      "finished_at": "2026-10-26T12:26:54.178338+00:00",
+      "usage": {
+        "input_tokens": 16053,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 50,
+        "reasoning_output_tokens": 17,
+        "status": "recorded"
+      },
+      "cancellation": null,
+      "model": {
+        "verified": true,
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "high",
+        "observed": {
+          "model": "gpt-6.1-sol",
+          "effort": "high"
+        },
+        "thread": "01a1782d-7270-76a2-92c7-ada06ae1117c",
+        "matched_context_timestamp": "2026-10-26T12:26:49.670Z",
+        "matched_turn_id": "01a1782d-7560-7f12-896f-516be2a98e97",
+        "source": "fresh turn_context within this invocation started_at/finished_at, returned native session only"
+      },
+      "cooldown": {
+        "wall_seconds": 7.643,
+        "announced_cooldown_overlap_seconds": 0,
+        "credited_cooldown_estimate_seconds": 0,
+        "charged_remainder_seconds": 7.643,
+        "non_cooldown_budget_seconds": 90,
+        "cooldown_allowance_seconds": 1800.0,
+        "cohort_cooldown_estimate_seconds": 0,
+        "cohort_cooldown_allowance_seconds": 5400.0,
+        "hard_wall_budget_seconds": 1890.0,
+        "stop_reason": null,
+        "retry_notices": [],
+        "limitation": "Announced retry-window overlap is an estimate, not measured model compute time.",
+        "native_original_exit": 0,
+        "native_seconds": 7.563,
+        "effective_native_valid": true
+      }
+    },
+    {
+      "root": "coco-v110-waited-clock-fixed-20261026T1232Z",
+      "record": "records/5268fefb9e8c/owner/turn-3.json",
+      "phase": "owner",
+      "pid": 35397,
+      "pid_status": "absent",
+      "exit": 0,
+      "seconds": 99.647,
+      "state": "completed",
+      "started_at": "2026-10-26T12:33:58.699114+00:00",
+      "finished_at": "2026-10-26T12:35:38.347010+00:00",
+      "usage": {
+        "input_tokens": 16240,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 519,
+        "reasoning_output_tokens": 338,
+        "status": "recorded"
+      },
+      "cancellation": null,
+      "model": {
+        "verified": true,
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "high",
+        "observed": {
+          "model": "gpt-6.1-sol",
+          "effort": "high"
+        },
+        "thread": "01a17834-0a77-7e01-b828-6b300dd4ef25",
+        "matched_context_timestamp": "2026-10-26T12:34:01.577Z",
+        "matched_turn_id": "01a17834-0d08-7343-b949-3839c0821179",
+        "source": "fresh turn_context within this invocation started_at/finished_at, returned native session only"
+      },
+      "cooldown": {
+        "wall_seconds": 99.729,
+        "announced_cooldown_overlap_seconds": 77.999,
+        "credited_cooldown_estimate_seconds": 77.999,
+        "charged_remainder_seconds": 21.73,
+        "non_cooldown_budget_seconds": 90,
+        "cooldown_allowance_seconds": 1800.0,
+        "cohort_cooldown_estimate_seconds": 77.999,
+        "cohort_cooldown_allowance_seconds": 5400.0,
+        "hard_wall_budget_seconds": 1890.0,
+        "stop_reason": null,
+        "retry_notices": [
+          {
+            "timestamp_utc": "2026-10-26T12:34:02.041361Z",
+            "delay_seconds": 77.998819917
+          }
+        ],
+        "limitation": "Announced retry-window overlap is an estimate, not measured model compute time.",
+        "native_original_exit": 0,
+        "native_seconds": 99.647,
+        "effective_native_valid": true
+      }
+    },
+    {
+      "root": "coco-v110-waited-clock-fixed-20261026T1232Z",
+      "record": "records/5268fefb9e8c/owner/turn-5.json",
+      "phase": "owner",
+      "pid": 38719,
+      "pid_status": "absent",
+      "exit": 0,
+      "seconds": 10.218,
+      "state": "completed",
+      "started_at": "2026-10-26T12:42:35.755401+00:00",
+      "finished_at": "2026-10-26T12:42:45.973999+00:00",
+      "usage": {
+        "input_tokens": 16197,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 23,
+        "reasoning_output_tokens": 13,
+        "status": "recorded"
+      },
+      "cancellation": null,
+      "model": {
+        "verified": true,
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "high",
+        "observed": {
+          "model": "gpt-6.1-sol",
+          "effort": "high"
+        },
+        "thread": "01a1783b-ee2c-7500-892c-7c63e0ec8e82",
+        "matched_context_timestamp": "2026-10-26T12:42:39.047Z",
+        "matched_turn_id": "01a1783b-f0ad-7111-9ad1-713900a12004",
+        "source": "fresh turn_context within this invocation started_at/finished_at, returned native session only"
+      },
+      "cooldown": {
+        "wall_seconds": 10.302,
+        "announced_cooldown_overlap_seconds": 0,
+        "credited_cooldown_estimate_seconds": 0,
+        "charged_remainder_seconds": 10.302,
+        "non_cooldown_budget_seconds": 90,
+        "cooldown_allowance_seconds": 1800.0,
+        "cohort_cooldown_estimate_seconds": 77.999,
+        "cohort_cooldown_allowance_seconds": 5400.0,
+        "hard_wall_budget_seconds": 1890.0,
+        "stop_reason": null,
+        "retry_notices": [],
+        "limitation": "Announced retry-window overlap is an estimate, not measured model compute time.",
+        "native_original_exit": 0,
+        "native_seconds": 10.218,
+        "effective_native_valid": true
+      }
+    },
+    {
+      "root": "coco-v110-waited-clock-fixed-20261026T1232Z",
+      "record": "records/5268fefb9e8c/turn-1.json",
+      "phase": "actor",
+      "pid": 35072,
+      "pid_status": "absent",
+      "exit": 0,
+      "seconds": 57.798,
+      "state": "completed",
+      "started_at": "2026-10-26T12:33:00.350939+00:00",
+      "finished_at": "2026-10-26T12:33:58.150712+00:00",
+      "usage": {
+        "input_tokens": 104792,
+        "cached_input_tokens": 87040,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1354,
+        "reasoning_output_tokens": 465,
+        "status": "recorded"
+      },
+      "cancellation": null,
+      "model": {
+        "verified": true,
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "high",
+        "observed": {
+          "model": "gpt-6.1-sol",
+          "effort": "high"
+        },
+        "thread": "01a17833-2674-7b52-ac3e-9a26965e3c4f",
+        "matched_context_timestamp": "2026-10-26T12:33:02.925Z",
+        "matched_turn_id": "01a17833-2864-70f1-9aa9-4f6eb7abd540",
+        "source": "fresh turn_context within this invocation started_at/finished_at, returned native session only"
+      },
+      "cooldown": {
+        "wall_seconds": 57.84,
+        "announced_cooldown_overlap_seconds": 0,
+        "credited_cooldown_estimate_seconds": 0,
+        "charged_remainder_seconds": 57.84,
+        "non_cooldown_budget_seconds": 420,
+        "cooldown_allowance_seconds": 1800.0,
+        "cohort_cooldown_estimate_seconds": 0,
+        "cohort_cooldown_allowance_seconds": 5400.0,
+        "hard_wall_budget_seconds": 2220.0,
+        "stop_reason": null,
+        "retry_notices": [],
+        "limitation": "Announced retry-window overlap is an estimate, not measured model compute time.",
+        "native_original_exit": 0,
+        "native_seconds": 57.798,
+        "effective_native_valid": true
+      }
+    },
+    {
+      "root": "coco-v110-waited-clock-fixed-20261026T1232Z",
+      "record": "records/5268fefb9e8c/turn-2.json",
+      "phase": "actor",
+      "pid": 35759,
+      "pid_status": "absent",
+      "exit": 0,
+      "seconds": 416.706,
+      "state": "completed",
+      "started_at": "2026-10-26T12:35:38.451842+00:00",
+      "finished_at": "2026-10-26T12:42:35.161982+00:00",
+      "usage": {
+        "input_tokens": 1071902,
+        "cached_input_tokens": 1022080,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 16743,
+        "reasoning_output_tokens": 4997,
+        "status": "recorded"
+      },
+      "cancellation": null,
+      "model": {
+        "verified": true,
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "high",
+        "observed": {
+          "model": "gpt-6.1-sol",
+          "effort": "high"
+        },
+        "thread": "01a17833-2674-7b52-ac3e-9a26965e3c4f",
+        "matched_context_timestamp": "2026-10-26T12:35:41.152Z",
+        "matched_turn_id": "01a17835-926d-75f1-a7cb-6a470ca59583",
+        "source": "fresh turn_context within this invocation started_at/finished_at, returned native session only"
+      },
+      "cooldown": {
+        "wall_seconds": 416.809,
+        "announced_cooldown_overlap_seconds": 0,
+        "credited_cooldown_estimate_seconds": 0,
+        "charged_remainder_seconds": 416.809,
+        "non_cooldown_budget_seconds": 420,
+        "cooldown_allowance_seconds": 1800.0,
+        "cohort_cooldown_estimate_seconds": 77.999,
+        "cohort_cooldown_allowance_seconds": 5400.0,
+        "hard_wall_budget_seconds": 2220.0,
+        "stop_reason": null,
+        "retry_notices": [],
+        "limitation": "Announced retry-window overlap is an estimate, not measured model compute time.",
+        "native_original_exit": 0,
+        "native_seconds": 416.706,
+        "effective_native_valid": true
+      }
+    },
+    {
+      "root": "coco-v110-waited-clock-fixed-20261026T1232Z",
+      "record": "records/5268fefb9e8c/turn-3.json",
+      "phase": "actor",
+      "pid": 39064,
+      "pid_status": "absent",
+      "exit": 1,
+      "seconds": 421.163,
+      "state": "interrupted",
+      "started_at": "2026-10-26T12:43:05.736778+00:00",
+      "finished_at": "2026-10-26T12:50:06.905691+00:00",
+      "usage": {
+        "status": "unavailable",
+        "reason": "no turn.completed usage event"
+      },
+      "cancellation": {
+        "method": "owned_cli_sigint",
+        "requested": true,
+        "signal_accepted": true,
+        "leader_exited": true,
+        "leader_exited_after_sigint": true,
+        "forced_signal_accepted": false,
+        "forced_leader_exit": false,
+        "descendants_status": "unverified",
+        "resume_safe": false,
+        "waits": [
+          {
+            "after": "SIGINT",
+            "outcome": "exited",
+            "exit": 1
+          }
+        ],
+        "exit": 1,
+        "owned_group": {
+          "status": "absent"
+        }
+      },
+      "model": {
+        "verified": true,
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "high",
+        "observed": {
+          "model": "gpt-6.1-sol",
+          "effort": "high"
+        },
+        "thread": "01a17833-2674-7b52-ac3e-9a26965e3c4f",
+        "matched_context_timestamp": "2026-10-26T12:43:08.637Z",
+        "matched_turn_id": "01a1783c-6673-7551-8f47-020d55f6f6b4",
+        "source": "fresh turn_context within this invocation started_at/finished_at, returned native session only"
+      },
+      "cooldown": {
+        "wall_seconds": 421.231,
+        "announced_cooldown_overlap_seconds": 0,
+        "credited_cooldown_estimate_seconds": 0,
+        "charged_remainder_seconds": 421.231,
+        "non_cooldown_budget_seconds": 420,
+        "cooldown_allowance_seconds": 1800.0,
+        "cohort_cooldown_estimate_seconds": 77.999,
+        "cohort_cooldown_allowance_seconds": 5400.0,
+        "hard_wall_budget_seconds": 2220.0,
+        "stop_reason": "non_cooldown_budget_exhausted",
+        "retry_notices": [],
+        "limitation": "Announced retry-window overlap is an estimate, not measured model compute time.",
+        "native_original_exit": 1,
+        "native_seconds": 421.163,
+        "effective_native_valid": false
+      }
+    }
+  ],
+  "total_native_calls": 9,
+  "native_duration_sum_seconds": 1036.957,
+  "cooldown_estimate_sum_seconds": 77.999,
+  "reused_control_calls_counted_once": 4,
+  "all_tracked_native_pids_absent": true,
+  "unmanaged_descendant_cleanup": "unverified; absence of tracked leaders/groups is not proof for arbitrary tool processes",
+  "stable_trials": 0,
+  "valid_matched_pairs": 0,
+  "new_root_not_admitted": 11,
+  "actual_final_turn_completed": false,
+  "post_stop_public_checks_pass": true,
+  "post_stop_failed_checks": [],
+  "failed_completed_turn2_checks": [
+    "chosen_identity_and_file_collision",
+    "chosen_emitted_sku",
+    "public_integer_range_exact"
+  ],
+  "stop": {
+    "reason": "non_cooldown_budget_exhausted",
+    "record": "/private/tmp/coco-v110-waited-clock-fixed-20261026T1232Z/records/5268fefb9e8c",
+    "turn": 3,
+    "exit": 1,
+    "timeout": false,
+    "error": "native cancellation occurred; missing process start or completed-turn event"
+  },
+  "limits": "Post-stop public checks observe surviving code only, not completed implementation/review/reporting or a completed matched pair. Duration sums are not an overall study wall time."
+}

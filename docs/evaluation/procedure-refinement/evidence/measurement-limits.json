@@ -1,0 +1,24 @@
+{
+  "1198ba4c6b9b": {
+    "status": "unresolved-owner-contract",
+    "reason": "The supplied owner facts define normalized matching keys and retaining the first row/label, but do not settle emitted email spelling. The oracle requires normalized output. The proposal asked that additional choice and the closed topic classifier omitted it; the correction repeats the same two facts. Acceptance/repair-derived preference is unresolved.",
+    "evidence": [
+      "records/1198ba4c6b9b/turn-1.json",
+      "records/1198ba4c6b9b/turn-2.prompt.txt",
+      "records/1198ba4c6b9b/turn-3.prompt.txt",
+      "records/1198ba4c6b9b/result.json"
+    ],
+    "disposition": "Retain both original attempts; no replacement or actor repair; four other pairs remain separate valid observations."
+  },
+  "d4b267901c40": {
+    "status": "unresolved-owner-contract",
+    "reason": "The supplied owner facts define normalized matching keys and retaining the first row/label, but do not settle emitted email spelling. The oracle requires normalized output. The proposal asked that additional choice and the closed topic classifier omitted it; the correction repeats the same two facts. Acceptance/repair-derived preference is unresolved.",
+    "evidence": [
+      "records/d4b267901c40/turn-1.json",
+      "records/d4b267901c40/turn-2.prompt.txt",
+      "records/d4b267901c40/turn-3.prompt.txt",
+      "records/d4b267901c40/result.json"
+    ],
+    "disposition": "Retain both original attempts; no replacement or actor repair; four other pairs remain separate valid observations."
+  }
+}

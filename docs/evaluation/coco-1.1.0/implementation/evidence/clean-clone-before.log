@@ -1,0 +1,24 @@
+test_observer_runs_on_copy_without_changing_actor_or_git (test_procedure_refinement.ProcedureRefinement) ... ok
+test_owner_reply_not_counted_if_receiving_actor_never_starts (test_procedure_refinement.ProcedureRefinement) ... ok
+test_owner_uses_final_request_and_no_earlier_question_span (test_procedure_refinement.ProcedureRefinement) ... ok
+test_proposals_only_mutate_owned_sandbox_paths (test_procedure_refinement.ProcedureRefinement) ... fatal: Not a valid object name 622975e
+ERROR
+test_real_public_oracles_detect_wrong_output_and_restore (test_procedure_refinement.ProcedureRefinement) ... ok
+test_version_timeout_is_observed_not_driver_abort (test_procedure_refinement.ProcedureRefinement) ... ok
+
+======================================================================
+ERROR: test_proposals_only_mutate_owned_sandbox_paths (test_procedure_refinement.ProcedureRefinement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/coco-v110-clean-checkout-l5d5vtoe/repo/tests/test_procedure_refinement.py", line 52, in test_proposals_only_mutate_owned_sandbox_paths
+    names=subprocess.check_output(['git','ls-tree','-r','--name-only','622975e','skills'],cwd=ROOT,text=True).splitlines()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', 'ls-tree', '-r', '--name-only', '622975e', 'skills']' returned non-zero exit status 128.
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.813s
+
+FAILED (errors=1)
