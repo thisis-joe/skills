@@ -36,8 +36,21 @@ Remaining work is documented in the [Korean experiment handoff](../evaluation/co
 Account usage after the first case was 79% used / 21% remaining. This is a shared
 weekly account window, not the cost of this case or this chat. Use Sol only; no
 more experiment actors or ancillary studies are authorized in this release turn.
-Final evidence commit, forge checks, merge, tag, publication and global installation
-are the remaining release actions. Update their actual receipts after execution.
+Release execution is complete: [PR #28](https://github.com/thisis-joe/skills/pull/28)
+merged all 32 work-unit commits into `main` as `09cc4e9` after all ten final-head
+checks passed. Annotated `v1.1.0` points to that merge. npm accepted the publish
+after account authentication and then made `1.1.0` available as `latest`.
+The downloaded registry archive matches the tested archive and all 466 files in
+the tag. GitHub and npm README bytes are identical (SHA-256
+`8e1e2c02f99554a65e31d17e9cb5c85559ac842edb21f766948e3239e4059ffb`).
+
+Both existing global Codex and Claude Code locations now contain 29 skills and
+118 managed files, byte-identical to the published payload. Installation validation
+passed; all 50 unrelated Codex file/link entries were preserved (Claude had none).
+Private pre-install backups and the previously tested exact-baseline rollback
+paths remain available. Existing conversations retain already loaded context;
+start a new session to load the updated skill instructions. No live client reload
+or full comparative benefit is claimed. [Actual release receipts](../evaluation/coco-1.1.0/release/published-release.json).
 
 ## Scope and source identities
 
@@ -349,8 +362,8 @@ not an invented coco-push development base. Preserve work-unit history by merge.
 | --- | --- | --- |
 | R1 Complete first experiment and defer the rest | Latest user scope: complete the first individual trial, preserve its observations and exact continuation for eleven unexecuted projects; retain old cohorts and the full-comparison evidence bar | first current profile 0 complete in five turns; final public checks pass; remaining eleven deliberately held; zero pairs |
 | R2 Prepare consumer artifact | Package 1.1.0, concrete README/distribution notes, exact packed payload, required checks, rollback install and scoped independent review | corrected cd728cd artifact passed: 200 tests, 466 packed/118 active files, eight exact-baseline install/rollback steps |
-| R3 Land release branch | Secret/provenance inspection, verified normal push, one PR attached to this chat, all forge checks/review gates, pinned-head merge and target readback | corrected source passed all ten CI jobs; final evidence commit/checks and pinned merge pending |
-| R4 Publish and install | Annotated release tag, npm exact artifact and registry integrity/readback; install to existing managed Codex/Claude locations and verify source agreement/other skills; preserve a tested rollback path | explicitly authorized after first experiment; npm authentication recovered; pending R3 |
+| R3 Land release branch | Secret/provenance inspection, verified normal push, one PR attached to this chat, all forge checks/review gates, pinned-head merge and target readback | complete: final head 06a73e3 passed ten jobs; PR #28 merged as 09cc4e9; main containment read back; work-unit history preserved |
+| R4 Publish and install | Annotated release tag, npm exact artifact and registry integrity/readback; install to existing managed Codex/Claude locations and verify source agreement/other skills; preserve a tested rollback path | complete: v1.1.0 tag, npm latest 1.1.0, identical downloaded archive/README and both global 29-skill/118-file installs verified; unrelated files preserved |
 
 Release does not require a superiority claim. Do not fabricate a favorable outcome;
 record the absence of a demonstrated gain honestly. A real owner-control, required-process,

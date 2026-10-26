@@ -1,0 +1,171 @@
+{
+  "release": "1.1.0",
+  "release_scope": "User explicitly requested completion of only the first individual trial, deferral of eleven, then push/merge/publish/install.",
+  "experimental_limit": "One current trial, zero candidate trials and zero pairs in final cohort; comparative benefit unproven; initial failures and open legacy policy retained.",
+  "required_local_checks": "Validator and 200 tests passed in normal npm prepack; no skips; unchanged packaged bytes verified again at tag/registry.",
+  "handoff": "../implementation/recovery/waited/remaining-experiments.ko.md",
+  "merge": {
+    "head": "06a73e355d053d74884485d21756dbc26035f84f",
+    "merge": {
+      "sha": "09cc4e9e1aefa457807eccad94b13be702573201",
+      "merged": true,
+      "message": "Pull Request successfully merged"
+    },
+    "checks": [
+      {
+        "name": "Shell rules (windows-latest, powershell)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/thisis-joe/skills/actions/runs/40332421916/job/121605001381"
+      },
+      {
+        "name": "Check (Python 3.9)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/thisis-joe/skills/actions/runs/40332421815/job/121604999938"
+      },
+      {
+        "name": "Check (Python 3.x)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/thisis-joe/skills/actions/runs/40332421815/job/121604999797"
+      },
+      {
+        "name": "Shell rules (ubuntu-latest, bash)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/thisis-joe/skills/actions/runs/40332421916/job/121604999414"
+      },
+      {
+        "name": "Windows tests (Python 3.9)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/thisis-joe/skills/actions/runs/40332421916/job/121604999377"
+      },
+      {
+        "name": "Shell rules (windows-latest, pwsh)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/thisis-joe/skills/actions/runs/40332421916/job/121604999346"
+      },
+      {
+        "name": "Shell rules (windows-latest, cmd)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/thisis-joe/skills/actions/runs/40332421916/job/121604999271"
+      },
+      {
+        "name": "Shell rules (windows-latest, bash)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/thisis-joe/skills/actions/runs/40332421916/job/121604999107"
+      },
+      {
+        "name": "Windows tests (Python 3.x)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/thisis-joe/skills/actions/runs/40332421916/job/121604999077"
+      },
+      {
+        "name": "Shell rules (ubuntu-latest, zsh)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/thisis-joe/skills/actions/runs/40332421916/job/121604998758"
+      }
+    ],
+    "pr": "https://github.com/thisis-joe/skills/pull/28",
+    "merge_method": "merge",
+    "target": "main",
+    "target_readback": true,
+    "required_approvals": 0,
+    "unresolved_review_threads": 0,
+    "head_pinned": true,
+    "atomic_base_pin_available": false
+  },
+  "publication": {
+    "observed_at_utc": "2026-10-26T13:53:21.149033+00:00",
+    "package": "@thisis-joe/coco-skills@1.1.0",
+    "registry": "https://registry.npmjs.org/",
+    "dist_tags": {
+      "latest": "1.1.0"
+    },
+    "dist": {
+      "shasum": "1c48845fd95e1a276605f4048b89b804ac98f6bb",
+      "tarball": "https://registry.npmjs.org/@thisis-joe/coco-skills/-/coco-skills-1.1.0.tgz",
+      "fileCount": 466,
+      "integrity": "sha512-qbKVbbafygSQCQblxpY0Wf4NoD0GzURoPs80kNmTtSRbEMMfJWmdNdNKdwkHbR0u6xXCNo7IhM8vgB64pp1VZw==",
+      "signatures": [
+        {
+          "sig": "MEUCIQCu+DXUMbxFWaUe+MSJOyt2KN+hfIfa2GVbD0zYNGDX9wIgMprbI2oqn7PQLfVh6F3N9Lh8C6GsxdZIM/twjh8c98Y=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+          "sig": "MEUCIQDzl0zzE2ptnvzu3Ih+ve6MPrJ5E7Z8fPC391nl2eaGugIgQtemoyXmoLAbJIJkCEXVkyJ27ILCqmg0C7zx5zOXMrk="
+        }
+      ],
+      "unpackedSize": 5310754
+    },
+    "archive_sha256": "6d117151412b9ba4b8f3f20e00f70cce7117934ea85113367eb9c40fe6331e9e",
+    "downloaded_archive": "/Users/Joseph/.codex/worktrees/coco-1-1-0/skills/dist/release-1.1.0/published/thisis-joe-coco-skills-1.1.0.tgz",
+    "tag": "v1.1.0",
+    "tag_commit": "09cc4e9e1aefa457807eccad94b13be702573201",
+    "packed_files_matching_tag": 466,
+    "active_files": 118,
+    "registry_download_equals_prepack_tested_archive": true
+  },
+  "installation": {
+    "observed_at_utc": "2026-10-26T13:54:30.175621+00:00",
+    "package": "@thisis-joe/coco-skills@1.1.0",
+    "archive_sha256": "6d117151412b9ba4b8f3f20e00f70cce7117934ea85113367eb9c40fe6331e9e",
+    "runtimes": {
+      "codex": {
+        "destination": "/Users/Joseph/.codex/skills",
+        "install": {
+          "exit": 0,
+          "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 29,\n  \"files\": 118,\n  \"destination\": \"/Users/Joseph/.codex/skills\"\n}\n",
+          "stderr": ""
+        },
+        "validation": {
+          "exit": 0,
+          "stdout": "Validated installed bundle: 29 skills, 118 files\n",
+          "stderr": ""
+        },
+        "managed_files": 118,
+        "exact_payload_match": true,
+        "unrelated_entries_preserved": 50,
+        "backup": "/Users/Joseph/.codex/worktrees/coco-1-1-0/skills/dist/release-1.1.0/release-operational-codex-before.tar.gz",
+        "backup_sha256": "1fcaf2971641c792a16cea7c3013cc1da93d1e90f8103d342341e90481882298"
+      },
+      "claude": {
+        "destination": "/Users/Joseph/.claude/skills",
+        "install": {
+          "exit": 0,
+          "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 29,\n  \"files\": 118,\n  \"destination\": \"/Users/Joseph/.claude/skills\"\n}\n",
+          "stderr": ""
+        },
+        "validation": {
+          "exit": 0,
+          "stdout": "Validated installed bundle: 29 skills, 118 files\n",
+          "stderr": ""
+        },
+        "managed_files": 118,
+        "exact_payload_match": true,
+        "unrelated_entries_preserved": 0,
+        "backup": "/Users/Joseph/.codex/worktrees/coco-1-1-0/skills/dist/release-1.1.0/release-operational-claude-before.tar.gz",
+        "backup_sha256": "2357c308dcb1e70701a011068a519f74d4b41973f3da0f20bdf432b6ffe8dd24"
+      }
+    }
+  },
+  "readme": {
+    "observed_at_utc": "2026-10-26T13:54:27.786444+00:00",
+    "github": "https://github.com/thisis-joe/skills/blob/main/README.md",
+    "npm": "https://www.npmjs.com/package/@thisis-joe/coco-skills",
+    "package_version": "1.1.0",
+    "byte_identical": true,
+    "bytes": 11703,
+    "sha256": "8e1e2c02f99554a65e31d17e9cb5c85559ac842edb21f766948e3239e4059ffb"
+  },
+  "client_limit": "Installed filesystem verified; existing conversations may retain old context; new sessions load updated instructions.",
+  "rollback": "Private exact operational backups retained under dist/release-1.1.0; prior eight temporary upgrade/rollback/re-upgrade checks passed. Codex baseline 0b110c0 differs from registry 1.0.0; use its preserved source for Codex rollback."
+}
