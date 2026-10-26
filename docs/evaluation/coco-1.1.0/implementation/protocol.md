@@ -55,6 +55,10 @@ continuation within that same five-turn cap. Classifier calls have 90 seconds
 and one schema/infrastructure retry; retain both attempts. An owner message is
 delivered only after the receiving process and native thread start.
 
+Delivery is separate from settlement: a delivered "not decided" answer must not
+mark its requested topic known. Preservation probes seed already-settled facts
+from their supplied specification; the open identity choice stays open.
+
 Answer real pending questions before treating provisional work as ready. Keep
 every pre-correction checkpoint, final output, public probe and Git history.
 A timeout with unverified child cleanup is quarantined: no successor and no

@@ -71,6 +71,22 @@ class V110Instrument(unittest.TestCase):
         with self.assertRaises(ValueError):
             run.validate_classification({'questions': [{'text': 'Old question?', 'topics': ['identity'], 'kind': 'product'}]}, 'Current final reply.')
 
+    def test_unanswered_topic_is_not_recorded_as_settled_on_resume(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory); project = root/'project'; record = root/'record'; record.mkdir()
+            run.prepare_project(project, 0, 'unknown'); (project/'.guide').mkdir()
+            trial = dict(id='unknown', kind='unknown', seed=0, arm='candidate', project=str(project), record=str(record))
+            first = dict(exit=0, process_started=True, thread_started=True, thread='fake', messages=['How should SKU case work?'])
+            second = dict(exit=0, process_started=True, thread_started=True, thread='fake', messages=['Identity remains pending; no implementation was adopted.'])
+            classifications = [dict(valid=True, questions=[{'text': first['messages'][0], 'topics': ['identity'], 'kind': 'product'}], attempts=[]), dict(valid=True, questions=[], attempts=[])]
+            with patch.object(run, 'native', side_effect=[first, second]), patch.object(run, 'classify', side_effect=classifications):
+                run.one(root, trial)
+            result = json.loads((record/'result.json').read_text())
+            self.assertTrue(result['owner_events'][0]['delivered'])
+            self.assertEqual(result['owner_events'][0]['answer']['topics'], ['identity'])
+            self.assertEqual(result['owner_events'][0]['answer']['settled_topics'], [])
+            self.assertEqual(result['owner_events'][1]['known_before'], ['collision', 'invalid'])
+
     def test_failed_receiving_invocation_is_not_delivered_owner_answer(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory); project = root/'project'; record = root/'record'; record.mkdir()
