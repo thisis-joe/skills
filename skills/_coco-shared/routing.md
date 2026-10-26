@@ -1,6 +1,6 @@
 # Situation, purpose and expected result
 
-Read only the selected entrypoint and the conditional reference relevant to the task. Existing sufficient artifacts skip their creation step. All names are `coco-*` for invocation and `coco-*` for display.
+Start ordinary discovery with the ten skills in four stages in the [workflow](workflow.md); this full purpose map retains specialists and complete-list requests. Read only the selected entrypoint and the conditional reference relevant to the task. Existing sufficient artifacts skip their creation step. All names are `coco-*` for invocation and `coco-*` for display.
 
 | Situation / desired output | Entry | Expected result |
 |---|---|---|
@@ -17,7 +17,7 @@ Read only the selected entrypoint and the conditional reference relevant to the 
 | Choose module/API boundaries or test an uncertain design | design | Compared alternatives, contract and test surface; disposable prototype evidence if needed |
 | Turn agreed behavior into a durable contract | spec | One authoritative spec with scope and observable acceptance |
 | Break work into dependency-ready, verifiable units | plan | Ordered task graph, verification and risk checkpoints |
-| Implement one task or an authorized sequence | build | Tested behavior, runtime evidence, reviewed work-unit commits and state |
+| Implement one task or an authorized sequence | build | Tested implementation commits, formal review pending, then reviewed/verified completion |
 | Unexpected failure, hard bug or failed required check | debug | Red-capable repro, supported cause, verified fix handoff |
 | Establish actual behavior or a safety/proof claim | verify | Evidence, cleared and unresolved conditions; no inferred pass |
 | Compare a change with requirements, rules and quality | review | Separate per-axis findings and verdict on a frozen actual scope |
@@ -35,4 +35,4 @@ Read only the selected entrypoint and the conditional reference relevant to the 
 | Incoming report, issue prioritization or autonomous issue selection | triage | Evidence-backed disposition, deduplication and dependency/ownership-aware work choice |
 | Complexity reduction or refactoring without new behavior | simplify | Removed complexity, preserved interfaces/behavior and regression evidence |
 
-Specialist work adds relevant checks to the chosen route; it does not force every task through every row. Review/verification failures return to the current execution owner, not into recursive orchestration. A user asking only for an explanation does not authorize implementation.
+Specialist work requires introduction/selection or an exact user/project opt-in under the shared workflow; declining it preserves required behavior and ordinary checks. It adds relevant checks to the chosen route; it does not force every task through every row. Review/verification failures return to the current execution owner, not into recursive orchestration. A user asking only for an explanation does not authorize implementation.

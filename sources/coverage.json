@@ -27,8 +27,10 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-start/SKILL.md",
-        "skills/_coco-shared/advanced/start.md"
-      ]
+        "skills/_coco-shared/advanced/start.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/engineering/code-review/SKILL.md",
@@ -49,8 +51,10 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-review/SKILL.md",
-        "skills/_coco-shared/advanced/review.md"
-      ]
+        "skills/_coco-shared/advanced/review.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/engineering/codebase-design/SKILL.md",
@@ -119,8 +123,10 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-context/SKILL.md",
-        "skills/_coco-shared/advanced/context.md"
-      ]
+        "skills/_coco-shared/advanced/context.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/engineering/grill-with-docs/SKILL.md",
@@ -140,8 +146,10 @@
       "implemented_references": [
         "skills/coco-clarify/SKILL.md",
         "skills/_coco-shared/advanced/clarify.md",
-        "skills/_coco-shared/advanced/clarify.md#grill-mode"
-      ]
+        "skills/_coco-shared/advanced/clarify.md#grill-mode",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/engineering/implement-spec/SKILL.md",
@@ -166,8 +174,10 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-build/SKILL.md",
-        "skills/_coco-shared/advanced/build.md"
-      ]
+        "skills/_coco-shared/advanced/build.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/engineering/implement/SKILL.md",
@@ -187,8 +197,10 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-build/SKILL.md",
-        "skills/_coco-shared/advanced/build.md"
-      ]
+        "skills/_coco-shared/advanced/build.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/engineering/improve-codebase-architecture/SKILL.md",
@@ -322,8 +334,10 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-start/SKILL.md",
-        "skills/_coco-shared/advanced/start.md"
-      ]
+        "skills/_coco-shared/advanced/start.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/engineering/tdd/SKILL.md",
@@ -347,8 +361,10 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-verify/SKILL.md",
-        "skills/_coco-shared/advanced/verify.md"
-      ]
+        "skills/_coco-shared/advanced/verify.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/engineering/to-spec/SKILL.md",
@@ -370,8 +386,10 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-spec/SKILL.md",
-        "skills/_coco-shared/advanced/spec.md"
-      ]
+        "skills/_coco-shared/advanced/spec.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/engineering/to-tickets/SKILL.md",
@@ -394,8 +412,10 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-plan/SKILL.md",
-        "skills/_coco-shared/advanced/plan.md"
-      ]
+        "skills/_coco-shared/advanced/plan.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/engineering/triage/SKILL.md",
@@ -449,8 +469,10 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-plan/SKILL.md",
-        "skills/_coco-shared/advanced/plan.md"
-      ]
+        "skills/_coco-shared/advanced/plan.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/engineering/wizard/SKILL.md",
@@ -515,8 +537,10 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-context/SKILL.md",
-        "skills/_coco-shared/advanced/context.md"
-      ]
+        "skills/_coco-shared/advanced/context.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/in-progress/loop-me/SKILL.md",
@@ -714,8 +738,10 @@
       "implemented_references": [
         "skills/coco-verify/SKILL.md",
         "skills/_coco-shared/advanced/verify.md",
-        "skills/_coco-shared/advanced/verify-pre-commit.md#conditional-pre-commit-verification-setup"
-      ]
+        "skills/_coco-shared/advanced/verify-pre-commit.md#conditional-pre-commit-verification-setup",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/productivity/grill-me/SKILL.md",
@@ -735,8 +761,10 @@
       "implemented_references": [
         "skills/coco-clarify/SKILL.md",
         "skills/_coco-shared/advanced/clarify.md",
-        "skills/_coco-shared/advanced/clarify.md#grill-mode"
-      ]
+        "skills/_coco-shared/advanced/clarify.md#grill-mode",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/productivity/grilling/SKILL.md",
@@ -755,8 +783,10 @@
       "implemented_references": [
         "skills/coco-clarify/SKILL.md",
         "skills/_coco-shared/advanced/clarify.md",
-        "skills/_coco-shared/advanced/clarify.md#grill-mode"
-      ]
+        "skills/_coco-shared/advanced/clarify.md#grill-mode",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/productivity/handoff/SKILL.md",
@@ -775,8 +805,10 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-context/SKILL.md",
-        "skills/_coco-shared/advanced/context.md"
-      ]
+        "skills/_coco-shared/advanced/context.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/productivity/teach/SKILL.md",
@@ -822,8 +854,10 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-clarify/SKILL.md",
-        "skills/_coco-shared/advanced/clarify.md"
-      ]
+        "skills/_coco-shared/advanced/clarify.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/productivity/wait-what/SKILL.md",
@@ -841,8 +875,10 @@
       "author": "matt",
       "implemented_references": [
         "skills/coco-clarify/SKILL.md",
-        "skills/_coco-shared/advanced/clarify.md"
-      ]
+        "skills/_coco-shared/advanced/clarify.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/productivity/writing-for-agents/SKILL.md",
@@ -889,8 +925,10 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-build/SKILL.md",
-        "skills/_coco-shared/advanced/build.md"
-      ]
+        "skills/_coco-shared/advanced/build.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": ".claude/commands/code-simplify.md",
@@ -932,8 +970,10 @@
         "skills/coco-start/SKILL.md",
         "skills/_coco-shared/advanced/start.md#establish-a-standing-bar",
         "skills/_coco-shared/advanced/verify.md",
-        "skills/_coco-shared/advanced/verify-quality-audit.md#conditional-standing-quality-bar-audit"
-      ]
+        "skills/_coco-shared/advanced/verify-quality-audit.md#conditional-standing-quality-bar-audit",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": ".claude/commands/plan.md",
@@ -951,8 +991,10 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-plan/SKILL.md",
-        "skills/_coco-shared/advanced/plan.md"
-      ]
+        "skills/_coco-shared/advanced/plan.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": ".claude/commands/review.md",
@@ -972,8 +1014,10 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-review/SKILL.md",
-        "skills/_coco-shared/advanced/review.md"
-      ]
+        "skills/_coco-shared/advanced/review.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": ".claude/commands/ship.md",
@@ -1014,8 +1058,10 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-spec/SKILL.md",
-        "skills/_coco-shared/advanced/spec.md"
-      ]
+        "skills/_coco-shared/advanced/spec.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": ".claude/commands/test.md",
@@ -1034,8 +1080,10 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-verify/SKILL.md",
-        "skills/_coco-shared/advanced/verify.md"
-      ]
+        "skills/_coco-shared/advanced/verify.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": ".claude/commands/webperf.md",
@@ -1098,8 +1146,10 @@
         "skills/coco-verify/SKILL.md",
         "skills/_coco-shared/advanced/verify.md",
         "skills/coco-verify/SKILL.md#stop-signals",
-        "skills/_coco-shared/contracts.md#stop-signals"
-      ]
+        "skills/_coco-shared/contracts.md#stop-signals",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/ci-cd-and-automation/SKILL.md",
@@ -1151,8 +1201,10 @@
         "skills/coco-review/SKILL.md",
         "skills/_coco-shared/advanced/review.md",
         "skills/coco-review/SKILL.md#stop-signals",
-        "skills/_coco-shared/contracts.md#stop-signals"
-      ]
+        "skills/_coco-shared/contracts.md#stop-signals",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/code-simplification/SKILL.md",
@@ -1207,8 +1259,10 @@
         "skills/_coco-shared/advanced/verify.md",
         "skills/_coco-shared/advanced/verify-quality-audit.md#conditional-standing-quality-bar-audit",
         "skills/coco-start/SKILL.md#stop-signals",
-        "skills/_coco-shared/contracts.md#stop-signals"
-      ]
+        "skills/_coco-shared/contracts.md#stop-signals",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/context-engineering/SKILL.md",
@@ -1229,8 +1283,10 @@
         "skills/coco-context/SKILL.md",
         "skills/_coco-shared/advanced/context.md",
         "skills/coco-context/SKILL.md#stop-signals",
-        "skills/_coco-shared/contracts.md#stop-signals"
-      ]
+        "skills/_coco-shared/contracts.md#stop-signals",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/debugging-and-error-recovery/SKILL.md",
@@ -1327,8 +1383,10 @@
         "skills/coco-review/SKILL.md",
         "skills/_coco-shared/advanced/review.md",
         "skills/coco-review/SKILL.md#stop-signals",
-        "skills/_coco-shared/contracts.md#stop-signals"
-      ]
+        "skills/_coco-shared/contracts.md#stop-signals",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/frontend-ui-engineering/SKILL.md",
@@ -1410,8 +1468,10 @@
         "skills/coco-clarify/SKILL.md",
         "skills/_coco-shared/advanced/clarify.md",
         "skills/coco-clarify/SKILL.md#stop-signals",
-        "skills/_coco-shared/contracts.md#stop-signals"
-      ]
+        "skills/_coco-shared/contracts.md#stop-signals",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/incremental-implementation/SKILL.md",
@@ -1436,8 +1496,10 @@
         "skills/coco-build/SKILL.md",
         "skills/_coco-shared/advanced/build.md",
         "skills/coco-build/SKILL.md#stop-signals",
-        "skills/_coco-shared/contracts.md#stop-signals"
-      ]
+        "skills/_coco-shared/contracts.md#stop-signals",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/interview-me/SKILL.md",
@@ -1464,8 +1526,10 @@
         "skills/coco-clarify/SKILL.md",
         "skills/_coco-shared/advanced/clarify.md",
         "skills/coco-clarify/SKILL.md#stop-signals",
-        "skills/_coco-shared/contracts.md#stop-signals"
-      ]
+        "skills/_coco-shared/contracts.md#stop-signals",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/observability-and-instrumentation/SKILL.md",
@@ -1541,8 +1605,10 @@
         "skills/coco-plan/SKILL.md",
         "skills/_coco-shared/advanced/plan.md",
         "skills/coco-plan/SKILL.md#stop-signals",
-        "skills/_coco-shared/contracts.md#stop-signals"
-      ]
+        "skills/_coco-shared/contracts.md#stop-signals",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/security-and-hardening/SKILL.md",
@@ -1648,8 +1714,10 @@
         "skills/coco-spec/SKILL.md",
         "skills/_coco-shared/advanced/spec.md",
         "skills/coco-spec/SKILL.md#stop-signals",
-        "skills/_coco-shared/contracts.md#stop-signals"
-      ]
+        "skills/_coco-shared/contracts.md#stop-signals",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/test-driven-development/SKILL.md",
@@ -1673,8 +1741,10 @@
         "skills/coco-build/SKILL.md",
         "skills/_coco-shared/advanced/build.md",
         "skills/coco-build/SKILL.md#stop-signals",
-        "skills/_coco-shared/contracts.md#stop-signals"
-      ]
+        "skills/_coco-shared/contracts.md#stop-signals",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "skills/using-agent-skills/SKILL.md",
@@ -1719,8 +1789,10 @@
       "author": "addy",
       "implemented_references": [
         "skills/coco-start/SKILL.md",
-        "skills/_coco-shared/advanced/start.md"
-      ]
+        "skills/_coco-shared/advanced/start.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/automations/benny/skills/reproduce-and-fix-issues/SKILL.md",
@@ -1890,8 +1962,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-context/SKILL.md",
-        "skills/_coco-shared/advanced/context.md"
-      ]
+        "skills/_coco-shared/advanced/context.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/benchmark-checklist/SKILL.md",
@@ -1938,8 +2012,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-review/SKILL.md",
-        "skills/_coco-shared/advanced/review.md"
-      ]
+        "skills/_coco-shared/advanced/review.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/bro/SKILL.md",
@@ -1995,8 +2071,10 @@
       "implemented_references": [
         "skills/coco-verify/SKILL.md",
         "skills/_coco-shared/advanced/verify.md",
-        "skills/_coco-shared/advanced/verify-formal-create.md"
-      ]
+        "skills/_coco-shared/advanced/verify-formal-create.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/create-verification-skill/SKILL.md",
@@ -2018,8 +2096,10 @@
       "implemented_references": [
         "skills/coco-verify/SKILL.md",
         "skills/_coco-shared/advanced/verify.md",
-        "skills/_coco-shared/advanced/verify-runtime-create.md"
-      ]
+        "skills/_coco-shared/advanced/verify-runtime-create.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/figure-it-out/SKILL.md",
@@ -2045,8 +2125,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-plan/SKILL.md",
-        "skills/_coco-shared/advanced/plan.md"
-      ]
+        "skills/_coco-shared/advanced/plan.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/how/SKILL.md",
@@ -2082,8 +2164,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-clarify/SKILL.md",
-        "skills/_coco-shared/advanced/clarify.md"
-      ]
+        "skills/_coco-shared/advanced/clarify.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/interrogate/SKILL.md",
@@ -2106,8 +2190,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-review/SKILL.md",
-        "skills/_coco-shared/advanced/review.md"
-      ]
+        "skills/_coco-shared/advanced/review.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/ketchup/SKILL.md",
@@ -2126,8 +2212,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-context/SKILL.md",
-        "skills/_coco-shared/advanced/context.md"
-      ]
+        "skills/_coco-shared/advanced/context.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/maintain-formal-verification-skill/SKILL.md",
@@ -2149,8 +2237,10 @@
         "skills/coco-verify/SKILL.md",
         "skills/_coco-shared/advanced/verify.md",
         "skills/_coco-shared/advanced/verify-formal-maintain.md",
-        "skills/_coco-shared/advanced/verify-formal-create.md"
-      ]
+        "skills/_coco-shared/advanced/verify-formal-create.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/maintain-verification-skill/SKILL.md",
@@ -2174,8 +2264,10 @@
         "skills/coco-verify/SKILL.md",
         "skills/_coco-shared/advanced/verify.md",
         "skills/_coco-shared/advanced/verify-runtime-maintain.md",
-        "skills/_coco-shared/advanced/verify-runtime-create.md"
-      ]
+        "skills/_coco-shared/advanced/verify-runtime-create.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/make-bot-ui/SKILL.md",
@@ -2280,8 +2372,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-start/SKILL.md",
-        "skills/_coco-shared/advanced/start.md"
-      ]
+        "skills/_coco-shared/advanced/start.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/poteto-mode/SKILL.md",
@@ -2359,8 +2453,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-start/SKILL.md",
-        "skills/_coco-shared/advanced/start.md#former-pstack-playbook-coverage"
-      ]
+        "skills/_coco-shared/advanced/start.md#former-pstack-playbook-coverage",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/principle-attack-the-premise/SKILL.md",
@@ -2400,8 +2496,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-build/SKILL.md",
-        "skills/_coco-shared/advanced/build.md"
-      ]
+        "skills/_coco-shared/advanced/build.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/principle-build-the-lever/SKILL.md",
@@ -2421,8 +2519,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-build/SKILL.md",
-        "skills/_coco-shared/advanced/build.md"
-      ]
+        "skills/_coco-shared/advanced/build.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/principle-encode-lessons-in-structure/SKILL.md",
@@ -2540,8 +2640,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-context/SKILL.md",
-        "skills/_coco-shared/advanced/context.md"
-      ]
+        "skills/_coco-shared/advanced/context.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/principle-laziness-protocol/SKILL.md",
@@ -2573,8 +2675,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-build/SKILL.md",
-        "skills/_coco-shared/advanced/build.md"
-      ]
+        "skills/_coco-shared/advanced/build.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md",
@@ -2642,8 +2746,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-start/SKILL.md",
-        "skills/_coco-shared/advanced/start.md"
-      ]
+        "skills/_coco-shared/advanced/start.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/principle-outcome-oriented-execution/SKILL.md",
@@ -2677,8 +2783,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-verify/SKILL.md",
-        "skills/_coco-shared/advanced/verify.md"
-      ]
+        "skills/_coco-shared/advanced/verify.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/principle-redesign-from-first-principles/SKILL.md",
@@ -2710,8 +2818,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-plan/SKILL.md",
-        "skills/_coco-shared/advanced/plan.md"
-      ]
+        "skills/_coco-shared/advanced/plan.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/principle-sequence-verifiable-units/SKILL.md",
@@ -2730,8 +2840,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-plan/SKILL.md",
-        "skills/_coco-shared/advanced/plan.md"
-      ]
+        "skills/_coco-shared/advanced/plan.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/principle-subtract-before-you-add/SKILL.md",
@@ -2764,8 +2876,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-verify/SKILL.md",
-        "skills/_coco-shared/advanced/verify.md"
-      ]
+        "skills/_coco-shared/advanced/verify.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/principle-type-system-discipline/SKILL.md",
@@ -2785,8 +2899,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-build/SKILL.md",
-        "skills/_coco-shared/advanced/build.md"
-      ]
+        "skills/_coco-shared/advanced/build.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/recall/SKILL.md",
@@ -2809,8 +2925,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-context/SKILL.md",
-        "skills/_coco-shared/advanced/context.md"
-      ]
+        "skills/_coco-shared/advanced/context.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/reflect/SKILL.md",
@@ -2855,8 +2973,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-start/SKILL.md",
-        "skills/_coco-shared/advanced/start.md"
-      ]
+        "skills/_coco-shared/advanced/start.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/sharpen/SKILL.md",
@@ -2871,8 +2991,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-clarify/SKILL.md",
-        "skills/_coco-shared/advanced/clarify.md"
-      ]
+        "skills/_coco-shared/advanced/clarify.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/show-me-your-work/SKILL.md",
@@ -2896,8 +3018,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-context/SKILL.md",
-        "skills/_coco-shared/advanced/context.md"
-      ]
+        "skills/_coco-shared/advanced/context.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/swarm/SKILL.md",
@@ -2917,8 +3041,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-plan/SKILL.md",
-        "skills/_coco-shared/advanced/plan.md"
-      ]
+        "skills/_coco-shared/advanced/plan.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/tdd/SKILL.md",
@@ -2999,8 +3125,10 @@
       "author": "pstack",
       "implemented_references": [
         "skills/coco-build/SKILL.md",
-        "skills/_coco-shared/advanced/build.md"
-      ]
+        "skills/_coco-shared/advanced/build.md",
+        "skills/_coco-shared/workflow.md"
+      ],
+      "team_override": "2026-10-23 staged-development decisions supersede generic timing, selection and document defaults where stated; see skills/_coco-shared/decisions.md#accepted-staged-development-decisions-2026-10-23. Original essential_rules and adaptation facts are preserved."
     },
     {
       "path": "pstack/skills/unslop/SKILL.md",

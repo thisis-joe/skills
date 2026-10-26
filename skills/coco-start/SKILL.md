@@ -6,7 +6,7 @@ license: MIT
 
 # coco-start
 
-Choose an appropriate workflow and establish the project quality bar.
+Choose an appropriate workflow and establish the project quality bar. Start with the four stages and ten introductory skills in the [workflow](../_coco-shared/workflow.md); offer specialists/help by purpose, preserving expert direct invocation and complete-list requests.
 
 Read the [common contract](../_coco-shared/contracts.md) before acting; when the request already shows that the file below applies, read both in one call. Initially and on new scope, risk, state, or missing prerequisites, check for a setup request with a missing standing quality bar (establish with a live user, floor only when unattended), quality-floor checks on a task diff, ratchets or check placement and cost, conflicting package-manager signals, and mapping a former pstack playbook to its COCO home. If any applies, read the [advanced modes](../_coco-shared/advanced/start.md) before dependent work.
 
@@ -16,7 +16,7 @@ Read the [common contract](../_coco-shared/contracts.md) before acting; when the
 2. Select the smallest route that satisfies risk and acceptance using the [selection table](../_coco-shared/routing.md). A static edit can finish directly with its relevant check. Existing sufficient artifacts skip their creation step.
 3. For setup, record commands, required closure checks, evidence locations and owners. Reuse existing constraints; identify missing enforcement rather than starting a second policy file.
 4. For a setup request with no standing quality bar, use the advanced setup mode: inspect existing measurements, ask only unresolved policy decisions, and attach checks to edit/task/CI stages. In unattended work, retain the existing bar and flag unset targets instead of inventing an interview or silently weakening checks. On a route-only request, report a missing bar in one line and offer setup.
-5. Hand off only the next needed purpose. A specialist adds checks to the route; it does not start every other specialist.
+5. Recommend the next purpose with its stage, exact skill and expected result. Follow manual/spec-local automatic handoffs and separate specialist consent in the shared workflow; recommendations do not execute themselves.
 
 Return: selected route and reason, authoritative artifacts, actual commands and remaining decisions. For a setup request, also report enforced versus measured-only thresholds and execution points.
 

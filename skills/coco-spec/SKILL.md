@@ -6,7 +6,7 @@ license: MIT
 
 # coco-spec
 
-Produce one usable contract for behavior and completion.
+Produce one usable contract for behavior and completion. All behavior changes need this saved contract and a saved plan before code, including small tasks; reuse project files and keep small contracts brief. Apply the [transition contract](../_coco-shared/workflow.md) before another skill.
 
 Read the [common contract](../_coco-shared/contracts.md) before acting; when the request already shows that the file below applies, read both in one call. Initially and on new scope, risk, state, or missing prerequisites, check for independently testable capabilities that need a capability map, revision of an existing agreement, missing project guidance or verification commands, vague quality targets that need measurable acceptance, and tracker publication or agent-ready handoff. If any applies, read the [advanced modes](../_coco-shared/advanced/spec.md) before dependent work.
 
@@ -19,7 +19,7 @@ Read the [common contract](../_coco-shared/contracts.md) before acting; when the
 5. Separate durable behavioral decisions from implementation paths likely to change. Useful prototype state/type contracts can be retained with their origin; speculative details cannot become requirements by accident.
 6. Record the spec reference/version for downstream work. Publication to a tracker follows the user's destination and authorization; local drafting does not imply posting permission.
 
-Return: authoritative spec and explicit open issues. A request only to write a spec ends after that output; existing implementation authorization may continue to the next appropriate step.
+Return: authoritative spec and explicit open issues. A spec-only request ends here; otherwise apply the shared transition contract before the next skill. Continuous implementation authorization alone does not select automatic transitions.
 
 ## Stop signals
 

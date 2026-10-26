@@ -6,7 +6,7 @@ license: MIT
 
 # coco-verify
 
-Return execution evidence for the actual claim and its limits.
+Return execution evidence for the actual claim and its limits. Missing required runtime evidence means verification pending, never development complete. A review-independence exception does not waive runtime proof. Apply the [transition contract](../_coco-shared/workflow.md) before another skill.
 
 Read the [common contract](../_coco-shared/contracts.md) before acting. Read the [verification core](../_coco-shared/advanced/verify.md) before driving a UI, browser, live service, account or persistent state, designing behavioral checks, or when any mode below applies; once read, the whole core applies even if no mode matches. A single existing command or CLI check with known expected output needs only this entrypoint. Initially and on new scope, risk, state, or missing prerequisites, check for standing-quality audits, runtime-helper or formal-verification creation/maintenance, requested workflow experiments, and pre-commit setup. If any applies or is unclear, read the core's mode selection and all matching modules before dependent work.
 

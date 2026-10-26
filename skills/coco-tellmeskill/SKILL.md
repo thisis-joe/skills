@@ -16,7 +16,7 @@ Use names, descriptions, and source locations from the available-skills catalog 
 
 If the catalog is absent, use supported listing capability. If listing is unavailable, state the range you can confirm; do not guess what is installed or treat inert source archives as executable skills.
 
-An invocation that names a target skips to explanation length. One that asks to browse or list skills goes straight to the complete grouped list. A bare invocation, with no target or request, starts with recent skills.
+An invocation that names a target skips to explanation length. One that asks to browse or list skills goes straight to the complete grouped list. A bare invocation, with no target or request, starts with recent skills. For a general COCO getting-started request, introduce the four stages and ten introductory skills in the [workflow](../_coco-shared/workflow.md), then offer specialists/help by purpose. Explicit complete-list requests still follow the full catalog below.
 
 ### Recent skills
 

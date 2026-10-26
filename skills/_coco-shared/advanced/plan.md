@@ -76,4 +76,4 @@ Record each unit as verified, not verified or inconclusive with evidence. Repair
 
 Return the plan pointer, authoritative task target, dependency graph/frontier, integration strategy, evidence gates, unresolved decisions and next executable task. Preserve user branch and task-commit conventions.
 
-Planning is ready when tasks are implementable, blockers acyclic/resolved as appropriate, checks runnable or explicitly unavailable, and material scope decisions settled. A planning-only request stops here. Continuous authorized work can proceed through build; required failed checks or a new material decision stop dependent advancement, not independent permitted work.
+Planning is ready when tasks are implementable, blockers acyclic/resolved as appropriate, checks runnable or explicitly unavailable, and material scope decisions settled. A planning-only request stops here. Before build, apply the [transition contract](../workflow.md); continuous task scheduling alone never selects automatic skill transitions. Required failed checks or a new material decision stop dependent advancement, not independent permitted work.

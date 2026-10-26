@@ -76,6 +76,6 @@ A spec created from resolved decisions can be marked agent-ready by the chosen w
 
 ## Output and stopping conditions
 
-Return the spec/capability-map pointer, agreed behavior, acceptance approach, remaining decisions and readiness for planning. A spec-only request ends with this artifact. When the user already authorized continuous work and no material questions remain, continue into [plan](plan.md) without manufacturing a new permission gate.
+Return the spec/capability-map pointer, agreed behavior, acceptance approach, remaining decisions and readiness for planning. A spec-only request ends here. Continuous task scheduling does not select automatic skill transitions. Before [plan](plan.md), apply the [transition contract](../workflow.md): honor an explicitly selected next skill or this spec's automatic basic mode; otherwise introduce the next skill and wait for selection.
 
-If a decision changes during implementation, update the affected agreement before building against the new behavior. Preserve historical ADR supersession and refer task progress back to its designated owner.
+If a decision changes during implementation, update the affected agreement before building against the new behavior. Keep the original expectation, superseding decision, reason and effect in the existing spec/decision record; a rewritten current agreement must not erase that history. Preserve historical ADR supersession and refer task progress back to its designated owner.
