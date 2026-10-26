@@ -1,0 +1,221 @@
+{
+  "root": "/private/tmp/coco-v110-compat-00lh_4ru",
+  "scope": "Three local scenarios plus separately labelled read-only preservation probes; candidate only, no comparative quality or speed claim.",
+  "source_snapshot_matches": true,
+  "all_project_guides_match": true,
+  "route_readonly": true,
+  "wip_review_readonly": true,
+  "exact_review_readonly": true,
+  "static": {
+    "same_branch": true,
+    "clean": true,
+    "readme_exact": true,
+    "changed_files": [
+      "README.md",
+      "docs/plans/copy-guide.md"
+    ],
+    "new_document_paths": [],
+    "commit_count": 2,
+    "no_remote": true,
+    "required_check_exit": 0,
+    "final_report_limit": "Final explicitly says corrected guied→guide and no material departure from spec, but does not separately restate original expectation; initial commentary and saved plan do. Do not substitute those for final-message adherence.",
+    "hook_preservation_limit": "Actor used core.hooksPath=/dev/null for commits. Fixture has no active hooks; required Python check ran. Does not certify required-hook preservation.",
+    "hook_inspection": {
+      "effective_custom_hooks_config_exit": 1,
+      "effective_custom_hooks_config_output": "",
+      "active_executable_default_hooks": [],
+      "sample_files": 14,
+      "no_active_hooks_confirmed": true
+    }
+  },
+  "push": {
+    "branch": "feat/catalog-summary",
+    "head": "b7203012a5c457bc8b3547c9761dd122b40018b5",
+    "renamed": true,
+    "remote_final_matches": true,
+    "original_remote_retained": true,
+    "develop_preserved": true,
+    "clean": true,
+    "required_check_exit": 0
+  },
+  "review": {
+    "head_diff_empty": true,
+    "observed": {
+      "shipping_at_100": 5,
+      "invalid_value": 0,
+      "invalid_raised": false,
+      "stock_plus": 7,
+      "stock_minus": 13
+    },
+    "independent_expected": {
+      "shipping_at_100": 0,
+      "invalid_raised": true,
+      "stock_plus": 13,
+      "stock_minus": 7
+    },
+    "all_three_seeded_failures_detectable": true,
+    "actor_found_all_three": true,
+    "exact_scope_limit": "Exact-range actor preserved requested scope and independently reported committed float parser accepting NaN/Infinity under decimal-string contract. No clean-range premise is claimed. Fixture required unittest path is missing; actors truthfully reported unavailable."
+  },
+  "turns": {
+    "copy-edit": {
+      "exit": 0,
+      "seconds": 120.404,
+      "timeout": false,
+      "thread_started": true,
+      "usage": {
+        "input_tokens": 245776,
+        "cached_input_tokens": 218496,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1624,
+        "reasoning_output_tokens": 49,
+        "status": "recorded"
+      },
+      "commands": 11
+    },
+    "copy-start": {
+      "exit": 0,
+      "seconds": 29.055,
+      "timeout": false,
+      "thread_started": true,
+      "usage": {
+        "input_tokens": 80857,
+        "cached_input_tokens": 68992,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 410,
+        "reasoning_output_tokens": 0,
+        "status": "recorded"
+      },
+      "commands": 3
+    },
+    "exact": {
+      "exit": 0,
+      "seconds": 47.644,
+      "timeout": false,
+      "thread_started": true,
+      "usage": {
+        "input_tokens": 102963,
+        "cached_input_tokens": 90752,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1071,
+        "reasoning_output_tokens": 92,
+        "status": "recorded"
+      },
+      "commands": 4
+    },
+    "policy-probes": {
+      "exit": 1,
+      "seconds": 240.483,
+      "timeout": true,
+      "thread_started": true,
+      "usage": {
+        "status": "unavailable",
+        "reason": "no turn.completed usage event"
+      },
+      "commands": 0
+    },
+    "push": {
+      "exit": 0,
+      "seconds": 152.612,
+      "timeout": false,
+      "thread_started": true,
+      "usage": {
+        "input_tokens": 269939,
+        "cached_input_tokens": 234624,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1366,
+        "reasoning_output_tokens": 7,
+        "status": "recorded"
+      },
+      "commands": 12
+    },
+    "review": {
+      "exit": 0,
+      "seconds": 36.47,
+      "timeout": false,
+      "thread_started": true,
+      "usage": {
+        "input_tokens": 104891,
+        "cached_input_tokens": 91904,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 893,
+        "reasoning_output_tokens": 0,
+        "status": "recorded"
+      },
+      "commands": 4
+    }
+  },
+  "initial_launch_failures": {
+    "root": "/private/tmp/coco-v110-compat-rv9__14g",
+    "count": 3,
+    "reason": "Native CLI initialization was denied by restricted shell before actor launch; no behavior evidence. Same driver retried through approved escalation."
+  },
+  "source_manifest": {
+    "path": "/private/tmp/coco-v110-compat-00lh_4ru/source-manifest.json",
+    "sha256": "3d92e866a5919a52cb497dbda9f70ac0afd4a0ff08f5f2820dd074d3977cd776",
+    "skill_file_count": 117,
+    "canonical_skill_map_sha256": "b4ac8dc7dc121e8c5b86d5597ed75c945aa7bdab1faca13325b5de768886ce36",
+    "baseline_git_head": "84a59a2f0c0a581156e7e10ea011461f88d6b2a3",
+    "identity_note": "HEAD is release-based starting commit; exact exercised candidate identified by complete per-file SHA256 map, not HEAD alone."
+  },
+  "policy_probes": {
+    "status": "unavailable",
+    "reason": "HTTP429 before actor response; budget240s expired. No immediate retry.",
+    "seconds": 240.483,
+    "exit": 1,
+    "messages": 0,
+    "grounded_behavior_claim": false,
+    "cases": [
+      "linked Jira required readback unavailable",
+      "specialist exact user/project/skill grant",
+      "mismatched identity manual fallback",
+      "revoke one specialist preserve another",
+      "required browser missing remains pending",
+      "same spec authority vs distinct spec; explicit review selection"
+    ]
+  },
+  "source_views": {
+    "copy-start": [
+      "coco-start/SKILL.md",
+      "_coco-shared/contracts.md",
+      "_coco-shared/routing.md",
+      "_coco-shared/workflow.md"
+    ],
+    "copy-edit": [
+      "coco-build/SKILL.md",
+      "coco-docs/SKILL.md",
+      "coco-review/SKILL.md",
+      "coco-verify/SKILL.md",
+      "_coco-shared/contracts.md",
+      "_coco-shared/workflow.md"
+    ],
+    "push": [
+      "coco-push/SKILL.md",
+      "_coco-shared/contracts.md",
+      "coco-push/references/sync-and-push.md",
+      "coco-push/references/branch-and-ticket.md",
+      "_coco-shared/workflow.md",
+      "coco-build/SKILL.md branch-preparation section"
+    ],
+    "review": [
+      "coco-review/SKILL.md",
+      "_coco-shared/contracts.md",
+      "_coco-shared/advanced/review.md"
+    ],
+    "exact": [
+      "coco-review/SKILL.md",
+      "_coco-shared/contracts.md",
+      "_coco-shared/advanced/review.md"
+    ],
+    "interpretation": "Observed file-based source reads from successful native command output; exposure is distinct from behavioral adherence. No behavior or source-exposure claim for429 probe."
+  },
+  "costs": {
+    "completed_turns": 5,
+    "sum_actor_seconds": 386.185,
+    "input_tokens": 804426,
+    "cached_input_tokens": 704768,
+    "output_tokens": 5364,
+    "scope": "Recorded native usage includes repeated/cached context. Sum of actor durations is not wall-clock latency or human effort; three scenarios partly ran in parallel. No cost or quality comparison."
+  },
+  "live_source_still_matches": true
+}

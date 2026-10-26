@@ -1,0 +1,26 @@
+{
+  "clone": "/private/tmp/coco-v110-clean-checkout-l5d5vtoe/repo",
+  "pre_fix_head": "7f34713",
+  "post_fix_head": "1250ffde280ec7d0a8a65e904897da775796f235",
+  "clone_flags": [
+    "--no-local",
+    "--no-tags",
+    "--single-branch",
+    "--branch",
+    "feat/coco-1.1.0"
+  ],
+  "unrelated_historical_commit_missing": {
+    "exit": 128,
+    "stderr": "fatal: Not a valid object name 622975e^{commit}\n"
+  },
+  "initial_observation": "six focused tests had one error: historical Git object absent",
+  "repair": "f6336e0 loads checksum-verified committed snapshot, keeping original assertions",
+  "required_validator": "passed: 29 skills, source checksums, coverage and references",
+  "required_suite": {
+    "passed": true,
+    "tests": 179,
+    "seconds": 54.148,
+    "log": "clean-clone-after.log"
+  },
+  "worktree_clean": true
+}

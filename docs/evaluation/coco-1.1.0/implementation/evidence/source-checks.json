@@ -1,0 +1,15 @@
+{
+  "links_checked": 129,
+  "missing_links": [],
+  "source_entries": 131,
+  "coverage_reference_override_changes": 64,
+  "original_source_facts_preserved": true,
+  "protected_interfaces_unchanged": [
+    "coco.json",
+    "package.json",
+    "scripts/install.py",
+    "scripts/package_utils.py",
+    "sources/manifest.json"
+  ],
+  "checked_candidate": "17e3425"
+}

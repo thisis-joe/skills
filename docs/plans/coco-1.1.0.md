@@ -43,15 +43,15 @@ returns issues and verification returns evidence.
 
 | Task | Delivered behavior / expected owners | Genuine dependencies | Acceptance and verification | State |
 | --- | --- | --- | --- | --- |
-| F0 Reconcile release compatibility | Release-based branch and compatibility decision; compare released contracts with staged source | Current implementation request; none of F1+ can bypass this | Inventory all 29 entrypoints, direct calls, installer/metadata, manual/automatic defaults, specialist scope, document exceptions, Jira and review/commit boundaries. Compare actual trees. Resolve any incompatible accepted behavior before certifying 1.1.0 | source audit complete; representative runtime compatibility remains F6 |
-| F1 Integrate accepted staged procedure | Selectively carry accepted navigation, transitions, completion and source decisions; owners: shared workflow/contracts/routing, affected entrypoints and references | F0 | C1/C3/C4/C6/C8 agree across owners; initial/full/expert discovery, static-edit bypass, explicit next-skill selection, one-spec resume, exact specialist revoke and before-push stop have behavior evidence. Reconcile README with the release candidate | source applied; native fixtures in progress |
-| F2 Validate the decision-check instrument | Disposable verification contract with complete owner answers and independent public expected outcomes | F0; may proceed beside F1 in separately owned test/evidence files | Extra real questions reach the owner; matching keys and emitted spelling are distinct if material. Known-choice recovery, unknown safe stop, failure/restore and unchanged unrelated behavior are sensitive. Preserve old invalid pair and frozen studies | instrument written; sensitivity checks running before freeze |
-| F3 Repair discovery and final-report adherence | A minimal single change at the actual decision boundary; likely owners build/clarify/shared workflow, not a universal longer interview | F1 and F2 | C2/C7: relevant rule is reached and followed, existing answers are reused, missing business choices precede adoption, concrete asks retain recommendations/effects, final report compares original/actual/reason. Inspect the real entry/read path rather than equating supplied text with use | candidate applied; F4 adoption decision pending |
-| F4 Evaluate the repair and record its disposition | Fixed prospective matched cases and a keep/revert/redesign decision | F3 plus frozen inputs/criteria; valid baseline with room for the targeted failure | At least five pairs for a comparative claim; independent actual outcomes, adverse runs, source/adherence audit and blinded controls. Fewer confirmed assumption repairs for a quality-gain claim, with no added owner-control, process, acceptance or operational loss. Preserve safe blocks separately from completion. No favorable-only replacement | not started |
-| F5 Inspect actual state duplication | Evidence-backed decision about K3, not another wording-only rewrite; owners spec/plan/context | F4 disposition recorded | If no overlapping mutable state is observed, retain current behavior and close this branch of work. If observed, propose one structural reduction preserving both artifacts, original/superseding decisions, open choices and one state owner; test five fresh pickups. Efficiency claim still requires full process/public guards and median actor ratio <=0.80 | conditional / not started |
-| U1 Assess human presentation need | Determine whether any R7 intervention is warranted; owners workflow/start/discovery | A representative F1 presentation; no need to wait for F5 | Observe actual friction and verify a real baseline/treatment difference. Pilot baseline already omits map; do not fabricate repetition. If no problem/difference, defer with no rewrite. Participant absence remains unavailable, not a model-generated human result | conditional / not started |
+| F0 Reconcile release compatibility | Release-based branch and compatibility decision; compare released contracts with staged source | Current implementation request; none of F1+ can bypass this | Inventory all 29 entrypoints, direct calls, installer/metadata, manual/automatic defaults, specialist scope, document exceptions, Jira and review/commit boundaries. Compare actual trees. Resolve any incompatible accepted behavior before certifying 1.1.0 | complete for local source and representative calls; no registry-artifact equivalence claim |
+| F1 Integrate accepted staged procedure | Selectively carry accepted navigation, transitions, completion and source decisions; owners: shared workflow/contracts/routing, affected entrypoints and references | F0 | C1/C3/C4/C6/C8 agree across owners; initial/full/expert discovery, static-edit bypass, explicit next-skill selection, one-spec resume, exact specialist revoke and before-push stop have behavior evidence. Reconcile README with the release candidate | implemented; five native compatibility calls and supplemental scope/pickup probes recorded below |
+| F2 Validate the decision-check instrument | Disposable verification contract with complete owner answers and independent public expected outcomes | F0; may proceed beside F1 in separately owned test/evidence files | Extra real questions reach the owner; matching keys and emitted spelling are distinct if material. Known-choice recovery, unknown safe stop, failure/restore and unchanged unrelated behavior are sensitive. Preserve old invalid pair and frozen studies | complete; frozen at 027e5c3 before primary actors; controls and collector tests pass |
+| F3 Repair discovery and final-report adherence | A minimal single change at the actual decision boundary; likely owners build/clarify/shared workflow, not a universal longer interview | F1 and F2 | C2/C7: relevant rule is reached and followed, existing answers are reused, missing business choices precede adoption, concrete asks retain recommendations/effects, final report compares original/actual/reason. Inspect the real entry/read path rather than equating supplied text with use | implemented with focused follow-ups; comparative adoption remains pending F4 |
+| F4 Evaluate the repair and record its disposition | Fixed prospective matched cases and a keep/revert/redesign decision | F3 plus frozen inputs/criteria; valid baseline with room for the targeted failure | At least five pairs for a comparative claim; independent actual outcomes, adverse runs, source/adherence audit and blinded controls. Fewer confirmed assumption repairs for a quality-gain claim, with no added owner-control, process, acceptance or operational loss. Preserve safe blocks separately from completion. No favorable-only replacement | incomplete: two of twelve prepared projects started; repeated HTTP429; five-pair gate unmet |
+| F5 Inspect actual state duplication | Evidence-backed decision about K3, not another wording-only rewrite; owners spec/plan/context | F4 disposition recorded | If no overlapping mutable state is observed, retain current behavior and close this branch of work. If observed, propose one structural reduction preserving both artifacts, original/superseding decisions, open choices and one state owner; test five fresh pickups. Efficiency claim still requires full process/public guards and median actor ratio <=0.80 | retain / no-op: no observed overlapping mutable-state target; no efficiency claim |
+| U1 Assess human presentation need | Determine whether any R7 intervention is warranted; owners workflow/start/discovery | A representative F1 presentation; no need to wait for F5 | Observe actual friction and verify a real baseline/treatment difference. Pilot baseline already omits map; do not fabricate repetition. If no problem/difference, defer with no rewrite. Participant absence remains unavailable, not a model-generated human result | deferred: no observed human selection friction or distinct repeated-map treatment |
 | U2 Run a bounded participant pilot | Actual human understanding/selection evidence for an eligible treatment | U1 eligibility, available consenting participants, frozen primary outcome/threshold | At least five unfamiliar participants, same first orientation, counterbalanced equivalent follow-ups; vary repeated-map display only. Preserve recommendation/reason/result/request, full/specialist access and authority. Record selection, explanation, discovery, approval understanding, active time and re-explanation separately. No learning/effort claim without observations | conditional / not started |
-| F6 Integrate and review the release candidate | Reviewed combined changed behavior with original attribution and rollback receipts | F1/F4 and the dispositions of F5/U1; U2 only if needed for a claimed human benefit | Check real combined diff and all C1–C8; independently review source/protocol/claims; run required repo checks and actual affected public/runtime/install checks in temporary destinations. Resolve compatibility/version from F0, preserve evidence and work-unit commits, stop before publication | not started |
+| F6 Integrate and review the release candidate | Reviewed combined changed behavior with original attribution and rollback receipts | F1/F4 and the dispositions of F5/U1; U2 only if needed for a claimed human benefit | Check real combined diff and all C1–C8; independently review source/protocol/claims; run required repo checks and actual affected public/runtime/install checks in temporary destinations. Resolve compatibility/version from F0, preserve evidence and work-unit commits, stop before publication | local implementation checks and scoped independent review recorded; final adoption/release certification pending F4 |
 
 F0/F1 specifically protect an adequate non-Jira descriptive branch on resume;
 the experimental build's residual "this format" wording is an audited risk.
@@ -113,11 +113,12 @@ when its original adoption lacked demonstrated owner agreement.
 
 ## Decisions remaining for later dependent work
 
-Final compatibility/version classification needs F0's concrete before/after
-audit. A genuine structural duplication target needs F5's trace; a primary human
+The local-source compatibility audit supports a 1.1.0 candidate; published-artifact
+equivalence was not tested. F4 still lacks its required completed comparison.
+A genuine structural duplication target needs new observed evidence; a primary human
 outcome and numerical acceptance threshold need U1's observed problem and a
 concrete participant protocol. These do not reopen the 38 accepted decisions or
-block completion of this planning request. Implementation is now authorized; routine steps reuse the current request.
+reopen already authorized implementation. Routine steps reuse the current request.
 Any genuinely incompatible concrete change still requires the user’s decision.
 
 ## Planning closure
@@ -151,19 +152,148 @@ same-spec stage grants. The single change map records their exact locations.
 Saved documents before behavior changes, manual awareness for unselected stages,
 and separate post-commit formal review are deliberate defaults selected by the
 user. Existing explicit stage selections and direct calls stay usable. This is a
-1.1.0 local-source candidate classification, conditional on F6 representative
-calls; no registry-distribution equivalence or universal compatibility is claimed.
+1.1.0 local-source candidate classification with the representative calls recorded
+below; no registry-distribution equivalence or universal compatibility is claimed.
 
 F1's structural/install regression was observed failing on the release baseline
 because workflow.md was absent; after the port both tests pass. This is packaging
 and structure evidence, not native behavioral proof. The validator and existing
-hot-path size caps pass without raising thresholds. Native fixture and comparison
-results remain pending until their actual execution and independent review.
+hot-path size caps pass without raising thresholds. Actual native and supplemental
+observations follow; they have different scopes and do not fill missing pairs.
 
 A real F1 static-edit fixture at candidate `9949121` completed the authorized
 work but its final report said only the correction and no departure from the
-spec, without an explicit original expectation. Before primary F4 actors, move
-the existing mandatory comparison into common's actual final-report paragraph
-and remove its ownership-summary duplicate. Keep the original observation;
-recheck a fresh equivalent static task and freeze the adjusted candidate. This
+spec, with the original expectation only implicit through the spec. Before primary F4
+actors, commit 17e3425 moved the existing mandatory comparison into common's
+actual final-report paragraph and removed its ownership-summary duplicate. The
+original observation remains; a fresh equivalent static task explicitly reported
+the agreed scope, correction and no departure. Independent semantic review
+confirmed this distinction without requiring fixed labels. This
 does not change C7 or the comparison rubric. No primary actor used `9949121`.
+
+F5 source inspection found separate existing ownership in spec/plan/context and
+no evidenced overlapping mutable-state target. Preserve this structure; do not
+claim the C7 history clarification is a state-reduction or speed intervention.
+U1 retains the existing concise returning-user behavior. The earlier model advice
+baseline already omitted repeated maps; no actual human selection-friction
+observation or distinct treatment is available, so U2 remains unexecuted.
+
+
+### Recorded behavior, with evidence limits
+
+- **F1 compatibility:** five completed native calls exercised bare start, a static
+  correction on an adequate non-Jira branch, push to a disposable local bare
+  remote, direct WIP review including an untracked file, and exact-range review.
+  The reviews found seeded defects and an additional real parsing defect. The
+  local push read back the expected commit and retained the old remote branch.
+  The static task reused its documents/grants and stopped before push. Initial
+  sandbox startup failures and an extra policy probe that timed out on HTTP429
+  remain in the [receipt](../evaluation/coco-1.1.0/implementation/evidence/compatibility.json)
+  and [raw archive](../evaluation/coco-1.1.0/implementation/evidence/compatibility.tar.gz).
+  This does not exercise every possible project convention, real Jira writes,
+  active required Git hooks, or a published registry artifact.
+- **C7 reporting follow-up:** the fresh static task reported its agreed unchanged
+  wording, actual typo correction and no departure. The original partial report
+  is retained; neither a fixed label nor an extra report file is required.
+  [Native follow-up](../evaluation/coco-1.1.0/implementation/evidence/report-followup.json),
+  [independent source/report review](../evaluation/coco-1.1.0/implementation/evidence/source-review.json).
+- **C3/C4 boundaries:** a fresh supplemental worker actually revoked one exact
+  specialist preference while preserving another, rejected a copied record for
+  a different project, and used a manual fallback without confirmed identity.
+  Synthetic fixture identity and local private-file protection were inspected.
+  Read-only policy probes also kept missing required browser execution pending
+  and rejected scope expansion. These are not native paired observations or real
+  external-service calls. [Receipt](../evaluation/coco-1.1.0/implementation/evidence/boundary-probes.json).
+- **C2/C7 pickup:** fresh supplemental workers resumed existing saved spec/plan.
+  The known-choice worker implemented the settled contract without re-questioning,
+  passed seven real CLI tests including exact large integers/rollback, committed
+  implementation and review closure separately, and reported original versus
+  superseding choices. The unanswered-choice worker asked concretely, retained
+  the unresolved identity/output choice and changed no files or commits. Root
+  checks confirmed public outcomes and unrelated data preservation. This tests
+  model-worker pickup, not human learning, and does not replace the unstarted
+  native preservation probes. [Receipt](../evaluation/coco-1.1.0/implementation/evidence/pickup-probes.json).
+- **F4 comparison:** only profile 0 in each condition started; the remaining eight
+  primary projects plus two preservation probes were not attempted. Repeated
+  HTTP429 after cooldown prevented a complete cohort. Raw emitted finals,
+  provisional commentary, missing process-exit metadata and post-stop public
+  observations are distinguished. Independent blinded grading retained all
+  missing outcomes and rejected both false-completion controls. No five-pair,
+  quality, speed, human-effort or easier-selection claim is supported.
+  [Frozen protocol](../evaluation/coco-1.1.0/implementation/protocol.md),
+  [observations and durable raw receipts](../evaluation/coco-1.1.0/implementation/observations.md).
+- **F3 follow-up from the blind finding:** both observed implementations introduced
+  an unapproved SQLite price cap. The candidate's final question correctly left
+  acceptance pending but arrived after the cap was committed. Commit 1250ffd adds a recheck when
+  implementation/verification reveals a constraint that would alter agreed
+  behavior; preserve the contract with an in-scope solution or settle the new
+  material choice before adopting a limit. The original grades remain unchanged.
+  This is a focused redesign of the trigger, not a successful replacement cohort.
+  A fresh supplementary worker reproduced the binding overflow and preserved the
+  agreed contract via internal exact storage, without asking to narrow prices. Six
+  tests passed; independent CLI calls confirmed exact `2^100 + 17`, a legacy maximum
+  INTEGER row and unchanged data after a rejected batch. No product departure,
+  unrelated file change or push occurred. The impossible-constraint/unanswered-new-
+  choice branch was not executed in this follow-up; newer Python conversion-guard
+  behavior was source-reviewed only.
+  [Focused receipt](../evaluation/coco-1.1.0/implementation/evidence/constraint-followup.json).
+
+### Disposition and next boundary
+
+The implemented source remains reviewable on the feature branch. F5 is closed as
+retain/no-op; U1 is deferred and U2 unexecuted. The evidence supports these specific
+procedure repairs and their bounded local observations. It does **not** certify
+final F3/F4 adoption or release readiness: the frozen five-pair gate remains unmet,
+and the passing focused constraint-follow-up is separate from that cohort. A later comparison needs an available environment and a recorded recovery
+plan, preserving all original attempts rather than replacing them with successes.
+
+All 38 user decisions, all 29 skill names/discovery metadata, installer interfaces,
+original source facts and source snapshots remain. The maintained guidance stays
+English; the user-facing change map is Korean. Package versions, personal/global
+installs and remote publication are unchanged. Temporary Codex/Claude installation
+checks are separate from the user's installed skill state.
+
+
+### Source and verification closure
+
+- Required validator passes: 29 skills, source checksums, coverage and references.
+  All **179 tests pass** in the final source checkout (54.542 seconds).
+  [Full log](../evaluation/coco-1.1.0/implementation/evidence/final-tests.log).
+- A clean release-based clone exposed a historical fixture test depending on
+  unrelated Git object `622975e`. Commit `f6336e0` uses the already committed,
+  checksum-verified historical snapshot instead. The test still checks the same
+  historical proposals and active-source preservation; no frozen study was changed.
+  The original clean-clone failure and the post-fix result are retained separately.
+  At `1250ffd`, the clone still lacks `622975e` and passes the validator and all
+  179 tests (54.148 seconds), with a clean worktree.
+  [Receipt and log pointers](../evaluation/coco-1.1.0/implementation/evidence/clean-clone.json),
+  [original failure](../evaluation/coco-1.1.0/implementation/evidence/clean-clone-before.log),
+  [passing full suite](../evaluation/coco-1.1.0/implementation/evidence/clean-clone-after.log).
+- Both public Codex and Claude project installers were run in temporary projects.
+  All 117 final skill/support files match source; the unrelated skill and project
+  exclusions remain. The first observer wrongly treated the installer's own receipt
+  as unrelated; that observer assertion and correction are disclosed. No installer
+  or personal/global installation change was made for that observation.
+  [Final install receipt](../evaluation/coco-1.1.0/implementation/evidence/final-install-checks.json).
+- Independent read-only review found no actionable source/spec defect in the
+  initial integration, reporting repair or emerging-constraint recheck. This is
+  scoped source review, not certification of the incomplete experiment.
+  [Review](../evaluation/coco-1.1.0/implementation/evidence/source-review.json),
+  [source and link preservation](../evaluation/coco-1.1.0/implementation/evidence/final-source-checks.json).
+
+| Work unit | Local commit |
+| --- | --- |
+| One concrete 1.0.0-to-1.1.0 change map and accepted plan | `d0ef906` |
+| Staged workflow and release compatibility repairs | `9949121` |
+| Frozen decision-discovery/preservation instrument | `544cf3b` |
+| Original/actual/reason at the final-report boundary | `17e3425` |
+| Delivered versus actually settled owner answers | `027e5c3` |
+| Interrupted/unstarted evidence collection | `7f34713` |
+| Portable historical fixture in fresh clones | `f6336e0` |
+| Unchanged blind judgments and incomplete comparison | `1126909` |
+| Recheck new constraints before changing agreed behavior | `1250ffd` |
+
+The final evidence/status commit is recorded in branch history. The starting
+`docs/coco-1.1.0-clarity` checkout is still clean at `ba596d8`. Source changes and
+verification are local; no package version bump, push, PR, merge, publication or
+personal/global installation has occurred.

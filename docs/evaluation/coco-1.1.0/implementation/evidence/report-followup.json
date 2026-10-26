@@ -1,0 +1,48 @@
+{
+  "root": "/private/tmp/coco-v110-compat-followup-p5v2h4m_",
+  "candidate_commit": "17e342556cb3465780bff18bd358c262d6f47736",
+  "source_manifest_sha256": "c423cdb256605f28e0ed08c3afa4095c6c4431d7323f277c67dda7ab8d0828c8",
+  "canonical_skill_map_sha256": "8c3fc7dd7e27c1276ae1ecf7fd7fed6e22d87dab377052ff837c1ee01b3f926a",
+  "snapshot_matches": true,
+  "project_guide_matches": true,
+  "live_source_matches": true,
+  "actor": {
+    "exit": 0,
+    "timeout": false,
+    "seconds": 69.693,
+    "usage": {
+      "input_tokens": 245578,
+      "cached_input_tokens": 224512,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1557,
+      "reasoning_output_tokens": 70,
+      "status": "recorded"
+    }
+  },
+  "physical_observations": {
+    "literal_readme": true,
+    "same_branch": true,
+    "clean": true,
+    "changed_files": [
+      "README.md",
+      "docs/plans/copy-intro.md"
+    ],
+    "new_files": [],
+    "commit_count": 2,
+    "no_remote": true,
+    "required_check_exit": 0,
+    "hooks_override_commands": []
+  },
+  "c7": {
+    "final_message": "Completed on `feat/copy-intro`.\n\n- Corrected README `Welcom` → `Welcome`, preserving all other wording as agreed. No departure.\n- Author self-inspection found no defects; independent review was unavailable, as accepted.\n- `python3 check_intro.py` passed.\n- Commits: `a137dee` (correction), `1bd2164` (completion record).\n\nWorking tree is clean. Nothing pushed.",
+    "observed_comparison": "Corrected README Welcom → Welcome, preserving all other wording as agreed. No departure.",
+    "conservative_disposition": "Compressed/ambiguous for strict separately identifiable original-expectation content. Contains actual edit, agreed preserved wording and no departure; original expected typo change is not separately stated. Independent semantic adjudication belongs to root. No fully solved adherence or quality-improvement claim.",
+    "old_attempt_preserved": "/private/tmp/coco-v110-compat-00lh_4ru/records/copy-edit"
+  },
+  "policy_retry": "not launched by root instruction; original429 timeout retained; separate collaboration boundary actor owns further checks",
+  "source_reads": [
+    "/bin/zsh -lc 'cat AGENTS.md docs/specs/copy-intro.md docs/plans/copy-intro.md .guide/coco-build/SKILL.md .guide/coco-review/SKILL.md .guide/coco-verify/SKILL.md .guide/coco-docs/SKILL.md'",
+    "/bin/zsh -lc \"cat .guide/_coco-shared/contracts.md .guide/_coco-shared/workflow.md; git log -3 --oneline; rg --files -g 'CLAUDE.md' -g 'AGENTS.md'\""
+  ],
+  "no_comparative_claim": true
+}
