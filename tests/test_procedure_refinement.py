@@ -1,9 +1,12 @@
 """Public observer sensitivity and sandbox source-boundary checks."""
 import importlib.util
-from pathlib import Path
+import hashlib
+import json
+from pathlib import Path, PurePosixPath
 import shutil
 import subprocess
 import sys
+import tarfile
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -49,8 +52,34 @@ class ProcedureRefinement(unittest.TestCase):
     def test_proposals_only_mutate_owned_sandbox_paths(self):
         active_before={p.relative_to(ROOT/'skills').as_posix():p.read_bytes()
                        for p in (ROOT/'skills').rglob('*') if p.is_file()}
-        names=subprocess.check_output(['git','ls-tree','-r','--name-only','622975e','skills'],cwd=ROOT,text=True).splitlines()
-        originals={str(Path(n).relative_to('skills')):subprocess.check_output(['git','show','622975e:'+n],cwd=ROOT) for n in names}
+        # This historical snapshot is not an ancestor of the release-based branch.
+        # Read its already-committed evidence, never the current active skill tree.
+        archive=MODULES/'evidence/native-evidence.tar.gz'
+        receipt=json.loads((MODULES/'evidence/archive.json').read_text())
+        self.assertEqual(hashlib.sha256(archive.read_bytes()).hexdigest(),receipt['sha256'])
+        originals={}
+        with tarfile.open(archive,'r:gz') as evidence:
+            members=evidence.getmembers()
+            controls=[m for m in members if m.name=='run/control.json']
+            self.assertEqual(len(controls),1)
+            self.assertTrue(controls[0].isfile())
+            control=json.load(evidence.extractfile(controls[0]))
+            self.assertEqual(control['candidate'],'622975e349e6276b225aa9ef02ee69d664dd2927')
+            manifest=control['manifests']['current']
+            self.assertEqual(len(manifest),117)
+            prefix='run/snapshots/current/'
+            snapshot=[m for m in members if m.name.startswith(prefix) and not m.isdir()]
+            self.assertEqual(len(snapshot),len(manifest))
+            self.assertEqual({m.name[len(prefix):] for m in snapshot},set(manifest))
+            for name,digest in manifest.items():
+                path=PurePosixPath(name)
+                self.assertFalse(path.is_absolute() or '..' in path.parts)
+                self.assertEqual(path.as_posix(),name)
+                member=evidence.getmember(prefix+name)
+                self.assertTrue(member.isfile(),name)
+                body=evidence.extractfile(member).read()
+                self.assertEqual(hashlib.sha256(body).hexdigest(),digest,name)
+                originals[name]=body
         for variant,expected in refinement_variants.CHANGED.items():
             with self.subTest(variant=variant),tempfile.TemporaryDirectory() as directory:
                 copy=Path(directory)/'guide'
