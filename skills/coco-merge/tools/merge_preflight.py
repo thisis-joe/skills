@@ -148,7 +148,7 @@ def update_merges(repo, rows, pushed, target_tip):
 
 
 def preflight(path, remote=None, branch=None, target=None, integration=None,
-              expect_head=None, max_list=50):
+              expect_head=None, max_list=50, target_remote=None):
     repo = Repo(path)
     if branch is None:
         branch = repo.text('symbolic-ref', '--quiet', '--short', 'HEAD', ok=(0, 1)).strip()
@@ -160,19 +160,27 @@ def preflight(path, remote=None, branch=None, target=None, integration=None,
                   or repo.config('branch.%s.remote' % branch) or 'origin')
     if remote.startswith('-'):
         raise PreflightError('invalid remote: %r' % remote)
-    target = branch_name(target or remote_default(repo, remote))
-    if target == branch:
+    target_remote = remote if target_remote is None else target_remote
+    if not target_remote or target_remote.startswith('-'):
+        raise PreflightError('invalid target remote: %r' % target_remote)
+    target = branch_name(target or remote_default(repo, target_remote))
+    if target == branch and target_remote == remote:
         raise PreflightError('the work branch is the target branch; nothing to merge into it')
-    wanted = [branch, target]
-    if integration not in (None, 'none'):
-        wanted.append(branch_name(integration))
-    elif integration is None:
-        wanted.extend(name for name in INTEGRATION_CANDIDATES if name not in wanted)
-    tips = remote_refs(repo, remote, wanted)
-    if target not in tips:
-        raise PreflightError('target branch %s is not on %s' % (target, remote))
-    if integration not in (None, 'none') and integration not in tips:
-        raise PreflightError('integration base %s is not on %s' % (integration, remote))
+    integration_names = (list(INTEGRATION_CANDIDATES) if integration is None else
+                         [] if integration == 'none' else [branch_name(integration)])
+    source_names = list(dict.fromkeys([branch, *integration_names]))
+    target_names = list(dict.fromkeys([target, *integration_names]))
+    if target_remote == remote:
+        tips = remote_refs(repo, remote, list(dict.fromkeys(source_names + target_names)))
+        target_tips = tips
+    else:
+        tips = remote_refs(repo, remote, source_names)
+        target_tips = remote_refs(repo, target_remote, target_names)
+    if target not in target_tips:
+        raise PreflightError('target branch %s is not on %s' % (target, target_remote))
+    if (integration not in (None, 'none') and
+            integration not in tips and integration not in target_tips):
+        raise PreflightError('integration base %s is not on either identified repository' % integration)
 
     blockers, warnings = [], []
     local_head = repo.oid('refs/heads/' + branch)
@@ -184,25 +192,45 @@ def preflight(path, remote=None, branch=None, target=None, integration=None,
     if local_head is None:
         warnings.append('no_local_branch')
 
-    candidates = [name for name in INTEGRATION_CANDIDATES if name in tips and name != target]
+    # Either repository may retain the integration history used by a fork.
+    # A fork's same-name integration branch may also be ahead of the actual base.
+    candidates = [name for name in integration_names
+                  if (name in tips or name in target_tips) and
+                  (name != target or tips.get(name) not in (None, target_tips[target]))]
     if integration is None:
         if len(candidates) > 1:
             blockers.append('integration_base_ambiguous')
         integration = candidates[0] if len(candidates) == 1 else None
-    elif integration == 'none' or integration == target:
+    elif integration == 'none' or integration not in candidates:
         integration = None
 
+    integration_refs = []
+    if integration:
+        for location, refs in ((remote, tips), (target_remote, target_tips)):
+            row = {'remote': location, 'branch': integration, 'tip': refs.get(integration)}
+            if row['tip'] and row not in integration_refs:
+                integration_refs.append(row)
+
     report = {'schema': 1, 'repository': repo.path, 'remote': remote, 'branch': branch,
-              'target': target, 'integration_base': integration, 'local_head': local_head,
+              'target_remote': target_remote, 'target': target,
+              'integration_base': integration, 'local_head': local_head,
               'head': tips.get(branch), 'expected_head': expect_head,
-              'target_tip': tips[target], 'integration_tip': tips.get(integration),
+              'target_tip': target_tips[target],
+              'integration_tip': integration_refs[0]['tip'] if integration_refs else None,
+              'integration_refs': integration_refs,
               'local': state}
     if branch not in tips:
         blockers.append('branch_not_on_remote')
         return finish(report, blockers, warnings)
 
-    fetch_objects(repo, remote, [name for name in (branch, target, integration) if name], tips)
-    head, target_tip = tips[branch], tips[target]
+    source_fetch = [branch] + ([integration] if integration in tips and integration != branch else [])
+    target_fetch = [target] + ([integration] if integration in target_tips and integration != target else [])
+    if target_remote == remote:
+        fetch_objects(repo, remote, list(dict.fromkeys(source_fetch + target_fetch)), tips)
+    else:
+        fetch_objects(repo, remote, source_fetch, tips)
+        fetch_objects(repo, target_remote, target_fetch, target_tips)
+    head, target_tip = tips[branch], target_tips[target]
     if expect_head and repo.oid(expect_head) != head:
         blockers.append('head_mismatch')
 
@@ -223,13 +251,16 @@ def preflight(path, remote=None, branch=None, target=None, integration=None,
     elif behind:
         warnings.append('behind_target')
 
-    carried, own, base, already_integrated = [], incoming, None, False
+    carried, own, bases, already_integrated = [], incoming, [], False
     if integration and incoming:
-        base = repo.text('merge-base', head, tips[integration], ok=(0, 1)).strip() or None
-        if base:
-            already_integrated = base == head
-            carried = repo.commits(target_tip + '..' + base)
-            own = repo.commits(head, '^' + target_tip, '^' + base)
+        for row in integration_refs:
+            base = repo.text('merge-base', head, row['tip'], ok=(0, 1)).strip()
+            if base and base not in bases:
+                bases.append(base)
+        if bases:
+            already_integrated = head in bases
+            carried = repo.commits(*bases, '^' + target_tip)
+            own = repo.commits(head, '^' + target_tip, *['^' + base for base in bases])
         if carried:
             blockers.append('integration_commits_carried')
 
@@ -244,7 +275,7 @@ def preflight(path, remote=None, branch=None, target=None, integration=None,
         return [{'oid': row['oid'], 'subject': row['subject']} for row in rows[:max_list]]
 
     report.update({
-        'merge_base_with_integration': base,
+        'merge_base_with_integration': bases[0] if bases else None,
         'branch_already_in_integration_base': already_integrated,
         'counts': {'incoming': len(incoming), 'own': len(own), 'carried': len(carried),
                    'behind': behind, 'unpushed': len(unpushed),
@@ -269,16 +300,17 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument('--repo', default='.')
     parser.add_argument('--remote', help='push remote; default: pushRemote, pushDefault, upstream remote, origin')
+    parser.add_argument('--target-remote', help='confirmed PR base repository remote or URL; default: push remote')
     parser.add_argument('--branch', help='pushed work branch; default: current branch')
-    parser.add_argument('--target', help="branch to merge into, normally the PR/MR base; default: the remote's default branch")
+    parser.add_argument('--target', help="PR/MR base branch; default: target repository's default branch")
     parser.add_argument('--integration-base',
-                        help='branch the work was synchronized with; default: remote dev/develop; "none" disables')
+                        help='integration branch; default: identified repositories\' dev/develop; "none" disables')
     parser.add_argument('--expect-head', help='PR/MR head commit reported by the forge')
     parser.add_argument('--max-list', type=int, default=50, help='commits listed per group')
     args = parser.parse_args()
     try:
         report = preflight(args.repo, args.remote, args.branch, args.target, args.integration_base,
-                           args.expect_head, max(args.max_list, 0))
+                           args.expect_head, max(args.max_list, 0), target_remote=args.target_remote)
     except (PreflightError, OSError, ValueError) as exc:
         parser.exit(2, str(exc) + '\n')
     print(json.dumps(report, indent=2, ensure_ascii=False))
