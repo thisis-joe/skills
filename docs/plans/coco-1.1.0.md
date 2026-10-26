@@ -313,7 +313,7 @@ not an invented coco-push development base. Preserve work-unit history by merge.
 | Release unit | Acceptance | State |
 | --- | --- | --- |
 | R1 Complete prospective recovery | Freeze new candidate and necessary instrument repair; all five matched profiles and two preservation probes, actual owner routing, independent public outcomes and blinded controls; retain the old incomplete cohort | prior two stopped attempts sealed; user requested waiting for provider retries, so a new prospective waited cohort is being prepared |
-| R2 Prepare consumer artifact | Package 1.1.0, concrete README/distribution notes, exact packed payload, required checks, rollback install and scoped independent review | prior artifact passed local checks; Windows path repair cd728cd requires a superseding archive and verification |
+| R2 Prepare consumer artifact | Package 1.1.0, concrete README/distribution notes, exact packed payload, required checks, rollback install and scoped independent review | corrected cd728cd artifact passed: 200 tests, 466 packed/118 active files, eight exact-baseline install/rollback steps |
 | R3 Land release branch | Secret/provenance inspection, verified normal push, one PR attached to this chat, all forge checks/review gates, pinned-head merge and target readback | pushed 3a866db to PR #28; Windows Python 3.x failed invalid-path regression; fix and new CI required; landing also waits for R1 |
 | R4 Publish and install | Annotated release tag, npm exact artifact and registry integrity/readback; install to existing managed Codex/Claude locations and verify source agreement/other skills; preserve a tested rollback path | npm authentication recovered; pending readiness |
 
@@ -489,3 +489,23 @@ no issue. Actual Windows 3.15.1 confirmation still requires the new pushed CI.
 The new comparison candidate is `cd728cd1cbf8afe4740f68a8bf91a924fee574c4`; subsequent
 documentation-only commits do not change that active payload. The previously
 verified `d9e4dfbc` npm archive omits this repair and must not be published.
+
+The [corrected artifact](../evaluation/coco-1.1.0/release/corrected-artifact-readiness.json)
+supersedes that archive with SHA-1 `1c48845fd95e1a276605f4048b89b804ac98f6bb`
+and SHA-256 `6d117151412b9ba4b8f3f20e00f70cce7117934ea85113367eb9c40fe6331e9e`.
+Normal npm prepack passed the validator and all 200 tests in 63.944 seconds with no
+skips. All 466 packed files and 118 active files match source; both exact-baseline
+temporary upgrade/rollback/re-upgrade sequences pass. The archive is retained in
+the ignored persistent `dist/release-1.1.0/corrected/` directory. Prior archives
+and receipts remain unchanged. Global installations are still untouched.
+
+The user delegated model choice, allowed reasoning-only adjustments to preserve
+context, then explicitly prohibited Luna: use Sol or above. Keep this conversation
+and existing workers' context; choose models for new work without claiming the
+main chat's setting was changed. Before any waited-cohort native call, pin both
+arms and all owner classifiers to `gpt-6.1-sol` with `high` reasoning and record
+the actual model/effort. Use `gpt-6-astra` with `high` reasoning for the new narrow
+model-wrapper review and later independent outcome judgment. Do not change model
+or effort mid-cohort or pool results with the older unspecified-default cohorts.
+This selection follows the user's instruction before outcomes, not a favorable
+result search. No Luna worker is authorized.
