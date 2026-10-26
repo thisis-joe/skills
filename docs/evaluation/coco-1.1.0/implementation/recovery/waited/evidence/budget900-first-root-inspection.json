@@ -1,0 +1,24 @@
+{
+  "reviewer": "root source/evidence inspection, not independent blind grading",
+  "archives": [
+    {
+      "archive": "budget900-first-blind-ungraded.tar.gz",
+      "sha256": "0985670e623422beceb0c6318ac9bfcf28a6dfb10746f934026b2437e96ba8ad",
+      "verified_files": 627,
+      "inspected_loose_git_objects": 322
+    },
+    {
+      "archive": "budget900-first-native.tar.gz",
+      "sha256": "8d82a766cbf012b78677634f1bac721ad8da5321ca934bcfb6cd2d23e1873e5e",
+      "verified_files": 2865,
+      "inspected_loose_git_objects": 507
+    }
+  ],
+  "first_trial": "current profile 0; five turns; final public checks passed after correction; legacy policy open",
+  "pending_native_calls": 0,
+  "pending_trials": 11,
+  "matched_pairs": 0,
+  "limited_credential_pattern_check": "No matches in raw bytes and loose Git objects; not a guarantee of all sensitive information absence",
+  "all_models": "gpt-6.1-sol/high",
+  "comparative_claim": "not established"
+}
