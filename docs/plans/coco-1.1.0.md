@@ -312,9 +312,9 @@ not an invented coco-push development base. Preserve work-unit history by merge.
 
 | Release unit | Acceptance | State |
 | --- | --- | --- |
-| R1 Complete prospective recovery | Freeze new candidate and necessary instrument repair; all five matched profiles and two preservation probes, actual owner routing, independent public outcomes and blinded controls; retain the old incomplete cohort | prior two stopped attempts sealed; user requested waiting for provider retries, so a new prospective waited cohort is being prepared |
+| R1 Complete prospective recovery | Freeze new candidate and necessary instrument repair; all five matched profiles and two preservation probes, actual owner routing, independent public outcomes and blinded controls; retain the old incomplete cohort | prior attempts sealed; waited cohort frozen at 7582101; actual Sol/high native controls started, first passed without 429 |
 | R2 Prepare consumer artifact | Package 1.1.0, concrete README/distribution notes, exact packed payload, required checks, rollback install and scoped independent review | corrected cd728cd artifact passed: 200 tests, 466 packed/118 active files, eight exact-baseline install/rollback steps |
-| R3 Land release branch | Secret/provenance inspection, verified normal push, one PR attached to this chat, all forge checks/review gates, pinned-head merge and target readback | pushed 3a866db to PR #28; Windows Python 3.x failed invalid-path regression; fix and new CI required; landing also waits for R1 |
+| R3 Land release branch | Secret/provenance inspection, verified normal push, one PR attached to this chat, all forge checks/review gates, pinned-head merge and target readback | corrected source pushed as 2f8b11d; all ten CI jobs passed; final evidence head checks and R1 remain |
 | R4 Publish and install | Annotated release tag, npm exact artifact and registry integrity/readback; install to existing managed Codex/Claude locations and verify source agreement/other skills; preserve a tested rollback path | npm authentication recovered; pending readiness |
 
 Release does not require a superiority claim. Do not fabricate a favorable outcome;
@@ -509,3 +509,19 @@ model-wrapper review and later independent outcome judgment. Do not change model
 or effort mid-cohort or pool results with the older unspecified-default cohorts.
 This selection follows the user's instruction before outcomes, not a favorable
 result search. No Luna worker is authorized.
+
+The Windows repair is now confirmed on the actual remote Windows Python 3.x job,
+as well as Windows 3.9, both Linux versions and all six shell jobs at `2f8b11d`.
+[Exact CI receipt](../evaluation/coco-1.1.0/release/corrected-source-ci.json).
+The active payload is the frozen `cd728cd` candidate; later evidence-only commits
+still require their own forge checks before landing. This resolves the platform
+failure without weakening or changing the original regression test.
+
+The [waited protocol](../evaluation/coco-1.1.0/implementation/recovery/waited/protocol.md)
+and its exact source/input manifests were frozen at `7582101`; the root reread
+all 16 file hashes with no mismatch. Ten focused instrument tests passed. The
+[preexecution reviews](../evaluation/coco-1.1.0/release/waited-preexecution-review.json)
+closed the timing, cancelled-success, partial-collector and stale-model-context
+findings before dispatch. The first native control then passed without 429 and
+verified a fresh `gpt-6.1-sol`/`high` turn context. This is availability/model
+evidence only; it is not a completed development pair or a release verdict.

@@ -1,0 +1,49 @@
+{
+  "scope": "Prospective waited-cohort instrument; no outcome or release verdict",
+  "candidate": "cd728cd1cbf8afe4740f68a8bf91a924fee574c4",
+  "freeze": "../implementation/recovery/waited/evidence/preexecution-freeze.json",
+  "reviews": [
+    {
+      "reviewer": "final_release_audit",
+      "mode": "independent read-only",
+      "scope": "cooldown accounting, cancellation/completion validity, partial collection",
+      "resolved_findings": [
+        "Malformed UTC dates receive no credit",
+        "Final budget overrun invalidates a superficially successful exit",
+        "Cancellation and malformed/incomplete events cannot become a valid native result",
+        "Partial collector distinguishes auxiliary receipts from numeric native result files",
+        "Numeric turn ordering and initial known/unknown facts are preserved"
+      ],
+      "remaining_findings": []
+    },
+    {
+      "reviewer": "model_pin_review",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "high",
+      "mode": "independent read-only",
+      "scope": "explicit model pin on fresh/resume calls and current-invocation model receipt",
+      "resolved_findings": [
+        "Require fresh model context inside the current invocation time window rather than accepting a prior resumed turn"
+      ],
+      "remaining_findings": []
+    }
+  ],
+  "local_tests": {
+    "reported_count": 10,
+    "reported_seconds": 9.353,
+    "result": "passed"
+  },
+  "root_freeze_hash_check": {
+    "files": 16,
+    "mismatches": 0
+  },
+  "execution_requirements": [
+    "Native controls must pass",
+    "Every actual native invocation must verify gpt-6.1-sol/high",
+    "Both arms use the same frozen timing, authority and owner rules"
+  ],
+  "limitations": [
+    "No actors or outcomes were reviewed in these preexecution source reviews",
+    "Historical failed/incomplete experiments remain unchanged"
+  ]
+}
