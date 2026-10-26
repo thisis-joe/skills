@@ -1,0 +1,298 @@
+[
+  {
+    "runtime": "codex",
+    "phase": 0,
+    "source": "codex_baseline",
+    "install": {
+      "command": [
+        "node",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/baseline-codex/bin/coco-skills.cjs",
+        "install",
+        "--runtime",
+        "codex",
+        "--project",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-codex"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 29,\n  \"files\": 117,\n  \"destination\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-codex/.agents/skills\",\n  \"project\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-codex\",\n  \"git_exclude\": {\n    \"file\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-codex/.git/info/exclude\",\n    \"added\": 31\n  }\n}\n",
+      "stderr": "Warning: the global COCO install at /Users/Joseph/.codex/skills still applies to every project; remove it with --remove-global.\n"
+    },
+    "validation": {
+      "command": [
+        "node",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/baseline-codex/bin/coco-skills.cjs",
+        "validate",
+        "--installed",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-codex/.agents/skills"
+      ],
+      "exit": 0,
+      "stdout": "Validated installed bundle: 29 skills, 117 files\n",
+      "stderr": ""
+    },
+    "managed_files": 117,
+    "all_payload_bytes_match": true,
+    "no_stale_managed_files": true,
+    "unrelated_sentinel_preserved": true,
+    "workflow_present": false,
+    "intake_recovery_present": true
+  },
+  {
+    "runtime": "codex",
+    "phase": 1,
+    "source": "candidate",
+    "install": {
+      "command": [
+        "node",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/candidate/extracted/package/bin/coco-skills.cjs",
+        "install",
+        "--runtime",
+        "codex",
+        "--project",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-codex"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 29,\n  \"files\": 118,\n  \"destination\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-codex/.agents/skills\",\n  \"project\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-codex\",\n  \"git_exclude\": {\n    \"file\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-codex/.git/info/exclude\",\n    \"added\": 0\n  }\n}\n",
+      "stderr": "Warning: the global COCO install at /Users/Joseph/.codex/skills still applies to every project; remove it with --remove-global.\n"
+    },
+    "validation": {
+      "command": [
+        "node",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/candidate/extracted/package/bin/coco-skills.cjs",
+        "validate",
+        "--installed",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-codex/.agents/skills"
+      ],
+      "exit": 0,
+      "stdout": "Validated installed bundle: 29 skills, 118 files\n",
+      "stderr": ""
+    },
+    "managed_files": 118,
+    "all_payload_bytes_match": true,
+    "no_stale_managed_files": true,
+    "unrelated_sentinel_preserved": true,
+    "workflow_present": true,
+    "intake_recovery_present": true
+  },
+  {
+    "runtime": "codex",
+    "phase": 2,
+    "source": "codex_baseline",
+    "install": {
+      "command": [
+        "node",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/baseline-codex/bin/coco-skills.cjs",
+        "install",
+        "--runtime",
+        "codex",
+        "--project",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-codex"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 29,\n  \"files\": 117,\n  \"destination\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-codex/.agents/skills\",\n  \"project\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-codex\",\n  \"git_exclude\": {\n    \"file\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-codex/.git/info/exclude\",\n    \"added\": 0\n  }\n}\n",
+      "stderr": "Warning: the global COCO install at /Users/Joseph/.codex/skills still applies to every project; remove it with --remove-global.\n"
+    },
+    "validation": {
+      "command": [
+        "node",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/baseline-codex/bin/coco-skills.cjs",
+        "validate",
+        "--installed",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-codex/.agents/skills"
+      ],
+      "exit": 0,
+      "stdout": "Validated installed bundle: 29 skills, 117 files\n",
+      "stderr": ""
+    },
+    "managed_files": 117,
+    "all_payload_bytes_match": true,
+    "no_stale_managed_files": true,
+    "unrelated_sentinel_preserved": true,
+    "workflow_present": false,
+    "intake_recovery_present": true
+  },
+  {
+    "runtime": "codex",
+    "phase": 3,
+    "source": "candidate",
+    "install": {
+      "command": [
+        "node",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/candidate/extracted/package/bin/coco-skills.cjs",
+        "install",
+        "--runtime",
+        "codex",
+        "--project",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-codex"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 29,\n  \"files\": 118,\n  \"destination\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-codex/.agents/skills\",\n  \"project\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-codex\",\n  \"git_exclude\": {\n    \"file\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-codex/.git/info/exclude\",\n    \"added\": 0\n  }\n}\n",
+      "stderr": "Warning: the global COCO install at /Users/Joseph/.codex/skills still applies to every project; remove it with --remove-global.\n"
+    },
+    "validation": {
+      "command": [
+        "node",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/candidate/extracted/package/bin/coco-skills.cjs",
+        "validate",
+        "--installed",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-codex/.agents/skills"
+      ],
+      "exit": 0,
+      "stdout": "Validated installed bundle: 29 skills, 118 files\n",
+      "stderr": ""
+    },
+    "managed_files": 118,
+    "all_payload_bytes_match": true,
+    "no_stale_managed_files": true,
+    "unrelated_sentinel_preserved": true,
+    "workflow_present": true,
+    "intake_recovery_present": true
+  },
+  {
+    "runtime": "claude",
+    "phase": 0,
+    "source": "claude_baseline",
+    "install": {
+      "command": [
+        "node",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/baseline-registry/extracted/package/bin/coco-skills.cjs",
+        "install",
+        "--runtime",
+        "claude",
+        "--project",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-claude"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 29,\n  \"files\": 116,\n  \"destination\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-claude/.claude/skills\",\n  \"project\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-claude\",\n  \"git_exclude\": {\n    \"file\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-claude/.git/info/exclude\",\n    \"added\": 31\n  }\n}\n",
+      "stderr": "Warning: the global COCO install at /Users/Joseph/.claude/skills still applies to every project; remove it with --remove-global.\n"
+    },
+    "validation": {
+      "command": [
+        "node",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/baseline-registry/extracted/package/bin/coco-skills.cjs",
+        "validate",
+        "--installed",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-claude/.claude/skills"
+      ],
+      "exit": 0,
+      "stdout": "Validated installed bundle: 29 skills, 116 files\n",
+      "stderr": ""
+    },
+    "managed_files": 116,
+    "all_payload_bytes_match": true,
+    "no_stale_managed_files": true,
+    "unrelated_sentinel_preserved": true,
+    "workflow_present": false,
+    "intake_recovery_present": false
+  },
+  {
+    "runtime": "claude",
+    "phase": 1,
+    "source": "candidate",
+    "install": {
+      "command": [
+        "node",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/candidate/extracted/package/bin/coco-skills.cjs",
+        "install",
+        "--runtime",
+        "claude",
+        "--project",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-claude"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 29,\n  \"files\": 118,\n  \"destination\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-claude/.claude/skills\",\n  \"project\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-claude\",\n  \"git_exclude\": {\n    \"file\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-claude/.git/info/exclude\",\n    \"added\": 0\n  }\n}\n",
+      "stderr": "Warning: the global COCO install at /Users/Joseph/.claude/skills still applies to every project; remove it with --remove-global.\n"
+    },
+    "validation": {
+      "command": [
+        "node",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/candidate/extracted/package/bin/coco-skills.cjs",
+        "validate",
+        "--installed",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-claude/.claude/skills"
+      ],
+      "exit": 0,
+      "stdout": "Validated installed bundle: 29 skills, 118 files\n",
+      "stderr": ""
+    },
+    "managed_files": 118,
+    "all_payload_bytes_match": true,
+    "no_stale_managed_files": true,
+    "unrelated_sentinel_preserved": true,
+    "workflow_present": true,
+    "intake_recovery_present": true
+  },
+  {
+    "runtime": "claude",
+    "phase": 2,
+    "source": "claude_baseline",
+    "install": {
+      "command": [
+        "node",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/baseline-registry/extracted/package/bin/coco-skills.cjs",
+        "install",
+        "--runtime",
+        "claude",
+        "--project",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-claude"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 29,\n  \"files\": 116,\n  \"destination\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-claude/.claude/skills\",\n  \"project\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-claude\",\n  \"git_exclude\": {\n    \"file\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-claude/.git/info/exclude\",\n    \"added\": 0\n  }\n}\n",
+      "stderr": "Warning: the global COCO install at /Users/Joseph/.claude/skills still applies to every project; remove it with --remove-global.\n"
+    },
+    "validation": {
+      "command": [
+        "node",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/baseline-registry/extracted/package/bin/coco-skills.cjs",
+        "validate",
+        "--installed",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-claude/.claude/skills"
+      ],
+      "exit": 0,
+      "stdout": "Validated installed bundle: 29 skills, 116 files\n",
+      "stderr": ""
+    },
+    "managed_files": 116,
+    "all_payload_bytes_match": true,
+    "no_stale_managed_files": true,
+    "unrelated_sentinel_preserved": true,
+    "workflow_present": false,
+    "intake_recovery_present": false
+  },
+  {
+    "runtime": "claude",
+    "phase": 3,
+    "source": "candidate",
+    "install": {
+      "command": [
+        "node",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/candidate/extracted/package/bin/coco-skills.cjs",
+        "install",
+        "--runtime",
+        "claude",
+        "--project",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-claude"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"status\": \"installed\",\n  \"skills\": 29,\n  \"files\": 118,\n  \"destination\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-claude/.claude/skills\",\n  \"project\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-claude\",\n  \"git_exclude\": {\n    \"file\": \"/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-claude/.git/info/exclude\",\n    \"added\": 0\n  }\n}\n",
+      "stderr": "Warning: the global COCO install at /Users/Joseph/.claude/skills still applies to every project; remove it with --remove-global.\n"
+    },
+    "validation": {
+      "command": [
+        "node",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/candidate/extracted/package/bin/coco-skills.cjs",
+        "validate",
+        "--installed",
+        "/private/tmp/coco-release-final-1.1.0-hakojoq9/rollback-claude/.claude/skills"
+      ],
+      "exit": 0,
+      "stdout": "Validated installed bundle: 29 skills, 118 files\n",
+      "stderr": ""
+    },
+    "managed_files": 118,
+    "all_payload_bytes_match": true,
+    "no_stale_managed_files": true,
+    "unrelated_sentinel_preserved": true,
+    "workflow_present": true,
+    "intake_recovery_present": true
+  }
+]

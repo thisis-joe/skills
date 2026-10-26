@@ -312,19 +312,20 @@ not an invented coco-push development base. Preserve work-unit history by merge.
 
 | Release unit | Acceptance | State |
 | --- | --- | --- |
-| R1 Complete prospective recovery | Freeze new candidate and necessary instrument repair; all five matched profiles and two preservation probes, actual owner routing, independent public outcomes and blinded controls; retain the old incomplete cohort | in progress; recovery evidence owned below implementation/recovery |
-| R2 Prepare consumer artifact | Package 1.1.0, concrete README/distribution notes, exact packed payload, required checks, rollback install and scoped independent review | artifact and rollback checks pass; independent preparation review clean; final readiness awaits R1 |
-| R3 Land release branch | Secret/provenance inspection, verified normal push, one PR attached to this chat, all forge checks/review gates, pinned-head merge and target readback | pending R1/R2 |
-| R4 Publish and install | Annotated release tag, npm exact artifact and registry integrity/readback; install to existing managed Codex/Claude locations and verify source agreement/other skills; preserve a tested rollback path | pending readiness and npm authentication |
+| R1 Complete prospective recovery | Freeze new candidate and necessary instrument repair; all five matched profiles and two preservation probes, actual owner routing, independent public outcomes and blinded controls; retain the old incomplete cohort | blocked: two new capacity-interrupted attempts, 14 native calls, zero valid pairs; sealed report linked below |
+| R2 Prepare consumer artifact | Package 1.1.0, concrete README/distribution notes, exact packed payload, required checks, rollback install and scoped independent review | passed on final combined artifact: 200 tests, 466 packed files/118 active files, both exact-baseline rollback sequences, independent source review |
+| R3 Land release branch | Secret/provenance inspection, verified normal push, one PR attached to this chat, all forge checks/review gates, pinned-head merge and target readback | draft PR #28 exists; final push/CI pending; landing blocked by R1 |
+| R4 Publish and install | Annotated release tag, npm exact artifact and registry integrity/readback; install to existing managed Codex/Claude locations and verify source agreement/other skills; preserve a tested rollback path | npm authentication recovered; pending readiness |
 
 Release does not require a superiority claim. Do not fabricate a favorable outcome;
 record the absence of a demonstrated gain honestly. A real owner-control, required-process,
 public-behavior or operational regression still blocks the affected adoption.
 Service capacity or missing authentication is unavailable, never passed. A
 published version cannot be overwritten; hold before publish on an unmet gate.
-Rollback uses pinned 1.0.0 installation and npm latest-tag restoration when needed;
-verify the package/commands and preserve installed ownership before operational
-writes. No live service database or migration is involved in this skill bundle.
+Rollback uses each runtime's exact prior installation (Codex `0b110c0`, Claude
+registry 1.0.0) and npm latest-tag restoration when needed; verify the package/commands
+and preserve installed ownership before operational writes. No live service database
+or migration is involved in this skill bundle.
 
 
 Release preparation receipts: [packed artifact and rollback checks](../evaluation/coco-1.1.0/release/artifact-readiness.json)
@@ -349,6 +350,105 @@ Windows where the fixed preserved-note fixture requires LF bytes. The fixture no
 writes explicit bytes; the historical observer and archived experiment remain
 unchanged. A controlled CRLF/LF reproduction distinguishes this cause in all five
 profiles, and the validator plus all 179 local tests pass after the fix. The actual
-Windows CI recheck remains pending the next pushed head. The already tested npm
-artifact still exactly matches all 465 included source files; this test-only fix
-cannot alter its payload. [Failure and repair receipt](../evaluation/coco-1.1.0/release/windows-fixture-fix.json).
+Windows CI recheck passed on `be3a89f`, along with both Linux jobs and all six
+shell jobs ([Check](https://github.com/thisis-joe/skills/actions/runs/40306808911),
+[shell checks](https://github.com/thisis-joe/skills/actions/runs/40306808966)).
+At that revision, the test-only fix left the initial archive's 465 included files
+unchanged. Later operational preservation changes require a new artifact and new
+CI; the earlier green jobs do not approve those changes.
+[Failure and repair receipt](../evaluation/coco-1.1.0/release/windows-fixture-fix.json).
+
+
+### Recovery outcome and actual operational baseline
+
+The [new recovery report](../evaluation/coco-1.1.0/implementation/recovery/observations.md)
+retains two distinct stopped attempts: 14 native calls in total, zero stable trials
+and zero valid matched pairs; 10 and then 11 projects were not admitted. Both
+attempts honored their original per-call limits. A strict-integer oracle defect
+was prospectively repaired and independently reviewed; the first frozen instrument
+remains archived. After the actual provider cooldown, one-worker pacing still met
+HTTP429. No further native retry or substituted development engine is scheduled.
+The blind packet is retained ungraded. The full comparison remains unavailable;
+no candidate superiority or no-regression conclusion follows from these attempts.
+
+Actual installation inspection also changed the operational compatibility scope.
+Claude matches registry 1.0.0, but the 117 managed Codex files exactly match
+`fix/skill-runtime-evidence` at `0b110c0`. This is a known source-version difference,
+not an unowned-file conflict. Both installations were left unchanged and private
+backups were made during that inspection. The exact Codex rollback source was reconstructed and validated;
+registry 1.0.0 alone would not restore that installation.
+[Baseline receipt](../evaluation/coco-1.1.0/release/operational-baseline.json),
+[source identification](../evaluation/coco-1.1.0/release/operational-source-identification.json).
+
+The previously user-requested operational repairs were preserved under the existing
+instruction to retain decisions and behavior. They are helper bug fixes and
+clarifications of existing rules, not new product requirements. Seven groups were
+absent from the release-based candidate: genuine/project-scoped recent use, actual
+merge target identity, request-mode notices, tracker write recovery, obsolete
+private-test handling, literal Markdown parsing and owned intake compensation.
+The bare-start repair was already integrated. The corresponding fixes were ported
+with provenance and original regression tests, preserving the 1.1.0 stage,
+authority and reporting contracts. The single change map records exact locations
+and examples. No existing installed repair is silently discarded.
+
+This final combined skill tree differs from the pinned recovery candidate
+`42f6c58`; the stopped observations cannot approve later changes. The final artifact,
+both runtime installations, exact operational rollback targets and final source
+review/CI need their own evidence. No merge, tag, npm publication or global
+installation had occurred at this checkpoint. Registry authentication still
+returned E401 at 10:30 UTC; the later successful retry is recorded below.
+
+### Final artifact preparation and npm authentication retry (2026-10-26)
+
+The user requested an npm retry and completed the new browser login.
+`npm login --auth-type=web` exited successfully; `npm whoami` returned `thisis-joe`.
+The registry still reported `latest: 1.0.0`. Authentication is resolved; this is not
+publication. No secret or authentication code was collected in chat or committed.
+
+| Preserved operational behavior | Work-unit commit |
+| --- | --- |
+| Genuine recent use and workspace isolation | `6411f8a` |
+| Actual fork/base identity and retarget checks | `669d570` |
+| Literal Markdown examples | `fe0cc68` |
+| Wording-only versus execution notices | `84a345f` |
+| Tracker publication and uncertain-write recovery | `6b8e6b0` |
+| Public-contract tests and limited private-structure exception | `b132919` |
+| Owned intake compensation and reconciliation | `d92a57f` |
+| Keep the merge safeguards within the existing guidance budget | `80b8ef2` |
+
+The preserved tests first exposed the omitted helper behavior. After the fixes,
+the merge guide exceeded its existing 27,400-character bound by 50 characters;
+redundant wording was removed without raising the bound. Normal final `npm pack`
+then passed package validation and **all 200 tests in 65.557 seconds**, with no
+skips. Its source is `80b8ef2` plus the recorded README/distribution additions.
+The initial 117-file skill artifact is superseded for release by this combined
+118-file skill artifact. The earlier archive remains historical evidence.
+
+An [independent final source review](../evaluation/coco-1.1.0/release/final-source-review.json)
+found no actionable source integration issue. Common authority/stage/reporting
+rules were unchanged by the operational ports; source facts and snapshots remain
+preserved. Three new recovery archives passed hash/mode inspection and a bounded
+public-evidence scan. Two stale plan statements (old backups and prior Windows CI)
+were corrected. This review does not replace the missing paired comparison.
+
+The prior temporary release directory was absent after interruption/restart.
+Historical receipts remain as records of their original runs; they are not claims
+that those scratch files still exist. Reconstruct exact rollback sources and make
+fresh private backups before any operational write. Keep those private backups
+outside Git. The original full-comparison gate remains unmet and has not been
+silently waived by the successful npm login.
+
+[Final artifact receipt](../evaluation/coco-1.1.0/release/final-artifact-readiness.json)
+and [rollback records](../evaluation/coco-1.1.0/release/final-rollback-records.json)
+confirm all 466 packed files match the checkout, including the 118 active files;
+test/evaluation data are excluded. Registry 1.0.0 was downloaded and its original
+integrity verified. Existing global managed files still exactly match the identified
+baselines. Both temporary destinations passed all eight install/upgrade/rollback/
+re-upgrade steps with unrelated content intact. Fresh managed-only private backups
+were created and read back; neither global destination was changed.
+
+The exact final archive has SHA-1 `d9e4dfbc87969fa22260e65394fcc395e36fc760` and
+SHA-256 `ae49ca6f8028d65ae5fd083926809fc5e515689a3d0fdf94119325f751ac78e9`.
+Publish this verified archive only after the remaining readiness decision and
+forge checks; do not substitute the superseded initial artifact. These checks
+establish package/install compatibility, not the unavailable behavioral comparison.

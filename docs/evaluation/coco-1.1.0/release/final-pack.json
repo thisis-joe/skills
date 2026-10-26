@@ -1,0 +1,2346 @@
+[
+  {
+    "id": "@thisis-joe/coco-skills@1.1.0",
+    "name": "@thisis-joe/coco-skills",
+    "version": "1.1.0",
+    "size": 3570558,
+    "unpackedSize": 5310607,
+    "shasum": "d9e4dfbc87969fa22260e65394fcc395e36fc760",
+    "integrity": "sha512-f7any01Rti4Wa5JMbgPZzG3opu4sCY7tzGS/do++nhpt8PRv+x7i2WU0SyjOJDk/lFKOwn2HsVEY3peXwnU9Iw==",
+    "filename": "thisis-joe-coco-skills-1.1.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1066,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 11703,
+        "mode": 420
+      },
+      {
+        "path": "THIRD_PARTY_NOTICES.md",
+        "size": 3466,
+        "mode": 420
+      },
+      {
+        "path": "bin/coco-skills.cjs",
+        "size": 3377,
+        "mode": 493
+      },
+      {
+        "path": "coco.json",
+        "size": 722,
+        "mode": 420
+      },
+      {
+        "path": "docs/design.md",
+        "size": 7511,
+        "mode": 420
+      },
+      {
+        "path": "docs/distribution.md",
+        "size": 13777,
+        "mode": 420
+      },
+      {
+        "path": "docs/implementation-plan.md",
+        "size": 3654,
+        "mode": 420
+      },
+      {
+        "path": "docs/source-index.md",
+        "size": 25460,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 1255,
+        "mode": 420
+      },
+      {
+        "path": "scripts/install.py",
+        "size": 15120,
+        "mode": 420
+      },
+      {
+        "path": "scripts/package_utils.py",
+        "size": 8930,
+        "mode": 420
+      },
+      {
+        "path": "scripts/validate.py",
+        "size": 1000,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/automate-ci.md",
+        "size": 1246,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/automate-intake-fix.md",
+        "size": 1089,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/automate-intake-setup.md",
+        "size": 1081,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/automate-intake-triage.md",
+        "size": 1328,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/automate-specification.md",
+        "size": 1609,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/automate-sustained.md",
+        "size": 2190,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/automate-webhook.md",
+        "size": 1249,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/automate-wizard.md",
+        "size": 2183,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/automate.md",
+        "size": 5027,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/build.md",
+        "size": 10148,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/clarify.md",
+        "size": 7513,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/context.md",
+        "size": 12367,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/debug.md",
+        "size": 10218,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/design.md",
+        "size": 9542,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/docs.md",
+        "size": 10156,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/frontend.md",
+        "size": 7362,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/intake-recovery.md",
+        "size": 1601,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/learn.md",
+        "size": 2854,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/migrate.md",
+        "size": 7435,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/observe.md",
+        "size": 5529,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/performance.md",
+        "size": 6256,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/plan.md",
+        "size": 10330,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/research.md",
+        "size": 6815,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/retro.md",
+        "size": 6813,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/review.md",
+        "size": 10166,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/security.md",
+        "size": 8260,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/ship.md",
+        "size": 9125,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/simplify.md",
+        "size": 5990,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/spec.md",
+        "size": 7157,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/start.md",
+        "size": 7602,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/triage.md",
+        "size": 9551,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/verify-experiments.md",
+        "size": 1409,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/verify-formal-create.md",
+        "size": 1390,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/verify-formal-maintain.md",
+        "size": 1259,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/verify-pre-commit.md",
+        "size": 1988,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/verify-quality-audit.md",
+        "size": 689,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/verify-runtime-create.md",
+        "size": 2005,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/verify-runtime-maintain.md",
+        "size": 1230,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/advanced/verify.md",
+        "size": 5648,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/contracts.md",
+        "size": 8524,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/decisions.md",
+        "size": 34637,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/LICENSE",
+        "size": 1066,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/routing.md",
+        "size": 5610,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/runtimes.md",
+        "size": 5995,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/THIRD_PARTY_NOTICES.md",
+        "size": 3466,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/tools/review_scope.py",
+        "size": 4107,
+        "mode": 420
+      },
+      {
+        "path": "skills/_coco-shared/workflow.md",
+        "size": 8449,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-askme/agents/openai.yaml",
+        "size": 234,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-askme/references/question-patterns.md",
+        "size": 3709,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-askme/SKILL.md",
+        "size": 6040,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-automate/agents/openai.yaml",
+        "size": 222,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-automate/SKILL.md",
+        "size": 2927,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-build/agents/openai.yaml",
+        "size": 213,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-build/SKILL.md",
+        "size": 7660,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-clarify/agents/openai.yaml",
+        "size": 219,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-clarify/SKILL.md",
+        "size": 3820,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-context/agents/openai.yaml",
+        "size": 219,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-context/SKILL.md",
+        "size": 3041,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-debug/agents/openai.yaml",
+        "size": 213,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-debug/SKILL.md",
+        "size": 3769,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-design/agents/openai.yaml",
+        "size": 216,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-design/SKILL.md",
+        "size": 2895,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-docs/agents/openai.yaml",
+        "size": 214,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-docs/SKILL.md",
+        "size": 6330,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-frontend/agents/openai.yaml",
+        "size": 222,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-frontend/SKILL.md",
+        "size": 2812,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-learn/agents/openai.yaml",
+        "size": 239,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-learn/references/example-note.md",
+        "size": 1502,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-learn/references/note-template.md",
+        "size": 4870,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-learn/SKILL.md",
+        "size": 7665,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-learn/tools/check_notes.py",
+        "size": 13668,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-merge/agents/openai.yaml",
+        "size": 262,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-merge/references/forge-merge.md",
+        "size": 13103,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-merge/SKILL.md",
+        "size": 5773,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-merge/tools/merge_preflight.py",
+        "size": 14977,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-migrate/agents/openai.yaml",
+        "size": 219,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-migrate/SKILL.md",
+        "size": 2926,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-observe/agents/openai.yaml",
+        "size": 219,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-observe/SKILL.md",
+        "size": 2660,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-performance/agents/openai.yaml",
+        "size": 231,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-performance/SKILL.md",
+        "size": 2714,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-plan/agents/openai.yaml",
+        "size": 210,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-plan/SKILL.md",
+        "size": 2999,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-push/agents/openai.yaml",
+        "size": 339,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-push/references/branch-and-ticket.md",
+        "size": 6036,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-push/references/pull-request.md",
+        "size": 9698,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-push/references/sync-and-push.md",
+        "size": 8076,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-push/SKILL.md",
+        "size": 7376,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-research/agents/openai.yaml",
+        "size": 222,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-research/SKILL.md",
+        "size": 2703,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-retro/agents/openai.yaml",
+        "size": 213,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-retro/SKILL.md",
+        "size": 2125,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-review/agents/openai.yaml",
+        "size": 216,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-review/SKILL.md",
+        "size": 4222,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-security/agents/openai.yaml",
+        "size": 222,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-security/SKILL.md",
+        "size": 3019,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-ship/agents/openai.yaml",
+        "size": 210,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-ship/SKILL.md",
+        "size": 3921,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-simplify/agents/openai.yaml",
+        "size": 222,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-simplify/SKILL.md",
+        "size": 3096,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-spec/agents/openai.yaml",
+        "size": 210,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-spec/SKILL.md",
+        "size": 3031,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-start/agents/openai.yaml",
+        "size": 213,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-start/SKILL.md",
+        "size": 3399,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-tellmeskill/agents/openai.yaml",
+        "size": 274,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-tellmeskill/references/explanation-format.md",
+        "size": 2263,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-tellmeskill/references/skill-groups.md",
+        "size": 3073,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-tellmeskill/SKILL.md",
+        "size": 7156,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-tellmeskill/tools/recent_skills.py",
+        "size": 9027,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-triage/agents/openai.yaml",
+        "size": 216,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-triage/SKILL.md",
+        "size": 2092,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-updateskill/agents/openai.yaml",
+        "size": 272,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-updateskill/references/team-update.md",
+        "size": 9118,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-updateskill/SKILL.md",
+        "size": 8032,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-verify/agents/openai.yaml",
+        "size": 216,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-verify/SKILL.md",
+        "size": 3597,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-whattosay/agents/openai.yaml",
+        "size": 245,
+        "mode": 420
+      },
+      {
+        "path": "skills/coco-whattosay/SKILL.md",
+        "size": 5339,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/.claude/commands/build.md.source",
+        "size": 3959,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/.claude/commands/code-simplify.md.source",
+        "size": 1068,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/.claude/commands/constraints.md.source",
+        "size": 2762,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/.claude/commands/plan.md.source",
+        "size": 805,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/.claude/commands/review.md.source",
+        "size": 848,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/.claude/commands/ship.md.source",
+        "size": 4600,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/.claude/commands/spec.md.source",
+        "size": 913,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/.claude/commands/test.md.source",
+        "size": 665,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/.claude/commands/webperf.md.source",
+        "size": 1974,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/LICENSE.source",
+        "size": 1068,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/README.md.source",
+        "size": 25930,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/references/accessibility-checklist.md.source",
+        "size": 5206,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/references/definition-of-done.md.source",
+        "size": 3798,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/references/observability-checklist.md.source",
+        "size": 5129,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/references/orchestration-patterns.md.source",
+        "size": 18201,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/references/performance-checklist.md.source",
+        "size": 13159,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/references/security-checklist.md.source",
+        "size": 14360,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/references/testing-patterns.md.source",
+        "size": 7460,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/api-and-interface-design/SKILL.md.source",
+        "size": 14886,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/browser-testing-with-devtools/SKILL.md.source",
+        "size": 14539,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/ci-cd-and-automation/SKILL.md.source",
+        "size": 11332,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/code-review-and-quality/SKILL.md.source",
+        "size": 20976,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/code-simplification/SKILL.md.source",
+        "size": 13545,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/constraint-driven-development/references/floor-guard.md.source",
+        "size": 10681,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/constraint-driven-development/SKILL.md.source",
+        "size": 21008,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/context-engineering/SKILL.md.source",
+        "size": 15486,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/debugging-and-error-recovery/SKILL.md.source",
+        "size": 10913,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/deprecation-and-migration/SKILL.md.source",
+        "size": 12642,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/documentation-and-adrs/SKILL.md.source",
+        "size": 10910,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/doubt-driven-development/SKILL.md.source",
+        "size": 16647,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/frontend-ui-engineering/SKILL.md.source",
+        "size": 11721,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/git-workflow-and-versioning/SKILL.md.source",
+        "size": 14141,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/idea-refine/examples.md.source",
+        "size": 20284,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/idea-refine/frameworks.md.source",
+        "size": 5404,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/idea-refine/refinement-criteria.md.source",
+        "size": 5738,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/idea-refine/scripts/idea-refine.sh.source",
+        "size": 342,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/idea-refine/SKILL.md.source",
+        "size": 9253,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/incremental-implementation/SKILL.md.source",
+        "size": 9629,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/interview-me/SKILL.md.source",
+        "size": 15080,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/observability-and-instrumentation/SKILL.md.source",
+        "size": 13948,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/performance-optimization/references/optimization-patterns.md.source",
+        "size": 9692,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/performance-optimization/SKILL.md.source",
+        "size": 16698,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/planning-and-task-breakdown/SKILL.md.source",
+        "size": 10564,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/security-and-hardening/references/hardening-patterns.md.source",
+        "size": 13036,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/security-and-hardening/SKILL.md.source",
+        "size": 17559,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/shipping-and-launch/SKILL.md.source",
+        "size": 11515,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/source-driven-development/SKILL.md.source",
+        "size": 10038,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/spec-driven-development/SKILL.md.source",
+        "size": 13096,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/test-driven-development/SKILL.md.source",
+        "size": 16676,
+        "mode": 420
+      },
+      {
+        "path": "sources/addy/skills/using-agent-skills/SKILL.md.source",
+        "size": 10446,
+        "mode": 420
+      },
+      {
+        "path": "sources/coverage.json",
+        "size": 246763,
+        "mode": 420
+      },
+      {
+        "path": "sources/manifest.json",
+        "size": 137593,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/LICENSE.source",
+        "size": 1068,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/README.md.source",
+        "size": 16461,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/deprecated/README.md.source",
+        "size": 160,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/ask-matt/agents/openai.yaml.source",
+        "size": 137,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/ask-matt/PHASE-BOUNDARIES.md.source",
+        "size": 4249,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/ask-matt/SKILL.md.source",
+        "size": 12594,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/code-review/agents/openai.yaml.source",
+        "size": 100,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/code-review/SKILL.md.source",
+        "size": 6670,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/codebase-design/agents/openai.yaml.source",
+        "size": 102,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/codebase-design/DEEPENING.md.source",
+        "size": 2553,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/codebase-design/DESIGN-IT-TWICE.md.source",
+        "size": 2665,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/codebase-design/SKILL.md.source",
+        "size": 6446,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/diagnosing-bugs/agents/openai.yaml.source",
+        "size": 103,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/diagnosing-bugs/scripts/hitl-loop.template.sh.source",
+        "size": 1316,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/diagnosing-bugs/SKILL.md.source",
+        "size": 8664,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/domain-modeling/ADR-FORMAT.md.source",
+        "size": 2733,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/domain-modeling/agents/openai.yaml.source",
+        "size": 101,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/domain-modeling/GLOSSARY-FORMAT.md.source",
+        "size": 2300,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/domain-modeling/SKILL.md.source",
+        "size": 3346,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/grill-with-docs/agents/openai.yaml.source",
+        "size": 145,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/grill-with-docs/SKILL.md.source",
+        "size": 247,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/implement-spec/agents/openai.yaml.source",
+        "size": 168,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/implement-spec/SKILL.md.source",
+        "size": 2780,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/implement/agents/openai.yaml.source",
+        "size": 139,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/implement/SKILL.md.source",
+        "size": 622,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/improve-codebase-architecture/agents/openai.yaml.source",
+        "size": 166,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/improve-codebase-architecture/HTML-REPORT.md.source",
+        "size": 6641,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/improve-codebase-architecture/SKILL.md.source",
+        "size": 6000,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/pr/agents/openai.yaml.source",
+        "size": 93,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/pr/CREDITS.md.source",
+        "size": 604,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/pr/SKILL.md.source",
+        "size": 4169,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/prototype/agents/openai.yaml.source",
+        "size": 100,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/prototype/LOGIC.md.source",
+        "size": 6036,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/prototype/SKILL.md.source",
+        "size": 2931,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/prototype/UI.md.source",
+        "size": 6913,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/README.md.source",
+        "size": 4287,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/research/agents/openai.yaml.source",
+        "size": 94,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/research/SKILL.md.source",
+        "size": 794,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/retro/agents/openai.yaml.source",
+        "size": 146,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/retro/SKILL.md.source",
+        "size": 4369,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/setup-matt-pocock-skills/agents/openai.yaml.source",
+        "size": 152,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/setup-matt-pocock-skills/domain.md.source",
+        "size": 2042,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/setup-matt-pocock-skills/issue-tracker-github.md.source",
+        "size": 4117,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/setup-matt-pocock-skills/issue-tracker-gitlab.md.source",
+        "size": 3816,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/setup-matt-pocock-skills/issue-tracker-local.md.source",
+        "size": 1810,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/setup-matt-pocock-skills/SKILL.md.source",
+        "size": 6978,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/setup-matt-pocock-skills/triage-labels.md.source",
+        "size": 1057,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/tdd/agents/openai.yaml.source",
+        "size": 87,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/tdd/mocking.md.source",
+        "size": 1481,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/tdd/SKILL.md.source",
+        "size": 3629,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/tdd/tests.md.source",
+        "size": 2214,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/to-spec/agents/openai.yaml.source",
+        "size": 135,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/to-spec/SKILL.md.source",
+        "size": 3043,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/to-tickets/agents/openai.yaml.source",
+        "size": 146,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/to-tickets/SKILL.md.source",
+        "size": 5812,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/triage/AGENT-BRIEF.md.source",
+        "size": 7942,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/triage/agents/openai.yaml.source",
+        "size": 135,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/triage/OUT-OF-SCOPE.md.source",
+        "size": 4667,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/triage/SKILL.md.source",
+        "size": 6558,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/wayfinder/agents/openai.yaml.source",
+        "size": 144,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/wayfinder/SKILL.md.source",
+        "size": 12380,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/wizard/agents/openai.yaml.source",
+        "size": 96,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/wizard/SKILL.md.source",
+        "size": 4123,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/engineering/wizard/template.sh.source",
+        "size": 9498,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/in-progress/chief-of-staff/agents/openai.yaml.source",
+        "size": 184,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/in-progress/chief-of-staff/SKILL.md.source",
+        "size": 2112,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/in-progress/claude-handoff/agents/openai.yaml.source",
+        "size": 141,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/in-progress/claude-handoff/SKILL.md.source",
+        "size": 1424,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/in-progress/loop-me/agents/openai.yaml.source",
+        "size": 140,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/in-progress/loop-me/SKILL.md.source",
+        "size": 2522,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/in-progress/README.md.source",
+        "size": 1676,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/in-progress/setup-ts-deep-modules/agents/openai.yaml.source",
+        "size": 149,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/in-progress/setup-ts-deep-modules/dependency-cruiser.config.cjs.source",
+        "size": 3712,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/in-progress/setup-ts-deep-modules/SKILL.md.source",
+        "size": 7546,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/in-progress/writing-beats/agents/openai.yaml.source",
+        "size": 142,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/in-progress/writing-beats/SKILL.md.source",
+        "size": 4855,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/in-progress/writing-fragments/agents/openai.yaml.source",
+        "size": 140,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/in-progress/writing-fragments/SKILL.md.source",
+        "size": 3558,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/in-progress/writing-shape/agents/openai.yaml.source",
+        "size": 144,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/in-progress/writing-shape/SKILL.md.source",
+        "size": 5922,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/misc/git-guardrails-claude-code/agents/openai.yaml.source",
+        "size": 112,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/misc/git-guardrails-claude-code/scripts/block-dangerous-git.sh.source",
+        "size": 507,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/misc/git-guardrails-claude-code/SKILL.md.source",
+        "size": 2313,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/misc/migrate-to-shoehorn/agents/openai.yaml.source",
+        "size": 110,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/misc/migrate-to-shoehorn/SKILL.md.source",
+        "size": 2795,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/misc/README.md.source",
+        "size": 684,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/misc/scaffold-exercises/agents/openai.yaml.source",
+        "size": 108,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/misc/scaffold-exercises/SKILL.md.source",
+        "size": 3589,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/misc/setup-pre-commit/agents/openai.yaml.source",
+        "size": 99,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/misc/setup-pre-commit/SKILL.md.source",
+        "size": 2258,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/productivity/grill-me/agents/openai.yaml.source",
+        "size": 137,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/productivity/grill-me/SKILL.md.source",
+        "size": 157,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/productivity/grilling/agents/openai.yaml.source",
+        "size": 113,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/productivity/grilling/SKILL.md.source",
+        "size": 2049,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/productivity/handoff/agents/openai.yaml.source",
+        "size": 141,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/productivity/handoff/SKILL.md.source",
+        "size": 940,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/productivity/README.md.source",
+        "size": 1481,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/productivity/teach/agents/openai.yaml.source",
+        "size": 139,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/productivity/teach/GLOSSARY-FORMAT.md.source",
+        "size": 2122,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/productivity/teach/LEARNING-RECORD-FORMAT.md.source",
+        "size": 2747,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/productivity/teach/MISSION-FORMAT.md.source",
+        "size": 1540,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/productivity/teach/RESOURCES-FORMAT.md.source",
+        "size": 1924,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/productivity/teach/SKILL.md.source",
+        "size": 9733,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/productivity/to-questionnaire/agents/openai.yaml.source",
+        "size": 166,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/productivity/to-questionnaire/SKILL.md.source",
+        "size": 2904,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/productivity/wait-what/agents/openai.yaml.source",
+        "size": 158,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/productivity/wait-what/SKILL.md.source",
+        "size": 396,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/productivity/writing-for-agents/agents/openai.yaml.source",
+        "size": 102,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/productivity/writing-for-agents/SKILL-MECHANICS.md.source",
+        "size": 2629,
+        "mode": 420
+      },
+      {
+        "path": "sources/matt/skills/productivity/writing-for-agents/SKILL.md.source",
+        "size": 10886,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/.cursor-plugin/plugin.json.source",
+        "size": 722,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/.gitignore.source",
+        "size": 30,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/agents/comment-sicko.md.source",
+        "size": 2230,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/agents/poteto-agent.md.source",
+        "size": 1316,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/assets/logo.png.source",
+        "size": 361140,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/automations/benny/FOR_AGENTS.md.source",
+        "size": 7460,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/automations/benny/README.md.source",
+        "size": 1321,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/automations/benny/skills/reproduce-and-fix-issues/references/control-adapter.md.source",
+        "size": 5517,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/automations/benny/skills/reproduce-and-fix-issues/references/feature-map.example.md.source",
+        "size": 5646,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/automations/benny/skills/reproduce-and-fix-issues/references/verify-existing-fix.md.source",
+        "size": 3149,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/automations/benny/skills/reproduce-and-fix-issues/SKILL.md.source",
+        "size": 14238,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/automations/benny/skills/setup-benny/SKILL.md.source",
+        "size": 13992,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/automations/benny/skills/triage-issue-reports/references/routing.example.md.source",
+        "size": 1892,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/automations/benny/skills/triage-issue-reports/SKILL.md.source",
+        "size": 10320,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/automations/benny/templates/configuration.example.yaml.source",
+        "size": 2424,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/automations/benny/templates/reproduce-automation-prompt.md.source",
+        "size": 1822,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/automations/benny/templates/triage-automation-prompt.md.source",
+        "size": 1569,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/docs/guide/01-setup.md.source",
+        "size": 5431,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/docs/guide/02-poteto-mode.md.source",
+        "size": 7791,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/docs/guide/03-understand.md.source",
+        "size": 5141,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/docs/guide/04-design.md.source",
+        "size": 8759,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/docs/guide/05-build-and-clean.md.source",
+        "size": 5707,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/docs/guide/06-verify-and-ship.md.source",
+        "size": 12570,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/docs/guide/07-overnight.md.source",
+        "size": 9641,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/docs/guide/08-principles.md.source",
+        "size": 5868,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/docs/guide/09-make-it-yours.md.source",
+        "size": 7972,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/docs/guide/10-recipes-and-pitfalls.md.source",
+        "size": 8454,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/docs/guide/images/design.jpg.source",
+        "size": 402373,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/docs/guide/images/overnight.jpg.source",
+        "size": 347071,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/docs/guide/images/recipes.jpg.source",
+        "size": 410550,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/docs/guide/images/router.jpg.source",
+        "size": 450945,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/docs/guide/images/understanding.jpg.source",
+        "size": 376523,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/docs/guide/images/verification.jpg.source",
+        "size": 331450,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/docs/guide/README.md.source",
+        "size": 2649,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/docs/harness/claude-code.md.source",
+        "size": 5678,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/LICENSE.source",
+        "size": 1067,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/plugin.json.source",
+        "size": 619,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/README.md.source",
+        "size": 26805,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/architect/references/design-red-flags.md.source",
+        "size": 3009,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/architect/references/rationale-template.md.source",
+        "size": 3050,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/architect/references/runner-prompt.md.source",
+        "size": 3092,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/architect/SKILL.md.source",
+        "size": 5469,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/arena/SKILL.md.source",
+        "size": 4511,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/automate-me/SKILL.md.source",
+        "size": 7297,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/benchmark-checklist/SKILL.md.source",
+        "size": 5002,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/blast-radius/SKILL.md.source",
+        "size": 3856,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/bro/SKILL.md.source",
+        "size": 267,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/correct/SKILL.md.source",
+        "size": 2478,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/create-formal-verification-skill/SKILL.md.source",
+        "size": 5141,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/create-verification-skill/references/feature-map-example/create-note.md.source",
+        "size": 2926,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/create-verification-skill/references/feature-map-example/README.md.source",
+        "size": 2601,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/create-verification-skill/references/feature-map-example/search.md.source",
+        "size": 3478,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/create-verification-skill/SKILL.md.source",
+        "size": 6533,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/figure-it-out/SKILL.md.source",
+        "size": 4111,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/how/references/explainer-prompt.md.source",
+        "size": 3085,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/how/references/explorer-prompt.md.source",
+        "size": 1135,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/how/SKILL.md.source",
+        "size": 2651,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/in-your-own-words/SKILL.md.source",
+        "size": 315,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/interrogate/references/code-quality-review.md.source",
+        "size": 5217,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/interrogate/references/lead-judgment.md.source",
+        "size": 2283,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/interrogate/references/reviewer-prompt.md.source",
+        "size": 2275,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/interrogate/references/rubric.md.source",
+        "size": 4772,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/interrogate/SKILL.md.source",
+        "size": 4548,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/ketchup/SKILL.md.source",
+        "size": 6426,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/maintain-formal-verification-skill/SKILL.md.source",
+        "size": 7012,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/maintain-verification-skill/SKILL.md.source",
+        "size": 4922,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/make-bot-ui/SKILL.md.source",
+        "size": 4649,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/no-comments/SKILL.md.source",
+        "size": 2693,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-help/references/prompting.md.source",
+        "size": 3166,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-help/references/recipes.md.source",
+        "size": 3652,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-help/SKILL.md.source",
+        "size": 15301,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/authoring-a-skill.md.source",
+        "size": 831,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/autonomous-run.md.source",
+        "size": 1982,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/autopilot-full.md.source",
+        "size": 6596,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/autopilot-stack.md.source",
+        "size": 2205,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/babysit.md.source",
+        "size": 7619,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/bug-fix.md.source",
+        "size": 2359,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/eval.md.source",
+        "size": 2628,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/feature.md.source",
+        "size": 2870,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/hillclimb.md.source",
+        "size": 4507,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/investigation.md.source",
+        "size": 928,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/multi-phase-plan.md.source",
+        "size": 13217,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/opening-a-pr.md.source",
+        "size": 5669,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/orchestrate.md.source",
+        "size": 17127,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/pause-safely.md.source",
+        "size": 1135,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/perf-issue.md.source",
+        "size": 1550,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/prototype.md.source",
+        "size": 2161,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/refactoring.md.source",
+        "size": 3315,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/runtime-forensics.md.source",
+        "size": 1314,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/session-pickup.md.source",
+        "size": 1782,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/shipping.md.source",
+        "size": 4387,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/trace-forensics.md.source",
+        "size": 1867,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/visual-parity.md.source",
+        "size": 1197,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/playbooks/worktree-cleanup.md.source",
+        "size": 2947,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/references/bugbot-triage.md.source",
+        "size": 9629,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/scripts/bootstrap.ts.source",
+        "size": 1737,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/scripts/bun.lock.source",
+        "size": 6679,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/scripts/check-plan.mjs.source",
+        "size": 8153,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/scripts/check-plan.test.ts.source",
+        "size": 3289,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/scripts/orch/orch.test.ts.source",
+        "size": 21801,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/scripts/orch/orch.ts.source",
+        "size": 15737,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/scripts/orch/store.ts.source",
+        "size": 44466,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/scripts/package.json.source",
+        "size": 371,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/scripts/watch-pr/cli.test.ts.source",
+        "size": 6161,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/scripts/watch-pr/cli.ts.source",
+        "size": 6983,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/scripts/watch-pr/fakes.test-helper.ts.source",
+        "size": 3357,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/scripts/watch-pr/github.test.ts.source",
+        "size": 13101,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/scripts/watch-pr/github.ts.source",
+        "size": 25198,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/scripts/watch-pr/policy.test.ts.source",
+        "size": 12405,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/scripts/watch-pr/policy.ts.source",
+        "size": 25169,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/scripts/watch-pr/render.ts.source",
+        "size": 7083,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/scripts/watch-pr/tsconfig.json.source",
+        "size": 270,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/scripts/watch-pr/types.compile.ts.source",
+        "size": 2258,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/scripts/watch-pr/types.ts.source",
+        "size": 12649,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/scripts/watch-pr/watch-pr.source",
+        "size": 211,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/scripts/worktree-audit.sh.source",
+        "size": 6003,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/poteto-mode/SKILL.md.source",
+        "size": 20362,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-attack-the-premise/SKILL.md.source",
+        "size": 1916,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-boundary-discipline/SKILL.md.source",
+        "size": 1883,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-build-the-lever/SKILL.md.source",
+        "size": 2386,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-encode-lessons-in-structure/SKILL.md.source",
+        "size": 558,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-exhaust-the-design-space/SKILL.md.source",
+        "size": 395,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-experience-first/SKILL.md.source",
+        "size": 1184,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-explain-the-number/SKILL.md.source",
+        "size": 1663,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-fix-root-causes/SKILL.md.source",
+        "size": 1821,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-foundational-thinking/SKILL.md.source",
+        "size": 1530,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-guard-the-context-window/SKILL.md.source",
+        "size": 519,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-laziness-protocol/SKILL.md.source",
+        "size": 552,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-make-operations-idempotent/SKILL.md.source",
+        "size": 1809,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md.source",
+        "size": 637,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-minimize-reader-load/SKILL.md.source",
+        "size": 1996,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-model-the-domain/SKILL.md.source",
+        "size": 1858,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-never-block-on-the-human/SKILL.md.source",
+        "size": 910,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-outcome-oriented-execution/SKILL.md.source",
+        "size": 1078,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-prove-it-works/SKILL.md.source",
+        "size": 1371,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-redesign-from-first-principles/SKILL.md.source",
+        "size": 758,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-separate-before-serializing-shared-state/SKILL.md.source",
+        "size": 1565,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-sequence-verifiable-units/SKILL.md.source",
+        "size": 1705,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-subtract-before-you-add/SKILL.md.source",
+        "size": 909,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-test-behavior-not-implementation/SKILL.md.source",
+        "size": 2614,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/principle-type-system-discipline/SKILL.md.source",
+        "size": 1557,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/recall/SKILL.md.source",
+        "size": 5345,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/reflect/references/divergent-reviewer.md.source",
+        "size": 3668,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/reflect/references/judgment-reviewer.md.source",
+        "size": 3107,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/reflect/references/synthesizer.md.source",
+        "size": 4141,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/reflect/references/tooling-reviewer.md.source",
+        "size": 4448,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/reflect/SKILL.md.source",
+        "size": 4766,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/setup-pstack/SKILL.md.source",
+        "size": 6305,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/sharpen/SKILL.md.source",
+        "size": 756,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/show-me-your-work/references/decision-log-template.tsv.source",
+        "size": 38,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/show-me-your-work/scripts/log.sh.source",
+        "size": 1377,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/show-me-your-work/SKILL.md.source",
+        "size": 6551,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/swarm/SKILL.md.source",
+        "size": 2734,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/tdd/SKILL.md.source",
+        "size": 3143,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/teach/SKILL.md.source",
+        "size": 5623,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/technical-writing/SKILL.md.source",
+        "size": 9093,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/typescript-best-practices/references/patterns.md.source",
+        "size": 9287,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/typescript-best-practices/SKILL.md.source",
+        "size": 2765,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/unslop/SKILL.md.source",
+        "size": 5827,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/why/references/epistemics.md.source",
+        "size": 6736,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/why/references/investigator-prompt.md.source",
+        "size": 5554,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/why/references/source-playbook.md.source",
+        "size": 1363,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/why/references/sources/code-archaeology.md.source",
+        "size": 1440,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/why/references/sources/databricks.md.source",
+        "size": 6994,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/why/references/sources/datadog.md.source",
+        "size": 4971,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/why/references/sources/incident-postmortem.md.source",
+        "size": 372,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/why/references/sources/linear.md.source",
+        "size": 2996,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/why/references/sources/notion.md.source",
+        "size": 2853,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/why/references/sources/sentry.md.source",
+        "size": 2089,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/why/references/sources/slack.md.source",
+        "size": 1336,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/why/references/synthesizer-prompt.md.source",
+        "size": 7146,
+        "mode": 420
+      },
+      {
+        "path": "sources/pstack/pstack/skills/why/SKILL.md.source",
+        "size": 8903,
+        "mode": 420
+      },
+      {
+        "path": "sources/README.md",
+        "size": 1094,
+        "mode": 420
+      }
+    ],
+    "entryCount": 466,
+    "bundled": []
+  }
+]

@@ -204,6 +204,24 @@ clarify도 기존 답을 먼저 복구하도록 연결했다.
 
 **검증 V7:** 구현 커밋 후 리뷰, 커밋 전 직접 리뷰, 새 파일을 포함한 전체 변경 범위, 지적 후 수정 커밋, 독립 리뷰 불가, 필수 실행 환경 불가를 각각 확인한다. “완료”라는 단어만으로 서로 다른 상태를 합치면 실패다.
 
+## 8. 이미 운영 중인 버그 수정을 업데이트 때 잃지 않는다
+
+운영 설치를 대조하니 Claude는 공개 1.0.0이었지만, Codex는 `fix/skill-runtime-evidence`의 `0b110c0`과 파일 내용이 정확히 같았다. 이 브랜치에는 이전 검증에서 발견해 수정한 내용이 있었다. 공개 1.0.0만 출발점으로 삼은 초기 후보에는 아래 일곱 묶음이 빠져 있었다. **기존 결정을 유지하기 위해 이 수정과 원래 회귀 검사를 함께 통합했다.** 새로운 개발 철학이나 별도의 자동 실행 권한을 추가하는 작업은 아니다.
+
+| 수정 위치 | 1.0.0에서 가능한 문제와 예시 | 1.1.0에서 보존하는 동작·이유 | 검증 방법 |
+| --- | --- | --- | --- |
+| [최근 스킬 판별기](../skills/coco-tellmeskill/tools/recent_skills.py), [탐색 안내](../skills/coco-tellmeskill/SKILL.md) | 문서에 인용된 `<skill>`을 실제 선택으로 오인하거나, 비슷한 폴더 이름을 가진 다른 프로젝트의 기록을 가져올 수 있다. | 실제 선택을 나타내는 기록만 읽고, 확인된 프로젝트 경로가 같은 기록만 사용한다. | 인용·실제 호출을 구분하고, 경로 충돌·상위 경로·심볼릭 링크 사례를 검사한다. |
+| [병합 진입점](../skills/coco-merge/SKILL.md), [검사 도구](../skills/coco-merge/tools/merge_preflight.py), [병합 절차](../skills/coco-merge/references/forge-merge.md) | fork의 소스 저장소와 실제 병합 대상 저장소가 다른데 같은 대상으로 검사할 수 있다. PR 대상만 바뀌고 HEAD가 같아도 기존 검사 결과를 재사용할 수 있다. | 실제 대상 저장소·브랜치까지 검사 결과에 묶고, 대상이 바뀌면 다시 확인한다. | 별도 임시 원격 두 개와 대상 변경 사례에서 잘못된 대상 검사가 통과하지 않는지 확인한다. |
+| [요청문 추천](../skills/coco-whattosay/SKILL.md), [탐색 안내](../skills/coco-tellmeskill/SKILL.md), [공통 계약](../skills/_coco-shared/contracts.md) | “요청문만 추천해줘”라는 상황에서도 번호를 고르면 바로 실행한다는 안내가 나올 수 있다. | 요청문만 원하는 모드에서는 선택 후에도 요청문만 제공한다고 설명한다. 이미 선택한 실행 범위는 유지한다. | 요청문만 받는 경우와 실제 실행을 선택한 경우의 안내·권한을 각각 대조한다. |
+| [계획 진입점](../skills/coco-plan/SKILL.md), [상세 계획](../skills/_coco-shared/advanced/plan.md), [접수 판단](../skills/_coco-shared/advanced/triage.md) | 티켓 생성 응답이 사라졌을 때 곧바로 다시 생성하거나, 일부만 게시된 상태에서 처음부터 반복할 수 있다. | 실제 생성 여부와 의존 관계를 확인하고 남은 작업만 이어간다. 알 수 없는 쓰기 결과는 성공·실패로 추정하지 않는다. | 응답 유실·부분 성공·의존 관계 저장 실패의 기존 검증과 재개 조건을 보존한다. |
+| [단순화 진입점](../skills/coco-simplify/SKILL.md), [상세 단순화](../skills/_coco-shared/advanced/simplify.md) | 공개 동작은 같지만 제거한 내부 구조만 검사하는 테스트를 정리할 때, 테스트 변경 금지와 내부 테스트 삭제 지침이 충돌한다. | 공개 동작 테스트는 보존한다. 사라진 내부 구조만 검사하는 테스트는 근거와 대체 검증을 남겨 교체할 수 있다. | 공개 동작 보존 조건과 제한된 내부 테스트 예외가 서로 모순되지 않는지 확인한다. |
+| [학습 노트 검사기](../skills/coco-learn/tools/check_notes.py), [노트 형식](../skills/coco-learn/references/note-template.md) | 코드 예제 속 `[예시](missing.md)`까지 실제 링크 오류로 취급하거나, 긴 코드 울타리 안의 짧은 울타리를 종료 표시로 오인할 수 있다. | 문자 그대로 보여주는 Markdown 예제와 실제 문서 링크를 구분한다. | 인라인 코드·코드 블록·울타리 길이와 실제 잘못된 링크를 함께 검사한다. |
+| [접수 설정](../skills/_coco-shared/advanced/automate-intake-setup.md), [접수 처리](../skills/_coco-shared/advanced/automate-intake-triage.md), [실패 복구](../skills/_coco-shared/advanced/intake-recovery.md) | 원문이 사라졌을 때 쓰기 금지와 이번에 만든 티켓을 취소하라는 지침이 충돌한다. 응답 유실을 실패로 단정하면 중복 답변·취소가 생길 수 있다. | 이번 승인된 실행이 만든 정확한 미변경 티켓만 조건부로 취소한다. 응답·취소 결과가 불명확하면 먼저 읽어 확인하며 다른 사람이 바꾼 티켓에는 적용하지 않는다. | 소유권·버전 조건, 원문 유실, 응답 유실, 동시 수정 및 조회 불가 사례의 기존 경계를 유지한다. |
+
+인자 없는 `coco-start`의 읽기 전용 안내 수정은 이미 1.1.0 흐름에 반영돼 있어 중복 이식하지 않는다. [결정 기록](../skills/_coco-shared/decisions.md)에는 이전 수정의 출처와 조건을 함께 남긴다. 기존 실행 기록은 과거 해당 버전의 근거로 유지하고, 합쳐진 최종 버전의 검사 결과와 구분한다.
+
+**검증 V8의 운영 기준 보완:** 공개 1.0.0과의 호환성뿐 아니라 실제 설치된 Codex 수정판의 동작도 보존해야 한다. 설치기가 파일을 교체할 수 있다는 결과만으로 동작 보존을 판정하지 않는다. Codex는 정확한 기존 `0b110c0`, Claude는 공개 1.0.0을 되돌리기 대상으로 확인한다.
+
 ## 실제 파일에 어떻게 나누어 반영하는가
 
 | 담당하는 규칙 | 수정한 파일 |
@@ -213,6 +231,7 @@ clarify도 기존 답을 먼저 복구하도록 연결했다.
 | 요구사항·명세·계획의 단계 연결 | [coco-clarify](../skills/coco-clarify/SKILL.md), [coco-spec](../skills/coco-spec/SKILL.md), [coco-plan](../skills/coco-plan/SKILL.md); 상세 [clarify](../skills/_coco-shared/advanced/clarify.md), [spec](../skills/_coco-shared/advanced/spec.md), [plan](../skills/_coco-shared/advanced/plan.md) |
 | 구현·복구·리뷰·검증 | [coco-build](../skills/coco-build/SKILL.md), [coco-debug](../skills/coco-debug/SKILL.md), [coco-review](../skills/coco-review/SKILL.md), [coco-verify](../skills/coco-verify/SKILL.md); 상세 [build](../skills/_coco-shared/advanced/build.md), [context](../skills/_coco-shared/advanced/context.md) |
 | 프로젝트에 맞는 브랜치·Jira 처리 | 위 build·공통 규칙과 [coco-push](../skills/coco-push/SKILL.md), [브랜치·티켓 정렬](../skills/coco-push/references/branch-and-ticket.md) |
+| 이미 운영 중인 버그 수정의 보존 | 위 8절의 최근 사용·병합·요청문·계획 게시·단순화·학습 노트·접수 복구 파일과 원래 회귀 검사 |
 | 사용 안내와 변경 근거 | [README](../README.md), [coverage.json](../sources/coverage.json), 관련 명세·계획·검증 기록. 원본 스냅샷과 라이선스는 보존한다. |
 
 실험 버전의 스킬 변경 19개 파일을 검토해 필요한 단계 규칙을 가져왔다. 여기에 push 진입 지침의 조건 누락과 위 질문·보고 경로를 보완했다. 원본의 모든 규칙을 다시 넣거나 29개 진입 스킬을 합치는 작업은 아니다.

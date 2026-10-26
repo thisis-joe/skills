@@ -1,0 +1,10 @@
+{
+  "codex_before_source": "0b110c004d87cab9ba310cb336407c06358f117f",
+  "codex_before_branch": "fix/skill-runtime-evidence",
+  "codex_managed_files": 117,
+  "codex_exact_source_restoration_root": "/private/tmp/coco-release-1.1.0-ofdjvclh/codex-operational-0b110c0",
+  "codex_source_validation": "Validated package: 29 skills, source checksums, coverage and references",
+  "claude_before_source": "registry @thisis-joe/coco-skills@1.0.0",
+  "both_global_installs_unchanged": true,
+  "reason": "Registry 1.0.0 is not the exact prior Codex installation. Preserve its existing validated source as the exact rollback target; final temporary upgrade/rollback checks must use this source for Codex."
+}
