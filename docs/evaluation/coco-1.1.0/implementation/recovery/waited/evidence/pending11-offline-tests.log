@@ -1,0 +1,8 @@
+test_archive_tamper_rejected_before_extract (__main__.RemainingTests) ... ok
+test_manifest_tamper_rejected (__main__.RemainingTests) ... ok
+test_real_archive_offline_restore_and_run_guards (__main__.RemainingTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.080s
+
+OK

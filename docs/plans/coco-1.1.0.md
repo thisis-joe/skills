@@ -5,6 +5,40 @@ Explanation: [purpose, progress and before/after](../coco-1.1.0-rationale.md).
 This file is the **sole mutable execution-state owner for this effort**.
 Historical plans keep their completed receipts; they do not schedule this work.
 
+## Current release decision — 2026-10-26
+
+The user's latest instruction supersedes the earlier full-comparison release gate:
+finish only the first individual experiment, preserve a detailed continuation for
+the remaining eleven, then push, merge, publish and install **1.1.0**. Publication
+is explicitly authorized; another comparison waiver is not required. All existing
+product decisions and required code/forge checks remain in force.
+
+The first experiment is now complete: current-reference profile 0
+(`84bc1e8e980b`), five actor turns, final public checks passed. It is **one current
+trial, zero candidate trials and zero matched pairs**. Earlier failures and their
+corrections remain evidence, not five independent successful experiments.
+The first completion attempt failed three public checks; the predeclared correction
+fixed them. A later question about pre-existing mixed-case database collisions
+remained unresolved in the final report. `stable=true` means the execution completed
+under the instrument, not that every product policy was settled.
+The next
+eleven projects were held before native model execution at the user's request.
+The resulting missing-directory driver stop records that deliberate admission hold;
+it is not a COCO defect or provider-capacity failure.
+
+The release relies on the reviewed implementation, 200 passing required tests,
+real Windows/Linux/shell CI and exact-artifact upgrade/rollback checks. Comparative
+procedure adherence, quality/no-regression, speed and human selection benefits
+remain unproven by this cohort. At least five valid pairs remain necessary for the
+planned comparative claims; the first-only release does not lower that evidence bar.
+Remaining work is documented in the [Korean experiment handoff](../evaluation/coco-1.1.0/implementation/recovery/waited/remaining-experiments.ko.md).
+
+Account usage after the first case was 79% used / 21% remaining. This is a shared
+weekly account window, not the cost of this case or this chat. Use Sol only; no
+more experiment actors or ancillary studies are authorized in this release turn.
+Final evidence commit, forge checks, merge, tag, publication and global installation
+are the remaining release actions. Update their actual receipts after execution.
+
 ## Scope and source identities
 
 - Planning branch: `plan/coco-1.1.0`, starting at `a19c5fb`, in the existing
@@ -20,10 +54,11 @@ Historical plans keep their completed receipts; they do not schedule this work.
   docs/harnesses come from `ba596d8`; the integration audit comes from `6f01c14`.
 - The user requested one concrete comparison document: [1.0.0 → 1.1.0](../coco-1.0.0-to-1.1.0.md).
   It owns the detailed before/after instruction map; this plan alone owns task state.
-- Authorized scope is specification/plan, actual skills, disposable scenario
+- Original implementation-only scope was specification/plan, actual skills, disposable scenario
   verification and work-unit commits. Temporary installs validate packaging;
   package bumps, personal/global installation, push, PR, merge and deployment
-  remain outside this implementation task.
+  were initially outside this implementation task. The later release request and
+  current first-only decision above explicitly authorize those actions.
 
 ## Current planning work
 
@@ -47,11 +82,11 @@ returns issues and verification returns evidence.
 | F1 Integrate accepted staged procedure | Selectively carry accepted navigation, transitions, completion and source decisions; owners: shared workflow/contracts/routing, affected entrypoints and references | F0 | C1/C3/C4/C6/C8 agree across owners; initial/full/expert discovery, static-edit bypass, explicit next-skill selection, one-spec resume, exact specialist revoke and before-push stop have behavior evidence. Reconcile README with the release candidate | implemented; five native compatibility calls and supplemental scope/pickup probes recorded below |
 | F2 Validate the decision-check instrument | Disposable verification contract with complete owner answers and independent public expected outcomes | F0; may proceed beside F1 in separately owned test/evidence files | Extra real questions reach the owner; matching keys and emitted spelling are distinct if material. Known-choice recovery, unknown safe stop, failure/restore and unchanged unrelated behavior are sensitive. Preserve old invalid pair and frozen studies | complete; frozen at 027e5c3 before primary actors; controls and collector tests pass |
 | F3 Repair discovery and final-report adherence | A minimal single change at the actual decision boundary; likely owners build/clarify/shared workflow, not a universal longer interview | F1 and F2 | C2/C7: relevant rule is reached and followed, existing answers are reused, missing business choices precede adoption, concrete asks retain recommendations/effects, final report compares original/actual/reason. Inspect the real entry/read path rather than equating supplied text with use | implemented with focused follow-ups; comparative adoption remains pending F4 |
-| F4 Evaluate the repair and record its disposition | Fixed prospective matched cases and a keep/revert/redesign decision | F3 plus frozen inputs/criteria; valid baseline with room for the targeted failure | At least five pairs for a comparative claim; independent actual outcomes, adverse runs, source/adherence audit and blinded controls. Fewer confirmed assumption repairs for a quality-gain claim, with no added owner-control, process, acceptance or operational loss. Preserve safe blocks separately from completion. No favorable-only replacement | incomplete: two of twelve prepared projects started; repeated HTTP429; five-pair gate unmet |
+| F4 Evaluate the repair and record its disposition | Fixed prospective matched cases and a keep/revert/redesign decision | F3 plus frozen inputs/criteria; valid baseline with room for the targeted failure | At least five pairs for a comparative claim; independent actual outcomes, adverse runs, source/adherence audit and blinded controls. Fewer confirmed assumption repairs for a quality-gain claim, with no added owner-control, process, acceptance or operational loss. Preserve safe blocks separately from completion. No favorable-only replacement | comparison deferred by user: final cohort current profile 0 completed, remaining eleven unexecuted; zero pairs; no comparative verdict |
 | F5 Inspect actual state duplication | Evidence-backed decision about K3, not another wording-only rewrite; owners spec/plan/context | F4 disposition recorded | If no overlapping mutable state is observed, retain current behavior and close this branch of work. If observed, propose one structural reduction preserving both artifacts, original/superseding decisions, open choices and one state owner; test five fresh pickups. Efficiency claim still requires full process/public guards and median actor ratio <=0.80 | retain / no-op: no observed overlapping mutable-state target; no efficiency claim |
 | U1 Assess human presentation need | Determine whether any R7 intervention is warranted; owners workflow/start/discovery | A representative F1 presentation; no need to wait for F5 | Observe actual friction and verify a real baseline/treatment difference. Pilot baseline already omits map; do not fabricate repetition. If no problem/difference, defer with no rewrite. Participant absence remains unavailable, not a model-generated human result | deferred: no observed human selection friction or distinct repeated-map treatment |
 | U2 Run a bounded participant pilot | Actual human understanding/selection evidence for an eligible treatment | U1 eligibility, available consenting participants, frozen primary outcome/threshold | At least five unfamiliar participants, same first orientation, counterbalanced equivalent follow-ups; vary repeated-map display only. Preserve recommendation/reason/result/request, full/specialist access and authority. Record selection, explanation, discovery, approval understanding, active time and re-explanation separately. No learning/effort claim without observations | conditional / not started |
-| F6 Integrate and review the release candidate | Reviewed combined changed behavior with original attribution and rollback receipts | F1/F4 and the dispositions of F5/U1; U2 only if needed for a claimed human benefit | Check real combined diff and all C1–C8; independently review source/protocol/claims; run required repo checks and actual affected public/runtime/install checks in temporary destinations. Resolve compatibility/version from F0, preserve evidence and work-unit commits, stop before publication | local implementation checks and scoped independent review recorded; final adoption/release certification pending F4 |
+| F6 Integrate and review the release candidate | Reviewed combined changed behavior with original attribution and rollback receipts | F1/F4 and the dispositions of F5/U1; U2 only if needed for a claimed human benefit | Check real combined diff and all C1–C8; independently review source/protocol/claims; run required repo checks and actual affected public/runtime/install checks in temporary destinations. Resolve compatibility/version from F0, preserve evidence and work-unit commits | local checks, independent review and corrected-source CI complete; comparative adoption remains pending F4; publication authorized by the current first-only release decision |
 
 F0/F1 specifically protect an adequate non-Jira descriptive branch on resume;
 the experimental build's residual "this format" wording is an audited risk.
@@ -312,10 +347,10 @@ not an invented coco-push development base. Preserve work-unit history by merge.
 
 | Release unit | Acceptance | State |
 | --- | --- | --- |
-| R1 Complete prospective recovery | Freeze new candidate and necessary instrument repair; all five matched profiles and two preservation probes, actual owner routing, independent public outcomes and blinded controls; retain the old incomplete cohort | prior cohorts sealed; final 900-second cohort frozen at 0d80f5c, first current trial running; no complete pair yet |
+| R1 Complete first experiment and defer the rest | Latest user scope: complete the first individual trial, preserve its observations and exact continuation for eleven unexecuted projects; retain old cohorts and the full-comparison evidence bar | first current profile 0 complete in five turns; final public checks pass; remaining eleven deliberately held; zero pairs |
 | R2 Prepare consumer artifact | Package 1.1.0, concrete README/distribution notes, exact packed payload, required checks, rollback install and scoped independent review | corrected cd728cd artifact passed: 200 tests, 466 packed/118 active files, eight exact-baseline install/rollback steps |
-| R3 Land release branch | Secret/provenance inspection, verified normal push, one PR attached to this chat, all forge checks/review gates, pinned-head merge and target readback | corrected source pushed as 2f8b11d; all ten CI jobs passed; final evidence head checks and R1 remain |
-| R4 Publish and install | Annotated release tag, npm exact artifact and registry integrity/readback; install to existing managed Codex/Claude locations and verify source agreement/other skills; preserve a tested rollback path | npm authentication recovered; pending readiness |
+| R3 Land release branch | Secret/provenance inspection, verified normal push, one PR attached to this chat, all forge checks/review gates, pinned-head merge and target readback | corrected source passed all ten CI jobs; final evidence commit/checks and pinned merge pending |
+| R4 Publish and install | Annotated release tag, npm exact artifact and registry integrity/readback; install to existing managed Codex/Claude locations and verify source agreement/other skills; preserve a tested rollback path | explicitly authorized after first experiment; npm authentication recovered; pending R3 |
 
 Release does not require a superiority claim. Do not fabricate a favorable outcome;
 record the absence of a demonstrated gain honestly. A real owner-control, required-process,

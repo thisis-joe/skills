@@ -1,0 +1,31 @@
+{
+  "verified_at": "2026-10-26T13:37:14.734974+00:00",
+  "prepared_root": "/private/tmp/coco-v110-pending11-offline-20261026T1340Z",
+  "source_archive_sha256": "8d82a766cbf012b78677634f1bac721ad8da5321ca934bcfb6cd2d23e1873e5e",
+  "pending_order": [
+    "92939b26c0af",
+    "14748d0d9f45",
+    "e941fcf5b704",
+    "8f8760555804",
+    "c09d72460dc8",
+    "1f304b47dcab",
+    "532b61bd3d9a",
+    "c179a281123b",
+    "511b0525594b",
+    "8e994b95cf19",
+    "9320926d1ade"
+  ],
+  "excluded_completed_trial": "84bc1e8e980b",
+  "native_calls": 0,
+  "restored_frozen_inputs": 22,
+  "restored_runner_import_verified": true,
+  "all_project_hashes_and_modes_verified": true,
+  "tests": {
+    "count": 3,
+    "seconds": 2.08,
+    "result": "passed"
+  },
+  "helper_sha256": "88208feed3ad264226b5a498934f3f4a8dc9cdc378bdc2ed16a42dd13a07dc48",
+  "original_stop_preserved": true,
+  "old_archives_unchanged": true
+}
