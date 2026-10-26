@@ -1,0 +1,7 @@
+test_real_processes_keep_thirty_second_start_gap (__main__.CrossProcessClock) ... {"first": {"monotonic": 0.029856458, "utc": "2026-10-26T12:31:20.348393+00:00", "requested_wait_seconds": 0.0, "process_clock": "monotonic local only; UTC persisted"}, "second": {"monotonic": 29.993304916, "utc": "2026-10-26T12:31:50.353718+00:00", "requested_wait_seconds": 29.96560287475586, "process_clock": "monotonic local only; UTC persisted"}, "actual_gap_seconds": 30.005325}
+ok
+
+----------------------------------------------------------------------
+Ran 1 test in 30.057s
+
+OK
