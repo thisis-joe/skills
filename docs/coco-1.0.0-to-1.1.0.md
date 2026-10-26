@@ -210,7 +210,7 @@ clarify도 기존 답을 먼저 복구하도록 연결했다.
 
 | 수정 위치 | 1.0.0에서 가능한 문제와 예시 | 1.1.0에서 보존하는 동작·이유 | 검증 방법 |
 | --- | --- | --- | --- |
-| [최근 스킬 판별기](../skills/coco-tellmeskill/tools/recent_skills.py), [탐색 안내](../skills/coco-tellmeskill/SKILL.md) | 문서에 인용된 `<skill>`을 실제 선택으로 오인하거나, 비슷한 폴더 이름을 가진 다른 프로젝트의 기록을 가져올 수 있다. | 실제 선택을 나타내는 기록만 읽고, 확인된 프로젝트 경로가 같은 기록만 사용한다. | 인용·실제 호출을 구분하고, 경로 충돌·상위 경로·심볼릭 링크 사례를 검사한다. |
+| [최근 스킬 판별기](../skills/coco-tellmeskill/tools/recent_skills.py), [탐색 안내](../skills/coco-tellmeskill/SKILL.md) | 문서에 인용된 `<skill>`을 실제 선택으로 오인하거나, 비슷한 폴더 이름을 가진 다른 프로젝트의 기록을 가져올 수 있다. | 실제 선택을 나타내는 기록만 읽고, 확인된 프로젝트 경로가 같은 기록만 사용한다. NUL 문자가 든 잘못된 경로는 운영체제의 경로 처리 전에 제외한다. | 인용·실제 호출, 경로 충돌·상위 경로·심볼릭 링크·잘못된 문자 사례를 검사한다. Windows의 최신 Python에서도 기존의 격리 조건이 유지되는지 CI로 확인한다. |
 | [병합 진입점](../skills/coco-merge/SKILL.md), [검사 도구](../skills/coco-merge/tools/merge_preflight.py), [병합 절차](../skills/coco-merge/references/forge-merge.md) | fork의 소스 저장소와 실제 병합 대상 저장소가 다른데 같은 대상으로 검사할 수 있다. PR 대상만 바뀌고 HEAD가 같아도 기존 검사 결과를 재사용할 수 있다. | 실제 대상 저장소·브랜치까지 검사 결과에 묶고, 대상이 바뀌면 다시 확인한다. | 별도 임시 원격 두 개와 대상 변경 사례에서 잘못된 대상 검사가 통과하지 않는지 확인한다. |
 | [요청문 추천](../skills/coco-whattosay/SKILL.md), [탐색 안내](../skills/coco-tellmeskill/SKILL.md), [공통 계약](../skills/_coco-shared/contracts.md) | “요청문만 추천해줘”라는 상황에서도 번호를 고르면 바로 실행한다는 안내가 나올 수 있다. | 요청문만 원하는 모드에서는 선택 후에도 요청문만 제공한다고 설명한다. 이미 선택한 실행 범위는 유지한다. | 요청문만 받는 경우와 실제 실행을 선택한 경우의 안내·권한을 각각 대조한다. |
 | [계획 진입점](../skills/coco-plan/SKILL.md), [상세 계획](../skills/_coco-shared/advanced/plan.md), [접수 판단](../skills/_coco-shared/advanced/triage.md) | 티켓 생성 응답이 사라졌을 때 곧바로 다시 생성하거나, 일부만 게시된 상태에서 처음부터 반복할 수 있다. | 실제 생성 여부와 의존 관계를 확인하고 남은 작업만 이어간다. 알 수 없는 쓰기 결과는 성공·실패로 추정하지 않는다. | 응답 유실·부분 성공·의존 관계 저장 실패의 기존 검증과 재개 조건을 보존한다. |

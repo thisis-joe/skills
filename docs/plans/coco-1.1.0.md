@@ -312,9 +312,9 @@ not an invented coco-push development base. Preserve work-unit history by merge.
 
 | Release unit | Acceptance | State |
 | --- | --- | --- |
-| R1 Complete prospective recovery | Freeze new candidate and necessary instrument repair; all five matched profiles and two preservation probes, actual owner routing, independent public outcomes and blinded controls; retain the old incomplete cohort | blocked: two new capacity-interrupted attempts, 14 native calls, zero valid pairs; sealed report linked below |
-| R2 Prepare consumer artifact | Package 1.1.0, concrete README/distribution notes, exact packed payload, required checks, rollback install and scoped independent review | passed on final combined artifact: 200 tests, 466 packed files/118 active files, both exact-baseline rollback sequences, independent source review |
-| R3 Land release branch | Secret/provenance inspection, verified normal push, one PR attached to this chat, all forge checks/review gates, pinned-head merge and target readback | draft PR #28 exists; final push/CI pending; landing blocked by R1 |
+| R1 Complete prospective recovery | Freeze new candidate and necessary instrument repair; all five matched profiles and two preservation probes, actual owner routing, independent public outcomes and blinded controls; retain the old incomplete cohort | prior two stopped attempts sealed; user requested waiting for provider retries, so a new prospective waited cohort is being prepared |
+| R2 Prepare consumer artifact | Package 1.1.0, concrete README/distribution notes, exact packed payload, required checks, rollback install and scoped independent review | prior artifact passed local checks; Windows path repair cd728cd requires a superseding archive and verification |
+| R3 Land release branch | Secret/provenance inspection, verified normal push, one PR attached to this chat, all forge checks/review gates, pinned-head merge and target readback | pushed 3a866db to PR #28; Windows Python 3.x failed invalid-path regression; fix and new CI required; landing also waits for R1 |
 | R4 Publish and install | Annotated release tag, npm exact artifact and registry integrity/readback; install to existing managed Codex/Claude locations and verify source agreement/other skills; preserve a tested rollback path | npm authentication recovered; pending readiness |
 
 Release does not require a superiority claim. Do not fabricate a favorable outcome;
@@ -452,3 +452,40 @@ SHA-256 `ae49ca6f8028d65ae5fd083926809fc5e515689a3d0fdf94119325f751ac78e9`.
 Publish this verified archive only after the remaining readiness decision and
 forge checks; do not substitute the superseded initial artifact. These checks
 establish package/install compatibility, not the unavailable behavioral comparison.
+
+### User-directed waiting and final Windows finding
+
+After the authentication retry, the user questioned why the provider's requested
+wait had not simply been honored. This selects another properly recorded recovery,
+not a waiver of the comparison gate. The previous revision-2 rule explicitly
+stopped on any recurring 429; it must not be described as permanent provider
+unavailability. Its stderr said Codex would retry sampling in 340.999900833 seconds
+(attempt 1/5). It did not identify account quota versus service capacity.
+
+Prepare a new cohort on the final corrected source. Retain the 420-second actor
+and 90-second classifier budgets, with provider-announced retry intervals recorded
+separately and allowed up to 30 minutes per call (wall caps 2220/1890 seconds).
+Apply identical accounting to both arms, one project at a time, at least 30 seconds
+between call starts, with a 90-minute cumulative provider-wait ceiling for this
+cohort. Advertised waiting is an estimate, not measured productive-model time;
+always report total elapsed time. Let the same CLI process retry; do not restart
+failed product trials to replace results. Freeze and test the new wrapper before
+dispatch. Existing attempts and their outcomes stay unchanged.
+
+Remote `3a866db` passed both Linux checks, six shell checks and Windows Python 3.9.
+Windows Python 3.x (3.15.1) failed two runtime subcases of the invalid-workspace
+regression: a NUL-containing path allowed `coco-ship` to enter another workspace's
+recent-use result. This real platform difference must be fixed, not waived. Keep
+the failure evidence and the test expectation; the final comparison source and
+publishable artifact must include the repair and pass subsequent CI.
+
+Commit `cd728cd` explicitly rejects NUL-containing/non-string record paths before
+platform normalization. Existing test expectations are unchanged. Both-runtime
+controlled reproduction fails before the guard and passes after; 17 focused tests,
+the validator and all 200 tests (61.520 seconds) pass locally. The root separately
+reviewed the three-line code change against both JSON-metadata call sites and found
+no issue. Actual Windows 3.15.1 confirmation still requires the new pushed CI.
+[Repair receipt](../evaluation/coco-1.1.0/release/windows-path-fix.json).
+The new comparison candidate is `cd728cd1cbf8afe4740f68a8bf91a924fee574c4`; subsequent
+documentation-only commits do not change that active payload. The previously
+verified `d9e4dfbc` npm archive omits this repair and must not be published.
