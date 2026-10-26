@@ -6,6 +6,12 @@ Apply the [common contract](../contracts.md). Triage evaluates incoming work and
 
 Retain the report/issue/PR reference, repository, tracker configuration, labels, authorized actions and relevant source artifacts. Choose maintainer issue triage or explicitly configured automated intake. Generated implementation tickets already ready for execution bypass raw-request triage.
 
+For configured automated intake, read/apply the [automation core](automate.md),
+[setup](automate-intake-setup.md) and [intake triage](automate-intake-triage.md)
+before dependent work. Their required recovery definition governs the parent
+write gate and compensation steps below; ordinary maintainer triage keeps its
+existing procedure.
+
 A read-only recommendation is always separate from an authorized label/comment/closure. Use authenticated supported adapters; do not invent vendors, IDs, owners or priorities.
 
 ## Canonical roles and discovery

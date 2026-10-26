@@ -1853,12 +1853,13 @@
         "pstack/automations/benny/templates/triage-automation-prompt.md",
         "pstack/skills/unslop/SKILL.md"
       ],
-      "adaptation": "Required concrete issue-intake automation setup mode. Do not copy/enable pstack, create .cursor settings, use Cursor automate/editor/protocol routes, or schedule anything without current user request; use native automation tools and project-native paths.",
+      "adaptation": "Required concrete issue-intake automation setup mode. Do not copy/enable pstack, create .cursor settings, use Cursor automate/editor/protocol routes, or schedule anything without current user request; use native automation tools and project-native paths. Team adaptation: parent gates forbid ordinary writes; setup defines the sole conditional compensation exception for the exact unchanged ticket created by this attempt after definite handoff failure, with outcome reconciliation and honest orphan/refusal reporting.",
       "author": "pstack",
       "implemented_references": [
         "skills/coco-automate/SKILL.md",
         "skills/_coco-shared/advanced/automate.md",
-        "skills/_coco-shared/advanced/automate-intake-setup.md"
+        "skills/_coco-shared/advanced/automate-intake-setup.md",
+        "skills/_coco-shared/advanced/intake-recovery.md"
       ]
     },
     {
@@ -1881,14 +1882,15 @@
         "pstack/skills/unslop/SKILL.md",
         "pstack/skills/why/SKILL.md"
       ],
-      "adaptation": "Required concrete automated intake-triage mode under triage, callable by configured automation only. Replace Slack/Benny syntax with an adapter contract and trusted marker configuration; current explicit external-write authorization remains required.",
+      "adaptation": "Required concrete automated intake-triage mode under triage, callable by configured automation only. Replace Slack/Benny syntax with an adapter contract and trusted marker configuration; current explicit external-write authorization remains required. Apply the setup-owned compensation definition: reconcile unknown original-thread replies before compensation or reposting, require current owned-ticket identity and a conditional guard, and report refusal or unresolved outcome without fallback writes.",
       "author": "pstack",
       "implemented_references": [
         "skills/coco-triage/SKILL.md",
         "skills/_coco-shared/advanced/triage.md",
         "skills/_coco-shared/advanced/automate.md",
         "skills/_coco-shared/advanced/automate-intake-setup.md",
-        "skills/_coco-shared/advanced/automate-intake-triage.md"
+        "skills/_coco-shared/advanced/automate-intake-triage.md",
+        "skills/_coco-shared/advanced/intake-recovery.md"
       ]
     },
     {

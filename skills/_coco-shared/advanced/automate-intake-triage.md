@@ -1,4 +1,4 @@
-Read/apply [core](automate.md) first; no new authority.
+Apply [core](automate.md), [recovery](intake-recovery.md).
 
 ## Intake triage condition
 
