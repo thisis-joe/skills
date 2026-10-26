@@ -24,18 +24,20 @@ def stamp(days_ago, minutes=0):
     return moment.strftime('%Y-%m-%dT%H:%M:%S.') + '%03dZ' % (moment.microsecond // 1000)
 
 
-def claude_tool_use(skill, when):
-    return {'type': 'assistant', 'timestamp': when, 'message': {'role': 'assistant', 'content': [
+def claude_tool_use(skill, when, cwd=None):
+    return {'cwd': str(cwd) if cwd is not None else None,
+            'type': 'assistant', 'timestamp': when, 'message': {'role': 'assistant', 'content': [
         {'type': 'text', 'text': 'Loading the skill.'},
         {'type': 'tool_use', 'id': 'toolu_1', 'name': 'Skill',
          'input': {'skill': skill, 'args': SECRET}}]}}
 
 
-def claude_command(command, when, as_list=False):
+def claude_command(command, when, as_list=False, cwd=None):
     text = (f'<command-message>{command}</command-message>\n'
             f'<command-name>/{command}</command-name>\n<command-args>{SECRET}</command-args>')
     content = [{'type': 'text', 'text': text}] if as_list else text
-    return {'type': 'user', 'timestamp': when, 'message': {'role': 'user', 'content': content}}
+    return {'cwd': str(cwd) if cwd is not None else None,
+            'type': 'user', 'timestamp': when, 'message': {'role': 'user', 'content': content}}
 
 
 def codex_meta(cwd, when):
@@ -83,6 +85,12 @@ class RecentSkillTests(unittest.TestCase):
         self.assertNotIn(SECRET, result.stdout)
         return json.loads(result.stdout)
 
+    def claude_tool_use(self, skill, when, cwd=None):
+        return claude_tool_use(skill, when, cwd=cwd or self.workspace)
+
+    def claude_command(self, command, when, as_list=False, cwd=None):
+        return claude_command(command, when, as_list=as_list, cwd=cwd or self.workspace)
+
     def names(self, report):
         return [entry['name'] for entry in report['skills']]
 
@@ -92,25 +100,26 @@ class RecentSkillTests(unittest.TestCase):
     def test_claude_lists_latest_distinct_skills_for_this_workspace_only(self):
         project = self.claude_project()
         write_jsonl(project / 'older.jsonl', [
-            claude_tool_use('coco-build', stamp(5)),
-            claude_command('coco-review', stamp(4)),
-            claude_tool_use('coco-build', stamp(3)),
+            self.claude_tool_use('coco-build', stamp(5)),
+            self.claude_command('coco-review', stamp(4)),
+            self.claude_tool_use('coco-build', stamp(3)),
             'not json, ignored',
         ])
         write_jsonl(project / 'newer.jsonl', [
-            claude_command('coco-verify', stamp(1), as_list=True),
-            claude_tool_use('plugin-name:helper', stamp(2)),
-            claude_command('model', stamp(0, 5)),
-            claude_tool_use('coco-tellmeskill', stamp(0, 1)),
+            self.claude_command('coco-verify', stamp(1), as_list=True),
+            self.claude_tool_use('plugin-name:helper', stamp(2)),
+            self.claude_command('model', stamp(0, 5)),
+            self.claude_tool_use('coco-tellmeskill', stamp(0, 1)),
         ])
         write_jsonl(project / 'session-id' / 'subagents' / 'agent.jsonl', [
-            claude_tool_use('coco-security', stamp(0, 2))])
+            self.claude_tool_use('coco-security', stamp(0, 2))])
         write_jsonl(self.claude_project(suffix='--claude-worktrees-feature') / 'w.jsonl', [
-            claude_tool_use('coco-plan', stamp(2, 30))])
+            self.claude_tool_use('coco-plan', stamp(2, 30),
+                                 cwd=self.workspace / '.claude/worktrees/feature')])
         write_jsonl(self.claude_project(self.base / 'work' / 'other') / 'x.jsonl', [
-            claude_tool_use('coco-ship', stamp(0, 3))])
+            self.claude_tool_use('coco-ship', stamp(0, 3), cwd=self.base / 'work' / 'other')])
         write_jsonl(self.claude_project(suffix='-sibling') / 'y.jsonl', [
-            claude_tool_use('coco-debug', stamp(0, 4))])
+            self.claude_tool_use('coco-debug', stamp(0, 4), cwd=self.workspace.with_name('my.app-sibling'))])
 
         report = self.run_helper(
             '--runtime', 'claude', '--limit', '10', '--exclude', 'coco-tellmeskill',
@@ -125,18 +134,88 @@ class RecentSkillTests(unittest.TestCase):
 
     def test_default_limit_is_three_and_unfiltered_markers_stay_identifiers(self):
         write_jsonl(self.claude_project() / 's.jsonl', [
-            claude_tool_use('coco-build', stamp(4)),
-            claude_tool_use('coco-review', stamp(3)),
-            claude_command('product:brainstorm', stamp(2)),
-            claude_tool_use('coco-verify', stamp(1)),
+            self.claude_tool_use('coco-build', stamp(4)),
+            self.claude_tool_use('coco-review', stamp(3)),
+            self.claude_command('product:brainstorm', stamp(2)),
+            self.claude_tool_use('coco-verify', stamp(1)),
         ])
         report = self.run_helper('--runtime', 'claude', '--config-dir', str(self.claude))
         self.assertEqual(self.names(report), ['coco-verify', 'product:brainstorm', 'coco-review'])
 
+    def test_claude_colliding_project_names_do_not_mix_workspace_uses(self):
+        other = self.workspace.with_name('my-app')
+        other.mkdir()
+        self.assertEqual(claude_slug(other), claude_slug(self.workspace))
+        write_jsonl(self.claude_project() / 's.jsonl', [
+            self.claude_tool_use('coco-build', stamp(1)),
+            self.claude_tool_use('coco-ship', stamp(0), cwd=other),
+        ])
+        report = self.run_helper('--runtime', 'claude', '--config-dir', str(self.claude))
+        self.assertEqual(self.names(report), ['coco-build'])
+
+    def test_claude_missing_workspace_identity_does_not_invent_recent_uses(self):
+        write_jsonl(self.claude_project() / 's.jsonl', [
+            claude_tool_use('coco-ship', stamp(0)),
+            self.claude_tool_use('coco-build', stamp(1)),
+        ])
+        report = self.run_helper('--runtime', 'claude', '--config-dir', str(self.claude))
+        self.assertEqual(self.names(report), ['coco-build'])
+
+    def test_normalized_session_paths_cannot_escape_the_workspace(self):
+        outside = self.workspace / '..' / 'other'
+        write_jsonl(self.claude_project() / 's.jsonl', [
+            self.claude_tool_use('coco-ship', stamp(0), cwd=outside),
+            self.claude_tool_use('coco-build', stamp(1)),
+        ])
+        write_jsonl(self.codex / 'sessions' / 'outside.jsonl', [
+            codex_meta(outside, stamp(0)), codex_selected('coco-ship', stamp(0))])
+        write_jsonl(self.codex / 'sessions' / 'own.jsonl', [
+            codex_meta(self.workspace, stamp(1)), codex_selected('coco-build', stamp(1))])
+        for runtime, config in [('claude', self.claude), ('codex', self.codex)]:
+            with self.subTest(runtime=runtime):
+                report = self.run_helper('--runtime', runtime, '--config-dir', str(config))
+                self.assertEqual(self.names(report), ['coco-build'])
+
+    def test_symlinked_workspace_children_do_not_import_foreign_uses(self):
+        other = self.base / 'foreign-project'
+        other.mkdir()
+        alias = self.workspace / 'linked-project'
+        try:
+            alias.symlink_to(other, target_is_directory=True)
+        except OSError as exc:
+            self.skipTest('workspace symlinks unavailable: ' + str(exc))
+        write_jsonl(self.claude_project() / 's.jsonl', [
+            self.claude_tool_use('coco-ship', stamp(0), cwd=alias),
+            self.claude_tool_use('coco-build', stamp(1)),
+        ])
+        write_jsonl(self.codex / 'sessions' / 'foreign.jsonl', [
+            codex_meta(alias, stamp(0)), codex_selected('coco-ship', stamp(0))])
+        write_jsonl(self.codex / 'sessions' / 'own.jsonl', [
+            codex_meta(self.workspace, stamp(1)), codex_selected('coco-build', stamp(1))])
+        for runtime, config in [('claude', self.claude), ('codex', self.codex)]:
+            with self.subTest(runtime=runtime):
+                report = self.run_helper('--runtime', runtime, '--config-dir', str(config))
+                self.assertEqual(self.names(report), ['coco-build'])
+
+    def test_invalid_workspace_paths_are_ignored_without_losing_valid_uses(self):
+        invalid = str(self.workspace) + '/\x00broken'
+        write_jsonl(self.claude_project() / 's.jsonl', [
+            self.claude_tool_use('coco-ship', stamp(0), cwd=invalid),
+            self.claude_tool_use('coco-build', stamp(1)),
+        ])
+        write_jsonl(self.codex / 'sessions' / 'invalid.jsonl', [
+            codex_meta(invalid, stamp(0)), codex_selected('coco-ship', stamp(0))])
+        write_jsonl(self.codex / 'sessions' / 'own.jsonl', [
+            codex_meta(self.workspace, stamp(1)), codex_selected('coco-build', stamp(1))])
+        for runtime, config in [('claude', self.claude), ('codex', self.codex)]:
+            with self.subTest(runtime=runtime):
+                report = self.run_helper('--runtime', runtime, '--config-dir', str(config))
+                self.assertEqual(self.names(report), ['coco-build'])
+
     def test_events_older_than_the_window_are_ignored(self):
         write_jsonl(self.claude_project() / 's.jsonl', [
-            claude_tool_use('coco-build', stamp(40)),
-            claude_tool_use('coco-review', stamp(10)),
+            self.claude_tool_use('coco-build', stamp(40)),
+            self.claude_tool_use('coco-review', stamp(10)),
         ])
         default = self.run_helper('--runtime', 'claude', '--config-dir', str(self.claude))
         narrow = self.run_helper('--runtime', 'claude', '--config-dir', str(self.claude),
@@ -174,8 +253,48 @@ class RecentSkillTests(unittest.TestCase):
                                      str(self.base / 'missing'))
             self.assertEqual(report['skills'], [])
 
+    def test_codex_quoted_skill_text_is_not_a_recent_invocation(self):
+        for metadata in (None, {}, {'content_item_kinds': ['input_text']},
+                         {'content_item_kinds': 'skills.selected_skill_instructions'}):
+            with self.subTest(metadata=metadata):
+                quoted = codex_selected('coco-ship', stamp(0))
+                quoted['payload'].pop('internal_chat_message_metadata_passthrough')
+                if metadata is not None:
+                    quoted['payload']['internal_chat_message_metadata_passthrough'] = metadata
+                write_jsonl(self.codex / 'sessions' / 's.jsonl', [
+                    codex_meta(self.workspace, stamp(2)),
+                    codex_selected('coco-build', stamp(1)), quoted,
+                ])
+                report = self.run_helper('--runtime', 'codex', '--config-dir', str(self.codex))
+                self.assertEqual(self.names(report), ['coco-build'])
+
+    def test_codex_selection_metadata_applies_to_its_own_content_item(self):
+        selected = codex_selected('coco-build', stamp(1))
+        selected['payload']['content'].append({
+            'type': 'input_text',
+            'text': 'Explain this example, without invoking it: '
+                    '<skill><name>coco-ship</name></skill> ' + SECRET})
+        selected['payload']['internal_chat_message_metadata_passthrough'][
+            'content_item_kinds'].append('input_text')
+        write_jsonl(self.codex / 'sessions' / 's.jsonl', [
+            codex_meta(self.workspace, stamp(2)), selected,
+        ])
+        report = self.run_helper('--runtime', 'codex', '--config-dir', str(self.codex))
+        self.assertEqual(self.names(report), ['coco-build'])
+
+    def test_codex_selected_body_examples_do_not_create_recent_uses(self):
+        selected = codex_selected('coco-build', stamp(1))
+        content = selected['payload']['content'][0]
+        example = '\n```xml\n<skill><name>coco-ship</name></skill>\n```\n'
+        content['text'] = ' \n' + content['text'].replace('</skill>', example + '</skill>')
+        write_jsonl(self.codex / 'sessions' / 's.jsonl', [
+            codex_meta(self.workspace, stamp(2)), selected,
+        ])
+        report = self.run_helper('--runtime', 'codex', '--config-dir', str(self.codex))
+        self.assertEqual(self.names(report), ['coco-build'])
+
     def test_explicit_workspace_overrides_the_current_directory(self):
-        write_jsonl(self.claude_project() / 's.jsonl', [claude_tool_use('coco-build', stamp(1))])
+        write_jsonl(self.claude_project() / 's.jsonl', [self.claude_tool_use('coco-build', stamp(1))])
         report = self.run_helper('--runtime', 'claude', '--config-dir', str(self.claude),
                                  '--workspace', str(self.workspace), cwd=self.base)
         self.assertEqual(self.names(report), ['coco-build'])
@@ -185,9 +304,9 @@ class RecentSkillTests(unittest.TestCase):
         commands = re.findall(r'`(python3 tools/recent_skills\.py [^`]+)`', text)
         self.assertEqual(len(commands), 1, 'SKILL.md documents exactly one helper command')
         write_jsonl(self.claude_project() / 's.jsonl', [
-            claude_tool_use('coco-build', stamp(2)),
-            claude_tool_use('coco-tellmeskill', stamp(1)),
-            claude_command('model', stamp(0, 1)),
+            self.claude_tool_use('coco-build', stamp(2)),
+            self.claude_tool_use('coco-tellmeskill', stamp(1)),
+            self.claude_command('model', stamp(0, 1)),
         ])
         argv = shlex.split(commands[0])[2:]
         replacements = {'<claude|codex>': 'claude', '<project-directory>': str(self.workspace),
