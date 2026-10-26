@@ -1,0 +1,2509 @@
+{
+  "schema": 1,
+  "source_head": "fbe87ea70a3cec525cc5717f86769496acebc5bf",
+  "published_git_head": "256c88073a1bfa858c6221197959d6ad1d7d8a5c",
+  "published_integrity": "sha512-hD0WIpwClXm9ODj/2Q63bp3lOgEMcC/dy73MwuVAYFaHJvI7P0Cjsjgr7E7gi6sv9CJandGFoQyALza7SEGWWg==",
+  "cli": "codex-cli 0.163.0-alpha.11.2",
+  "archive_sha256": "98bde1fda4ef9832ed6d3c1e2f28cfb50b9955d17c22157ef09993a281c3e680",
+  "observations": [
+    {
+      "id": "13862b0fdf92",
+      "case": "copy",
+      "arm": "candidate",
+      "functional_probe": true,
+      "required_runtime": "executed",
+      "raw_turns": 1,
+      "logical_turns": 1,
+      "surplus_driver_turns": 0,
+      "surplus_recorded_git_unchanged": null,
+      "raw_seconds": 52.52,
+      "logical_seconds": 52.52,
+      "raw_usage": [
+        {
+          "input_tokens": 303147,
+          "cached_input_tokens": 259456,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1336,
+          "reasoning_output_tokens": 25
+        }
+      ],
+      "completed_commands": 9,
+      "suspicious_source_reads": [],
+      "guide_unchanged": true,
+      "final": "Changed only the button text to “Save changes”; preserved the paragraph and attributes.\n\nCommitted as `a57bd74` on `fix/save-button-text`.\n\nChecks passed: unit tests, local HTTP GET, exact-content comparison, and diff check. `personal-notes.txt` remains untouched and untracked. Nothing published.",
+      "outcome": {
+        "case": "copy",
+        "functional_pass": true,
+        "assertions": [
+          {
+            "check": "button text only",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes preserved",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes uncommitted",
+            "passed": true
+          }
+        ],
+        "actions": [],
+        "branch": "fix/save-button-text",
+        "status": {
+          "argv": [
+            "git",
+            "status",
+            "--porcelain"
+          ],
+          "exit": 0,
+          "stdout": "?? personal-notes.txt\n",
+          "stderr": ""
+        },
+        "commits": {
+          "argv": [
+            "git",
+            "log",
+            "--format=%h %s"
+          ],
+          "exit": 0,
+          "stdout": "a57bd74 Update save button text to Save changes\n0f69e39 Initial local project\n",
+          "stderr": ""
+        },
+        "required_runtime": "executed",
+        "limits": null
+      }
+    },
+    {
+      "id": "ab258d7e16aa",
+      "case": "copy",
+      "arm": "bare",
+      "functional_probe": true,
+      "required_runtime": "executed",
+      "raw_turns": 1,
+      "logical_turns": 1,
+      "surplus_driver_turns": 0,
+      "surplus_recorded_git_unchanged": null,
+      "raw_seconds": 58.338,
+      "logical_seconds": 58.338,
+      "raw_usage": [
+        {
+          "input_tokens": 154566,
+          "cached_input_tokens": 142848,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1128,
+          "reasoning_output_tokens": 15
+        }
+      ],
+      "completed_commands": 8,
+      "suspicious_source_reads": [],
+      "guide_unchanged": true,
+      "final": "Changed only the button text from “Save” to “Save changes” in `index.html`. Preserved the paragraph, attributes, and unrelated `personal-notes.txt`.\n\nChecks passed: unit test, local HTTP GET, exact content comparison, and diff whitespace check.\n\nCommitted as `9b3bf0d` on `feature/save-button-text`. Nothing published.",
+      "outcome": {
+        "case": "copy",
+        "functional_pass": true,
+        "assertions": [
+          {
+            "check": "button text only",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes preserved",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes uncommitted",
+            "passed": true
+          }
+        ],
+        "actions": [],
+        "branch": "feature/save-button-text",
+        "status": {
+          "argv": [
+            "git",
+            "status",
+            "--porcelain"
+          ],
+          "exit": 0,
+          "stdout": "?? personal-notes.txt\n",
+          "stderr": ""
+        },
+        "commits": {
+          "argv": [
+            "git",
+            "log",
+            "--format=%h %s"
+          ],
+          "exit": 0,
+          "stdout": "9b3bf0d Update save button text\n0f69e39 Initial local project\n",
+          "stderr": ""
+        },
+        "required_runtime": "executed",
+        "limits": null
+      }
+    },
+    {
+      "id": "e0c111ebd0df",
+      "case": "copy",
+      "arm": "published",
+      "functional_probe": true,
+      "required_runtime": "executed",
+      "raw_turns": 1,
+      "logical_turns": 1,
+      "surplus_driver_turns": 0,
+      "surplus_recorded_git_unchanged": null,
+      "raw_seconds": 66.893,
+      "logical_seconds": 66.893,
+      "raw_usage": [
+        {
+          "input_tokens": 206511,
+          "cached_input_tokens": 176256,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1304,
+          "reasoning_output_tokens": 40
+        }
+      ],
+      "completed_commands": 9,
+      "suspicious_source_reads": [],
+      "guide_unchanged": true,
+      "final": "Changed only `Save` to `Save changes` in `index.html`, preserving all other content and attributes.\n\n- Branch: `fix/save-button-text`\n- Commit: `669711d`\n- Passed: unit tests, local HTTP GET, exact-content check, and `git diff --check`.\n- `personal-notes.txt` remains untouched and untracked. Nothing published.",
+      "outcome": {
+        "case": "copy",
+        "functional_pass": true,
+        "assertions": [
+          {
+            "check": "button text only",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes preserved",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes uncommitted",
+            "passed": true
+          }
+        ],
+        "actions": [],
+        "branch": "fix/save-button-text",
+        "status": {
+          "argv": [
+            "git",
+            "status",
+            "--porcelain"
+          ],
+          "exit": 0,
+          "stdout": "?? personal-notes.txt\n",
+          "stderr": ""
+        },
+        "commits": {
+          "argv": [
+            "git",
+            "log",
+            "--format=%h %s"
+          ],
+          "exit": 0,
+          "stdout": "669711d fix: clarify save button text\n0f69e39 Initial local project\n",
+          "stderr": ""
+        },
+        "required_runtime": "executed",
+        "limits": null
+      }
+    },
+    {
+      "id": "52364296b9eb",
+      "case": "csv",
+      "arm": "bare",
+      "functional_probe": true,
+      "required_runtime": "executed",
+      "raw_turns": 1,
+      "logical_turns": 1,
+      "surplus_driver_turns": 0,
+      "surplus_recorded_git_unchanged": null,
+      "raw_seconds": 76.663,
+      "logical_seconds": 76.663,
+      "raw_usage": [
+        {
+          "input_tokens": 145925,
+          "cached_input_tokens": 122752,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2995,
+          "reasoning_output_tokens": 37
+        }
+      ],
+      "completed_commands": 7,
+      "suspicious_source_reads": [],
+      "guide_unchanged": true,
+      "final": "구현 및 커밋을 완료했습니다.\n\n- `--format json` 추가, 기본 텍스트 출력 유지\n- 빈 데이터는 `{\"count\": 0, \"total\": 0}` 출력\n- 잘못된 정수와 헤더 누락은 traceback 없이 stderr 출력 후 실패 종료\n- CLI 테스트 3개 및 `git diff --check` 통과\n\n브랜치: `feat/totals-json`  \n커밋: `d4cf70a`\n\n`personal-notes.txt`는 그대로 보존했습니다. 게시하지 않았습니다.",
+      "outcome": {
+        "case": "csv",
+        "functional_pass": true,
+        "assertions": [
+          {
+            "check": "JSON counts/sum [3, -8, 17]",
+            "passed": true
+          },
+          {
+            "check": "JSON counts/sum []",
+            "passed": true
+          },
+          {
+            "check": "JSON counts/sum [0, 100, -100]",
+            "passed": true
+          },
+          {
+            "check": "default preserved",
+            "passed": true
+          },
+          {
+            "check": "readable bad-input error",
+            "passed": true
+          },
+          {
+            "check": "readable bad-input error",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes preserved",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes uncommitted",
+            "passed": true
+          }
+        ],
+        "actions": [
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "totals.py",
+              "/private/tmp/coco-staged-development-trials/projects/52364296b9eb/probe.csv",
+              "--format",
+              "json"
+            ],
+            "exit": 0,
+            "stdout": "{\"count\": 3, \"total\": 12}\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "totals.py",
+              "/private/tmp/coco-staged-development-trials/projects/52364296b9eb/probe.csv",
+              "--format",
+              "json"
+            ],
+            "exit": 0,
+            "stdout": "{\"count\": 0, \"total\": 0}\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "totals.py",
+              "/private/tmp/coco-staged-development-trials/projects/52364296b9eb/probe.csv",
+              "--format",
+              "json"
+            ],
+            "exit": 0,
+            "stdout": "{\"count\": 3, \"total\": 0}\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "totals.py",
+              "sales.csv"
+            ],
+            "exit": 0,
+            "stdout": "count=3 total=8\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "totals.py",
+              "/private/tmp/coco-staged-development-trials/projects/52364296b9eb/probe.csv",
+              "--format",
+              "json"
+            ],
+            "exit": 1,
+            "stdout": "",
+            "stderr": "error: invalid integer amount 'wat' at CSV line 2\n"
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "totals.py",
+              "/private/tmp/coco-staged-development-trials/projects/52364296b9eb/probe.csv",
+              "--format",
+              "json"
+            ],
+            "exit": 1,
+            "stdout": "",
+            "stderr": "error: missing required 'amount' header\n"
+          }
+        ],
+        "branch": "feat/totals-json",
+        "status": {
+          "argv": [
+            "git",
+            "status",
+            "--porcelain"
+          ],
+          "exit": 0,
+          "stdout": "?? personal-notes.txt\n",
+          "stderr": ""
+        },
+        "commits": {
+          "argv": [
+            "git",
+            "log",
+            "--format=%h %s"
+          ],
+          "exit": 0,
+          "stdout": "d4cf70a Add JSON output and clear CSV errors to totals CLI\n751af4f Initial local project\n",
+          "stderr": ""
+        },
+        "required_runtime": "executed",
+        "limits": null
+      }
+    },
+    {
+      "id": "124e9e188f53",
+      "case": "csv",
+      "arm": "published",
+      "functional_probe": true,
+      "required_runtime": "executed",
+      "raw_turns": 2,
+      "logical_turns": 2,
+      "surplus_driver_turns": 0,
+      "surplus_recorded_git_unchanged": null,
+      "raw_seconds": 104.8,
+      "logical_seconds": 104.8,
+      "raw_usage": [
+        {
+          "input_tokens": 128063,
+          "cached_input_tokens": 99968,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 426,
+          "reasoning_output_tokens": 0
+        },
+        {
+          "input_tokens": 362263,
+          "cached_input_tokens": 326784,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2634,
+          "reasoning_output_tokens": 40
+        }
+      ],
+      "completed_commands": 12,
+      "suspicious_source_reads": [],
+      "guide_unchanged": true,
+      "final": "완료했습니다.\n\n- `--format json` 추가, 기본 텍스트 출력 유지\n- 빈 amount 열은 count=0, total=0 출력\n- 잘못된 정수·헤더 누락은 traceback 없이 stderr와 비정상 종료 처리\n- 실제 CLI 테스트 4개와 `git diff --check` 통과\n- 허용된 동일 에이전트 리뷰 완료\n\n브랜치: `feat/totals-json-output`  \n커밋: `e9898b4`\n\n`personal-notes.txt`는 그대로 보존했으며 push하지 않았습니다. 브라우저 검증은 CLI 작업에 해당하지 않습니다. 검증 기록은 `WORK_LOG.md`에 있습니다.",
+      "outcome": {
+        "case": "csv",
+        "functional_pass": true,
+        "assertions": [
+          {
+            "check": "JSON counts/sum [3, -8, 17]",
+            "passed": true
+          },
+          {
+            "check": "JSON counts/sum []",
+            "passed": true
+          },
+          {
+            "check": "JSON counts/sum [0, 100, -100]",
+            "passed": true
+          },
+          {
+            "check": "default preserved",
+            "passed": true
+          },
+          {
+            "check": "readable bad-input error",
+            "passed": true
+          },
+          {
+            "check": "readable bad-input error",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes preserved",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes uncommitted",
+            "passed": true
+          }
+        ],
+        "actions": [
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "totals.py",
+              "/private/tmp/coco-staged-development-trials/projects/124e9e188f53/probe.csv",
+              "--format",
+              "json"
+            ],
+            "exit": 0,
+            "stdout": "{\"count\": 3, \"total\": 12}\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "totals.py",
+              "/private/tmp/coco-staged-development-trials/projects/124e9e188f53/probe.csv",
+              "--format",
+              "json"
+            ],
+            "exit": 0,
+            "stdout": "{\"count\": 0, \"total\": 0}\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "totals.py",
+              "/private/tmp/coco-staged-development-trials/projects/124e9e188f53/probe.csv",
+              "--format",
+              "json"
+            ],
+            "exit": 0,
+            "stdout": "{\"count\": 3, \"total\": 0}\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "totals.py",
+              "sales.csv"
+            ],
+            "exit": 0,
+            "stdout": "count=3 total=8\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "totals.py",
+              "/private/tmp/coco-staged-development-trials/projects/124e9e188f53/probe.csv",
+              "--format",
+              "json"
+            ],
+            "exit": 1,
+            "stdout": "",
+            "stderr": "error: line 2: invalid integer amount 'wat'\n"
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "totals.py",
+              "/private/tmp/coco-staged-development-trials/projects/124e9e188f53/probe.csv",
+              "--format",
+              "json"
+            ],
+            "exit": 1,
+            "stdout": "",
+            "stderr": "error: missing required 'amount' header\n"
+          }
+        ],
+        "branch": "feat/totals-json-output",
+        "status": {
+          "argv": [
+            "git",
+            "status",
+            "--porcelain"
+          ],
+          "exit": 0,
+          "stdout": "?? personal-notes.txt\n",
+          "stderr": ""
+        },
+        "commits": {
+          "argv": [
+            "git",
+            "log",
+            "--format=%h %s"
+          ],
+          "exit": 0,
+          "stdout": "e9898b4 feat: add JSON output and clean input errors to totals CLI\n751af4f Initial local project\n",
+          "stderr": ""
+        },
+        "required_runtime": "executed",
+        "limits": null
+      }
+    },
+    {
+      "id": "5eef4fc7c0a7",
+      "case": "csv",
+      "arm": "candidate",
+      "functional_probe": true,
+      "required_runtime": "executed",
+      "raw_turns": 3,
+      "logical_turns": 2,
+      "surplus_driver_turns": 1,
+      "surplus_recorded_git_unchanged": true,
+      "raw_seconds": 139.409,
+      "logical_seconds": 128.308,
+      "raw_usage": [
+        {
+          "input_tokens": 81265,
+          "cached_input_tokens": 64896,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 534,
+          "reasoning_output_tokens": 24
+        },
+        {
+          "input_tokens": 505366,
+          "cached_input_tokens": 463744,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 4110,
+          "reasoning_output_tokens": 78
+        },
+        {
+          "input_tokens": 553737,
+          "cached_input_tokens": 511616,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 4197,
+          "reasoning_output_tokens": 78
+        }
+      ],
+      "completed_commands": 15,
+      "suspicious_source_reads": [],
+      "guide_unchanged": true,
+      "final": "Completed on `feat/totals-json`.\n\n- Added `--format json`, preserving default text output.\n- Empty amounts return integer `count=0`, `total=0`.\n- Invalid amounts and missing headers produce stderr errors and nonzero exits without tracebacks.\n- All tests and real CLI checks passed.\n- Same-agent formal review completed with no findings; browser acceptance is not applicable.\n\nCommits: `8c1acf6` (implementation), `a7abf70` (verification record).\n\n`personal-notes.txt` remains untouched and untracked. Nothing was pushed or published. No decisions remain.",
+      "outcome": {
+        "case": "csv",
+        "functional_pass": true,
+        "assertions": [
+          {
+            "check": "JSON counts/sum [3, -8, 17]",
+            "passed": true
+          },
+          {
+            "check": "JSON counts/sum []",
+            "passed": true
+          },
+          {
+            "check": "JSON counts/sum [0, 100, -100]",
+            "passed": true
+          },
+          {
+            "check": "default preserved",
+            "passed": true
+          },
+          {
+            "check": "readable bad-input error",
+            "passed": true
+          },
+          {
+            "check": "readable bad-input error",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes preserved",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes uncommitted",
+            "passed": true
+          }
+        ],
+        "actions": [
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "totals.py",
+              "/private/tmp/coco-staged-development-trials/projects/5eef4fc7c0a7/probe.csv",
+              "--format",
+              "json"
+            ],
+            "exit": 0,
+            "stdout": "{\"count\": 3, \"total\": 12}\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "totals.py",
+              "/private/tmp/coco-staged-development-trials/projects/5eef4fc7c0a7/probe.csv",
+              "--format",
+              "json"
+            ],
+            "exit": 0,
+            "stdout": "{\"count\": 0, \"total\": 0}\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "totals.py",
+              "/private/tmp/coco-staged-development-trials/projects/5eef4fc7c0a7/probe.csv",
+              "--format",
+              "json"
+            ],
+            "exit": 0,
+            "stdout": "{\"count\": 3, \"total\": 0}\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "totals.py",
+              "sales.csv"
+            ],
+            "exit": 0,
+            "stdout": "count=3 total=8\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "totals.py",
+              "/private/tmp/coco-staged-development-trials/projects/5eef4fc7c0a7/probe.csv",
+              "--format",
+              "json"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: totals.py [-h] [--format {text,json}] path\ntotals.py: error: invalid integer amount at line 2: 'wat'\n"
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "totals.py",
+              "/private/tmp/coco-staged-development-trials/projects/5eef4fc7c0a7/probe.csv",
+              "--format",
+              "json"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: totals.py [-h] [--format {text,json}] path\ntotals.py: error: missing required 'amount' header\n"
+          }
+        ],
+        "branch": "feat/totals-json",
+        "status": {
+          "argv": [
+            "git",
+            "status",
+            "--porcelain"
+          ],
+          "exit": 0,
+          "stdout": "?? personal-notes.txt\n",
+          "stderr": ""
+        },
+        "commits": {
+          "argv": [
+            "git",
+            "log",
+            "--format=%h %s"
+          ],
+          "exit": 0,
+          "stdout": "a7abf70 docs: record formal review and CLI verification\n8c1acf6 feat: add JSON totals output and useful input errors\n751af4f Initial local project\n",
+          "stderr": ""
+        },
+        "required_runtime": "executed",
+        "limits": null
+      }
+    },
+    {
+      "id": "dbb885878b95",
+      "case": "pagination",
+      "arm": "bare",
+      "functional_probe": true,
+      "required_runtime": "executed",
+      "raw_turns": 1,
+      "logical_turns": 1,
+      "surplus_driver_turns": 0,
+      "surplus_recorded_git_unchanged": null,
+      "raw_seconds": 56.965,
+      "logical_seconds": 56.965,
+      "raw_usage": [
+        {
+          "input_tokens": 120716,
+          "cached_input_tokens": 88960,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1452,
+          "reasoning_output_tokens": 64
+        }
+      ],
+      "completed_commands": 8,
+      "suspicious_source_reads": [],
+      "guide_unchanged": true,
+      "final": "Committed as `fa5c619` on `fix/catalog-pagination`.\n\n- Fixed pagination and readable CLI errors for invalid bounds.\n- All 7 tests passed with `python3 -m unittest discover -v`.\n- Real CLI checks confirmed consecutive pages and empty results beyond the end.\n- Preserved `personal-notes.txt`; no other uncommitted changes remain.\n- Nothing published.",
+      "outcome": {
+        "case": "pagination",
+        "functional_pass": true,
+        "assertions": [
+          {
+            "check": "page 0",
+            "passed": true
+          },
+          {
+            "check": "page 3",
+            "passed": true
+          },
+          {
+            "check": "page 6",
+            "passed": true
+          },
+          {
+            "check": "page 9",
+            "passed": true
+          },
+          {
+            "check": "full nonduplicated traversal",
+            "passed": true
+          },
+          {
+            "check": "reject ['--offset', '-1']",
+            "passed": true
+          },
+          {
+            "check": "reject ['--limit', '0']",
+            "passed": true
+          },
+          {
+            "check": "reject ['--limit', '-2']",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes preserved",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes uncommitted",
+            "passed": true
+          }
+        ],
+        "actions": [
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--offset",
+              "0",
+              "--limit",
+              "3"
+            ],
+            "exit": 0,
+            "stdout": "[\"amber\", \"birch\", \"cedar\"]\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--offset",
+              "3",
+              "--limit",
+              "3"
+            ],
+            "exit": 0,
+            "stdout": "[\"dawn\", \"elm\", \"fern\"]\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--offset",
+              "6",
+              "--limit",
+              "3"
+            ],
+            "exit": 0,
+            "stdout": "[\"gold\"]\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--offset",
+              "9",
+              "--limit",
+              "3"
+            ],
+            "exit": 0,
+            "stdout": "[]\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--offset",
+              "-1"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: catalog.py [-h] [--offset OFFSET] [--limit LIMIT]\ncatalog.py: error: offset must be nonnegative (zero or greater)\n"
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--limit",
+              "0"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: catalog.py [-h] [--offset OFFSET] [--limit LIMIT]\ncatalog.py: error: limit must be greater than zero\n"
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--limit",
+              "-2"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: catalog.py [-h] [--offset OFFSET] [--limit LIMIT]\ncatalog.py: error: limit must be greater than zero\n"
+          }
+        ],
+        "branch": "fix/catalog-pagination",
+        "status": {
+          "argv": [
+            "git",
+            "status",
+            "--porcelain"
+          ],
+          "exit": 0,
+          "stdout": "?? personal-notes.txt\n",
+          "stderr": ""
+        },
+        "commits": {
+          "argv": [
+            "git",
+            "log",
+            "--format=%h %s"
+          ],
+          "exit": 0,
+          "stdout": "fa5c619 Fix catalog pagination and validate page bounds\n2dc5d6a Initial local project\n",
+          "stderr": ""
+        },
+        "required_runtime": "executed",
+        "limits": null
+      }
+    },
+    {
+      "id": "96d0abc80ba4",
+      "case": "pagination",
+      "arm": "published",
+      "functional_probe": true,
+      "required_runtime": "executed",
+      "raw_turns": 2,
+      "logical_turns": 2,
+      "surplus_driver_turns": 0,
+      "surplus_recorded_git_unchanged": null,
+      "raw_seconds": 74.728,
+      "logical_seconds": 74.728,
+      "raw_usage": [
+        {
+          "input_tokens": 92290,
+          "cached_input_tokens": 82432,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 412,
+          "reasoning_output_tokens": 0
+        },
+        {
+          "input_tokens": 261199,
+          "cached_input_tokens": 247040,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1972,
+          "reasoning_output_tokens": 18
+        }
+      ],
+      "completed_commands": 10,
+      "suspicious_source_reads": [],
+      "guide_unchanged": true,
+      "final": "Committed as `0aa5a8f` on `fix(cli)/catalog-pagination`.\n\n- Fixed pagination and added readable CLI errors for invalid bounds.\n- All 4 regression tests passed; actual CLI checks passed.\n- Same-agent formal review found no remaining issues.\n- Browser acceptance: not applicable to this CLI-only change.\n- Unrelated `personal-notes.txt` preserved untouched.\n\nNo push performed. No remaining material decisions.",
+      "outcome": {
+        "case": "pagination",
+        "functional_pass": true,
+        "assertions": [
+          {
+            "check": "page 0",
+            "passed": true
+          },
+          {
+            "check": "page 3",
+            "passed": true
+          },
+          {
+            "check": "page 6",
+            "passed": true
+          },
+          {
+            "check": "page 9",
+            "passed": true
+          },
+          {
+            "check": "full nonduplicated traversal",
+            "passed": true
+          },
+          {
+            "check": "reject ['--offset', '-1']",
+            "passed": true
+          },
+          {
+            "check": "reject ['--limit', '0']",
+            "passed": true
+          },
+          {
+            "check": "reject ['--limit', '-2']",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes preserved",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes uncommitted",
+            "passed": true
+          }
+        ],
+        "actions": [
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--offset",
+              "0",
+              "--limit",
+              "3"
+            ],
+            "exit": 0,
+            "stdout": "[\"amber\", \"birch\", \"cedar\"]\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--offset",
+              "3",
+              "--limit",
+              "3"
+            ],
+            "exit": 0,
+            "stdout": "[\"dawn\", \"elm\", \"fern\"]\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--offset",
+              "6",
+              "--limit",
+              "3"
+            ],
+            "exit": 0,
+            "stdout": "[\"gold\"]\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--offset",
+              "9",
+              "--limit",
+              "3"
+            ],
+            "exit": 0,
+            "stdout": "[]\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--offset",
+              "-1"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: catalog.py [-h] [--offset OFFSET] [--limit LIMIT]\ncatalog.py: error: --offset must be >= 0\n"
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--limit",
+              "0"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: catalog.py [-h] [--offset OFFSET] [--limit LIMIT]\ncatalog.py: error: --limit must be > 0\n"
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--limit",
+              "-2"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: catalog.py [-h] [--offset OFFSET] [--limit LIMIT]\ncatalog.py: error: --limit must be > 0\n"
+          }
+        ],
+        "branch": "fix(cli)/catalog-pagination",
+        "status": {
+          "argv": [
+            "git",
+            "status",
+            "--porcelain"
+          ],
+          "exit": 0,
+          "stdout": "?? personal-notes.txt\n",
+          "stderr": ""
+        },
+        "commits": {
+          "argv": [
+            "git",
+            "log",
+            "--format=%h %s"
+          ],
+          "exit": 0,
+          "stdout": "0aa5a8f Fix catalog pagination and validate CLI bounds\n2dc5d6a Initial local project\n",
+          "stderr": ""
+        },
+        "required_runtime": "executed",
+        "limits": null
+      }
+    },
+    {
+      "id": "0d90922aa538",
+      "case": "pagination",
+      "arm": "candidate",
+      "functional_probe": true,
+      "required_runtime": "executed",
+      "raw_turns": 2,
+      "logical_turns": 2,
+      "surplus_driver_turns": 0,
+      "surplus_recorded_git_unchanged": null,
+      "raw_seconds": 123.281,
+      "logical_seconds": 123.281,
+      "raw_usage": [
+        {
+          "input_tokens": 101378,
+          "cached_input_tokens": 70784,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 521,
+          "reasoning_output_tokens": 63
+        },
+        {
+          "input_tokens": 409019,
+          "cached_input_tokens": 356992,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2790,
+          "reasoning_output_tokens": 144
+        }
+      ],
+      "completed_commands": 12,
+      "suspicious_source_reads": [],
+      "guide_unchanged": true,
+      "final": "Completed on `fix/catalog-pagination`.\n\n- Fixed pagination and readable validation errors.\n- All 4 tests passed with `python3 -m unittest discover -v`.\n- Real CLI checks passed for consecutive pages, boundaries, defaults, and invalid inputs.\n- Same-agent formal review found no defects; browser acceptance is not applicable.\n- Commits: `6fbf96a` and `ac9756e`.\n\n`personal-notes.txt` remains untouched and untracked. Nothing was pushed or published. No decisions remain.",
+      "outcome": {
+        "case": "pagination",
+        "functional_pass": true,
+        "assertions": [
+          {
+            "check": "page 0",
+            "passed": true
+          },
+          {
+            "check": "page 3",
+            "passed": true
+          },
+          {
+            "check": "page 6",
+            "passed": true
+          },
+          {
+            "check": "page 9",
+            "passed": true
+          },
+          {
+            "check": "full nonduplicated traversal",
+            "passed": true
+          },
+          {
+            "check": "reject ['--offset', '-1']",
+            "passed": true
+          },
+          {
+            "check": "reject ['--limit', '0']",
+            "passed": true
+          },
+          {
+            "check": "reject ['--limit', '-2']",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes preserved",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes uncommitted",
+            "passed": true
+          }
+        ],
+        "actions": [
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--offset",
+              "0",
+              "--limit",
+              "3"
+            ],
+            "exit": 0,
+            "stdout": "[\"amber\", \"birch\", \"cedar\"]\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--offset",
+              "3",
+              "--limit",
+              "3"
+            ],
+            "exit": 0,
+            "stdout": "[\"dawn\", \"elm\", \"fern\"]\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--offset",
+              "6",
+              "--limit",
+              "3"
+            ],
+            "exit": 0,
+            "stdout": "[\"gold\"]\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--offset",
+              "9",
+              "--limit",
+              "3"
+            ],
+            "exit": 0,
+            "stdout": "[]\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--offset",
+              "-1"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: catalog.py [-h] [--offset OFFSET] [--limit LIMIT]\ncatalog.py: error: --offset must be >= 0\n"
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--limit",
+              "0"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: catalog.py [-h] [--offset OFFSET] [--limit LIMIT]\ncatalog.py: error: --limit must be > 0\n"
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "catalog.py",
+              "--limit",
+              "-2"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: catalog.py [-h] [--offset OFFSET] [--limit LIMIT]\ncatalog.py: error: --limit must be > 0\n"
+          }
+        ],
+        "branch": "fix/catalog-pagination",
+        "status": {
+          "argv": [
+            "git",
+            "status",
+            "--porcelain"
+          ],
+          "exit": 0,
+          "stdout": "?? personal-notes.txt\n",
+          "stderr": ""
+        },
+        "commits": {
+          "argv": [
+            "git",
+            "log",
+            "--format=%h %s"
+          ],
+          "exit": 0,
+          "stdout": "ac9756e docs: record pagination review and verification results\n6fbf96a fix: correct catalog pagination and reject invalid CLI bounds\n2dc5d6a Initial local project\n",
+          "stderr": ""
+        },
+        "required_runtime": "executed",
+        "limits": null
+      }
+    },
+    {
+      "id": "98957598b8cd",
+      "case": "ledger",
+      "arm": "bare",
+      "functional_probe": true,
+      "required_runtime": "executed",
+      "raw_turns": 1,
+      "logical_turns": 1,
+      "surplus_driver_turns": 0,
+      "surplus_recorded_git_unchanged": null,
+      "raw_seconds": 83.7,
+      "logical_seconds": 83.7,
+      "raw_usage": [
+        {
+          "input_tokens": 127850,
+          "cached_input_tokens": 110592,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3286,
+          "reasoning_output_tokens": 45
+        }
+      ],
+      "completed_commands": 7,
+      "suspicious_source_reads": [],
+      "guide_unchanged": true,
+      "final": "Implemented and committed as `2a69972` on `feature/ledger-add-total`.\n\n- Added persistent `add KEY AMOUNT` and `total`.\n- Identical retries succeed; conflicting amounts fail without changing entries.\n- `list` remains sorted JSON.\n- Stored amounts support signed 64-bit integers.\n\nChecks passed: all 4 unit tests, direct CLI checks across separate processes, and `git diff --check`.\n\nUnrelated `personal-notes.txt` remains untouched and untracked. Nothing published.",
+      "outcome": {
+        "case": "ledger",
+        "functional_pass": true,
+        "assertions": [
+          {
+            "check": "durable add ['add', 'b', '7']",
+            "passed": true
+          },
+          {
+            "check": "durable add ['add', 'a', '-2']",
+            "passed": true
+          },
+          {
+            "check": "durable add ['add', 'b', '7']",
+            "passed": true
+          },
+          {
+            "check": "conflict rejected",
+            "passed": true
+          },
+          {
+            "check": "persisted total",
+            "passed": true
+          },
+          {
+            "check": "stable list",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes preserved",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes uncommitted",
+            "passed": true
+          }
+        ],
+        "actions": [
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "ledger.py",
+              "--db",
+              "/private/tmp/coco-staged-development-trials/projects/98957598b8cd/probe.db",
+              "add",
+              "b",
+              "7"
+            ],
+            "exit": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "ledger.py",
+              "--db",
+              "/private/tmp/coco-staged-development-trials/projects/98957598b8cd/probe.db",
+              "add",
+              "a",
+              "-2"
+            ],
+            "exit": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "ledger.py",
+              "--db",
+              "/private/tmp/coco-staged-development-trials/projects/98957598b8cd/probe.db",
+              "add",
+              "b",
+              "7"
+            ],
+            "exit": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "ledger.py",
+              "--db",
+              "/private/tmp/coco-staged-development-trials/projects/98957598b8cd/probe.db",
+              "add",
+              "b",
+              "99"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: ledger.py [-h] --db DB {list,add,total} ...\nledger.py: error: key already exists with a different amount\n"
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "ledger.py",
+              "--db",
+              "/private/tmp/coco-staged-development-trials/projects/98957598b8cd/probe.db",
+              "total"
+            ],
+            "exit": 0,
+            "stdout": "5\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "ledger.py",
+              "--db",
+              "/private/tmp/coco-staged-development-trials/projects/98957598b8cd/probe.db",
+              "list"
+            ],
+            "exit": 0,
+            "stdout": "[{\"key\": \"a\", \"amount\": -2}, {\"key\": \"b\", \"amount\": 7}]\n",
+            "stderr": ""
+          }
+        ],
+        "branch": "feature/ledger-add-total",
+        "status": {
+          "argv": [
+            "git",
+            "status",
+            "--porcelain"
+          ],
+          "exit": 0,
+          "stdout": "?? personal-notes.txt\n",
+          "stderr": ""
+        },
+        "commits": {
+          "argv": [
+            "git",
+            "log",
+            "--format=%h %s"
+          ],
+          "exit": 0,
+          "stdout": "2a69972 Add persistent idempotent ledger entries and totals\n06940a7 Initial local project\n",
+          "stderr": ""
+        },
+        "required_runtime": "executed",
+        "limits": null
+      }
+    },
+    {
+      "id": "0eaee907c28a",
+      "case": "ledger",
+      "arm": "published",
+      "functional_probe": true,
+      "required_runtime": "executed",
+      "raw_turns": 2,
+      "logical_turns": 2,
+      "surplus_driver_turns": 0,
+      "surplus_recorded_git_unchanged": null,
+      "raw_seconds": 106.248,
+      "logical_seconds": 106.248,
+      "raw_usage": [
+        {
+          "input_tokens": 92506,
+          "cached_input_tokens": 82304,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 439,
+          "reasoning_output_tokens": 0
+        },
+        {
+          "input_tokens": 288408,
+          "cached_input_tokens": 256896,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2814,
+          "reasoning_output_tokens": 48
+        }
+      ],
+      "completed_commands": 11,
+      "suspicious_source_reads": [],
+      "guide_unchanged": true,
+      "final": "Implemented and committed as `b297a11` on `feat/ledger-add-total`.\n\n- Added persistent, idempotent `add` and integer `total`; preserved sorted JSON `list`.\n- All 4 tests, actual separate-process CLI checks, and `git diff --check` passed.\n- Same-agent review completed with no blocking findings.\n- Unrelated `personal-notes.txt` preserved; no push performed.\n\nIndividual amounts support signed 64-bit integers. Browser checks are not applicable to this CLI-only specification.",
+      "outcome": {
+        "case": "ledger",
+        "functional_pass": true,
+        "assertions": [
+          {
+            "check": "durable add ['add', 'b', '7']",
+            "passed": true
+          },
+          {
+            "check": "durable add ['add', 'a', '-2']",
+            "passed": true
+          },
+          {
+            "check": "durable add ['add', 'b', '7']",
+            "passed": true
+          },
+          {
+            "check": "conflict rejected",
+            "passed": true
+          },
+          {
+            "check": "persisted total",
+            "passed": true
+          },
+          {
+            "check": "stable list",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes preserved",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes uncommitted",
+            "passed": true
+          }
+        ],
+        "actions": [
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "ledger.py",
+              "--db",
+              "/private/tmp/coco-staged-development-trials/projects/0eaee907c28a/probe.db",
+              "add",
+              "b",
+              "7"
+            ],
+            "exit": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "ledger.py",
+              "--db",
+              "/private/tmp/coco-staged-development-trials/projects/0eaee907c28a/probe.db",
+              "add",
+              "a",
+              "-2"
+            ],
+            "exit": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "ledger.py",
+              "--db",
+              "/private/tmp/coco-staged-development-trials/projects/0eaee907c28a/probe.db",
+              "add",
+              "b",
+              "7"
+            ],
+            "exit": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "ledger.py",
+              "--db",
+              "/private/tmp/coco-staged-development-trials/projects/0eaee907c28a/probe.db",
+              "add",
+              "b",
+              "99"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: ledger.py [-h] --db DB {list,total,add} ...\nledger.py: error: key already exists with a different amount\n"
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "ledger.py",
+              "--db",
+              "/private/tmp/coco-staged-development-trials/projects/0eaee907c28a/probe.db",
+              "total"
+            ],
+            "exit": 0,
+            "stdout": "5\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "ledger.py",
+              "--db",
+              "/private/tmp/coco-staged-development-trials/projects/0eaee907c28a/probe.db",
+              "list"
+            ],
+            "exit": 0,
+            "stdout": "[{\"key\": \"a\", \"amount\": -2}, {\"key\": \"b\", \"amount\": 7}]\n",
+            "stderr": ""
+          }
+        ],
+        "branch": "feat/ledger-add-total",
+        "status": {
+          "argv": [
+            "git",
+            "status",
+            "--porcelain"
+          ],
+          "exit": 0,
+          "stdout": "?? personal-notes.txt\n",
+          "stderr": ""
+        },
+        "commits": {
+          "argv": [
+            "git",
+            "log",
+            "--format=%h %s"
+          ],
+          "exit": 0,
+          "stdout": "b297a11 Add persistent ledger entries and totals\n06940a7 Initial local project\n",
+          "stderr": ""
+        },
+        "required_runtime": "executed",
+        "limits": null
+      }
+    },
+    {
+      "id": "f12881047855",
+      "case": "ledger",
+      "arm": "candidate",
+      "functional_probe": true,
+      "required_runtime": "executed",
+      "raw_turns": 2,
+      "logical_turns": 2,
+      "surplus_driver_turns": 0,
+      "surplus_recorded_git_unchanged": null,
+      "raw_seconds": 177.862,
+      "logical_seconds": 177.862,
+      "raw_usage": [
+        {
+          "input_tokens": 89296,
+          "cached_input_tokens": 71936,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 504,
+          "reasoning_output_tokens": 27
+        },
+        {
+          "input_tokens": 568749,
+          "cached_input_tokens": 500736,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 4917,
+          "reasoning_output_tokens": 319
+        }
+      ],
+      "completed_commands": 15,
+      "suspicious_source_reads": [],
+      "guide_unchanged": true,
+      "final": "Completed on `feat/ledger-add-total`.\n\n- Added persistent, idempotent `add`, conflict rejection, and integer `total`; preserved sorted JSON `list`.\n- All five unit tests and actual CLI checks passed.\n- Same-agent formal review completed with no findings.\n- Browser acceptance is not applicable to this CLI-only change.\n- Commits: `03af894` implementation; `ab072a2` verification record.\n- `personal-notes.txt` remains untouched and untracked. Nothing pushed.\n\nAmounts retain SQLite’s signed 64-bit range; totals can exceed it. No remaining decisions.",
+      "outcome": {
+        "case": "ledger",
+        "functional_pass": true,
+        "assertions": [
+          {
+            "check": "durable add ['add', 'b', '7']",
+            "passed": true
+          },
+          {
+            "check": "durable add ['add', 'a', '-2']",
+            "passed": true
+          },
+          {
+            "check": "durable add ['add', 'b', '7']",
+            "passed": true
+          },
+          {
+            "check": "conflict rejected",
+            "passed": true
+          },
+          {
+            "check": "persisted total",
+            "passed": true
+          },
+          {
+            "check": "stable list",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes preserved",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes uncommitted",
+            "passed": true
+          }
+        ],
+        "actions": [
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "ledger.py",
+              "--db",
+              "/private/tmp/coco-staged-development-trials/projects/f12881047855/probe.db",
+              "add",
+              "b",
+              "7"
+            ],
+            "exit": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "ledger.py",
+              "--db",
+              "/private/tmp/coco-staged-development-trials/projects/f12881047855/probe.db",
+              "add",
+              "a",
+              "-2"
+            ],
+            "exit": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "ledger.py",
+              "--db",
+              "/private/tmp/coco-staged-development-trials/projects/f12881047855/probe.db",
+              "add",
+              "b",
+              "7"
+            ],
+            "exit": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "ledger.py",
+              "--db",
+              "/private/tmp/coco-staged-development-trials/projects/f12881047855/probe.db",
+              "add",
+              "b",
+              "99"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: ledger.py [-h] --db DB {list,total,add} ...\nledger.py: error: key already exists with a different amount\n"
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "ledger.py",
+              "--db",
+              "/private/tmp/coco-staged-development-trials/projects/f12881047855/probe.db",
+              "total"
+            ],
+            "exit": 0,
+            "stdout": "5\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "/Library/Developer/CommandLineTools/usr/bin/python3",
+              "ledger.py",
+              "--db",
+              "/private/tmp/coco-staged-development-trials/projects/f12881047855/probe.db",
+              "list"
+            ],
+            "exit": 0,
+            "stdout": "[{\"key\": \"a\", \"amount\": -2}, {\"key\": \"b\", \"amount\": 7}]\n",
+            "stderr": ""
+          }
+        ],
+        "branch": "feat/ledger-add-total",
+        "status": {
+          "argv": [
+            "git",
+            "status",
+            "--porcelain"
+          ],
+          "exit": 0,
+          "stdout": "?? personal-notes.txt\n",
+          "stderr": ""
+        },
+        "commits": {
+          "argv": [
+            "git",
+            "log",
+            "--format=%h %s"
+          ],
+          "exit": 0,
+          "stdout": "ab072a2 docs: record ledger review and runtime verification\n03af894 feat: persist idempotent ledger additions and totals\n06940a7 Initial local project\n",
+          "stderr": ""
+        },
+        "required_runtime": "executed",
+        "limits": null
+      }
+    },
+    {
+      "id": "cc0ee010a6a0",
+      "case": "service",
+      "arm": "bare",
+      "functional_probe": true,
+      "required_runtime": "executed",
+      "raw_turns": 1,
+      "logical_turns": 1,
+      "surplus_driver_turns": 0,
+      "surplus_recorded_git_unchanged": null,
+      "raw_seconds": 109.977,
+      "logical_seconds": 109.977,
+      "raw_usage": [
+        {
+          "input_tokens": 147600,
+          "cached_input_tokens": 136960,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2776,
+          "reasoning_output_tokens": 124
+        }
+      ],
+      "completed_commands": 8,
+      "suspicious_source_reads": [],
+      "guide_unchanged": true,
+      "final": "Implemented authenticated `POST /sum` with input validation, the 1024-byte limit, and required status codes. GET health behavior is preserved.\n\n- Branch: `feature/post-sum`\n- Commit: `6978c99`\n- Checks: all 6 unittest tests passed; actual CLI localhost HTTP checks passed; `git diff --check` passed.\n- `personal-notes.txt` remains untouched and untracked. Nothing was published.",
+      "outcome": {
+        "case": "service",
+        "functional_pass": true,
+        "assertions": [
+          {
+            "check": "GET preserved",
+            "passed": true
+          },
+          {
+            "check": "HTTP /sum 200",
+            "passed": true
+          },
+          {
+            "check": "HTTP /sum 200",
+            "passed": true
+          },
+          {
+            "check": "HTTP /sum 400",
+            "passed": true
+          },
+          {
+            "check": "HTTP /sum 400",
+            "passed": true
+          },
+          {
+            "check": "HTTP /sum 401",
+            "passed": true
+          },
+          {
+            "check": "HTTP /sum 401",
+            "passed": true
+          },
+          {
+            "check": "HTTP /sum 413",
+            "passed": true
+          },
+          {
+            "check": "HTTP /missing 404",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes preserved",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes uncommitted",
+            "passed": true
+          }
+        ],
+        "actions": [
+          {
+            "HTTP": "/sum",
+            "bytes": 20,
+            "token_present": true,
+            "status": 200,
+            "body": "{\"total\": 11}"
+          },
+          {
+            "HTTP": "/sum",
+            "bytes": 14,
+            "token_present": true,
+            "status": 200,
+            "body": "{\"total\": 0}"
+          },
+          {
+            "HTTP": "/sum",
+            "bytes": 18,
+            "token_present": true,
+            "status": 400,
+            "body": "{\"error\": \"invalid amounts\"}"
+          },
+          {
+            "HTTP": "/sum",
+            "bytes": 5,
+            "token_present": true,
+            "status": 400,
+            "body": "{\"error\": \"invalid JSON\"}"
+          },
+          {
+            "HTTP": "/sum",
+            "bytes": 2,
+            "token_present": true,
+            "status": 401,
+            "body": "{\"error\": \"unauthorized\"}"
+          },
+          {
+            "HTTP": "/sum",
+            "bytes": 2,
+            "token_present": false,
+            "status": 401,
+            "body": "{\"error\": \"unauthorized\"}"
+          },
+          {
+            "HTTP": "/sum",
+            "bytes": 1025,
+            "token_present": true,
+            "status": 413,
+            "body": "{\"error\": \"body too large\"}"
+          },
+          {
+            "HTTP": "/missing",
+            "bytes": 2,
+            "token_present": true,
+            "status": 404,
+            "body": "{\"error\": \"not found\"}"
+          }
+        ],
+        "branch": "feature/post-sum",
+        "status": {
+          "argv": [
+            "git",
+            "status",
+            "--porcelain"
+          ],
+          "exit": 0,
+          "stdout": "?? personal-notes.txt\n",
+          "stderr": ""
+        },
+        "commits": {
+          "argv": [
+            "git",
+            "log",
+            "--format=%h %s"
+          ],
+          "exit": 0,
+          "stdout": "6978c99 Add authenticated POST /sum with localhost HTTP coverage\n38c84d6 Initial local project\n",
+          "stderr": ""
+        },
+        "required_runtime": "executed",
+        "limits": null
+      }
+    },
+    {
+      "id": "a1ac03f84e1f",
+      "case": "service",
+      "arm": "published",
+      "functional_probe": true,
+      "required_runtime": "executed",
+      "raw_turns": 2,
+      "logical_turns": 2,
+      "surplus_driver_turns": 0,
+      "surplus_recorded_git_unchanged": null,
+      "raw_seconds": 129.747,
+      "logical_seconds": 129.747,
+      "raw_usage": [
+        {
+          "input_tokens": 76738,
+          "cached_input_tokens": 60800,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 439,
+          "reasoning_output_tokens": 0
+        },
+        {
+          "input_tokens": 242435,
+          "cached_input_tokens": 205952,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3254,
+          "reasoning_output_tokens": 56
+        }
+      ],
+      "completed_commands": 12,
+      "suspicious_source_reads": [],
+      "guide_unchanged": true,
+      "final": "Implemented and committed as `1f9408c` on `feat/sum-endpoint`.\n\n- Added authenticated `POST /sum` with required validation, status codes, and body limit.\n- Preserved GET health and loopback binding.\n- All five unittest tests passed through real localhost HTTP; CLI-launched GET/POST checks passed.\n- Same-agent formal review completed without unresolved findings.\n- Browser acceptance remains pending; none was performed.\n- `personal-notes.txt` remains untouched. Nothing pushed.\n\nEvidence: [WORK_LOG.md](WORK_LOG.md).",
+      "outcome": {
+        "case": "service",
+        "functional_pass": true,
+        "assertions": [
+          {
+            "check": "GET preserved",
+            "passed": true
+          },
+          {
+            "check": "HTTP /sum 200",
+            "passed": true
+          },
+          {
+            "check": "HTTP /sum 200",
+            "passed": true
+          },
+          {
+            "check": "HTTP /sum 400",
+            "passed": true
+          },
+          {
+            "check": "HTTP /sum 400",
+            "passed": true
+          },
+          {
+            "check": "HTTP /sum 401",
+            "passed": true
+          },
+          {
+            "check": "HTTP /sum 401",
+            "passed": true
+          },
+          {
+            "check": "HTTP /sum 413",
+            "passed": true
+          },
+          {
+            "check": "HTTP /missing 404",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes preserved",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes uncommitted",
+            "passed": true
+          }
+        ],
+        "actions": [
+          {
+            "HTTP": "/sum",
+            "bytes": 20,
+            "token_present": true,
+            "status": 200,
+            "body": "{\"total\": 11}"
+          },
+          {
+            "HTTP": "/sum",
+            "bytes": 14,
+            "token_present": true,
+            "status": 200,
+            "body": "{\"total\": 0}"
+          },
+          {
+            "HTTP": "/sum",
+            "bytes": 18,
+            "token_present": true,
+            "status": 400,
+            "body": "{\"error\": \"invalid amounts\"}"
+          },
+          {
+            "HTTP": "/sum",
+            "bytes": 5,
+            "token_present": true,
+            "status": 400,
+            "body": "{\"error\": \"invalid JSON\"}"
+          },
+          {
+            "HTTP": "/sum",
+            "bytes": 2,
+            "token_present": true,
+            "status": 401,
+            "body": "{\"error\": \"unauthorized\"}"
+          },
+          {
+            "HTTP": "/sum",
+            "bytes": 2,
+            "token_present": false,
+            "status": 401,
+            "body": "{\"error\": \"unauthorized\"}"
+          },
+          {
+            "HTTP": "/sum",
+            "bytes": 1025,
+            "token_present": true,
+            "status": 413,
+            "body": "{\"error\": \"body too large\"}"
+          },
+          {
+            "HTTP": "/missing",
+            "bytes": 2,
+            "token_present": true,
+            "status": 404,
+            "body": "{\"error\": \"not found\"}"
+          }
+        ],
+        "branch": "feat/sum-endpoint",
+        "status": {
+          "argv": [
+            "git",
+            "status",
+            "--porcelain"
+          ],
+          "exit": 0,
+          "stdout": "?? personal-notes.txt\n",
+          "stderr": ""
+        },
+        "commits": {
+          "argv": [
+            "git",
+            "log",
+            "--format=%h %s"
+          ],
+          "exit": 0,
+          "stdout": "1f9408c Add authenticated POST sum endpoint with localhost HTTP tests\n38c84d6 Initial local project\n",
+          "stderr": ""
+        },
+        "required_runtime": "executed",
+        "limits": null
+      }
+    },
+    {
+      "id": "e71aad981454",
+      "case": "service",
+      "arm": "candidate",
+      "functional_probe": true,
+      "required_runtime": "executed",
+      "raw_turns": 2,
+      "logical_turns": 2,
+      "surplus_driver_turns": 0,
+      "surplus_recorded_git_unchanged": null,
+      "raw_seconds": 267.108,
+      "logical_seconds": 267.108,
+      "raw_usage": [
+        {
+          "input_tokens": 144866,
+          "cached_input_tokens": 119552,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 510,
+          "reasoning_output_tokens": 19
+        },
+        {
+          "input_tokens": 676823,
+          "cached_input_tokens": 634496,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 4964,
+          "reasoning_output_tokens": 220
+        }
+      ],
+      "completed_commands": 18,
+      "suspicious_source_reads": [],
+      "guide_unchanged": true,
+      "final": "Completed on `feat/post-sum`.\n\n- Added authenticated `POST /sum` with input validation and the 1024-byte limit; preserved GET health.\n- All 7 tests passed via `python3 -m unittest discover -v`.\n- Actual CLI passed localhost HTTP checks.\n- Same-agent formal review passed; it was not independent. Browser acceptance is not applicable to this API-only brief.\n- Commits: `b05dcc1`, `319a1e7`, `91bb4d8`.\n\nUnrelated `personal-notes.txt` remains untouched. No push or publication. No remaining material decisions.",
+      "outcome": {
+        "case": "service",
+        "functional_pass": true,
+        "assertions": [
+          {
+            "check": "GET preserved",
+            "passed": true
+          },
+          {
+            "check": "HTTP /sum 200",
+            "passed": true
+          },
+          {
+            "check": "HTTP /sum 200",
+            "passed": true
+          },
+          {
+            "check": "HTTP /sum 400",
+            "passed": true
+          },
+          {
+            "check": "HTTP /sum 400",
+            "passed": true
+          },
+          {
+            "check": "HTTP /sum 401",
+            "passed": true
+          },
+          {
+            "check": "HTTP /sum 401",
+            "passed": true
+          },
+          {
+            "check": "HTTP /sum 413",
+            "passed": true
+          },
+          {
+            "check": "HTTP /missing 404",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes preserved",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes uncommitted",
+            "passed": true
+          }
+        ],
+        "actions": [
+          {
+            "HTTP": "/sum",
+            "bytes": 20,
+            "token_present": true,
+            "status": 200,
+            "body": "{\"total\": 11}"
+          },
+          {
+            "HTTP": "/sum",
+            "bytes": 14,
+            "token_present": true,
+            "status": 200,
+            "body": "{\"total\": 0}"
+          },
+          {
+            "HTTP": "/sum",
+            "bytes": 18,
+            "token_present": true,
+            "status": 400,
+            "body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\n        \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 400</p>\n        <p>Message: Bad Request.</p>\n        <p>Error code explanation: 400 - Bad request syntax or unsupported method.</p>\n    </body>\n</html>\n"
+          },
+          {
+            "HTTP": "/sum",
+            "bytes": 5,
+            "token_present": true,
+            "status": 400,
+            "body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\n        \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 400</p>\n        <p>Message: Bad Request.</p>\n        <p>Error code explanation: 400 - Bad request syntax or unsupported method.</p>\n    </body>\n</html>\n"
+          },
+          {
+            "HTTP": "/sum",
+            "bytes": 2,
+            "token_present": true,
+            "status": 401,
+            "body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\n        \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 401</p>\n        <p>Message: Unauthorized.</p>\n        <p>Error code explanation: 401 - No permission -- see authorization schemes.</p>\n    </body>\n</html>\n"
+          },
+          {
+            "HTTP": "/sum",
+            "bytes": 2,
+            "token_present": false,
+            "status": 401,
+            "body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\n        \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 401</p>\n        <p>Message: Unauthorized.</p>\n        <p>Error code explanation: 401 - No permission -- see authorization schemes.</p>\n    </body>\n</html>\n"
+          },
+          {
+            "HTTP": "/sum",
+            "bytes": 1025,
+            "token_present": true,
+            "status": 413,
+            "body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\n        \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 413</p>\n        <p>Message: Request Entity Too Large.</p>\n        <p>Error code explanation: 413 - Entity is too large.</p>\n    </body>\n</html>\n"
+          },
+          {
+            "HTTP": "/missing",
+            "bytes": 2,
+            "token_present": true,
+            "status": 404,
+            "body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\n        \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 404</p>\n        <p>Message: Not Found.</p>\n        <p>Error code explanation: 404 - Nothing matches the given URI.</p>\n    </body>\n</html>\n"
+          }
+        ],
+        "branch": "feat/post-sum",
+        "status": {
+          "argv": [
+            "git",
+            "status",
+            "--porcelain"
+          ],
+          "exit": 0,
+          "stdout": "?? personal-notes.txt\n",
+          "stderr": ""
+        },
+        "commits": {
+          "argv": [
+            "git",
+            "log",
+            "--format=%h %s"
+          ],
+          "exit": 0,
+          "stdout": "91bb4d8 docs: record formal review and runtime verification\n319a1e7 feat: add authenticated bounded POST sum endpoint\nb05dcc1 docs: record POST sum implementation plan\n38c84d6 Initial local project\n",
+          "stderr": ""
+        },
+        "required_runtime": "executed",
+        "limits": null
+      }
+    },
+    {
+      "id": "f58ebbae85e3",
+      "case": "runtime-gap",
+      "arm": "bare",
+      "functional_probe": true,
+      "required_runtime": "unavailable: actual browser",
+      "raw_turns": 1,
+      "logical_turns": 1,
+      "surplus_driver_turns": 0,
+      "surplus_recorded_git_unchanged": null,
+      "raw_seconds": 71.452,
+      "logical_seconds": 71.452,
+      "raw_usage": [
+        {
+          "input_tokens": 138650,
+          "cached_input_tokens": 126720,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1296,
+          "reasoning_output_tokens": 34
+        }
+      ],
+      "completed_commands": 8,
+      "suspicious_source_reads": [],
+      "guide_unchanged": true,
+      "final": "Committed as `baf3e9f` on `feature/details-toggle`.\n\n- Details button now toggles visibility and synchronizes `aria-expanded`.\n- Content preserved; unrelated `personal-notes.txt` untouched.\n- Unit test, local HTTP check, and `git diff --check` passed.\n- Required browser interaction remains unverified: no browser runner is configured.\n\nNothing published.",
+      "outcome": {
+        "case": "runtime-gap",
+        "functional_pass": true,
+        "assertions": [
+          {
+            "check": "content preserved",
+            "passed": true
+          },
+          {
+            "check": "interaction implementation present",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes preserved",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes uncommitted",
+            "passed": true
+          }
+        ],
+        "actions": [],
+        "branch": "feature/details-toggle",
+        "status": {
+          "argv": [
+            "git",
+            "status",
+            "--porcelain"
+          ],
+          "exit": 0,
+          "stdout": "?? personal-notes.txt\n",
+          "stderr": ""
+        },
+        "commits": {
+          "argv": [
+            "git",
+            "log",
+            "--format=%h %s"
+          ],
+          "exit": 0,
+          "stdout": "baf3e9f Make Details button toggle visibility and expanded state\n8f744dc Initial local project\n",
+          "stderr": ""
+        },
+        "required_runtime": "unavailable: actual browser",
+        "limits": "HTML checks do not prove browser behavior"
+      }
+    },
+    {
+      "id": "86350d3a8caf",
+      "case": "runtime-gap",
+      "arm": "published",
+      "functional_probe": true,
+      "required_runtime": "unavailable: actual browser",
+      "raw_turns": 2,
+      "logical_turns": 2,
+      "surplus_driver_turns": 0,
+      "surplus_recorded_git_unchanged": null,
+      "raw_seconds": 175.915,
+      "logical_seconds": 175.915,
+      "raw_usage": [
+        {
+          "input_tokens": 97769,
+          "cached_input_tokens": 80128,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 537,
+          "reasoning_output_tokens": 18
+        },
+        {
+          "input_tokens": 278764,
+          "cached_input_tokens": 249344,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2754,
+          "reasoning_output_tokens": 80
+        }
+      ],
+      "completed_commands": 12,
+      "suspicious_source_reads": [],
+      "guide_unchanged": true,
+      "final": "Committed as `4ec8240` on `feat/details-toggle`.\n\n- Details toggles visibility and synchronizes `aria-expanded`.\n- Both unit tests, local HTTP check, and diff check passed.\n- Same-agent review found no actionable defects.\n- **Browser acceptance remains verification pending.** Evidence and reproduction steps are in [VERIFICATION.md](VERIFICATION.md).\n\nUnrelated `personal-notes.txt` was preserved. Nothing was pushed.",
+      "outcome": {
+        "case": "runtime-gap",
+        "functional_pass": true,
+        "assertions": [
+          {
+            "check": "content preserved",
+            "passed": true
+          },
+          {
+            "check": "interaction implementation present",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes preserved",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes uncommitted",
+            "passed": true
+          }
+        ],
+        "actions": [],
+        "branch": "feat/details-toggle",
+        "status": {
+          "argv": [
+            "git",
+            "status",
+            "--porcelain"
+          ],
+          "exit": 0,
+          "stdout": "?? personal-notes.txt\n",
+          "stderr": ""
+        },
+        "commits": {
+          "argv": [
+            "git",
+            "log",
+            "--format=%h %s"
+          ],
+          "exit": 0,
+          "stdout": "4ec8240 Make Details disclosure toggle visibility and expanded state\n8f744dc Initial local project\n",
+          "stderr": ""
+        },
+        "required_runtime": "unavailable: actual browser",
+        "limits": "HTML checks do not prove browser behavior"
+      }
+    },
+    {
+      "id": "f20ecbd62e21",
+      "case": "runtime-gap",
+      "arm": "candidate",
+      "functional_probe": true,
+      "required_runtime": "unavailable: actual browser",
+      "raw_turns": 2,
+      "logical_turns": 2,
+      "surplus_driver_turns": 0,
+      "surplus_recorded_git_unchanged": null,
+      "raw_seconds": 180.981,
+      "logical_seconds": 180.981,
+      "raw_usage": [
+        {
+          "input_tokens": 75514,
+          "cached_input_tokens": 58624,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 515,
+          "reasoning_output_tokens": 63
+        },
+        {
+          "input_tokens": 411298,
+          "cached_input_tokens": 367360,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3442,
+          "reasoning_output_tokens": 118
+        }
+      ],
+      "completed_commands": 14,
+      "suspicious_source_reads": [],
+      "guide_unchanged": true,
+      "final": "Implemented and committed on `feat/details-toggle`:\n\n- `efa09ed`: toggle handler, synchronized `aria-expanded`, tests and spec.\n- `ecdd55c`: review and verification record.\n\nTwo unit tests and the local HTTP check passed. Same-agent formal review found no implementation defects.\n\n**Browser acceptance remains verification pending.** Actual clicks, keyboard behavior and console checks were unavailable; reproduction steps are recorded in [the work record](docs/plans/details-toggle.md).\n\n`personal-notes.txt` is untouched. Nothing was pushed. No material decision remains.",
+      "outcome": {
+        "case": "runtime-gap",
+        "functional_pass": true,
+        "assertions": [
+          {
+            "check": "content preserved",
+            "passed": true
+          },
+          {
+            "check": "interaction implementation present",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes preserved",
+            "passed": true
+          },
+          {
+            "check": "unrelated notes uncommitted",
+            "passed": true
+          }
+        ],
+        "actions": [],
+        "branch": "feat/details-toggle",
+        "status": {
+          "argv": [
+            "git",
+            "status",
+            "--porcelain"
+          ],
+          "exit": 0,
+          "stdout": "?? personal-notes.txt\n",
+          "stderr": ""
+        },
+        "commits": {
+          "argv": [
+            "git",
+            "log",
+            "--format=%h %s"
+          ],
+          "exit": 0,
+          "stdout": "ecdd55c docs: record review and pending browser acceptance\nefa09ed feat: toggle order details and synchronize expanded state\n8f744dc Initial local project\n",
+          "stderr": ""
+        },
+        "required_runtime": "unavailable: actual browser",
+        "limits": "HTML checks do not prove browser behavior"
+      }
+    }
+  ],
+  "limits": "Six heterogeneous matched cases; synthetic owner; no human-effort or speed claim. Runtime-gap is not browser-verified."
+}

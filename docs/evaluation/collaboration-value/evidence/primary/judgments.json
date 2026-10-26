@@ -1,0 +1,650 @@
+{
+  "schema": 1,
+  "review": {
+    "controls_pass": true,
+    "groups": {
+      "coco": {
+        "reports": 5,
+        "root_recall_per_report": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "unsupported_findings": 0,
+        "unsupported_approvals": 0,
+        "all_actionable": true,
+        "all_source_unchanged": true
+      },
+      "bare": {
+        "reports": 5,
+        "root_recall_per_report": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "unsupported_findings": 0,
+        "unsupported_approvals": 0,
+        "all_actionable": true,
+        "all_source_unchanged": true
+      }
+    },
+    "packets": [
+      {
+        "trial_id": "df301b5ecfad",
+        "arm": "bare",
+        "seed": 1,
+        "control": false,
+        "stable": true,
+        "source_unchanged": true,
+        "id": "0f24126093",
+        "root_ids": [
+          "D1",
+          "D2",
+          "D3"
+        ],
+        "valid_manifestations": [
+          "Cross-tenant cached reads and refunds",
+          "Conflicting invoice or amount replays succeed",
+          "Rejected over-refunds persist balances and request keys",
+          "Oversized integer refunds crash the CLI"
+        ],
+        "unsupported_findings": [],
+        "actor_evidence": "Report supplies concrete CLI sequences, persisted values, restart observations, and the oversized-integer failure.",
+        "actionable_remedies": true,
+        "unsupported_approval": false,
+        "reason": "Identifies all three mechanisms and proposes ownership checks, full payload comparison, and refund bounds validation before writes."
+      },
+      {
+        "trial_id": "e9287625a91b",
+        "arm": "coco",
+        "seed": 1,
+        "control": false,
+        "stable": true,
+        "source_unchanged": true,
+        "id": "1ff4aed0d2",
+        "root_ids": [
+          "D1",
+          "D2",
+          "D3"
+        ],
+        "valid_manifestations": [
+          "Cross-tenant cached reads and refunds",
+          "Conflicting invoice or amount replays succeed",
+          "Rejected over-refunds persist balances and request keys",
+          "Oversized integer refunds crash the CLI"
+        ],
+        "unsupported_findings": [],
+        "actor_evidence": "Report describes CLI reproductions, rejected refund persistence after restart, conflicting replays, and process termination.",
+        "actionable_remedies": true,
+        "unsupported_approval": false,
+        "reason": "Explains each root mechanism and gives targeted repairs. Integer overflow is valid additional boundary evidence."
+      },
+      {
+        "trial_id": "09f08c634b2e",
+        "arm": "bare",
+        "seed": 4,
+        "control": false,
+        "stable": true,
+        "source_unchanged": true,
+        "id": "3132d8e7ce",
+        "root_ids": [
+          "D1",
+          "D2",
+          "D3"
+        ],
+        "valid_manifestations": [
+          "Cross-tenant cached reads and refunds",
+          "Conflicting invoice or amount replays succeed",
+          "Rejected over-refunds persist balances and request keys",
+          "Oversized integer refunds crash the CLI"
+        ],
+        "unsupported_findings": [],
+        "actor_evidence": "Report gives specific inputs and outcomes, including a 1008-cent rejected refund against 1007 cents and successful replay after restart.",
+        "actionable_remedies": true,
+        "unsupported_approval": false,
+        "reason": "Correctly connects cache authorization, unchecked replay payloads, and post-commit bounds checking to contract violations."
+      },
+      {
+        "trial_id": "4aadd71cd013",
+        "arm": "coco",
+        "seed": 3,
+        "control": false,
+        "stable": true,
+        "source_unchanged": true,
+        "id": "4a526b54ab",
+        "root_ids": [
+          "D1",
+          "D2",
+          "D3"
+        ],
+        "valid_manifestations": [
+          "Cross-tenant cached reads and refunds",
+          "Conflicting invoice or amount replays succeed",
+          "Rejected over-refunds persist balances and request keys",
+          "Oversized integer refunds crash the CLI"
+        ],
+        "unsupported_findings": [],
+        "actor_evidence": "Report supplies concrete CLI examples, restart persistence, conflicting replay results, and the uncaught SQLite conversion error.",
+        "actionable_remedies": true,
+        "unsupported_approval": false,
+        "reason": "All reported defects match source behavior; remedies directly address the three roots."
+      },
+      {
+        "trial_id": "720a9cfb72f9",
+        "arm": "bare",
+        "seed": 2,
+        "control": false,
+        "stable": true,
+        "source_unchanged": true,
+        "id": "4b99871099",
+        "root_ids": [
+          "D1",
+          "D2",
+          "D3"
+        ],
+        "valid_manifestations": [
+          "Cross-tenant cached reads and refunds",
+          "Conflicting invoice or amount replays succeed",
+          "Rejected over-refunds persist balances and request keys",
+          "Oversized integer refunds crash the CLI"
+        ],
+        "unsupported_findings": [],
+        "actor_evidence": "Report describes tenant-switch reproduction, rejected 1005-cent refund persistence, conflicting key reuse, and oversized-integer termination.",
+        "actionable_remedies": true,
+        "unsupported_approval": false,
+        "reason": "Recognizes all three roots and supplies appropriate checks before cache returns, replay acceptance, and database writes."
+      },
+      {
+        "trial_id": "68f6adea10b2",
+        "arm": "coco",
+        "seed": 4,
+        "control": false,
+        "stable": true,
+        "source_unchanged": true,
+        "id": "730f3d1614",
+        "root_ids": [
+          "D1",
+          "D2",
+          "D3"
+        ],
+        "valid_manifestations": [
+          "Cross-tenant cached reads and refunds",
+          "Conflicting invoice or amount replays succeed",
+          "Rejected over-refunds persist balances and request keys",
+          "Oversized integer refunds crash the CLI"
+        ],
+        "unsupported_findings": [],
+        "actor_evidence": "Report provides specific CLI scenarios and explicitly explains that the refund transaction commits before limit validation.",
+        "actionable_remedies": true,
+        "unsupported_approval": false,
+        "reason": "Correctly identifies all three mechanisms; the integer crash supplements D3 rather than adding another root."
+      },
+      {
+        "trial_id": "15e4e6ece481",
+        "arm": "bare",
+        "seed": 3,
+        "control": false,
+        "stable": true,
+        "source_unchanged": true,
+        "id": "76d2a79350",
+        "root_ids": [
+          "D1",
+          "D2",
+          "D3"
+        ],
+        "valid_manifestations": [
+          "Cross-tenant cached reads and refunds",
+          "Conflicting replay targeting a missing invoice succeeds",
+          "Rejected over-refunds persist balances and request keys",
+          "Oversized integer refunds crash the CLI"
+        ],
+        "unsupported_findings": [],
+        "actor_evidence": "Report describes a persisted million-cent rejected refund, a changed invoice and amount replay, tenant isolation failure, and integer overflow.",
+        "actionable_remedies": true,
+        "unsupported_approval": false,
+        "reason": "Explains late validation and mutation explicitly, identifies missing replay comparisons, and proposes concrete repairs."
+      },
+      {
+        "trial_id": "d55f9b3d3f54",
+        "arm": "coco",
+        "seed": 0,
+        "control": false,
+        "stable": true,
+        "source_unchanged": true,
+        "id": "89f5c9dd4d",
+        "root_ids": [
+          "D1",
+          "D2",
+          "D3"
+        ],
+        "valid_manifestations": [
+          "Cross-tenant cached reads and refunds",
+          "Conflicting invoice or amount replays succeed",
+          "Rejected over-refunds persist balances and request keys",
+          "Oversized integer refunds crash the CLI"
+        ],
+        "unsupported_findings": [],
+        "actor_evidence": "Report supplies concrete amounts, changed-payload replay examples, restart observations, and an oversized integer causing SQLite-binding overflow.",
+        "actionable_remedies": true,
+        "unsupported_approval": false,
+        "reason": "Findings and proposed repairs align with all three root mechanisms and the CLI contract."
+      },
+      {
+        "trial_id": "a9a53be98a8a",
+        "arm": "bare",
+        "seed": 0,
+        "control": false,
+        "stable": true,
+        "source_unchanged": true,
+        "id": "91681996e8",
+        "root_ids": [
+          "D1",
+          "D2",
+          "D3"
+        ],
+        "valid_manifestations": [
+          "Cross-tenant cached reads and refunds",
+          "Conflicting invoice or amount replays succeed",
+          "Rejected over-refunds persist balances and request keys",
+          "Oversized integer refunds crash the CLI"
+        ],
+        "unsupported_findings": [],
+        "actor_evidence": "Report describes tenant-switch access, rejected 1029-cent refund persistence, consumed keys, conflicting replays, and process termination.",
+        "actionable_remedies": true,
+        "unsupported_approval": false,
+        "reason": "Identifies mutation before bounds checking and gives actionable remedies for each root."
+      },
+      {
+        "control": true,
+        "kind": "false-positive",
+        "id": "ac1bcebb10",
+        "root_ids": [],
+        "valid_manifestations": [],
+        "unsupported_findings": [
+          {
+            "claim": "The f-string ORDER BY permits arbitrary caller SQL injection.",
+            "reason": "The order value must match a fixed allowlist, and only its mapped constant enters SQL. An injection-shaped order is rejected while subsequent queries remain operational."
+          }
+        ],
+        "actor_evidence": "Report asserts injection solely from f-string use and provides no bypass or reproduction.",
+        "actionable_remedies": false,
+        "unsupported_approval": false,
+        "reason": "Its sole finding is false; it identifies none of the actual root mechanisms."
+      },
+      {
+        "trial_id": "76f5fe45dc3f",
+        "arm": "coco",
+        "seed": 2,
+        "control": false,
+        "stable": true,
+        "source_unchanged": true,
+        "id": "effe65588d",
+        "root_ids": [
+          "D1",
+          "D2",
+          "D3"
+        ],
+        "valid_manifestations": [
+          "Cross-tenant cached reads and refunds",
+          "Conflicting invoice or amount replays succeed, including a missing invoice",
+          "Rejected over-refunds persist balances and request keys",
+          "Oversized integer refunds crash the CLI"
+        ],
+        "unsupported_findings": [],
+        "actor_evidence": "Report gives concrete CLI results, restart replay behavior, committed rejected totals, and the SQLite-binding overflow.",
+        "actionable_remedies": true,
+        "unsupported_approval": false,
+        "reason": "Explains all three roots and recommends ownership enforcement, payload binding, and bounds checking before writes."
+      },
+      {
+        "control": true,
+        "kind": "false-approval",
+        "id": "fa21179084",
+        "root_ids": [],
+        "valid_manifestations": [],
+        "unsupported_findings": [],
+        "actor_evidence": "Report cites only a passing smoke test and approves the patch.",
+        "actionable_remedies": false,
+        "unsupported_approval": true,
+        "reason": "The smoke test does not establish the required isolation, replay conflict handling, or rejection atomicity; the approved patch contains all three defects."
+      }
+    ]
+  },
+  "owner": {
+    "packets": [
+      {
+        "trial_id": "18e3c6759fae",
+        "arm": "bare",
+        "seed": 0,
+        "id": "1b364db7cc34",
+        "issues": [
+          {
+            "event": null,
+            "turn": 4,
+            "kind": "unclassified_product_question",
+            "reason": "The completed change final asks about zero-price counting but has no classifier coverage.",
+            "possible_outcome_effect": "Question totals omit an unresolved business question. The resumed question is not a settled-fact reask because no earlier answer was delivered."
+          }
+        ],
+        "unclassified_questions": [
+          {
+            "turn": 4,
+            "text": "For next session: should zero-price items count toward summary `count`?",
+            "topics": [
+              "report"
+            ]
+          }
+        ],
+        "unasked_private_release": false,
+        "actual_deliveries": 3,
+        "extra_instrumentation_deliveries": 0,
+        "genuine_settled_fact_reasks": [],
+        "owner_control_notes": "Import choices and resumed zero-price exclusion were explicitly supplied. Event 3 repairs an identity assumption; it is not new elicitation."
+      },
+      {
+        "trial_id": "30583ca77dc8",
+        "arm": "bare",
+        "seed": 1,
+        "id": "20eeb74330b5",
+        "issues": [
+          {
+            "event": 5,
+            "turn": 5,
+            "kind": "unresolved_choice_not_elicited",
+            "reason": "No delivered reply settles zero-price counting. The expected fact map includes that preference, but it was never delivered. The final reports completed summary without asking.",
+            "possible_outcome_effect": "A compatible default must not be credited as an elicited or remembered owner decision. The packet does not establish the implemented zero-price behavior."
+          }
+        ],
+        "unclassified_questions": [],
+        "unasked_private_release": false,
+        "actual_deliveries": 2,
+        "extra_instrumentation_deliveries": 0,
+        "genuine_settled_fact_reasks": [],
+        "owner_control_notes": "The trial question is correctly classified as checkpoint feedback and receives no delivered classifier reply. Identity is disclosed through corrective feedback, not a question."
+      },
+      {
+        "trial_id": "62589328086d",
+        "arm": "bare",
+        "seed": 4,
+        "id": "683308ffa660",
+        "issues": [
+          {
+            "event": null,
+            "turn": 4,
+            "kind": "unclassified_product_question",
+            "reason": "The completed change final explicitly asks for the zero-price summary rule without classifier coverage.",
+            "possible_outcome_effect": "Question totals omit an unresolved choice; its later repetition follows no delivered answer."
+          }
+        ],
+        "unclassified_questions": [
+          {
+            "turn": 4,
+            "text": "For next session: what is the zero-price summary rule?",
+            "topics": [
+              "report"
+            ]
+          }
+        ],
+        "unasked_private_release": false,
+        "actual_deliveries": 3,
+        "extra_instrumentation_deliveries": 0,
+        "genuine_settled_fact_reasks": [],
+        "owner_control_notes": "The initial reference to 'those rules' follows an explicit description of malformed-row and collision behavior, so both supplied topics are relevant. Initial implementation preceded settlement; subsequent replies change collision behavior and repair identity. Zero-price inclusion is first delivered in the resumed phase."
+      },
+      {
+        "trial_id": "400c6ab73961",
+        "arm": "bare",
+        "seed": 2,
+        "id": "6cf6bf56eec5",
+        "issues": [],
+        "unclassified_questions": [],
+        "unasked_private_release": false,
+        "actual_deliveries": 4,
+        "extra_instrumentation_deliveries": 0,
+        "genuine_settled_fact_reasks": [
+          {
+            "event": 5,
+            "turn": 5,
+            "topics": [
+              "summary_contract"
+            ],
+            "reason": "The actor asks supplier grouping and empty-catalog output, both explicitly supplied in CHANGE."
+          }
+        ],
+        "owner_control_notes": "The public grouping contract is genuinely requested again. Its delivered repetition does not settle zero-price treatment; event 6 separately asks and receives that previously unresolved choice. Event 3 is corrective feedback."
+      },
+      {
+        "trial_id": "13616f4d9925",
+        "arm": "bare",
+        "seed": 3,
+        "id": "7e58092d71fb",
+        "issues": [
+          {
+            "event": null,
+            "turn": 4,
+            "kind": "unclassified_product_question",
+            "reason": "The change final asks for the zero-price counting rule without classifier coverage.",
+            "possible_outcome_effect": "An actual unresolved question is omitted from classified totals."
+          },
+          {
+            "event": 5,
+            "turn": 5,
+            "kind": "conditional_choice_misclassified_as_settled_contract",
+            "reason": "Whether zero-only suppliers appear if zero-price rows are excluded is a conditional business clarification, not a request to repeat the public output format.",
+            "possible_outcome_effect": "The summary_contract repeated-topic label can falsely imply a settled-fact reask. The delivered inclusion choice makes the exclusion branch unnecessary."
+          }
+        ],
+        "unclassified_questions": [
+          {
+            "turn": 4,
+            "text": "For next session: what is the zero-price counting rule?",
+            "topics": [
+              "report"
+            ]
+          }
+        ],
+        "unasked_private_release": false,
+        "actual_deliveries": 3,
+        "extra_instrumentation_deliveries": 0,
+        "genuine_settled_fact_reasks": [],
+        "owner_control_notes": "Zero-price inclusion was not previously delivered. Repetition of public summary text in the reply does not turn the conditional clarification into forgotten public format."
+      },
+      {
+        "trial_id": "841aba34ded2",
+        "arm": "coco",
+        "seed": 4,
+        "id": "95d4691e52d5",
+        "issues": [
+          {
+            "event": null,
+            "turn": 4,
+            "kind": "unclassified_product_question",
+            "reason": "The change final requests that the owner restate the zero-price rule, without classifier coverage. No earlier delivered reply supplied that rule.",
+            "possible_outcome_effect": "Question totals miss an elicitation attempt; the word 'restate' does not establish a genuine settled-fact reask."
+          }
+        ],
+        "unclassified_questions": [
+          {
+            "turn": 4,
+            "text": "For next session, please restate the zero-price summary rule\u2014it isn\u2019t recorded in the available project context.",
+            "topics": [
+              "report"
+            ]
+          }
+        ],
+        "unasked_private_release": false,
+        "actual_deliveries": 3,
+        "extra_instrumentation_deliveries": 0,
+        "genuine_settled_fact_reasks": [],
+        "owner_control_notes": "The resumed concrete counting example elicits the previously unresolved preference. Identity feedback repairs an assumption rather than answering a new question."
+      },
+      {
+        "trial_id": "15169f7554d2",
+        "arm": "coco",
+        "seed": 3,
+        "id": "cbeb3605889a",
+        "issues": [
+          {
+            "event": null,
+            "turn": 4,
+            "kind": "unclassified_product_question",
+            "reason": "The completed change final asks about zero-price counting without classifier coverage.",
+            "possible_outcome_effect": "Question totals omit an unresolved business question. No answer precedes its resumed repetition."
+          }
+        ],
+        "unclassified_questions": [
+          {
+            "turn": 4,
+            "text": "For next session: should zero-price items count toward summary `count`?",
+            "topics": [
+              "report"
+            ]
+          }
+        ],
+        "unasked_private_release": false,
+        "actual_deliveries": 3,
+        "extra_instrumentation_deliveries": 0,
+        "genuine_settled_fact_reasks": [],
+        "owner_control_notes": "The resumed question appropriately covers counting and zero-only suppliers. Inclusion is first delivered there; expected fact maps are not prior disclosures."
+      },
+      {
+        "trial_id": "e126f1774c0b",
+        "arm": "coco",
+        "seed": 0,
+        "id": "d63f347cf3d8",
+        "issues": [
+          {
+            "event": null,
+            "turn": 4,
+            "kind": "unclassified_product_question",
+            "reason": "The completed change final asks whether zero-priced items contribute to counts and groups, without classifier coverage.",
+            "possible_outcome_effect": "An actual question is omitted; the resumed question repeats an unanswered choice rather than a settled fact."
+          }
+        ],
+        "unclassified_questions": [
+          {
+            "turn": 4,
+            "text": "For next session: should zero-priced items contribute to summary counts and groups?",
+            "topics": [
+              "report"
+            ]
+          }
+        ],
+        "unasked_private_release": false,
+        "actual_deliveries": 3,
+        "extra_instrumentation_deliveries": 0,
+        "genuine_settled_fact_reasks": [],
+        "owner_control_notes": "The initial recommendation-confirmation question concerns business rules, not additional technical permission. The trial/next-checkpoint request is correctly treated as checkpoint feedback and receives no delivered classifier reply."
+      },
+      {
+        "trial_id": "909f1629c2ae",
+        "arm": "coco",
+        "seed": 1,
+        "id": "d72b09b0f224",
+        "issues": [
+          {
+            "event": null,
+            "turn": 4,
+            "kind": "unclassified_product_question",
+            "reason": "The change final asks about zero-price counting without classifier coverage.",
+            "possible_outcome_effect": "Classified totals omit an unresolved business question."
+          },
+          {
+            "event": 5,
+            "turn": 5,
+            "kind": "conditional_choice_misclassified_as_settled_contract",
+            "reason": "The conditional choice between omitting zero-only suppliers and displaying count zero is part of unresolved zero-price behavior, not merely the previously supplied JSON contract.",
+            "possible_outcome_effect": "The repeated summary_contract label can overstate forgotten settled facts. The inclusion reply resolves the active choice and makes the conditional branch moot."
+          }
+        ],
+        "unclassified_questions": [
+          {
+            "turn": 4,
+            "text": "For next session: should zero-price items count toward summary `count`?",
+            "topics": [
+              "report"
+            ]
+          }
+        ],
+        "unasked_private_release": false,
+        "actual_deliveries": 3,
+        "extra_instrumentation_deliveries": 0,
+        "genuine_settled_fact_reasks": [],
+        "owner_control_notes": "The public contract repeated in event 5 releases no private preference beyond the requested zero-price choice. It does not establish a genuine public-format reask."
+      },
+      {
+        "trial_id": "f226fa0a5d81",
+        "arm": "coco",
+        "seed": 2,
+        "id": "e74f3ebb7b80",
+        "issues": [
+          {
+            "event": 2,
+            "turn": 2,
+            "kind": "checkpoint_misclassified_as_procedure",
+            "reason": "'After your trial, what is the next checkpoint?' requests scheduled owner feedback. It does not ask for renewed technical authorization, Jira guidance, or specialist-review permission.",
+            "possible_outcome_effect": "The procedure classification causes one extra delivered authorization message and an additional actor acknowledgment."
+          },
+          {
+            "event": null,
+            "turn": 5,
+            "kind": "timed_out_provisional_message",
+            "reason": "Instrumentation records a timed-out change turn. Its last message says review is being recorded and cannot establish a completed final report.",
+            "possible_outcome_effect": "Completion, final review, and any subsequent owner exchange remain unestablished; there is no resumed-phase evidence."
+          }
+        ],
+        "unclassified_questions": [],
+        "unasked_private_release": false,
+        "actual_deliveries": 3,
+        "extra_instrumentation_deliveries": 1,
+        "genuine_settled_fact_reasks": [],
+        "owner_control_notes": "Two substantive deliveries cover initial import choices and corrective identity feedback. The third is an unnecessary instrumentation-generated authorization reply. The timed-out change message contains no question and is not a completed checkpoint report."
+      }
+    ],
+    "unasked_private_releases": 0,
+    "extra_instrumentation_deliveries": 1,
+    "unclassified_question_spans": 7
+  },
+  "judge_costs": {
+    "review": {
+      "seconds": 95.575,
+      "usage": {
+        "input_tokens": 155305,
+        "cached_input_tokens": 137856,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3191,
+        "reasoning_output_tokens": 21,
+        "status": "recorded"
+      },
+      "command_count": 6
+    },
+    "owner": {
+      "seconds": 93.153,
+      "usage": {
+        "input_tokens": 214180,
+        "cached_input_tokens": 183296,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3499,
+        "reasoning_output_tokens": 73,
+        "status": "recorded"
+      },
+      "command_count": 7
+    }
+  },
+  "limitations": {
+    "review": [
+      "Actor execution histories and claimed repository metadata were not supplied; assessment credits the semantic evidence in review.txt against the supplied artifacts.",
+      "Concurrency and remote authentication were not tested and are outside the supplied contract."
+    ],
+    "owner": [
+      "Assessment uses only context.json and the ten supplied packet JSON files. Reported code behavior, tests, commits, and trial observations were not independently executable from this evidence.",
+      "actual_deliveries counts events explicitly marked delivered, including corrections. extra_instrumentation_deliveries counts unnecessary delivered replies caused by classification errors, not ordinary corrective feedback or requested answers.",
+      "Corrective identity disclosures are distinguished from unsolicited private answers and new elicitation. Their inclusion does not establish that the actor asked about identity.",
+      "The packets do not establish human effort, unseen preferences, or causal outcomes beyond the recorded exchanges."
+    ]
+  }
+}

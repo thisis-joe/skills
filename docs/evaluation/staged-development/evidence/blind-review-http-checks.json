@@ -1,0 +1,14 @@
+{
+  "a1ac03f84e1f": {
+    "returncode": 0,
+    "output": "test_auth (test_service.Service) ... ok\ntest_invalid_input (test_service.Service) ... ok\ntest_routes_and_health (test_service.Service) ... ok\ntest_size_limit (test_service.Service) ... ok\ntest_sum (test_service.Service) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 2.528s\n\nOK\n"
+  },
+  "cc0ee010a6a0": {
+    "returncode": 0,
+    "output": "test_authentication (test_service.Service) ... ok\ntest_bad_length (test_service.Service) ... ok\ntest_body_limit (test_service.Service) ... ok\ntest_invalid_input (test_service.Service) ... ok\ntest_routes (test_service.Service) ... ok\ntest_valid_amounts (test_service.Service) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.512s\n\nOK\n"
+  },
+  "e71aad981454": {
+    "returncode": 0,
+    "output": "test_authentication (test_service.Service) ... ok\ntest_body_limit (test_service.Service) ... ok\ntest_health (test_service.Service) ... ok\ntest_invalid_input (test_service.Service) ... ok\ntest_invalid_length (test_service.Service) ... ok\ntest_other_post_path (test_service.Service) ... ok\ntest_sum (test_service.Service) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.511s\n\nOK\n"
+  }
+}

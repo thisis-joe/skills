@@ -1,0 +1,63 @@
+{
+  "source_commit": "f4584200cbdc930a7967577c0fc2a97a8d286a50",
+  "source_locator": "docs/evaluation/staged-development/report-v2.md",
+  "candidate": "622975e349e6276b225aa9ef02ee69d664dd2927",
+  "driver_head": "fc972745e44fce01a12440963026e5206a6ab05a",
+  "purpose": "Pinned read-only reference for a documentation synthesis; not new primary trials or changed grading. Cohorts and cost gates remain separate.",
+  "archive": "workflow-v2-reference.tar.gz",
+  "sha256": "ab19c448e0b56a710c4262a61f8f7d7973fdd63716fad87400ba1a22552afd68",
+  "bytes": 27384,
+  "files": {
+    "docs/evaluation/staged-development/report-v2.md": {
+      "sha256": "7ffefcd89e6082f0d47cf1c70fc0c91c897f3125b629ab20ef3307b1dcc1dfa5",
+      "bytes": 14744,
+      "git_blob": "c3f3aa64e6348370ee4917ab7957b5ba648841e6"
+    },
+    "docs/evaluation/workflow-v2/case-table.md": {
+      "sha256": "293216ff58ac6e1986b7446cd35d53ac0f87ec117189308ba1ba0c6b4252fec0",
+      "bytes": 2223,
+      "git_blob": "637d00e98dd4f745c81be03c87cf119a7ca2fd65"
+    },
+    "docs/evaluation/workflow-v2/evidence/control-review.json": {
+      "sha256": "612b809f163fff77246a28226204054144c1d756cbea5c9639ec5b5d17849719",
+      "bytes": 795,
+      "git_blob": "56f4ea275a596996051371c5687033b6bd395876"
+    },
+    "docs/evaluation/workflow-v2/evidence/results.json": {
+      "sha256": "82590d74d243ebd5d68ea6a9f2304694ee74babff73ed802ea9c14bf1e2741c1",
+      "bytes": 127042,
+      "git_blob": "0c221da03e07fefd4282fc759f6c83b7559bce73"
+    },
+    "docs/evaluation/workflow-v2/evidence/source-audit.json": {
+      "sha256": "788dc492066c41984eeb46d60ea925f79dd22204d525424b77226b05aa256dd9",
+      "bytes": 10962,
+      "git_blob": "d0635849254507c80ef9f3fbee1de9125e6a6dd7"
+    },
+    "docs/evaluation/workflow-v2/final-review.md": {
+      "sha256": "5bc52667ab8451160dc390ca1c4f6937623657e99c17139338ac065fd5a96391",
+      "bytes": 1719,
+      "git_blob": "fee13c651d122692b7b3d6439a7cda4fb8267798"
+    },
+    "docs/evaluation/workflow-v2/protocol.md": {
+      "sha256": "d4d681a4926b761bf4108d790986faea6e84d5c4ab7dd3ba3c7b6e1787105688",
+      "bytes": 8410,
+      "git_blob": "9d235a16d1ff2e17c13b956627d66880bb245478"
+    },
+    "docs/specs/workflow-value-v2.md": {
+      "sha256": "a82afd57a48b336751dcbf2263e9c9cfb20ac034638b455de90671518c9b2ccd",
+      "bytes": 3185,
+      "git_blob": "e4441ee25f65bfb0ed09972398d3501968340275"
+    }
+  },
+  "full_native_archive": {
+    "source_commit": "f4584200cbdc930a7967577c0fc2a97a8d286a50",
+    "path": "docs/evaluation/workflow-v2/evidence/native-evidence.tar.gz",
+    "sha256": "a814bef46256e5da838e4b9c8bea21eeb51ffc9925328de484703cea86548a0a",
+    "included_in_reference_bundle": false
+  },
+  "limits": [
+    "Subset reference bundle includes report, protocol, spec, case table, results, controls, source audit and final review; it is not the complete native evidence archive.",
+    "Fresh model contexts and graded advice are not real human usability or learning participants.",
+    "The no-body condition retains catalog metadata and prior model knowledge; results do not demonstrate a unique ability to collaborate."
+  ]
+}

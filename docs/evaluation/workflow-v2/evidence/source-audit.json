@@ -1,0 +1,182 @@
+{
+  "9da2178898fa": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own files/Git; local guide at T1 commands3\u20134 and T2 commands2\u20133.",
+    "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+  },
+  "227883cfa7c7": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own files/Git; local guide at T1 commands2\u20133 and T2 commands3\u20134.",
+    "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+  },
+  "2efad3953249": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Guide probes fail; later reads and changes stay inside own project.",
+    "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+  },
+  "e9e6e6a5fa8d": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own context/Git; local routing and skill commands4\u20135.",
+    "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+  },
+  "111c75e20067": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own context/code; local routing and skill commands4\u20135.",
+    "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+  },
+  "1f912213f3bd": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Failed guide probe; own context/code/Git only.",
+    "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+  },
+  "156dd7a5e7ef": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own files/Git, local guide in both turns; local change paths.",
+    "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+  },
+  "3f68269e710f": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Failed guide probe; own files/Git and generated test data.",
+    "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+  },
+  "ce2147648816": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own files/Git; local guide T1 commands2\u20133 and T2 command2.",
+    "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+  },
+  "cc0486d14776": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own spec/plan/code; local guide T1 commands4\u20135.",
+    "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+  },
+  "121b05ba0d74": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Guide listing fails; own spec/plan/code/Git.",
+    "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+  },
+  "c9218fe8526b": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own spec/plan; local guide T1 commands4\u20135.",
+    "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+  },
+  "79422da3d125": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Failed guide probes; own files/Git and generated test data.",
+    "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+  },
+  "c2756c00ca56": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own checkpoint/code/Git and local guide in both turns.",
+    "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+  },
+  "306c40b9cadf": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own handoff/code/Git and local guide in both turns.",
+    "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+  },
+  "a46b80ac6e6f": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Failed guide probe; own context/code/Git.",
+    "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+  },
+  "75a365038697": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own context/code; local guide T1 commands4\u20135.",
+    "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+  },
+  "152a374d065f": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own context/code; local guide T1 commands2\u20133.",
+    "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+  },
+  "7c5e504b26a1": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own handoff/code/Git and local guide in both turns.",
+    "boundary": "Actual commands and non-command paths audited; no observed forbidden source/history read or global/publication action; global catalog metadata remains a limit."
+  },
+  "9937269ed91f": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own files/Git and provided guide; sensitivity reads own Git commit into a self-created temporary directory.",
+    "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+  },
+  "8dd7f98de5df": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own files/Git and generated temporary data; guide listing confirms absence without external fallback.",
+    "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+  },
+  "5b9213456734": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own context and committed diff; provided guide skills and local explanation references.",
+    "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+  },
+  "c8db49cbb333": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own context/Git diff and provided guide skill/reference bodies.",
+    "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+  },
+  "761c44fb5306": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own context/code/Git; guide probe reports absence.",
+    "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+  },
+  "cfaccd09469b": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own handoff/code/Git and provided guide; generated temporary runtime data.",
+    "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+  },
+  "b15438ea3f27": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own files/Git and temporary data; both guide probes report absence.",
+    "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+  },
+  "2aede0b7a686": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own spec/plan/code/Git and provided guide; self-created CLI fixtures.",
+    "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+  },
+  "fa943c6f80f7": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own context/UI/Git and provided guide; malformed shell quote fails before execution, corrected discovery stays local.",
+    "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+  },
+  "27c06bfc3544": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own context/UI/code/Git; guide probe reports absence.",
+    "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+  },
+  "6d3be067573e": {
+    "status": "eligible",
+    "reviewer": "workflow_v2_design",
+    "evidence": "Own context/Git and provided guide skills/routing/explanation references.",
+    "boundary": "Every recorded command inspected; tool paths local, startup/parse/completion checked; no observed external skill/history/control reads or publication/global change. Catalog metadata remains a limit."
+  }
+}

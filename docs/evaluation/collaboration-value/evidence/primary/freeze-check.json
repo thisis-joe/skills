@@ -1,0 +1,19 @@
+{
+  "candidate": "622975e349e6276b225aa9ef02ee69d664dd2927",
+  "driver": "4c7ede8dc78535019a2472c9ff3969b0efedaa78",
+  "frozen_harness_hash_matches": {
+    "collect.py": true,
+    "design-review.md": true,
+    "engine.py": true,
+    "lifecycle.py": true,
+    "protocol.md": true,
+    "review_case.py": true,
+    "run.py": true,
+    "upstream-intent.md": true
+  },
+  "snapshot_hash_matches": true,
+  "active_skill_diff_from_candidate": [],
+  "closure_tests": "152 tests passed in 35.891s",
+  "validator": "29 skills, source checksums, coverage and references passed",
+  "approval_review": "First native review-judge command rejected for possible external transfer; after byte-matching all 12 packets to newly generated hardcoded fixtures and proving no user project code or personal notes, the same command was approved. No destination or execution mechanism changed."
+}

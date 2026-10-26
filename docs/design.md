@@ -35,3 +35,12 @@ Matt Pocock, Addy Osmani, Lauren Tan(pstack)의 스킬 트리를 목적별 스�
 ## 완료 근거
 
 원본 전 항목의 대응표와 체크섬, 통합 진입점 23개와 팀 전용 6개를 포함한 유효한 스킬 29개, 끊기지 않는 설치 후 참조, 실제 Git 범위 수집 테스트, 기존 파일을 보존하는 설치 테스트, 변경 전·후 행동 평가, 독립 최종 검토와 수정 결과가 필요하다. 형식 검사만으로 행동 준수를 주장하지 않는다. 실제 개인 스킬 폴더에 설치하고 설치된 파일의 일치도까지 확인한다.
+
+## Staged-development revision
+
+The accepted [staged-development contract](specs/staged-development.md) supersedes
+introductory navigation, unconditional Jira requirements, precommit formal-review
+timing and automatic transition defaults described above. All 29 entrypoints and
+frozen upstream evidence remain available; the ten-skill map is introductory.
+See the [execution plan](plans/staged-development.md) for the authoritative new
+work state and the decision record for each team override.

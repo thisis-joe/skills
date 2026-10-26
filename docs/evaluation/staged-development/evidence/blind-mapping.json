@@ -1,0 +1,100 @@
+{
+  "13862b0fdf92": {
+    "case": "copy",
+    "arm": "candidate",
+    "control": false
+  },
+  "ab258d7e16aa": {
+    "case": "copy",
+    "arm": "bare",
+    "control": false
+  },
+  "e0c111ebd0df": {
+    "case": "copy",
+    "arm": "published",
+    "control": false
+  },
+  "52364296b9eb": {
+    "case": "csv",
+    "arm": "bare",
+    "control": false
+  },
+  "124e9e188f53": {
+    "case": "csv",
+    "arm": "published",
+    "control": false
+  },
+  "5eef4fc7c0a7": {
+    "case": "csv",
+    "arm": "candidate",
+    "control": false
+  },
+  "dbb885878b95": {
+    "case": "pagination",
+    "arm": "bare",
+    "control": false
+  },
+  "96d0abc80ba4": {
+    "case": "pagination",
+    "arm": "published",
+    "control": false
+  },
+  "0d90922aa538": {
+    "case": "pagination",
+    "arm": "candidate",
+    "control": false
+  },
+  "98957598b8cd": {
+    "case": "ledger",
+    "arm": "bare",
+    "control": false
+  },
+  "0eaee907c28a": {
+    "case": "ledger",
+    "arm": "published",
+    "control": false
+  },
+  "f12881047855": {
+    "case": "ledger",
+    "arm": "candidate",
+    "control": false
+  },
+  "cc0ee010a6a0": {
+    "case": "service",
+    "arm": "bare",
+    "control": false
+  },
+  "a1ac03f84e1f": {
+    "case": "service",
+    "arm": "published",
+    "control": false
+  },
+  "e71aad981454": {
+    "case": "service",
+    "arm": "candidate",
+    "control": false
+  },
+  "f58ebbae85e3": {
+    "case": "runtime-gap",
+    "arm": "bare",
+    "control": false
+  },
+  "86350d3a8caf": {
+    "case": "runtime-gap",
+    "arm": "published",
+    "control": false
+  },
+  "f20ecbd62e21": {
+    "case": "runtime-gap",
+    "arm": "candidate",
+    "control": false
+  },
+  "4d037be24a01": {
+    "case": "pagination",
+    "control": true
+  },
+  "b27ed580ad92": {
+    "case": "runtime-gap",
+    "control": true
+  }
+}

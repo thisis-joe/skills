@@ -1,0 +1,80 @@
+{
+  "purpose": "User-requested fair COCO versus no-skill temporary-project review evaluation",
+  "destination": "same native Codex service used for the authorized synthetic primary runs",
+  "contains_user_project_code": false,
+  "contains_personal_notes": false,
+  "fixture_source": "review_case.py prepare hardcoded generated sample billing CLI",
+  "checks": [
+    {
+      "packet": "89f5c9dd4d",
+      "synthetic_fixture_files_match": true,
+      "control": false
+    },
+    {
+      "packet": "91681996e8",
+      "synthetic_fixture_files_match": true,
+      "control": false
+    },
+    {
+      "packet": "0f24126093",
+      "synthetic_fixture_files_match": true,
+      "control": false
+    },
+    {
+      "packet": "1ff4aed0d2",
+      "synthetic_fixture_files_match": true,
+      "control": false
+    },
+    {
+      "packet": "effe65588d",
+      "synthetic_fixture_files_match": true,
+      "control": false
+    },
+    {
+      "packet": "4b99871099",
+      "synthetic_fixture_files_match": true,
+      "control": false
+    },
+    {
+      "packet": "76d2a79350",
+      "synthetic_fixture_files_match": true,
+      "control": false
+    },
+    {
+      "packet": "4a526b54ab",
+      "synthetic_fixture_files_match": true,
+      "control": false
+    },
+    {
+      "packet": "730f3d1614",
+      "synthetic_fixture_files_match": true,
+      "control": false
+    },
+    {
+      "packet": "3132d8e7ce",
+      "synthetic_fixture_files_match": true,
+      "control": false
+    },
+    {
+      "packet": "fa21179084",
+      "synthetic_fixture_files_match": true,
+      "control": true
+    },
+    {
+      "packet": "ac1bcebb10",
+      "synthetic_fixture_files_match": true,
+      "control": true
+    }
+  ],
+  "allowed_files": [
+    "billing.py",
+    "service.py",
+    "storage.py",
+    "README.md",
+    "seed.json",
+    "test_billing.py",
+    "proposed.diff",
+    "review.txt"
+  ],
+  "note": "diff is between generated fixture commits; review.txt is the synthetic primary actor report or hidden negative control. No workspace product files or user projects included."
+}
