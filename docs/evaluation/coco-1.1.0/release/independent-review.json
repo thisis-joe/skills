@@ -1,0 +1,35 @@
+{
+  "reviewer": "independent read-only collaboration agent /root/release_audit",
+  "initial_source": "42f6c58",
+  "release_preparation_paths": [
+    "package.json",
+    "README.md",
+    "docs/distribution.md",
+    "docs/plans/coco-1.1.0.md"
+  ],
+  "verdict": "No blocking metadata, compatibility or publication-state claim defect. One awkward release-claim sentence corrected. Runtime/comparison/forge readiness require separate evidence.",
+  "existing_global_dry_runs": {
+    "codex": {
+      "destination": "/Users/Joseph/.codex/skills",
+      "passed": true
+    },
+    "claude": {
+      "destination": "/Users/Joseph/.claude/skills",
+      "passed": true
+    }
+  },
+  "public_git_scan": {
+    "scope": "180 tracked added/modified paths relative to84a59a2 and nested evidence archives",
+    "tar_members": 16915,
+    "loose_git_objects_inflated": 2881,
+    "inspected_bytes": 129961199,
+    "skipped": 0,
+    "secret_pattern_matches": 0,
+    "sensitive_filenames": 0,
+    "email_occurrences": 7044,
+    "nonfixture_email_occurrences": 0,
+    "local_user_path_files_or_members": 21,
+    "limits": "Bounded heuristic scan; local environment paths are execution provenance, not credentials. Does not prove absence of all possible sensitive data."
+  },
+  "edits_by_reviewer": false
+}

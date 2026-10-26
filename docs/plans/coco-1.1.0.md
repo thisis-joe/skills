@@ -297,3 +297,45 @@ The final evidence/status commit is recorded in branch history. The starting
 `docs/coco-1.1.0-clarity` checkout is still clean at `ba596d8`. Source changes and
 verification are local; no package version bump, push, PR, merge, publication or
 personal/global installation has occurred.
+
+
+## Authorized release continuation (2026-10-26)
+
+The user now explicitly requests the full comparison, operational installation,
+Git push and merge, npm publication and README update. This supersedes the earlier
+publication/install exclusion for this continuation, without erasing that historical
+closure. Keep the same feature branch and work-unit commits. Existing managed
+Codex and Claude global installations are the operational targets; preserve other
+skills and user modifications. The current remote default is `main` at `84a59a2`,
+with no `dev`/`develop`; use the ship release path into the confirmed default,
+not an invented coco-push development base. Preserve work-unit history by merge.
+
+| Release unit | Acceptance | State |
+| --- | --- | --- |
+| R1 Complete prospective recovery | Freeze new candidate and necessary instrument repair; all five matched profiles and two preservation probes, actual owner routing, independent public outcomes and blinded controls; retain the old incomplete cohort | in progress; recovery evidence owned below implementation/recovery |
+| R2 Prepare consumer artifact | Package 1.1.0, concrete README/distribution notes, exact packed payload, required checks, rollback install and scoped independent review | artifact and rollback checks pass; independent preparation review clean; final readiness awaits R1 |
+| R3 Land release branch | Secret/provenance inspection, verified normal push, one PR attached to this chat, all forge checks/review gates, pinned-head merge and target readback | pending R1/R2 |
+| R4 Publish and install | Annotated release tag, npm exact artifact and registry integrity/readback; install to existing managed Codex/Claude locations and verify source agreement/other skills; preserve a tested rollback path | pending readiness and npm authentication |
+
+Release does not require a superiority claim. Do not fabricate a favorable outcome;
+record the absence of a demonstrated gain honestly. A real owner-control, required-process,
+public-behavior or operational regression still blocks the affected adoption.
+Service capacity or missing authentication is unavailable, never passed. A
+published version cannot be overwritten; hold before publish on an unmet gate.
+Rollback uses pinned 1.0.0 installation and npm latest-tag restoration when needed;
+verify the package/commands and preserve installed ownership before operational
+writes. No live service database or migration is involved in this skill bundle.
+
+
+Release preparation receipts: [packed artifact and rollback checks](../evaluation/coco-1.1.0/release/artifact-readiness.json)
+and [independent preparation/public-evidence review](../evaluation/coco-1.1.0/release/independent-review.json).
+Normal `npm pack` ran the validator and all 179 tests (57.999 seconds). The artifact
+has 465 files; evaluation/test data are excluded. Actual registry 1.0.0 skill bytes
+match the tagged local baseline. Both temporary runtime installations passed
+1.0.0 -> 1.1.0 -> 1.0.0 -> 1.1.0, including removal of the new workflow on rollback
+and preservation of an unrelated skill. Operational installs remain unchanged.
+The initial receipt collector failed parsing prepack text before npm's JSON; its
+metadata parser was corrected and the identical installation sequence recorded.
+`npm whoami` returned E401. A browser login attempt fell back to an interactive
+username prompt and was cancelled without collecting credentials; user login in
+their own terminal is pending. This does not block preparation or draft review.

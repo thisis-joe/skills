@@ -6,6 +6,8 @@
 
 Node.js 22 이상과 Python 3.9 이상이 필요하다. 설치 사용자는 npm 로그인이 필요하지 않다. Node.js/npm이 없는 환경에서는 저장소를 clone하고 Python 설치기를 직접 실행할 수 있다. npm 설치와 Python 직접 설치는 같은 설치기를 사용한다.
 
+1.1.0은 요구사항 정리 → 구현 → 리뷰·검증 → 출시의 안내, 명세 하나에 한정된 단계 자동 진행, 구현 전과 새 제약 발견 시의 중요한 선택 확인, 처음 예상과 실제 결과의 보고를 추가한다. Jira 규칙은 실제 프로젝트에서 선택한 경우에만 적용하며 기존 스킬 이름 29개와 설치 인터페이스는 유지한다. [1.0.0 대비 구체적인 변경](https://github.com/thisis-joe/skills/blob/v1.1.0/docs/coco-1.0.0-to-1.1.0.md)을 참고한다. 모델 성능·실행 속도·사람의 학습 효과를 일괄적으로 보장하지 않는다.
+
 1.0.0은 원본 기법 보강(스킬별 고급 절차 읽기 조건, 멈춤 신호, clarify grill 모드, debug 전제 재검증), `coco-document`를 나눈 `coco-docs`·`coco-learn`, PR/MR 머지 스킬 `coco-merge`를 포함한 영어 스킬 문서와 공통 자료를 Codex·Claude Code에 함께 배포한다. 요청 없이 이름만 호출한 스킬은 대화에서 할 일이 정해지지 않았으면 `coco-whattosay` 요청문 추천으로 시작하고, `coco-push`·`coco-merge`는 이름만 호출해도 현재 브랜치 기준으로 바로 실행한다. 설치기는 1.0.0부터 프로젝트별 설치(`--project`), 프로젝트 설치 시 기존 글로벌 설치 제거(`--remove-global`), 설치 제거 명령(`uninstall`)을 지원한다. 실행 시간도 줄였다. 보고는 결과부터 쓰고, `coco-start`는 다음 경로만 정하며, `coco-ship`은 배포가 아닌 PR 점검에서 롤아웃 계획 대신 되돌리는 방법을 한 줄로 적는다. `coco-updateskill`은 바뀐 파일에 맞춰 검증 범위를 정한다. bash, zsh, PowerShell, cmd 어디서든 동작하는 명령 작성 규칙도 추가했다. `coco-build`는 단계마다 해당 테스트 파일만 돌리고 전체 테스트는 마무리에 한 번 실행하며, `coco-debug`는 코드로 이미 배제된 가설을 다시 시험하지 않고, `coco-verify`는 일회성 확인을 즉석 명령으로 하며, `coco-review`는 정확한 커밋 범위를 `git diff`로 보고 지적부터 쓴다. 근거는 [실행 시간 진단](evaluation/latency/README.md)과 [무거운 스킬 진단](evaluation/latency/heavy.md)에 있다. 두 런타임은 같은 29개 스킬과 `_coco-shared`를 사용하며, `agents/openai.yaml`은 Codex용 표시 메타데이터다. 설치 대상 에이전트 자체의 설치·인증은 별도다.
 
 ```sh
@@ -29,7 +31,7 @@ npx --yes @thisis-joe/coco-skills@latest install --runtime claude --project ./my
 npx --yes @thisis-joe/coco-skills@latest validate --installed ./my-project/.claude/skills
 npx --yes @thisis-joe/coco-skills@latest install --runtime claude --project ./my-project --remove-global
 npx --yes @thisis-joe/coco-skills@latest uninstall --runtime claude --project ./my-project
-npx --yes @thisis-joe/coco-skills@1.0.0 install --runtime codex --dest ./my-skills
+npx --yes @thisis-joe/coco-skills@1.1.0 install --runtime codex --dest ./my-skills
 ```
 
 `--project` 설치는 설치한 폴더와 설치 기록을 해당 저장소의 `.git/info/exclude`에 저장소 루트 기준 경로로 추가한다. 공유되는 `.gitignore`는 바꾸지 않는다. Git 저장소가 아니면 이 단계를 건너뛰고 `git_exclude`를 `null`로 반환한다. 홈 폴더나 글로벌 경로와 같은 위치는 프로젝트로 받지 않는다.

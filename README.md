@@ -2,25 +2,25 @@
 
 [![npm](https://img.shields.io/npm/v/@thisis-joe/coco-skills)](https://www.npmjs.com/package/@thisis-joe/coco-skills)
 
-Codex와 Claude Code에서 쓰는 개발 스킬 29개. 요구 정리부터 구현, 검토, 머지까지 필요한 단계의 스킬을 호출합니다.
+Codex와 Claude Code에서 쓰는 개발 스킬 29개. 중요한 동작은 사용자가 결정하고, 에이전트는 명세·구현·실행 근거를 남겨 다음 작업자가 이어받을 수 있게 합니다.
 
 ## 시작하기
 
 Node.js 22 이상과 Python 3.9 이상이 필요합니다. 사용할 에이전트는 별도로 설치하고 로그인하세요.
 
-아래 npm 설치 명령은 **1.0.0 기준**입니다. 이 브랜치는 **1.1.0 개발 후보**이며, 후보의 네 단계 흐름을 npm 설치본과 동일하다고 간주하지 마세요. [1.0.0 → 1.1.0 변경 지점](docs/coco-1.0.0-to-1.1.0.md)에 수정 내용과 검증 방법을 정리했습니다.
+아래 npm 설치 명령은 **1.1.0 기준**입니다. [1.0.0 → 1.1.0 변경 지점](https://github.com/thisis-joe/skills/blob/v1.1.0/docs/coco-1.0.0-to-1.1.0.md)에 수정한 지침, 변경 전후 예시와 검증 방법을 정리했습니다.
 
 사용할 프로젝트 폴더에서 런타임에 맞는 명령을 실행합니다.
 
 ```sh
 # Claude Code
-npx --yes @thisis-joe/coco-skills@1.0.0 install --runtime claude
+npx --yes @thisis-joe/coco-skills@1.1.0 install --runtime claude
 
 # Codex
-npx --yes @thisis-joe/coco-skills@1.0.0 install --runtime codex
+npx --yes @thisis-joe/coco-skills@1.1.0 install --runtime codex
 ```
 
-1.0.0에서는 터미널에서 설치 위치를 고를 수 있습니다. 설치 후 해당 프로젝트에서 **새 세션**을 여세요. Claude Code는 `/`, Codex는 `$`로 스킬을 호출합니다.
+터미널에서 설치 위치를 고를 수 있습니다. 기존 설치도 같은 명령으로 업데이트합니다. 설치 후 해당 프로젝트에서 **새 세션**을 여세요. Claude Code는 `/`, Codex는 `$`로 스킬을 호출합니다.
 
 ```text
 /coco-start 주문 취소 기능을 만들려고 해. 진행 순서를 정해줘
@@ -46,20 +46,20 @@ python3 scripts/install.py --runtime claude --project /path/to/your-project
 <details>
 <summary>설치 위치 · 업데이트 · 제거</summary>
 
-아래 명령은 **1.0.0 기준**입니다. `claude` 대신 `codex`를 지정하면 Codex에 적용됩니다.
+아래 명령은 **1.1.0 기준**입니다. `claude` 대신 `codex`를 지정하면 Codex에 적용됩니다.
 
 ```sh
 # 현재 프로젝트에 설치하거나 업데이트
-npx --yes @thisis-joe/coco-skills@1.0.0 install --runtime claude --project .
+npx --yes @thisis-joe/coco-skills@1.1.0 install --runtime claude --project .
 
 # 모든 프로젝트에서 사용
-npx --yes @thisis-joe/coco-skills@1.0.0 install --runtime claude --global
+npx --yes @thisis-joe/coco-skills@1.1.0 install --runtime claude --global
 
 # 프로젝트로 옮기면서 기존 글로벌 설치 제거
-npx --yes @thisis-joe/coco-skills@1.0.0 install --runtime claude --project . --remove-global
+npx --yes @thisis-joe/coco-skills@1.1.0 install --runtime claude --project . --remove-global
 
 # 현재 프로젝트에서 제거
-npx --yes @thisis-joe/coco-skills@1.0.0 uninstall --runtime claude --project .
+npx --yes @thisis-joe/coco-skills@1.1.0 uninstall --runtime claude --project .
 ```
 
 | 런타임 | 프로젝트 설치 | 글로벌 설치 |
@@ -79,7 +79,17 @@ npx --yes @thisis-joe/coco-skills@1.0.0 uninstall --runtime claude --project .
 
 </details>
 
-## 기능 하나를 진행하는 네 단계 — 1.1.0 후보
+## 1.1.0에서 바뀐 점
+
+- 처음에는 네 단계와 입문 스킬 10개를 안내합니다. 전체 29개와 전문 스킬 직접 호출은 유지합니다.
+- 아직 고르지 않은 다음 단계는 설명하고 선택받습니다. 이미 요청한 구현·리뷰·검증은 다시 승인받지 않습니다.
+- 동작 변경 전에 기존 명세와 계획을 읽고, 결과를 바꿀 미정 선택만 구체적으로 묻습니다. 구현 중 새 제약을 발견해도 합의한 요구사항을 임의로 줄이지 않습니다.
+- 프로젝트의 브랜치 규칙을 따릅니다. Jira가 없는 프로젝트에 티켓을 요구하지 않으며, 커밋 전 직접 리뷰도 가능합니다.
+- 완료 보고에 처음 예상·실제 선택·달라진 이유를 남깁니다. 구현 완료, 리뷰 대기, 필수 실행 검증 대기를 구분합니다.
+
+설치 명령과 스킬 이름은 그대로입니다. 모델의 기능·속도 우위를 약속하는 변경이 아닙니다. 사용자가 정한 개발 절차와 확인 근거를 일관되게 남기는 데 목적이 있습니다.
+
+## 기능 하나를 진행하는 네 단계
 
 
 COCO는 합의한 동작을 작은 변경으로 구현하고 실제 실행 근거로 완료를
@@ -109,7 +119,7 @@ COCO는 합의한 동작을 작은 변경으로 구현하고 실제 실행 근�
 
 구현 커밋만 있으면 “구현 완료·리뷰 대기”입니다. 필수 실행 확인이 불가능하면
 “실행 검증 대기”이며 개발 완료라고 하지 않습니다. 독립 리뷰의 한계와 실행
-검증 누락도 구분합니다. [명세](docs/specs/staged-development.md)와
+검증 누락도 구분합니다. [명세](https://github.com/thisis-joe/skills/blob/v1.1.0/docs/specs/staged-development.md)와
 [공통 흐름](skills/_coco-shared/workflow.md)에 전체 기준이 있습니다.
 
 `coco-push`는 요청한 동기화·푸시 후 열린 요청이 없으면 개발 브랜치 대상 draft

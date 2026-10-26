@@ -1,0 +1,201 @@
+
+> @thisis-joe/coco-skills@1.1.0 prepack
+> npm run check
+
+
+> @thisis-joe/coco-skills@1.1.0 check
+> npm run validate && npm test
+
+
+> @thisis-joe/coco-skills@1.1.0 validate
+> node bin/coco-skills.cjs validate
+
+
+> @thisis-joe/coco-skills@1.1.0 test
+> python3 -m unittest discover -s tests -v
+
+test_actual_thread_start_commits_fact_delivery_once (test_collaboration_driver.OwnerBoundaryTests) ... ok
+test_changed_collision_fact_does_not_reinstate_obsolete_stored_row_policy (test_collaboration_driver.OwnerBoundaryTests) ... ok
+test_classifier_requires_verbatim_question_and_rejects_unknown_topics (test_collaboration_driver.OwnerBoundaryTests) ... ok
+test_lifecycle_resume_result_is_recorded_without_aliasing_outcome_as_snapshot (test_collaboration_driver.OwnerBoundaryTests) ... ok
+test_only_asked_facts_are_released_and_launch_failure_is_not_delivery (test_collaboration_driver.OwnerBoundaryTests) ... ok
+test_pending_product_question_precedes_quality_correction (test_collaboration_driver.OwnerBoundaryTests) ... ok
+test_public_resume_questions_get_real_contract_without_future_initial_leak (test_collaboration_driver.OwnerBoundaryTests) ... ok
+test_scheduled_trial_question_does_not_block_ready_checkpoint (test_collaboration_driver.OwnerBoundaryTests) ... ok
+test_summary_correction_does_not_disclose_unrelated_hidden_facts (test_collaboration_driver.OwnerBoundaryTests) ... ok
+test_actual_owner_data_loss_fails_even_when_external_probe_databases_pass (test_collaboration_lifecycle.LifecycleObserverTests) ... ok
+test_clean_reference_passes_every_phase_for_all_five_owner_profiles (test_collaboration_lifecycle.LifecycleObserverTests) ... ok
+test_original_seed_fails_the_real_import_milestone (test_collaboration_lifecycle.LifecycleObserverTests) ... ok
+test_reapplying_an_old_batch_is_detected_and_clean_restore_passes (test_collaboration_lifecycle.LifecycleObserverTests) ... ok
+test_wrong_identity_is_detected_for_fold_and_exact_profiles_then_restored (test_collaboration_lifecycle.LifecycleObserverTests) ... ok
+test_wrong_zero_policy_is_detected_in_both_directions_then_restored (test_collaboration_lifecycle.LifecycleObserverTests) ... ok
+test_base_is_valid_and_proposed_patch_is_a_real_git_diff (test_collaboration_review.ReviewFixtureTests) ... ok
+test_paired_projects_are_identical_without_hidden_observer_or_hints (test_collaboration_review.ReviewFixtureTests) ... ok
+test_repaired_control_passes_identical_public_checks_and_preserves_notes (test_collaboration_review.ReviewFixtureTests) ... ok
+test_seed_is_green_but_observer_reproduces_three_root_defects (test_collaboration_review.ReviewFixtureTests) ... ok
+test_changed_original_instruction_is_detected (test_context_loading.ContextLoadingTests) ... ok
+test_directly_opened_module_must_lead_back_to_its_core (test_context_loading.ContextLoadingTests) ... ok
+test_duplicate_original_in_an_unrelated_document_is_detected (test_context_loading.ContextLoadingTests) ... ok
+test_duplicate_section_in_router_is_detected (test_context_loading.ContextLoadingTests) ... ok
+test_missing_module_is_detected (test_context_loading.ContextLoadingTests) ... ok
+test_module_relative_links_are_checked_from_their_new_owner (test_context_loading.ContextLoadingTests) ... ok
+test_only_the_router_may_add_a_mode_selection_section (test_context_loading.ContextLoadingTests) ... ok
+test_original_core_order_is_preserved (test_context_loading.ContextLoadingTests) ... ok
+test_original_core_section_cannot_move_to_a_different_owner (test_context_loading.ContextLoadingTests) ... ok
+test_original_sections_are_preserved_once_and_reassemble_exactly (test_context_loading.ContextLoadingTests) ... ok
+test_router_must_link_to_every_module_in_its_selection_section (test_context_loading.ContextLoadingTests) ... ok
+test_router_preamble_cannot_change_during_extraction (test_context_loading.ContextLoadingTests) ... ok
+test_loading_guidance_reduces_frozen_overhead_by_at_least_half (test_guidance_compaction.GuidanceCompactionTests) ... ok
+test_measurement_does_not_discount_whitespace_or_multibyte_text (test_guidance_compaction.GuidanceCompactionTests) ... ok
+test_removing_a_direct_entry_guard_cannot_pass_the_budget_gate (test_guidance_compaction.GuidanceCompactionTests) ... ok
+test_always_read_guidance_stays_within_budget (test_hot_path_budget.HotPathBudgetTests) ... ok
+test_crlf_checkout_counts_the_same (test_hot_path_budget.HotPathBudgetTests) ... ok
+test_missing_file_fails (test_hot_path_budget.HotPathBudgetTests) ... ok
+test_active_skills_route_learning_and_documents_separately (test_learn_notes.LearnNoteTests) ... ok
+test_budget_violations_point_to_the_offending_part (test_learn_notes.LearnNoteTests) ... ok
+test_documented_limits_match_the_checker (test_learn_notes.LearnNoteTests) ... ok
+test_documented_template_and_example_pass_together (test_learn_notes.LearnNoteTests) ... ok
+test_index_lists_each_note_once_and_titles_stay_unique (test_learn_notes.LearnNoteTests) ... ok
+test_long_note_must_be_split (test_learn_notes.LearnNoteTests) ... ok
+test_missing_or_malformed_template_is_a_usage_error (test_learn_notes.LearnNoteTests) ... ok
+test_renamed_reordered_or_extra_sections_fail (test_learn_notes.LearnNoteTests) ... ok
+test_summary_status_dates_and_links_are_checked (test_learn_notes.LearnNoteTests) ... ok
+test_title_ending_in_hash_is_not_a_closing_sequence (test_learn_notes.LearnNoteTests) ... ok
+test_translated_labels_pass_and_list_notes_to_reread (test_learn_notes.LearnNoteTests) ... ok
+test_both_dev_and_develop_need_an_explicit_integration_base (test_merge_preflight.MergePreflightTests) ... ok
+test_branch_already_in_the_target_has_nothing_to_merge (test_merge_preflight.MergePreflightTests) ... ok
+test_branch_missing_on_the_remote_blocks (test_merge_preflight.MergePreflightTests) ... ok
+test_branch_synced_with_develop_that_matches_main_is_clear (test_merge_preflight.MergePreflightTests) ... ok
+test_commit_someone_else_pushed_to_the_branch_blocks (test_merge_preflight.MergePreflightTests) ... ok
+test_conflict_with_the_target_names_the_path (test_merge_preflight.MergePreflightTests) ... ok
+test_develop_commits_carried_into_the_default_branch_block (test_merge_preflight.MergePreflightTests) ... ok
+test_forge_head_that_differs_from_the_pushed_head_blocks (test_merge_preflight.MergePreflightTests) ... ok
+test_forge_update_merge_of_the_target_is_accepted (test_merge_preflight.MergePreflightTests) ... ok
+test_pushed_branch_is_clear_and_nothing_local_changes (test_merge_preflight.MergePreflightTests) ... ok
+test_skill_documents_every_code_and_the_exit_contract (test_merge_preflight.MergePreflightTests) ... ok
+test_unpushed_local_commit_blocks (test_merge_preflight.MergePreflightTests) ... ok
+test_unusable_inputs_exit_two_rather_than_clear (test_merge_preflight.MergePreflightTests) ... ok
+test_update_merge_that_carries_extra_edits_blocks (test_merge_preflight.MergePreflightTests) ... Automatic merge went well; stopped before committing as requested
+ok
+test_archive_contains_complete_bundle_and_provenance_only (test_npm_distribution.NpmDistributionTests) ... ok
+test_claude_runtime_uses_its_config_even_with_codex_home (test_npm_distribution.NpmDistributionTests) ... ok
+test_codex_home_selects_default_destination (test_npm_distribution.NpmDistributionTests) ... ok
+test_dry_run_has_no_filesystem_effect (test_npm_distribution.NpmDistributionTests) ... ok
+test_explicit_destination_beats_runtime_and_both_config_homes (test_npm_distribution.NpmDistributionTests) ... ok
+test_foreign_skill_failure_reaches_npm_cli_without_partial_install (test_npm_distribution.NpmDistributionTests) ... ok
+test_help_version_and_unknown_command_do_not_require_python (test_npm_distribution.NpmDistributionTests) ... ok
+test_missing_python_reports_requirement_and_does_not_install (test_npm_distribution.NpmDistributionTests) ... ok
+test_npm_exec_claude_install_uses_the_published_archive (test_npm_distribution.NpmDistributionTests) ... ok
+test_npm_exec_installs_archive_without_checkout_or_registry_access (test_npm_distribution.NpmDistributionTests) ... ok
+test_project_install_replaces_global_install_and_uninstall_reaches_python (test_npm_distribution.NpmDistributionTests) ... ok
+test_python_is_discovered_without_an_explicit_override (test_npm_distribution.NpmDistributionTests) ... ok
+test_reinstall_is_unchanged_and_preserves_unrelated_skills (test_npm_distribution.NpmDistributionTests) ... ok
+test_unknown_runtime_does_not_write_either_config_directory (test_npm_distribution.NpmDistributionTests) ... ok
+test_broken_reference_and_wrong_name_are_rejected (test_package.PackageTests) ... ok
+test_claude_dry_run_does_not_create_config_directory (test_package.PackageTests) ... ok
+test_claude_explicit_project_destination_overrides_user_config (test_package.PackageTests) ... ok
+test_claude_runtime_installs_into_its_configured_skills_directory (test_package.PackageTests) ... ok
+test_claude_runtime_preserves_foreign_and_modified_skills (test_package.PackageTests) ... ok
+test_codex_and_claude_destinations_can_be_installed_independently (test_package.PackageTests) ... ok
+test_dedicated_worktree_installs_branch_version_and_preserves_starting_checkout (test_package.PackageTests) ... ok
+test_dry_run_does_not_create_destination (test_package.PackageTests) ... ok
+test_each_runtime_uses_only_its_own_config_home (test_package.PackageTests) ... ok
+test_extra_user_file_in_managed_directory_prevents_update (test_package.PackageTests) ... ok
+test_foreign_skill_conflict_prevents_all_writes (test_package.PackageTests) ... ok
+test_global_install_is_kept_with_a_warning_unless_removal_is_requested (test_package.PackageTests) ... ok
+test_installation_is_idempotent (test_package.PackageTests) ... ok
+test_installed_tampering_is_detected (test_package.PackageTests) ... ok
+test_installs_shared_contract_and_references_remain_valid (test_package.PackageTests) ... ok
+test_manifest_cannot_escape_destination (test_package.PackageTests) ... ok
+test_modified_global_install_stops_removal_before_any_project_write (test_package.PackageTests) ... ok
+test_modified_managed_file_is_preserved_on_update (test_package.PackageTests) ... ok
+test_null_device_input_is_not_a_terminal (test_package.PackageTests) ... ok
+test_other_installed_skills_are_untouched (test_package.PackageTests) ... ok
+test_project_and_removal_arguments_are_checked_before_writing (test_package.PackageTests) ... ok
+test_project_dry_run_writes_neither_files_nor_exclusions (test_package.PackageTests) ... ok
+test_project_exclusions_are_repository_relative_and_leave_user_skills_visible (test_package.PackageTests) ... ok
+test_project_install_uses_each_runtime_folder_and_stays_out_of_git_status (test_package.PackageTests) ... ok
+test_project_outside_git_installs_without_exclusions (test_package.PackageTests) ... ok
+test_remove_global_moves_an_existing_install_into_the_project (test_package.PackageTests) ... ok
+test_runtime_defaults_keep_codex_and_claude_separate (test_package.PackageTests) ... ok
+test_several_projects_install_in_one_run (test_package.PackageTests) ... ok
+test_source_checksum_and_coverage_are_verified (test_package.PackageTests) ... ok
+test_symlink_in_package_or_target_is_refused (test_package.PackageTests) ... ok
+test_terminal_prompt_asks_again_instead_of_failing_on_a_bad_answer (test_package.PackageTests) ... ok
+test_terminal_prompt_can_keep_or_choose_the_global_install (test_package.PackageTests) ... ok
+test_terminal_prompt_chooses_projects_and_confirms_global_removal (test_package.PackageTests) ... ok
+test_uninstall_removes_only_unmodified_managed_files (test_package.PackageTests) ... ok
+test_unknown_runtime_is_rejected_before_writing (test_package.PackageTests) ... ok
+test_unmodified_managed_install_can_update (test_package.PackageTests) ... ok
+test_observer_runs_on_copy_without_changing_actor_or_git (test_procedure_refinement.ProcedureRefinement) ... ok
+test_owner_reply_not_counted_if_receiving_actor_never_starts (test_procedure_refinement.ProcedureRefinement) ... ok
+test_owner_uses_final_request_and_no_earlier_question_span (test_procedure_refinement.ProcedureRefinement) ... ok
+test_proposals_only_mutate_owned_sandbox_paths (test_procedure_refinement.ProcedureRefinement) ... ok
+test_real_public_oracles_detect_wrong_output_and_restore (test_procedure_refinement.ProcedureRefinement) ... ok
+test_version_timeout_is_observed_not_driver_abort (test_procedure_refinement.ProcedureRefinement) ... ok
+test_collector_retains_missing_owner_without_erasing_other_factors (test_procedure_refinement_analysis.RefinementAnalysis) ... ok
+test_control_rejection_credits_grounded_failure_without_rewriting_scores (test_procedure_refinement_analysis.RefinementAnalysis) ... ok
+test_fallback_control_is_real_positive_then_detects_wrong_summary (test_procedure_refinement_analysis.RefinementAnalysis) ... ok
+test_null_baseline_cannot_pass_relative_preservation_gate (test_procedure_refinement_analysis.RefinementAnalysis) ... ok
+test_schema_rejects_wrong_family_bad_counts_and_duplicate_ids (test_procedure_refinement_analysis.RefinementAnalysis) ... ok
+test_unavailable_counts_and_receiver_are_not_zero_or_failure (test_procedure_refinement_analysis.RefinementAnalysis) ... ok
+test_clean_repository_returns_empty_scope (test_review_scope.ReviewScopeTests) ... ok
+test_collecting_scope_does_not_modify_git_or_files (test_review_scope.ReviewScopeTests) ... ok
+test_deleted_and_unusual_filenames_are_not_lost (test_review_scope.ReviewScopeTests) ... ok
+test_fingerprint_changes_when_reviewed_content_changes (test_review_scope.ReviewScopeTests) ... ok
+test_fingerprint_includes_staged_content_not_just_worktree (test_review_scope.ReviewScopeTests) ... ok
+test_invalid_base_and_escaping_scope_fail_clearly (test_review_scope.ReviewScopeTests) ... ok
+test_nested_collect_api_honors_root_relative_literal_filter (test_review_scope.ReviewScopeTests) ... ok
+test_nested_repository_argument_uses_root_paths_and_real_content (test_review_scope.ReviewScopeTests) ... ok
+test_reports_all_four_layers_including_untracked (test_review_scope.ReviewScopeTests) ... ok
+test_task_paths_are_literal_and_directory_scopes_work (test_review_scope.ReviewScopeTests) ... ok
+test_active_instruction_documents_have_no_hangul (test_skill_language.SkillLanguageTests) ... ok
+test_detection_includes_discovery_metadata_and_references (test_skill_language.SkillLanguageTests) ... ok
+test_local_document_heading_links_resolve (test_skill_language.SkillLanguageTests) ... ok
+test_active_text_retains_audited_source_rules (test_source_fidelity.SourceFidelityTests) ... ok
+test_conditional_only_automate_core_is_detected (test_source_fidelity.SourceFidelityTests) ... ok
+test_conditional_only_verify_core_is_detected (test_source_fidelity.SourceFidelityTests) ... ok
+test_dropped_family_stop_signals_are_detected (test_source_fidelity.SourceFidelityTests) ... ok
+test_every_addy_table_maps_to_a_family_with_stop_signals (test_source_fidelity.SourceFidelityTests) ... ok
+test_renamed_mode_without_trigger_update_is_detected (test_source_fidelity.SourceFidelityTests) ... ok
+test_repeated_mode_heading_is_detected (test_source_fidelity.SourceFidelityTests) ... ok
+test_softened_grill_mode_is_detected (test_source_fidelity.SourceFidelityTests) ... ok
+test_undiscoverable_grill_mode_is_detected (test_source_fidelity.SourceFidelityTests) ... ok
+test_unqualified_core_claim_in_router_is_detected (test_source_fidelity.SourceFidelityTests) ... ok
+test_unrouted_premise_rule_is_detected (test_source_fidelity.SourceFidelityTests) ... ok
+test_vague_advanced_pointer_is_detected (test_source_fidelity.SourceFidelityTests) ... ok
+test_copy_observer_checks_exact_result_and_preservation (test_staged_evaluation.StagedEvaluationTests) ... ok
+test_pagination_observer_rejects_real_broken_cli (test_staged_evaluation.StagedEvaluationTests) ... ok
+test_resolved_commentary_does_not_create_a_fake_user_turn (test_staged_evaluation.StagedEvaluationTests) ... ok
+test_runtime_gap_never_becomes_executed_from_html_presence (test_staged_evaluation.StagedEvaluationTests) ... ok
+test_actual_install_contains_policy_and_preserves_unrelated_file (test_staged_workflow.StagedWorkflowTests) ... ok
+test_introductory_map_is_exactly_ten_registered_skills (test_staged_workflow.StagedWorkflowTests) ... ok
+test_claude_lists_latest_distinct_skills_for_this_workspace_only (test_tellmeskill_recent.RecentSkillTests) ... ok
+test_codex_reads_only_sessions_started_in_this_workspace (test_tellmeskill_recent.RecentSkillTests) ... ok
+test_default_limit_is_three_and_unfiltered_markers_stay_identifiers (test_tellmeskill_recent.RecentSkillTests) ... ok
+test_documented_invocation_runs_against_runtime_records (test_tellmeskill_recent.RecentSkillTests) ... ok
+test_events_older_than_the_window_are_ignored (test_tellmeskill_recent.RecentSkillTests) ... ok
+test_explicit_workspace_overrides_the_current_directory (test_tellmeskill_recent.RecentSkillTests) ... ok
+test_missing_records_return_an_empty_list (test_tellmeskill_recent.RecentSkillTests) ... ok
+test_every_group_has_a_description_and_classification_criteria (test_tellmeskill_recent.SkillGroupTests) ... ok
+test_skill_links_the_group_reference_and_recent_first_flow (test_tellmeskill_recent.SkillGroupTests) ... ok
+test_interrupted_commentary_is_provisional_not_a_final_report (test_v110_collection.V110Collection) ... ok
+test_raw_completed_message_does_not_invent_missing_process_exit (test_v110_collection.V110Collection) ... ok
+test_unstarted_queue_item_is_not_an_actor_failure (test_v110_collection.V110Collection) ... ok
+test_all_profiles_pass_fail_on_policy_mutations_then_restore (test_v110_instrument.V110Instrument) ... ok
+test_blind_controls_have_real_wrong_output_and_missing_runtime (test_v110_instrument.V110Instrument) ... ok
+test_emitted_identity_answer_is_complete_and_does_not_reveal_other_choices (test_v110_instrument.V110Instrument) ... ok
+test_failed_receiving_invocation_is_not_delivered_owner_answer (test_v110_instrument.V110Instrument) ... ok
+test_known_and_unknown_sources_keep_distinct_surviving_state (test_v110_instrument.V110Instrument) ... ok
+test_nonfinal_or_fabricated_question_span_is_rejected (test_v110_instrument.V110Instrument) ... ok
+test_question_outside_known_topics_reaches_owner_as_unresolved (test_v110_instrument.V110Instrument) ... ok
+test_unanswered_topic_is_not_recorded_as_settled_on_resume (test_v110_instrument.V110Instrument) ... ok
+test_broken_product_probe_is_a_recorded_failure_not_driver_abort (test_workflow_value_v2.WorkflowValueV2Tests) ... ok
+test_observations_do_not_seed_policy_or_change_original_project (test_workflow_value_v2.WorkflowValueV2Tests) ... ok
+test_selection_contexts_with_green_test_claims_are_real (test_workflow_value_v2.WorkflowValueV2Tests) ... ok
+test_summary_observer_rejects_wrong_policy_and_detects_restoration (test_workflow_value_v2.WorkflowValueV2Tests) ... ok
+
+----------------------------------------------------------------------
+Ran 179 tests in 57.999s
+
+OK
