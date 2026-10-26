@@ -156,9 +156,17 @@ replacement, example, reason and check. F1 carries the accepted four-stage rules
 and resolves the project-conditional branch/Jira chain, bare start routing and
 direct WIP review. Existing explicit same-spec implementation/review/verification
 grants remain usable; continuous scheduling alone does not choose missing stages.
-F3 tests a narrow pre-expectation decision check in the always-read common
-contract, referenced from build and clarify, plus preservation of original and
-superseding design choices for final reports. It asks only when a real public
+F3 tests an explicit pre-test/code check in build and clarify. The shared
+workflow owns its details; the common contract links it. The existing report
+paragraph also makes original/actual/reason explicit, with original and
+superseding choices preserved for final reports. It asks only when a real public
 result depends on an unresolved material choice; it does not introduce a universal
 questionnaire. F4 determines whether that isolated repair is retained, reverted
 or needs redesign. F5 and U1 may close unchanged when no real target exists.
+
+A targeted follow-up also reapplies the same choice check when implementation
+or verification exposes a constraint changing agreed inputs, outputs or failures.
+Prefer an in-scope solution preserving the contract; otherwise ask before adopting
+a new cap/fallback in tests, code or spec. A final pending-acceptance question does
+not retroactively authorize a committed narrowed contract. This preserves C2 and
+responds to the partial native price-cap observation; it does not change its grade.

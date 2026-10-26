@@ -6,7 +6,7 @@
 
 - **비교 출발점:** 로컬 `v1.0.0` 태그의 `84a59a2`. `88d1c84`와 같은 파일 내용을 가진다. 배포된 npm 파일을 새로 검사했다는 뜻은 아니다.
 - **가져온 기존 작업:** 실험 버전 `622975e`에 작성된 네 단계 흐름. 이 흐름은 위 1.0.0 태그에는 없다.
-- **이번에 보완할 부분:** 빠진 결정을 구현 전에 찾는 위치, 최초 예상 보존과 최종 보고, 기존 호출을 방해할 수 있는 조건문.
+- **이번에 보완한 부분:** 빠진 결정을 구현 전에 찾는 위치, 구현 중 발견한 제약의 재확인, 최초 예상 보존과 최종 보고, 기존 호출을 방해할 수 있는 조건문.
 - **유지할 결정:** [38개 답변으로 정한 개발 규칙](specs/staged-development.md)과 [1.1.0 명세의 C1–C8](specs/coco-1.1.0.md). 스킬 29개와 전문 스킬의 직접 호출을 유지한다.
 
 ## 1. 처음 쓰는 사람에게 네 단계와 다음 행동을 보여준다
@@ -150,7 +150,13 @@ clarify도 기존 답을 먼저 복구하도록 연결했다.
 
 자세한 설명은 workflow에 두고 구현 진입점에서 읽도록 한다. 관련 없는 push·merge·ship 실행 때마다 읽는 공통 본문을 크게 늘리지는 않는다. 검증에서는 링크가 있는지만 확인하지 않고 build가 해당 지침을 실제로 읽고 적용했는지도 확인한다.
 
-**검증 V5:** 최소 다섯 쌍의 고정된 사례에서 실험 버전 `622975e`와 후보를 비교한다. 이미 정한 선택 복구, 새로 물어야 할 선택, 답을 얻지 못한 안전한 중지, 출력 표기까지 포함한 소유자의 완전한 답을 넣는다. 실제 잘못 채택한 정책 때문에 고친 횟수를 세고, 단순 질문 수·예상된 실패·막혀 있던 작업의 완료와 구분한다. 사용자의 선택권·절차·결과·실행 실패가 늘면 채택을 막는다. 기존에 문제가 없는 사례에서 효과가 같으면 우위를 주장하지 않는다.
+**구현 중 새 제약을 발견한 경우도 다시 확인한다.** 실제 후보 실행에서는 SQLite가 큰 정수를 저장하지 못하자, 사용자와 정하지 않은 가격 상한을 코드와 테스트에 넣고 마지막에 허락을 물었다. 완료 상태를 대기로 표시한 것은 정확했지만, 그 전에 입력 범위를 좁힌 것은 승인된 선택이 아니었다. `workflow.md`의 같은 확인 절과 build 절차 2에 다음 조건을 추가했다.
+
+> Repeat this check when implementation or verification exposes a technical constraint that would change agreed inputs, outputs or failure behavior. Preserve the agreement with an in-scope solution where possible; otherwise settle the material choice before adopting a new limit or fallback in tests, code or the contract, and keep dependent behavior pending while unanswered.
+
+예를 들어 저장 방식만 조정해서 합의한 가격 범위를 그대로 지원할 수 있으면 에이전트가 해결한다. 현재 허용된 범위 안에서 지원할 수 없다면 입력 범위를 줄일지, 저장 방식 변경을 허용할지를 정책으로 굳히기 전에 묻는다. 모든 기술적 제한을 질문으로 바꾸라는 뜻은 아니다. 합의한 동작이 달라질 때 적용한다.
+
+**검증 V5:** 최소 다섯 쌍의 고정된 사례에서 실험 버전 `622975e`와 후보를 비교한다. 이미 정한 선택 복구, 새로 물어야 할 선택, 답을 얻지 못한 안전한 중지, 출력 표기까지 포함한 소유자의 완전한 답을 넣는다. 구현 중 발견한 저장소 제한도 별도의 집중 사례로 확인한다. 실제 잘못 채택한 정책 때문에 고친 횟수를 세고, 단순 질문 수·예상된 실패·막혀 있던 작업의 완료와 구분한다. 사용자의 선택권·절차·결과·실행 실패가 늘면 채택을 막는다. 기존에 문제가 없는 사례에서 효과가 같으면 우위를 주장하지 않는다.
 
 ## 6. 처음 예상과 달라진 이유가 최종 보고에 남게 한다
 
@@ -200,7 +206,7 @@ clarify도 기존 답을 먼저 복구하도록 연결했다.
 
 ## 실제 파일에 어떻게 나누어 반영하는가
 
-| 담당하는 규칙 | 수정할 파일 |
+| 담당하는 규칙 | 수정한 파일 |
 | --- | --- |
 | 공통 원칙·질문·단계·개인 선택·출처 결정 | [contracts.md](../skills/_coco-shared/contracts.md), [workflow.md](../skills/_coco-shared/workflow.md), [routing.md](../skills/_coco-shared/routing.md), [decisions.md](../skills/_coco-shared/decisions.md) |
 | 처음 안내와 스킬 탐색 | [coco-start](../skills/coco-start/SKILL.md), [coco-tellmeskill](../skills/coco-tellmeskill/SKILL.md) |
@@ -226,3 +232,5 @@ clarify도 기존 답을 먼저 복구하도록 연결했다.
 이 문서는 **무엇을 어떻게 고칠지** 설명한다. 지켜야 하는 결과는 [명세](specs/coco-1.1.0.md), 현재 작업 상태와 커밋·검증 결과는 [작업 계획](plans/coco-1.1.0.md)이 맡는다. 같은 완료 상태를 여기에도 복사해 관리하지 않는다.
 
 기존 관찰은 [절차·인수인계 보고서 v2](evaluation/staged-development/report-v2.md), [협업 가치 보고서](evaluation/collaboration-value/report.md), [개별 개선안 비교](evaluation/procedure-refinement/report.md)에 남긴다. 새 검증은 새 후보에 대한 결과로 기록하며, 기존 실패·미확정 사례를 고쳐서 성공으로 바꾸지 않는다. 검증 V1–V8은 이 문서의 확인 항목 이름이며, 실행 전에는 통과 결과가 아니다.
+
+이번 실행에서 확인한 항목과 한계는 [작업 계획의 실제 실행 기록](plans/coco-1.1.0.md#recorded-behavior-with-evidence-limits)을 보면 된다. [비교 실험 기록](evaluation/coco-1.1.0/implementation/observations.md)은 실행 환경 오류로 끝내지 못한 사례까지 보존한다. 이 문서의 수정 항목 전체를 설명했다는 사실을, 모든 상황에서 효과가 입증됐다는 뜻으로 읽으면 안 된다.

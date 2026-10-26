@@ -93,6 +93,12 @@ leave dependent behavior pending and continue independent permitted work. This
 is not a fixed questionnaire or renewed approval for settled work; reversible
 implementation details remain the agent's choice.
 
+Repeat this check when implementation or verification exposes a technical
+constraint that would change agreed inputs, outputs or failure behavior. Preserve
+the agreement with an in-scope solution where possible; otherwise settle the
+material choice before adopting a new limit or fallback in tests, code or the
+contract, and keep dependent behavior pending while unanswered.
+
 Investigate facts yourself. A decision question names a concrete situation,
 understandable alternatives, resulting behavior/cost, and a recommended answer
 with its reason. Follow dependency-ready rounds in an explicit grill. When the
