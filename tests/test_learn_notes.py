@@ -164,6 +164,56 @@ class LearnNoteTests(unittest.TestCase):
         self.edit('INDEX.md', '[원자적 파일 교체]', '[C# 원자적 교체]')
         self.assertIn('OK: 2 notes', self.check())
 
+    def test_markdown_links_in_fenced_examples_are_literal_text(self):
+        self.edit('notes/atomic-replace.md', '## 예시\n',
+                  '## 예시\n\n```markdown\n[example](literal-example.md)\n```\n')
+        self.assertIn('OK: 2 notes', self.check())
+
+    def test_inline_code_links_are_literal_but_real_links_still_fail(self):
+        self.edit('notes/atomic-replace.md', '## 예시\n',
+                  '## 예시\n\nWrite `[label](literal-example.md)` as Markdown syntax.\n')
+        self.assertIn('OK: 2 notes', self.check())
+        self.edit('notes/atomic-replace.md', '(staging-install.md)', '(missing.md)')
+        self.edit('notes/atomic-replace.md', '[staging-install]', '[`staging-install`]')
+        self.assertIn('broken link: missing.md', self.check(expect=1))
+
+    def test_long_and_tilde_fences_keep_inner_markers_as_example_content(self):
+        for opening, closing in [('````markdown', '````'), ('~~~markdown', '~~~')]:
+            with self.subTest(fence=opening):
+                original = korean_note('원자적 파일 교체', 'staging-install')
+                example = ('\n' + opening + '\n```text\n## literal heading\n'
+                           '[literal](literal-target.md)\n```\n' + closing + '\n')
+                self.write('notes/atomic-replace.md', original.replace('## 예시\n', '## 예시\n' + example))
+                self.assertIn('OK: 2 notes', self.check())
+
+    def test_index_code_sample_cannot_replace_a_real_note_entry(self):
+        entry = '- [스테이징 설치](notes/staging-install.md) — 폴더 단위 교체\n'
+        self.edit('INDEX.md', entry, '```markdown\n' + entry + '```\n')
+        self.assertIn('notes/staging-install.md is listed 0 times', self.check(expect=1))
+
+    def test_related_code_sample_does_not_satisfy_required_link(self):
+        self.edit('notes/atomic-replace.md', '[staging-install](staging-install.md)',
+                  '`[staging-install](staging-install.md)`')
+        self.assertIn('related bullet needs a link', self.check(expect=1))
+
+    def test_only_unescaped_backticks_open_code_spans(self):
+        for count in (1, 2, 3):
+            with self.subTest(backslashes=count):
+                example = '\\' * count + '` [example](missing.md) `'
+                note = korean_note('원자적 파일 교체', 'staging-install')
+                self.write('notes/atomic-replace.md', note.replace('## 예시\n', '## 예시\n' + example + '\n'))
+                output = self.check(expect=1 if count % 2 else 0)
+                self.assertIn('broken link: missing.md' if count % 2 else 'OK: 2 notes', output)
+        self.write('notes/atomic-replace.md', note.replace('## 예시\n',
+                   '## 예시\n` [literal](missing.md) \\`\n'))
+        self.assertIn('OK: 2 notes', self.check())
+
+    def test_backticks_in_link_destinations_stay_in_the_real_target(self):
+        self.edit('notes/atomic-replace.md', '(staging-install.md)', '(literal`file`.txt)')
+        self.assertIn('broken link: literal`file`.txt', self.check(expect=1))
+        self.write('notes/literal`file`.txt', 'Referenced file.\n')
+        self.assertIn('OK: 2 notes', self.check())
+
     def test_missing_or_malformed_template_is_a_usage_error(self):
         self.edit('TEMPLATE.md', '## 관련\n', '')
         self.assertIn('template needs exactly 5 level-two sections, found 4',
