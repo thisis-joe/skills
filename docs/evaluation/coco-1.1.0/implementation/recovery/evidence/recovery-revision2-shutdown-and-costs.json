@@ -1,0 +1,109 @@
+{
+  "ended_utc": "2026-10-26T10:31:11.958907+00:00",
+  "native_calls": 6,
+  "calls": [
+    {
+      "path": "availability-control/turn-1.json",
+      "pid": 77836,
+      "state": "completed",
+      "exit": 0,
+      "seconds": 6.445,
+      "usage": {
+        "input_tokens": 16047,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 44,
+        "reasoning_output_tokens": 0,
+        "status": "recorded"
+      }
+    },
+    {
+      "path": "records/ceb12709bd3c/turn-1.json",
+      "pid": 78036,
+      "state": "completed",
+      "exit": 0,
+      "seconds": 29.876,
+      "usage": {
+        "input_tokens": 83858,
+        "cached_input_tokens": 52864,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 644,
+        "reasoning_output_tokens": 43,
+        "status": "recorded"
+      }
+    },
+    {
+      "path": "records/ceb12709bd3c/turn-2.json",
+      "pid": 78490,
+      "state": "completed",
+      "exit": 0,
+      "seconds": 134.945,
+      "usage": {
+        "input_tokens": 534085,
+        "cached_input_tokens": 481664,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5679,
+        "reasoning_output_tokens": 226,
+        "status": "recorded"
+      }
+    },
+    {
+      "path": "records/ceb12709bd3c/turn-3.json",
+      "pid": 79747,
+      "state": "interrupted",
+      "exit": 1,
+      "seconds": 19.432,
+      "usage": {
+        "status": "unavailable",
+        "reason": "no turn.completed usage event"
+      }
+    },
+    {
+      "path": "records/ceb12709bd3c/owner/turn-3.json",
+      "pid": 78270,
+      "state": "completed",
+      "exit": 0,
+      "seconds": 7.234,
+      "usage": {
+        "input_tokens": 16201,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 133,
+        "reasoning_output_tokens": 0,
+        "status": "recorded"
+      }
+    },
+    {
+      "path": "records/ceb12709bd3c/owner/turn-5.json",
+      "pid": 78962,
+      "state": "completed",
+      "exit": 0,
+      "seconds": 5.392,
+      "usage": {
+        "input_tokens": 16139,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 8,
+        "reasoning_output_tokens": 0,
+        "status": "recorded"
+      }
+    }
+  ],
+  "owned_pids_absent": true,
+  "ps_stdout": "  PID  PPID STAT COMMAND\n",
+  "leader_and_group_cleanup": "Interrupted turn 3 native receipt confirms leader exited after SIGINT and owned group absent. Descendants separately unverified.",
+  "post_stop_project_state_equals_checkpoint_2": true,
+  "started_projects": 1,
+  "stable_trials": 0,
+  "candidate_actors": 0,
+  "not_admitted": 11,
+  "matched_pairs": 0,
+  "comparison_status": "blocked_external_native_capacity",
+  "oracle_repair_validated": true,
+  "provider_retry_at_utc": "2026-10-26T10:28:40.338534Z",
+  "provider_retry_seconds": 340.999900833,
+  "retry_not_scheduled": true,
+  "all_primary_wall_seconds": 245.378972,
+  "native_elapsed_sum_seconds": 203.324,
+  "pacing_sum_seconds": 47.586
+}
