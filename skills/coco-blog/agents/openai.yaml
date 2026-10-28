@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-blog"
+  short_description: "Evidence-backed developer posts and publication preparation"
+  default_prompt: "Use $coco-blog for the current request and provide its required result."

@@ -12,6 +12,8 @@
 
 팀 요청으로 기존 `coco-document`를 공식 프로젝트 문서용 [coco-docs](../skills/coco-docs/SKILL.md)와 개인 학습용 [coco-learn](../skills/coco-learn/SKILL.md)으로 나눴습니다. matt·pstack의 `teach`와 pstack의 `bro`는 `coco-learn`으로, 나머지 문서 원본은 `coco-docs`로 옮겼고 `sources/coverage.json`에서는 `family`와 `implemented_references`만 바꿨습니다. 학습 노트의 고정 양식·분량 제한·검사 도구는 원본에서 유래하지 않은 팀 규칙이며, 선택 이유는 [결정 기록](../skills/_coco-shared/decisions.md)에 남깁니다.
 
+[coco-blog](../skills/coco-blog/SKILL.md) is a team-authored procedure for public developer writing and publication preparation, grounded in the team-agreed writing and publication workflow. It does not introduce an upstream snapshot or coverage claim; `sources/manifest.json` and `sources/coverage.json` remain unchanged. Its request ownership, content-base isolation and evidence rules are recorded in the [decision record](../skills/_coco-shared/decisions.md).
+
 | 출처 | 원본 | 통합 절차 | 처리 |
 |---|---|---|---|
 | matt | [skills/engineering/ask-matt](../sources/matt/skills/engineering/ask-matt/SKILL.md.source) | [coco-start](../skills/coco-start/SKILL.md) | adapted |

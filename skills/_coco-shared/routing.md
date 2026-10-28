@@ -28,6 +28,7 @@ Start ordinary discovery with the ten skills in four stages in the [workflow](wo
 | Logs, metrics, traces or operational diagnosis | observe | Useful signals and alerts, bounded cardinality and verified incident visibility |
 | CI, recurring automation, bots or reusable verification helpers | automate | Idempotent scoped automation, tests and explicit activation boundary |
 | PR preparation or release readiness | ship | Evidence-backed ready/blocked decision, release/rollback steps; deployment state separately |
+| Public developer blog post, local TIL selection, editorial revision or publication preparation | blog | Reader-facing draft with supported claims, repository-native checks and a scope-correct publication handoff |
 | ADR, README, API reference, guide, runbook, agent instructions or prose for other readers | docs | Convention-following project document with verified commands, links and examples |
 | Explanation for the user's own understanding, personal study notes or a learning workspace | learn | Plain explanation or short uniform notes that pass the note checker |
 | Context window, handoff, recall or long-run decision trail | context | Compact resumable packet and resolvable evidence pointers |
