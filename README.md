@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/@thisis-joe/coco-skills)](https://www.npmjs.com/package/@thisis-joe/coco-skills)
 
-Codex와 Claude Code에서 쓰는 개발 스킬 29개. 중요한 동작은 사용자가 결정하고, 에이전트는 명세·구현·실행 근거를 남겨 다음 작업자가 이어받을 수 있게 합니다.
+Codex와 Claude Code에서 쓰는 개발 스킬 30개. 중요한 동작은 사용자가 결정하고, 에이전트는 명세·구현·실행 근거를 남겨 다음 작업자가 이어받을 수 있게 합니다.
 
 ## 시작하기
 
@@ -79,6 +79,10 @@ npx --yes @thisis-joe/coco-skills@1.1.0 uninstall --runtime claude --project .
 
 </details>
 
+## Public developer posts
+
+The source catalog includes [coco-blog](skills/coco-blog/SKILL.md) for selecting development notes, drafting evidence-backed public articles, and preparing the consumer repository's publication workflow. It discovers project-specific rules at execution; commit/push requests do not imply PR/MR creation. This source addition does not itself release a package or install user configuration.
+
 ## 1.1.0에서 바뀐 점
 
 - 처음에는 네 단계와 입문 스킬 10개를 안내합니다. 전체 29개와 전문 스킬 직접 호출은 유지합니다.
@@ -147,7 +151,7 @@ coco-clarify → coco-spec → coco-plan → coco-build → coco-review → coco
 | 구현·개선 | `coco-build`, `coco-debug`, `coco-simplify`, `coco-migrate` |
 | 검증·전문 검토 | `coco-review`, `coco-verify`, `coco-security`, `coco-performance`, `coco-frontend` |
 | 운영·배포 | `coco-observe`, `coco-automate`, `coco-push`, `coco-merge`, `coco-ship` |
-| 문서·학습·협업 | `coco-docs`, `coco-learn`, `coco-askme`, `coco-context`, `coco-retro`, `coco-triage`, `coco-updateskill` |
+| 문서·학습·협업 | `coco-docs`, `coco-blog`, `coco-learn`, `coco-askme`, `coco-context`, `coco-retro`, `coco-triage`, `coco-updateskill` |
 
 각 스킬의 절차는 [스킬 원본](skills), 선택 기준은 [작업별 안내](skills/_coco-shared/routing.md)에 있습니다. 외부 서비스 연결과 권한이 필요한 작업은 해당 환경이 준비되어 있어야 합니다.
 
