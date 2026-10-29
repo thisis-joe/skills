@@ -1,5 +1,9 @@
 # COCO 공개 배포
 
+## 1.4.0 source version
+
+Version `1.4.0` unifies session-topic exploration, evidence-backed answers and opt-in quizzes under coco-askme, retaining coco-research as a compatibility alias and all 1.3.0 TIL/platform fixes. See [migration and recovery](coco-1.4.0.md). Publication is authorized but is complete only after the exact inspected tarball is in the registry and fresh-cache runtime installs validate. Package source and GitHub state are not publication receipts. The package excludes Python caches even when the standing tests create them.
+
 ## 1.3.0 source version
 
 Version `1.3.0` replaces coco-learn with coco-til. Session capture selects at most three concepts per topic and stores notes in the primary checkout, including recorded separate-metadata configurations. The existing note schema and checker remain unchanged. The installer removes the managed old skill and installs the new identifier; update Codex and Claude separately. See [migration and verification](coco-1.3.0.md). The user authorized npm version `1.3.0`; registry installation examples now target that version. Source preparation and Git merging alone do not imply publication: verify registry metadata and the exact packed archive before reporting it published.
