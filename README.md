@@ -8,16 +8,16 @@ Codex와 Claude Code에서 쓰는 개발 스킬 30개. 중요한 동작은 사�
 
 Node.js 22 이상과 Python 3.9 이상이 필요합니다. 사용할 에이전트는 별도로 설치하고 로그인하세요.
 
-소스 버전은 **1.3.0**이며, `coco-learn`을 `coco-til`로 교체했습니다. [1.3.0 변경·이전 안내](docs/coco-1.3.0.md)를 확인하세요. npm 게시 확인 전까지 아래 명령은 **기존에 게시된 1.2.0**을 설치합니다. 새 `coco-til`은 아래 소스 설치 방법으로 사용할 수 있습니다. [1.0.0 → 1.1.0 변경 지점](https://github.com/thisis-joe/skills/blob/v1.1.0/docs/coco-1.0.0-to-1.1.0.md)에 수정한 지침, 변경 전후 예시와 검증 방법을 정리했습니다.
+이번 버전은 **1.3.0**이며, `coco-learn`을 `coco-til`로 교체했습니다. 아래 npm 설치 명령은 **1.3.0용**입니다. [변경·이전 안내](docs/coco-1.3.0.md)를 확인하세요. [1.0.0 → 1.1.0 변경 지점](https://github.com/thisis-joe/skills/blob/v1.1.0/docs/coco-1.0.0-to-1.1.0.md)에 수정한 지침, 변경 전후 예시와 검증 방법을 정리했습니다.
 
 사용할 프로젝트 폴더에서 런타임에 맞는 명령을 실행합니다.
 
 ```sh
 # Claude Code
-npx --yes @thisis-joe/coco-skills@1.2.0 install --runtime claude
+npx --yes @thisis-joe/coco-skills@1.3.0 install --runtime claude
 
 # Codex
-npx --yes @thisis-joe/coco-skills@1.2.0 install --runtime codex
+npx --yes @thisis-joe/coco-skills@1.3.0 install --runtime codex
 ```
 
 터미널에서 설치 위치를 고를 수 있습니다. 기존 설치도 같은 명령으로 업데이트합니다. 설치 후 해당 프로젝트에서 **새 세션**을 여세요. Claude Code는 `/`, Codex는 `$`로 스킬을 호출합니다.
@@ -46,20 +46,20 @@ python3 scripts/install.py --runtime claude --project /path/to/your-project
 <details>
 <summary>설치 위치 · 업데이트 · 제거</summary>
 
-아래 명령은 **1.2.0 기준**입니다. `claude` 대신 `codex`를 지정하면 Codex에 적용됩니다.
+아래 명령은 **1.3.0 기준**입니다. `claude` 대신 `codex`를 지정하면 Codex에 적용됩니다.
 
 ```sh
 # 현재 프로젝트에 설치하거나 업데이트
-npx --yes @thisis-joe/coco-skills@1.2.0 install --runtime claude --project .
+npx --yes @thisis-joe/coco-skills@1.3.0 install --runtime claude --project .
 
 # 모든 프로젝트에서 사용
-npx --yes @thisis-joe/coco-skills@1.2.0 install --runtime claude --global
+npx --yes @thisis-joe/coco-skills@1.3.0 install --runtime claude --global
 
 # 프로젝트로 옮기면서 기존 글로벌 설치 제거
-npx --yes @thisis-joe/coco-skills@1.2.0 install --runtime claude --project . --remove-global
+npx --yes @thisis-joe/coco-skills@1.3.0 install --runtime claude --project . --remove-global
 
 # 현재 프로젝트에서 제거
-npx --yes @thisis-joe/coco-skills@1.2.0 uninstall --runtime claude --project .
+npx --yes @thisis-joe/coco-skills@1.3.0 uninstall --runtime claude --project .
 ```
 
 | 런타임 | 프로젝트 설치 | 글로벌 설치 |
@@ -86,7 +86,7 @@ npx --yes @thisis-joe/coco-skills@1.2.0 uninstall --runtime claude --project .
 - 노트 형식·분량 제한·검사기는 유지합니다. 같은 개념은 기존 노트를 갱신하며, 새 정보가 없으면 내용과 날짜를 바꾸지 않습니다. 남길 개념이 없으면 파일을 만들지 않습니다.
 - 기존 설명·복습·장기 강의 모드는 제거합니다. 질문으로 이해도를 점검하려면 `coco-askme`, 근거를 조사하려면 `coco-research`를 사용합니다. 기존 노트는 보존하며, 추가 worktree의 노트를 옮길 때 충돌하는 내용은 덮어쓰지 않습니다.
 
-소스에서 설치·업데이트한 뒤 새 세션에서 실행하세요. 지원 설치기는 기존 `coco-learn`을 제거하고 `coco-til`을 등록합니다. 두 런타임을 사용한다면 각각 업데이트해야 합니다.
+위 npm 명령이나 소스 설치기로 업데이트한 뒤 새 세션에서 실행하세요. 지원 설치기는 기존 `coco-learn`을 제거하고 `coco-til`을 등록합니다. 두 런타임을 사용한다면 각각 업데이트해야 합니다.
 
 ```text
 /coco-til

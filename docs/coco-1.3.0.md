@@ -15,7 +15,7 @@ TIL storage in Git repositories belongs to the primary checkout, independent of 
 
 ## Installation and publication boundary
 
-This is the `1.3.0` source version. Remote branch publication and main merging are separate from npm publication; no registry publication is asserted here. Until npm publication is confirmed, use the source installer for this version; README's registry examples remain on the published `1.2.0`.
+The user authorized version `1.3.0` for both Git integration and npm publication. README registry examples target this version. Remote branch publication, main merging and npm publication are distinct results; release completion requires registry metadata/integrity readback and fresh-cache installation of the verified archive. The following source commands remain an alternative to npm.
 
 From this source checkout:
 
@@ -29,3 +29,5 @@ Use existing explicit global/custom destinations when updating such installation
 ## Evidence
 
 [Implementation and P2 regression evidence](evaluation/coco-til-capture.md) records real repository resolution, note-format preservation and installer tests. After integrating main at `dd28983`, package validation and all 207 unit tests passed (69.263 seconds). The archive tests exercise the packed CLI and both runtime installers, and assert that the 1.3.0 release notes and new resolver are included while the old skill is absent. Tests validate resolver behavior and layout, while concept selection remains agent judgment. Direct review is not an independent model evaluation. Original source snapshots and essential rules remain preserved, with team overrides explicitly recorded.
+
+CI archive correction: package file exclusions keep Python caches out even when present. An isolated contaminated-package regression and all 208 standing tests passed without bytecode suppression. Space-path resolution remains cross-platform; newline filenames are additionally tested on POSIX.

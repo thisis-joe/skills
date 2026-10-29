@@ -70,3 +70,25 @@ notes/resolver and absence of the old skill. No dependency changes were introduc
 Direct diff review checked both sides of the integration conflict, package
 contents and the README publication boundary; independent review remains unavailable.
 Forge check/merge/readback are pending at this preparation snapshot.
+
+## CI packaging correction and npm scope
+
+The first PR run at `8a78ca6` failed Linux Python 3.9 and current Python because
+ordinary discovery imported the resolver before npm packaging and generated
+`skills/coco-til/tools/__pycache__/resolve_workspace.*.pyc`. Earlier local `-B`
+runs suppressed that side effect and did not establish the standing CI path.
+An isolated contaminated-package regression failed before the fix, observing
+both a cache-directory file and a legacy `.pyc` in the archive. Explicit package
+file exclusions now remove both while retaining runtime source. All 15 npm
+archive tests passed after the fix. Standing commands without `-B` passed package
+validation and all 208 tests in 65.200 seconds. After that run, a fixture-only
+portability change retained space-path coverage on all platforms and newline
+coverage on POSIX, because Windows forbids that filename; all six resolver tests passed.
+
+The user subsequently explicitly authorized npm publication, confirming that this
+chat publishes 1.3.0 and the askme/research chat separately publishes 1.4.0.
+The earlier Git-only publication boundary is superseded for 1.3.0. README registry
+examples now target the authorized version; registry publication and fresh-cache
+readback still require actual execution before being reported complete. A summary
+of failures, fixes and shared-installation hazards was delivered to the named
+askme/research chat at the user's explicit request.

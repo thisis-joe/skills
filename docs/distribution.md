@@ -2,7 +2,7 @@
 
 ## 1.3.0 source version
 
-Version `1.3.0` replaces coco-learn with coco-til. Session capture selects at most three concepts per topic and stores notes in the primary checkout, including recorded separate-metadata configurations. The existing note schema and checker remain unchanged. The installer removes the managed old skill and installs the new identifier; update Codex and Claude separately. See [migration and verification](coco-1.3.0.md). Source preparation and Git merging do not imply npm publication; the registry commands below remain pinned to the previously published `1.2.0` until `1.3.0` publication is independently confirmed.
+Version `1.3.0` replaces coco-learn with coco-til. Session capture selects at most three concepts per topic and stores notes in the primary checkout, including recorded separate-metadata configurations. The existing note schema and checker remain unchanged. The installer removes the managed old skill and installs the new identifier; update Codex and Claude separately. See [migration and verification](coco-1.3.0.md). The user authorized npm version `1.3.0`; registry installation examples now target that version. Source preparation and Git merging alone do not imply publication: verify registry metadata and the exact packed archive before reporting it published.
 
 ## 1.2.0 published release
 
@@ -41,7 +41,7 @@ npx --yes @thisis-joe/coco-skills@latest install --runtime claude --project ./my
 npx --yes @thisis-joe/coco-skills@latest validate --installed ./my-project/.claude/skills
 npx --yes @thisis-joe/coco-skills@latest install --runtime claude --project ./my-project --remove-global
 npx --yes @thisis-joe/coco-skills@latest uninstall --runtime claude --project ./my-project
-npx --yes @thisis-joe/coco-skills@1.2.0 install --runtime codex --dest ./my-skills
+npx --yes @thisis-joe/coco-skills@1.3.0 install --runtime codex --dest ./my-skills
 ```
 
 `--project` 설치는 설치한 폴더와 설치 기록을 해당 저장소의 `.git/info/exclude`에 저장소 루트 기준 경로로 추가한다. 공유되는 `.gitignore`는 바꾸지 않는다. Git 저장소가 아니면 이 단계를 건너뛰고 `git_exclude`를 `null`로 반환한다. 홈 폴더나 글로벌 경로와 같은 위치는 프로젝트로 받지 않는다.
