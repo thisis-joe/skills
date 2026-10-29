@@ -91,9 +91,6 @@ TRIGGERS = {
         ('visual parity', 'frontend.md#Conditional visual parity'),
         ('missing browser capability', 'frontend.md#Inputs and modes'),
     ],
-    'learn': [
-        ('multi-session learning workspace', 'learn.md#Opt-in multi-session learning workspace'),
-    ],
     'migrate': [
         ('independently deployed consumers', 'migrate.md#Choose the mode'),
         ('production schema or data change', 'migrate.md#Production schema sequence'),
@@ -471,3 +468,15 @@ class SourceFidelityTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class TilAdoptionTests(unittest.TestCase):
+    def test_teaching_override_keeps_frozen_rules_and_current_owner(self):
+        rows = json.loads((ROOT / 'sources/coverage.json').read_text())['entries']
+        teaching = [r for r in rows if r['family'] == 'til']
+        self.assertEqual(len(teaching), 3)
+        for row in teaching:
+            self.assertTrue(row['essential_rules'])
+            self.assertIn('no longer adopted', row['team_override'])
+            self.assertIn('skills/coco-til/SKILL.md', row['implemented_references'])
+        self.assertFalse((ROOT / 'skills/_coco-shared/advanced/learn.md').exists())

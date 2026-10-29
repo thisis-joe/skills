@@ -1,4 +1,4 @@
-"""Run the coco-learn checker on real workspaces, including translated labels."""
+"""Run the coco-til checker on real workspaces, including translated labels."""
 from pathlib import Path
 import re
 import runpy
@@ -9,7 +9,7 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL = ROOT / 'skills/coco-learn'
+SKILL = ROOT / 'skills/coco-til'
 CHECKER = SKILL / 'tools/check_notes.py'
 FORMAT = SKILL / 'references/note-template.md'
 EXAMPLE = SKILL / 'references/example-note.md'
@@ -59,7 +59,7 @@ sources: [skills/scripts/install.py:79]
 """
 
 
-class LearnNoteTests(unittest.TestCase):
+class TilNoteTests(unittest.TestCase):
     def setUp(self):
         temp = tempfile.TemporaryDirectory()
         self.addCleanup(temp.cleanup)
@@ -233,18 +233,18 @@ class LearnNoteTests(unittest.TestCase):
         for expected in sections:
             self.assertIn(expected, text)
 
-    def test_active_skills_route_learning_and_documents_separately(self):
+    def test_active_skills_route_til_and_documents_separately(self):
         skills = ROOT / 'skills'
         stale = [str(path.relative_to(skills)) for path in skills.rglob('*.md')
                  if 'coco-document' in path.read_text(encoding='utf-8')
                  or 'document.md' in path.read_text(encoding='utf-8')]
         self.assertEqual(stale, [])
-        learn = (SKILL / 'SKILL.md').read_text(encoding='utf-8')
-        self.assertIn('(references/note-template.md)', learn)
-        self.assertIn('(tools/check_notes.py)', learn)
-        self.assertIn('`coco-docs`', learn)
+        til = (SKILL / 'SKILL.md').read_text(encoding='utf-8')
+        self.assertIn('(references/note-template.md)', til)
+        self.assertIn('(tools/check_notes.py)', til)
+        self.assertIn('`coco-docs`', til)
         docs = (skills / 'coco-docs/SKILL.md').read_text(encoding='utf-8')
-        self.assertIn('`coco-learn`', docs)
+        self.assertIn('`coco-til`', docs)
 
 
 if __name__ == '__main__':

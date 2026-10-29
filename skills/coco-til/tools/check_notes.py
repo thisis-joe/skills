@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check coco-learn notes against the workspace template, length budget and index."""
+"""Check coco-til notes against the workspace template, length budget and index."""
 import argparse
 from collections import Counter
 from datetime import date

@@ -10,7 +10,7 @@
 
 팀 요청으로 추가한 [coco-merge](../skills/coco-merge/SKILL.md)는 푸시한 PR/MR을 출시 준비 판단 없이 그 대상 브랜치에 머지하는 신규 절차입니다. 원본에서 유래한 동작이 아니므로 원본 대응과 `sources/coverage.json`은 변경하지 않습니다. 병합 큐 대기·자동 병합 예약을 머지로 보지 않는 확인 규칙은 `coco-ship`의 스택 머지 규칙을 따르며, 선택 이유는 [결정 기록](../skills/_coco-shared/decisions.md)에 남깁니다.
 
-팀 요청으로 기존 `coco-document`를 공식 프로젝트 문서용 [coco-docs](../skills/coco-docs/SKILL.md)와 개인 학습용 [coco-learn](../skills/coco-learn/SKILL.md)으로 나눴습니다. matt·pstack의 `teach`와 pstack의 `bro`는 `coco-learn`으로, 나머지 문서 원본은 `coco-docs`로 옮겼고 `sources/coverage.json`에서는 `family`와 `implemented_references`만 바꿨습니다. 학습 노트의 고정 양식·분량 제한·검사 도구는 원본에서 유래하지 않은 팀 규칙이며, 선택 이유는 [결정 기록](../skills/_coco-shared/decisions.md)에 남깁니다.
+The former personal-learning entrypoint is now [coco-til](../skills/coco-til/SKILL.md). Its 2026-10-29 team override narrows adoption to immediate session concept capture in primary-checkout TIL. Source snapshots and essential_rules remain unchanged; family, implemented references and explicit team overrides describe the current narrower adoption. See the [decision record](../skills/_coco-shared/decisions.md#session-til-capture).
 
 [coco-blog](../skills/coco-blog/SKILL.md) is a team-authored procedure for public developer writing and publication preparation, grounded in the team-agreed writing and publication workflow. It does not introduce an upstream snapshot or coverage claim; `sources/manifest.json` and `sources/coverage.json` remain unchanged. Its request ownership, content-base isolation and evidence rules are recorded in the [decision record](../skills/_coco-shared/decisions.md).
 
@@ -50,7 +50,7 @@
 | matt | [skills/productivity/grill-me](../sources/matt/skills/productivity/grill-me/SKILL.md.source) | [coco-clarify](../skills/coco-clarify/SKILL.md) | merged |
 | matt | [skills/productivity/grilling](../sources/matt/skills/productivity/grilling/SKILL.md.source) | [coco-clarify](../skills/coco-clarify/SKILL.md) | adapted |
 | matt | [skills/productivity/handoff](../sources/matt/skills/productivity/handoff/SKILL.md.source) | [coco-context](../skills/coco-context/SKILL.md) | merged |
-| matt | [skills/productivity/teach](../sources/matt/skills/productivity/teach/SKILL.md.source) | [coco-learn](../skills/coco-learn/SKILL.md) | reference |
+| matt | [skills/productivity/teach](../sources/matt/skills/productivity/teach/SKILL.md.source) | [coco-til](../skills/coco-til/SKILL.md) | reference |
 | matt | [skills/productivity/to-questionnaire](../sources/matt/skills/productivity/to-questionnaire/SKILL.md.source) | [coco-clarify](../skills/coco-clarify/SKILL.md) | adapted |
 | matt | [skills/productivity/wait-what](../sources/matt/skills/productivity/wait-what/SKILL.md.source) | [coco-clarify](../skills/coco-clarify/SKILL.md) | merged |
 | matt | [skills/productivity/writing-for-agents](../sources/matt/skills/productivity/writing-for-agents/SKILL.md.source) | [coco-docs](../skills/coco-docs/SKILL.md) | merged |
@@ -96,7 +96,7 @@
 | pstack | [pstack/skills/automate-me](../sources/pstack/pstack/skills/automate-me/SKILL.md.source) | [coco-context](../skills/coco-context/SKILL.md) | adapted |
 | pstack | [pstack/skills/benchmark-checklist](../sources/pstack/pstack/skills/benchmark-checklist/SKILL.md.source) | [coco-performance](../skills/coco-performance/SKILL.md) | merged |
 | pstack | [pstack/skills/blast-radius](../sources/pstack/pstack/skills/blast-radius/SKILL.md.source) | [coco-review](../skills/coco-review/SKILL.md) | merged |
-| pstack | [pstack/skills/bro](../sources/pstack/pstack/skills/bro/SKILL.md.source) | [coco-learn](../skills/coco-learn/SKILL.md) | merged |
+| pstack | [pstack/skills/bro](../sources/pstack/pstack/skills/bro/SKILL.md.source) | [coco-til](../skills/coco-til/SKILL.md) | merged |
 | pstack | [pstack/skills/correct](../sources/pstack/pstack/skills/correct/SKILL.md.source) | [coco-retro](../skills/coco-retro/SKILL.md) | adapted |
 | pstack | [pstack/skills/create-formal-verification-skill](../sources/pstack/pstack/skills/create-formal-verification-skill/SKILL.md.source) | [coco-verify](../skills/coco-verify/SKILL.md) | adapted |
 | pstack | [pstack/skills/create-verification-skill](../sources/pstack/pstack/skills/create-verification-skill/SKILL.md.source) | [coco-verify](../skills/coco-verify/SKILL.md) | adapted |
@@ -142,7 +142,7 @@
 | pstack | [pstack/skills/show-me-your-work](../sources/pstack/pstack/skills/show-me-your-work/SKILL.md.source) | [coco-context](../skills/coco-context/SKILL.md) | adapted |
 | pstack | [pstack/skills/swarm](../sources/pstack/pstack/skills/swarm/SKILL.md.source) | [coco-plan](../skills/coco-plan/SKILL.md) | adapted |
 | pstack | [pstack/skills/tdd](../sources/pstack/pstack/skills/tdd/SKILL.md.source) | [coco-debug](../skills/coco-debug/SKILL.md) | merged |
-| pstack | [pstack/skills/teach](../sources/pstack/pstack/skills/teach/SKILL.md.source) | [coco-learn](../skills/coco-learn/SKILL.md) | adapted |
+| pstack | [pstack/skills/teach](../sources/pstack/pstack/skills/teach/SKILL.md.source) | [coco-til](../skills/coco-til/SKILL.md) | adapted |
 | pstack | [pstack/skills/technical-writing](../sources/pstack/pstack/skills/technical-writing/SKILL.md.source) | [coco-docs](../skills/coco-docs/SKILL.md) | merged |
 | pstack | [pstack/skills/typescript-best-practices](../sources/pstack/pstack/skills/typescript-best-practices/SKILL.md.source) | [coco-build](../skills/coco-build/SKILL.md) | adapted |
 | pstack | [pstack/skills/unslop](../sources/pstack/pstack/skills/unslop/SKILL.md.source) | [coco-docs](../skills/coco-docs/SKILL.md) | merged |

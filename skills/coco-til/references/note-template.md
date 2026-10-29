@@ -11,7 +11,7 @@ A note holds one concept in a shape the learner can reread in about a minute. Ev
   notes/<slug>.md   one concept per note; slug is lowercase ASCII words joined by hyphens
 ```
 
-Workspace mode adds mission files beside these; see [learning procedures](../../_coco-shared/advanced/learn.md).
+Storage is resolved by [coco-til](../SKILL.md#resolve-durable-storage): in Git repositories this workspace is always `TIL/` in the primary checkout, never a linked worktree. The schema and limits below are unchanged by session capture.
 
 ## TEMPLATE.md
 
@@ -85,8 +85,8 @@ Start with a level-one title, then one level-two heading per topic. Each entry i
 ## Checking
 
 ```sh
-python3 <coco-learn folder>/tools/check_notes.py <workspace>
-python3 <coco-learn folder>/tools/check_notes.py <workspace>/notes/<slug>.md
+python3 <coco-til folder>/tools/check_notes.py <workspace>
+python3 <coco-til folder>/tools/check_notes.py <workspace>/notes/<slug>.md
 ```
 
 A conforming workspace exits 0 and prints the status counts and the notes to reread next. Otherwise each problem prints as `path:line: problem` and the exit code is 1; a missing or malformed `TEMPLATE.md` exits 2.

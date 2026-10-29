@@ -63,4 +63,4 @@ Recognize natural-language requests, in any language, such as: hint, I don't kno
 
 ## Examples
 
-`$coco-askme` in Codex or `/coco-askme` in Claude Code starts with scope selection. `coco-askme quiz me on connections and architecture across the current work` skips both selections. `coco-askme the selected React component, rendering principles from the basics` fixes scope and topic and starts at a foundational level. Use `coco-learn` to save what was learned as short notes, or for written lessons and learning workspaces, rather than interactive questioning.
+`$coco-askme` in Codex or `/coco-askme` in Claude Code starts with scope selection. `coco-askme quiz me on connections and architecture across the current work` skips both selections. `coco-askme the selected React component, rendering principles from the basics` fixes scope and topic and starts at a foundational level. Use `coco-til` to capture reusable session concepts as short personal notes in the primary checkout; it does not start lessons or interactive questioning.

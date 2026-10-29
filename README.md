@@ -151,7 +151,7 @@ coco-clarify → coco-spec → coco-plan → coco-build → coco-review → coco
 | 구현·개선 | `coco-build`, `coco-debug`, `coco-simplify`, `coco-migrate` |
 | 검증·전문 검토 | `coco-review`, `coco-verify`, `coco-security`, `coco-performance`, `coco-frontend` |
 | 운영·배포 | `coco-observe`, `coco-automate`, `coco-push`, `coco-merge`, `coco-ship` |
-| 문서·학습·협업 | `coco-docs`, `coco-blog`, `coco-learn`, `coco-askme`, `coco-context`, `coco-retro`, `coco-triage`, `coco-updateskill` |
+| 문서·학습·협업 | `coco-docs`, `coco-blog`, `coco-til`, `coco-askme`, `coco-context`, `coco-retro`, `coco-triage`, `coco-updateskill` |
 
 각 스킬의 절차는 [스킬 원본](skills), 선택 기준은 [작업별 안내](skills/_coco-shared/routing.md)에 있습니다. 외부 서비스 연결과 권한이 필요한 작업은 해당 환경이 준비되어 있어야 합니다.
 
