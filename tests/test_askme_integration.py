@@ -17,16 +17,16 @@ class AskmeIntegrationTests(unittest.TestCase):
             dest = Path(td) / 'skills'
             foreign = dest / 'other-skill/SKILL.md'
             foreign.parent.mkdir(parents=True)
-            foreign.write_text('unrelated user skill')
+            foreign.write_text('unrelated user skill', encoding='utf-8')
             result = install(ROOT, dest)
             self.assertEqual(result['status'], 'installed')
             info = validate_installed(dest)
             self.assertIn('coco-research', info['package']['skills'])
             self.assertIn('coco-askme', info['package']['skills'])
-            alias = (dest / 'coco-research/SKILL.md').read_text()
+            alias = (dest / 'coco-research/SKILL.md').read_text(encoding='utf-8')
             self.assertIn('(../coco-askme/SKILL.md)', alias)
             self.assertNotIn('## Procedure', alias)
-            owner = (dest / 'coco-askme/SKILL.md').read_text()
+            owner = (dest / 'coco-askme/SKILL.md').read_text(encoding='utf-8')
             for ref in ('references/quiz.md', '../_coco-shared/advanced/research.md'):
                 self.assertIn('(' + ref + ')', owner)
                 self.assertTrue((dest / 'coco-askme' / ref).is_file())
@@ -34,7 +34,7 @@ class AskmeIntegrationTests(unittest.TestCase):
                 if source.is_file() and '__pycache__' not in source.parts:
                     relative = source.relative_to(ROOT / 'skills')
                     self.assertEqual(source.read_bytes(), (dest / relative).read_bytes())
-            self.assertEqual(foreign.read_text(), 'unrelated user skill')
+            self.assertEqual(foreign.read_text(encoding='utf-8'), 'unrelated user skill')
             before = (dest / '.coco-install.json').read_bytes()
             self.assertEqual(install(ROOT, dest)['status'], 'unchanged')
             self.assertEqual(before, (dest / '.coco-install.json').read_bytes())
@@ -46,7 +46,7 @@ class AskmeIntegrationTests(unittest.TestCase):
         self.assertLessEqual(len(owner), 6052)
         alias = (ROOT / 'skills/coco-research/SKILL.md').read_bytes()
         self.assertLessEqual(len(alias), 700)
-        text = owner.decode()
+        text = owner.decode('utf-8')
         opening = text.split('## Topic orientation (wide)', 1)[1].split('## Evidence gathering', 1)[0]
         self.assertIn('at most two already identified session-linked sources', opening)
         self.assertIn('120 lines combined', opening)
@@ -54,12 +54,12 @@ class AskmeIntegrationTests(unittest.TestCase):
         self.assertIn('Whenever the menu relies on compressed or handoff context', opening)
         self.assertIn('even without recovery', opening)
         self.assertNotIn('](references/', opening)
-        quiz = (ROOT / 'skills/coco-askme/references/quiz.md').read_text()
+        quiz = (ROOT / 'skills/coco-askme/references/quiz.md').read_text(encoding='utf-8')
         self.assertIn('Never reveal the answer', quiz)
         self.assertIn('then stop and wait', quiz)
 
     def test_frozen_sources_and_research_ownership(self):
-        coverage = json.loads((ROOT / 'sources/coverage.json').read_text())
+        coverage = json.loads((ROOT / 'sources/coverage.json').read_text(encoding='utf-8'))
         expected = {('matt', 'skills/engineering/research/SKILL.md'),
                     ('addy', 'skills/source-driven-development/SKILL.md'),
                     ('pstack', 'pstack/skills/how/SKILL.md'),
