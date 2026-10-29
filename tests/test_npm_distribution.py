@@ -62,16 +62,38 @@ class NpmDistributionTests(unittest.TestCase):
         self.assertIn('THIRD_PARTY_NOTICES.md', paths)
         self.assertIn('sources/manifest.json', paths)
         self.assertIn('sources/coverage.json', paths)
+        self.assertIn('docs/coco-1.3.0.md', paths)
+        self.assertIn('skills/coco-til/tools/resolve_workspace.py', paths)
+        self.assertFalse(any(path.startswith('skills/coco-learn/') for path in paths))
         self.assertIn('skills/_coco-shared/contracts.md', paths)
         allowed_files = {'package.json', 'README.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md',
                          'coco.json', 'scripts/install.py', 'scripts/package_utils.py',
-                         'scripts/validate.py', 'docs/distribution.md', 'docs/design.md',
+                         'scripts/validate.py', 'docs/distribution.md', 'docs/coco-1.2.0.md', 'docs/coco-1.3.0.md', 'docs/design.md',
                          'docs/implementation-plan.md', 'docs/source-index.md'}
         for path in paths:
             self.assertTrue(path in allowed_files or path.startswith(
                 ('bin/', 'skills/', 'sources/')), path)
             self.assertNotIn('__pycache__', path)
         self.assertIn('Validated package:', self.run_cli('validate').stdout)
+
+    def test_archive_excludes_python_caches_even_when_present(self):
+        contaminated = self.work / 'contaminated source'
+        contaminated.mkdir()
+        shutil.copy2(ROOT / 'package.json', contaminated / 'package.json')
+        tools = contaminated / 'skills/coco-til/tools'
+        cache = tools / '__pycache__'
+        cache.mkdir(parents=True)
+        (tools / 'resolve_workspace.py').write_text('# runtime source\n', encoding='utf-8')
+        (cache / 'resolve_workspace.cpython-39.pyc').write_bytes(b'cached bytecode')
+        (tools / 'legacy.pyc').write_bytes(b'legacy bytecode')
+        result = subprocess.run(
+            [NPM, 'pack', '--ignore-scripts', '--json', '--pack-destination', str(self.work)],
+            cwd=contaminated, env=self.env, capture_output=True, text=True, encoding='utf-8')
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        paths = {item['path'] for item in json.loads(result.stdout)[0]['files']}
+        self.assertIn('skills/coco-til/tools/resolve_workspace.py', paths)
+        self.assertFalse(any('__pycache__' in path or path.endswith('.pyc') for path in paths),
+                         paths)
 
     def test_npm_exec_installs_archive_without_checkout_or_registry_access(self):
         preview = subprocess.run(

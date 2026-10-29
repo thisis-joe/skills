@@ -1,6 +1,7 @@
 """Exercise durable TIL resolution with actual primary/linked Git repositories."""
 import importlib.util
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -82,12 +83,19 @@ class TilWorkspaceTests(unittest.TestCase):
             module.resolve_workspace(self.linked)
         self.assertEqual(list(target.iterdir()), [])
 
-    def test_separate_git_dir_and_newline_path_use_git_identity(self):
-        other = self.root / 'separate\ncheckout'
-        metadata = self.root / 'metadata'
-        self.git(self.root, 'init', '--separate-git-dir', str(metadata), str(other))
-        self.assertEqual(self.resolve(other)['primary'], str(other))
-        self.assertFalse((other / 'TIL').exists())
+    def test_separate_git_dir_paths_use_git_identity(self):
+        names = ['separate checkout']
+        if os.name != 'nt':
+            # Windows forbids control characters in filenames. Keep separate
+            # metadata coverage there and exercise newline parsing on POSIX.
+            names.append('separate\ncheckout')
+        for index, name in enumerate(names):
+            with self.subTest(path=name):
+                other = self.root / name
+                metadata = self.root / ('metadata-' + str(index))
+                self.git(self.root, 'init', '--separate-git-dir', str(metadata), str(other))
+                self.assertEqual(self.resolve(other)['primary'], str(other))
+                self.assertFalse((other / 'TIL').exists())
 
     def separate_repository(self, name, relative=False):
         primary = self.root / (name + ' primary')

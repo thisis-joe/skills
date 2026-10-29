@@ -46,3 +46,60 @@ working folder. The review correction is now exercised with real repositories:
 - Direct diff/self-review checked the P2 correction and primary-only identity guard.
   No independent fresh-context review was performed. Frozen upstream sources,
   note format and selection behavior are unchanged by this fix.
+
+## 1.3.0 Git publication preparation
+
+The user authorized remote push and main merge with source version 1.3.0 and
+requested README maintenance. Integrated origin/main at `dd28983a1242ba546e5e0c7e9da6e1cbc38e4515`;
+the only conflict was the shared decision record, resolved by retaining the
+consumer publication-schema row and the session-TIL section. The blog's schema
+fix remains alongside primary-checkout note discovery. No dev/develop refs were
+present at the confirmed write remote; main is the explicitly requested target.
+
+Version, README, migration notes and the package file allowlist now describe 1.3.0.
+Registry installation examples remain pinned to the already published 1.2.0,
+because Git push/merge does not authorize or prove npm publication. No tag or
+registry publication is claimed. Rollback is a reviewed revert of the feature
+on main or an explicit-destination reinstall of the previous package; TIL remains
+personal and must be preserved separately.
+
+After integration, `python3 -B scripts/validate.py` passed and
+`python3 -B -m unittest discover -s tests -v` passed all 207 tests in 69.263 seconds.
+Archive tests validate the packed CLI, both runtime installs, the new release
+notes/resolver and absence of the old skill. No dependency changes were introduced.
+Direct diff review checked both sides of the integration conflict, package
+contents and the README publication boundary; independent review remains unavailable.
+Forge check/merge/readback are pending at this preparation snapshot.
+
+## CI packaging correction and npm scope
+
+The first PR run at `8a78ca6` failed Linux Python 3.9 and current Python because
+ordinary discovery imported the resolver before npm packaging and generated
+`skills/coco-til/tools/__pycache__/resolve_workspace.*.pyc`. Earlier local `-B`
+runs suppressed that side effect and did not establish the standing CI path.
+An isolated contaminated-package regression failed before the fix, observing
+both a cache-directory file and a legacy `.pyc` in the archive. Explicit package
+file exclusions now remove both while retaining runtime source. All 15 npm
+archive tests passed after the fix. Standing commands without `-B` passed package
+validation and all 208 tests in 65.200 seconds. After that run, a fixture-only
+portability change retained space-path coverage on all platforms and newline
+coverage on POSIX, because Windows forbids that filename; all six resolver tests passed.
+
+The user subsequently explicitly authorized npm publication, confirming that this
+chat publishes 1.3.0 and the askme/research chat separately publishes 1.4.0.
+The earlier Git-only publication boundary is superseded for 1.3.0. README registry
+examples now target the authorized version; registry publication and fresh-cache
+readback still require actual execution before being reported complete. A summary
+of failures, fixes and shared-installation hazards was delivered to the named
+askme/research chat at the user's explicit request.
+
+## Windows Python 3.9 encoding correction
+
+At head `67035f2`, Linux checks, all shell checks and Windows current Python
+passed. Windows Python 3.9 exposed one new test reading UTF-8 coverage.json
+with its default cp1252 encoding. An ASCII-default local run reproduced the
+same implicit-decoding defect (`PYTHONUTF8=0 PYTHONCOERCECLOCALE=0 LC_ALL=C
+python3 -m unittest discover -s tests -p test_source_fidelity.py -v`). Explicit
+UTF-8 reading fixes the test without changing its assertions or source facts;
+all 13 source-fidelity tests then passed in the same non-UTF-8-default run.
+Keep file encodings explicit rather than making UTF-8 mode a CI prerequisite.

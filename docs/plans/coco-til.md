@@ -19,3 +19,10 @@ Source implementation and verification completed; see [verification evidence](..
 P2 source correction, red/green regressions, 207-test suite, package validation and
 installer fixture passed; see the verification record's P2 follow-up. Installation
 readback is performed after the follow-up commit.
+
+## CI archive follow-up
+
+Reproduce cache leakage with an isolated contaminated npm package, exclude Python
+cache artifacts from the package file set, then rerun the focused archive checks
+and both standing commands without `-B`. Commit and normally push the fix; wait
+for all checks before the already authorized main merge.

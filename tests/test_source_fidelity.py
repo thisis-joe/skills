@@ -472,7 +472,7 @@ if __name__ == '__main__':
 
 class TilAdoptionTests(unittest.TestCase):
     def test_teaching_override_keeps_frozen_rules_and_current_owner(self):
-        rows = json.loads((ROOT / 'sources/coverage.json').read_text())['entries']
+        rows = json.loads((ROOT / 'sources/coverage.json').read_text(encoding='utf-8'))['entries']
         teaching = [r for r in rows if r['family'] == 'til']
         self.assertEqual(len(teaching), 3)
         for row in teaching:

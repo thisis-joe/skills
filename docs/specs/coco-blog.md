@@ -43,3 +43,15 @@ A developer starts on a feature branch derived from develop. The skill discovers
 ## Invocation-based local-note selection
 
 Support explicitly selected untracked local notes without requiring a Git source ref or candidate marker. Follow [the local-note workflow](../../skills/coco-blog/references/local-notes.md) for recent-note discovery, single/multiple selection, iterative author questions, reviewed public-only output and the author-owned draft release. Start on skill invocation; note creation must not produce a blog-writing offer. A bare invocation opens the note list, not a generic request menu.
+
+
+## 1.2.0 release preparation
+
+The follow-up request fixes the release version and generator-specific release condition, then verifies intended behavior and prompt quality. Work starts from `04507c149787c9792bfedd1cd8f1f65dd2c59a6a` on a dedicated `release/coco-1.2.0` worktree. The original creation scope and acceptance above remain historical; this follow-up authorizes maintained-source changes and local release preparation, not registry publication or modification of personal installations.
+
+- Use the consumer project's discovered draft/publication schema. Retain the draft state during drafting; an explicit author release decision permits the schema's documented public-state transition. `draft: false` is a Hugo example, never a universal field requirement.
+- Prepare package version `1.2.0` and consumer-facing release/install guidance without claiming it is already published. Preserve skill names, selection policy, authorization boundaries, source provenance and installer behavior.
+- Freeze behavior and prompt-quality criteria before execution. Exercise local-note selection, a non-Hugo draft/release path and the preserved Hugo path with isolated inputs. Judge observable actions/artifacts and also clarity, consistency, settled-context reuse, focused questions and grounded writing. No fabricated aggregate reliability or comparative performance claim.
+- Run repository validation and the complete unittest suite; inspect the npm archive, install both runtimes in temporary destinations, verify upgrade/reinstall/rollback and confirm the original checkout is unchanged. Retain exact candidate hashes and evidence limits.
+
+Implementation order: generalize the release condition and record its rationale; prepare version/guidance; freeze the scenario protocol; execute isolated behavior and independent prompt review; fix demonstrated defects; run affected checks and commit verified work units. Publication, remote branch push, PR and merge remain separate actions.

@@ -1,0 +1,91 @@
+{
+  "version": "1.2.0",
+  "runtimes": {
+    "codex": {
+      "old": {
+        "status": "installed",
+        "skills": 29,
+        "files": 118,
+        "destination": "/private/tmp/coco-1.2.0-archive-0uykd6na/codex installed with spaces"
+      },
+      "upgrade": {
+        "status": "installed",
+        "skills": 30,
+        "files": 125,
+        "destination": "/private/tmp/coco-1.2.0-archive-0uykd6na/codex installed with spaces"
+      },
+      "reinstall": {
+        "status": "unchanged",
+        "skills": 30,
+        "files": 125,
+        "destination": "/private/tmp/coco-1.2.0-archive-0uykd6na/codex installed with spaces"
+      },
+      "modified_conflict_exit": 2,
+      "rollback": {
+        "status": "installed",
+        "skills": 29,
+        "files": 118,
+        "destination": "/private/tmp/coco-1.2.0-archive-0uykd6na/codex installed with spaces"
+      },
+      "rollback_exact_restore": true,
+      "unrelated_preserved": true,
+      "source_payload_hashes_match": true
+    },
+    "claude": {
+      "old": {
+        "status": "installed",
+        "skills": 29,
+        "files": 118,
+        "destination": "/private/tmp/coco-1.2.0-archive-0uykd6na/claude installed with spaces"
+      },
+      "upgrade": {
+        "status": "installed",
+        "skills": 30,
+        "files": 125,
+        "destination": "/private/tmp/coco-1.2.0-archive-0uykd6na/claude installed with spaces"
+      },
+      "reinstall": {
+        "status": "unchanged",
+        "skills": 30,
+        "files": 125,
+        "destination": "/private/tmp/coco-1.2.0-archive-0uykd6na/claude installed with spaces"
+      },
+      "modified_conflict_exit": 2,
+      "rollback": {
+        "status": "installed",
+        "skills": 29,
+        "files": 118,
+        "destination": "/private/tmp/coco-1.2.0-archive-0uykd6na/claude installed with spaces"
+      },
+      "rollback_exact_restore": true,
+      "unrelated_preserved": true,
+      "source_payload_hashes_match": true
+    }
+  },
+  "payload_digest": "aa6df5ab4e091a40f0de40ed08cf9205ca295f80f9c7f4c268827346bd04d619",
+  "registry": {
+    "version": "1.1.0",
+    "versions": [
+      "0.0.0-stage",
+      "0.1.0",
+      "0.1.1",
+      "0.1.2",
+      "0.2.0",
+      "1.0.0",
+      "1.1.0"
+    ],
+    "dist-tags": {
+      "latest": "1.1.0"
+    }
+  },
+  "driver_repair": {
+    "initial": "An extraction guard intended for npm file-only tarballs rejected the .github directory from git archive before upgrade testing.",
+    "repair": "Accept safe directory members as well as regular files; still reject escaping members and links.",
+    "product_failure": false
+  },
+  "limits": [
+    "npm pack --ignore-scripts inspects archive; root owns full required checks/prepack validation",
+    "Temporary explicit destinations; no user installation or live native client invocation",
+    "No registry write, tag, PR, push or publish"
+  ]
+}
