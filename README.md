@@ -8,16 +8,16 @@ Codex와 Claude Code에서 쓰는 개발 스킬 30개. 중요한 동작은 사�
 
 Node.js 22 이상과 Python 3.9 이상이 필요합니다. 사용할 에이전트는 별도로 설치하고 로그인하세요.
 
-아래 npm 설치 명령은 **게시된 1.2.0 기준**입니다. [1.0.0 → 1.1.0 변경 지점](https://github.com/thisis-joe/skills/blob/v1.1.0/docs/coco-1.0.0-to-1.1.0.md)에 수정한 지침, 변경 전후 예시와 검증 방법을 정리했습니다.
+이번 버전은 **1.3.0**이며, `coco-learn`을 `coco-til`로 교체했습니다. 아래 npm 설치 명령은 **1.3.0용**입니다. [변경·이전 안내](docs/coco-1.3.0.md)를 확인하세요. [1.0.0 → 1.1.0 변경 지점](https://github.com/thisis-joe/skills/blob/v1.1.0/docs/coco-1.0.0-to-1.1.0.md)에 수정한 지침, 변경 전후 예시와 검증 방법을 정리했습니다.
 
 사용할 프로젝트 폴더에서 런타임에 맞는 명령을 실행합니다.
 
 ```sh
 # Claude Code
-npx --yes @thisis-joe/coco-skills@1.2.0 install --runtime claude
+npx --yes @thisis-joe/coco-skills@1.3.0 install --runtime claude
 
 # Codex
-npx --yes @thisis-joe/coco-skills@1.2.0 install --runtime codex
+npx --yes @thisis-joe/coco-skills@1.3.0 install --runtime codex
 ```
 
 터미널에서 설치 위치를 고를 수 있습니다. 기존 설치도 같은 명령으로 업데이트합니다. 설치 후 해당 프로젝트에서 **새 세션**을 여세요. Claude Code는 `/`, Codex는 `$`로 스킬을 호출합니다.
@@ -46,20 +46,20 @@ python3 scripts/install.py --runtime claude --project /path/to/your-project
 <details>
 <summary>설치 위치 · 업데이트 · 제거</summary>
 
-아래 명령은 **1.2.0 기준**입니다. `claude` 대신 `codex`를 지정하면 Codex에 적용됩니다.
+아래 명령은 **1.3.0 기준**입니다. `claude` 대신 `codex`를 지정하면 Codex에 적용됩니다.
 
 ```sh
 # 현재 프로젝트에 설치하거나 업데이트
-npx --yes @thisis-joe/coco-skills@1.2.0 install --runtime claude --project .
+npx --yes @thisis-joe/coco-skills@1.3.0 install --runtime claude --project .
 
 # 모든 프로젝트에서 사용
-npx --yes @thisis-joe/coco-skills@1.2.0 install --runtime claude --global
+npx --yes @thisis-joe/coco-skills@1.3.0 install --runtime claude --global
 
 # 프로젝트로 옮기면서 기존 글로벌 설치 제거
-npx --yes @thisis-joe/coco-skills@1.2.0 install --runtime claude --project . --remove-global
+npx --yes @thisis-joe/coco-skills@1.3.0 install --runtime claude --project . --remove-global
 
 # 현재 프로젝트에서 제거
-npx --yes @thisis-joe/coco-skills@1.2.0 uninstall --runtime claude --project .
+npx --yes @thisis-joe/coco-skills@1.3.0 uninstall --runtime claude --project .
 ```
 
 | 런타임 | 프로젝트 설치 | 글로벌 설치 |
@@ -78,6 +78,22 @@ npx --yes @thisis-joe/coco-skills@1.2.0 uninstall --runtime claude --project .
 세부 동작과 검증 명령은 [배포 안내](docs/distribution.md)를 참고하세요.
 
 </details>
+
+## 1.3.0에서 바뀐 점
+
+- `coco-learn`을 [coco-til](skills/coco-til/SKILL.md)로 교체합니다. 현재 세션에서 재사용할 개념을 주제별 **최대 3개** 골라 바로 작성하거나 기존 노트를 보완합니다. 개수를 채우기 위한 추가 내용이나 저장 확인 질문은 만들지 않습니다.
+- Git 저장소의 TIL은 **기본 체크아웃의 `TIL/`**에 저장합니다. 현재 브랜치 이름과 관계없으며, 추가 worktree를 삭제해도 노트가 함께 사라지지 않습니다. 별도 Git 디렉터리에서는 기록된 `core.worktree`를 확인하고, 기본 경로를 검증할 수 없으면 대체 저장하지 않습니다.
+- 노트 형식·분량 제한·검사기는 유지합니다. 같은 개념은 기존 노트를 갱신하며, 새 정보가 없으면 내용과 날짜를 바꾸지 않습니다. 남길 개념이 없으면 파일을 만들지 않습니다.
+- 기존 설명·복습·장기 강의 모드는 제거합니다. 질문으로 이해도를 점검하려면 `coco-askme`, 근거를 조사하려면 `coco-research`를 사용합니다. 기존 노트는 보존하며, 추가 worktree의 노트를 옮길 때 충돌하는 내용은 덮어쓰지 않습니다.
+
+위 npm 명령이나 소스 설치기로 업데이트한 뒤 새 세션에서 실행하세요. 지원 설치기는 기존 `coco-learn`을 제거하고 `coco-til`을 등록합니다. 두 런타임을 사용한다면 각각 업데이트해야 합니다.
+
+```text
+/coco-til
+$coco-til
+```
+
+스킬 수는 30개이며, 이번 변경은 스킬 이름과 역할을 바꿉니다. Git에서 제외한 TIL은 별도 백업되지 않으므로 기본 작업 폴더 자체의 백업은 별도로 관리하세요. `1.3.0` 소스 준비·Git 병합과 npm 게시는 별개입니다.
 
 ## 1.2.0에서 바뀐 점
 
@@ -142,7 +158,7 @@ PR/MR을 엽니다. `coco-merge`는 선택한 PR/MR의 대상 브랜치로 체�
 
 필요한 단계부터 시작하세요. 모든 작업에 전체 절차가 필요한 것은 아닙니다. 할 일과 스킬이 정해졌다면 `coco-start`를 거치지 않고 바로 호출하세요.
 
-이름만 호출했을 때 대화에서 할 일이 하나로 정해져 있으면 그 요청으로 진행하고, 그렇지 않으면 요청문 선택을 안내합니다. `coco-start`는 읽기 전용 경로 안내를, `coco-tellmeskill`, `coco-askme`, `coco-updateskill`, `coco-whattosay`는 각자의 선택 단계를 시작합니다. **`coco-push`와 `coco-merge`는 이름만 호출해도 현재 브랜치 기준으로 실행**하므로, 설명만 원하면 요청에 명시하세요.
+이름만 호출했을 때 대화에서 할 일이 하나로 정해져 있으면 그 요청으로 진행하고, 그렇지 않으면 요청문 선택을 안내합니다. `coco-start`는 읽기 전용 경로 안내를, `coco-tellmeskill`, `coco-askme`, `coco-updateskill`, `coco-whattosay`는 각자의 선택 단계를 시작합니다. `coco-til`은 이름만 호출해도 현재 세션을 TIL로 바로 기록하고, `coco-blog`는 로컬 노트 선택을 시작합니다. **`coco-push`와 `coco-merge`는 이름만 호출해도 현재 브랜치 기준으로 실행**하므로, 설명만 원하면 요청에 명시하세요.
 
 ```text
 coco-clarify → coco-spec → coco-plan → coco-build → coco-review → coco-push → coco-merge
@@ -155,7 +171,7 @@ coco-clarify → coco-spec → coco-plan → coco-build → coco-review → coco
 | 구현·개선 | `coco-build`, `coco-debug`, `coco-simplify`, `coco-migrate` |
 | 검증·전문 검토 | `coco-review`, `coco-verify`, `coco-security`, `coco-performance`, `coco-frontend` |
 | 운영·배포 | `coco-observe`, `coco-automate`, `coco-push`, `coco-merge`, `coco-ship` |
-| 문서·학습·협업 | `coco-docs`, `coco-blog`, `coco-learn`, `coco-askme`, `coco-context`, `coco-retro`, `coco-triage`, `coco-updateskill` |
+| 문서·학습·협업 | `coco-docs`, `coco-blog`, `coco-til`, `coco-askme`, `coco-context`, `coco-retro`, `coco-triage`, `coco-updateskill` |
 
 각 스킬의 절차는 [스킬 원본](skills), 선택 기준은 [작업별 안내](skills/_coco-shared/routing.md)에 있습니다. 외부 서비스 연결과 권한이 필요한 작업은 해당 환경이 준비되어 있어야 합니다.
 

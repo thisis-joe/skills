@@ -812,7 +812,7 @@
     },
     {
       "path": "skills/productivity/teach/SKILL.md",
-      "family": "learn",
+      "family": "til",
       "disposition": "reference",
       "essential_rules": [
         "Maintain a multi-session learning workspace grounded in one concise MISSION.md with real-world success/constraints; track curated annotated RESOURCES, learning records, canonical glossary, lessons, references, assets and user NOTES.",
@@ -831,10 +831,10 @@
       "adaptation": "Preserve as conditional MALJ document/learning reference, not a mandatory structure for ordinary explanations. Clarify source tension: lessons can be one HTML unit while linked shared assets require the workspace to travel with them. External resource/health-sensitive facts need current primary-source verification; joining or messaging a community is not authorized by a teaching request.",
       "author": "matt",
       "implemented_references": [
-        "skills/coco-learn/SKILL.md",
-        "skills/_coco-shared/advanced/learn.md",
-        "skills/coco-learn/references/note-template.md"
-      ]
+        "skills/coco-til/SKILL.md",
+        "skills/coco-til/references/note-template.md"
+      ],
+      "team_override": "2026-10-29 user-requested coco-til supersedes personal teaching modes with immediate current-session concept capture (at most three per topic), primary-checkout storage and unchanged uniform note format. Plain-language, evidence and uncertainty principles remain in notes; standalone explanation repair, mission lessons, retrieval/spacing/interleaving, resources and glossary management are no longer adopted. Original essential_rules and historical adaptation facts remain unchanged. See skills/_coco-shared/decisions.md#session-til-capture."
     },
     {
       "path": "skills/productivity/to-questionnaire/SKILL.md",
@@ -2021,7 +2021,7 @@
     },
     {
       "path": "pstack/skills/bro/SKILL.md",
-      "family": "learn",
+      "family": "til",
       "disposition": "merged",
       "essential_rules": [
         "Restate the immediately preceding answer in familiar everyday words without jargon.",
@@ -2031,8 +2031,9 @@
       "adaptation": "Plain-language rewrite mode in document; no separate top-level alias is necessary.",
       "author": "pstack",
       "implemented_references": [
-        "skills/coco-learn/SKILL.md"
-      ]
+        "skills/coco-til/SKILL.md"
+      ],
+      "team_override": "2026-10-29 user-requested coco-til supersedes personal teaching modes with immediate current-session concept capture (at most three per topic), primary-checkout storage and unchanged uniform note format. Plain-language, evidence and uncertainty principles remain in notes; standalone explanation repair, mission lessons, retrieval/spacing/interleaving, resources and glossary management are no longer adopted. Original essential_rules and historical adaptation facts remain unchanged. See skills/_coco-shared/decisions.md#session-til-capture."
     },
     {
       "path": "pstack/skills/correct/SKILL.md",
@@ -3068,7 +3069,7 @@
     },
     {
       "path": "pstack/skills/teach/SKILL.md",
-      "family": "learn",
+      "family": "til",
       "disposition": "adapted",
       "essential_rules": [
         "Choose what the user needs to understand from their purpose and known context; combine runtime mechanism and historical rationale while preserving evidence confidence.",
@@ -3084,8 +3085,9 @@
       "adaptation": "Concrete teaching mode in document backed by research; no mandatory how/why agent invocations or image generation. Preserve confidence qualifications instead of styling them away.",
       "author": "pstack",
       "implemented_references": [
-        "skills/coco-learn/SKILL.md"
-      ]
+        "skills/coco-til/SKILL.md"
+      ],
+      "team_override": "2026-10-29 user-requested coco-til supersedes personal teaching modes with immediate current-session concept capture (at most three per topic), primary-checkout storage and unchanged uniform note format. Plain-language, evidence and uncertainty principles remain in notes; standalone explanation repair, mission lessons, retrieval/spacing/interleaving, resources and glossary management are no longer adopted. Original essential_rules and historical adaptation facts remain unchanged. See skills/_coco-shared/decisions.md#session-til-capture."
     },
     {
       "path": "pstack/skills/technical-writing/SKILL.md",

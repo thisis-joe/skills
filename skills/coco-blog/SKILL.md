@@ -27,7 +27,7 @@ When invoked from an application feature branch, prepare the isolated publicatio
 
 Source notes and the publication base may have unrelated histories. Read only the explicitly selected local files, or selected files from the confirmed Git source snapshot and work from the confirmed content base. Never merge development history into a blog branch merely to obtain a note.
 
-General project documents and non-blog articles belong to [coco-docs](../coco-docs/SKILL.md); personal study explanations belong to [coco-learn](../coco-learn/SKILL.md). This skill owns public developer-post selection, editorial transformation and publication preparation. Blog software or CI changes remain separate implementation requests.
+General project documents and non-blog articles belong to [coco-docs](../coco-docs/SKILL.md); current-session personal note capture belongs to [coco-til](../coco-til/SKILL.md). This skill owns public developer-post selection, editorial transformation and publication preparation. Blog software or CI changes remain separate implementation requests.
 
 ## Write with the author
 

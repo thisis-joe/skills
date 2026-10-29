@@ -1,0 +1,4 @@
+interface:
+  display_name: "coco-til"
+  short_description: "Capture session concepts as durable TIL notes"
+  default_prompt: "Use $coco-til to select at most three worthwhile concepts per topic from this session and write or update TIL notes immediately in the primary checkout, preserving the existing note format."

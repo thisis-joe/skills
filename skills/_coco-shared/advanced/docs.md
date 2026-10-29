@@ -4,7 +4,7 @@ Apply the [common contract](../contracts.md). Use [research](research.md) for fa
 
 ## Input and selection
 
-Retain audience, purpose, prior knowledge, source artifacts, required facts/uncertainty, destination and edit scope. Read the live target before every change and preserve user edits. Select technical documentation, decision record, prose repair, agent instructions, questionnaire, course exercises, or opt-in experimental writing collaboration. Explanations for the user's own understanding and personal learning notes belong to [learning procedures](learn.md).
+Retain audience, purpose, prior knowledge, source artifacts, required facts/uncertainty, destination and edit scope. Read the live target before every change and preserve user edits. Select technical documentation, decision record, prose repair, agent instructions, questionnaire, course exercises, or opt-in experimental writing collaboration. Current-session personal note capture belongs to [coco-til](../../coco-til/SKILL.md); plain chat explanations do not automatically create notes.
 
 ## Default skeletons
 

@@ -1,6 +1,6 @@
 {
   "name": "@thisis-joe/coco-skills",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "COCO development skills with a safe installer for Codex and Claude Code.",
   "license": "MIT",
   "bin": {
@@ -14,9 +14,12 @@
     "scripts/validate.py",
     "skills/coco-*/**",
     "skills/_coco-shared/**",
+    "!**/__pycache__/**",
+    "!**/*.pyc",
     "sources/",
     "docs/distribution.md",
     "docs/coco-1.2.0.md",
+    "docs/coco-1.3.0.md",
     "docs/design.md",
     "docs/implementation-plan.md",
     "docs/source-index.md",
@@ -44,5 +47,11 @@
   "bugs": {
     "url": "https://github.com/thisis-joe/skills/issues"
   },
-  "keywords": ["codex", "claude-code", "agent-skills", "coco", "skills"]
+  "keywords": [
+    "codex",
+    "claude-code",
+    "agent-skills",
+    "coco",
+    "skills"
+  ]
 }
