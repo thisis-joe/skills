@@ -51,6 +51,8 @@ class AskmeIntegrationTests(unittest.TestCase):
         self.assertIn('at most two already identified session-linked sources', opening)
         self.assertIn('120 lines combined', opening)
         self.assertIn('no content-discovery calls', opening)
+        self.assertIn('Whenever the menu relies on compressed or handoff context', opening)
+        self.assertIn('even without recovery', opening)
         self.assertNotIn('](references/', opening)
         quiz = (ROOT / 'skills/coco-askme/references/quiz.md').read_text()
         self.assertIn('Never reveal the answer', quiz)

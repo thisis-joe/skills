@@ -31,3 +31,9 @@ Package validation passed (30 skills). The complete suite passed: 210 tests in 6
 ## Evidence limits
 
 No independent fresh-context conversational run was performed in this turn. Model compliance with topic relevance, recovery limits, tool choice and answer timing remains unverified at runtime; the walkthrough is author review only. Actual token cost and latency were not measured. Automatic compaction may omit capsule content despite guidance; recovery can only inspect available session-linked pointers and must disclose gaps. The installed bundle comes from the unmerged dedicated branch, not main. No remote publication is part of this task.
+
+## Post-implementation independent review and correction
+
+An independent reviewer inspected ba462cb..79ef23c and independently passed package validation and all 210 tests. It found one P2 instruction gap: evidence-boundary disclosure applied only after recovery, omitting a sufficient compressed-summary menu with zero recovery. The owner now requires disclosure for compressed or handoff context whether recovery ran or not; a structural regression check covers that condition.
+
+Separate fresh-context behavioral probes actually applied the skill to synthetic inputs (not private session transcripts). A compressed retry/cache summary with no source pointers produced three relevant options, free-text entry and an explicit remaining-summary boundary without content discovery. An explicit quiz on a supplied pure-Python retry function produced exactly one source-located question and withheld its answer. Both probes passed before the correction; the correction closes the documented guarantee rather than claiming a reproduced model failure. These probes establish those specific responses, not all models, future conversations or token savings.
