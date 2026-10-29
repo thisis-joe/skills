@@ -24,3 +24,11 @@ both common-directory identity and that the candidate itself is the non-linked
 primary checkout. Missing metadata, a missing primary, unrelated repositories,
 and a configured linked checkout must fail closed without creating TIL elsewhere.
 When Git has no recorded primary path, do not guess or scan unrelated directories.
+
+## CI archive correction
+
+Ordinary unittest discovery imports the resolver and may create Python bytecode
+caches before npm packaging. Runtime archives must exclude `__pycache__` contents
+and `.pyc` files even when present, without suppressing cache creation or weakening
+the archive-content assertion. Verify this in an isolated contaminated package
+and run the standing commands without `-B`, matching CI.
