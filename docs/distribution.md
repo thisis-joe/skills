@@ -1,8 +1,8 @@
 # COCO 공개 배포
 
-## 1.2.0 release candidate
+## 1.2.0 published release
 
-Version `1.2.0` adds `coco-blog` as the thirtieth skill and corrects local-note release guidance to use the consumer project's actual publication schema. Existing skill identifiers, installer commands and source provenance remain unchanged. See [release notes](coco-1.2.0.md) for verification and limits. Preparing source or an archive does not publish the version; pinned `1.2.0` commands become available only after an authorized registry publication. Upgrade and rollback use the same installer with an explicit destination and version; preserve personal edits when preflight reports a conflict.
+Version `1.2.0` adds `coco-blog` as the thirtieth skill and corrects local-note release guidance to use the consumer project's actual publication schema. Existing skill identifiers, installer commands and source provenance remain unchanged. See [release notes](coco-1.2.0.md) for verification and limits. Version `1.2.0` is now published; fresh-cache downloads match the verified archive and both runtime project installs validate. Preparing source or an archive alone still does not establish publication. Upgrade and rollback use the same installer with an explicit destination and version; preserve personal edits when preflight reports a conflict.
 
 ## 설치 인터페이스
 
