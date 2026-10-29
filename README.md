@@ -138,7 +138,7 @@ PR/MR을 엽니다. `coco-merge`는 선택한 PR/MR의 대상 브랜치로 체�
 
 필요한 단계부터 시작하세요. 모든 작업에 전체 절차가 필요한 것은 아닙니다. 할 일과 스킬이 정해졌다면 `coco-start`를 거치지 않고 바로 호출하세요.
 
-이름만 호출했을 때 대화에서 할 일이 하나로 정해져 있으면 그 요청으로 진행하고, 그렇지 않으면 요청문 선택을 안내합니다. `coco-start`는 읽기 전용 경로 안내를, `coco-tellmeskill`, `coco-askme`, `coco-updateskill`, `coco-whattosay`는 각자의 선택 단계를 시작합니다. **`coco-push`와 `coco-merge`는 이름만 호출해도 현재 브랜치 기준으로 실행**하므로, 설명만 원하면 요청에 명시하세요.
+이름만 호출했을 때 대화에서 할 일이 하나로 정해져 있으면 그 요청으로 진행하고, 그렇지 않으면 요청문 선택을 안내합니다. `coco-start`는 읽기 전용 경로 안내를, `coco-tellmeskill`, `coco-updateskill`, `coco-whattosay`는 각자의 선택 단계를 시작합니다. **`coco-push`와 `coco-merge`는 이름만 호출해도 현재 브랜치 기준으로 실행**하므로, 설명만 원하면 요청에 명시하세요.
 
 ```text
 coco-clarify → coco-spec → coco-plan → coco-build → coco-review → coco-push → coco-merge
@@ -152,6 +152,8 @@ coco-clarify → coco-spec → coco-plan → coco-build → coco-review → coco
 | 검증·전문 검토 | `coco-review`, `coco-verify`, `coco-security`, `coco-performance`, `coco-frontend` |
 | 운영·배포 | `coco-observe`, `coco-automate`, `coco-push`, `coco-merge`, `coco-ship` |
 | 문서·학습·협업 | `coco-docs`, `coco-blog`, `coco-til`, `coco-askme`, `coco-context`, `coco-retro`, `coco-triage`, `coco-updateskill` |
+
+`coco-askme` offers up to three session concepts on a bare call, using bounded recovery when context was compressed. Explicit questions receive evidence-backed answers; quizzes run only when requested. `coco-research` is a compatibility alias with the same behavior.
 
 각 스킬의 절차는 [스킬 원본](skills), 선택 기준은 [작업별 안내](skills/_coco-shared/routing.md)에 있습니다. 외부 서비스 연결과 권한이 필요한 작업은 해당 환경이 준비되어 있어야 합니다.
 

@@ -1,4 +1,4 @@
 interface:
   display_name: "coco-research"
-  short_description: "Purpose-led research with source-backed checks and evidence"
-  default_prompt: "Use $coco-research for the current request and provide its required result."
+  short_description: "Compatibility alias for evidence-backed coco-askme"
+  default_prompt: "Use $coco-research as an alias for coco-askme, preserving my question or its bare topic selection."

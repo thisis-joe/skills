@@ -6,7 +6,7 @@
 
 팀 요청으로 추가한 [coco-whattosay](../skills/coco-whattosay/SKILL.md)는 선택된 스킬에 맞는 요청문을 추천하는 신규 절차입니다. 원본에서 유래한 동작이 아니므로 아래 원본 대응과 `sources/coverage.json`의 131개 항목은 추가·변경하지 않습니다. 선택과 실행의 경계는 [결정 기록](../skills/_coco-shared/decisions.md)에 남깁니다.
 
-팀 요청으로 추가한 [coco-askme](../skills/coco-askme/SKILL.md)는 선택한 작업·코드를 질의응답으로 학습하는 신규 절차입니다. 원본에서 유래한 동작이 아니므로 원본 대응과 `sources/coverage.json`은 변경하지 않습니다.
+[coco-askme](../skills/coco-askme/SKILL.md) now owns both the team-created conversation/quiz flow and the research techniques mapped below. Only orientation, bounded compaction recovery and alias dispatch are team additions; research provenance remains in the existing coverage rows.
 
 팀 요청으로 추가한 [coco-merge](../skills/coco-merge/SKILL.md)는 푸시한 PR/MR을 출시 준비 판단 없이 그 대상 브랜치에 머지하는 신규 절차입니다. 원본에서 유래한 동작이 아니므로 원본 대응과 `sources/coverage.json`은 변경하지 않습니다. 병합 큐 대기·자동 병합 예약을 머지로 보지 않는 확인 규칙은 `coco-ship`의 스택 머지 규칙을 따르며, 선택 이유는 [결정 기록](../skills/_coco-shared/decisions.md)에 남깁니다.
 
@@ -27,7 +27,7 @@ The former personal-learning entrypoint is now [coco-til](../skills/coco-til/SKI
 | matt | [skills/engineering/improve-codebase-architecture](../sources/matt/skills/engineering/improve-codebase-architecture/SKILL.md.source) | [coco-design](../skills/coco-design/SKILL.md) | adapted |
 | matt | [skills/engineering/pr](../sources/matt/skills/engineering/pr/SKILL.md.source) | [coco-ship](../skills/coco-ship/SKILL.md) | adapted |
 | matt | [skills/engineering/prototype](../sources/matt/skills/engineering/prototype/SKILL.md.source) | [coco-design](../skills/coco-design/SKILL.md) | adapted |
-| matt | [skills/engineering/research](../sources/matt/skills/engineering/research/SKILL.md.source) | [coco-research](../skills/coco-research/SKILL.md) | adapted |
+| matt | [skills/engineering/research](../sources/matt/skills/engineering/research/SKILL.md.source) | [coco-askme](../skills/coco-askme/SKILL.md) | adapted |
 | matt | [skills/engineering/retro](../sources/matt/skills/engineering/retro/SKILL.md.source) | [coco-retro](../skills/coco-retro/SKILL.md) | merged |
 | matt | [skills/engineering/setup-matt-pocock-skills](../sources/matt/skills/engineering/setup-matt-pocock-skills/SKILL.md.source) | [coco-start](../skills/coco-start/SKILL.md) | adapted |
 | matt | [skills/engineering/tdd](../sources/matt/skills/engineering/tdd/SKILL.md.source) | [coco-verify](../skills/coco-verify/SKILL.md) | adapted |
@@ -84,7 +84,7 @@ The former personal-learning entrypoint is now [coco-til](../skills/coco-til/SKI
 | addy | [skills/planning-and-task-breakdown](../sources/addy/skills/planning-and-task-breakdown/SKILL.md.source) | [coco-plan](../skills/coco-plan/SKILL.md) | adapted |
 | addy | [skills/security-and-hardening](../sources/addy/skills/security-and-hardening/SKILL.md.source) | [coco-security](../skills/coco-security/SKILL.md) | adapted |
 | addy | [skills/shipping-and-launch](../sources/addy/skills/shipping-and-launch/SKILL.md.source) | [coco-ship](../skills/coco-ship/SKILL.md) | adapted |
-| addy | [skills/source-driven-development](../sources/addy/skills/source-driven-development/SKILL.md.source) | [coco-research](../skills/coco-research/SKILL.md) | merged |
+| addy | [skills/source-driven-development](../sources/addy/skills/source-driven-development/SKILL.md.source) | [coco-askme](../skills/coco-askme/SKILL.md) | merged |
 | addy | [skills/spec-driven-development](../sources/addy/skills/spec-driven-development/SKILL.md.source) | [coco-spec](../skills/coco-spec/SKILL.md) | adapted |
 | addy | [skills/test-driven-development](../sources/addy/skills/test-driven-development/SKILL.md.source) | [coco-build](../skills/coco-build/SKILL.md) | adapted |
 | addy | [skills/using-agent-skills](../sources/addy/skills/using-agent-skills/SKILL.md.source) | [coco-start](../skills/coco-start/SKILL.md) | adapted |
@@ -101,7 +101,7 @@ The former personal-learning entrypoint is now [coco-til](../skills/coco-til/SKI
 | pstack | [pstack/skills/create-formal-verification-skill](../sources/pstack/pstack/skills/create-formal-verification-skill/SKILL.md.source) | [coco-verify](../skills/coco-verify/SKILL.md) | adapted |
 | pstack | [pstack/skills/create-verification-skill](../sources/pstack/pstack/skills/create-verification-skill/SKILL.md.source) | [coco-verify](../skills/coco-verify/SKILL.md) | adapted |
 | pstack | [pstack/skills/figure-it-out](../sources/pstack/pstack/skills/figure-it-out/SKILL.md.source) | [coco-plan](../skills/coco-plan/SKILL.md) | adapted |
-| pstack | [pstack/skills/how](../sources/pstack/pstack/skills/how/SKILL.md.source) | [coco-research](../skills/coco-research/SKILL.md) | adapted |
+| pstack | [pstack/skills/how](../sources/pstack/pstack/skills/how/SKILL.md.source) | [coco-askme](../skills/coco-askme/SKILL.md) | adapted |
 | pstack | [pstack/skills/in-your-own-words](../sources/pstack/pstack/skills/in-your-own-words/SKILL.md.source) | [coco-clarify](../skills/coco-clarify/SKILL.md) | merged |
 | pstack | [pstack/skills/interrogate](../sources/pstack/pstack/skills/interrogate/SKILL.md.source) | [coco-review](../skills/coco-review/SKILL.md) | adapted |
 | pstack | [pstack/skills/ketchup](../sources/pstack/pstack/skills/ketchup/SKILL.md.source) | [coco-context](../skills/coco-context/SKILL.md) | adapted |
@@ -146,4 +146,6 @@ The former personal-learning entrypoint is now [coco-til](../skills/coco-til/SKI
 | pstack | [pstack/skills/technical-writing](../sources/pstack/pstack/skills/technical-writing/SKILL.md.source) | [coco-docs](../skills/coco-docs/SKILL.md) | merged |
 | pstack | [pstack/skills/typescript-best-practices](../sources/pstack/pstack/skills/typescript-best-practices/SKILL.md.source) | [coco-build](../skills/coco-build/SKILL.md) | adapted |
 | pstack | [pstack/skills/unslop](../sources/pstack/pstack/skills/unslop/SKILL.md.source) | [coco-docs](../skills/coco-docs/SKILL.md) | merged |
-| pstack | [pstack/skills/why](../sources/pstack/pstack/skills/why/SKILL.md.source) | [coco-research](../skills/coco-research/SKILL.md) | adapted |
+| pstack | [pstack/skills/why](../sources/pstack/pstack/skills/why/SKILL.md.source) | [coco-askme](../skills/coco-askme/SKILL.md) | adapted |
+
+Research entrypoint consolidation: `coco-askme` owns evidence-backed exploration and optional quizzes; `coco-research` is a compatibility alias. Topic orientation and bounded recovery after compaction are team-created behavior, not upstream source requirements. Frozen source snapshots remain unchanged.
