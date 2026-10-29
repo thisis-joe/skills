@@ -1,0 +1,97 @@
+{
+  "scope": {
+    "repository": "/Users/Joseph/.codex/worktrees/coco-blog-1-2-0/skills",
+    "base": "04507c149787c9792bfedd1cd8f1f65dd2c59a6a",
+    "head": "2cd39b910c45a560c94c06b6c4128a77532ac2ae",
+    "comparison": "exact base..HEAD plus clean working tree",
+    "related_payload_sha256": "51d570c365958ebd03ce735d5d3be303bedfc90713e04611a0043a51d186c8d8"
+  },
+  "blocking_findings": [],
+  "report_corrections": [
+    {
+      "priority": "P3",
+      "file": "docs/evaluation/coco-blog-1.2.0/report.md",
+      "section": "Prompt quality",
+      "issue": "The current phrase fresh reviewer overstates review context separation. This reviewer is a separate agent with inherited full task history, not a blind or author-unaware reviewer. Replace it and record this provenance in the final evidence-only update.",
+      "product_behavior_blocker": false
+    }
+  ],
+  "verdicts": {
+    "spec": "pass for the requested fixes and exercised behavior, with native-worktree/Claude/publisher limits",
+    "standards": "pass: isolated branch/worktree, work-unit fix commit, English skill documents, decision/provenance retained, checks and outcomes recorded",
+    "quality": "pass within the reviewed artifacts and four native scenarios; no new correctness/security or publication blocker found"
+  },
+  "prompt_quality": {
+    "notes": {
+      "axes": {
+        "intent_routing": "pass",
+        "context_reuse_question_economy": "pass",
+        "clarity_consistency": "pass",
+        "evidence_editorial_quality": "pass",
+        "boundaries_state": "pass"
+      },
+      "evidence": "Native events show bounded opening excerpts, excluded template/index/escaping symlink, supported two-item menu, then a single selection question; no draft or Git delivery."
+    },
+    "writing": {
+      "axes": {
+        "intent_routing": "pass",
+        "context_reuse_question_economy": "pass",
+        "clarity_consistency": "pass",
+        "evidence_editorial_quality": "pass",
+        "boundaries_state": "pass"
+      },
+      "evidence": "The selected note and author/reader/category/angle were reused without new questions. The separate manuscript retains status:draft and article identity, grounds the contribution/reason/local test, qualifies missing facts, excludes private/injection text, and keeps Git delivery unperformed."
+    },
+    "release": {
+      "axes": {
+        "intent_routing": "pass",
+        "context_reuse_question_economy": "pass",
+        "clarity_consistency": "pass",
+        "evidence_editorial_quality": "pass",
+        "boundaries_state": "pass"
+      },
+      "evidence": "The accepted article changes only published:false to published:true. Native commands validate/read fixture HTML, commit the one manuscript change and push only the authorized local topic branch. Actual template body leaves PR human-owned and distinguishes local render from real publication."
+    },
+    "hugo": {
+      "axes": {
+        "intent_routing": "pass",
+        "context_reuse_question_economy": "pass",
+        "clarity_consistency": "pass",
+        "evidence_editorial_quality": "pass",
+        "boundaries_state": "pass"
+      },
+      "evidence": "The accepted body is preserved while draft:true becomes false; fixture HTML was read, original application state preserved, and no commit/push/PR/public deployment performed. Standalone clone substituted for direct worktree because sandbox denied original .git writes."
+    }
+  },
+  "verification_readback": {
+    "source_related_file_hashes": "54 entries match candidate worktree",
+    "retained_native_evidence": "16 retained archive members match native-manifest.json",
+    "diff_check": "passed exact base..HEAD",
+    "observer": "Actual observer source/results inspected; schema leak and source-state negative sensitivity plus restore checks are meaningful for these fixtures",
+    "mechanical_checks": "Root and archive agent own full tests/install evidence; reviewer inspected receipts but did not rerun unchanged checks",
+    "final_archive_receipt": {
+      "source_commit": "2cd39b910c45a560c94c06b6c4128a77532ac2ae",
+      "archive_sha256": "55d7d4bc5cc003a999ee04e0bd5423500296b7f9636bafed4799f60311522180",
+      "files": 474,
+      "payload_files": 125,
+      "all_archive_bytes_match_source": true,
+      "publish_dry_run_exit": 0,
+      "publication_performed": false,
+      "receipt": "/private/tmp/coco-1.2.0-archive-0uykd6na/final-receipt.json",
+      "reviewer_action": "readback of archive agent receipt; no redundant rerun"
+    }
+  },
+  "provenance": {
+    "reviewer": "Separate read-only agent, inherited full task history; not blind or author-unaware; no claim of cross-model independence",
+    "native_execution": "Four separate ephemeral native Codex contexts, CLI default model, no model override; rubric absent from candidate requests"
+  },
+  "limitations": [
+    "One run per case, not a reliability percentage or comparative quality benchmark.",
+    "Only writing substantially evaluates newly composed editorial prose; approved-release cases evaluate preserving content and publication handoff.",
+    "User prompts explicitly settle author/scope/permissions; these samples do not establish that every sparse or ambiguous request is handled well.",
+    "Child sandbox denied original application .git writes. Writing/release used same-origin clone plus linked worktree, Hugo a standalone clone. Direct native linked-worktree preparation in the original checkout is unproven.",
+    "Native Claude behavior and real consumer renderer/publisher/public URL unavailable. Installer support for both runtimes is separate archive evidence.",
+    "Review covers 2cd39b9. A later evidence-only update needs targeted readback; any packaged behavior change invalidates affected approval."
+  ],
+  "readiness": "Ready for 1.2.0 release preparation within the documented limits. No product blocker found. Final archive is bound to 2cd39b9 and publish dry-run passed; correct nonblind review provenance in the evidence-only final update. Actual registry publication is separate and has not occurred."
+}

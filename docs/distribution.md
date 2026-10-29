@@ -1,5 +1,9 @@
 # COCO 공개 배포
 
+## 1.2.0 release candidate
+
+Version `1.2.0` adds `coco-blog` as the thirtieth skill and corrects local-note release guidance to use the consumer project's actual publication schema. Existing skill identifiers, installer commands and source provenance remain unchanged. See [release notes](coco-1.2.0.md) for verification and limits. Preparing source or an archive does not publish the version; pinned `1.2.0` commands become available only after an authorized registry publication. Upgrade and rollback use the same installer with an explicit destination and version; preserve personal edits when preflight reports a conflict.
+
 ## 설치 인터페이스
 
 공개 npm 패키지명은 `@thisis-joe/coco-skills`이며, 실행 명령은 `coco-skills`다. 아래 registry 명령은 해당 버전의 게시가 끝난 뒤 사용할 수 있다. 준비한 코드나 로컬 `.tgz`만으로 npm 게시 완료를 의미하지 않는다.
@@ -33,7 +37,7 @@ npx --yes @thisis-joe/coco-skills@latest install --runtime claude --project ./my
 npx --yes @thisis-joe/coco-skills@latest validate --installed ./my-project/.claude/skills
 npx --yes @thisis-joe/coco-skills@latest install --runtime claude --project ./my-project --remove-global
 npx --yes @thisis-joe/coco-skills@latest uninstall --runtime claude --project ./my-project
-npx --yes @thisis-joe/coco-skills@1.1.0 install --runtime codex --dest ./my-skills
+npx --yes @thisis-joe/coco-skills@1.2.0 install --runtime codex --dest ./my-skills
 ```
 
 `--project` 설치는 설치한 폴더와 설치 기록을 해당 저장소의 `.git/info/exclude`에 저장소 루트 기준 경로로 추가한다. 공유되는 `.gitignore`는 바꾸지 않는다. Git 저장소가 아니면 이 단계를 건너뛰고 `git_exclude`를 `null`로 반환한다. 홈 폴더나 글로벌 경로와 같은 위치는 프로젝트로 받지 않는다.

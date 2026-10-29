@@ -65,7 +65,7 @@ class NpmDistributionTests(unittest.TestCase):
         self.assertIn('skills/_coco-shared/contracts.md', paths)
         allowed_files = {'package.json', 'README.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md',
                          'coco.json', 'scripts/install.py', 'scripts/package_utils.py',
-                         'scripts/validate.py', 'docs/distribution.md', 'docs/design.md',
+                         'scripts/validate.py', 'docs/distribution.md', 'docs/coco-1.2.0.md', 'docs/design.md',
                          'docs/implementation-plan.md', 'docs/source-index.md'}
         for path in paths:
             self.assertTrue(path in allowed_files or path.startswith(

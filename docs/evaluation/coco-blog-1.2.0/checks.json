@@ -1,0 +1,34 @@
+{
+  "validator": {
+    "command": "python3 scripts/validate.py",
+    "exit": 0,
+    "skills": 30
+  },
+  "tests": [
+    {
+      "check": "unittest",
+      "command": "python3 -m unittest discover -s tests -v",
+      "exit": 0,
+      "tests": 200,
+      "skips": 0,
+      "log": "unittest.log",
+      "sha256": "b316d581fa9b885a202dc58b169312a4a2e319eaec50aea5b706e757db5563a7"
+    },
+    {
+      "check": "affected_npm",
+      "command": "python3 -m unittest discover -s tests -p test_npm_distribution.py -v",
+      "exit": 0,
+      "tests": 14,
+      "skips": 0,
+      "log": "affected_npm.log",
+      "sha256": "d5289a1e0407d70f46c98ab4e7ac075eda092605cbef97e720d69455c3745337"
+    }
+  ],
+  "original_checkout": {
+    "path": "/Users/Joseph/workspaces/skills",
+    "branch": "main",
+    "head": "04507c149787c9792bfedd1cd8f1f65dd2c59a6a",
+    "clean": true
+  },
+  "review_correction": "P3 provenance wording fixed; product files unchanged"
+}
