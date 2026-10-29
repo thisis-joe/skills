@@ -1,0 +1,49 @@
+{
+  "source_commit": "2cd39b910c45a560c94c06b6c4128a77532ac2ae",
+  "archive": "/private/tmp/coco-1.2.0-archive-0uykd6na/final/thisis-joe-coco-skills-1.2.0.tgz",
+  "version": "1.2.0",
+  "archive_sha256": "55d7d4bc5cc003a999ee04e0bd5423500296b7f9636bafed4799f60311522180",
+  "integrity": "sha512-QBZxzZ05safTxSkT9UGxFnowFjZvEGh2gmxy0Y/A7fzsqzcKVdfYtMdEzqcrvHSAQTPOei4u+FAPU6dm7Sp9lQ==",
+  "shasum": "c177feba4f1cbf109b6693ceb0026f263c4e34c7",
+  "file_count": 474,
+  "unpacked_size": 5347720,
+  "payload_files": 125,
+  "payload_digest": "aa6df5ab4e091a40f0de40ed08cf9205ca295f80f9c7f4c268827346bd04d619",
+  "all_archive_bytes_match_source": true,
+  "release_note_packaged_and_link_resolves": true,
+  "no_test_evaluation_or_git_files": true,
+  "installer_evidence_reused_from": "/private/tmp/coco-1.2.0-archive-0uykd6na/receipt.json",
+  "pack_command": [
+    "npm",
+    "pack",
+    "--ignore-scripts",
+    "--json",
+    "--pack-destination",
+    "/private/tmp/coco-1.2.0-archive-0uykd6na/final"
+  ],
+  "pack_exit": 0,
+  "publish_dry_run": {
+    "command": [
+      "npm",
+      "publish",
+      "--dry-run",
+      "/private/tmp/coco-1.2.0-archive-0uykd6na/final/thisis-joe-coco-skills-1.2.0.tgz",
+      "--ignore-scripts",
+      "--access",
+      "public",
+      "--json",
+      "--registry=https://registry.npmjs.org",
+      "--cache",
+      "/private/tmp/coco-1.2.0-archive-0uykd6na/npm-cache",
+      "--fetch-retries=0",
+      "--fetch-timeout=15000"
+    ],
+    "exit": 0,
+    "version": "1.2.0",
+    "integrity": "sha512-QBZxzZ05safTxSkT9UGxFnowFjZvEGh2gmxy0Y/A7fzsqzcKVdfYtMdEzqcrvHSAQTPOei4u+FAPU6dm7Sp9lQ==",
+    "entry_count": 474,
+    "stdout": "/private/tmp/coco-1.2.0-archive-0uykd6na/publish-dry-run.json",
+    "stderr": "/private/tmp/coco-1.2.0-archive-0uykd6na/publish-dry-run.stderr",
+    "publication_performed": false
+  }
+}

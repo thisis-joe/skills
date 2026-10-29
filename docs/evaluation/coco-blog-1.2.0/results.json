@@ -1,0 +1,215 @@
+{
+  "base": "04507c149787c9792bfedd1cd8f1f65dd2c59a6a",
+  "fix_commit": "e3e2447",
+  "version": "1.2.0",
+  "candidate_skill_manifest_sha256": "51d570c365958ebd03ce735d5d3be303bedfc90713e04611a0043a51d186c8d8",
+  "native_cases": {
+    "notes": {
+      "checks": {
+        "branch": true,
+        "head": true,
+        "status": true,
+        "index": true,
+        "dirty": true,
+        "notes": true,
+        "native_exit_zero": true,
+        "no_forge_command": true,
+        "numbered_selection": true,
+        "excluded_menu_entries": true,
+        "bounded_visible_excerpts": true,
+        "selection_pause": true,
+        "no_new_post": true,
+        "remote_unchanged": true
+      },
+      "passed": true,
+      "final": "/private/tmp/coco-articles-run/notes/final.md",
+      "events": "/private/tmp/coco-articles-run/notes/events.jsonl",
+      "native": {
+        "exit": 0,
+        "seconds": 22.94896411895752,
+        "command": [
+          "codex",
+          "exec",
+          "--ephemeral",
+          "--ignore-user-config",
+          "--sandbox",
+          "workspace-write",
+          "--cd",
+          "/private/tmp/coco-articles-run/notes/app",
+          "--add-dir",
+          "/private/tmp/coco-articles-run/notes",
+          "--json",
+          "--output-last-message",
+          "/private/tmp/coco-articles-run/notes/final.md",
+          "-"
+        ]
+      }
+    },
+    "writing": {
+      "checks": {
+        "branch": true,
+        "head": true,
+        "status": true,
+        "index": true,
+        "dirty": true,
+        "notes": true,
+        "native_exit_zero": true,
+        "no_forge_command": true,
+        "actual_field": true,
+        "no_rogue_draft": true,
+        "no_private": true,
+        "identity_preserved": true,
+        "no_app_ancestry": true,
+        "only_post_changed": true,
+        "not_committed": true,
+        "remote_unchanged": true,
+        "draft_excluded": true,
+        "actual_template_sections": true
+      },
+      "passed": true,
+      "final": "/private/tmp/coco-articles-run/writing/final.md",
+      "events": "/private/tmp/coco-articles-run/writing/events.jsonl",
+      "native": {
+        "exit": 0,
+        "seconds": 82.31960582733154,
+        "command": [
+          "codex",
+          "exec",
+          "--ephemeral",
+          "--ignore-user-config",
+          "--sandbox",
+          "workspace-write",
+          "--cd",
+          "/private/tmp/coco-articles-run/writing/app",
+          "--add-dir",
+          "/private/tmp/coco-articles-run/writing",
+          "--json",
+          "--output-last-message",
+          "/private/tmp/coco-articles-run/writing/final.md",
+          "-"
+        ]
+      }
+    },
+    "release": {
+      "checks": {
+        "branch": true,
+        "head": true,
+        "status": true,
+        "index": true,
+        "dirty": true,
+        "notes": true,
+        "native_exit_zero": true,
+        "no_forge_command": true,
+        "actual_field": true,
+        "no_rogue_draft": true,
+        "no_private": true,
+        "identity_preserved": true,
+        "no_app_ancestry": true,
+        "only_post_changed": true,
+        "topic_push_confirmed": true,
+        "content_not_pushed": true,
+        "only_topic_remote_added": true,
+        "one_outgoing_post_commit": true,
+        "release_render_included": true,
+        "actual_template_sections": true
+      },
+      "passed": true,
+      "final": "/private/tmp/coco-articles-run/release/final.md",
+      "events": "/private/tmp/coco-articles-run/release/events.jsonl",
+      "native": {
+        "exit": 0,
+        "seconds": 51.78264284133911,
+        "command": [
+          "codex",
+          "exec",
+          "--ephemeral",
+          "--ignore-user-config",
+          "--sandbox",
+          "workspace-write",
+          "--cd",
+          "/private/tmp/coco-articles-run/release/app",
+          "--add-dir",
+          "/private/tmp/coco-articles-run/release",
+          "--json",
+          "--output-last-message",
+          "/private/tmp/coco-articles-run/release/final.md",
+          "-"
+        ]
+      }
+    },
+    "hugo": {
+      "checks": {
+        "branch": true,
+        "head": true,
+        "status": true,
+        "index": true,
+        "dirty": true,
+        "notes": true,
+        "native_exit_zero": true,
+        "no_forge_command": true,
+        "actual_field": true,
+        "no_rogue_draft": true,
+        "no_private": true,
+        "identity_preserved": true,
+        "no_app_ancestry": true,
+        "only_post_changed": true,
+        "not_committed": true,
+        "remote_unchanged": true,
+        "release_render_included": true
+      },
+      "passed": true,
+      "final": "/private/tmp/coco-articles-run/hugo/final.md",
+      "events": "/private/tmp/coco-articles-run/hugo/events.jsonl",
+      "native": {
+        "exit": 0,
+        "seconds": 53.17579698562622,
+        "command": [
+          "codex",
+          "exec",
+          "--ephemeral",
+          "--ignore-user-config",
+          "--sandbox",
+          "workspace-write",
+          "--cd",
+          "/private/tmp/coco-articles-run/hugo/app",
+          "--add-dir",
+          "/private/tmp/coco-articles-run/hugo",
+          "--json",
+          "--output-last-message",
+          "/private/tmp/coco-articles-run/hugo/final.md",
+          "-"
+        ]
+      }
+    }
+  },
+  "observer_sensitivity": {
+    "wrong_field_detected": true,
+    "leak_detected": true,
+    "source_change_detected": true,
+    "restore_passed": true
+  },
+  "limitations": [
+    "Single native default-model run per case, no comparative or universal adherence claim",
+    "Native Codex CLI only, not Claude client",
+    "Local fixture renderer and local bare origin only; no actual publisher or public URL",
+    "Child sandbox denied original .git writes; writing/release used same-origin bare clone plus linked worktree; Hugo used standalone same-origin clone",
+    "Candidate project installed all 30 skills; no personal installation modified"
+  ],
+  "regression": {
+    "validator": "passed:30 skills",
+    "unittest": "200 passed, no skips",
+    "npm_affected_suite": "14 passed after release-note allow-list change"
+  },
+  "prompt_quality_review": {
+    "verdict": "pass within four observed cases",
+    "source": "review.json",
+    "provenance": "separate agent; inherited task history; nonblind; native actor contexts separate",
+    "correction": "P3 reviewer-provenance wording corrected in report; no product changes"
+  },
+  "publication": "not performed",
+  "personal_installation": "unchanged; temporary installs only",
+  "implementation_commit": "2cd39b910c45a560c94c06b6c4128a77532ac2ae",
+  "readiness": "ready for authorized release of the verified archive, within stated limits; not published",
+  "archive": "archive.json",
+  "installation": "installation.json"
+}
