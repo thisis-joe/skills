@@ -21,3 +21,28 @@ These are author walkthroughs of the final instructions, not an independent mode
 3. Preserved format path: each selected concept uses the existing five sections, budget and translated TEMPLATE labels. Capture starts new notes as learning, never inferred understood. Example and checker fixtures validate the preserved format; note importance and truth still require agent judgment.
 
 Self-review covered changed registration, bare invocation routing, callers, blog discovery, resolver/code/tests, schema preservation and attribution overrides. No independent fresh-context agent review was performed. Source snapshots and essential_rules remain unchanged; excluded teaching modes are explicitly recorded rather than claimed preserved. Primary storage prevents linked-worktree deletion loss, not loss of the primary folder itself or lack of backup.
+
+## P2 review follow-up
+
+Review of `fe2ef1883b89dc09b6e7adb376a9f9ba2c176008` found that separate Git
+metadata plus a linked worktree selected the metadata directory as the primary
+working folder. The review correction is now exercised with real repositories:
+
+- Red: both absolute and relative `core.worktree` configurations failed with
+  `Primary checkout is not a working tree` before the fix.
+- Green: resolve from the shared Git configuration when its directory is listed
+  as the primary; relative paths resolve against that directory. Verify the
+  candidate's top-level, common Git directory and primary Git directory identity.
+- Both configurations now return the same primary TIL from primary and nested
+  linked invocations. Notes remain after deleting the linked checkout.
+- Missing targets, unrelated repositories, configured linked checkouts and absent
+  primary-path configuration fail closed without creating a fallback TIL.
+  If Git records no primary path, the resolver still does not guess or scan folders.
+- `python3 -B scripts/validate.py`: passed. `python3 -B -m unittest discover -s tests -v`:
+  207 tests passed in 63.692 seconds, including the preserved note-format cases.
+- Installer fixture: copy the current ownership-managed installation into a
+  temporary destination, update through the supported installer, validate the
+  installed package and resolver equality, and retain an unrelated user file. Passed.
+- Direct diff/self-review checked the P2 correction and primary-only identity guard.
+  No independent fresh-context review was performed. Frozen upstream sources,
+  note format and selection behavior are unchanged by this fix.

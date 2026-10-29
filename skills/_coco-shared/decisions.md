@@ -118,3 +118,11 @@ plain-language explanations, useful examples and uncertainty remain in notes; st
 repair, multi-session missions, HTML lessons/assets, learning records, glossary management and
 retrieval/spacing/interleaving are no longer adopted by this entrypoint. Existing mission/user files
 are not deleted. The former advanced learn procedure is removed rather than left as executable orphaned guidance.
+
+The P2 review correction resolves separate metadata plus linked worktrees using
+`core.worktree` from the common Git directory when that directory is listed as
+the primary. Relative values are anchored to the common directory. The selected
+folder must own the common primary Git directory, not merely share it; this
+rejects accidentally configured linked checkouts. Missing or unverifiable primary
+paths still stop without fallback. This implements the existing team storage
+contract and does not change upstream source facts or the note schema.

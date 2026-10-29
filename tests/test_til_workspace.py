@@ -89,6 +89,49 @@ class TilWorkspaceTests(unittest.TestCase):
         self.assertEqual(self.resolve(other)['primary'], str(other))
         self.assertFalse((other / 'TIL').exists())
 
+    def separate_repository(self, name, relative=False):
+        primary = self.root / (name + ' primary')
+        metadata = self.root / (name + ' metadata')
+        linked = self.root / (name + ' linked')
+        self.git(self.root, 'init', '--separate-git-dir', str(metadata), str(primary))
+        worktree = '../' + primary.name if relative else str(primary)
+        self.git(primary, 'config', 'core.worktree', worktree)
+        self.git(primary, '-c', 'user.name=Test', '-c', 'user.email=test@example.invalid',
+                 'commit', '--allow-empty', '-m', 'initial')
+        self.git(primary, 'worktree', 'add', '--detach', str(linked))
+        return primary, metadata, linked
+
+    def test_separate_metadata_linked_invocations_share_durable_primary(self):
+        for relative in (False, True):
+            with self.subTest(relative=relative):
+                primary, _, linked = self.separate_repository(str(relative), relative)
+                nested = linked / 'nested folder'
+                nested.mkdir()
+                result = self.resolve(nested)
+                self.assertEqual(result, self.resolve(primary))
+                self.assertEqual(result['til'], str(primary / 'TIL'))
+                (primary / '.gitignore').write_text('TIL/\n')
+                notes = Path(result['til'])
+                notes.mkdir()
+                (notes / 'concept.md').write_text('survives linked deletion')
+                self.assertFalse((linked / 'TIL').exists())
+                self.git(primary, 'worktree', 'remove', '--force', str(linked))
+                self.assertEqual((notes / 'concept.md').read_text(), 'survives linked deletion')
+
+    def test_separate_metadata_rejects_unavailable_or_nonprimary_targets(self):
+        primary, metadata, linked = self.separate_repository('invalid')
+        for target in (str(self.root / 'missing'), str(self.primary), str(linked)):
+            with self.subTest(target=target):
+                self.git(metadata, 'config', 'core.worktree', target)
+                with self.assertRaises(module.ResolutionError):
+                    module.resolve_workspace(linked)
+                self.assertFalse((linked / 'TIL').exists())
+                self.assertFalse((self.primary / 'TIL').exists())
+        self.git(metadata, 'config', '--unset', 'core.worktree')
+        with self.assertRaises(module.ResolutionError):
+            module.resolve_workspace(linked)
+        self.assertFalse((primary / 'TIL').exists())
+
 
 if __name__ == '__main__':
     unittest.main()

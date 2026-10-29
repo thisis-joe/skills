@@ -14,3 +14,13 @@ Base: `04507c149787c9792bfedd1cd8f1f65dd2c59a6a`. Original behavior: coco-learn 
 ## Acceptance
 
 Real temporary repositories prove primary and linked invocations share a destination, notes survive linked-worktree removal, missing/bare primary and escaping symlinks fail without fallback, and non-Git behavior remains local. Existing checker cases prove format preservation. Scenario review covers sparse/empty sessions, selection limits, semantic duplicates and repeated capture. Run package validation, all unittests and isolated installer migration/readback.
+
+## P2 review correction
+
+A separate Git directory plus a linked worktree must resolve an existing primary
+checkout recorded by `core.worktree` (absolute or relative to the common Git
+directory). Read primary metadata, not a linked checkout's override. Validate
+both common-directory identity and that the candidate itself is the non-linked
+primary checkout. Missing metadata, a missing primary, unrelated repositories,
+and a configured linked checkout must fail closed without creating TIL elsewhere.
+When Git has no recorded primary path, do not guess or scan unrelated directories.

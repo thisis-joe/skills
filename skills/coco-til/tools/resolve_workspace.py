@@ -56,18 +56,29 @@ def resolve_workspace(start):
         first = listing.split('\0\0', 1)[0].split('\0')
         if not first or not first[0].startswith('worktree ') or 'bare' in first:
             raise ResolutionError('No non-bare primary checkout; refusing fallback')
-        if Path(require_git(start, 'rev-parse', '--absolute-git-dir')).resolve() == common_dir(start):
+        shared = common_dir(start)
+        if Path(require_git(start, 'rev-parse', '--absolute-git-dir')).resolve() == shared:
             # --separate-git-dir can list the metadata folder as the first
             # worktree; a non-linked checkout identifies itself unambiguously.
             primary = Path(require_git(start, 'rev-parse', '--show-toplevel')).resolve()
         else:
             primary = Path(first[0][len('worktree '):]).resolve()
+            if primary == shared:
+                # Separate metadata is listed as the primary even when it is
+                # not the working folder. Read the primary Git configuration;
+                # relative core.worktree paths are relative to this directory.
+                configured = require_git(start, '--git-dir', str(shared),
+                                         'config', '--path', '--get', 'core.worktree')
+                if not configured:
+                    raise ResolutionError('Primary checkout path is not recorded; refusing fallback')
+                primary = (shared / configured).resolve()
         if not primary.is_dir():
             raise ResolutionError(f'Primary checkout missing: {primary}')
         if require_git(primary, 'rev-parse', '--is-inside-work-tree') != 'true':
             raise ResolutionError('Primary checkout is not a working tree')
         top = Path(require_git(primary, 'rev-parse', '--show-toplevel')).resolve()
-        if top != primary or common_dir(primary) != common_dir(start):
+        primary_git = Path(require_git(primary, 'rev-parse', '--absolute-git-dir')).resolve()
+        if top != primary or common_dir(primary) != shared or primary_git != shared:
             raise ResolutionError('Primary checkout identity mismatch; refusing fallback')
         repository = True
     til = primary / 'TIL'
