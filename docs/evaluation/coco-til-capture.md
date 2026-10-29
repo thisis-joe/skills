@@ -46,3 +46,27 @@ working folder. The review correction is now exercised with real repositories:
 - Direct diff/self-review checked the P2 correction and primary-only identity guard.
   No independent fresh-context review was performed. Frozen upstream sources,
   note format and selection behavior are unchanged by this fix.
+
+## 1.3.0 Git publication preparation
+
+The user authorized remote push and main merge with source version 1.3.0 and
+requested README maintenance. Integrated origin/main at `dd28983a1242ba546e5e0c7e9da6e1cbc38e4515`;
+the only conflict was the shared decision record, resolved by retaining the
+consumer publication-schema row and the session-TIL section. The blog's schema
+fix remains alongside primary-checkout note discovery. No dev/develop refs were
+present at the confirmed write remote; main is the explicitly requested target.
+
+Version, README, migration notes and the package file allowlist now describe 1.3.0.
+Registry installation examples remain pinned to the already published 1.2.0,
+because Git push/merge does not authorize or prove npm publication. No tag or
+registry publication is claimed. Rollback is a reviewed revert of the feature
+on main or an explicit-destination reinstall of the previous package; TIL remains
+personal and must be preserved separately.
+
+After integration, `python3 -B scripts/validate.py` passed and
+`python3 -B -m unittest discover -s tests -v` passed all 207 tests in 69.263 seconds.
+Archive tests validate the packed CLI, both runtime installs, the new release
+notes/resolver and absence of the old skill. No dependency changes were introduced.
+Direct diff review checked both sides of the integration conflict, package
+contents and the README publication boundary; independent review remains unavailable.
+Forge check/merge/readback are pending at this preparation snapshot.

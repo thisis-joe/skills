@@ -8,7 +8,7 @@ Codex와 Claude Code에서 쓰는 개발 스킬 30개. 중요한 동작은 사�
 
 Node.js 22 이상과 Python 3.9 이상이 필요합니다. 사용할 에이전트는 별도로 설치하고 로그인하세요.
 
-아래 npm 설치 명령은 **게시된 1.2.0 기준**입니다. [1.0.0 → 1.1.0 변경 지점](https://github.com/thisis-joe/skills/blob/v1.1.0/docs/coco-1.0.0-to-1.1.0.md)에 수정한 지침, 변경 전후 예시와 검증 방법을 정리했습니다.
+소스 버전은 **1.3.0**이며, `coco-learn`을 `coco-til`로 교체했습니다. [1.3.0 변경·이전 안내](docs/coco-1.3.0.md)를 확인하세요. npm 게시 확인 전까지 아래 명령은 **기존에 게시된 1.2.0**을 설치합니다. 새 `coco-til`은 아래 소스 설치 방법으로 사용할 수 있습니다. [1.0.0 → 1.1.0 변경 지점](https://github.com/thisis-joe/skills/blob/v1.1.0/docs/coco-1.0.0-to-1.1.0.md)에 수정한 지침, 변경 전후 예시와 검증 방법을 정리했습니다.
 
 사용할 프로젝트 폴더에서 런타임에 맞는 명령을 실행합니다.
 
@@ -79,6 +79,22 @@ npx --yes @thisis-joe/coco-skills@1.2.0 uninstall --runtime claude --project .
 
 </details>
 
+## 1.3.0에서 바뀐 점
+
+- `coco-learn`을 [coco-til](skills/coco-til/SKILL.md)로 교체합니다. 현재 세션에서 재사용할 개념을 주제별 **최대 3개** 골라 바로 작성하거나 기존 노트를 보완합니다. 개수를 채우기 위한 추가 내용이나 저장 확인 질문은 만들지 않습니다.
+- Git 저장소의 TIL은 **기본 체크아웃의 `TIL/`**에 저장합니다. 현재 브랜치 이름과 관계없으며, 추가 worktree를 삭제해도 노트가 함께 사라지지 않습니다. 별도 Git 디렉터리에서는 기록된 `core.worktree`를 확인하고, 기본 경로를 검증할 수 없으면 대체 저장하지 않습니다.
+- 노트 형식·분량 제한·검사기는 유지합니다. 같은 개념은 기존 노트를 갱신하며, 새 정보가 없으면 내용과 날짜를 바꾸지 않습니다. 남길 개념이 없으면 파일을 만들지 않습니다.
+- 기존 설명·복습·장기 강의 모드는 제거합니다. 질문으로 이해도를 점검하려면 `coco-askme`, 근거를 조사하려면 `coco-research`를 사용합니다. 기존 노트는 보존하며, 추가 worktree의 노트를 옮길 때 충돌하는 내용은 덮어쓰지 않습니다.
+
+소스에서 설치·업데이트한 뒤 새 세션에서 실행하세요. 지원 설치기는 기존 `coco-learn`을 제거하고 `coco-til`을 등록합니다. 두 런타임을 사용한다면 각각 업데이트해야 합니다.
+
+```text
+/coco-til
+$coco-til
+```
+
+스킬 수는 30개이며, 이번 변경은 스킬 이름과 역할을 바꿉니다. Git에서 제외한 TIL은 별도 백업되지 않으므로 기본 작업 폴더 자체의 백업은 별도로 관리하세요. `1.3.0` 소스 준비·Git 병합과 npm 게시는 별개입니다.
+
 ## 1.2.0에서 바뀐 점
 
 - [coco-blog](skills/coco-blog/SKILL.md)를 추가합니다. 로컬 TIL 선택, 근거 있는 개발 글 초안 작성, 저장소의 실제 게시 절차 준비를 지원합니다.
@@ -142,7 +158,7 @@ PR/MR을 엽니다. `coco-merge`는 선택한 PR/MR의 대상 브랜치로 체�
 
 필요한 단계부터 시작하세요. 모든 작업에 전체 절차가 필요한 것은 아닙니다. 할 일과 스킬이 정해졌다면 `coco-start`를 거치지 않고 바로 호출하세요.
 
-이름만 호출했을 때 대화에서 할 일이 하나로 정해져 있으면 그 요청으로 진행하고, 그렇지 않으면 요청문 선택을 안내합니다. `coco-start`는 읽기 전용 경로 안내를, `coco-tellmeskill`, `coco-askme`, `coco-updateskill`, `coco-whattosay`는 각자의 선택 단계를 시작합니다. **`coco-push`와 `coco-merge`는 이름만 호출해도 현재 브랜치 기준으로 실행**하므로, 설명만 원하면 요청에 명시하세요.
+이름만 호출했을 때 대화에서 할 일이 하나로 정해져 있으면 그 요청으로 진행하고, 그렇지 않으면 요청문 선택을 안내합니다. `coco-start`는 읽기 전용 경로 안내를, `coco-tellmeskill`, `coco-askme`, `coco-updateskill`, `coco-whattosay`는 각자의 선택 단계를 시작합니다. `coco-til`은 이름만 호출해도 현재 세션을 TIL로 바로 기록하고, `coco-blog`는 로컬 노트 선택을 시작합니다. **`coco-push`와 `coco-merge`는 이름만 호출해도 현재 브랜치 기준으로 실행**하므로, 설명만 원하면 요청에 명시하세요.
 
 ```text
 coco-clarify → coco-spec → coco-plan → coco-build → coco-review → coco-push → coco-merge

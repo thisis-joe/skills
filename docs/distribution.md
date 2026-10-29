@@ -1,5 +1,9 @@
 # COCO 공개 배포
 
+## 1.3.0 source version
+
+Version `1.3.0` replaces coco-learn with coco-til. Session capture selects at most three concepts per topic and stores notes in the primary checkout, including recorded separate-metadata configurations. The existing note schema and checker remain unchanged. The installer removes the managed old skill and installs the new identifier; update Codex and Claude separately. See [migration and verification](coco-1.3.0.md). Source preparation and Git merging do not imply npm publication; the registry commands below remain pinned to the previously published `1.2.0` until `1.3.0` publication is independently confirmed.
+
 ## 1.2.0 published release
 
 Version `1.2.0` adds `coco-blog` as the thirtieth skill and corrects local-note release guidance to use the consumer project's actual publication schema. Existing skill identifiers, installer commands and source provenance remain unchanged. See [release notes](coco-1.2.0.md) for verification and limits. Version `1.2.0` is now published; fresh-cache downloads match the verified archive and both runtime project installs validate. Preparing source or an archive alone still does not establish publication. Upgrade and rollback use the same installer with an explicit destination and version; preserve personal edits when preflight reports a conflict.
