@@ -200,7 +200,16 @@
     "unittest": "200 passed, no skips",
     "npm_affected_suite": "14 passed after release-note allow-list change"
   },
-  "prompt_quality_review": "pending final independent snapshot review",
+  "prompt_quality_review": {
+    "verdict": "pass within four observed cases",
+    "source": "review.json",
+    "provenance": "separate agent; inherited task history; nonblind; native actor contexts separate",
+    "correction": "P3 reviewer-provenance wording corrected in report; no product changes"
+  },
   "publication": "not performed",
-  "personal_installation": "unchanged; temporary installs only"
+  "personal_installation": "unchanged; temporary installs only",
+  "implementation_commit": "2cd39b910c45a560c94c06b6c4128a77532ac2ae",
+  "readiness": "ready for authorized release of the verified archive, within stated limits; not published",
+  "archive": "archive.json",
+  "installation": "installation.json"
 }

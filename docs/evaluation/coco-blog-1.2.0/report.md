@@ -2,7 +2,7 @@
 
 ## Current state
 
-The two requested fixes are implemented: package version `1.2.0`, and publication-state guidance driven by the consumer schema with Hugo retained as an example. Final independent review and archive refresh are pending. No registry publication, remote source push, PR or personal installation has been performed.
+The two requested fixes are implemented: package version `1.2.0`, and publication-state guidance driven by the consumer schema with Hugo retained as an example. The verified local archive is ready for an authorized release within the limits below. Separate review found no product blocker, the final archive matches the implementation source and its publish dry-run passed. No registry publication, remote source push, PR or personal installation has been performed.
 
 ## Behavior observed
 
@@ -21,7 +21,9 @@ The historical failing-before check is textual contract evidence: base `04507c1`
 
 ## Prompt quality
 
-A fresh reviewer is assessing intent/routing, context reuse/question economy, clarity/consistency, evidence/editorial quality and boundaries/state against the frozen scale. Results will be recorded separately from mechanical test success. The writing sample distinguishes implementation and local test evidence from unmeasured performance/production effects; it does not manufacture an incident, benchmark or rationale. The selection sample asks a single material selection question; the settled drafting request does not reopen that choice.
+A separate read-only reviewer assessed intent/routing, context reuse/question economy, clarity/consistency, evidence/editorial quality and boundaries/state against the frozen scale. All axes passed within the four observed scenarios. This reviewer inherited the full task history: the review is nonblind, not author-unaware or cross-model. Native actor sessions had separate contexts and did not receive the rubric. The initial report's stronger 'fresh reviewer' wording was corrected following review (P3); no product behavior changed. The writing sample distinguishes implementation and local test evidence from unmeasured performance/production effects; it does not manufacture an incident, benchmark or rationale. The selection sample asks a single material selection question; the settled drafting request does not reopen that choice.
+
+The reviewer inspected the actual native commands, manuscripts, request bodies, observer, 54 related source hashes and 16 retained native witness hashes. Spec, repository standards and quality each passed for implementation commit `2cd39b910c45a560c94c06b6c4128a77532ac2ae`. New prose quality was substantially tested only in the writing case; approved-release cases tested preserving content and the handoff. Sparse/ambiguous requests and repeated-run reliability remain outside these samples. See `review.json` for individual verdicts and provenance.
 
 ## Packaging and recovery
 
@@ -40,3 +42,9 @@ The observer initially assumed every cloned checkout retained `origin/content`, 
 `results.json`, `skill-hashes.json` and `native-manifest.json` identify case outcomes and exact skill/output hashes. `native-events.tar.gz` retains only synthetic requests, native events, final responses and launch/exit receipts; no consumer repository/fixture copies are checked in. Full local observer/fixture evidence remains at `/private/tmp/coco-articles-run/`, with its original bundle hash `16f631622747ffcf63d0e97cc151a15d77a8bd12000dfa624bfcb44830d96360`. The native result receipt hash is `c24ca9a543c10e33a8da9c7d631ff0df0883e372db86c9d66112278abf0e3b89`.
 
 Rollback for a later authorized installation is the version-pinned `1.1.0` installer with the same runtime/destination; preflight preserves personal modifications. No article or source-note data migration is introduced.
+
+## Final candidate and publication state
+
+The final archive has 474 entries, 30 skills and 125 managed payload files. Every archived file matches implementation commit `2cd39b9`; the release-note link resolves in the package and evaluation logs/tests/Git metadata are excluded. Its SHA-256 is `55d7d4bc5cc003a999ee04e0bd5423500296b7f9636bafed4799f60311522180`. `npm publish --dry-run <archive> --ignore-scripts --access public --json` exited zero and reported version `1.2.0` and the same integrity. This does not prove registry-write credentials or actual publication. Pack/dry-run skipped hooks deliberately; the unchanged prepack commands were run as the separate mandatory validator/full-suite checks, and the later archive allow-list change received its affected 14-test recheck. No hook or threshold was weakened.
+
+`archive.json` records the exact archive and command receipt. `installation.json` records both runtime upgrade/reinstall/conflict/rollback results and registry observation. The final evidence-only update changes no packaged file. The original `/Users/Joseph/workspaces/skills` remains clean on `main` at `04507c1`; personal skill installations remain unchanged. Local source preparation is complete. Remote branch push, PR/merge, registry publication and installed-client rollout have not occurred.

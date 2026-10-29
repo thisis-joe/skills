@@ -1,0 +1,19 @@
+test_archive_contains_complete_bundle_and_provenance_only (test_npm_distribution.NpmDistributionTests) ... ok
+test_claude_runtime_uses_its_config_even_with_codex_home (test_npm_distribution.NpmDistributionTests) ... ok
+test_codex_home_selects_default_destination (test_npm_distribution.NpmDistributionTests) ... ok
+test_dry_run_has_no_filesystem_effect (test_npm_distribution.NpmDistributionTests) ... ok
+test_explicit_destination_beats_runtime_and_both_config_homes (test_npm_distribution.NpmDistributionTests) ... ok
+test_foreign_skill_failure_reaches_npm_cli_without_partial_install (test_npm_distribution.NpmDistributionTests) ... ok
+test_help_version_and_unknown_command_do_not_require_python (test_npm_distribution.NpmDistributionTests) ... ok
+test_missing_python_reports_requirement_and_does_not_install (test_npm_distribution.NpmDistributionTests) ... ok
+test_npm_exec_claude_install_uses_the_published_archive (test_npm_distribution.NpmDistributionTests) ... ok
+test_npm_exec_installs_archive_without_checkout_or_registry_access (test_npm_distribution.NpmDistributionTests) ... ok
+test_project_install_replaces_global_install_and_uninstall_reaches_python (test_npm_distribution.NpmDistributionTests) ... ok
+test_python_is_discovered_without_an_explicit_override (test_npm_distribution.NpmDistributionTests) ... ok
+test_reinstall_is_unchanged_and_preserves_unrelated_skills (test_npm_distribution.NpmDistributionTests) ... ok
+test_unknown_runtime_does_not_write_either_config_directory (test_npm_distribution.NpmDistributionTests) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 9.122s
+
+OK
