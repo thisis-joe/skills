@@ -1,4 +1,4 @@
-# COCO Skills 1.2.0 release candidate
+# COCO Skills 1.2.0
 
 ## Consumer changes
 
@@ -9,7 +9,7 @@
 
 ## Installation and rollback
 
-The version is prepared locally and is not claimed as published. After registry publication, run the version-pinned installer with the intended runtime and project, for example:
+Version `1.2.0` is published on npm. PR #31 was merged into `main` at `f1c2f21`, and tag `v1.2.0` identifies that source. Run the version-pinned installer with the intended runtime and project, for example:
 
 ```sh
 npx --yes @thisis-joe/coco-skills@1.2.0 install --runtime codex --project .
@@ -22,4 +22,4 @@ Open a new agent session after installation. Updating npm alone does not install
 
 The validator and 200 repository tests passed; the affected 14 npm distribution tests also passed after the archive allow-list update. Four native Codex scenarios exercised note selection, a `status: draft` manuscript, an approved `published: true` transition and the preserved Hugo release path. Both runtime installers passed temporary upgrade, reinstall, personal-file protection and exact rollback checks. See `docs/evaluation/coco-blog-1.2.0/` in the source repository for the frozen protocol, evidence and final independent review. Behavior samples establish only the exercised paths; they do not prove universal prompt adherence, comparative model quality, or a real consumer site's publisher.
 
-Native behavior was exercised once per scenario in Codex; Claude installation was checked without a native Claude session. Local renderer and local-origin results do not establish a real public deployment. Child sandbox restrictions required same-origin isolated clones for publication preparation; original application changes remained intact. No registry publication or personal installation is performed by this verification.
+Native behavior was exercised once per scenario in Codex; Claude installation was checked without a native Claude session. Local renderer and local-origin results do not establish a real public deployment. Child sandbox restrictions required same-origin isolated clones for publication preparation; original application changes remained intact. The pre-release scenario verification did not publish or change personal installations. After publication, fresh-cache registry downloads matched the verified archive, and both runtime project installations, validation and unchanged reinstall passed. Personal installations remain unchanged.
