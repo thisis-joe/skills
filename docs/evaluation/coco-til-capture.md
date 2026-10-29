@@ -92,3 +92,14 @@ examples now target the authorized version; registry publication and fresh-cache
 readback still require actual execution before being reported complete. A summary
 of failures, fixes and shared-installation hazards was delivered to the named
 askme/research chat at the user's explicit request.
+
+## Windows Python 3.9 encoding correction
+
+At head `67035f2`, Linux checks, all shell checks and Windows current Python
+passed. Windows Python 3.9 exposed one new test reading UTF-8 coverage.json
+with its default cp1252 encoding. An ASCII-default local run reproduced the
+same implicit-decoding defect (`PYTHONUTF8=0 PYTHONCOERCECLOCALE=0 LC_ALL=C
+python3 -m unittest discover -s tests -p test_source_fidelity.py -v`). Explicit
+UTF-8 reading fixes the test without changing its assertions or source facts;
+all 13 source-fidelity tests then passed in the same non-UTF-8-default run.
+Keep file encodings explicit rather than making UTF-8 mode a CI prerequisite.
