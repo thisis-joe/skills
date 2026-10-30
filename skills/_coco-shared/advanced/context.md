@@ -68,6 +68,8 @@ Carry the [workflow](../workflow.md) spec identity, stage/skill, manual or autom
 
 Save a handoff outside the repository by default unless the user specifies a durable project destination. Include accepted goal/scope, current task/resume point, branch/base/dirty state, constraints/authorization, evidence, unresolved decisions and suggested integrated procedures.
 
+For an active askme exploration or quiz, also retain concepts with their work relevance, unresolved user questions, source/revision pointers, conversation mode and any pending quiz question. A compaction summary is incomplete evidence; recover only missing, session-linked context under askme's opening bound, never a history sweep. This adds no automatic file write.
+
 Reference existing specs, plans, ADRs, issues and commits rather than copying them. Redact secrets and private information; retain enough environment detail to make evidence interpretable. Report the file path. Launching a new worker/harness or sending the file is a separate action requiring current authorization and tool support.
 
 At a phase boundary decide in order: continue if the next phase needs full reasoning and fits; discard context only when irrelevant; hand off when work must travel; delegate a scoped AFK remainder when appropriate; otherwise compact with an explicit continuation purpose. Mid-phase preserve the thread or isolate a bounded subtask. Compaction cannot restore reasoning it omitted.

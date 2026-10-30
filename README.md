@@ -8,16 +8,16 @@ Codex와 Claude Code에서 쓰는 개발 스킬 30개. 중요한 동작은 사�
 
 Node.js 22 이상과 Python 3.9 이상이 필요합니다. 사용할 에이전트는 별도로 설치하고 로그인하세요.
 
-이번 버전은 **1.3.0**이며, `coco-learn`을 `coco-til`로 교체했습니다. 아래 npm 설치 명령은 **1.3.0용**입니다. [변경·이전 안내](docs/coco-1.3.0.md)를 확인하세요. [1.0.0 → 1.1.0 변경 지점](https://github.com/thisis-joe/skills/blob/v1.1.0/docs/coco-1.0.0-to-1.1.0.md)에 수정한 지침, 변경 전후 예시와 검증 방법을 정리했습니다.
+This source is **1.4.0**: `coco-askme` now combines session exploration, evidence-backed investigation and optional quizzes; `coco-research` remains a compatibility alias. See [changes and migration](docs/coco-1.4.0.md). The pinned npm commands below are available after registry publication; source preparation or a Git merge alone does not establish that publication. [1.0.0 → 1.1.0 변경 지점](https://github.com/thisis-joe/skills/blob/v1.1.0/docs/coco-1.0.0-to-1.1.0.md)에 수정한 지침, 변경 전후 예시와 검증 방법을 정리했습니다.
 
 사용할 프로젝트 폴더에서 런타임에 맞는 명령을 실행합니다.
 
 ```sh
 # Claude Code
-npx --yes @thisis-joe/coco-skills@1.3.0 install --runtime claude
+npx --yes @thisis-joe/coco-skills@1.4.0 install --runtime claude
 
 # Codex
-npx --yes @thisis-joe/coco-skills@1.3.0 install --runtime codex
+npx --yes @thisis-joe/coco-skills@1.4.0 install --runtime codex
 ```
 
 터미널에서 설치 위치를 고를 수 있습니다. 기존 설치도 같은 명령으로 업데이트합니다. 설치 후 해당 프로젝트에서 **새 세션**을 여세요. Claude Code는 `/`, Codex는 `$`로 스킬을 호출합니다.
@@ -46,20 +46,20 @@ python3 scripts/install.py --runtime claude --project /path/to/your-project
 <details>
 <summary>설치 위치 · 업데이트 · 제거</summary>
 
-아래 명령은 **1.3.0 기준**입니다. `claude` 대신 `codex`를 지정하면 Codex에 적용됩니다.
+아래 명령은 **1.4.0 기준**입니다. `claude` 대신 `codex`를 지정하면 Codex에 적용됩니다.
 
 ```sh
 # 현재 프로젝트에 설치하거나 업데이트
-npx --yes @thisis-joe/coco-skills@1.3.0 install --runtime claude --project .
+npx --yes @thisis-joe/coco-skills@1.4.0 install --runtime claude --project .
 
 # 모든 프로젝트에서 사용
-npx --yes @thisis-joe/coco-skills@1.3.0 install --runtime claude --global
+npx --yes @thisis-joe/coco-skills@1.4.0 install --runtime claude --global
 
 # 프로젝트로 옮기면서 기존 글로벌 설치 제거
-npx --yes @thisis-joe/coco-skills@1.3.0 install --runtime claude --project . --remove-global
+npx --yes @thisis-joe/coco-skills@1.4.0 install --runtime claude --project . --remove-global
 
 # 현재 프로젝트에서 제거
-npx --yes @thisis-joe/coco-skills@1.3.0 uninstall --runtime claude --project .
+npx --yes @thisis-joe/coco-skills@1.4.0 uninstall --runtime claude --project .
 ```
 
 | 런타임 | 프로젝트 설치 | 글로벌 설치 |
@@ -78,6 +78,22 @@ npx --yes @thisis-joe/coco-skills@1.3.0 uninstall --runtime claude --project .
 세부 동작과 검증 명령은 [배포 안내](docs/distribution.md)를 참고하세요.
 
 </details>
+
+## Changes in 1.4.0
+
+- Bare `coco-askme` or `coco-research` offers up to three current-session concepts and free-text entry, without starting a quiz or broad investigation.
+- Compressed/handoff context is disclosed even without recovery. Missing continuity permits one batch of at most two identified session sources (120 excerpt lines total); unsupported topics are not invented.
+- A specific question receives a direct evidence-backed answer. An explicit quiz retains one question at a time, feedback and answer withholding.
+- Deep investigation follows evidence gaps and changed scope/version/revision. Reuse matching evidence; load quiz/research details only when needed. Instruction-size guards and sampled probes do not guarantee token savings.
+- The 1.3.0 TIL storage, cache-exclusion and platform fixes remain intact. Skill count and installer interface stay at 30 and the existing CLI respectively.
+
+```text
+$coco-askme
+$coco-research trace the retry flow
+$coco-askme quiz me on this retry flow
+```
+
+Update each runtime separately and start a new client session. To keep the prior quiz-first interaction, explicitly ask for a quiz. See [release notes](docs/coco-1.4.0.md) for compatibility and recovery.
 
 ## 1.3.0에서 바뀐 점
 
@@ -158,7 +174,7 @@ PR/MR을 엽니다. `coco-merge`는 선택한 PR/MR의 대상 브랜치로 체�
 
 필요한 단계부터 시작하세요. 모든 작업에 전체 절차가 필요한 것은 아닙니다. 할 일과 스킬이 정해졌다면 `coco-start`를 거치지 않고 바로 호출하세요.
 
-이름만 호출했을 때 대화에서 할 일이 하나로 정해져 있으면 그 요청으로 진행하고, 그렇지 않으면 요청문 선택을 안내합니다. `coco-start`는 읽기 전용 경로 안내를, `coco-tellmeskill`, `coco-askme`, `coco-updateskill`, `coco-whattosay`는 각자의 선택 단계를 시작합니다. `coco-til`은 이름만 호출해도 현재 세션을 TIL로 바로 기록하고, `coco-blog`는 로컬 노트 선택을 시작합니다. **`coco-push`와 `coco-merge`는 이름만 호출해도 현재 브랜치 기준으로 실행**하므로, 설명만 원하면 요청에 명시하세요.
+A bare invocation reuses a settled request or offers request guidance. Exceptions: `coco-start` returns read-only routing; `coco-tellmeskill`, `coco-updateskill` and `coco-whattosay` use their own selection. `coco-askme` and its `coco-research` alias offer session concepts. `coco-til` captures the session directly; `coco-blog` selects local notes. `coco-push` and `coco-merge` execute on the current branch, so explicitly request an explanation when execution is not intended.
 
 ```text
 coco-clarify → coco-spec → coco-plan → coco-build → coco-review → coco-push → coco-merge
@@ -172,6 +188,8 @@ coco-clarify → coco-spec → coco-plan → coco-build → coco-review → coco
 | 검증·전문 검토 | `coco-review`, `coco-verify`, `coco-security`, `coco-performance`, `coco-frontend` |
 | 운영·배포 | `coco-observe`, `coco-automate`, `coco-push`, `coco-merge`, `coco-ship` |
 | 문서·학습·협업 | `coco-docs`, `coco-blog`, `coco-til`, `coco-askme`, `coco-context`, `coco-retro`, `coco-triage`, `coco-updateskill` |
+
+`coco-askme` offers up to three session concepts on a bare call, using bounded recovery when context was compressed. Explicit questions receive evidence-backed answers; quizzes run only when requested. `coco-research` is a compatibility alias with the same behavior.
 
 각 스킬의 절차는 [스킬 원본](skills), 선택 기준은 [작업별 안내](skills/_coco-shared/routing.md)에 있습니다. 외부 서비스 연결과 권한이 필요한 작업은 해당 환경이 준비되어 있어야 합니다.
 

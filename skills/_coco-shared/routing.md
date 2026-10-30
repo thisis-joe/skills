@@ -6,14 +6,14 @@ Start ordinary discovery with the ten skills in four stages in the [workflow](wo
 |---|---|---|
 | Browse all available skills or understand a selected skill | tellmeskill | Recent skills first on a bare invocation, then the full current catalog grouped by purpose; target/depth choices and source-based explanation using the common format |
 | Decide what to ask an already selected skill, or one invoked without a request | whattosay | Contextual full invocation options, a recommended choice, then user-selected execution or prompt-only output |
-| Be quizzed on the current work or selected code to understand it | askme | Scope/topic choices, one grounded question at a time, answer feedback and a closing summary; no code changes |
+| Explore current-session concepts, investigate a question or be quizzed on selected code | askme | Bounded session-topic choices for a bare call; direct evidence-backed answers or an explicitly requested one-question quiz; no code changes |
 | Adapt an existing skill to team rules or change its workflow | updateskill | Scoped source changes, consistent references/provenance, checks and actual installation status |
 | Integrate remote dev/develop, resolve conflicts and publish the current branch | push | Verified integration commits, single-branch normal push, remote-ref readback and a draft PR/MR into the development base when none is open |
 | Merge an already pushed PR/MR into its target branch without a readiness review | merge | Forge-gated merge of the pushed head, merged-state and target-branch readback; queued or blocked reported as such |
 | Clear static color/copy edit | Direct lightweight edit; start only if routing is unclear | Requested edit and necessary visual/content check |
 | Establish commands, standing quality bar or select a workflow | start | Project profile, checks with owners, chosen route |
 | Unsettled requirements, terms or idea, or a plan to grill/stress-test | clarify | Settled decisions, explicit open items, glossary/ADR only when warranted |
-| Understand runtime behavior, historical rationale or an external API | research | Cited explanation, verified facts versus inferences, preservation constraints |
+| Use the legacy research invocation | research (alias of askme) | Same topic opening for bare calls; explicit questions retain cited answers, uncertainty and preservation constraints |
 | Choose module/API boundaries or test an uncertain design | design | Compared alternatives, contract and test surface; disposable prototype evidence if needed |
 | Turn agreed behavior into a durable contract | spec | One authoritative spec with scope and observable acceptance |
 | Break work into dependency-ready, verifiable units | plan | Ordered task graph, verification and risk checkpoints |

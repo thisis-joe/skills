@@ -2,6 +2,8 @@
 
 Apply the [common contract](../contracts.md). Research establishes facts and constraints; it does not authorize implementation, account changes or publication.
 
+The public owner is [coco-askme](../../coco-askme/SKILL.md); coco-research is only its compatibility alias. This evidence procedure remains reusable by design, debugging and other specialist work without a topic menu or quiz. Load it for the selected evidence question, never simply to build a bare-call concept menu.
+
 ## Input and selection
 
 Retain the question, intended decision, target repository/product/version, allowed sources, time window and desired artifact. Use an existing research note rather than restarting a completed investigation.

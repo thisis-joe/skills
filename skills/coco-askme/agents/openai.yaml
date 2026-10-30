@@ -1,4 +1,4 @@
 interface:
   display_name: "coco-askme"
-  short_description: "Quiz me on selected work, code flow and design"
-  default_prompt: "Use $coco-askme to let me choose a scope and topics, then ask me one question at a time about the code."
+  short_description: "Explore session concepts, research questions or quiz me"
+  default_prompt: "Use $coco-askme to explore session concepts or answer my question with evidence; quiz me only when requested."

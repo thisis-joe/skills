@@ -119,7 +119,7 @@ TRIGGERS = {
         ('decision map', 'plan.md#Decision-map mode for large uncertainty'),
         ('bespoke investigation', 'plan.md#Bespoke investigation mode'),
     ],
-    'research': [
+    'askme': [
         ('version-specific api facts', 'research.md#API facts and documentation'),
         ('runtime mechanism', 'research.md#Runtime mechanism and ownership'),
         ('historical rationale', 'research.md#Historical rationale and defensive code'),

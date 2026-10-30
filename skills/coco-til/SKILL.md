@@ -36,6 +36,6 @@ A bare invocation already selects current-session capture: do not open a request
 
 ## Boundaries and return
 
-Personal TIL is this skill's output. Project documents for other readers belong to `coco-docs`; interactive questions belong to `coco-askme`; broader investigation belongs to `coco-research`. Capturing notes authorizes neither code edits, project commits, publication, blog offers nor scheduling.
+Personal TIL is this skill's output. Project documents for other readers belong to `coco-docs`; interactive questions and evidence-backed investigation belong to `coco-askme` (`coco-research` is its compatibility alias). Capturing notes authorizes neither code edits, project commits, publication, blog offers nor scheduling.
 
 Return a short topic-grouped list of created/updated note paths, meaningful skipped duplicates, storage/ignore changes, checker result and any unresolved conflicts or unverifiable facts. Do not dump the notes back into chat or start an obligatory quiz.

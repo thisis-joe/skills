@@ -274,7 +274,7 @@
     },
     {
       "path": "skills/engineering/research/SKILL.md",
-      "family": "research",
+      "family": "askme",
       "disposition": "adapted",
       "essential_rules": [
         "Trace each substantive claim to a source that owns it: official documentation, source code, specifications or first-party API, rather than citing a secondary explanation as authority.",
@@ -282,10 +282,10 @@
         "Write one cited Markdown findings artifact using the repo’s research-note convention; if none exists choose and state a sensible location."
       ],
       "dependencies": [],
-      "adaptation": "Merge into MALJ research with delegation conditional on authorization/capability and a synchronous fallback. Retain claim-level citations and durable findings, with explicit uncertainty rather than treating notes as decisions. No original research branch or remote publication is implied by this skill alone.",
+      "adaptation": "Merge into MALJ research with delegation conditional on authorization/capability and a synchronous fallback. Retain claim-level citations and durable findings, with explicit uncertainty rather than treating notes as decisions. No original research branch or remote publication is implied by this skill alone. The public research procedure is now owned by coco-askme; coco-research remains a thin compatibility alias. Session-topic orientation and bounded compaction recovery are team additions; primary-source evidence rules remain shared.",
       "author": "matt",
       "implemented_references": [
-        "skills/coco-research/SKILL.md",
+        "skills/coco-askme/SKILL.md",
         "skills/_coco-shared/advanced/research.md"
       ]
     },
@@ -1667,7 +1667,7 @@
     },
     {
       "path": "skills/source-driven-development/SKILL.md",
-      "family": "research",
+      "family": "askme",
       "disposition": "merged",
       "essential_rules": [
         "Detect exact installed framework/library versions from dependency files before retrieving API guidance; surface ambiguous versions rather than guessing.",
@@ -1680,12 +1680,12 @@
       "dependencies": [
         "skills/security-and-hardening/SKILL.md"
       ],
-      "adaptation": "Merge versioned primary-source research while keeping implementation conventions and the trust boundary intact. The original speed exemption cannot waive higher-priority source-verification requirements; code-comment citation placement should follow the repository.",
+      "adaptation": "Merge versioned primary-source research while keeping implementation conventions and the trust boundary intact. The original speed exemption cannot waive higher-priority source-verification requirements; code-comment citation placement should follow the repository. The public research procedure is now owned by coco-askme; coco-research remains a thin compatibility alias. Session-topic orientation and bounded compaction recovery are team additions; primary-source evidence rules remain shared.",
       "author": "addy",
       "implemented_references": [
-        "skills/coco-research/SKILL.md",
+        "skills/coco-askme/SKILL.md",
         "skills/_coco-shared/advanced/research.md",
-        "skills/coco-research/SKILL.md#stop-signals",
+        "skills/coco-askme/SKILL.md#stop-signals",
         "skills/_coco-shared/contracts.md#stop-signals"
       ]
     },
@@ -2135,7 +2135,7 @@
     },
     {
       "path": "pstack/skills/how/SKILL.md",
-      "family": "research",
+      "family": "askme",
       "disposition": "adapted",
       "essential_rules": [
         "Answer runtime, placement, ownership, and layering questions with an architectural mental model rather than an annotated file dump.",
@@ -2147,10 +2147,10 @@
         "pstack/skills/how/references/explorer-prompt.md",
         "pstack/skills/poteto-mode/SKILL.md"
       ],
-      "adaptation": "Concrete runtime/ownership investigation mode; eliminate mandatory explainer spawn for simple questions and hardcoded Cursor role models. Preserve supporting exploration/explanation prompts as neutral checklists.",
+      "adaptation": "Concrete runtime/ownership investigation mode; eliminate mandatory explainer spawn for simple questions and hardcoded Cursor role models. Preserve supporting exploration/explanation prompts as neutral checklists. The public research procedure is now owned by coco-askme; coco-research remains a thin compatibility alias. Session-topic orientation and bounded compaction recovery are team additions; primary-source evidence rules remain shared.",
       "author": "pstack",
       "implemented_references": [
-        "skills/coco-research/SKILL.md",
+        "skills/coco-askme/SKILL.md",
         "skills/_coco-shared/advanced/research.md"
       ]
     },
@@ -3154,7 +3154,7 @@
     },
     {
       "path": "pstack/skills/why/SKILL.md",
-      "family": "research",
+      "family": "askme",
       "disposition": "adapted",
       "essential_rules": [
         "Anchor rationale research to real symbols/lines, rename-aware history, blame, commit messages, substantive PR discussion, and linked tickets before interpreting present code as intention.",
@@ -3179,10 +3179,10 @@
         "pstack/skills/why/references/sources/slack.md",
         "pstack/skills/why/references/synthesizer-prompt.md"
       ],
-      "adaptation": "Concrete rationale/lineage investigation mode. Use relevant available sources and an explicit coverage map; adapt automatic seven-category agent sweeps to scope and authorization while retaining visible gaps and epistemic discipline.",
+      "adaptation": "Concrete rationale/lineage investigation mode. Use relevant available sources and an explicit coverage map; adapt automatic seven-category agent sweeps to scope and authorization while retaining visible gaps and epistemic discipline. The public research procedure is now owned by coco-askme; coco-research remains a thin compatibility alias. Session-topic orientation and bounded compaction recovery are team additions; primary-source evidence rules remain shared.",
       "author": "pstack",
       "implemented_references": [
-        "skills/coco-research/SKILL.md",
+        "skills/coco-askme/SKILL.md",
         "skills/_coco-shared/advanced/research.md"
       ]
     }
