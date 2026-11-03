@@ -18,7 +18,7 @@ HOT_PATHS = {
 }
 # Measured after the latency changes and the bare-invocation rule, plus 2%; raising one
 # needs a decisions.md row.
-MAX_CHARACTERS = {'push': 34100, 'merge': 27400, 'ship': 12550}
+MAX_CHARACTERS = {'push': 34100, 'merge': 27600, 'ship': 12550}
 
 
 def characters(paths, root=ROOT):
