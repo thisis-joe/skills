@@ -6,6 +6,8 @@ license: MIT
 
 # coco-retro
 
+**Contents:** [Procedure and output](#procedure-and-output)
+
 Convert observed failure patterns into a narrow, verifiable structural improvement.
 
 Read the [common contract](../_coco-shared/contracts.md) before acting; when the request already shows that the file below applies, read both in one call. Initially and on new scope, risk, state, or missing prerequisites, check for a session retrospective, a recurring mistake class that needs a guardrail, reflecting lessons into maintained instructions or skills, and a work-environment audit (navigation, checks, ownership, context economy). If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/retro.md) before dependent work.

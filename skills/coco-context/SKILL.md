@@ -6,6 +6,8 @@ license: MIT
 
 # coco-context
 
+**Contents:** [Procedure and output](#procedure-and-output) · [Stop signals](#stop-signals)
+
 Preserve the minimum truthful context required to resume work safely.
 
 Read the [common contract](../_coco-shared/contracts.md) before acting; when the request already shows that the file below applies, read both in one call. Initially and on new scope, risk, state, or missing prerequisites, check for task pickup after interruption, current-chat catchup, cross-chat recall, a portable handoff or phase-boundary choice, a long-run decision log, domain-language maintenance, profile-only workstyle capture, and owned worktree or simulator cleanup. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/context.md) before dependent work.

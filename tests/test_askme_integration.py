@@ -40,10 +40,11 @@ class AskmeIntegrationTests(unittest.TestCase):
             self.assertEqual(before, (dest / '.coco-install.json').read_bytes())
 
     def test_opening_instruction_budget_and_deferred_quiz(self):
-        # Prior askme entry was 6052 bytes at the approved TIL base. This bounds
-        # instruction size only; actual token use and tool selection need runtime evidence.
+        # Prior askme entry was 6052 bytes at the approved TIL base, plus 100 for its
+        # contents line. This bounds instruction size only; actual token use and tool
+        # selection need runtime evidence.
         owner = (ROOT / 'skills/coco-askme/SKILL.md').read_bytes()
-        self.assertLessEqual(len(owner), 6052)
+        self.assertLessEqual(len(owner), 6152)
         alias = (ROOT / 'skills/coco-research/SKILL.md').read_bytes()
         self.assertLessEqual(len(alias), 700)
         text = owner.decode('utf-8')

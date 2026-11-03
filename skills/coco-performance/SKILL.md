@@ -6,6 +6,8 @@ license: MIT
 
 # coco-performance
 
+**Contents:** [Procedure and output](#procedure-and-output) · [Stop signals](#stop-signals)
+
 Keep only improvements supported by controlled measurement and correct behavior.
 
 Read the [common contract](../_coco-shared/contracts.md) before acting; when the request already shows that the file below applies, read both in one call. Initially and on new scope, risk, state, or missing prerequisites, check for a disputed or adoption-deciding benchmark, query-plan, index, connection-pool or cache decisions, page-load or interaction metrics, a requested one-run ballpark, source-only inspection without a runnable target, and a sustained tuning run. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/performance.md) before dependent work.

@@ -6,6 +6,8 @@ license: MIT
 
 # coco-start
 
+**Contents:** [Procedure and output](#procedure-and-output) · [Stop signals](#stop-signals)
+
 Choose an appropriate workflow and establish the project quality bar. Start with the four stages and ten introductory skills in the [workflow](../_coco-shared/workflow.md); offer specialists/help by purpose, preserving expert direct invocation and complete-list requests.
 
 Read the [common contract](../_coco-shared/contracts.md) before acting; when the request already shows that the file below applies, read both in one call. Initially and on new scope, risk, state, or missing prerequisites, check for a setup request with a missing standing quality bar (establish with a live user, floor only when unattended), quality-floor checks on a task diff, ratchets or check placement and cost, conflicting package-manager signals, and mapping a former pstack playbook to its COCO home. If any applies, read the [advanced modes](../_coco-shared/advanced/start.md) before dependent work.

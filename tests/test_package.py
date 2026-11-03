@@ -29,7 +29,8 @@ class PackageTests(unittest.TestCase):
         self.write('skills/_coco-shared/contracts.md', '# Common contract\n')
         self.write('skills/coco-example/SKILL.md', '---\nname: coco-example\n'
                    'description: "Use when testing the installed package."\nlicense: MIT\n---\n'
-                   '# Example\n\nRead [contract](../_coco-shared/contracts.md).\n')
+                   '# Example\n\n**Contents:** [Use](#use)\n\n## Use\n\n'
+                   'Read [contract](../_coco-shared/contracts.md).\n')
         self.write('skills/coco-example/agents/openai.yaml', 'interface:\n'
                    '  display_name: "coco-example"\n'
                    '  short_description: "A concrete fixture for package installation"\n'
@@ -461,6 +462,19 @@ class PackageTests(unittest.TestCase):
         p = self.root / 'skills/coco-example/SKILL.md'
         p.write_text(p.read_text(encoding='utf-8').replace('name: coco-example', 'name: wrong-name'))
         self.run_tool('validate.py', expect=2)
+
+    def test_missing_or_stale_contents_are_rejected(self):
+        p = self.root / 'skills/coco-example/SKILL.md'
+        original = p.read_text(encoding='utf-8')
+        for broken in (original.replace('**Contents:** [Use](#use)\n\n', ''),
+                       original.replace('## Use', '## Usage'),
+                       original + '\n## Later\n\nUnlisted section.\n'):
+            with self.subTest(body=broken):
+                p.write_text(broken, encoding='utf-8')
+                result = self.run_tool('validate.py', expect=2)
+                self.assertIn('Contents', result.stdout + result.stderr)
+        p.write_text(original + '\n```\n## Not a section\n```\n', encoding='utf-8')
+        self.run_tool('validate.py')
 
     def test_installed_tampering_is_detected(self):
         self.install()

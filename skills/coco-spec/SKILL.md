@@ -6,6 +6,8 @@ license: MIT
 
 # coco-spec
 
+**Contents:** [Procedure and output](#procedure-and-output) · [Stop signals](#stop-signals)
+
 Produce one usable contract for behavior and completion. All behavior changes need this saved contract and a saved plan before code, including small tasks; reuse project files and keep small contracts brief. Apply the [transition contract](../_coco-shared/workflow.md) before another skill.
 
 Read the [common contract](../_coco-shared/contracts.md) before acting; when the request already shows that the file below applies, read both in one call. Initially and on new scope, risk, state, or missing prerequisites, check for independently testable capabilities that need a capability map, revision of an existing agreement, missing project guidance or verification commands, vague quality targets that need measurable acceptance, and tracker publication or agent-ready handoff. If any applies, read the [advanced modes](../_coco-shared/advanced/spec.md) before dependent work.

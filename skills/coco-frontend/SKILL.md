@@ -6,6 +6,8 @@ license: MIT
 
 # coco-frontend
 
+**Contents:** [Procedure and output](#procedure-and-output) · [Stop signals](#stop-signals)
+
 Deliver the intended user experience within the existing visual and interaction system.
 
 Read the [common contract](../_coco-shared/contracts.md) before acting; when the request already shows that the file below applies, read both in one call. Initially and on new scope, risk, state, or missing prerequisites, check for a new screen or open visual direction, component state ownership or optimistic updates, accessibility verification (focus order, modals, live announcements), the runtime finish gate across supported widths, exact visual parity, and missing browser capability. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/frontend.md) before dependent work.

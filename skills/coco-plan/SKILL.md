@@ -6,6 +6,8 @@ license: MIT
 
 # coco-plan
 
+**Contents:** [Procedure and output](#procedure-and-output) · [Stop signals](#stop-signals)
+
 Turn the contract into small verifiable units with unambiguous ownership. Every behavior change needs a saved plan before code; a small task can be one item with acceptance/check. Apply the [transition contract](../_coco-shared/workflow.md) before another skill.
 
 Read the [common contract](../_coco-shared/contracts.md) before acting; when the request already shows that the file below applies, read both in one call. Initially and on new scope, risk, state, or missing prerequisites, check for tracker publication or its recovery, a wide mechanical migration across callers, whole-spec integration or concurrent workers, a huge unclear effort that needs a decision map, and unfamiliar work that needs a bespoke investigation plan. If any applies, read the [advanced modes](../_coco-shared/advanced/plan.md) before dependent work.
