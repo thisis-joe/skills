@@ -2,35 +2,35 @@
 
 [![npm](https://img.shields.io/npm/v/@thisis-joe/coco-skills)](https://www.npmjs.com/package/@thisis-joe/coco-skills)
 
-Codex와 Claude Code에서 쓰는 개발 스킬 30개. 중요한 동작은 사용자가 결정하고, 에이전트는 명세·구현·실행 근거를 남겨 다음 작업자가 이어받을 수 있게 합니다.
+Codex와 Claude Code에서 쓰는 개발 스킬 30개입니다. 중요한 결정은 사용자가 내리고, 에이전트는 명세·구현·실행 근거를 남겨 다음 작업자가 이어받을 수 있게 합니다.
+
+**목차:** [시작하기](#시작하기) · [1.5.0에서 바뀐 점](#150에서-바뀐-점) · [기능 하나를 진행하는 네 단계](#기능-하나를-진행하는-네-단계) · [전체 스킬](#전체-스킬) · [설치 위치·업데이트·제거](#설치-위치업데이트제거) · [문제 해결](#문제-해결) · [출처와 라이선스](#출처와-라이선스)
 
 ## 시작하기
 
-Node.js 22 이상과 Python 3.9 이상이 필요합니다. 사용할 에이전트는 별도로 설치하고 로그인하세요.
+Node.js 22 이상과 Python 3.9 이상이 필요합니다. Codex나 Claude Code는 따로 설치하고 로그인하세요.
 
-This source is **1.4.2**: PRs/MRs that COCO opens are now assigned to the opener, request the opener's review and get fitting existing labels. See [changes](docs/coco-1.4.2.md). The pinned npm commands below are available after registry publication; source preparation or a Git merge alone does not establish that publication. [1.0.0 → 1.1.0 변경 지점](https://github.com/thisis-joe/skills/blob/v1.1.0/docs/coco-1.0.0-to-1.1.0.md)에 수정한 지침, 변경 전후 예시와 검증 방법을 정리했습니다.
-
-사용할 프로젝트 폴더에서 런타임에 맞는 명령을 실행합니다.
+스킬을 쓸 프로젝트 폴더에서 런타임에 맞는 명령을 실행합니다. 이미 설치했다면 같은 명령으로 업데이트됩니다.
 
 ```sh
 # Claude Code
-npx --yes @thisis-joe/coco-skills@1.4.2 install --runtime claude
+npx --yes @thisis-joe/coco-skills@1.5.0 install --runtime claude
 
 # Codex
-npx --yes @thisis-joe/coco-skills@1.4.2 install --runtime codex
+npx --yes @thisis-joe/coco-skills@1.5.0 install --runtime codex
 ```
 
-터미널에서 설치 위치를 고를 수 있습니다. 기존 설치도 같은 명령으로 업데이트합니다. 설치 후 해당 프로젝트에서 **새 세션**을 여세요. Claude Code는 `/`, Codex는 `$`로 스킬을 호출합니다.
+설치 위치는 터미널에서 고릅니다. 설치가 끝나면 그 프로젝트에서 **새 세션**을 열고, Claude Code는 `/`, Codex는 `$`로 스킬을 부릅니다.
 
 ```text
 /coco-start 주문 취소 기능을 만들려고 해. 진행 순서를 정해줘
 $coco-start 주문 취소 기능을 만들려고 해. 진행 순서를 정해줘
 ```
 
-스킬을 둘러보려면 `/coco-tellmeskill`, 특정 스킬을 알아보려면 `/coco-tellmeskill coco-build 간단 설명`을 입력하세요. Codex에서는 앞의 `/`를 `$`로 바꿉니다.
+어떤 스킬이 있는지 보려면 `/coco-tellmeskill`, 특정 스킬이 궁금하면 `/coco-tellmeskill coco-build 간단 설명`을 입력하세요.
 
 <details>
-<summary>소스에서 설치 — npm 없이 사용</summary>
+<summary>npm 없이 소스에서 설치</summary>
 
 ```sh
 git clone https://github.com/thisis-joe/skills.git
@@ -39,158 +39,40 @@ python3 scripts/install.py --runtime claude --project /path/to/your-project
 # Codex는 --runtime codex
 ```
 
-`/path/to/your-project`를 이미 존재하는 프로젝트 폴더로 바꾸세요. Python 직접 설치에는 Node.js와 npm이 필요 없습니다.
+`/path/to/your-project`는 이미 있는 프로젝트 폴더로 바꾸세요. 이 방법에는 Node.js와 npm이 필요 없습니다.
 
 </details>
 
-<details>
-<summary>설치 위치 · 업데이트 · 제거</summary>
+## 1.5.0에서 바뀐 점
 
-아래 명령은 **1.4.2 기준**입니다. `claude` 대신 `codex`를 지정하면 Codex에 적용됩니다.
+- 모든 스킬 문서(`SKILL.md`) 맨 위, 제목 바로 아래에 **목차**가 생겼습니다. 각 `##` 섹션을 순서대로 연결해서, 본문을 읽기 전에 스킬의 구성을 볼 수 있습니다.
+- 목차는 이제 패키지 규칙입니다. 목차가 없거나, 섹션 이름·순서와 어긋나거나, 빠진 섹션이 있으면 `validate`와 설치가 멈춥니다. `coco-updateskill`로 스킬을 고쳤다면 목차도 함께 맞춰 주세요.
+- `coco-research`에 `## Forwarding` 섹션을 추가했습니다. `coco-askme`로 넘기는 동작은 그대로입니다.
+- 스킬 수(30개), 스킬 이름, 설치 명령은 바뀌지 않았습니다.
 
-```sh
-# 현재 프로젝트에 설치하거나 업데이트
-npx --yes @thisis-joe/coco-skills@1.4.2 install --runtime claude --project .
-
-# 모든 프로젝트에서 사용
-npx --yes @thisis-joe/coco-skills@1.4.2 install --runtime claude --global
-
-# 프로젝트로 옮기면서 기존 글로벌 설치 제거
-npx --yes @thisis-joe/coco-skills@1.4.2 install --runtime claude --project . --remove-global
-
-# 현재 프로젝트에서 제거
-npx --yes @thisis-joe/coco-skills@1.4.2 uninstall --runtime claude --project .
-```
-
-| 런타임 | 프로젝트 설치 | 글로벌 설치 |
-|---|---|---|
-| Claude Code | `.claude/skills` | `~/.claude/skills` |
-| Codex | `.agents/skills` | `~/.codex/skills` |
-
-- `CLAUDE_CONFIG_DIR` 또는 `CODEX_HOME`을 설정했다면 해당 폴더 아래 `skills`가 글로벌 위치입니다.
-- `--project`는 여러 번 지정할 수 있습니다. `--dest`로 별도 설치 위치를 정할 수도 있습니다.
-- 위치 옵션 없이 실행하면 터미널에서는 위치를 묻고, 비대화형 환경에서는 글로벌로 설치합니다.
-- 프로젝트 설치 파일은 `.git/info/exclude`로 Git 변경 목록에서 제외합니다. 두 런타임을 쓰면 각각 설치·업데이트하세요.
-- `installed` 또는 `unchanged`이면 설치 성공입니다. `--dry-run`으로 변경 전 확인할 수 있습니다.
-- 설치·제거 시 직접 수정한 파일이나 다른 스킬과 충돌하면 중단합니다. 파일을 먼저 보관하고 충돌을 해결하세요.
-- 글로벌 설치를 남기면 다른 프로젝트에서도 스킬이 보입니다. 프로젝트에서만 쓰려면 `--remove-global`을 사용하세요.
-
-세부 동작과 검증 명령은 [배포 안내](docs/distribution.md)를 참고하세요.
-
-</details>
-
-## 1.4.2에서 바뀐 점
-
-- `coco-push`·`coco-merge`·`coco-ship`이 새로 여는 PR/MR은 **연 사람(인증된 forge 계정)을 담당자와 리뷰어로** 기본 지정합니다. 사용자 요청이나 저장소 규칙이 다른 사람을 정하면 그쪽을 따릅니다.
-- 저장소에 **이미 있는 레이블** 중 변경 성격에 분명히 맞는 것(예: 수정은 `bug`, 기능은 `enhancement`, 문서만 바꾸면 `documentation`)을 붙입니다. 레이블을 새로 만들지 않고, 맞는 것이 없으면 붙이지 않고 알려 줍니다.
-- 요청을 먼저 만든 뒤 메타데이터를 따로 지정하고 다시 읽어 확인합니다. GitHub처럼 작성자를 리뷰어로 받지 않는 forge에서는 그 사실을 보고하고 다른 사람으로 바꾸지 않습니다. 이미 열려 있던 요청은 건드리지 않습니다.
-- 스킬 수(30개)와 설치 명령은 그대로입니다.
-
-## 1.4.1에서 바뀐 점
-
-- [coco-blog](skills/coco-blog/SKILL.md)에 **글 썸네일 단계**를 추가합니다. 블로그가 썸네일을 지원하면 원고 방향을 정한 뒤 후보 2~3개를 그려 보여 주고, 작성자가 고르거나 수정을 요청하거나 직접 가진 이미지를 쓸 수 있습니다.
-- 썸네일 필드·형식·용량·업로드 위치·화면별 잘림은 프로젝트에서 먼저 확인합니다. 고른 이미지는 원본 폴더 밖 임시 복사본에서 실제 화면으로 미리 보고, 그 복사본은 커밋하지 않습니다.
-- 업로드는 허락받은 뒤에만 하며, 글 공개 전에 외부에서 보이는 위치라면 먼저 알립니다. 공개 주소가 열리는 것을 확인한 뒤 글에 연결합니다. 라이선스가 불분명한 이미지와 내부 화면은 쓰지 않습니다.
-- 썸네일 필드가 없는 블로그는 이 단계를 건너뜁니다. 스킬 수(30개)와 설치 명령은 그대로입니다.
-
-## Changes in 1.4.0
-
-- Bare `coco-askme` or `coco-research` offers up to three current-session concepts and free-text entry, without starting a quiz or broad investigation.
-- Compressed/handoff context is disclosed even without recovery. Missing continuity permits one batch of at most two identified session sources (120 excerpt lines total); unsupported topics are not invented.
-- A specific question receives a direct evidence-backed answer. An explicit quiz retains one question at a time, feedback and answer withholding.
-- Deep investigation follows evidence gaps and changed scope/version/revision. Reuse matching evidence; load quiz/research details only when needed. Instruction-size guards and sampled probes do not guarantee token savings.
-- The 1.3.0 TIL storage, cache-exclusion and platform fixes remain intact. Skill count and installer interface stay at 30 and the existing CLI respectively.
-
-```text
-$coco-askme
-$coco-research trace the retry flow
-$coco-askme quiz me on this retry flow
-```
-
-Update each runtime separately and start a new client session. To keep the prior quiz-first interaction, explicitly ask for a quiz. See [release notes](docs/coco-1.4.0.md) for compatibility and recovery.
-
-## 1.3.0에서 바뀐 점
-
-- `coco-learn`을 [coco-til](skills/coco-til/SKILL.md)로 교체합니다. 현재 세션에서 재사용할 개념을 주제별 **최대 3개** 골라 바로 작성하거나 기존 노트를 보완합니다. 개수를 채우기 위한 추가 내용이나 저장 확인 질문은 만들지 않습니다.
-- Git 저장소의 TIL은 **기본 체크아웃의 `TIL/`**에 저장합니다. 현재 브랜치 이름과 관계없으며, 추가 worktree를 삭제해도 노트가 함께 사라지지 않습니다. 별도 Git 디렉터리에서는 기록된 `core.worktree`를 확인하고, 기본 경로를 검증할 수 없으면 대체 저장하지 않습니다.
-- 노트 형식·분량 제한·검사기는 유지합니다. 같은 개념은 기존 노트를 갱신하며, 새 정보가 없으면 내용과 날짜를 바꾸지 않습니다. 남길 개념이 없으면 파일을 만들지 않습니다.
-- 기존 설명·복습·장기 강의 모드는 제거합니다. 질문으로 이해도를 점검하려면 `coco-askme`, 근거를 조사하려면 `coco-research`를 사용합니다. 기존 노트는 보존하며, 추가 worktree의 노트를 옮길 때 충돌하는 내용은 덮어쓰지 않습니다.
-
-위 npm 명령이나 소스 설치기로 업데이트한 뒤 새 세션에서 실행하세요. 지원 설치기는 기존 `coco-learn`을 제거하고 `coco-til`을 등록합니다. 두 런타임을 사용한다면 각각 업데이트해야 합니다.
-
-```text
-/coco-til
-$coco-til
-```
-
-스킬 수는 30개이며, 이번 변경은 스킬 이름과 역할을 바꿉니다. Git에서 제외한 TIL은 별도 백업되지 않으므로 기본 작업 폴더 자체의 백업은 별도로 관리하세요. `1.3.0` 소스 준비·Git 병합과 npm 게시는 별개입니다.
-
-## 1.2.0에서 바뀐 점
-
-- [coco-blog](skills/coco-blog/SKILL.md)를 추가합니다. 로컬 TIL 선택, 근거 있는 개발 글 초안 작성, 저장소의 실제 게시 절차 준비를 지원합니다.
-- 프로젝트의 실제 초안·공개 상태 필드를 따릅니다. Hugo의 `draft` 필드를 모든 프로젝트에 강제하지 않습니다.
-- 원본 노트와 개발 브랜치를 보존하고, 게시 원고는 별도 worktree에 준비합니다. 글 작성·문구 수락·push 요청만으로 PR/MR 생성이나 공개 게시를 수행하지 않습니다.
-
-스킬은 29개에서 30개로 늘며 기존 이름과 설치 인터페이스는 유지합니다. [1.2.0 배포 안내](docs/coco-1.2.0.md)에 변경 내용과 검증 범위를 정리합니다. 1.2.0 npm 게시와 공개 패키지의 Codex·Claude 프로젝트 설치·재설치 검증을 완료했습니다. 설치 후 해당 프로젝트에서 새 세션을 여세요.
-
-## 1.1.0에서 바뀐 점
-
-- 처음에는 네 단계와 입문 스킬 10개를 안내합니다. 전체 29개와 전문 스킬 직접 호출은 유지합니다.
-- 아직 고르지 않은 다음 단계는 설명하고 선택받습니다. 이미 요청한 구현·리뷰·검증은 다시 승인받지 않습니다.
-- 동작 변경 전에 기존 명세와 계획을 읽고, 결과를 바꿀 미정 선택만 구체적으로 묻습니다. 구현 중 새 제약을 발견해도 합의한 요구사항을 임의로 줄이지 않습니다.
-- 프로젝트의 브랜치 규칙을 따릅니다. Jira가 없는 프로젝트에 티켓을 요구하지 않으며, 커밋 전 직접 리뷰도 가능합니다.
-- 완료 보고에 처음 예상·실제 선택·달라진 이유를 남깁니다. 구현 완료, 리뷰 대기, 필수 실행 검증 대기를 구분합니다.
-- 최근 사용 기록의 프로젝트 구분, 실제 PR 병합 대상 확인, 학습 노트의 Markdown 예제 판별을 고칩니다. 티켓 처리 실패 복구와 내부 테스트 정리 조건도 기존 운영 보완을 유지합니다.
-
-설치 명령과 스킬 이름은 그대로입니다. 모델의 기능·속도 우위를 약속하는 변경이 아닙니다. 사용자가 정한 개발 절차와 확인 근거를 일관되게 남기는 데 목적이 있습니다.
+자세한 내용은 [1.5.0 릴리스 노트](docs/coco-1.5.0.md)를 보세요. 이전 버전의 변경 사항은 [1.4.2](docs/coco-1.4.2.md) · [1.4.1](docs/coco-1.4.1.md) · [1.4.0](docs/coco-1.4.0.md) · [1.3.0](docs/coco-1.3.0.md) · [1.2.0](docs/coco-1.2.0.md) · [1.0.0 → 1.1.0](https://github.com/thisis-joe/skills/blob/v1.1.0/docs/coco-1.0.0-to-1.1.0.md)에 있습니다. 소스 버전 준비, GitHub 병합, npm 게시는 각각 별개의 상태입니다.
 
 ## 기능 하나를 진행하는 네 단계
 
+COCO는 합의한 동작을 작은 변경으로 구현하고, 실제로 실행해 본 근거로 완료를 판단합니다. 처음에는 아래 10개로 흐름을 익히고, 필요할 때 조사·설계·보안·성능 같은 전문 스킬을 고르세요.
 
-COCO는 합의한 동작을 작은 변경으로 구현하고 실제 실행 근거로 완료를
-판단합니다. 처음에는 아래 10개로 흐름을 익히고, 필요할 때 조사·설계·보안·성능
-등 전문 스킬을 고르세요. 모든 스킬은 설치되며 전체 목록도 계속 볼 수 있습니다.
-
-| 단계 | 먼저 익힐 스킬 | 기대 결과 |
+| 단계 | 먼저 익힐 스킬 | 결과 |
 |---|---|---|
 | 요구사항 정리 | `coco-clarify`, `coco-spec`, `coco-plan` | 합의한 동작, 저장된 명세와 작업 계획 |
-| 구현 | `coco-build`, `coco-debug` | 테스트와 자체 점검을 거친 구현 커밋, 리뷰 대기 |
-| 리뷰·검증 | `coco-review`, `coco-verify` | 별도 리뷰, 실제 실행 확인, 수정 후속 커밋 |
-| 출시 | `coco-push`, `coco-merge`, `coco-ship` | 목적에 따라 PR 공유·병합·배포 |
+| 구현 | `coco-build`, `coco-debug` | 테스트와 자체 점검을 거친 구현 커밋 |
+| 리뷰·검증 | `coco-review`, `coco-verify` | 별도 리뷰, 실제 실행 확인, 수정 커밋 |
+| 출시 | `coco-push`, `coco-merge`, `coco-ship` | PR 공유, 병합, 배포 |
 
-모호한 새 기능을 자연어로 요청하면 요구사항 정리 단계라고 알리고 질문을
-시작합니다. 명확한 문구 같은 정적 수정은 바로 처리합니다. 동작 추가·변경은
-작아도 명세와 계획 파일을 먼저 갖추며, 기존에 충분한 파일은 재사용합니다.
+- **질문은 필요한 것만.** 모호한 새 기능은 요구사항 정리부터 시작합니다. 문구 수정처럼 명확한 정적 변경은 바로 처리합니다. 질문에는 선택지별 동작과 비용, 추천안과 이유가 함께 나옵니다.
+- **다음 단계는 사용자가 고릅니다.** 아직 고르지 않은 다음 스킬은 설명하고 선택을 받습니다. "이번 스킬만 진행"과 "이번 명세의 기본 절차를 자동 진행" 중에서 고를 수 있습니다. 자동 진행도 새로운 중요한 결정은 묻고, 리뷰·검증·수정 커밋을 마친 뒤 **푸시 직전에 멈춰** 보고합니다.
+- **완료는 근거로 말합니다.** 구현 커밋만 있으면 "구현 완료·리뷰 대기", 필수 실행 확인을 못 했으면 "실행 검증 대기"로 보고하고 개발 완료라고 하지 않습니다. 보고에는 처음 예상한 설계, 실제 선택, 바꾼 이유가 남습니다.
+- **출시 작업은 따로 요청합니다.** `coco-push`는 동기화·푸시 후 열린 요청이 없으면 개발 브랜치 대상 draft PR/MR을 엽니다. `coco-merge`는 체크가 통과하면 대상 브랜치에 병합합니다. `coco-ship`은 출시 판단과 요청 범위의 배포를 맡습니다. 새로 연 PR/MR은 연 사람을 담당자와 리뷰어로 지정하고, 저장소에 있는 레이블 중 맞는 것을 붙입니다([규칙](skills/_coco-shared/request-metadata.md)).
 
-기본은 **아직 선택하지 않은 다음 스킬을 설명하고 선택받기**입니다. 이미 같은 명세의 구현·리뷰·검증을 요청했다면 그 선택은 다시 묻지 않습니다. 다음 스킬 안내에서
-“이번 스킬만 진행” 또는 “이번 명세의 기본 절차를 자동 진행”을 고릅니다.
-자동 진행도 새로운 중요한 결정은 묻고, 리뷰·검증·수정 커밋까지 마친 뒤
-**푸시 직전에 멈춰 보고**합니다. 전문 스킬은 별도로 소개하고 선택받으며,
-특정 전문 스킬의 자동 적용은 해당 사용자·프로젝트·스킬에 한정합니다. 안전한 개인 저장이 가능할 때만 다음 작업에도 기억합니다.
+전체 기준은 [명세](https://github.com/thisis-joe/skills/blob/v1.1.0/docs/specs/staged-development.md)와 [공통 흐름](skills/_coco-shared/workflow.md)에 있습니다.
 
-질문은 구체적인 상황, 선택에 따른 동작과 비용, 추천안과 이유를 제시합니다.
-추가로 논의할 질문과 추천값을 본 뒤 더 질문하거나 그 추천안에 맡길 수 있습니다.
-완료 보고는 원래 예상 설계·실제 선택·변경 이유·영향·실행 근거를 구분합니다.
+## 전체 스킬
 
-구현 커밋만 있으면 “구현 완료·리뷰 대기”입니다. 필수 실행 확인이 불가능하면
-“실행 검증 대기”이며 개발 완료라고 하지 않습니다. 독립 리뷰의 한계와 실행
-검증 누락도 구분합니다. [명세](https://github.com/thisis-joe/skills/blob/v1.1.0/docs/specs/staged-development.md)와
-[공통 흐름](skills/_coco-shared/workflow.md)에 전체 기준이 있습니다.
-
-`coco-push`는 요청한 동기화·푸시 후 열린 요청이 없으면 개발 브랜치 대상 draft
-PR/MR을 엽니다. `coco-merge`는 선택한 PR/MR의 대상 브랜치로 체크 통과 후
-병합합니다. `coco-ship`은 출시 판단과 요청 범위의 배포를 맡습니다.
-새로 연 PR/MR은 기본적으로 연 사람을 담당자와 리뷰어로 지정하고, 저장소에 있는
-레이블 중 맞는 것을 붙입니다([규칙](skills/_coco-shared/request-metadata.md)).
-자동 개발 진행만으로 이 작업들이 허용되지는 않습니다.
-
-
-<details>
-<summary>전체 스킬과 작업 흐름</summary>
-
-필요한 단계부터 시작하세요. 모든 작업에 전체 절차가 필요한 것은 아닙니다. 할 일과 스킬이 정해졌다면 `coco-start`를 거치지 않고 바로 호출하세요.
-
-A bare invocation reuses a settled request or offers request guidance. Exceptions: `coco-start` returns read-only routing; `coco-tellmeskill`, `coco-updateskill` and `coco-whattosay` use their own selection. `coco-askme` and its `coco-research` alias offer session concepts. `coco-til` captures the session directly; `coco-blog` selects local notes. `coco-push` and `coco-merge` execute on the current branch, so explicitly request an explanation when execution is not intended.
+할 일과 스킬이 정해졌다면 `coco-start`를 거치지 않고 바로 부르세요. 모든 작업에 전체 절차가 필요한 것은 아닙니다.
 
 ```text
 coco-clarify → coco-spec → coco-plan → coco-build → coco-review → coco-push → coco-merge
@@ -205,34 +87,65 @@ coco-clarify → coco-spec → coco-plan → coco-build → coco-review → coco
 | 운영·배포 | `coco-observe`, `coco-automate`, `coco-push`, `coco-merge`, `coco-ship` |
 | 문서·학습·협업 | `coco-docs`, `coco-blog`, `coco-til`, `coco-askme`, `coco-context`, `coco-retro`, `coco-triage`, `coco-updateskill` |
 
-`coco-askme` offers up to three session concepts on a bare call, using bounded recovery when context was compressed. Explicit questions receive evidence-backed answers; quizzes run only when requested. `coco-research` is a compatibility alias with the same behavior.
+요청 없이 스킬 이름만 부르면 이미 정해진 요청을 이어 가거나, 무엇을 요청할지 안내합니다. 몇 가지는 다르게 동작합니다.
 
-각 스킬의 절차는 [스킬 원본](skills), 선택 기준은 [작업별 안내](skills/_coco-shared/routing.md)에 있습니다. 외부 서비스 연결과 권한이 필요한 작업은 해당 환경이 준비되어 있어야 합니다.
+- `coco-start`는 읽기만 하고 진행 경로를 알려 줍니다.
+- `coco-askme`(별칭 `coco-research`)는 현재 세션의 개념을 최대 3개 보여 줍니다. 구체적인 질문에는 근거와 함께 바로 답하고, 퀴즈는 요청할 때만 냅니다.
+- `coco-til`은 현재 세션을 바로 노트로 남기고, `coco-blog`는 로컬 노트를 고르는 데서 시작합니다.
+- `coco-push`와 `coco-merge`는 현재 브랜치에서 **바로 실행**합니다. 설명만 원하면 그렇게 요청하세요.
 
-</details>
+각 스킬의 절차는 [스킬 원본](skills)에, 선택 기준은 [작업별 안내](skills/_coco-shared/routing.md)에 있습니다. 외부 서비스가 필요한 작업은 그 연결과 권한이 준비되어 있어야 합니다.
 
-<details>
-<summary>문제 해결과 지원 범위</summary>
+## 설치 위치·업데이트·제거
 
-- **스킬이 안 보이면:** 설치 결과의 `destination`을 확인하고 해당 프로젝트에서 새 세션을 여세요.
+아래 명령은 **1.5.0 기준**입니다. `claude` 대신 `codex`를 쓰면 Codex에 적용됩니다.
+
+```sh
+# 현재 프로젝트에 설치하거나 업데이트
+npx --yes @thisis-joe/coco-skills@1.5.0 install --runtime claude --project .
+
+# 모든 프로젝트에서 사용
+npx --yes @thisis-joe/coco-skills@1.5.0 install --runtime claude --global
+
+# 프로젝트로 옮기면서 기존 글로벌 설치 제거
+npx --yes @thisis-joe/coco-skills@1.5.0 install --runtime claude --project . --remove-global
+
+# 현재 프로젝트에서 제거
+npx --yes @thisis-joe/coco-skills@1.5.0 uninstall --runtime claude --project .
+```
+
+| 런타임 | 프로젝트 설치 | 글로벌 설치 |
+|---|---|---|
+| Claude Code | `.claude/skills` | `~/.claude/skills` |
+| Codex | `.agents/skills` | `~/.codex/skills` |
+
+- `CLAUDE_CONFIG_DIR`나 `CODEX_HOME`을 설정했다면 그 폴더 아래 `skills`가 글로벌 위치입니다.
+- `--project`는 여러 번 쓸 수 있고, `--dest`로 설치 위치를 직접 정할 수도 있습니다.
+- 위치 옵션이 없으면 터미널에서는 위치를 묻고, 비대화형 환경에서는 글로벌로 설치합니다.
+- 프로젝트 설치 파일은 `.git/info/exclude`로 Git 변경 목록에서 뺍니다. 두 런타임을 쓰면 각각 설치·업데이트하세요.
+- 결과가 `installed`나 `unchanged`면 성공입니다. 바꾸기 전에 확인하려면 `--dry-run`을 붙이세요.
+- 직접 고친 파일이나 같은 이름의 다른 스킬과 충돌하면 아무것도 바꾸지 않고 멈춥니다.
+- 글로벌 설치가 남아 있으면 다른 프로젝트에서도 스킬이 보입니다. 프로젝트에서만 쓰려면 `--remove-global`을 쓰세요.
+
+세부 동작과 검증 명령은 [배포 안내](docs/distribution.md)에 있습니다.
+
+## 문제 해결
+
+- **스킬이 안 보이면:** 설치 결과의 `destination`을 확인하고, 그 프로젝트에서 새 세션을 여세요.
 - **Python을 못 찾으면:** Python 3.9 이상을 설치하거나 `COCO_PYTHON`에 실행 파일 경로를 지정하세요.
-- **수정 파일 충돌이 나면:** 개인 변경을 백업하고 비교하세요. 설치 기록만 지워서 해결하지 마세요.
-- **다른 프로젝트에서도 보이면:** 기존 글로벌 설치가 남아 있는지 확인하세요.
+- **수정한 파일과 충돌하면:** 개인 변경을 백업한 뒤 비교하세요. 설치 기록만 지워서 넘어가지 마세요.
+- **목차 오류로 멈추면:** 고친 `SKILL.md`의 `**Contents:**` 줄이 `##` 섹션과 같은 이름·순서인지 확인하세요.
+- **다른 프로젝트에서도 보이면:** 글로벌 설치가 남아 있는지 확인하세요.
 
-Codex와 Claude Code의 로컬 스킬 설치를 지원합니다. claude.ai·Cowork 업로드용 패키지는 제공하지 않습니다. npm 패키지를 받는 것만으로 스킬 폴더가 바뀌지는 않으며, `install` 명령을 실행해야 합니다.
+Codex와 Claude Code의 로컬 스킬 설치만 지원합니다. claude.ai·Cowork 업로드용 패키지는 없습니다. npm 패키지를 받는 것만으로는 스킬 폴더가 바뀌지 않으며, `install` 명령을 실행해야 합니다.
 
-</details>
-
-<details>
-<summary>출처 · 운영 원칙 · 라이선스</summary>
+## 출처와 라이선스
 
 [Matt Pocock의 skills](https://github.com/mattpocock/skills), [Addy Osmani의 agent-skills](https://github.com/addyosmani/agent-skills), [Lauren Tan의 pstack](https://github.com/cursor/plugins/tree/main/pstack)을 목적별로 통합하고 팀 작업 절차를 더했습니다.
 
 - [공통 계약](skills/_coco-shared/contracts.md): 검증 근거, 작업 단위 커밋, 권한 경계
-- [결정 기록](skills/_coco-shared/decisions.md): 원본 규칙의 통합 기준
+- [결정 기록](skills/_coco-shared/decisions.md): 원본 규칙을 통합한 기준
 - [원본 대응표](docs/source-index.md): 출처별 통합 위치
 - [저작권 고지](THIRD_PARTY_NOTICES.md) · [MIT 라이선스](LICENSE)
 
-원본 자료는 `sources/`에 증거로 보관하며 설치하거나 실행하지 않습니다.
-
-</details>
+원본 자료는 `sources/`에 증거로만 보관하며, 설치하거나 실행하지 않습니다.
