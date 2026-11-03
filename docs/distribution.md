@@ -1,5 +1,9 @@
 # COCO 공개 배포
 
+## 1.4.2 source version
+
+Version `1.4.2` makes PRs/MRs created by coco-push, coco-merge and coco-ship default to the opener as assignee and reviewer, with fitting existing repository labels; metadata is written after creation and read back. Other skills, the skill count and the installer interface are unchanged. See [release notes](coco-1.4.2.md). Source version, GitHub merge and npm publication remain separate states.
+
 ## 1.4.1 source version
 
 Version `1.4.1` adds a cover image step to coco-blog: when the consumer blog renders thumbnails, candidates are drawn with the author, previewed in the real layouts and uploaded only with authorization. Other skills, the skill count and the installer interface are unchanged. See [release notes](coco-1.4.1.md). Source version, GitHub merge and npm publication remain separate states.

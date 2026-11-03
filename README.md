@@ -8,16 +8,16 @@ Codex와 Claude Code에서 쓰는 개발 스킬 30개. 중요한 동작은 사�
 
 Node.js 22 이상과 Python 3.9 이상이 필요합니다. 사용할 에이전트는 별도로 설치하고 로그인하세요.
 
-This source is **1.4.1**: `coco-blog` can now draw and preview post cover images with the author before upload. See [changes](docs/coco-1.4.1.md). The pinned npm commands below are available after registry publication; source preparation or a Git merge alone does not establish that publication. [1.0.0 → 1.1.0 변경 지점](https://github.com/thisis-joe/skills/blob/v1.1.0/docs/coco-1.0.0-to-1.1.0.md)에 수정한 지침, 변경 전후 예시와 검증 방법을 정리했습니다.
+This source is **1.4.2**: PRs/MRs that COCO opens are now assigned to the opener, request the opener's review and get fitting existing labels. See [changes](docs/coco-1.4.2.md). The pinned npm commands below are available after registry publication; source preparation or a Git merge alone does not establish that publication. [1.0.0 → 1.1.0 변경 지점](https://github.com/thisis-joe/skills/blob/v1.1.0/docs/coco-1.0.0-to-1.1.0.md)에 수정한 지침, 변경 전후 예시와 검증 방법을 정리했습니다.
 
 사용할 프로젝트 폴더에서 런타임에 맞는 명령을 실행합니다.
 
 ```sh
 # Claude Code
-npx --yes @thisis-joe/coco-skills@1.4.1 install --runtime claude
+npx --yes @thisis-joe/coco-skills@1.4.2 install --runtime claude
 
 # Codex
-npx --yes @thisis-joe/coco-skills@1.4.1 install --runtime codex
+npx --yes @thisis-joe/coco-skills@1.4.2 install --runtime codex
 ```
 
 터미널에서 설치 위치를 고를 수 있습니다. 기존 설치도 같은 명령으로 업데이트합니다. 설치 후 해당 프로젝트에서 **새 세션**을 여세요. Claude Code는 `/`, Codex는 `$`로 스킬을 호출합니다.
@@ -46,20 +46,20 @@ python3 scripts/install.py --runtime claude --project /path/to/your-project
 <details>
 <summary>설치 위치 · 업데이트 · 제거</summary>
 
-아래 명령은 **1.4.1 기준**입니다. `claude` 대신 `codex`를 지정하면 Codex에 적용됩니다.
+아래 명령은 **1.4.2 기준**입니다. `claude` 대신 `codex`를 지정하면 Codex에 적용됩니다.
 
 ```sh
 # 현재 프로젝트에 설치하거나 업데이트
-npx --yes @thisis-joe/coco-skills@1.4.1 install --runtime claude --project .
+npx --yes @thisis-joe/coco-skills@1.4.2 install --runtime claude --project .
 
 # 모든 프로젝트에서 사용
-npx --yes @thisis-joe/coco-skills@1.4.1 install --runtime claude --global
+npx --yes @thisis-joe/coco-skills@1.4.2 install --runtime claude --global
 
 # 프로젝트로 옮기면서 기존 글로벌 설치 제거
-npx --yes @thisis-joe/coco-skills@1.4.1 install --runtime claude --project . --remove-global
+npx --yes @thisis-joe/coco-skills@1.4.2 install --runtime claude --project . --remove-global
 
 # 현재 프로젝트에서 제거
-npx --yes @thisis-joe/coco-skills@1.4.1 uninstall --runtime claude --project .
+npx --yes @thisis-joe/coco-skills@1.4.2 uninstall --runtime claude --project .
 ```
 
 | 런타임 | 프로젝트 설치 | 글로벌 설치 |
@@ -78,6 +78,13 @@ npx --yes @thisis-joe/coco-skills@1.4.1 uninstall --runtime claude --project .
 세부 동작과 검증 명령은 [배포 안내](docs/distribution.md)를 참고하세요.
 
 </details>
+
+## 1.4.2에서 바뀐 점
+
+- `coco-push`·`coco-merge`·`coco-ship`이 새로 여는 PR/MR은 **연 사람(인증된 forge 계정)을 담당자와 리뷰어로** 기본 지정합니다. 사용자 요청이나 저장소 규칙이 다른 사람을 정하면 그쪽을 따릅니다.
+- 저장소에 **이미 있는 레이블** 중 변경 성격에 분명히 맞는 것(예: 수정은 `bug`, 기능은 `enhancement`, 문서만 바꾸면 `documentation`)을 붙입니다. 레이블을 새로 만들지 않고, 맞는 것이 없으면 붙이지 않고 알려 줍니다.
+- 요청을 먼저 만든 뒤 메타데이터를 따로 지정하고 다시 읽어 확인합니다. GitHub처럼 작성자를 리뷰어로 받지 않는 forge에서는 그 사실을 보고하고 다른 사람으로 바꾸지 않습니다. 이미 열려 있던 요청은 건드리지 않습니다.
+- 스킬 수(30개)와 설치 명령은 그대로입니다.
 
 ## 1.4.1에서 바뀐 점
 
@@ -173,6 +180,8 @@ COCO는 합의한 동작을 작은 변경으로 구현하고 실제 실행 근�
 `coco-push`는 요청한 동기화·푸시 후 열린 요청이 없으면 개발 브랜치 대상 draft
 PR/MR을 엽니다. `coco-merge`는 선택한 PR/MR의 대상 브랜치로 체크 통과 후
 병합합니다. `coco-ship`은 출시 판단과 요청 범위의 배포를 맡습니다.
+새로 연 PR/MR은 기본적으로 연 사람을 담당자와 리뷰어로 지정하고, 저장소에 있는
+레이블 중 맞는 것을 붙입니다([규칙](skills/_coco-shared/request-metadata.md)).
 자동 개발 진행만으로 이 작업들이 허용되지는 않습니다.
 
 
