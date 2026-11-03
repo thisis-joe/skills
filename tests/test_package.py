@@ -219,9 +219,11 @@ class PackageTests(unittest.TestCase):
         team_rule = (worktree / skill).read_text(encoding='utf-8') + 'Team rule from the dedicated branch.\n'
         (worktree / skill).write_text(team_rule, encoding='utf-8')
         self.git(worktree, 'commit', '-qam', 'feat: add team rule')
+        # A terminal stdin and the real global folder would reach the global-removal prompt.
         result = subprocess.run([sys.executable, str(ROOT / 'scripts/install.py'), '--root',
                                  str(worktree), '--dest', str(self.dest)],
-                                capture_output=True, text=True)
+                                capture_output=True, text=True, stdin=subprocess.DEVNULL,
+                                env={**os.environ, 'CODEX_HOME': str(Path(self.temp.name) / 'codex')})
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         self.assertEqual((self.dest / 'coco-example/SKILL.md').read_text(encoding='utf-8'), team_rule)
 
