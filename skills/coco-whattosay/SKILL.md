@@ -6,6 +6,8 @@ license: MIT
 
 # coco-whattosay
 
+**Contents:** [1. Confirm the selected skill and purpose](#1-confirm-the-selected-skill-and-purpose) · [2. Suggest requests](#2-suggest-requests) · [3. Select, revise, and execute](#3-select-revise-and-execute)
+
 Suggest what to ask the selected skill in the current context. The default flow is **confirm selection → suggest contextual requests → wait for selection → execute the selected request**. Follow the [common contract](../_coco-shared/contracts.md). Localize prompts, options, and reports to the user's language; the examples below are in English.
 
 ## 1. Confirm the selected skill and purpose

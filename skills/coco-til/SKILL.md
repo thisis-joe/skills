@@ -6,6 +6,8 @@ license: MIT
 
 # coco-til
 
+**Contents:** [Select concepts](#select-concepts) · [Resolve durable storage](#resolve-durable-storage) · [Write or update](#write-or-update) · [Boundaries and return](#boundaries-and-return)
+
 Capture the current session's reusable knowledge immediately as short, uniform personal notes. Follow the [common contract](../_coco-shared/contracts.md) and the unchanged [note format](references/note-template.md). Localize note content and section labels to the user's language.
 
 A bare invocation already selects current-session capture: do not open a request menu, ask the user to choose candidates, or ask whether to save. An explicit topic or subset narrows the session scope. Never start a lesson, quiz, review program or multi-session learning mission.

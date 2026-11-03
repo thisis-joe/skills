@@ -6,6 +6,8 @@ license: MIT
 
 # coco-blog
 
+**Contents:** [Select the requested output](#select-the-requested-output) · [Discover the consumer project](#discover-the-consumer-project) · [Write with the author](#write-with-the-author) · [Prepare or verify publication](#prepare-or-verify-publication) · [Result](#result)
+
 Turn first-hand development work into reader-facing posts with supported claims and a clear publication handoff. Follow the [common contract](../_coco-shared/contracts.md). Localize writing and questions to the user and preserve author-owned names and project terminology.
 
 ## Select the requested output

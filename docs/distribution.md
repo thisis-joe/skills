@@ -1,5 +1,9 @@
 # COCO 공개 배포
 
+## 1.5.0 source version
+
+Version `1.5.0` makes a contents line mandatory at the top of every coco skill entrypoint: each `SKILL.md` links its `##` sections in order below the title, and `validate.py` rejects a missing, stale or reordered line. A bundle installed by an earlier version fails `validate --installed` from this version until it is reinstalled. Skill names, the skill count and the installer interface are unchanged. See [release notes](coco-1.5.0.md). Source version, GitHub merge and npm publication remain separate states.
+
 ## 1.4.2 source version
 
 Version `1.4.2` makes PRs/MRs created by coco-push, coco-merge and coco-ship default to the opener as assignee and reviewer, with fitting existing repository labels; metadata is written after creation and read back. Other skills, the skill count and the installer interface are unchanged. See [release notes](coco-1.4.2.md). Source version, GitHub merge and npm publication remain separate states.

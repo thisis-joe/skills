@@ -6,6 +6,8 @@ license: MIT
 
 # coco-clarify
 
+**Contents:** [Procedure and output](#procedure-and-output) · [Stop signals](#stop-signals)
+
 Reach a shared understanding of the behavior and decisions that matter. For a vague unnamed feature, announce this requirements step and start questions; static edits bypass it.
 
 Read the [common contract](../_coco-shared/contracts.md) before acting; when the request already shows that the file below applies, read both in one call. Initially and on new scope, risk, state, or missing prerequisites, check for a missing material decision that needs a focused interview, an open direction that needs divergent ideas, a request to grill or stress-test a plan, decision or idea (grill mode), and a domain term with conflicting meanings. If any applies, read the [advanced modes](../_coco-shared/advanced/clarify.md) before dependent work.

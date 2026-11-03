@@ -65,6 +65,23 @@ def scalar(value):
     return value
 
 
+def heading_slug(heading):
+    """GitHub's anchor for a Markdown heading."""
+    return re.sub(r'[^\w\s-]', '', heading).lower().replace(' ', '-')
+
+
+def validate_contents(body):
+    """The title is followed by a contents line linking every ## section in order."""
+    lines = [line for line in re.sub(r'(?ms)^```.*?^```', '', body).splitlines() if line.strip()]
+    if not lines or not lines[0].startswith('# '):
+        raise PackageError('Skill body must open with a # title')
+    if len(lines) < 2 or not lines[1].startswith('**Contents:** '):
+        raise PackageError('Missing **Contents:** line below the title')
+    sections = [heading_slug(line[3:].strip()) for line in lines if line.startswith('## ')]
+    if not sections or re.findall(r'\]\(#([^)\s]+)\)', lines[1]) != sections:
+        raise PackageError('Contents must link every ## section in order')
+
+
 def validate_payload(base, data):
     errors = []
     for name in data['skills']:
@@ -90,6 +107,7 @@ def validate_payload(base, data):
                 raise PackageError('Missing or invalid discovery description')
             if len(parts[2].strip()) < 40:
                 raise PackageError('Skill body is empty')
+            validate_contents(parts[2])
             ui = base / name / 'agents/openai.yaml'
             if not ui.is_file():
                 raise PackageError('Missing UI metadata')

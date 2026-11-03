@@ -6,6 +6,8 @@ license: MIT
 
 # coco-merge
 
+**Contents:** [Boundary](#boundary) · [Workflow](#workflow) · [Output](#output)
+
 Land one pushed PR/MR in its own base and read back the result. New requests use the confirmed base repository's default branch. Require forge checks, approvals and mergeability on the pushed commit; readiness, independent review, rollout and deployment stay with ship. Read the [common contract](../_coco-shared/contracts.md) and [forge procedure](references/forge-merge.md) together. Localize questions and reports to the user's language.
 
 ## Boundary

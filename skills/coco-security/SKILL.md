@@ -6,6 +6,8 @@ license: MIT
 
 # coco-security
 
+**Contents:** [Procedure and output](#procedure-and-output) · [Stop signals](#stop-signals)
+
 Identify trust-boundary attacks and verify the required defenses.
 
 Read the [common contract](../_coco-shared/contracts.md) before acting; when the request already shows that the file below applies, read both in one call. Initially and on new scope, risk, state, or missing prerequisites, check for a new trust boundary, authentication or irreversible effect (full threat pass), dependency install scripts or lockfile policy, server fetches of user-influenced URLs, delete, move or overwrite targets derived from data, model output, tool arguments or retriable money/data effects, secrets or personal-data handling, and a requested Git command guard. If any applies or is unclear, read the [advanced modes](../_coco-shared/advanced/security.md) before dependent work.

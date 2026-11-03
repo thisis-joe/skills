@@ -6,6 +6,8 @@ license: MIT
 
 # coco-tellmeskill
 
+**Contents:** [1. Target selection](#1-target-selection) · [2. Explanation length](#2-explanation-length) · [3. Explain from source using the common format](#3-explain-from-source-using-the-common-format)
+
 Help the user find and select a skill, then explain it from its source in the user's language. The default flow is **recent skills → complete grouped list when none is chosen → explanation length → common explanation format**. Localize prompts, option names, and output labels; the wording below is in English for illustration.
 
 Every choice offered at any stage carries a concise description: one short line saying what that option is or does. At every question, use an available question tool when all options fit it; otherwise ask in the final message and end the turn.

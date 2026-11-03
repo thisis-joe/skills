@@ -6,6 +6,8 @@ license: MIT
 
 # coco-askme
 
+**Contents:** [Entry and conversation mode](#entry-and-conversation-mode) · [Topic orientation (wide)](#topic-orientation-wide) · [Evidence gathering (deep)](#evidence-gathering-deep) · [Quiz](#quiz) · [Boundaries](#boundaries) · [Stop signals](#stop-signals) · [Examples](#examples)
+
 Explore the user's questions with evidence; quiz only when requested. Follow the [common contract](../_coco-shared/contracts.md). Localize choices, explanations, questions and feedback to the user's language. `coco-research` is a compatibility alias for this single procedure.
 
 ## Entry and conversation mode
