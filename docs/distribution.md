@@ -1,5 +1,9 @@
 # COCO 공개 배포
 
+## 1.4.1 source version
+
+Version `1.4.1` adds a cover image step to coco-blog: when the consumer blog renders thumbnails, candidates are drawn with the author, previewed in the real layouts and uploaded only with authorization. Other skills, the skill count and the installer interface are unchanged. See [release notes](coco-1.4.1.md). Source version, GitHub merge and npm publication remain separate states.
+
 ## 1.4.0 source version
 
 Version `1.4.0` unifies session-topic exploration, evidence-backed answers and opt-in quizzes under coco-askme, retaining coco-research as a compatibility alias and all 1.3.0 TIL/platform fixes. See [migration and recovery](coco-1.4.0.md). Publication is authorized but is complete only after the exact inspected tarball is in the registry and fresh-cache runtime installs validate. Package source and GitHub state are not publication receipts. The package excludes Python caches even when the standing tests create them.

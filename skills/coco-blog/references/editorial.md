@@ -32,6 +32,16 @@ Choose an accomplishment, troubleshooting story, experiment/comparison, design d
 - Do not infer causation from uncontrolled comparisons. A simpler architecture or cache is a design change until its effects are measured or observed.
 - Ask for essential facts, qualify unmeasured/unverified effects, or omit unsupported claims with the author. Never manufacture a metric, quotation, benchmark run or design rationale.
 
+## Cover images
+
+When the consumer project renders post thumbnails or cover images, offer to choose or draw one with the author after the manuscript direction is accepted. Skip this when the project has no such field or the author declines; adding thumbnail support to the site is separate implementation work.
+
+- Discover the actual field, accepted formats and size limit, image destination and naming rule, and how layouts crop the image (aspect ratios, `object-fit`, smallest rendered size). Reuse the project's palette and visual language from its documents or stylesheet.
+- Propose two or three distinct concepts tied to the post's takeaway and the product's own motifs. Draw them as vector art and render rasters with available local tools; do not use stock, generated or third-party images without a confirmed license, and never show private screens, hosts or credentials.
+- Keep the key motif inside the area that survives every crop and large enough to read at the smallest rendered size. Show each candidate as a rendered image in the conversation. Preview the selected one in the site's real layouts at desktop and mobile widths by building a disposable copy outside the source tree with a local image path, never committing that copy or path; revise from what the preview shows.
+- The author chooses, asks for changes, or supplies an own image, which follows the same checks. Export to the project's format and size limit.
+- Upload only to the project's documented destination with the author's authorization for that upload, and say first if that destination is public before the post is released. When the destination is inside the content repository, that authorization covers staging the image file with the post. Confirm the public URL loads the same file, then reference it from the post metadata. A candidate or local preview is not a published image.
+
 ## Collaborate and review
 
 Establish reader prerequisites and useful takeaway, read the selected source, and write separately using the actual schema and draft state. Preserve author voice without exposing private session narrative or internal links.

@@ -17,6 +17,8 @@ Propose a reader, concise takeaway, category and angle from the material. Ask on
 
 Prepare a separate public manuscript with project metadata. Exclude private sections and unsupported claims. Show the draft to the author, incorporate corrections and preserve hand edits. Draft acceptance and release approval are distinct. A human-review flag passed to a tool records this review; it cannot perform or prove it.
 
+When the project renders post thumbnails, offer a cover image after the manuscript direction is accepted, following [cover images](editorial.md#cover-images): draw a few candidates, let the author choose or supply one, and preview it in the real layouts before upload.
+
 ## Repository handoff and release
 
 Create or safely reuse an isolated content workspace from the confirmed publication branch using [workspace separation](workspaces.md). The developer may remain on a feature branch created from develop; preparing the blog branch is this skill's responsibility. Preserve the original note root before changing the runtime workspace. Transfer the agreed public narrative into the post, not the transcript or development diff. Never switch the developer's active checkout or merge unrelated source history to obtain a local note. If available, pass only the reviewed public manuscript to a local-input helper. Otherwise write the public artifact using project conventions. Check for existing posts and revise deliberately rather than overwriting or resynchronizing author edits. Keep interview state local and outside published content.
