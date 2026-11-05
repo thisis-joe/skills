@@ -21,13 +21,13 @@ Reuse the topic, author, destination, mode and action boundary already settled. 
 
 ## Discover the consumer project
 
-When invoked to choose material or draft from local notes, read [local note workflow](references/local-notes.md). Start with a recent local TIL list, let the author select one or several notes, then interview and draft. Note creation does not trigger this skill or a writing offer.
+When invoked to choose material or draft from local notes, read [local note workflow](references/local-notes.md). Start with a complete numbered table of local TILs (title and brief supported summary), recommend technical-blog topics with the author's own development work first, and suggest coherent note bundles. Let the author select one or several notes, then interview and draft. Note creation does not trigger this skill or a writing offer.
 
 Read [project discovery](references/project-discovery.md) before extraction or dependent writes. Discover the actual editorial guide, metadata, source ref, content root and publication base, importer, checks, image policy, request template, ownership and publisher. Keep project hosts, jobs, credentials and category lists out of this package.
 
 When invoked from an application feature branch, prepare the isolated publication workspace yourself using [workspace separation](references/workspaces.md); do not ask the developer to branch from the publication base. Carry only the public manuscript there, keeping the conversation and source notes local.
 
-Source notes and the publication base may have unrelated histories. Read only the explicitly selected local files, or selected files from the confirmed Git source snapshot and work from the confirmed content base. Never merge development history into a blog branch merely to obtain a note.
+Source notes and the publication base may have unrelated histories. Before selection, read only metadata and bounded excerpts needed for the local inventory and provisional recommendations. Read full source bodies only for explicitly selected local files, or selected files from the confirmed Git source snapshot, and work from the confirmed content base. Never merge development history into a blog branch merely to obtain a note.
 
 General project documents and non-blog articles belong to [coco-docs](../coco-docs/SKILL.md); current-session personal note capture belongs to [coco-til](../coco-til/SKILL.md). This skill owns public developer-post selection, editorial transformation and publication preparation. Blog software or CI changes remain separate implementation requests.
 
