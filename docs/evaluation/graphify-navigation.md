@@ -52,7 +52,27 @@ while the graph still referenced the newer revision. An untracked source file
 invalidated the readiness check despite a matching commit. The graph digest
 was unchanged throughout the queries and fallback checks.
 
-Keep the conditional review integration. The graph reduced discovery output
-by 174 tokens, while the full measured context grew by 250 tokens and local
-navigation took longer. The criterion for connecting research, debug, and
-build remains unmet on this comparison.
+The initial pilot kept the conditional review integration. The graph reduced
+discovery output by 174 tokens, while the full measured context grew by 250
+tokens and local navigation took longer. This comparison did not meet the
+criterion for connecting research, debug, and build.
+
+## Codex session comparison and retirement
+
+Six pairs of read-only Codex sessions reviewed three frozen application
+changes, with two pairs per change and alternating starting arms. The direct
+arm used ripgrep and source reads. The indexed arm used a prepared local graph
+and direct search for gaps. Both used the same model and reasoning setting.
+
+| Measurement | Direct search | Graphify and source |
+| --- | ---: | ---: |
+| Total reported input and output tokens | 1,850,787 | 2,063,435 |
+| Uncached input plus output tokens | 372,131 | 314,955 |
+| Median session time, seconds | 61.4 | 70.8 |
+| Command executions | 48 | 70 |
+| Required uses found | 16/16 | 16/16 |
+
+Cache hits varied by run. The total token comparison includes cached input.
+Each case has two paired repeats, and this experiment covers the local CLI and
+the measured review tasks. The user chose to retire the review integration
+and its unused shared reference after this comparison.

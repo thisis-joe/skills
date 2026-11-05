@@ -2,16 +2,20 @@
 
 Contract: [Optional Graphify code navigation](../specs/graphify-navigation.md).
 
-Work on `feat/graphify-navigation` from the agreed clean snapshot `8705060749cd3d5e7f6c6d63e9c8a07da2f3cdfa`. This plan records local task status. Execute in order, with the review comparison as the gate for the second work unit.
+Work started on `feat/graphify-navigation` from `8705060749cd3d5e7f6c6d63e9c8a07da2f3cdfa`. This plan records local task status.
 
 ## GF-01 — Apply and evaluate review navigation
 
-Status: verified. See the [FastAPI comparison](../evaluation/graphify-navigation.md).
+Status: completed in `f1342f7`. See the [comparison record](../evaluation/graphify-navigation.md).
 
-Add one shared advanced reference and a conditional link from the review impact mode. Record the team decision. Compare targeted direct search with Graphify-assisted source verification on a frozen application change. Check fresh, missing and stale index behavior using isolated copies. Capture concise results and their limits, validate the package, and commit the verified unit. If the comparison does not demonstrate a gain with equal required fact coverage, retain the review rollout and report what the measurement showed.
+Added a shared reference and a conditional link from the review impact mode. Compared targeted direct search with Graphify-assisted source verification and checked fresh, missing, and stale indexes in isolated copies. The initial rollout kept the review pilot for further evaluation.
 
 ## GF-02 — Connect the remaining scoped consumers
 
-Status: gated. The FastAPI comparison did not demonstrate lower overall exploration cost.
+Status: closed without adoption. The command and Codex session comparisons did not demonstrate lower overall exploration cost.
 
-Connect the shared reference to runtime mechanism research, post-reproduction debugging, and build's caller migration guidance. Check that the relevant paths reach the reference and narrow tasks preserve direct search. Verify temporary installs for both runtimes and run the full package checks. Commit this work unit separately.
+The proposed consumers were runtime mechanism research, post-reproduction debugging, and build's caller migration guidance.
+
+## GF-03 — Retire the review pilot
+
+Status: completed. Restored the original review procedure, removed the pilot reference, and preserved the measurements and decision. An upgrade of each isolated pilot installation removed the obsolete reference and restored the review procedure in Codex and Claude Code.

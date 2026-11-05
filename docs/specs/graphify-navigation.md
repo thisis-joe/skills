@@ -1,5 +1,7 @@
 # Optional Graphify code navigation
 
+This document records the original pilot contract. See the [work plan](../plans/graphify-navigation.md) for its disposition.
+
 COCO may query a prepared local Graphify index belonging to the application repository under inspection when locating callers or dependencies across files. The project owns its index and its update policy. The consumer workflow uses read-only queries and follows repository instructions and tool permissions.
 
 Start with the impact and safety-fact mode of `coco-review`. Resolve the comparison and inspect the actual changes before using the graph to locate candidate source. Check the index against the worktree and revision being examined, including relevant local changes. Use direct search when index provenance or freshness is uncertain, the tool is unavailable, or results are missing or insufficient. Inspect the relevant source and tests to substantiate findings and search the comparison revision for removed or renamed symbols when needed.

@@ -69,7 +69,6 @@ Security-specific findings require the actual path/principal/data flow; generic 
 ## Impact and safety-fact mode
 
 Use for a small suspicious diff, shared contract change, deletion, or broad migration.
-After freezing the scope and reading the actual changes, use [code navigation](code-navigation.md) when you need to trace callers or dependencies across files.
 Find the one or two facts that make the change safe, then trace beyond grep-visible callers:
 wire/JSON formats, database readers, flags, other languages, pinned library version/local patch, scheduling, and teardown.
 For each fact distinguish assertion, cited source, unreachable-bad-path proof, executed real-code proof, and running-app reproduction.
