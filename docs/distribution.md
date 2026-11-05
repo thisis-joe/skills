@@ -1,5 +1,9 @@
 # COCO 공개 배포
 
+## 1.5.1 source version
+
+Version `1.5.1` makes coco-blog list the complete eligible local TIL inventory, prioritize confirmed author contributions and suggest related bundles before reading selected full bodies. Existing selections continue without reopening the menu. It also isolates the installer regression test from terminal input and the real global installation. The 1.5.0 contents rules, skill count and installer interface are preserved. See [release notes](coco-1.5.1.md). Source version, GitHub publication and npm publication remain separate states.
+
 ## 1.5.0 source version
 
 Version `1.5.0` makes a contents line mandatory at the top of every coco skill entrypoint: each `SKILL.md` links its `##` sections in order below the title, and `validate.py` rejects a missing, stale or reordered line. A bundle installed by an earlier version fails `validate --installed` from this version until it is reinstalled. Skill names, the skill count and the installer interface are unchanged. See [release notes](coco-1.5.0.md). Source version, GitHub merge and npm publication remain separate states.
