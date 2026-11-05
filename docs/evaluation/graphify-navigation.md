@@ -1,4 +1,4 @@
-# Graphify review navigation pilot
+# Graphify navigation evaluation
 
 ## Comparison
 
@@ -76,3 +76,56 @@ Cache hits varied by run. The total token comparison includes cached input.
 Each case has two paired repeats, and this experiment covers the local CLI and
 the measured review tasks. The user chose to retire the review integration
 and its unused shared reference after this comparison.
+
+## Flow tracing in coco-askme
+
+The follow-up evaluated whether an optional Graphify step would help
+[`coco-askme`](../../skills/coco-askme/SKILL.md) explain an unfamiliar execution
+path. Twelve fresh read-only Codex CLI 0.166.0-alpha.6 sessions used
+`gpt-6.1-sol` with low reasoning effort and the same 660 tracked production
+Kotlin files from S15P31E102 at `12a69db9a6e80238279fef694d7f79da89777212`.
+Each flow ran twice per method, with the order reversed for its second pair.
+Both methods used `rg` and targeted source reads. The Graphify method also
+made one bounded query per session against a prepared Graphify 0.9.102
+code-only index. Index preparation took 4.770 seconds outside the session
+measurements.
+
+First-path time runs from session launch to the first message reporting the
+expected connection with source citations, after the session retrieved that
+source. The three checkpoints were the upload transaction's handoff to an
+after-commit listener, the retry endpoint's handoff to a persisted queue
+update, and the screen's stop event reaching the polling cancellation. Each
+answer was scored against four predefined links for its flow. Incorrect path
+claims were checked in progress messages and final answers.
+
+Paired results are listed in execution order. Each cell with two values gives
+direct search first and Graphify with direct search second.
+
+| Pair | Flow | First path, seconds | Full session, seconds | Total tokens |
+| ---: | --- | ---: | ---: | ---: |
+| 1 | Recording upload to AI analysis | 20.896 → 24.416 | 46.887 → 58.365 | 181,112 → 218,097 |
+| 2 | Sheet conversion retry to recognition | 19.218 → 20.634 | 43.196 → 42.733 | 137,551 → 153,841 |
+| 3 | Analysis polling and result navigation | 18.252 → 30.314 | 63.060 → 68.523 | 243,154 → 287,820 |
+| 4 | Recording upload to AI analysis | 17.597 → 20.022 | 40.263 → 48.285 | 120,326 → 149,763 |
+| 5 | Sheet conversion retry to recognition | 18.033 → 27.380 | 39.465 → 49.489 | 117,533 → 212,837 |
+| 6 | Analysis polling and result navigation | 19.039 → 20.933 | 73.151 → 67.792 | 271,649 → 245,251 |
+
+| Measurement | Direct search | Graphify and direct search | Change |
+| --- | ---: | ---: | ---: |
+| Median first-path time, seconds | 18.645 | 22.675 | +21.6% |
+| Median session time, seconds | 45.041 | 53.927 | +19.7% |
+| Total reported input and output tokens | 1,071,325 | 1,267,609 | +18.3% |
+| Uncached input plus output tokens | 187,613 | 204,441 | +9.0% |
+| Required links missed | 0/24 | 0/24 | — |
+| Incorrect path claims | 0 | 0 | — |
+
+Total tokens include cached input. Cache hits varied by session. The results
+cover static source tracing of these three flows with a prepared local index.
+
+The adoption criteria required at least a 15% reduction in median first-path
+time, wins in both repeats for at least two flows, no loss of accuracy in any
+pair, and at most 10% more total tokens. All twelve sessions were usable and
+accuracy was equal. Graphify surfaced the correct sheet retry controller in
+one query, but first-path confirmation was slower in all six pairs and total
+tokens exceeded the cap. The integration evaluation ended after this trial,
+and `coco-askme` did not adopt the optional step.
