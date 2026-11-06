@@ -1,5 +1,7 @@
 # Discover the consumer's writing workflow
 
+**Contents:** [Source and destination are separate decisions](#source-and-destination-are-separate-decisions) · [Extract selected material](#extract-selected-material)
+
 Read before source extraction or repository writes. Reuse established facts and inspect only the documents and configuration needed to resolve unknowns.
 
 | Area | Evidence to discover |

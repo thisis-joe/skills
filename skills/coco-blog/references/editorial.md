@@ -1,5 +1,7 @@
 # Select and shape evidence-backed posts
 
+**Contents:** [Candidates and publication](#candidates-and-publication) · [Category, tags and angle](#category-tags-and-angle) · [Ground claims before polishing](#ground-claims-before-polishing) · [Cover images](#cover-images) · [Collaborate and review](#collaborate-and-review)
+
 Read for candidates, drafts and substantive revisions. The consumer project's editorial agreement takes precedence over these starting points.
 
 ## Candidates and publication

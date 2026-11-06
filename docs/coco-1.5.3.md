@@ -1,5 +1,9 @@
 # COCO 1.5.3: troubleshooting cases and collaborative thumbnails
 
+**Contents:** [Session troubleshooting cases](#session-troubleshooting-cases) · [Character-first blog thumbnails](#character-first-blog-thumbnails) · [Installation and recovery](#installation-and-recovery)
+
+## Session troubleshooting cases
+
 - Coco-til can save one representative troubleshooting case per session in `TIL/cases/<slug>.md` and link it under `문제 해결 사례` in `TIL/INDEX.md`. A case can be the only output.
 - Cases record the symptoms and success criteria, the evidence behind each diagnostic decision, a procedure for recurrence, and the fix and revalidation. The procedure distinguishes actual actions from examples and read-only checks from actions that change state.
 - Capture requires a recheck that meets the success criteria. A matching case changes only when the session supplies new or corrected evidence.

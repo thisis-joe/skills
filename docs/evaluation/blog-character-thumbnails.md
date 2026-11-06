@@ -1,5 +1,7 @@
 # Character-first blog thumbnail collaboration
 
+**Contents:** [Fresh-context cases](#fresh-context-cases) · [Package checks](#package-checks) · [Consumer integration](#consumer-integration)
+
 Scope: `coco-blog` editorial cover-image procedure and its two entry references. No publication, image upload, or installation is performed by these checks.
 
 ## Fresh-context cases

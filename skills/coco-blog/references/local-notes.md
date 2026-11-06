@@ -1,5 +1,7 @@
 # Local notes to an author-owned public draft
 
+**Contents:** [Choose local material](#choose-local-material) · [Recommend technical-blog topics](#recommend-technical-blog-topics) · [Conversation and public manuscript](#conversation-and-public-manuscript) · [Repository handoff and release](#repository-handoff-and-release)
+
 Start when the author invokes this skill to choose blog material or explicitly requests a post from local notes. Do not offer blog writing when a TIL is created or updated. This skill does not watch files or schedule background runs.
 
 ## Choose local material
