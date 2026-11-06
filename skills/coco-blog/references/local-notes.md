@@ -26,7 +26,7 @@ Propose a reader, concise takeaway, category and angle from the material. Ask on
 
 Prepare a separate public manuscript with project metadata. Exclude private sections and unsupported claims. Show the draft to the author, incorporate corrections and preserve hand edits. Draft acceptance and release approval are distinct. A human-review flag passed to a tool records this review; it cannot perform or prove it.
 
-When the project renders post thumbnails, offer a cover image after the manuscript direction is accepted, following [cover images](editorial.md#cover-images): draw a few candidates, let the author choose or supply one, and preview it in the real layouts before upload.
+When the project renders post thumbnails, offer a cover image after the manuscript direction is accepted, following [cover images](editorial.md#cover-images): first confirm whether to use approved project characters, agree on a scene or character-free concept, iterate on rendered candidates with the author, and preview the selected candidate in the real layouts before final acceptance and any authorized upload.
 
 ## Repository handoff and release
 
