@@ -1,8 +1,8 @@
 # COCO 공개 배포
 
-## 1.5.4 source version
+## 1.5.5 source version
 
-Version `1.5.4` adds a collaborative thumbnail workflow to coco-blog. The author can choose approved project characters or a character-free concept, iterate on candidates and preview the selected image in the blog layout. Upload and publication remain separate decisions. See [release notes](coco-1.5.4.md).
+Version `1.5.5` records the relevant source revision in eligible coco-plan implementation notes and defines when coco-build uses scoped discovery instead of relying on a planning pointer. See [release notes](coco-1.5.5.md).
 
 ## 1.5.3 source version
 
