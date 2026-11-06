@@ -30,7 +30,7 @@ Start ordinary discovery with the ten skills in four stages in the [workflow](wo
 | PR preparation or release readiness | ship | Evidence-backed ready/blocked decision, release/rollback steps; deployment state separately |
 | Public developer blog post, local TIL selection, editorial revision or publication preparation | blog | Reader-facing draft with supported claims, repository-native checks and a scope-correct publication handoff |
 | ADR, README, API reference, guide, runbook, agent instructions or prose for other readers | docs | Convention-following project document with verified commands, links and examples |
-| Capture reusable current-session concepts as personal TIL notes | til | At most three concepts per topic, written directly in the primary checkout with the uniform note checker |
+| Capture current-session concepts or a resolved troubleshooting case as personal TIL | til | Up to three concepts per topic and up to one evidenced case, each checked in the primary checkout |
 | Context window, handoff, recall or long-run decision trail | context | Compact resumable packet and resolvable evidence pointers |
 | Retrospective, evaluation or durable lessons | retro | Verified failure pattern, targeted structural improvement and a checking scenario |
 | Incoming report, issue prioritization or autonomous issue selection | triage | Evidence-backed disposition, deduplication and dependency/ownership-aware work choice |

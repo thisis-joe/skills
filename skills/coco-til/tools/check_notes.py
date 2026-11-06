@@ -107,16 +107,16 @@ def template_sections(path):
     return names
 
 
-def check_frontmatter(front, problem):
+def check_frontmatter(front, problem, keys=KEYS):
     fields = {}
     for number, line in enumerate(front, 2):
         key, sep, value = line.partition(':')
         key = key.strip()
-        if not sep or key not in KEYS or key in fields:
+        if not sep or key not in keys or key in fields:
             problem(number, f'unexpected frontmatter line: {line.strip()}')
             continue
         fields[key] = value.strip()
-    for key in KEYS:
+    for key in keys:
         if key not in fields:
             problem(1, f'missing frontmatter key: {key}')
     if 'status' in fields and fields['status'] not in STATUSES:

@@ -1,5 +1,9 @@
 # COCO 공개 배포
 
+## 1.5.3 source version
+
+Version `1.5.3` adds personal troubleshooting cases to coco-til. A session can save a case on its own when the diagnostic evidence and recheck support it. Cases use a separate template, checker and index section. Existing concept notes keep their format and selection limits. See [release notes](coco-1.5.3.md).
+
 ## 1.5.2 source version
 
 Version `1.5.2` adds a short planning note for new capabilities that span implementation files or modules. Coco-build checks those pointers against the current checkout and keeps the normal implementation checks. Existing changes and formal reviews keep their usual inputs. See [release notes](coco-1.5.2.md).
