@@ -1,5 +1,9 @@
 # COCO 공개 배포
 
+## 1.5.2 source version
+
+Version `1.5.2` adds a short planning note for new capabilities that span implementation files or modules. Coco-build checks those pointers against the current checkout and keeps the normal implementation checks. Existing changes and formal reviews keep their usual inputs. See [release notes](coco-1.5.2.md).
+
 ## 1.5.1 source version
 
 Version `1.5.1` makes coco-blog list the complete eligible local TIL inventory, prioritize confirmed author contributions and suggest related bundles before reading selected full bodies. Existing selections continue without reopening the menu. It also isolates the installer regression test from terminal input and the real global installation. The 1.5.0 contents rules, skill count and installer interface are preserved. See [release notes](coco-1.5.1.md). Source version, GitHub publication and npm publication remain separate states.
