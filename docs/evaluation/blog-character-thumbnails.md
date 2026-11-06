@@ -17,9 +17,10 @@ Project names and asset locations remain outside the reusable skill. Missing ref
 ## Package checks
 
 - `python3 scripts/validate.py`: passed (30 skills, source checksums, coverage and references).
-- Full suite on a disposable copy in `node:20-bookworm`, network disabled: **212 tests passed**, 62.325 seconds, Git 2.39.5 / Python 3.11.2 / Node 20.20.2. Included npm archive/install tests; no tests were modified or skipped.
+- After synchronizing `main` at `04779a7` (package 1.5.3), the complete final suite passed: **217 tests**, 55.768 seconds in the same network-disabled Linux environment. Blog source files remained identical through the synchronization.
+- Initial full suite on a disposable copy in `node:20-bookworm`, network disabled: **212 tests passed**, 62.325 seconds, Git 2.39.5 / Python 3.11.2 / Node 20.20.2. Included npm archive/install tests; no tests were modified or skipped.
 - Earlier Windows run: 212 tests, 3 errors and 1 skip. Two errors required symbolic-link privileges; the third followed a UTF-8 decoding failure. The same suite passed on Linux without changing tests. The first sandbox attempt additionally lacked temporary Git write permission.
-- Supported installer successfully staged the verified package in a separate local destination. Installed `coco-blog` is compared against that staging output; unrelated installed skills are preserved through a scoped copy with backup and ownership-hash checks.
+- Supported installer successfully staged the verified package in a separate local destination. Installed `coco-blog` was compared against staging and the final synchronized source: all 7 files matched. The 4 changed files were applied with a backup; hashes of 169 other installed files remained unchanged. This installs the unmerged feature branch locally, not a released package update.
 
 ## Consumer integration
 
