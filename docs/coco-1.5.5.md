@@ -10,7 +10,7 @@
 
 ## Installation and recovery
 
-Run these commands once 1.5.5 is available on npm. Before then, use the [source installer](../README.md#시작하기).
+Install 1.5.5 from npm with the command for your runtime. To install from a checkout, see the [source installer](../README.md#시작하기).
 
 ```sh
 npx --yes @thisis-joe/coco-skills@1.5.5 install --runtime codex
