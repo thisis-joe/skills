@@ -2,6 +2,8 @@
 
 Base: `04507c149787c9792bfedd1cd8f1f65dd2c59a6a`. Original behavior: coco-learn offered explanation, notes, review and mission-led teaching, storing notes under the current worktree. The user requests coco-til: immediately capture current-session knowledge, with at most three concepts per meaningful topic, always using the primary checkout's TIL in Git repositories.
 
+The [troubleshooting case specification](coco-til-cases.md) extends the output and the empty-session rule below.
+
 ## Contract
 
 - Bare and explicit TIL capture requests run without candidate/save selection. Use only visible session evidence and directly relevant sources; zero worthwhile concepts means no filesystem changes.

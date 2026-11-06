@@ -69,13 +69,19 @@ class NpmDistributionTests(unittest.TestCase):
         self.assertIn('docs/coco-1.5.0.md', paths)
         self.assertIn('docs/coco-1.5.1.md', paths)
         self.assertIn('docs/coco-1.5.2.md', paths)
+        self.assertIn('docs/coco-1.5.3.md', paths)
+        self.assertIn('skills/coco-til/references/case-template.md', paths)
+        self.assertIn('skills/coco-til/tools/check_cases.py', paths)
+        self.assertEqual((self.package / 'README.md').read_bytes(),
+                         (ROOT / 'README.md').read_bytes())
         self.assertIn('skills/coco-til/tools/resolve_workspace.py', paths)
         self.assertFalse(any(path.startswith('skills/coco-learn/') for path in paths))
         self.assertIn('skills/_coco-shared/contracts.md', paths)
         allowed_files = {'package.json', 'README.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md',
                          'coco.json', 'scripts/install.py', 'scripts/package_utils.py',
                          'scripts/validate.py', 'docs/distribution.md', 'docs/coco-1.2.0.md', 'docs/coco-1.3.0.md', 'docs/coco-1.4.0.md', 'docs/coco-1.4.1.md', 'docs/coco-1.4.2.md', 'docs/coco-1.5.0.md', 'docs/coco-1.5.1.md', 'docs/design.md',
-                         'docs/coco-1.5.2.md', 'docs/implementation-plan.md', 'docs/source-index.md'}
+                         'docs/coco-1.5.2.md', 'docs/coco-1.5.3.md',
+                         'docs/implementation-plan.md', 'docs/source-index.md'}
         for path in paths:
             self.assertTrue(path in allowed_files or path.startswith(
                 ('bin/', 'skills/', 'sources/')), path)
