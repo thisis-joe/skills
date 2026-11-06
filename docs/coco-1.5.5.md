@@ -4,7 +4,7 @@
 
 ## Planning and build handoff
 
-- Coco-plan passes a brief implementation note for a new capability spanning multiple implementation files or modules. The note records the known source revision when a pointer or check result depends on it.
+- Coco-plan passes a brief implementation note for a new capability spanning multiple implementation files or modules. Tests alone do not expand the implementation scope. The note records the known source revision when a pointer or check result depends on it.
 - Coco-build checks the referenced paths, symbols and revision against the current checkout. Missing, stale, conflicting or irrelevant pointers trigger scoped discovery for the affected part. Build runs its usual implementation checks.
 - Existing changes follow the ordinary plan. Formal review receives requirements, actual change scope and current verification evidence.
 
