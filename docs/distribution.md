@@ -1,5 +1,9 @@
 # COCO 공개 배포
 
+## 1.5.4 source version
+
+Version `1.5.4` adds a collaborative thumbnail workflow to coco-blog. The author can choose approved project characters or a character-free concept, iterate on candidates and preview the selected image in the blog layout. Upload and publication remain separate decisions. See [release notes](coco-1.5.4.md).
+
 ## 1.5.3 source version
 
 Version `1.5.3` adds personal troubleshooting cases to coco-til. A session can save a case on its own when the diagnostic evidence and recheck support it. Cases use a separate template, checker and index section. Existing concept notes keep their format and selection limits. See [release notes](coco-1.5.3.md).
