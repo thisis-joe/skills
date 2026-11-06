@@ -1,6 +1,6 @@
 {
   "name": "@thisis-joe/coco-skills",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "description": "COCO development skills with a safe installer for Codex and Claude Code.",
   "license": "MIT",
   "bin": {
@@ -28,6 +28,7 @@
     "docs/coco-1.5.2.md",
     "docs/coco-1.5.3.md",
     "docs/coco-1.5.4.md",
+    "docs/coco-1.5.5.md",
     "docs/design.md",
     "docs/implementation-plan.md",
     "docs/source-index.md",
