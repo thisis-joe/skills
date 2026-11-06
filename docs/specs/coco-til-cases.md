@@ -1,0 +1,11 @@
+# Session troubleshooting cases
+
+Extend [session TIL capture](coco-til.md) with a personal procedure the reader can follow when a diagnosed problem recurs. A call may save concept notes, one troubleshooting case, both, or neither. Select concepts and cases independently within the requested session scope. Preserve the existing concept selection cap, format, budgets, checker behavior and storage rules.
+
+## Acceptance
+
+- Select at most one case to create or update per session from the visible session and directly relevant evidence. Keep the same representative on a repeat call in that session. Require an observed symptom and success criterion, an evidence-backed diagnostic decision, a reasoned action that was taken, and observed revalidation that meets the criterion. Report changed conditions and unverified claims. If evidence is insufficient, continue with eligible concepts only. If neither output qualifies, make no storage changes.
+- Write cases to the resolved `TIL/cases/<slug>.md`. Initialize `CASE_TEMPLATE.md` and the exact `문제 해결 사례` section of `INDEX.md` only when needed. A case-only workspace does not need concept files or the concept template. Both kinds of output remain local under the existing ignore and worktree rules.
+- Match existing cases by problem context and diagnostic or resolution path. Add new or corrected evidence to the matching file. If it already covers the evidence, leave the file, dates and case index entry untouched. A matching symptom with a distinct evidenced failure or resolution path can qualify separately.
+- Keep the four ordered sections from the request. Preserve the chain from hypothesis through observation to the next decision. Distinguish actions actually taken from reusable examples, document where and with which values to act, and classify read-only steps and steps that change state before showing how to run them. Cite durable evidence and redact credentials and private data.
+- Use a separate case checker for structure, evidence references and exactly one case link in the designated index section. Evaluate factual support and semantic duplicates when selecting and reviewing the case. Verify case-only capture, insufficient evidence, no-new-evidence repeat capture, and the existing concept path.
