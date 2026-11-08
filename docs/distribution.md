@@ -124,6 +124,16 @@ npx --yes @thisis-joe/coco-skills@latest install --runtime codex --dry-run
 npx --yes @thisis-joe/coco-skills@latest install --runtime claude --dry-run
 ```
 
+registry에서 버전을 확인하면 같은 버전의 Git 태그와 GitHub 릴리스를 만든다. npm·태그·릴리스는 항상 같은 버전 목록을 유지한다. 1.5.0~1.5.5는 태그와 릴리스 없이 게시되어 나중에 보충했다. 태그는 실제로 게시한 커밋에 단다. 병합된 main 최신 커밋이 아닌 곳에서 게시했다면, 게시된 아카이브의 파일과 후보 커밋의 파일을 비교해 일치하는 커밋을 고른다.
+
+```sh
+git tag -a vX.Y.Z <게시한 커밋> -m "COCO Skills X.Y.Z"
+git push origin vX.Y.Z
+gh release create vX.Y.Z --verify-tag --title "COCO Skills vX.Y.Z" --notes-file <본문 파일>
+```
+
+릴리스 본문은 v1.4.2 이후 형식을 따른다. "Codex와 Claude Code를 위한 COCO Skills X.Y.Z입니다."로 시작하고, `docs/coco-X.Y.Z.md`를 요약한 항목과 태그 시점의 그 문서 링크, 두 런타임의 `npx` 설치 명령을 넣는다. 가장 높은 버전을 Latest로 두고, 이전 버전을 보충할 때는 `--latest=false`를 붙인다.
+
 다음 버전은 기능·수정에 맞게 `npm version patch`, `minor` 또는 `major`로 올린 뒤 같은 절차로 게시한다. 같은 버전 번호는 재사용하지 않는다.
 
 ## 기준 문서
@@ -133,3 +143,4 @@ npx --yes @thisis-joe/coco-skills@latest install --runtime claude --dry-run
 - [공개 scoped 패키지 게시](https://docs.npmjs.com/creating-and-publishing-scoped-public-packages/)
 - [npm login의 브라우저 인증](https://docs.npmjs.com/cli/v10/commands/npm-login/)
 - [npm publish와 dry-run](https://docs.npmjs.com/cli/v11/commands/npm-publish/)
+- [gh release create](https://cli.github.com/manual/gh_release_create)
