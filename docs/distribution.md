@@ -1,5 +1,9 @@
 # COCO 공개 배포
 
+## 1.5.6 source version
+
+Version `1.5.6` keeps prior planning evidence out of ordinary plans for existing changes and single-file implementations, and builds the default formal review handoff from current change evidence. See [release notes](coco-1.5.6.md).
+
 ## 1.5.5 source version
 
 Version `1.5.5` records the relevant source revision in eligible coco-plan implementation notes and defines when coco-build uses scoped discovery instead of relying on a planning pointer. See [release notes](coco-1.5.5.md).

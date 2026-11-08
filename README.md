@@ -4,20 +4,20 @@
 
 Codex와 Claude Code에서 쓰는 개발 스킬 30개입니다. 중요한 결정은 사용자가 내리고, 에이전트는 명세·구현·실행 근거를 남겨 다음 작업자가 이어받을 수 있게 합니다.
 
-**목차:** [시작하기](#시작하기) · [1.5.5에서 바뀐 점](#155에서-바뀐-점) · [기능 하나를 진행하는 네 단계](#기능-하나를-진행하는-네-단계) · [전체 스킬](#전체-스킬) · [블로그 글·썸네일](#coco-blog로-글과-썸네일-만들기) · [설치 위치·업데이트·제거](#설치-위치업데이트제거) · [문제 해결](#문제-해결) · [출처와 라이선스](#출처와-라이선스)
+**목차:** [시작하기](#시작하기) · [1.5.6에서 바뀐 점](#156에서-바뀐-점) · [기능 하나를 진행하는 네 단계](#기능-하나를-진행하는-네-단계) · [전체 스킬](#전체-스킬) · [블로그 글·썸네일](#coco-blog로-글과-썸네일-만들기) · [설치 위치·업데이트·제거](#설치-위치업데이트제거) · [문제 해결](#문제-해결) · [출처와 라이선스](#출처와-라이선스)
 
 ## 시작하기
 
 Node.js 22 이상과 Python 3.9 이상이 필요합니다. Codex나 Claude Code는 따로 설치하고 로그인하세요.
 
-스킬을 쓸 프로젝트 폴더에서 런타임에 맞는 명령을 실행하면 npm의 1.5.5를 설치합니다. 이미 설치했다면 같은 명령으로 업데이트할 수 있습니다. 저장소를 내려받아 설치하는 방법도 아래에 있습니다.
+스킬을 쓸 프로젝트 폴더에서 런타임에 맞는 명령을 실행하면 npm의 1.5.6을 설치합니다. 이미 설치했다면 같은 명령으로 업데이트할 수 있습니다. 저장소를 내려받아 설치하는 방법도 아래에 있습니다.
 
 ```sh
 # Claude Code
-npx --yes @thisis-joe/coco-skills@1.5.5 install --runtime claude
+npx --yes @thisis-joe/coco-skills@1.5.6 install --runtime claude
 
 # Codex
-npx --yes @thisis-joe/coco-skills@1.5.5 install --runtime codex
+npx --yes @thisis-joe/coco-skills@1.5.6 install --runtime codex
 ```
 
 설치 위치는 터미널에서 고릅니다. 설치가 끝나면 그 프로젝트에서 **새 세션**을 열고, Claude Code는 `/`, Codex는 `$`로 스킬을 부릅니다.
@@ -43,12 +43,12 @@ python3 scripts/install.py --runtime claude --project /path/to/your-project
 
 </details>
 
-## 1.5.5에서 바뀐 점
+## 1.5.6에서 바뀐 점
 
-- `coco-plan`은 여러 구현 파일이나 모듈에 걸친 신규 기능의 인계 메모에서, 근거가 특정 리비전에 의존할 때 확인한 리비전도 적습니다.
-- `coco-build`는 인계 근거를 현재 체크아웃과 대조합니다. 근거가 없거나 오래됐거나 현재 소스와 충돌하거나 작업과 무관하면 해당 범위를 다시 탐색합니다. 정식 리뷰에는 요구 사항, 실제 변경 범위, 현재 검증 결과를 전달합니다.
+- `coco-plan`은 기존 기능 변경과 단일 파일 구현에서 이전 검증 근거를 계획 본문 전체에서 제외합니다. 여러 구현 파일에 걸친 신규 기능은 확인한 근거를 짧은 구현 메모에만 담습니다.
+- `coco-build`는 요구 사항, 실제 변경 범위, 현재 스냅샷의 검증 상태로 정식 리뷰 전달문을 작성합니다. 계획 단계에만 해당하는 근거는 전달문에서 제외합니다.
 
-자세한 내용은 [1.5.5 릴리스 노트](docs/coco-1.5.5.md)를 보세요. 이전 버전의 변경 사항은 [1.5.4](docs/coco-1.5.4.md) · [1.5.3](docs/coco-1.5.3.md) · [1.5.2](docs/coco-1.5.2.md) · [1.5.1](docs/coco-1.5.1.md) · [1.5.0](docs/coco-1.5.0.md) · [1.4.2](docs/coco-1.4.2.md) · [1.4.1](docs/coco-1.4.1.md) · [1.4.0](docs/coco-1.4.0.md) · [1.3.0](docs/coco-1.3.0.md) · [1.2.0](docs/coco-1.2.0.md) · [1.0.0 → 1.1.0](https://github.com/thisis-joe/skills/blob/v1.1.0/docs/coco-1.0.0-to-1.1.0.md)에 있습니다. 소스 버전 준비, GitHub 병합, npm 게시는 각각 별개의 상태입니다.
+자세한 내용은 [1.5.6 릴리스 노트](docs/coco-1.5.6.md)를 보세요. 이전 버전의 변경 사항은 [1.5.5](docs/coco-1.5.5.md) · [1.5.4](docs/coco-1.5.4.md) · [1.5.3](docs/coco-1.5.3.md) · [1.5.2](docs/coco-1.5.2.md) · [1.5.1](docs/coco-1.5.1.md) · [1.5.0](docs/coco-1.5.0.md) · [1.4.2](docs/coco-1.4.2.md) · [1.4.1](docs/coco-1.4.1.md) · [1.4.0](docs/coco-1.4.0.md) · [1.3.0](docs/coco-1.3.0.md) · [1.2.0](docs/coco-1.2.0.md) · [1.0.0 → 1.1.0](https://github.com/thisis-joe/skills/blob/v1.1.0/docs/coco-1.0.0-to-1.1.0.md)에 있습니다. 소스 버전 준비, GitHub 병합, npm 게시는 각각 별개의 상태입니다.
 
 ## 기능 하나를 진행하는 네 단계
 
@@ -104,20 +104,20 @@ coco-clarify → coco-spec → coco-plan → coco-build → coco-review → coco
 
 ## 설치 위치·업데이트·제거
 
-아래 명령은 npm의 **1.5.5** 기준입니다. `claude` 대신 `codex`를 쓰면 Codex에 적용됩니다.
+아래 명령은 npm의 **1.5.6** 기준입니다. `claude` 대신 `codex`를 쓰면 Codex에 적용됩니다.
 
 ```sh
 # 현재 프로젝트에 설치하거나 업데이트
-npx --yes @thisis-joe/coco-skills@1.5.5 install --runtime claude --project .
+npx --yes @thisis-joe/coco-skills@1.5.6 install --runtime claude --project .
 
 # 모든 프로젝트에서 사용
-npx --yes @thisis-joe/coco-skills@1.5.5 install --runtime claude --global
+npx --yes @thisis-joe/coco-skills@1.5.6 install --runtime claude --global
 
 # 프로젝트로 옮기면서 기존 글로벌 설치 제거
-npx --yes @thisis-joe/coco-skills@1.5.5 install --runtime claude --project . --remove-global
+npx --yes @thisis-joe/coco-skills@1.5.6 install --runtime claude --project . --remove-global
 
 # 현재 프로젝트에서 제거
-npx --yes @thisis-joe/coco-skills@1.5.5 uninstall --runtime claude --project .
+npx --yes @thisis-joe/coco-skills@1.5.6 uninstall --runtime claude --project .
 ```
 
 | 런타임 | 프로젝트 설치 | 글로벌 설치 |
